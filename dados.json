@@ -1,70 +1,54 @@
 {
   "periodo": "01/09–10/09 · 09/2026",
   "atualizado": "12/09/2026",
-  "periodo_rd": "11/03/2026 a 11/09/2026 · 76 envios",
+  "periodo_rd": "07/08/2026 a 11/09/2026 · 11 envios",
   "kpis": {
     "vendas": 5147,
     "comissao": 515,
     "pedidos": 127,
     "novos": 73,
     "cac": 7,
-    "abertura": 12.4,
-    "ctr": 0.4
+    "abertura": 9.6,
+    "ctr": 0.15
   },
   "engajado": {
-    "ab": 13.59,
-    "ctr": 0.44
+    "ab": 12.74,
+    "ctr": 0.19
   },
   "deseng": {
-    "ab": 1.43,
-    "ctr": 0.13
+    "ab": 0.65,
+    "ctr": 0.04
   },
   "funil": {
-    "entregues": 48936996,
-    "aberturas": 6054783,
-    "cliques": 196572
+    "entregues": 7328307,
+    "aberturas": 705037,
+    "cliques": 11233
   },
   "dias": [
     [
-      "Quinta",
-      14.38
-    ],
-    [
-      "Domingo",
-      13.8
-    ],
-    [
-      "Segunda",
-      13.47
-    ],
-    [
       "Sábado",
-      9.63
+      11.45
     ],
     [
       "Quarta",
-      9.62
+      9.96
+    ],
+    [
+      "Sexta",
+      5.59
     ]
   ],
   "horarios": [
     [
       "12h–15h",
-      0.54
-    ],
-    [
-      "15h–18h",
-      0.47
-    ],
-    [
-      "09h–12h",
-      0.29
-    ],
-    [
-      "18h–24h",
       0.18
     ],
     [
-      "00h–09h",
+      "09h–12h",
+      0.14
+    ],
+    [
+      "15h–18h",
       0.14
     ]
   ],
@@ -116,7 +100,7 @@
       "v": 29,
       "p": 2,
       "n": 2,
-      "send": "engajados · 12% ab."
+      "send": null
     },
     {
       "d": "08/09",
@@ -141,15 +125,15 @@
     }
   ],
   "ia": {
-    "motor": "<b>13.59%</b> de abertura na base engajada vs <b>1.43%</b> na desengajada – indica que a receita está concentrada nos clientes mais ativos.",
-    "diagnostico": "A taxa de abertura geral está baixa, sobretudo na base desengajada. Os envios recentes mostraram pouca penetração, com poucos disparos segmentados para engajados.",
+    "motor": "A base engajada abre <b>12.74%</b> contra <b>0.65%</b> da desengajada – diferença de <b>12.09 pontos</b>, mostrando que a receita está concentrada nos usuários mais engajados.",
+    "diagnostico": "Os engajados geram a maior parte das aberturas e das vendas, enquanto a base desengajada tem desempenho quase nulo. Os melhores dias de abertura são sábado e quarta, e o horário com maior CTR é 12h–15h. Envio para engajados nos dias 05/09 e 09/09 resultou em vendas acima da média.",
     "sustenta": [
-      "Diferença de 12.16 pontos percentuais entre bases engajada e desengajada.",
-      "Quinta-feira apresenta a maior taxa de abertura (14.38%).",
-      "Faixa 12h–15h gera o melhor CTR (0.54%).",
-      "Assuntos com menção de \"ERRATA\" e nome do cliente lideram com 19.05% de taxa de abertura.",
-      "Envios para engajados em 05/09, 07/09 e 09/09 tiveram 17‑16% de abertura."
+      "Abertura engajada 12.74% vs desengajada 0.65%",
+      "Sábado (11.45%) e quarta (9.96%) são os dias com maior taxa de abertura",
+      "Faixa 12h–15h apresenta o melhor CTR (0.18)",
+      "Envios a engajados em 05/09 (17% de abertura) geraram 1.130 vendas",
+      "Envios a engajados em 09/09 (16% de abertura) geraram 207 vendas"
     ],
-    "recomendacao": "Enviar na próxima quinta-feira (14/09) às 13h, segmentando a base engajada, com repique (sim) para quem não abriu, usando padrão de assunto: \"ERRATA: *|PRIMEIRO_NOME|*, saiu o resultado do sorteio!\"."
+    "recomendacao": "Enviar na próxima sábado (15/09) às 13h, segmentando a base engajada, com repique para quem não abriu (sim). Use assunto no padrão: \"🎉 *|PRIMEIRO_NOME|*, sua chance de ganhar neste fim de semana está aqui!\""
   }
 }
