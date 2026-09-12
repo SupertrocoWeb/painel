@@ -4,7 +4,7 @@
   "periodo_rd": "11/03/2026 a 11/09/2026 · 76 envios",
   "kpis": {
     "vendas": 5147,
-    "comissao": 0,
+    "comissao": 515,
     "pedidos": 127,
     "novos": 73,
     "cac": 7,
@@ -141,15 +141,15 @@
     }
   ],
   "ia": {
-    "motor": "<b>13.59%</b> de abertura na base engajada vs <b>1.43%</b> na desengajada – diferença de quase 10×, indicando que a maior parte da receita vem dos contatos engajados.",
-    "diagnostico": "A base engajada tem desempenho muito superior, sobretudo nos dias de maior abertura (quinta e domingo) e no horário 12h–15h, que também apresenta o melhor CTR. Assuntos com urgência e emojis geram mais de 18% de abertura, enquanto os genéricos ficam abaixo de 1%.",
+    "motor": "<b>13.59%</b> de abertura na base engajada vs <b>1.43%</b> na desengajada – indica que a receita está concentrada nos clientes mais ativos.",
+    "diagnostico": "A taxa de abertura geral está baixa, sobretudo na base desengajada. Os envios recentes mostraram pouca penetração, com poucos disparos segmentados para engajados.",
     "sustenta": [
-      "A taxa de abertura da base engajada é <b>13.59%</b>, 9.5× maior que a da desengajada (<b>1.43%</b>).",
-      "Os melhores dias de abertura são quinta (14.38%) e domingo (13.8%).",
-      "O horário com maior CTR é 12h–15h (0.54%).",
-      "Assuntos top superam 18% de abertura; os piores ficam abaixo de 1%.",
-      "Envios recentes para engajados geraram abertura entre 12% e 16%."
+      "Diferença de 12.16 pontos percentuais entre bases engajada e desengajada.",
+      "Quinta-feira apresenta a maior taxa de abertura (14.38%).",
+      "Faixa 12h–15h gera o melhor CTR (0.54%).",
+      "Assuntos com menção de \"ERRATA\" e nome do cliente lideram com 19.05% de taxa de abertura.",
+      "Envios para engajados em 05/09, 07/09 e 09/09 tiveram 17‑16% de abertura."
     ],
-    "recomendacao": "Envie na próxima quinta-feira, às 13h (bloco 12h–15h), para a base engajada, sem repique, usando assunto similar ao top 1: \"ERRATA: *|PRIMEIRO_NOME|*, saiu o resultado do sorteio! E teve prêmio grande! 🤑😍\"."
+    "recomendacao": "Enviar na próxima quinta-feira (14/09) às 13h, segmentando a base engajada, com repique (sim) para quem não abriu, usando padrão de assunto: \"ERRATA: *|PRIMEIRO_NOME|*, saiu o resultado do sorteio!\"."
   }
 }
