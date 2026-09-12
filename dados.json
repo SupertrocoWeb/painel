@@ -15,7 +15,8 @@
         "cac": 5.26,
         "sessoes": 4719,
         "tkm": 38.09,
-        "conversao": 10.07,
+        "conversao": 6.55,
+        "dias_com_sessao": 15,
         "dias_ativos": 42,
         "abertura": 12.4,
         "ctr": 0.4
@@ -45,7 +46,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -101,7 +102,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 100.83,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -115,7 +116,7 @@
           "novos": 26,
           "sessoes": 0,
           "tkm": 45.19,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 13% ab.",
           "n_env": 2
         },
@@ -129,7 +130,7 @@
           "novos": 36,
           "sessoes": 0,
           "tkm": 41.75,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 1
         },
@@ -143,7 +144,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 36.67,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -157,7 +158,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 42.33,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 16% ab.",
           "n_env": 2
         },
@@ -171,7 +172,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 22.33,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -185,7 +186,7 @@
           "novos": 1,
           "sessoes": 0,
           "tkm": 0.0,
-          "conv": 0.0,
+          "conv": null,
           "send": "base total · 7% ab.",
           "n_env": 1
         },
@@ -199,7 +200,7 @@
           "novos": 4,
           "sessoes": 0,
           "tkm": 29.25,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -213,7 +214,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 32.0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -227,7 +228,7 @@
           "novos": 23,
           "sessoes": 0,
           "tkm": 73.35,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 3
         },
@@ -241,7 +242,7 @@
           "novos": 5,
           "sessoes": 0,
           "tkm": 11.4,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -255,7 +256,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 40.67,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 2
         },
@@ -269,7 +270,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 66.0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -283,7 +284,7 @@
           "novos": 10,
           "sessoes": 0,
           "tkm": 50.1,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 13% ab.",
           "n_env": 2
         },
@@ -297,7 +298,7 @@
           "novos": 8,
           "sessoes": 0,
           "tkm": 15.62,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -311,7 +312,7 @@
           "novos": 4,
           "sessoes": 0,
           "tkm": 32.25,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -325,7 +326,7 @@
           "novos": 3,
           "sessoes": 0,
           "tkm": 46.33,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -339,7 +340,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 120.5,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -353,7 +354,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 155.5,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 1
         },
@@ -367,7 +368,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 27.0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -381,7 +382,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 23.5,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -395,7 +396,7 @@
           "novos": 3,
           "sessoes": 0,
           "tkm": 86.67,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -409,7 +410,7 @@
           "novos": 1,
           "sessoes": 0,
           "tkm": 41.0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -423,7 +424,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -437,7 +438,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -451,7 +452,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 0,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 1
         },
@@ -731,17 +732,17 @@
         ]
       },
       "ia": {
-        "motor": "A base engajada tem <b>13.59%</b> de abertura contra <b>1.43%</b> da desengajada – diferença de <b>12.16 p.p.</b>, o que se reflete diretamente na receita gerada pelos disparos.",
-        "diagnostico": "Os e‑mails entregam 48,9 mi mensagens, mas apenas <b>12.4%</b> são abertos e <b>0.4%</b> clicam, gerando 196 mil cliques que se convertem em apenas 4,7 mil sessões (<b>2.4%</b> de retenção). Essa escassez de tráfego limita a conversão de <b>10.07%</b> do site, resultando em 475 pedidos que sustentam a comissão de R$1.809,10, quase igual ao CAC total (R$1.809,44).",
-        "conversao": "O gargalo está no CTR e na passagem de cliques para sessões (2.4%); cada 100 cliques geram menos de 3 sessões, o que custa cerca de R$38 por pedido perdido. Melhorar a taxa de clique e a qualidade do tráfego elevaria a conversão de sessões para pedidos, reduzindo o custo efetivo por aquisição.",
+        "motor": "A base engajada tem taxa de abertura de <b>13.59%</b> contra <b>1.43%</b> da base desengajada – diferença de <b>12.16pp</b>. Essa diferença se traduz em muito mais oportunidades de conversão e, consequentemente, em receita adicional para a Supertroco.",
+        "diagnostico": "Nos dias em que o disparo foi para a base engajada (ex.: 04/08, 05/08, 15/08) observamos picos de vendas (R$2.770, R$941, R$1.687) e de pedidos (100, 43, 23). Quando o disparo foi para a base total com baixa abertura (<1%) as vendas caíram drasticamente (ex.: 05/08, 12/08). O CTR médio de 0.4% também é insuficiente para alimentar a taxa de conversão do site (6.55%).",
+        "conversao": "A taxa de conversão do site está em <b>6.55%</b>, mas apenas <b>0.40%</b> dos e‑mails entregues geram cliques (196.572 cliques de 48.936.996 entregas). Isso indica que o gargalo está no engajamento pós‑abertura – poucos cliques e, desses, apenas <b>0.24%</b> se convertem em pedidos (475 pedidos/196.572 cliques). Cada pedido perdido representa cerca de R$38 de ticket médio, impactando diretamente a comissão da Supertroco.",
         "sustenta": [
-          "<b>13.59%</b> taxa de abertura da base engajada vs <b>1.43%</b> da desengajada",
-          "Abertura média geral <b>12.4%</b> e CTR <b>0.4%</b>",
-          "Conversão do site <b>10.07%</b> gera <b>475</b> pedidos (ticket médio R$38.09)",
-          "Comissão de <b>R$1,809.10</b> ≈ custo total de aquisição <b>R$1,809.44</b>",
-          "Melhor dia de abertura: <b>Quinta-feira</b> (14.38%); melhor horário CTR: <b>12h–15h</b> (0.54%)"
+          "Vendas totais: R$18.091",
+          "Comissão Supertroco (10%): R$1.809,1",
+          "CAC médio: R$5,26",
+          "Ticket médio: R$38,09",
+          "Taxa de conversão site: 6,55%"
         ],
-        "recomendacao": "Enviar a próxima campanha para a base engajada na <b>Quinta-feira</b> às <b>13h</b>, horário com maior abertura, usando o padrão de assunto que mais performou – emoji + personalização + chamada de resultado, por exemplo: \"🚀 *|PRIMEIRO_NOME|*, o sorteio acabou! Veja seu prêmio agora!\". Repique apenas se a taxa de abertura ficar abaixo de <b>10%</b> (sim)."
+        "recomendacao": "Enviar a próxima campanha na <b>Quinta-feira</b> entre <b>12h e 15h</b> para a <b>base engajada</b> (abertura histórica 13.59%). Utilizar repique apenas se a taxa de abertura ficar abaixo de 12% (ex.: repique no sábado). Padronizar assunto com a fórmula de alta performance: \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! 🎉\" – similar aos top assuntos que geraram >18% de abertura."
       }
     },
     {
@@ -758,6 +759,7 @@
         "sessoes": 2445,
         "tkm": 40.51,
         "conversao": 5.32,
+        "dias_com_sessao": 11,
         "dias_ativos": 11,
         "abertura": 12.1,
         "ctr": 0.25
@@ -1009,17 +1011,17 @@
         ]
       },
       "ia": {
-        "motor": "A base engajada tem <b>12.02%</b> de abertura contra <b>0%</b> da desengajada, diferença de <b>12.02pp</b>; isso indica que toda a receita de R$5,266 provém dos contatos engajados.",
-        "diagnostico": "Nos dias em que enviamos para a base engajada (05, 07, 09 e 11/09) a taxa de abertura ficou acima de 12% e geraram 41 pedidos (≈31% do total), enquanto nos dias sem disparo a geração de pedidos foi menor; a correlação entre abertura e vendas confirma o impacto direto do e‑mail.",
-        "conversao": "A taxa de conversão do site está em <b>5.32%</b>, alinhada ao CTR de <b>0.25%</b>. O gargalo está no baixo CTR, que reduz o número de sessões; cada ponto percentual a menos de CTR representa cerca de 5 pedidos perdidos, equivalentes a ≈R$200 de receita.",
+        "motor": "A base engajada tem <b>12.02%</b> de abertura contra <b>0%</b> da desengajada, o que significa que toda a receita de <b>R$5.266,00</b> provém desse público ativo.",
+        "diagnostico": "Dos 2.341.193 e‑mails entregues, 282.260 foram abertos (12.1%) e 5.791 clicados (0.25%). Essas visitas geraram 2.445 sessões, convertendo 130 pedidos e resultando em <b>R$5.266,00</b> de vendas e <b>R$526,60</b> de comissão para a Supertroco.",
+        "conversao": "O gargalo está no CTR (0.25%); com apenas 5.791 cliques, perdemos potencial de pedidos que custam cerca de <b>R$40,51</b> cada (ticket médio) e <b>R$4,05</b> de comissão por pedido. Elevar o CTR aumentaria a taxa de conversão do site (5.32%) e, consequentemente, a comissão.",
         "sustenta": [
-          "Entregas totais: 2,341,193",
-          "Aberturas totais: 282,260 (<b>12.05%</b>)",
-          "Cliques totais: 5,791 (<b>0.25%</b>)",
-          "Pedidos gerados: 130",
-          "Comissão Supertroco (10%): R$526.6"
+          "Vendas totais: <b>R$5.266,00</b>",
+          "Comissão Supertroco (10%): <b>R$526,60</b>",
+          "CAC total (75 aquisições x R$7,02): <b>R$526,50</b>",
+          "Ticket médio por pedido: <b>R$40,51</b>",
+          "Taxa de conversão site: <b>5,32%</b>"
         ],
-        "recomendacao": "Programar o próximo disparo para <b>Sábado</b> às <b>10h</b>, segmentando a <b>base engajada</b>, com repique <b>sim</b>. Utilizar assunto padrão que já provou alta performance: \"*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado\"."
+        "recomendacao": "Envie a próxima campanha na <b>sábado</b> às <b>10h</b> (janela 09h–12h, maior CTR) para a base engajada, sem repique, usando assunto similar ao top: \"*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado\". Essa combinação alavanca a abertura de <b>17%</b> e o melhor horário de cliques, potencializando pedidos e comissão."
       }
     },
     {
@@ -1035,7 +1037,8 @@
         "cac": 4.77,
         "sessoes": 2274,
         "tkm": 37.17,
-        "conversao": 15.17,
+        "conversao": 7.87,
+        "dias_com_sessao": 4,
         "dias_ativos": 31,
         "abertura": 8.9,
         "ctr": 0.27
@@ -1065,7 +1068,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1121,7 +1124,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 100.83,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1135,7 +1138,7 @@
           "novos": 26,
           "sessoes": 0,
           "tkm": 45.19,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 13% ab.",
           "n_env": 2
         },
@@ -1149,7 +1152,7 @@
           "novos": 36,
           "sessoes": 0,
           "tkm": 41.75,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 1
         },
@@ -1163,7 +1166,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 36.67,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1177,7 +1180,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 42.33,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 16% ab.",
           "n_env": 2
         },
@@ -1191,7 +1194,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 22.33,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1205,7 +1208,7 @@
           "novos": 1,
           "sessoes": 0,
           "tkm": 0.0,
-          "conv": 0.0,
+          "conv": null,
           "send": "base total · 7% ab.",
           "n_env": 1
         },
@@ -1219,7 +1222,7 @@
           "novos": 4,
           "sessoes": 0,
           "tkm": 29.25,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1233,7 +1236,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 32.0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1247,7 +1250,7 @@
           "novos": 23,
           "sessoes": 0,
           "tkm": 73.35,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 3
         },
@@ -1261,7 +1264,7 @@
           "novos": 5,
           "sessoes": 0,
           "tkm": 11.4,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1275,7 +1278,7 @@
           "novos": 6,
           "sessoes": 0,
           "tkm": 40.67,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 2
         },
@@ -1289,7 +1292,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 66.0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1303,7 +1306,7 @@
           "novos": 10,
           "sessoes": 0,
           "tkm": 50.1,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 13% ab.",
           "n_env": 2
         },
@@ -1317,7 +1320,7 @@
           "novos": 8,
           "sessoes": 0,
           "tkm": 15.62,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1331,7 +1334,7 @@
           "novos": 4,
           "sessoes": 0,
           "tkm": 32.25,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1345,7 +1348,7 @@
           "novos": 3,
           "sessoes": 0,
           "tkm": 46.33,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1359,7 +1362,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 120.5,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1373,7 +1376,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 155.5,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 1
         },
@@ -1387,7 +1390,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 27.0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1401,7 +1404,7 @@
           "novos": 2,
           "sessoes": 0,
           "tkm": 23.5,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1415,7 +1418,7 @@
           "novos": 3,
           "sessoes": 0,
           "tkm": 86.67,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1429,7 +1432,7 @@
           "novos": 1,
           "sessoes": 0,
           "tkm": 41.0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1443,7 +1446,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1457,7 +1460,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 0,
-          "conv": 0.0,
+          "conv": null,
           "send": null,
           "n_env": 0
         },
@@ -1471,7 +1474,7 @@
           "novos": 0,
           "sessoes": 0,
           "tkm": 0,
-          "conv": 0.0,
+          "conv": null,
           "send": "engajados · 14% ab.",
           "n_env": 1
         }
@@ -1582,17 +1585,17 @@
         ]
       },
       "ia": {
-        "motor": "A base <b>engajada</b> tem abertura média de <b>14.03%</b> contra <b>1.18%</b> da <b>desengajada</b> (diferença de <b>12.85 pontos</b>), o que se traduz em muito mais oportunidades de conversão e, consequentemente, em maior receita de comissão.",
-        "diagnostico": "Nos dias em que disparou para a base engajada (ex.: 04/08, 07/08, 15/08) as vendas ultrapassaram R$ 2 mil, enquanto os envios à base total com abertura ~1% geraram menos de R$ 1 mil. O baixo desempenho da base desengajada evidencia que a maioria das aquisições vem dos contatos que realmente abrem o e‑mail.",
-        "conversao": "A taxa de conversão do site está em <b>15.17%</b>, mas o CTR médio dos e‑mails é apenas <b>0.27%</b> (0.4% na engajada vs 0.11% na desengajada). O gargalo está na geração de cliques: com 15 mil 291 817 entregas e 8.9% de abertura, estima‑se que <b>~197 pedidos</b> (≈R$ 7 329) foram perdidos por falta de abertura/cliques, reduzindo a comissão em cerca de <b>R$ 733</b>.",
+        "motor": "<b>14.03%</b> de abertura na base engajada vs <b>1.18%</b> na desengajada – diferença de <b>12.85pp</b>, refletindo quase <b>74%</b> da receita total (R$9.5 k de R$12.8 k).",
+        "diagnostico": "Os disparos para a base engajada geraram R$9.5 k (≈74% das vendas) enquanto os envios à base total aportaram menos de R$1 k. A taxa média de abertura geral (8.9%) está bem abaixo dos 14% da segmentação engajada, reduzindo o fluxo de cliques (CTR 0.27%) e, consequentemente, os pedidos (345).",
+        "conversao": "O site converte 7.87% das sessões, mas o gargalo está no e‑mail: baixa abertura e CTR limitam o tráfego. Cada ponto percentual a mais de CTR (até 0.40% da base engajada) poderia gerar ~164 pedidos adicionais, equivalentes a ≈R$6 k de receita.",
         "sustenta": [
-          "<b>14.03%</b> taxa de abertura engajada vs <b>1.18%</b> desengajada",
-          "<b>0.40%</b> CTR engajada vs <b>0.11%</b> desengajada",
-          "<b>15.17%</b> taxa de conversão do site",
-          "<b>345</b> pedidos total (ticket médio R$ 37.17)",
-          "Perda estimada de <b>~197 pedidos</b> (R$ 7 329) por baixa abertura/CTR"
+          "Abertura engajada: 14.03% vs desengajada 1.18% (Δ12.85pp).",
+          "Vendas nos dias com disparos engajados: R$9,507 (≈74% do total).",
+          "CTR médio geral: 0.27%; CTR da base engajada: 0.40%.",
+          "Um aumento de 0.01 ppt em CTR gera ~13 pedidos adicionais (≈R$480).",
+          "CAC total: 269 × R$4.77 = R$1,283; comissão Supertroco = R$1,283 (10% das vendas)."
         ],
-        "recomendacao": "Enviar a campanha toda <b>Sábado</b> entre <b>18h–24h</b> para a <b>base engajada</b>, com repique <b>sim</b> no domingo pela manhã. Use assunto no padrão dos top performers, por exemplo: \"*|PRIMEIRO_NOME|*, resultado do sorteio + cupom surpresa 🍀\"."
+        "recomendacao": "Enviar a campanha toda Saturday (sábado) entre 18h e 24h para a base engajada, usando assunto personalizado tipo \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir 🍀\" (open >15%). Manter repique (sim) nos dias em que a abertura cair abaixo de 10%, sempre com a mesma linha criativa e horário de pico."
       }
     }
   ]
