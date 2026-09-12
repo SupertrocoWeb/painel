@@ -140,15 +140,15 @@
     }
   ],
   "ia": {
-    "motor": "A base engajada abre <b>13.59%</b> contra <b>1.43%</b> da desengajada, mostrando que a maior parte da receita vem dos usuários ativos.",
-    "diagnostico": "Os envios recentes revelam que apenas os engajados superam 12% de abertura, enquanto a desengajada fica abaixo de 2%. Os dias com melhor performance são quinta (14.38%) e domingo (13.8%), e o horário com maior CTR está entre 12h‑15h (0.54%).",
+    "motor": "A base engajada abre <b>13.59%</b> vs <b>1.43%</b> na desengajada – diferença de <b>12.16 pontos</b>, indicando que a maior parte da receita vem dos engajados.",
+    "diagnostico": "Os engajados apresentam taxa de abertura quase 10 vezes maior, gerando a maioria das vendas nos dias analisados. Quinta‑feira e domingo são os dias mais propícios, e o horário 12h–15h entrega o melhor CTR. Assuntos que destacam o resultado do sorteio e usam emojis têm performance superior.",
     "sustenta": [
-      "Engajado AB: 13.59% vs Desengajado AB: 1.43%",
-      "Melhores dias de abertura: Quinta 14.38%, Domingo 13.8%, Segunda 13.47%",
-      "Melhor horário de CTR: 12h‑15h (0.54%)",
-      "Cruzamento mostra envios a engajados com 12‑17% de abertura",
-      "Top assuntos com >18% de taxa de abertura utilizam “*|PRIMEIRO_NOME|*, saiu o resultado do sorteio 🤑”"
+      "Engajados: 13.59% de abertura vs 1.43% dos desengajados.",
+      "Diferença de 12.16 pontos indica concentração de receita nos engajados.",
+      "Quinta‑feira (14.38%) e domingo (13.8%) são os dias com maior abertura.",
+      "Faixa 12h–15h gera CTR de 0.54, a melhor da série.",
+      "Top assuntos com “resultado do sorteio” alcançam até 19.05% de abertura."
     ],
-    "recomendacao": "Envie na próxima quinta-feira, entre 13h e 15h, para a base engajada, sem repique, usando assunto no padrão “*|PRIMEIRO_NOME|*, saiu o resultado do sorteio 🤑”."
+    "recomendacao": "Enviar na quinta‑feira às 13h (dentro da janela 12h–15h) para a base engajada, sem repique, usando assunto padrão similar ao top: \"ERRATA: *|PRIMEIRO_NOME|*, saiu o resultado do sorteio! E teve prêmio grande! 🤑😍\"."
   }
 }
