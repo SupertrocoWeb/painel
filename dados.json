@@ -141,15 +141,15 @@
     }
   ],
   "ia": {
-    "motor": "<b>12.16%</b> de diferença entre a taxa de abertura da base engajada (13.59%) e a desengajada (1.43%); isso indica que a receita está concentrada nos usuários que interagem regularmente.",
-    "diagnostico": "A base engajada demonstra forte engajamento, enquanto a desengajada quase não abre e compromete oportunidades de upsell. Os dias e horários com maior performance apontam para otimização de envios.",
+    "motor": "<b>13.59%</b> de abertura na base engajada vs <b>1.43%</b> na desengajada – diferença de quase 10×, indicando que a maior parte da receita vem dos contatos engajados.",
+    "diagnostico": "A base engajada tem desempenho muito superior, sobretudo nos dias de maior abertura (quinta e domingo) e no horário 12h–15h, que também apresenta o melhor CTR. Assuntos com urgência e emojis geram mais de 18% de abertura, enquanto os genéricos ficam abaixo de 1%.",
     "sustenta": [
-      "Taxa de abertura engajada: 13.59% vs desengajada: 1.43% (diferença de <b>12.16%</b>)",
-      "Melhores dias de abertura: Quinta (14.38%), Domingo (13.8%), Segunda (13.47%)",
-      "Horário com melhor CTR: 12h–15h (0.54)",
-      "Assuntos top geram >18% de abertura, enquanto os piores ficam abaixo de 1%",
-      "Envios recentes para engajados tiveram 12‑16% de abertura"
+      "A taxa de abertura da base engajada é <b>13.59%</b>, 9.5× maior que a da desengajada (<b>1.43%</b>).",
+      "Os melhores dias de abertura são quinta (14.38%) e domingo (13.8%).",
+      "O horário com maior CTR é 12h–15h (0.54%).",
+      "Assuntos top superam 18% de abertura; os piores ficam abaixo de 1%.",
+      "Envios recentes para engajados geraram abertura entre 12% e 16%."
     ],
-    "recomendacao": "Envie na próxima quinta-feira, entre 12h e 15h, para a base engajada; repique sim, usando o padrão de assunto dos top assuntos, por exemplo: \"ERRATA: *|PRIMEIRO_NOME|*, saiu o resultado do sorteio! E teve prêmio grande! 🤑😍\"."
+    "recomendacao": "Envie na próxima quinta-feira, às 13h (bloco 12h–15h), para a base engajada, sem repique, usando assunto similar ao top 1: \"ERRATA: *|PRIMEIRO_NOME|*, saiu o resultado do sorteio! E teve prêmio grande! 🤑😍\"."
   }
 }
