@@ -92,8 +92,10 @@
   .kpi .src.so{background:var(--brand)} .kpi .src.rd{background:var(--gold)}
   .kpi .v{font-family:var(--disp);font-weight:700;font-size:21px;letter-spacing:-.02em;
     margin-top:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .kpi .sub{font-size:10.5px;color:var(--muted2);margin-top:2px;overflow:hidden;
-    text-overflow:ellipsis;white-space:nowrap}
+  /* Pode quebrar em duas linhas: a legenda da conversao e longa de proposito
+     ("310 dos 476 pedidos ÷ 4.760 sessoes") e cortar escondia a explicacao. */
+  .kpi .sub{font-size:10.5px;color:var(--muted2);margin-top:2px;
+    white-space:normal;line-height:1.4}
   /* Deixa quebrar em duas linhas: cortar com reticencias escondia justamente a
      informacao que o aviso existe para dar. */
   .kpi .alerta{font-size:9.5px;color:#9A6A12;background:#FDF6E7;border:1px solid #F1E1BD;
@@ -450,9 +452,18 @@
       var parcial = (k.dias_com_sessao !== undefined && k.dias_com_sessao < k.dias_ativos)
         ? "base parcial: " + k.dias_com_sessao + " de " + k.dias_ativos + " dias com sessão"
         : null;
-      var contaConv = (k.pedidos_com_sessao !== undefined)
-        ? nf(k.pedidos_com_sessao) + " pedidos ÷ " + nf(k.sessoes) + " sessões"
-        : "pedidos ÷ sessões";
+      // Quando a base e parcial, o numerador da conversao e MENOR que o card
+      // "Pedidos" ao lado (os dias sem sessao ficam de fora). Dizer "310 dos 476"
+      // deixa a relacao explicita, em vez de parecerem dois numeros brigando.
+      var contaConv;
+      if (k.pedidos_com_sessao === undefined) {
+        contaConv = "pedidos ÷ sessões";
+      } else if (parcial) {
+        contaConv = nf(k.pedidos_com_sessao) + " dos " + nf(k.pedidos) +
+          " pedidos ÷ " + nf(k.sessoes) + " sessões";
+      } else {
+        contaConv = nf(k.pedidos_com_sessao) + " pedidos ÷ " + nf(k.sessoes) + " sessões";
+      }
       var defs = [
         ["so", "Vendas", moeda(k.vendas), aba.periodo, true],
         ["so", "Comissão", moeda(k.comissao), "10% das vendas", true],
