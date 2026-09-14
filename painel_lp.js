@@ -464,6 +464,11 @@
       } else {
         contaConv = nf(k.pedidos_com_sessao) + " pedidos ÷ " + nf(k.sessoes) + " sessões";
       }
+      // Abertura e CTR agora cobrem a mesma janela das vendas, entao a legenda
+      // pode dizer quantas campanhas do periodo entraram na conta.
+      var campanhas = (aba.email && aba.email.envios)
+        ? aba.email.envios + " campanhas no período"
+        : "campanhas Sorte Online";
       var defs = [
         ["so", "Vendas", moeda(k.vendas), aba.periodo, true],
         ["so", "Comissão", moeda(k.comissao), "10% das vendas", true],
@@ -472,8 +477,10 @@
         ["so", "Pedidos", nf(k.pedidos), "no período", true],
         ["so", "Ticket médio", moeda(k.tkm, 2), "vendas ÷ pedidos", false],
         ["so", "Conversão", nf(k.conversao, 2) + "%", contaConv, false, parcial],
-        ["so", "Sessões", nf(k.sessoes), "visitas ao site da Sorte Online", false, parcial],
-        ["rd", "Abertura média", nf(k.abertura || 0, 1) + "%", "campanhas Sorte Online", false],
+        ["so", "Sessões", nf(k.sessoes),
+         parcial ? "visitas em " + k.dias_com_sessao + " dos " + k.dias_ativos + " dias"
+                 : "visitas ao site da Sorte Online", false, parcial],
+        ["rd", "Abertura média", nf(k.abertura || 0, 1) + "%", campanhas, false],
         ["rd", "CTR médio", nf(k.ctr || 0, 2) + "%", "cliques ÷ entregues", false]
       ];
       return '<div class="kpis" id="resumo">' + defs.map(function (d) {
