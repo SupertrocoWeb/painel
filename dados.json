@@ -733,17 +733,17 @@
         ]
       },
       "ia": {
-        "motor": "A base engajada abre <b>13.59%</b> vs <b>1.43%</b> na desengajada, diferença de <b>12.16pp</b>, refletindo maior receita quando focamos nos engajados.",
-        "diagnostico": "Dias com disparos para engajados concentraram ~R$10,992 em vendas (≈61% do total) apesar de representarem menos de 0.2% dos envios; já os envios à base total com baixa abertura geram vendas mínimas.",
-        "conversao": "O CTR geral está em <b>0.4%</b> e a taxa de conversão do site em <b>6.55%</b>, indicando gargalo na geração de cliques; cada 1.000 cliques perdidos equivale a ~<b>65</b> pedidos não realizados, representando cerca de R$2,475 de comissão perdida.",
+        "motor": "<b>Base engajada</b> abre em <b>13.59%</b> vs <b>1.43%</b> da desengajada – diferença de <b>12.16 p.p.</b>, refletindo vendas 10x maiores nos dias com disparos para engajados.",
+        "diagnostico": "Os dias em que o disparo foi para a base engajada geraram <b>R$ 9,770</b> em vendas (≈54% do total) com <b>≈2,500</b> cliques, enquanto a base total (desengajada) produziu menos de <b>R$ 1,200</b>. O CTR médio de 0.4% indica que poucos abertos clicam, limitando a conversão para o site.",
+        "conversao": "A taxa de conversão do site está em <b>6.55%</b>, mas a conversão de cliques para pedidos é apenas <b>0.24%</b> (475 pedidos/196,572 cliques). O gargalo está após o clique; elevar o CTR para 1% poderia gerar ~1,180 pedidos, acrescentando cerca de <b>R$ 45,000</b> em receita e <b>R$ 4,500</b> em comissão.",
         "sustenta": [
-          "<b>13.59%</b> taxa de abertura da base engajada vs <b>1.43%</b> da desengajada",
-          "<b>0.44%</b> CTR da base engajada, <b>0.13%</b> da desengajada",
-          "Dias com disparos para engajados geraram <b>R$10,992</b> em vendas (≈61% do total)",
-          "Comissão total obtida: <b>R$1,809.10</b>",
-          "CAC de <b>R$5.26</b> supera a comissão por novo cliente (<b>R$3.81</b>)"
+          "Engajados: abertura <b>13.59%</b>, CTR <b>0.44%</b> (n=59)",
+          "Desengajados: abertura <b>1.43%</b>, CTR <b>0.13%</b> (n=12)",
+          "Melhor dia de abertura: <b>Quinta</b> com <b>14.38%</b>",
+          "Melhor horário de CTR: <b>12h–15h</b> com <b>0.54%</b>",
+          "Comissão total: <b>R$ 1,809.10</b> (10% das vendas)"
         ],
-        "recomendacao": "Enviar na próxima quinta-feira, entre 12h e 15h, para a base engajada (~59k contatos) com repique 1 hora depois; usar assunto de alta abertura como “ERRATA: *|PRIMEIRO_NOME|*, saiu o resultado do sorteio! E teve prêmio grande! 🤑😍”."
+        "recomendacao": "Disparar na <b>Quinta</b> entre <b>12h e 15h</b> para a <b>base engajada</b>, com repique <b>sim</b>. Use assunto com personalização e urgência, por exemplo: \"*|PRIMEIRO_NOME|*, resultado do sorteio e prêmio grande!\""
       }
     },
     {
@@ -1013,17 +1013,17 @@
         ]
       },
       "ia": {
-        "motor": "A base <b>engajada</b> registrou <b>12,02%</b> de abertura contra <b>0%</b> da base <b>desengajada</b>. Essa diferença explica por que apenas <b>28 % da receita</b> (R$1.485) veio dos dias com disparos, indicando perda de potencial de vendas nos contatos inativos.",
-        "diagnostico": "Nos dias em que enviamos e‑mails (05, 07, 09 e 11), a taxa de abertura variou de <b>3 % a 17 %</b> e o ticket médio caiu para R$36,2, abaixo do ticket geral de R$40,5. O alto volume de entregas (2,341,193) não se traduziu em cliques suficientes (CTR 0,25 %), limitando o fluxo de tráfego para o site.",
-        "conversao": "A taxa de conversão do site está em <b>5,32 %</b>, mas o gargalo está no <b>CTR de 0,25 %</b>. Cada ponto percentual extra de CTR poderia gerar ~2.400 cliques adicionais, resultando em ~128 pedidos extra (≈R$5.2 k de vendas e R$520 de comissão).",
+        "motor": "<b>12.02%</b> de abertura na base engajada vs <b>0%</b> na desengajada, indicando que toda a receita vem dos contatos engajados.",
+        "diagnostico": "Os dias com disparos para engajados (05,07,09,11) tiveram abertura entre 12% e 17% e geraram 61 pedidos (≈47% dos pedidos), enquanto os dias sem disparos somaram 69 pedidos, mostrando que o e‑mail ainda não está maximizando a conversão de vendas.",
+        "conversao": "A taxa de conversão do site está em <b>5.32%</b>, enquanto o CTR dos e‑mails é apenas <b>0.25%</b>. O gargalo está no clique para compra; cada ponto percentual extra de CTR poderia gerar ~3 pedidos adicionais, equivalentes a ~R$ 120 de receita.",
         "sustenta": [
-          "<b>12,1 %</b> taxa média de abertura dos e‑mails",
-          "<b>0,25 %</b> CTR médio",
-          "<b>5,32 %</b> taxa de conversão do site",
-          "R$<b>526,6</b> de comissão gerada",
-          "R$<b>526,5</b> gasto em CAC (75 aquisições × R$7,02)"
+          "Abertura engajada: 12.02%",
+          "Vendas totais: R$ 5,266",
+          "Comissão Supertroco: R$ 526.6",
+          "CAC total (75 aquisições × R$ 7.02): R$ 526.5",
+          "Ticket médio: R$ 40.51"
         ],
-        "recomendacao": "Enviar a próxima campanha na <b>sábado</b> (14/09) às <b>10h</b>, horário com melhor CTR (09h–12h). Utilizar a base <b>engajada</b> e o assunto de maior performance: \"*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado\". Programar repique <b>sim</b> 48 h depois, caso a taxa de abertura fique abaixo de <b>10 %</b>."
+        "recomendacao": "Enviar a próxima campanha no **sábado** (17/09) entre **09h e 12h**, para a **base engajada**; fazer repique apenas para quem não abriu (sim). Utilizar assunto no padrão “*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado”, que já entregou 17% de abertura."
       }
     },
     {
@@ -1588,17 +1588,17 @@
         ]
       },
       "ia": {
-        "motor": "A base engajada tem <b>14.03%</b> de abertura contra <b>1.18%</b> da desengajada – diferença de <b>12.85 pontos</b>. Essa disparidade gera cerca de <b>74 %</b> da receita (R$9,507 de R$12,825) quando o disparo é para engajados.",
-        "diagnostico": "Dias com disparos à base engajada apresentam vendas e pedidos muito superiores (ex.: 04/08 R$2,770 e 100 pedidos) frente aos dias sem disparo ou com base total (<1% de abertura). O site converte <b>7.87 %</b> dos visitantes, mas o funil de e‑mail entrega apenas <b>0.27 %</b> de cliques, limitando a geração de pedidos.",
-        "conversao": "O gargalo está no CTR (<b>0.27 %</b>) e na taxa de cliques‑para‑pedido (<b>0.84 %</b> dos cliques geram ordem). Cada ponto percentual extra de CTR poderia representar ~<b>3 pedidos</b> adicionais por dia, equivalendo a ~R$110 de receita perdida diariamente.",
+        "motor": "A base <b>engajada</b> abre em <b>14.03%</b> contra <b>1.18%</b> da <b>desengajada</b> (diferença de <b>12.85pp</b>), o que explica que <b>74%</b> das vendas (R$9,507k) ocorram nos dias com disparos para engajados.",
+        "diagnostico": "Dias com disparos para a base engajada apresentam picos de vendas (ex.: 04/08 – 14% de abertura → R$2,770) enquanto envios à base total (1% de abertura) geram vendas muito menores (05/08 – R$941). A correlação entre abertura e receita confirma que o engajamento do e‑mail impulsiona a aquisição.",
+        "conversao": "O site converte <b>7.87%</b> dos visitantes, mas o e‑mail tem CTR médio de apenas <b>0.27%</b>, limitando cliques a 41,142. Esse gargalo custa aproximadamente <b>2725 pedidos</b> (potencial) ou R$101k de receita e R$10k de comissão extra se o CTR subir para 0.5%.",
         "sustenta": [
-          "Receita total: R$12,825",
-          "Comissão Supertroco (10%): R$1,282.5",
-          "CAC total (269 acq × R$4.77): R$1,283",
-          "Abertura média engajada: 14.03%",
-          "Conversão site: 7.87%"
+          "Engajados geram <b>74%</b> das vendas (R$9,507k/ R$12,825k)",
+          "Abertura engajada <b>14.03%</b> vs desengajada <b>1.18%</b>",
+          "CTR médio <b>0.27%</b> = 41,142 cliques",
+          "Conversão site <b>7.87%</b> = 345 pedidos",
+          "Comissão total <b>R$1,282.50</b> (10% das vendas)"
         ],
-        "recomendacao": "Enviar às 18h–24h de sábado para a base engajada (abertura 10.06% e CTR 0.4%). Repique 24 h depois apenas para quem não abriu (sim). Utilizar assunto com nome e referência ao resultado do sorteio, por exemplo: \"*|PRIMEIRO_NOME|*, confira o resultado do sorteio e ganhe surpresa!\"."
+        "recomendacao": "Enviar na <b>segunda‑feira</b> entre <b>12h e 15h</b> para a base engajada, repetir (re‑envio) 1 dia depois (sim), usando assunto no padrão do top performer (ex.: \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀\") para manter abertura >16% e tentar elevar o CTR acima de 0.33%."
       }
     }
   ]
