@@ -94,9 +94,11 @@
     margin-top:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .kpi .sub{font-size:10.5px;color:var(--muted2);margin-top:2px;overflow:hidden;
     text-overflow:ellipsis;white-space:nowrap}
+  /* Deixa quebrar em duas linhas: cortar com reticencias escondia justamente a
+     informacao que o aviso existe para dar. */
   .kpi .alerta{font-size:9.5px;color:#9A6A12;background:#FDF6E7;border:1px solid #F1E1BD;
-    border-radius:6px;padding:3px 7px;margin-top:7px;max-width:100%;overflow:hidden;
-    text-overflow:ellipsis;white-space:nowrap}
+    border-radius:6px;padding:3px 7px;margin-top:7px;max-width:100%;
+    white-space:normal;line-height:1.35}
 
   /* ---------------- blocos ---------------- */
   .row{display:grid;gap:13px;margin-top:13px;scroll-margin-top:80px}
