@@ -6,21 +6,21 @@
       "id": "geral",
       "nome": "Visão geral",
       "sub": "toda a parceria",
-      "periodo": "01/08/2026 a 11/09/2026",
+      "periodo": "01/08/2026 a 13/09/2026",
       "kpis": {
-        "vendas": 18091.0,
-        "comissao": 1809.1,
-        "pedidos": 475,
-        "aquisicoes": 344,
-        "cac": 5.26,
-        "sessoes": 4719,
-        "tkm": 38.09,
-        "conversao": 6.55,
-        "pedidos_com_sessao": 309,
-        "dias_com_sessao": 15,
-        "dias_ativos": 42,
-        "abertura": 12.4,
-        "ctr": 0.4
+        "vendas": 18136.0,
+        "comissao": 1813.6,
+        "pedidos": 476,
+        "aquisicoes": 347,
+        "cac": 5.23,
+        "sessoes": 4760,
+        "tkm": 38.1,
+        "conversao": 6.51,
+        "pedidos_com_sessao": 310,
+        "dias_com_sessao": 17,
+        "dias_ativos": 44,
+        "abertura": 9.3,
+        "ctr": 0.27
       },
       "dias": [
         {
@@ -610,108 +610,121 @@
           "conv": 4.11,
           "send": "engajados · 3% ab.",
           "n_env": 1
+        },
+        {
+          "iso": "2026-09-12",
+          "d": "12/09",
+          "dia_semana": 5,
+          "vendas": 0.0,
+          "comissao": 0.0,
+          "pedidos": 0,
+          "novos": 0,
+          "sessoes": 30,
+          "tkm": 0,
+          "conv": 0.0,
+          "send": null,
+          "n_env": 0
+        },
+        {
+          "iso": "2026-09-13",
+          "d": "13/09",
+          "dia_semana": 6,
+          "vendas": 45.0,
+          "comissao": 4.5,
+          "pedidos": 1,
+          "novos": 3,
+          "sessoes": 11,
+          "tkm": 45.0,
+          "conv": 9.09,
+          "send": null,
+          "n_env": 0
         }
       ],
       "email": {
-        "envios": 76,
-        "periodo": "11/03/2026 a 11/09/2026",
+        "envios": 24,
+        "periodo": "03/08/2026 a 11/09/2026",
         "engajado": {
-          "ab": 13.59,
-          "ctr": 0.44,
-          "n": 59
+          "ab": 13.49,
+          "ctr": 0.36,
+          "n": 15
         },
         "deseng": {
-          "ab": 1.43,
-          "ctr": 0.13,
-          "n": 12
+          "ab": 1.18,
+          "ctr": 0.11,
+          "n": 8
         },
         "funil": {
-          "entregues": 48936996.0,
-          "aberturas": 6054783.0,
-          "cliques": 196572.0
+          "entregues": 17394110.0,
+          "aberturas": 1623886.0,
+          "cliques": 46933.0
         },
-        "abertura": 12.4,
-        "ctr": 0.4,
-        "descad": 117920.0,
+        "abertura": 9.3,
+        "ctr": 0.27,
+        "descad": 27969.0,
         "dias": [
           [
-            "Quinta",
-            14.38,
-            3
-          ],
-          [
-            "Domingo",
-            13.8,
-            1
+            "Sábado",
+            11.45,
+            5
           ],
           [
             "Segunda",
-            13.47,
-            34
-          ],
-          [
-            "Sábado",
-            9.63,
-            17
+            10.22,
+            9
           ],
           [
             "Quarta",
-            9.62,
-            11
-          ],
-          [
-            "Sexta",
-            7.76,
-            8
+            7.6,
+            5
           ],
           [
             "Terça",
             7.55,
             2
+          ],
+          [
+            "Sexta",
+            5.59,
+            3
           ]
         ],
         "horarios": [
           [
-            "12h–15h",
-            0.54,
-            18
-          ],
-          [
-            "15h–18h",
-            0.47,
-            21
-          ],
-          [
-            "09h–12h",
-            0.29,
-            21
-          ],
-          [
             "18h–24h",
-            0.18,
+            0.4,
+            2
+          ],
+          [
+            "12h–15h",
+            0.33,
             7
           ],
           [
-            "00h–09h",
-            0.14,
-            9
+            "15h–18h",
+            0.22,
+            5
+          ],
+          [
+            "09h–12h",
+            0.21,
+            10
           ]
         ],
         "top": [
           {
-            "ab": 19.05,
-            "assunto": "ERRATA: *|PRIMEIRO_NOME|*, saiu o resultado do sorteio! E teve prêmio grande! 🤑😍",
-            "data": "18/05"
+            "ab": 17.0,
+            "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado",
+            "data": "05/09"
           },
           {
-            "ab": 18.74,
-            "assunto": "*|PRIMEIRO_NOME|*, saiu o resultado do sorteio 🤑",
-            "data": "23/03"
+            "ab": 16.27,
+            "assunto": "*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀",
+            "data": "10/08"
           },
           {
-            "ab": 18.64,
-            "assunto": "*|PRIMEIRO_NOME|*, saiu o resultado do sorteio 🤑",
-            "data": "16/03"
+            "ab": 15.82,
+            "assunto": "Resultado do sorteio + cupom surpresa pra você 🍀",
+            "data": "03/08"
           }
         ],
         "piores": [
@@ -733,36 +746,36 @@
         ]
       },
       "ia": {
-        "motor": "<b>Base engajada</b> abre em <b>13.59%</b> vs <b>1.43%</b> da desengajada – diferença de <b>12.16 p.p.</b>, refletindo vendas 10x maiores nos dias com disparos para engajados.",
-        "diagnostico": "Os dias em que o disparo foi para a base engajada geraram <b>R$ 9,770</b> em vendas (≈54% do total) com <b>≈2,500</b> cliques, enquanto a base total (desengajada) produziu menos de <b>R$ 1,200</b>. O CTR médio de 0.4% indica que poucos abertos clicam, limitando a conversão para o site.",
-        "conversao": "A taxa de conversão do site está em <b>6.55%</b>, mas a conversão de cliques para pedidos é apenas <b>0.24%</b> (475 pedidos/196,572 cliques). O gargalo está após o clique; elevar o CTR para 1% poderia gerar ~1,180 pedidos, acrescentando cerca de <b>R$ 45,000</b> em receita e <b>R$ 4,500</b> em comissão.",
+        "motor": "A base <b>engajada</b> tem <b>13.49%</b> de abertura contra <b>1.18%</b> da base <b>desengajada</b>. Essa diferença de <b>12.31 pontos</b> impulsiona a maior parte da receita, já que os dias com disparos para engajados geram mais vendas e pedidos.",
+        "diagnostico": "Nos dias em que o disparo foi para a base engajada (ex.: 04/08, 05/09) a taxa de abertura supera 13% e os pedidos saltam acima de 20, enquanto envios à base total com abertura ~1% resultam em poucos pedidos. O volume de vendas acompanha a qualidade da abertura e do CTR.",
+        "conversao": "A taxa de conversão do site está em <b>6.51%</b>, mas o CTR dos e‑mails é apenas <b>0.27%</b>, indicando que o principal gargalo é a passagem do e‑mail para o site. Cada pedido vale <b>R$38,10</b> (comissão <b>R$3,81</b>); melhorar o CTR em 0.1 ponto poderia gerar ~176 pedidos adicionais (≈R$6.7k em vendas e R$670 em comissão).",
         "sustenta": [
-          "Engajados: abertura <b>13.59%</b>, CTR <b>0.44%</b> (n=59)",
-          "Desengajados: abertura <b>1.43%</b>, CTR <b>0.13%</b> (n=12)",
-          "Melhor dia de abertura: <b>Quinta</b> com <b>14.38%</b>",
-          "Melhor horário de CTR: <b>12h–15h</b> com <b>0.54%</b>",
-          "Comissão total: <b>R$ 1,809.10</b> (10% das vendas)"
+          "<b>13.49%</b> taxa de abertura da base engajada",
+          "<b>1.18%</b> taxa de abertura da base desengajada",
+          "<b>6.51%</b> taxa de conversão do site",
+          "<b>0.27%</b> CTR médio dos e‑mails",
+          "<b>476</b> pedidos gerados no período"
         ],
-        "recomendacao": "Disparar na <b>Quinta</b> entre <b>12h e 15h</b> para a <b>base engajada</b>, com repique <b>sim</b>. Use assunto com personalização e urgência, por exemplo: \"*|PRIMEIRO_NOME|*, resultado do sorteio e prêmio grande!\""
+        "recomendacao": "Envie a próxima campanha na <b>sábado</b> entre <b>18h e 24h</b> para a <b>base engajada</b>, com repique no <b>domingo</b> (sim). Use assunto personalizado com urgência, por exemplo: \"*|PRIMEIRO_NOME|*, sua chance de ganhar hoje – oferta relâmpago!\""
       }
     },
     {
       "id": "2026-09",
       "nome": "Setembro 2026",
-      "sub": "11 dias com dados",
-      "periodo": "01/09/2026 a 11/09/2026",
+      "sub": "13 dias com dados",
+      "periodo": "01/09/2026 a 13/09/2026",
       "kpis": {
-        "vendas": 5266.0,
-        "comissao": 526.6,
-        "pedidos": 130,
-        "aquisicoes": 75,
-        "cac": 7.02,
-        "sessoes": 2445,
-        "tkm": 40.51,
-        "conversao": 5.32,
-        "pedidos_com_sessao": 130,
-        "dias_com_sessao": 11,
-        "dias_ativos": 11,
+        "vendas": 5311.0,
+        "comissao": 531.1,
+        "pedidos": 131,
+        "aquisicoes": 78,
+        "cac": 6.81,
+        "sessoes": 2486,
+        "tkm": 40.54,
+        "conversao": 5.27,
+        "pedidos_com_sessao": 131,
+        "dias_com_sessao": 13,
+        "dias_ativos": 13,
         "abertura": 12.1,
         "ctr": 0.25
       },
@@ -920,6 +933,34 @@
           "conv": 4.11,
           "send": "engajados · 3% ab.",
           "n_env": 1
+        },
+        {
+          "iso": "2026-09-12",
+          "d": "12/09",
+          "dia_semana": 5,
+          "vendas": 0.0,
+          "comissao": 0.0,
+          "pedidos": 0,
+          "novos": 0,
+          "sessoes": 30,
+          "tkm": 0,
+          "conv": 0.0,
+          "send": null,
+          "n_env": 0
+        },
+        {
+          "iso": "2026-09-13",
+          "d": "13/09",
+          "dia_semana": 6,
+          "vendas": 45.0,
+          "comissao": 4.5,
+          "pedidos": 1,
+          "novos": 3,
+          "sessoes": 11,
+          "tkm": 45.0,
+          "conv": 9.09,
+          "send": null,
+          "n_env": 0
         }
       ],
       "email": {
@@ -1013,17 +1054,17 @@
         ]
       },
       "ia": {
-        "motor": "<b>12.02%</b> de abertura na base engajada vs <b>0%</b> na desengajada, indicando que toda a receita vem dos contatos engajados.",
-        "diagnostico": "Os dias com disparos para engajados (05,07,09,11) tiveram abertura entre 12% e 17% e geraram 61 pedidos (≈47% dos pedidos), enquanto os dias sem disparos somaram 69 pedidos, mostrando que o e‑mail ainda não está maximizando a conversão de vendas.",
-        "conversao": "A taxa de conversão do site está em <b>5.32%</b>, enquanto o CTR dos e‑mails é apenas <b>0.25%</b>. O gargalo está no clique para compra; cada ponto percentual extra de CTR poderia gerar ~3 pedidos adicionais, equivalentes a ~R$ 120 de receita.",
+        "motor": "A base engajada tem <b>12.02%</b> de abertura vs <b>0%</b> da desengajada – diferença de <b>12 pontos</b>, o que indica que a maior parte da receita vem dos contatos que realmente abrem, enquanto a desengajada não gera nenhum retorno.",
+        "diagnostico": "Os e‑mails geram <b>282 mil</b> aberturas, mas apenas <b>5.791</b> cliques (CTR <b>0.25%</b>), resultando em poucos visitantes ao site. Mesmo com taxa de conversão do site de <b>5.27%</b>, isso produz apenas <b>131</b> pedidos, muito abaixo dos <b>~305</b> pedidos que o volume de cliques poderia gerar.",
+        "conversao": "O gargalo está no CTR: cada 1.000 aberturas convertem em apenas 2,5 cliques, limitando a geração de sessões. Essa perda equivale a cerca de <b>174 pedidos</b> não realizados, representando aproximadamente <b>R$7.1 mil</b> de receita e <b>R$710</b> de comissão não recebida.",
         "sustenta": [
-          "Abertura engajada: 12.02%",
-          "Vendas totais: R$ 5,266",
-          "Comissão Supertroco: R$ 526.6",
-          "CAC total (75 aquisições × R$ 7.02): R$ 526.5",
-          "Ticket médio: R$ 40.51"
+          "<b>12.1%</b> taxa média de abertura",
+          "<b>0.25%</b> CTR médio",
+          "<b>5.27%</b> taxa de conversão do site",
+          "<b>131</b> pedidos efetivos",
+          "<b>R$7,053</b> de receita potencial não capturada"
         ],
-        "recomendacao": "Enviar a próxima campanha no **sábado** (17/09) entre **09h e 12h**, para a **base engajada**; fazer repique apenas para quem não abriu (sim). Utilizar assunto no padrão “*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado”, que já entregou 17% de abertura."
+        "recomendacao": "Enviar a próxima campanha no <b>Sábado</b> às <b>10h</b> para a <b>base engajada</b> com repique <b>sim</b>. Use assunto no padrão \"*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado\" – combina alta taxa de abertura (17%) e horário de pico de CTR (09h–12h)."
       }
     },
     {
@@ -1588,17 +1629,17 @@
         ]
       },
       "ia": {
-        "motor": "A base <b>engajada</b> abre em <b>14.03%</b> contra <b>1.18%</b> da <b>desengajada</b> (diferença de <b>12.85pp</b>), o que explica que <b>74%</b> das vendas (R$9,507k) ocorram nos dias com disparos para engajados.",
-        "diagnostico": "Dias com disparos para a base engajada apresentam picos de vendas (ex.: 04/08 – 14% de abertura → R$2,770) enquanto envios à base total (1% de abertura) geram vendas muito menores (05/08 – R$941). A correlação entre abertura e receita confirma que o engajamento do e‑mail impulsiona a aquisição.",
-        "conversao": "O site converte <b>7.87%</b> dos visitantes, mas o e‑mail tem CTR médio de apenas <b>0.27%</b>, limitando cliques a 41,142. Esse gargalo custa aproximadamente <b>2725 pedidos</b> (potencial) ou R$101k de receita e R$10k de comissão extra se o CTR subir para 0.5%.",
+        "motor": "A base engajada abre em <b>14.03%</b> versus <b>1.18%</b> da desengajada – diferença de <b>12.85 p.p.</b>. Essa diferença concentra cerca de <b>R$9,507</b> (74% do total) das vendas de agosto.",
+        "diagnostico": "Dias em que o disparo foi para a base engajada geraram R$9,507 de receita e 23% dos pedidos, enquanto envios à base total (abertura ~1%) resultaram em menos de R$1,000 de receita. O CTR da engajada (0.4%) ainda está abaixo do ideal, limitando o fluxo de cliques para o site.",
+        "conversao": "A taxa de conversão do site está em <b>7.87%</b>, mas o e‑mail entrega apenas <b>0.27%</b> de CTR, sendo o principal gargalo. Cada ponto percentual extra de CTR poderia gerar ~30 pedidos adicionais (R$1,115), elevando a comissão em ~R$112.",
         "sustenta": [
-          "Engajados geram <b>74%</b> das vendas (R$9,507k/ R$12,825k)",
-          "Abertura engajada <b>14.03%</b> vs desengajada <b>1.18%</b>",
-          "CTR médio <b>0.27%</b> = 41,142 cliques",
-          "Conversão site <b>7.87%</b> = 345 pedidos",
-          "Comissão total <b>R$1,282.50</b> (10% das vendas)"
+          "Abertura engajada: <b>14.03%</b>",
+          "Abertura desengajada: <b>1.18%</b>",
+          "Receita de dias engajados: <b>R$9,507</b>",
+          "Ticket médio: <b>R$37.17</b>",
+          "Comissão total: <b>R$1,282.5</b>"
         ],
-        "recomendacao": "Enviar na <b>segunda‑feira</b> entre <b>12h e 15h</b> para a base engajada, repetir (re‑envio) 1 dia depois (sim), usando assunto no padrão do top performer (ex.: \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀\") para manter abertura >16% e tentar elevar o CTR acima de 0.33%."
+        "recomendacao": "Envie a próxima campanha na base engajada, preferencialmente aos sábados entre 19h e 22h, horário que já mostrou CTR de <b>0.4%</b>. Use assunto com personalização e foco no resultado, como “*|PRIMEIRO_NOME|*, o resultado saiu! 🎉”. Programe um repique 24 h depois para quem não abriu, mantendo o mesmo assunto com leve variação. Evite disparos para a base desengajada até melhorar a segmentação."
       }
     }
   ]
