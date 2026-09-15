@@ -90,7 +90,8 @@
   .bn .c.destaque .r{color:#9FC2C4} .bn .c.destaque .v{color:#fff}
   .bn .c.destaque .s{color:#7fa9ab}
   .bn .r{font-size:11.5px;color:var(--muted);font-weight:500}
-  .bn .v{font-family:var(--disp);font-weight:800;font-size:28px;letter-spacing:-.025em;
+  .bn .v{font-family:var(--disp);font-weight:800;letter-spacing:-.025em;
+    font-size:clamp(18px,3.2vw,28px);
     margin-top:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .bn .s{font-size:10.5px;color:var(--muted2);margin-top:3px}
 
@@ -316,7 +317,7 @@
   @media(max-width:620px){
     .wrap{padding:0 15px 34px}
     .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .bn .v{font-size:23px}
+
     .week{height:118px} .track{height:120px} .wbars{height:160px}
     .brow{grid-template-columns:42px minmax(0,1fr) 84px}
     .trilho{animation-duration:30s}
