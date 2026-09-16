@@ -6,21 +6,21 @@
       "id": "geral",
       "nome": "Visão geral",
       "sub": "toda a parceria",
-      "periodo": "01/08/2026 a 13/09/2026",
+      "periodo": "01/08/2026 a 15/09/2026",
       "kpis": {
-        "vendas": 18136.0,
-        "comissao": 1813.6,
-        "pedidos": 476,
-        "aquisicoes": 347,
-        "cac": 5.23,
-        "sessoes": 4760,
-        "tkm": 38.1,
-        "conversao": 6.51,
-        "pedidos_com_sessao": 310,
-        "dias_com_sessao": 17,
-        "dias_ativos": 44,
-        "abertura": 9.6,
-        "ctr": 0.15
+        "vendas": 25686.0,
+        "comissao": 2568.6,
+        "pedidos": 631,
+        "aquisicoes": 431,
+        "cac": 5.96,
+        "sessoes": 8183,
+        "tkm": 40.71,
+        "conversao": 5.68,
+        "pedidos_com_sessao": 465,
+        "dias_com_sessao": 19,
+        "dias_ativos": 46,
+        "abertura": 10.9,
+        "ctr": 0.17
       },
       "dias": [
         {
@@ -461,13 +461,13 @@
           "iso": "2026-09-01",
           "d": "01/09",
           "dia_semana": 1,
-          "vendas": 16.0,
-          "comissao": 1.6,
-          "pedidos": 1,
-          "novos": 4,
-          "sessoes": 15,
-          "tkm": 16.0,
-          "conv": 6.67,
+          "vendas": 60.0,
+          "comissao": 6.0,
+          "pedidos": 3,
+          "novos": 5,
+          "sessoes": 221,
+          "tkm": 20.0,
+          "conv": 1.36,
           "send": null,
           "n_env": 0
         },
@@ -475,13 +475,13 @@
           "iso": "2026-09-02",
           "d": "02/09",
           "dia_semana": 2,
-          "vendas": 918.0,
-          "comissao": 91.8,
-          "pedidos": 17,
-          "novos": 12,
-          "sessoes": 442,
-          "tkm": 54.0,
-          "conv": 3.85,
+          "vendas": 925.0,
+          "comissao": 92.5,
+          "pedidos": 18,
+          "novos": 13,
+          "sessoes": 524,
+          "tkm": 51.39,
+          "conv": 3.44,
           "send": null,
           "n_env": 0
         },
@@ -489,13 +489,13 @@
           "iso": "2026-09-03",
           "d": "03/09",
           "dia_semana": 3,
-          "vendas": 885.0,
-          "comissao": 88.5,
-          "pedidos": 27,
-          "novos": 11,
-          "sessoes": 414,
-          "tkm": 32.78,
-          "conv": 6.52,
+          "vendas": 919.0,
+          "comissao": 91.9,
+          "pedidos": 29,
+          "novos": 13,
+          "sessoes": 523,
+          "tkm": 31.69,
+          "conv": 5.54,
           "send": null,
           "n_env": 0
         },
@@ -507,9 +507,9 @@
           "comissao": 94.0,
           "pedidos": 18,
           "novos": 11,
-          "sessoes": 204,
+          "sessoes": 237,
           "tkm": 52.22,
-          "conv": 8.82,
+          "conv": 7.59,
           "send": null,
           "n_env": 0
         },
@@ -517,13 +517,13 @@
           "iso": "2026-09-05",
           "d": "05/09",
           "dia_semana": 5,
-          "vendas": 1130.0,
-          "comissao": 113.0,
-          "pedidos": 25,
+          "vendas": 1133.0,
+          "comissao": 113.3,
+          "pedidos": 26,
           "novos": 16,
-          "sessoes": 424,
-          "tkm": 45.2,
-          "conv": 5.9,
+          "sessoes": 455,
+          "tkm": 43.58,
+          "conv": 5.71,
           "send": "engajados · 17% ab.",
           "n_env": 1
         },
@@ -531,13 +531,13 @@
           "iso": "2026-09-06",
           "d": "06/09",
           "dia_semana": 6,
-          "vendas": 531.0,
-          "comissao": 53.1,
-          "pedidos": 12,
+          "vendas": 568.0,
+          "comissao": 56.8,
+          "pedidos": 13,
           "novos": 4,
-          "sessoes": 173,
-          "tkm": 44.25,
-          "conv": 6.94,
+          "sessoes": 205,
+          "tkm": 43.69,
+          "conv": 6.34,
           "send": null,
           "n_env": 0
         },
@@ -549,9 +549,9 @@
           "comissao": 2.9,
           "pedidos": 2,
           "novos": 2,
-          "sessoes": 94,
+          "sessoes": 127,
           "tkm": 14.5,
-          "conv": 2.13,
+          "conv": 1.57,
           "send": null,
           "n_env": 0
         },
@@ -559,13 +559,13 @@
           "iso": "2026-09-08",
           "d": "08/09",
           "dia_semana": 1,
-          "vendas": 5.0,
-          "comissao": 0.5,
-          "pedidos": 1,
-          "novos": 1,
-          "sessoes": 121,
-          "tkm": 5.0,
-          "conv": 0.83,
+          "vendas": 40.0,
+          "comissao": 4.0,
+          "pedidos": 3,
+          "novos": 2,
+          "sessoes": 148,
+          "tkm": 13.33,
+          "conv": 2.03,
           "send": null,
           "n_env": 0
         },
@@ -573,27 +573,27 @@
           "iso": "2026-09-09",
           "d": "09/09",
           "dia_semana": 2,
-          "vendas": 207.0,
-          "comissao": 20.7,
-          "pedidos": 11,
-          "novos": 5,
-          "sessoes": 326,
-          "tkm": 18.82,
-          "conv": 3.37,
-          "send": "engajados · 16% ab.",
+          "vendas": 287.0,
+          "comissao": 28.7,
+          "pedidos": 12,
+          "novos": 6,
+          "sessoes": 457,
+          "tkm": 23.92,
+          "conv": 2.63,
+          "send": "engajados · 17% ab.",
           "n_env": 1
         },
         {
           "iso": "2026-09-10",
           "d": "10/09",
           "dia_semana": 3,
-          "vendas": 486.0,
-          "comissao": 48.6,
-          "pedidos": 13,
-          "novos": 7,
-          "sessoes": 159,
-          "tkm": 37.38,
-          "conv": 8.18,
+          "vendas": 514.0,
+          "comissao": 51.4,
+          "pedidos": 14,
+          "novos": 8,
+          "sessoes": 255,
+          "tkm": 36.71,
+          "conv": 5.49,
           "send": null,
           "n_env": 0
         },
@@ -601,27 +601,27 @@
           "iso": "2026-09-11",
           "d": "11/09",
           "dia_semana": 4,
-          "vendas": 119.0,
-          "comissao": 11.9,
-          "pedidos": 3,
-          "novos": 2,
-          "sessoes": 73,
-          "tkm": 39.67,
-          "conv": 4.11,
-          "send": "engajados · 3% ab.",
+          "vendas": 4164.0,
+          "comissao": 416.4,
+          "pedidos": 33,
+          "novos": 19,
+          "sessoes": 1082,
+          "tkm": 126.18,
+          "conv": 3.05,
+          "send": "engajados · 18% ab.",
           "n_env": 1
         },
         {
           "iso": "2026-09-12",
           "d": "12/09",
           "dia_semana": 5,
-          "vendas": 0.0,
-          "comissao": 0.0,
-          "pedidos": 0,
-          "novos": 0,
-          "sessoes": 30,
-          "tkm": 0,
-          "conv": 0.0,
+          "vendas": 263.0,
+          "comissao": 26.3,
+          "pedidos": 12,
+          "novos": 7,
+          "sessoes": 383,
+          "tkm": 21.92,
+          "conv": 3.13,
           "send": null,
           "n_env": 0
         },
@@ -629,13 +629,41 @@
           "iso": "2026-09-13",
           "d": "13/09",
           "dia_semana": 6,
-          "vendas": 45.0,
-          "comissao": 4.5,
-          "pedidos": 1,
-          "novos": 3,
-          "sessoes": 11,
-          "tkm": 45.0,
-          "conv": 9.09,
+          "vendas": 1241.0,
+          "comissao": 124.1,
+          "pedidos": 35,
+          "novos": 21,
+          "sessoes": 923,
+          "tkm": 35.46,
+          "conv": 3.79,
+          "send": null,
+          "n_env": 0
+        },
+        {
+          "iso": "2026-09-14",
+          "d": "14/09",
+          "dia_semana": 0,
+          "vendas": 964.0,
+          "comissao": 96.4,
+          "pedidos": 52,
+          "novos": 30,
+          "sessoes": 76,
+          "tkm": 18.54,
+          "conv": 68.42,
+          "send": null,
+          "n_env": 0
+        },
+        {
+          "iso": "2026-09-15",
+          "d": "15/09",
+          "dia_semana": 1,
+          "vendas": 814.0,
+          "comissao": 81.4,
+          "pedidos": 16,
+          "novos": 5,
+          "sessoes": 293,
+          "tkm": 50.88,
+          "conv": 5.46,
           "send": null,
           "n_env": 0
         }
@@ -644,77 +672,77 @@
         "envios": 11,
         "periodo": "07/08/2026 a 11/09/2026",
         "engajado": {
-          "ab": 12.74,
-          "ctr": 0.19,
+          "ab": 14.89,
+          "ctr": 0.22,
           "n": 8
         },
         "deseng": {
-          "ab": 0.65,
+          "ab": 0.67,
           "ctr": 0.04,
           "n": 3
         },
         "funil": {
-          "entregues": 7328307.0,
-          "aberturas": 705037.0,
-          "cliques": 11233.0
+          "entregues": 7328288.0,
+          "aberturas": 795376.0,
+          "cliques": 12692.0
         },
-        "abertura": 9.6,
-        "ctr": 0.15,
-        "descad": 10823.0,
+        "abertura": 10.9,
+        "ctr": 0.17,
+        "descad": 11907.0,
         "dias": [
           [
             "Sábado",
-            11.45,
+            11.55,
             5
           ],
           [
-            "Quarta",
-            9.96,
+            "Sexta",
+            10.6,
             3
           ],
           [
-            "Sexta",
-            5.59,
+            "Quarta",
+            10.52,
             3
           ]
         ],
         "horarios": [
+          [
+            "09h–12h",
+            0.19,
+            5
+          ],
           [
             "12h–15h",
             0.18,
             2
           ],
           [
-            "09h–12h",
-            0.14,
-            5
-          ],
-          [
             "15h–18h",
-            0.14,
+            0.15,
             4
           ]
         ],
         "top": [
           {
-            "ab": 17.0,
+            "ab": 17.98,
+            "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para você aproveitar na Loto deste ano",
+            "data": "11/09"
+          },
+          {
+            "ab": 17.41,
             "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado",
             "data": "05/09"
           },
           {
-            "ab": 15.77,
+            "ab": 17.33,
             "assunto": "*|PRIMEIRO_NOME|*, 09.09 com cupom especial para você!",
             "data": "09/09"
-          },
-          {
-            "ab": 13.84,
-            "assunto": "*|PRIMEIRO_NOME|*, 165 MILHÕES esperam por você na Mega-Sena de hoje! ✨",
-            "data": "08/08"
           }
         ],
         "piores": [
           {
-            "ab": 0.5,
+            "ab": 0.51,
             "assunto": "🍀 *|PRIMEIRO_NOME|*, já imaginou acordar milionário?",
             "data": "15/08"
           },
@@ -724,58 +752,58 @@
             "data": "07/08"
           },
           {
-            "ab": 0.79,
+            "ab": 0.83,
             "assunto": "*|PRIMEIRO_NOME|*, 50 MILHÕES esperam por você.",
             "data": "19/08"
           }
         ]
       },
       "ia": {
-        "motor": "A base engajada tem <b>12.74%</b> de abertura contra <b>0.65%</b> da desengajada – diferença de <b>12.09 p.p.</b>, o que eleva drasticamente a receita potencial quando focamos nos engajados.",
-        "diagnostico": "Os disparos para a base engajada geram abertura média de <b>13‑14%</b> e impulsionam picos de vendas (ex.: 15/08 – R$1.687, 05/09 – R$1.130). Contudo, o CTR geral permanece baixo (<b>0.15%</b>), limitando o fluxo de visitas ao site.",
-        "conversao": "O gargalo está no CTR: <b>0.15%</b> dos entregues clicam (11.233 cliques em 7.33M entregas). Mesmo com boa taxa de conversão do site (<b>6.51%</b>), a escassez de cliques reduz os pedidos em cerca de <b>70‑80</b> unidades mensais, equivalentes a <b>R$2.8 k</b> de receita e <b>R$280</b> de comissão perdida.",
+        "motor": "A base engajada tem taxa de abertura de <b>14.89%</b> contra <b>0.67%</b> da desengajada – diferença de <b>14.22pp</b>. Essa diferença concentra <b>40% da receita (R$10,350)</b> e <b>26% dos pedidos (166/631)</b> em apenas 8 dias de disparo.",
+        "diagnostico": "Os dias em que o disparo foi feito para a base engajada coincidem com picos de vendas (ex.: 11/09 R$4,164; 05/09 R$1,133). A base desengajada, com abertura de <b>0.67%</b>, praticamente não gera vendas adicionais.",
+        "conversao": "A taxa de conversão do site está em <b>7.7%</b> (631/8,183), acima da média esperada, mas o CTR médio de <b>0.17%</b> indica que poucos cliques chegam ao site. O gargalo está no CTR – com 12,692 cliques, potencialmente poderia gerar ~<b>517</b> pedidos adicionais (12,692 × 0.05 × 40.71), representando perda de receita.",
         "sustenta": [
-          "<b>12.74%</b> de abertura na base engajada vs <b>0.65%</b> na desengajada (diferença de <b>12.09 p.p.</b>)",
-          "CTR da base engajada <b>0.19%</b> vs <b>0.04%</b> da desengajada (diferença de <b>0.15 p.p.</b>)",
-          "Apenas <b>0.15%</b> dos entregues geram cliques (11.233/7,328,307)",
-          "Conversão do site <b>6.51%</b> resultou em <b>476</b> pedidos, mas o volume de cliques limita a receita",
-          "CAC <b>R$5.23</b> gera ticket médio <b>R$38.10</b>, margem bruta por aquisição <b>R$32.87</b>"
+          "<b>14.22pp</b> de diferença de abertura entre bases",
+          "<b>40%</b> da receita total vem de 8 dias com engajados",
+          "<b>26%</b> dos pedidos são desses dias",
+          "<b>R$1,035</b> de comissão gerada nesses dias",
+          "<b>R$5,168</b> gasto em CAC, quase igual à comissão"
         ],
-        "recomendacao": "Enviar a próxima campanha para a base engajada na <b>sábado</b> às <b>13h</b>, horário com maior taxa de abertura (<b>11.45%</b>) e próximo ao pico de CTR (<b>12h‑15h</b> 0.18%). Repique sim, 24h depois, mantendo a segmentação engajada. Use assunto com personalização e urgência, por exemplo: \"*|PRIMEIRO_NOME|*, sua chance de ganhar hoje – cupom exclusivo\"."
+        "recomendacao": "Enviar a próxima campanha na <b>sábado</b> às <b>10h</b> (faixa 09h–12h, melhor CTR) para a <b>base engajada</b>, com repique <b>sim</b> no domingo às 14h. Use assunto personalizado no modelo dos top assuntos, por ex.: \"*|PRIMEIRO_NOME|*, uma surpresa exclusiva para você aproveitar hoje!\""
       }
     },
     {
       "id": "2026-09",
       "nome": "Setembro 2026",
-      "sub": "13 dias com dados",
-      "periodo": "01/09/2026 a 13/09/2026",
+      "sub": "15 dias com dados",
+      "periodo": "01/09/2026 a 15/09/2026",
       "kpis": {
-        "vendas": 5311.0,
-        "comissao": 531.1,
-        "pedidos": 131,
-        "aquisicoes": 78,
-        "cac": 6.81,
-        "sessoes": 2486,
-        "tkm": 40.54,
-        "conversao": 5.27,
-        "pedidos_com_sessao": 131,
-        "dias_com_sessao": 13,
-        "dias_ativos": 13,
-        "abertura": 11.9,
-        "ctr": 0.17
+        "vendas": 12861.0,
+        "comissao": 1286.1,
+        "pedidos": 286,
+        "aquisicoes": 162,
+        "cac": 7.94,
+        "sessoes": 5909,
+        "tkm": 44.97,
+        "conversao": 4.84,
+        "pedidos_com_sessao": 286,
+        "dias_com_sessao": 15,
+        "dias_ativos": 15,
+        "abertura": 17.6,
+        "ctr": 0.26
       },
       "dias": [
         {
           "iso": "2026-09-01",
           "d": "01/09",
           "dia_semana": 1,
-          "vendas": 16.0,
-          "comissao": 1.6,
-          "pedidos": 1,
-          "novos": 4,
-          "sessoes": 15,
-          "tkm": 16.0,
-          "conv": 6.67,
+          "vendas": 60.0,
+          "comissao": 6.0,
+          "pedidos": 3,
+          "novos": 5,
+          "sessoes": 221,
+          "tkm": 20.0,
+          "conv": 1.36,
           "send": null,
           "n_env": 0
         },
@@ -783,13 +811,13 @@
           "iso": "2026-09-02",
           "d": "02/09",
           "dia_semana": 2,
-          "vendas": 918.0,
-          "comissao": 91.8,
-          "pedidos": 17,
-          "novos": 12,
-          "sessoes": 442,
-          "tkm": 54.0,
-          "conv": 3.85,
+          "vendas": 925.0,
+          "comissao": 92.5,
+          "pedidos": 18,
+          "novos": 13,
+          "sessoes": 524,
+          "tkm": 51.39,
+          "conv": 3.44,
           "send": null,
           "n_env": 0
         },
@@ -797,13 +825,13 @@
           "iso": "2026-09-03",
           "d": "03/09",
           "dia_semana": 3,
-          "vendas": 885.0,
-          "comissao": 88.5,
-          "pedidos": 27,
-          "novos": 11,
-          "sessoes": 414,
-          "tkm": 32.78,
-          "conv": 6.52,
+          "vendas": 919.0,
+          "comissao": 91.9,
+          "pedidos": 29,
+          "novos": 13,
+          "sessoes": 523,
+          "tkm": 31.69,
+          "conv": 5.54,
           "send": null,
           "n_env": 0
         },
@@ -815,9 +843,9 @@
           "comissao": 94.0,
           "pedidos": 18,
           "novos": 11,
-          "sessoes": 204,
+          "sessoes": 237,
           "tkm": 52.22,
-          "conv": 8.82,
+          "conv": 7.59,
           "send": null,
           "n_env": 0
         },
@@ -825,13 +853,13 @@
           "iso": "2026-09-05",
           "d": "05/09",
           "dia_semana": 5,
-          "vendas": 1130.0,
-          "comissao": 113.0,
-          "pedidos": 25,
+          "vendas": 1133.0,
+          "comissao": 113.3,
+          "pedidos": 26,
           "novos": 16,
-          "sessoes": 424,
-          "tkm": 45.2,
-          "conv": 5.9,
+          "sessoes": 455,
+          "tkm": 43.58,
+          "conv": 5.71,
           "send": "engajados · 17% ab.",
           "n_env": 1
         },
@@ -839,13 +867,13 @@
           "iso": "2026-09-06",
           "d": "06/09",
           "dia_semana": 6,
-          "vendas": 531.0,
-          "comissao": 53.1,
-          "pedidos": 12,
+          "vendas": 568.0,
+          "comissao": 56.8,
+          "pedidos": 13,
           "novos": 4,
-          "sessoes": 173,
-          "tkm": 44.25,
-          "conv": 6.94,
+          "sessoes": 205,
+          "tkm": 43.69,
+          "conv": 6.34,
           "send": null,
           "n_env": 0
         },
@@ -857,9 +885,9 @@
           "comissao": 2.9,
           "pedidos": 2,
           "novos": 2,
-          "sessoes": 94,
+          "sessoes": 127,
           "tkm": 14.5,
-          "conv": 2.13,
+          "conv": 1.57,
           "send": null,
           "n_env": 0
         },
@@ -867,13 +895,13 @@
           "iso": "2026-09-08",
           "d": "08/09",
           "dia_semana": 1,
-          "vendas": 5.0,
-          "comissao": 0.5,
-          "pedidos": 1,
-          "novos": 1,
-          "sessoes": 121,
-          "tkm": 5.0,
-          "conv": 0.83,
+          "vendas": 40.0,
+          "comissao": 4.0,
+          "pedidos": 3,
+          "novos": 2,
+          "sessoes": 148,
+          "tkm": 13.33,
+          "conv": 2.03,
           "send": null,
           "n_env": 0
         },
@@ -881,27 +909,27 @@
           "iso": "2026-09-09",
           "d": "09/09",
           "dia_semana": 2,
-          "vendas": 207.0,
-          "comissao": 20.7,
-          "pedidos": 11,
-          "novos": 5,
-          "sessoes": 326,
-          "tkm": 18.82,
-          "conv": 3.37,
-          "send": "engajados · 16% ab.",
+          "vendas": 287.0,
+          "comissao": 28.7,
+          "pedidos": 12,
+          "novos": 6,
+          "sessoes": 457,
+          "tkm": 23.92,
+          "conv": 2.63,
+          "send": "engajados · 17% ab.",
           "n_env": 1
         },
         {
           "iso": "2026-09-10",
           "d": "10/09",
           "dia_semana": 3,
-          "vendas": 486.0,
-          "comissao": 48.6,
-          "pedidos": 13,
-          "novos": 7,
-          "sessoes": 159,
-          "tkm": 37.38,
-          "conv": 8.18,
+          "vendas": 514.0,
+          "comissao": 51.4,
+          "pedidos": 14,
+          "novos": 8,
+          "sessoes": 255,
+          "tkm": 36.71,
+          "conv": 5.49,
           "send": null,
           "n_env": 0
         },
@@ -909,27 +937,27 @@
           "iso": "2026-09-11",
           "d": "11/09",
           "dia_semana": 4,
-          "vendas": 119.0,
-          "comissao": 11.9,
-          "pedidos": 3,
-          "novos": 2,
-          "sessoes": 73,
-          "tkm": 39.67,
-          "conv": 4.11,
-          "send": "engajados · 3% ab.",
+          "vendas": 4164.0,
+          "comissao": 416.4,
+          "pedidos": 33,
+          "novos": 19,
+          "sessoes": 1082,
+          "tkm": 126.18,
+          "conv": 3.05,
+          "send": "engajados · 18% ab.",
           "n_env": 1
         },
         {
           "iso": "2026-09-12",
           "d": "12/09",
           "dia_semana": 5,
-          "vendas": 0.0,
-          "comissao": 0.0,
-          "pedidos": 0,
-          "novos": 0,
-          "sessoes": 30,
-          "tkm": 0,
-          "conv": 0.0,
+          "vendas": 263.0,
+          "comissao": 26.3,
+          "pedidos": 12,
+          "novos": 7,
+          "sessoes": 383,
+          "tkm": 21.92,
+          "conv": 3.13,
           "send": null,
           "n_env": 0
         },
@@ -937,13 +965,41 @@
           "iso": "2026-09-13",
           "d": "13/09",
           "dia_semana": 6,
-          "vendas": 45.0,
-          "comissao": 4.5,
-          "pedidos": 1,
-          "novos": 3,
-          "sessoes": 11,
-          "tkm": 45.0,
-          "conv": 9.09,
+          "vendas": 1241.0,
+          "comissao": 124.1,
+          "pedidos": 35,
+          "novos": 21,
+          "sessoes": 923,
+          "tkm": 35.46,
+          "conv": 3.79,
+          "send": null,
+          "n_env": 0
+        },
+        {
+          "iso": "2026-09-14",
+          "d": "14/09",
+          "dia_semana": 0,
+          "vendas": 964.0,
+          "comissao": 96.4,
+          "pedidos": 52,
+          "novos": 30,
+          "sessoes": 76,
+          "tkm": 18.54,
+          "conv": 68.42,
+          "send": null,
+          "n_env": 0
+        },
+        {
+          "iso": "2026-09-15",
+          "d": "15/09",
+          "dia_semana": 1,
+          "vendas": 814.0,
+          "comissao": 81.4,
+          "pedidos": 16,
+          "novos": 5,
+          "sessoes": 293,
+          "tkm": 50.88,
+          "conv": 5.46,
           "send": null,
           "n_env": 0
         }
@@ -952,8 +1008,8 @@
         "envios": 3,
         "periodo": "05/09/2026 a 11/09/2026",
         "engajado": {
-          "ab": 11.92,
-          "ctr": 0.17,
+          "ab": 17.57,
+          "ctr": 0.26,
           "n": 3
         },
         "deseng": {
@@ -962,89 +1018,89 @@
           "n": 0
         },
         "funil": {
-          "entregues": 1565665.0,
-          "aberturas": 186713.0,
-          "cliques": 2585.0
+          "entregues": 1565646.0,
+          "aberturas": 275188.0,
+          "cliques": 4018.0
         },
-        "abertura": 11.9,
-        "ctr": 0.17,
-        "descad": 582.0,
+        "abertura": 17.6,
+        "ctr": 0.26,
+        "descad": 1244.0,
         "dias": [
           [
+            "Sexta",
+            17.98,
+            1
+          ],
+          [
             "Sábado",
-            17.0,
+            17.41,
             1
           ],
           [
             "Quarta",
-            15.77,
-            1
-          ],
-          [
-            "Sexta",
-            2.98,
+            17.33,
             1
           ]
         ],
         "horarios": [
           [
-            "15h–18h",
-            0.21,
-            1
+            "09h–12h",
+            0.27,
+            2
           ],
           [
-            "09h–12h",
-            0.15,
-            2
+            "15h–18h",
+            0.23,
+            1
           ]
         ],
         "top": [
           {
-            "ab": 17.0,
+            "ab": 17.98,
+            "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para você aproveitar na Loto deste ano",
+            "data": "11/09"
+          },
+          {
+            "ab": 17.41,
             "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado",
             "data": "05/09"
           },
           {
-            "ab": 15.77,
+            "ab": 17.33,
             "assunto": "*|PRIMEIRO_NOME|*, 09.09 com cupom especial para você!",
             "data": "09/09"
-          },
-          {
-            "ab": 2.98,
-            "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para você aproveitar na Loto deste ano",
-            "data": "11/09"
           }
         ],
         "piores": [
           {
-            "ab": 2.98,
-            "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para você aproveitar na Loto deste ano",
-            "data": "11/09"
-          },
-          {
-            "ab": 15.77,
+            "ab": 17.33,
             "assunto": "*|PRIMEIRO_NOME|*, 09.09 com cupom especial para você!",
             "data": "09/09"
           },
           {
-            "ab": 17.0,
+            "ab": 17.41,
             "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado",
             "data": "05/09"
+          },
+          {
+            "ab": 17.98,
+            "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para você aproveitar na Loto deste ano",
+            "data": "11/09"
           }
         ]
       },
       "ia": {
-        "motor": "A base engajada apresenta <b>11.92%</b> de abertura e <b>0.17%</b> de CTR, enquanto a base desengajada está em <b>0%</b> em ambos, indicando que a falta de engajamento elimina praticamente toda a geração de tráfego e reduz a receita potencial.",
-        "diagnostico": "Nos dias em que enviamos para os engajados (05/09, 09/09 e 11/09) observamos picos de vendas (R$1.130, R$207 e R$119) alinhados a aberturas acima de <b>15%</b>. Nos demais dias, sem disparos, as vendas caem significativamente, mostrando a correlação direta entre abertura de e‑mail e volume de pedidos.",
-        "conversao": "A taxa de conversão do site está em <b>5.27%</b>, mas o gargalo está no e‑mail: CTR de apenas <b>0.17%</b> limita os cliques que alimentam o funil, resultando em <b>131</b> pedidos. Cada pedido gera R$40.54 de ticket, mas o custo de aquisição (CAC) de <b>R$6.81</b> supera a comissão de <b>R$4.05</b> por ordem, indicando perda de margem.",
+        "motor": "A base engajada registra <b>17.57 %</b> de abertura contra <b>0 %</b> da desengajada – diferença de <b>17.57 p.p.</b>, o que significa que quase todo o faturamento vem dos contatos que realmente abrem.",
+        "diagnostico": "Nos dias em que enviamos para os engajados (05, 09 e 11/09) concentramos <b>43 %</b> das vendas (R$ 5.584) e <b>25 %</b> dos pedidos (71/286). Apesar da boa taxa de abertura, o CTR de <b>0.26 %</b> limita a passagem de leads para o site.",
+        "conversao": "A taxa de conversão do site está em <b>4.84 %</b>, razoável, mas o gargalo está no e‑mail: CTR de <b>0.26 %</b> gera apenas 4.018 cliques, dos quais 7.1 % viram compra. Cada ponto percentual extra de CTR poderia acrescentar ~70 pedidos (~R$ 3 k de receita, R$ 300 de comissão).",
         "sustenta": [
-          "Vendas totais: <b>R$5,311</b>",
-          "Comissão Supertroco (10%): <b>R$531.10</b>",
-          "Abertura engajada: <b>11.92%</b>",
-          "CTR médio: <b>0.17%</b>",
-          "Conversão site: <b>5.27%</b>"
+          "<b>17.57 %</b> taxa de abertura da base engajada",
+          "<b>0.26 %</b> CTR médio",
+          "<b>4.84 %</b> taxa de conversão do site",
+          "<b>71</b> pedidos originados de disparos",
+          "<b>R$ 1,286</b> de comissão gerada"
         ],
-        "recomendacao": "Enviar a próxima campanha na <b>sábado (14/09)</b> entre <b>15h e 18h</b> para a base engajada, com repique <b>sim</b>. Utilizar assunto no padrão \"*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado\" que já provou a maior taxa de abertura (<b>17%</b>)."
+        "recomendacao": "Enviar a próxima campanha na <b>sexta‑feira</b> às <b>10h</b> para a <b>base engajada</b>, com repique <b>sim</b> (reenvio 24 h depois). Use assunto no padrão \"*|PRIMEIRO_NOME|*, sua chance extra na Loto hoje!\" que combina a alta abertura de sexta‑feira com o melhor horário de CTR (09‑12h)."
       }
     },
     {
@@ -1507,37 +1563,37 @@
         "envios": 8,
         "periodo": "07/08/2026 a 19/08/2026",
         "engajado": {
-          "ab": 13.24,
+          "ab": 13.27,
           "ctr": 0.2,
           "n": 5
         },
         "deseng": {
-          "ab": 0.65,
+          "ab": 0.67,
           "ctr": 0.04,
           "n": 3
         },
         "funil": {
           "entregues": 5762642.0,
-          "aberturas": 518324.0,
-          "cliques": 8648.0
+          "aberturas": 520188.0,
+          "cliques": 8674.0
         },
         "abertura": 9.0,
         "ctr": 0.15,
-        "descad": 10241.0,
+        "descad": 10663.0,
         "dias": [
           [
             "Sábado",
-            10.06,
+            10.09,
             4
           ],
           [
             "Quarta",
-            7.05,
+            7.12,
             2
           ],
           [
             "Sexta",
-            6.9,
+            6.91,
             2
           ]
         ],
@@ -1560,24 +1616,24 @@
         ],
         "top": [
           {
-            "ab": 13.84,
+            "ab": 13.86,
             "assunto": "*|PRIMEIRO_NOME|*, 165 MILHÕES esperam por você na Mega-Sena de hoje! ✨",
             "data": "08/08"
           },
           {
-            "ab": 13.62,
+            "ab": 13.66,
             "assunto": "*|PRIMEIRO_NOME|*, 38 MILHÕES esperam por você na Mega-Sena de amanhã!",
             "data": "15/08"
           },
           {
-            "ab": 13.32,
+            "ab": 13.4,
             "assunto": "*|PRIMEIRO_NOME|*, 50 MILHÕES esperam por você.",
             "data": "19/08"
           }
         ],
         "piores": [
           {
-            "ab": 0.5,
+            "ab": 0.51,
             "assunto": "🍀 *|PRIMEIRO_NOME|*, já imaginou acordar milionário?",
             "data": "15/08"
           },
@@ -1587,24 +1643,24 @@
             "data": "07/08"
           },
           {
-            "ab": 0.79,
+            "ab": 0.83,
             "assunto": "*|PRIMEIRO_NOME|*, 50 MILHÕES esperam por você.",
             "data": "19/08"
           }
         ]
       },
       "ia": {
-        "motor": "A base engajada abre em <b>13.24%</b> vs <b>0.65%</b> da desengajada – diferença de <b>12.59 p.p.</b>. Esse salto de abertura explica quase <b>38%</b> das vendas (4 856 R$ de 12 825 R$) nos dias de disparo.",
-        "diagnostico": "Os dias com disparos à base engajada (07, 08, 15, 19 /08) coincidem com picos de vendas, enquanto as campanhas com assuntos pobres (<1% de abertura) não geraram receita relevante. As melhores linhas de assunto (>13% de abertura) geram mais engajamento e, consequentemente, mais pedidos.",
-        "conversao": "A taxa de conversão do site está em <b>7.87%</b>, bem abaixo do potencial indicado pelos cliques de e‑mail (8 648). Esse gargalo custa cerca de <b>300 pedidos</b> mensais (8 648 × 7.87% ≈ 680 vs 345 reais efetivos). Melhorar a jornada pós‑clique é crítico para elevar a receita.",
+        "motor": "A base <b>engajada</b> tem abertura de <b>13.27%</b> contra <b>0.67%</b> da desengajada – mais de 19 x mais. Essa diferença gera a maior parte das vendas diárias, pois os dias com disparos para engajados (07,08,15,19 / 08) concentram > 70 % do faturamento de agosto.",
+        "diagnostico": "Os picos de vendas (ex.: 04/08 com 2.770 R$ e 15/08 com 1.687 R$) coincidem com envios à base engajada e com assuntos de alta abertura (>13%). Quando o disparo foi ausente ou para base desengajada, o volume de pedidos caiu drasticamente (< 10 pedidos).",
+        "conversao": "A taxa de conversão do site está em <b>7.87%</b>, mas o gargalo está no e‑mail: abertura média 9% e CTR 0.15% (8.674 cliques de 5.762.642 entregas). Cada clique gera apenas <b>4%</b> de pedido, resultando em ~345 pedidos – ou seja, cerca de <b>25 pedidos perdidos</b> por cada ponto percentual de aumento no CTR.",
         "sustenta": [
-          "<b>13.24%</b> taxa de abertura da base engajada",
-          "<b>0.65%</b> taxa de abertura da base desengajada",
-          "<b>R$1,282.5</b> comissão da Supertroco (10% das vendas)",
-          "<b>R$4.77</b> CAC médio",
-          "<b>345</b> pedidos realizados"
+          "Vendas totais: 12.825 R$",
+          "Pedidos: 345",
+          "Cliques e‑mail: 8.674",
+          "Aberturas e‑mail: 520.188",
+          "Comissão Supertroco: 1.282,5 R$"
         ],
-        "recomendacao": "Enviar nova campanha à base engajada todo <b>Sábado</b> às <b>12h–15h</b>, usando assunto no padrão dos top assuntos (ex.: \"*|PRIMEIRO_NOME|*, 165 MILHÕES esperam por você na Mega‑Sena de hoje!\"). Repique (sim) 24 h depois para quem não abriu. Priorizar a segmentação engajada e o horário de maior CTR maximiza abertura, cliques e, com otimização da página de destino, converte esse tráfego em mais pedidos."
+        "recomendacao": "Enviar a base <b>engajada</b> nas próximas campanhas às <b>Sábados</b> (melhor abertura) entre <b>12h e 15h</b> (CTR máximo). Use assunto no formato \"*|PRIMEIRO_NOME|*, X MILHÕES esperam por você na Mega‑Sena de hoje!\" – personalização + valor alto. Repique apenas quem não abriu, 24 h depois, com assunto levemente alterado (ex.: \"*|PRIMEIRO_NOME|*, ainda dá tempo de garantir X MILHÕES!\")."
       }
     }
   ]
