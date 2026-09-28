@@ -149,14 +149,15 @@
           }
         ],
         "ia": {
-          "destaque": "O resultado foi puxado principalmente pelas <b>R$ 18.136,00</b> de vendas da Sorte Online, gerando <b>R$ 1.813,60</b> de comissão, enquanto a Crefaz entregou <b>188</b> leads, com pico de <b>49</b> em 16/09.",
-          "comparativo": "A Sorte Online, modelo de vendas, utilizou 24 campanhas de e‑mail que entregaram <b>17.394.110</b> mensagens, porém registrou abertura de <b>9,3%</b> e CTR de <b>0,27%</b>, indicando baixa eficiência de engajamento. Já a Crefaz, modelo de leads, não usou e‑mail nem WhatsApp, mas manteve média diária de <b>7,52</b> leads e gerou <b>188</b> leads no período, concentrando <b>49</b> em um único dia. O canal WhatsApp ficou inativo para ambos, representando oportunidade não explorada. Em termos de custo, a Sorte Online teve CAC de <b>R$ 5,23</b>, enquanto não há custo associado à geração de leads da Crefaz.",
+          "destaque": "<b>R$18.136,00</b> em vendas foram gerados pelo parceiro Sorte Online, impulsionados por 24 campanhas de e‑mail que entregaram <b>17.394.110</b> mensagens com taxa de abertura de <b>9,3%</b> e CTR de <b>0,27%</b>. Já o parceiro Crefaz entregou <b>188</b> leads, concentrando <b>49</b> leads no pico de 16/09, o que elevou a média diária para <b>7,52</b>.",
+          "comparativo": "Sorte Online mostrou alta eficiência de e‑mail, convertendo <b>476</b> pedidos a um CAC de <b>R$5,23</b>, enquanto Crefaz, modelo de leads, ainda depende de geração pontual e não possui canal de e‑mail ou WhatsApp. Ambos não utilizam WhatsApp, o que pode ser uma oportunidade. A taxa de abertura e CTR de Sorte Online estão abaixo da média de mercado, indicando espaço para otimização. Crefaz tem dias sem leads (3 dias) e picos irregulares.",
           "alertas": [
-            "Taxa de abertura <b>9,3%</b> e CTR <b>0,27%</b> da campanha de e‑mail estão abaixo da média do mercado, sinalizando necessidade de otimização de conteúdo.",
-            "Concentração de leads da Crefaz em <b>49</b> no dia 16/09 indica alta volatilidade e risco de dependência de picos pontuais.",
-            "Ausência total de disparos e investimento em WhatsApp para ambos os parceiros pode limitar a diversificação de canais e a captação de novos clientes."
+            "CTR de <b>0,27%</b> da campanha de e‑mail está muito abaixo do esperado",
+            "Crefaz não utilizou nenhum canal de e‑mail ou WhatsApp, limitando alcance",
+            "Pico de leads de <b>49</b> em um único dia indica concentração e risco de dependência de eventos pontuais",
+            "Ausência total de disparos de WhatsApp impede aproveitamento de conversões rápidas"
           ],
-          "prioridade": "No próximo ciclo, o foco deve ser na Sorte Online, aprimorando a performance das campanhas de e‑mail (melhor segmentação, assunto mais atrativo) para elevar abertura e CTR, e ativando o canal WhatsApp para complementar a jornada de compra. Paralelamente, vale explorar a expansão do modelo de leads da Crefaz, estabilizando a geração diária e reduzindo a dependência de picos, possivelmente integrando estratégias de nutrição via WhatsApp."
+          "prioridade": "No próximo ciclo, o foco deve ser no parceiro Crefaz, ampliando a captação de leads e introduzindo campanhas de e‑mail e WhatsApp para diversificar os canais e reduzir a dependência de picos pontuais. Para Sorte Online, priorizar a melhoria da taxa de abertura e CTR, testando segmentação e criativos, e iniciar um piloto de WhatsApp para potencializar conversões."
         }
       },
       {
@@ -256,15 +257,15 @@
           }
         ],
         "ia": {
-          "destaque": "O resultado foi puxado principalmente pelas <b>R$5.311</b> em vendas da Sorte Online, sustentadas por um CAC de <b>R$6,81</b> e taxa de abertura de <b>12,1%</b>. No segmento de crédito, a Crefaz entregou <b>188 leads</b>, com pico de <b>49 leads</b> em 16/09, mostrando boa geração pontual.",
-          "comparativo": "A Sorte Online mostrou eficiência de e‑mail com 2.341.193 entregas, porém o CTR ficou baixo em <b>0,25%</b>. Já a Crefaz, modelo de leads, gerou <b>188 leads</b> em 25 dias, com média diária de <b>7,52</b> e 22 dias com pelo menos um lead. Nenhum dos parceiros utilizou o canal WhatsApp, limitando a diversificação de mídia. Enquanto a venda gerou receita direta, a geração de leads ainda depende de nutrição para converter em vendas.",
+          "destaque": "<b>R$5311,00</b> em vendas foram gerados pela Sorte Online, impulsionados por <b>2.341.193</b> e‑mails entregues e <b>12,1%</b> de taxa de abertura; já a Crefaz entregou <b>188</b> leads, com pico de <b>49</b> leads em 16/09.",
+          "comparativo": "A Sorte Online mostrou eficiência no canal de e‑mail, embora o CTR de <b>0,25%</b> indique espaço para melhorar a relevância; gerou <b>131</b> pedidos com CAC de <b>R$6,81</b>. A Crefaz, modelo de leads, não utilizou e‑mail nem WhatsApp, concentrando a geração de leads em poucos dias, o que gera instabilidade. Ambos os parceiros não têm atividade no WhatsApp, representando oportunidade não explorada.",
           "alertas": [
-            "CTR da campanha de e‑mail da Sorte Online está abaixo do esperado (<b>0,25%</b>)",
-            "Ausência total de disparos por WhatsApp pode reduzir oportunidades de engajamento",
-            "Crefaz não possui estratégia de e‑mail, risco de perda de follow‑up de leads",
-            "Concentração de leads da Crefaz em um único dia (49 em 16/09) indica volatilidade"
+            "CTR de <b>0,25%</b> da Sorte Online está abaixo da média esperada",
+            "Concentração de <b>49</b> leads em um único dia para Crefaz pode indicar volatilidade",
+            "Ausência total de disparos de WhatsApp impede diversificação de canais",
+            "CAC de <b>R$6,81</b> pode subir se a taxa de conversão não melhorar"
           ],
-          "prioridade": "No próximo ciclo, o foco deve ser a Sorte Online, pois já gera receita comprovada. É recomendável otimizar a taxa de cliques investindo em criativos mais atrativos e iniciar testes de disparos por WhatsApp para complementar o e‑mail, reduzindo a dependência de um único canal. Paralelamente, iniciar uma estratégia de nutrição por e‑mail para a Crefaz ajudará a transformar os <b>188 leads</b> em oportunidades de venda."
+          "prioridade": "Concentrar esforços na Sorte Online no próximo ciclo, otimizando a criatividade e segmentação dos e‑mails para elevar o CTR e testando campanhas de WhatsApp para reduzir o CAC e ampliar a base de clientes. Paralelamente, estabilizar a geração de leads da Crefaz diversificando fontes e distribuindo a captação ao longo dos dias."
         }
       },
       {
@@ -342,15 +343,15 @@
           }
         ],
         "ia": {
-          "destaque": "O resultado foi impulsionado pelo volume massivo de entregas de e‑mail (<b>15.052.917</b>), que gerou <b>345</b> pedidos e R$<b>12.825,00</b> em vendas, rendendo R$<b>1.282,50</b> de comissão.",
-          "comparativo": "Com apenas um parceiro ativo, a eficiência do e‑mail ficou evidente: taxa de abertura de <b>8,9%</b> e CTR de <b>0,27%</b>, CAC de R$<b>4,77</b> e TKM de R$<b>37,17</b>. Não houve atividade no WhatsApp, portanto não há dados para comparar esse canal. O modelo de vendas mostrou boa geração de receita, mas a taxa de conversão (<b>7,87%</b>) indica espaço para melhorar o engajamento.",
+          "destaque": "O resultado foi impulsionado pelo volume de <b>15,052,917</b> e‑mails entregues, gerando <b>R$12,825</b> em vendas, com comissão de <b>R$1,282.5</b>.",
+          "comparativo": "Com apenas o parceiro Sorte Online ativo, todo o desempenho vem do canal e‑mail. A taxa de abertura ficou em <b>8.9%</b> e o CTR em <b>0.27%</b>, indicando baixa interação apesar da alta entrega. Não há atividade no WhatsApp, o que limita oportunidades de conversão adicional. O custo de aquisição de <b>R$4.77</b> por cliente está dentro da média, mas pode ser otimizado com melhor engajamento.",
           "alertas": [
-            "CTR abaixo da média do mercado (<0,5%)",
-            "Taxa de abertura modestamente baixa (<10%)",
-            "Ausência total de disparos e conversões no WhatsApp",
-            "Conversão de <b>7,87%</b> pode indicar perda de oportunidades após a abertura"
+            "Taxa de abertura < 10% pode indicar problemas de relevância",
+            "CTR de 0.27% está muito abaixo do benchmark",
+            "Ausência de campanhas no WhatsApp impede diversificação de canais",
+            "Alto número de entregas pode esconder problemas de entregabilidade"
           ],
-          "prioridade": "No próximo ciclo, o foco deve ser a otimização do e‑mail (testes A/B de assunto, segmentação de lista e CTAs mais fortes) para elevar abertura e CTR, e a implantação de campanhas de WhatsApp para diversificar a fonte de conversões e reduzir a dependência do único canal."
+          "prioridade": "No próximo ciclo, o foco deve ser a otimização do e‑mail e a ativação do WhatsApp. Recomenda‑se segmentar a base, testar linhas de assunto e conteúdos mais atrativos para elevar abertura e CTR, além de iniciar campanhas de WhatsApp para captar leads e complementar as vendas."
         }
       }
     ],
@@ -451,14 +452,15 @@
       }
     ],
     "ia": {
-      "destaque": "O resultado foi puxado principalmente pelas <b>R$ 18.136,00</b> de vendas da Sorte Online, gerando <b>R$ 1.813,60</b> de comissão, enquanto a Crefaz entregou <b>188</b> leads, com pico de <b>49</b> em 16/09.",
-      "comparativo": "A Sorte Online, modelo de vendas, utilizou 24 campanhas de e‑mail que entregaram <b>17.394.110</b> mensagens, porém registrou abertura de <b>9,3%</b> e CTR de <b>0,27%</b>, indicando baixa eficiência de engajamento. Já a Crefaz, modelo de leads, não usou e‑mail nem WhatsApp, mas manteve média diária de <b>7,52</b> leads e gerou <b>188</b> leads no período, concentrando <b>49</b> em um único dia. O canal WhatsApp ficou inativo para ambos, representando oportunidade não explorada. Em termos de custo, a Sorte Online teve CAC de <b>R$ 5,23</b>, enquanto não há custo associado à geração de leads da Crefaz.",
+      "destaque": "<b>R$18.136,00</b> em vendas foram gerados pelo parceiro Sorte Online, impulsionados por 24 campanhas de e‑mail que entregaram <b>17.394.110</b> mensagens com taxa de abertura de <b>9,3%</b> e CTR de <b>0,27%</b>. Já o parceiro Crefaz entregou <b>188</b> leads, concentrando <b>49</b> leads no pico de 16/09, o que elevou a média diária para <b>7,52</b>.",
+      "comparativo": "Sorte Online mostrou alta eficiência de e‑mail, convertendo <b>476</b> pedidos a um CAC de <b>R$5,23</b>, enquanto Crefaz, modelo de leads, ainda depende de geração pontual e não possui canal de e‑mail ou WhatsApp. Ambos não utilizam WhatsApp, o que pode ser uma oportunidade. A taxa de abertura e CTR de Sorte Online estão abaixo da média de mercado, indicando espaço para otimização. Crefaz tem dias sem leads (3 dias) e picos irregulares.",
       "alertas": [
-        "Taxa de abertura <b>9,3%</b> e CTR <b>0,27%</b> da campanha de e‑mail estão abaixo da média do mercado, sinalizando necessidade de otimização de conteúdo.",
-        "Concentração de leads da Crefaz em <b>49</b> no dia 16/09 indica alta volatilidade e risco de dependência de picos pontuais.",
-        "Ausência total de disparos e investimento em WhatsApp para ambos os parceiros pode limitar a diversificação de canais e a captação de novos clientes."
+        "CTR de <b>0,27%</b> da campanha de e‑mail está muito abaixo do esperado",
+        "Crefaz não utilizou nenhum canal de e‑mail ou WhatsApp, limitando alcance",
+        "Pico de leads de <b>49</b> em um único dia indica concentração e risco de dependência de eventos pontuais",
+        "Ausência total de disparos de WhatsApp impede aproveitamento de conversões rápidas"
       ],
-      "prioridade": "No próximo ciclo, o foco deve ser na Sorte Online, aprimorando a performance das campanhas de e‑mail (melhor segmentação, assunto mais atrativo) para elevar abertura e CTR, e ativando o canal WhatsApp para complementar a jornada de compra. Paralelamente, vale explorar a expansão do modelo de leads da Crefaz, estabilizando a geração diária e reduzindo a dependência de picos, possivelmente integrando estratégias de nutrição via WhatsApp."
+      "prioridade": "No próximo ciclo, o foco deve ser no parceiro Crefaz, ampliando a captação de leads e introduzindo campanhas de e‑mail e WhatsApp para diversificar os canais e reduzir a dependência de picos pontuais. Para Sorte Online, priorizar a melhoria da taxa de abertura e CTR, testando segmentação e criativos, e iniciar um piloto de WhatsApp para potencializar conversões."
     },
     "cronograma": {
       "mes": "2026-10",
@@ -1345,11 +1347,11 @@
           }
         }
       },
-      "estrategia": "Sorte Online ficou com os envios de e‑mail nas <b>segundas</b> e <b>quintas</b> (ex.: <b>01/10</b>, <b>05/10</b>, <b>08/10</b>, <b>12/10</b>, <b>15/10</b>, <b>19/10</b>, <b>22/10</b>, <b>26/10</b>, <b>29/10</b>) porque tem melhor taxa de abertura nas segundas (14,2 %) e as quintas são os dias principais; no WhatsApp recebeu todas as <b>terças</b> (<b>06/10</b>, <b>13/10</b>, <b>20/10</b>, <b>27/10</b>) seguindo a cadência de 2,4 envios/semana. Crefaz recebeu os envios de e‑mail nas <b>quartas</b> e <b>sábados</b> (<b>03/10</b>, <b>07/10</b>, <b>10/10</b>, <b>14/10</b>, <b>17/10</b>, <b>21/10</b>, <b>24/10</b>, <b>28/10</b>, <b>31/10</b>) alinhado ao histórico de leads concentrado nesses dia…",
+      "estrategia": "Sorte Online recebeu <b>9</b> datas de e‑mail (quintas e segundas) e <b>4</b> datas de WhatsApp (todas nas terças). Crefaz ficou com <b>9</b> datas de e‑mail (sábados e quartas) e <b>4</b> datas de WhatsApp (domingos). A escolha segue as evidências de melhor abertura nas segundas/quintas para Sorte Online e da concentração de leads nas quartas/sábados para Crefaz, mantendo a cadência de <b>2,4</b> envios semanais para engajados.",
       "cuidados": [
-        "Acompanhar taxa de abertura e conversão nos dias de feriado (<b>12/10</b>) e nos dias de pagamento (<b>07/10</b>, <b>20/10</b>) para validar se o desempenho se mantém.",
-        "Verificar limites de volume diário no WhatsApp para evitar bloqueios de plataforma.",
-        "Garantir que mensagens de crédito não contenham incentivo a apostas, respeitando a política de cada parceiro."
+        "Verificar a taxa de entrega e opt‑out dos disparos de WhatsApp nos fins de semana, especialmente aos domingos.",
+        "Monitorar a performance dos envios de e‑mail em dias de feriado (ex.: 12/10) para ajustar futuros horários se necessário.",
+        "Garantir que a sequência de e‑mail recorrente nas segundas de Sorte Online continue respeitando o limite de <b>2,4</b> envios por semana."
       ],
       "regras": [
         "Um parceiro por dia na base engajada de e-mail.",
@@ -2267,18 +2269,18 @@
           },
           "whatsapp": null,
           "ia": {
-            "motor": "A base engajada tem <b>13.49%</b> de abertura versus <b>1.18%</b> da desengajada, diferença de <b>12.31 pontos</b>, indicando que os disparos para engajados geram muito mais receita.",
-            "diagnostico": "Dias com disparo para engajados (ex.: 04/08, 07/08, 08/08) registraram vendas acima de R$2.7k, enquanto o único disparo para desengajados (05/08) resultou em R$941; o número de novos clientes acompanha essa diferença.",
-            "conversao": "A taxa de conversão do site está em <b>6.51%</b> e o CTR de e‑mail <b>0.27%</b>. O gargalo está no clique, limitando o fluxo para o site e custando aproximadamente <b>R$5.23</b> por pedido (CAC).",
+            "motor": "A base engajada tem abertura de <b>13.49%</b> contra <b>1.18%</b> da desengajada, mostrando que focar nos contatos que já interagem pode elevar a receita, já que maior abertura costuma gerar mais vendas.",
+            "diagnostico": "Nos dias em que enviamos para engajados (ex.: 04/08, 07/08) a taxa de abertura acima de 13% gerou picos de vendas, enquanto disparos para desengajados (ex.: 05/08) resultaram em baixa performance e poucos pedidos.",
+            "conversao": "A taxa de conversão do site está em <b>6.51%</b>, enquanto o CTR dos e‑mails é de apenas <b>0.27%</b>, indicando que o gargalo está na geração de cliques; isso custa aproximadamente R$5.23 por aquisição, refletindo em menos pedidos por sessão.",
             "sustenta": [
-              "<b>R$18,136</b> em vendas no período",
-              "<b>476</b> pedidos realizados",
-              "<b>6.51%</b> taxa de conversão do site",
-              "<b>0.27%</b> CTR médio de e‑mail",
-              "<b>R$5.23</b> custo de aquisição por cliente"
+              "Receita total: R$18,136.00",
+              "Pedidos realizados: 476",
+              "Ticket médio: R$38.10",
+              "CAC: R$5.23",
+              "Abertura média: 9.3% (engajada 13.49%, desengajada 1.18%)"
             ],
-            "recomendacao": "Enviar a campanha principal aos sábados, entre 20h e 22h, para a base engajada (abertura histórica <b>11.45%</b>), usando assunto personalizado como \"*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado\". Replicar (re-pique) na segunda‑feira, entre 12h e 15h, para a base total, mantendo a mesma personalização e inserindo um call‑to‑action de cupom. Monitorar abertura e CTR para ajustar horários.",
-            "whatsapp": "Canal WhatsApp está pronto, aguardando os primeiros disparos."
+            "recomendacao": "Envie a próxima campanha no sábado (14) entre 18h e 24h, direcionada à base engajada (≈13% de abertura). Faça um repique 2 dias depois (terça) para quem não abriu. Use assunto personalizado com nome e promessa de surpresa, por exemplo: “*|PRIMEIRO_NOME|*, descubra a surpresa que preparamos para o fim de semana!”.",
+            "whatsapp": "O canal WhatsApp está pronto e aguardando os primeiros disparos; cada disparo custa R$0.42."
           }
         },
         {
@@ -2609,18 +2611,18 @@
           "parcial": true,
           "ate": "13/09",
           "ia": {
-            "motor": "A base engajada registra abertura de <b>12.02%</b> contra <b>0%</b> da base desengajada; isso mostra que a receita depende quase que exclusivamente dos contatos engajados.",
-            "diagnostico": "Nos dias em que enviamos para a base engajada, a taxa de abertura subiu (ex.: 17% em 05/09) e as vendas aumentaram significativamente (R$1.130,00). Quando a abertura caiu (3% em 11/09), as vendas também foram baixas (R$119,00). O padrão indica correlação direta entre abertura de e‑mail e volume de pedidos.",
-            "conversao": "A taxa de conversão do site foi de 5.27% (131 pedidos em 2.486 sessões). O e‑mail apresenta abertura de 12.1% e CTR de 0.25%, indicando que o gargalo está nos cliques que geram tráfego ao site. Cada pedido representa, em média, R$40.54 de receita.",
+            "motor": "A base engajada registra <b>12.02%</b> de abertura contra <b>0%</b> da desengajada, indicando que o engajamento direto impulsiona a maior parte da receita de R$5,311.00.",
+            "diagnostico": "Foram entregues 2,341,193 mensagens, gerando 282,260 aberturas (<b>12.1%</b>) e 5,791 cliques (<b>0.25%</b>). Nos dias em que enviamos para engajados (05, 07, 09 e 11/09) observamos picos de vendas, totalizando 63 dos 131 pedidos.",
+            "conversao": "O gargalo está no CTR baixo (0.25%), que limita os cliques e, consequentemente, as conversões (5.27% de sessões viram pedidos). Cada pedido custa em média R$6.81 de CAC, totalizando aproximadamente R$892.11 em custos de aquisição para os 131 pedidos.",
             "sustenta": [
-              "Abertura média da base engajada: 12.02%",
-              "CTR geral dos e‑mails: 0.25%",
-              "Conversão no site: 5.27% (131 pedidos/2.486 sessões)",
-              "Receita total no período: R$5,311.00",
-              "Comissão gerada: R$531.10"
+              "Entregas: 2,341,193",
+              "Aberturas: 282,260 (<b>12.1%</b>)",
+              "Cliques: 5,791 (<b>0.25%</b>)",
+              "Vendas: R$5,311.00",
+              "Comissão: R$531.10"
             ],
-            "recomendacao": "Enviar nova campanha aos sábados, às 10h, para a base engajada, usando assunto no formato \"*|PRIMEIRO_NOME|*, aproveite a surpresa neste fim de semana\"; repicar na quarta-feira seguinte, às 10h, com variação do assunto mantendo a personalização. Priorizar o horário 09h–12h, que já mostrou melhor CTR.",
-            "whatsapp": "Canal WhatsApp está pronto e aguardando os primeiros disparos; ainda não há resultados."
+            "recomendacao": "Envie a próxima campanha para a base engajada na manhã de sábado (entre 09h e 12h), utilizando o assunto padrão \"*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado\". Caso a taxa de abertura seja baixa, faça um repique na quarta‑feira seguinte, no mesmo horário, mantendo o mesmo padrão de assunto.",
+            "whatsapp": "Canal pronto, ainda sem disparos."
           }
         },
         {
@@ -3254,18 +3256,18 @@
           "parcial": false,
           "ate": "31/08",
           "ia": {
-            "motor": "<b>14.03%</b> de abertura na base engajada vs <b>1.18%</b> na desengajada, indicando que a maior parte da receita vem dos contatos engajados.",
-            "diagnostico": "Dias com disparos para engajados (04/08, 07/08, 08/08) geraram os maiores volumes de vendas (R$2.770, R$1.175 e R$1.503). A taxa geral de abertura foi 8.9% e o CTR 0.27%, mostrando que o engajamento ainda pode ser ampliado.",
-            "conversao": "Conversão do site 7.87% com abertura 8.9% e CTR 0.27%; o gargalo está no CTR, reduzindo cliques que se convertem em pedidos. Cada pedido tem CAC de R$4.77 e gera ticket médio de R$37.17.",
+            "motor": "A base engajada tem <b>14.03%</b> de abertura contra <b>1.18%</b> da desengajada, diferença de <b>12.85</b> pontos, o que impulsiona significativamente a receita quando focamos nos engajados.",
+            "diagnostico": "O e‑mail geral abriu <b>8.9%</b> com CTR de <b>0.27%</b>, gerando <b>R$12,825</b> em vendas e <b>345</b> pedidos. Nos dias em que enviamos para a base engajada (abertura ~14%), o volume de vendas foi muito superior, evidenciando a correlação entre alta taxa de abertura e conversão.",
+            "conversao": "A taxa de conversão do site foi de <b>7.87%</b>, enquanto a taxa de abertura e CTR permanecem baixas (<b>8.9%</b> e <b>0.27%</b>), indicando que o gargalo está no engajamento do e‑mail. Cada aquisição custa <b>R$4.77</b>, resultando em <b>R$1,282.50</b> de comissão ao final do mês.",
             "sustenta": [
-              "Total de vendas: R$12,825.00",
-              "Pedidos realizados: 345",
-              "Ticket médio: R$37.17",
-              "CAC por pedido: R$4.77",
-              "Conversão do site: 7.87%"
+              "<b>R$12,825.00</b> em vendas no período",
+              "<b>345</b> pedidos realizados",
+              "<b>R$1,282.50</b> de comissão gerada",
+              "<b>R$4.77</b> CAC médio por aquisição",
+              "<b>7.87%</b> taxa de conversão do site"
             ],
-            "recomendacao": "Enviar a próxima campanha às <b>Sábados</b> entre 18h‑24h, focando na base engajada (abertura ~14%). Use repique 2 dias depois para quem não abriu. Padronize o assunto com a fórmula \"*|PRIMEIRO_NOME|*, resultado do sorteio + cupom surpresa 🍀\" que já trouxe as maiores aberturas.",
-            "whatsapp": "Canal WhatsApp está pronto, aguardando os primeiros disparos."
+            "recomendacao": "Envie a próxima campanha no sábado, entre 19h e 22h, para a base engajada, com repique na segunda-feira, entre 12h e 15h, atingindo a base total. Use assunto no padrão \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀\" para manter a consistência de alta abertura.",
+            "whatsapp": "O canal WhatsApp está pronto, aguardando os primeiros disparos."
           }
         }
       ],
@@ -3702,100 +3704,100 @@
         },
         "dias": {
           "2026-10-01": {
-            "tema": "Quinta da sorte — confira os bolões",
-            "assunto": "*|PRIMEIRO_NOME|*, confira os jogos da semana",
-            "mensagem": "Confira os jogos e bolões da semana, jogue com responsabilidade e boa sorte! 🍀 [link]"
+            "tema": "Quinta da Sorte – confira os bolões",
+            "assunto": "*|PRIMEIRO_NOME|*, confira os bolões da semana",
+            "mensagem": "🍀 Confira os bolões da semana e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-10-02": {
-            "tema": "Sexta de repique — veja o que perdeu",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira o que perdeu",
-            "mensagem": "Você viu o que perdeu? Confira os jogos da semana e jogue com responsabilidade. 🍀 [link]"
+            "tema": "Quinta da Sorte – confira os bolões",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira os bolões",
+            "mensagem": "🍀 Você viu? Confira os bolões e jogue com responsabilidade. [link]"
           },
           "2026-10-05": {
-            "tema": "Resultado do Sorteio — confira agora",
+            "tema": "Resultado do Sorteio – confira agora",
             "assunto": "*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀",
-            "mensagem": "Confira o resultado do sorteio de hoje e jogue com responsabilidade. Boa sorte! 🍀 [link]"
+            "mensagem": "Confira o resultado do sorteio de hoje e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-10-06": {
-            "tema": "Terça de jogos — confira as apostas",
-            "assunto": "*|PRIMEIRO_NOME|*, veja as apostas da semana",
-            "mensagem": "Confira os jogos e bolões da semana, jogue com responsabilidade e aumente a emoção! 🍀 [link]"
+            "tema": "Terça de Bolões – confira as apostas",
+            "assunto": "*|PRIMEIRO_NOME|*, veja os bolões de terça",
+            "mensagem": "🍀 Confira os bolões de hoje e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-10-08": {
-            "tema": "Quinta de bolões — aproveite a chance",
-            "assunto": "*|PRIMEIRO_NOME|*, não perca os bolões da semana",
-            "mensagem": "Confira os bolões disponíveis, jogue com responsabilidade e boa sorte! 🍀 [link]"
+            "tema": "Quinta de Jogos – confira as novidades",
+            "assunto": "*|PRIMEIRO_NOME|*, novidades nos jogos de quinta",
+            "mensagem": "🍀 Confira as novidades dos jogos e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-10-09": {
-            "tema": "Sexta de repique — veja o que perdeu",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira o que perdeu",
-            "mensagem": "Você viu o que perdeu? Confira os bolões da semana e jogue com responsabilidade. 🍀 [link]"
+            "tema": "Quinta de Jogos – confira as novidades",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, novidades dos jogos",
+            "mensagem": "🍀 Você viu? Confira as novidades e jogue com responsabilidade. [link]"
           },
           "2026-10-12": {
-            "tema": "Resultado do Sorteio — feriado especial",
-            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio no feriado! 🍀",
-            "mensagem": "No feriado de Nossa Senhora Aparecida e Dia das Crianças, confira o resultado do sorteio e jogue com responsabilidade. 🍀 [link]"
+            "tema": "Resultado do Sorteio – Dia das Crianças",
+            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio no feriado da Criança!",
+            "mensagem": "Confira o resultado do sorteio neste feriado da Criança e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-10-13": {
-            "tema": "Terça de bolões — confira",
-            "assunto": "*|PRIMEIRO_NOME|*, veja os bolões da semana",
-            "mensagem": "Confira os bolões de hoje e jogue com responsabilidade 🍀 [link]"
+            "tema": "Terça de bolões — confira já",
+            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana para você",
+            "mensagem": "Confira os bolões de hoje e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-10-15": {
             "tema": "Quinta de jogos — não perca",
-            "assunto": "*|PRIMEIRO_NOME|*, descubra os jogos da quinta",
-            "mensagem": "Confira as apostas da quinta e jogue com responsabilidade 🍀 [link]"
+            "assunto": "*|PRIMEIRO_NOME|*, uma surpresa para aproveitar hoje",
+            "mensagem": "Confira as apostas da quinta e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-10-16": {
-            "tema": "Sexta de jogos — segunda chance",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Segunda chance de jogar",
-            "mensagem": "Confira novamente os jogos de sexta e jogue com responsabilidade 🍀 [link]"
+            "tema": "Sexta de jogos — você viu?",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira o jogo de sexta",
+            "mensagem": "Confira o que perdeu na sexta e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-10-19": {
             "tema": "Resultado do Sorteio — confira",
-            "assunto": "*|PRIMEIRO_NOME|*, o resultado do sorteio está aqui",
-            "mensagem": "Confira o resultado do sorteio de hoje e jogue com responsabilidade 🍀 [link]"
+            "assunto": "*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀",
+            "mensagem": "Confira o resultado do sorteio de hoje e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-10-20": {
-            "tema": "Terça de apostas — confira",
-            "assunto": "*|PRIMEIRO_NOME|*, veja as apostas de terça",
-            "mensagem": "Confira as apostas de hoje e jogue com responsabilidade 🍀 [link]"
+            "tema": "Terça de jogos — confira",
+            "assunto": "*|PRIMEIRO_NOME|*, bolões da terça para você",
+            "mensagem": "Confira os bolões de hoje e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-10-22": {
             "tema": "Quinta de bolões — confira",
-            "assunto": "*|PRIMEIRO_NOME|*, bolões da quinta esperam por você",
-            "mensagem": "Confira os bolões de quinta e jogue com responsabilidade 🍀 [link]"
+            "assunto": "*|PRIMEIRO_NOME|*, bolões especiais desta quinta",
+            "mensagem": "Confira as apostas de quinta e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-10-23": {
-            "tema": "Sexta de bolões — segunda chance",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Segunda chance de bolões",
-            "mensagem": "Confira novamente os bolões de sexta e jogue com responsabilidade 🍀 [link]"
+            "tema": "Sexta de jogos — você viu?",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira o jogo de sexta",
+            "mensagem": "Confira o que perdeu na sexta e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-10-26": {
-            "tema": "Resultado do Sorteio – confira",
-            "assunto": "*|PRIMEIRO_NOME|*, veja o resultado do sorteio",
-            "mensagem": "Confira o resultado do sorteio de hoje 🍀 e jogue com responsabilidade. Boa sorte! [link]"
+            "tema": "Resultado do Sorteio – confira agora",
+            "assunto": "*|PRIMEIRO_NOME|*, veja o resultado do sorteio de hoje",
+            "mensagem": "Oi *|PRIMEIRO_NOME|* 🍀, o resultado do sorteio saiu! Confira e jogue com responsabilidade. [link]"
           },
           "2026-10-27": {
-            "tema": "Bolões da semana – participe",
-            "assunto": "*|PRIMEIRO_NOME|*, descubra os bolões da semana",
-            "mensagem": "Confira os bolões e concursos que rolam esta semana. Jogue com responsabilidade e aumente a diversão! [link]"
+            "tema": "Bolão da Semana – participe",
+            "assunto": "*|PRIMEIRO_NOME|*, bolão da semana está aberto",
+            "mensagem": "Oi *|PRIMEIRO_NOME|* 🎲, confira os bolões e concursos desta semana e jogue com responsabilidade. [link]"
           },
           "2026-10-29": {
-            "tema": "Desafio de Quinta – jogue agora",
-            "assunto": "*|PRIMEIRO_NOME|*, desafio de quinta: participe já",
+            "tema": "Bolões da semana",
+            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana",
             "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
           },
           "2026-10-30": {
-            "tema": "Desafio de Quinta – lembrete",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? desafio de quinta ainda vale",
-            "mensagem": "Você ainda pode participar do desafio de quinta. Confira e jogue com responsabilidade! [link]"
+            "tema": "Relembrando: concurso de quinta",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu? Concurso de quinta ainda vale",
+            "mensagem": "Oi *|PRIMEIRO_NOME|* 🔔, caso tenha perdido, veja o concurso de quinta e jogue com responsabilidade. [link]"
           }
         },
-        "estrategia": "A campanha seguirá o ritmo de <b>2,4</b> dias de disparo por semana, concentrando envios nas segundas, quando a taxa de abertura histórica foi de <b>14,2%</b> (melhor dia) e no horário de <b>12h–15h</b>, que gerou CTR de <b>0,42%</b>. Serão enviados e‑mails com os assuntos que mais abriram (ex.: “*|PRIMEIRO_NOME|*, uma surpresa para aproveitar neste feriado” com <b>17,0%</b>) e o conteúdo recorrente “Resultado do Sorteio” nas segundas, incentivando a conferir os jogos, bolões e concursos da semana e lembrando “jogue com responsabilidade”.",
+        "estrategia": "A estratégia combina envios de e‑mail nas segundas, quintas e terças, aproveitando a taxa de abertura de <b>14,2%</b> nas segundas e o melhor horário de clique entre <b>12h e 15h</b> (CTR <b>0,42%</b>), além do disparo recorrente de “Resultado do Sorteio” com <b>14,4%</b> de abertura. Nos dias de disparo, as vendas dos engajados chegam a <b>R$ 785</b> em média, frente a <b>R$ 238</b> nos dias sem disparo, reforçando a cadência de <b>2,4</b> envios por semana. O conteúdo semanal traz jogos, bolões e concursos, convidando o público a <b>confira</b> as oportunidades e <b>jogue com responsabilidade</b>.",
         "notas": {
-          "email": "Usando só e‑mail, o parceiro terá <b>14</b> envios no mês nos dias quinta, segunda e sexta, mantendo o horário de <b>12h–14h</b> e aproveitando os assuntos com maior taxa de abertura para potencializar as vendas.",
-          "whatsapp": "Com apenas WhatsApp, o parceiro enviará <b>9</b> mensagens nas quintas e terças, porém ainda não há histórico de abertura ou clique para esse canal, exigindo acompanhamento cuidadoso."
+          "email": "Usar só e‑mail eleva o número de envios para <b>14</b> no mês, mantendo os dias de maior abertura e o horário de pico, mas elimina a presença no WhatsApp, que ainda não tem histórico.",
+          "whatsapp": "Com apenas WhatsApp, o plano passa a <b>9</b> envios mensais nas quintas e terças, porém ainda não há histórico de abertura ou clique para calibrar o horário."
         },
         "evidencias": [
           "Abertura dos engajados: melhor na segunda (14,2% em 6 envio(s)); média geral 13,5%.",
@@ -4299,18 +4301,18 @@
           "email": null,
           "whatsapp": null,
           "ia": {
-            "motor": "<b>49</b> leads em 16/09 (Quarta) e <b>49</b> em 19/09 (Sábado) concentraram <b>61.2%</b> dos leads, mostrando que os picos de alta performance são o principal motor.",
-            "diagnostico": "Os leads estão fortemente concentrados em poucos dias, com 22 dias ativos em 25 e média de <b>7.52</b> por dia; quarta‑feira e sábado são os dias de maior volume.",
-            "conversao": "Não há dados de disparos de e‑mail, portanto não é possível medir taxa de abertura, clique ou leads por clique; é necessário exportar os relatórios da RD Station para acompanhar a conversão.",
+            "motor": "Os leads concentram‑se nos picos de <b>16/09</b> (49), <b>19/09</b> (49) e <b>20/09</b> (17), que somam <b>61.2%</b> do total.",
+            "diagnostico": "Nos 25 dias analisados, os leads apareceram em 22 dias, com média de 7.52 por dia. Quarta‑feira e sábado são os dias mais produtivos, com médias de 14.75 e 17.0 leads respectivamente.",
+            "conversao": "Não há exportação de dados da RD Station; faltam métricas de abertura, clique e leads por clique, essenciais para avaliar a eficiência dos disparos de e‑mail.",
             "sustenta": [
-              "Total de leads no período: 188",
-              "Dias com leads: 22 de 25",
-              "Média diária de leads: 7.52",
-              "Top 3 dias (16, 19 e 20/09) concentram 61.2% dos leads",
-              "Valor estimado por disparo de WhatsApp: R$0.42 (canal ainda sem disparos)"
+              "Total de leads: 188",
+              "Média diária: 7.52",
+              "Dias com leads: 22",
+              "Concentração nos 3 maiores dias: 61.2%",
+              "Valor por disparo de WhatsApp: R$0.42"
             ],
-            "recomendacao": "Iniciar disparos de WhatsApp duas vezes por semana, nas quartas‑feiras às 10h e nos sábados às 11h, pois são os dias com maior geração de leads; manter a cadência de 2 envios semanais e, após validar o desempenho, testar envios de e‑mail em dias de menor volume (segunda ou terça) para equilibrar a captação.",
-            "whatsapp": "Canal pronto, aguardando os primeiros disparos."
+            "recomendacao": "Inicie um teste controlado de disparos via WhatsApp nas quartas‑feiras e sábados, às 14h, com 1 a 2 envios por semana, focando nos dias que historicamente geram maior volume de leads. Monitore a resposta e ajuste a cadência conforme os resultados.",
+            "whatsapp": "Canal WhatsApp está pronto e aguardando os primeiros disparos."
           }
         },
         {
@@ -4719,18 +4721,18 @@
           "parcial": true,
           "ate": "25/09",
           "ia": {
-            "motor": "<b>49</b> leads em 16/09 (Quarta) e <b>49</b> em 19/09 (Sábado) concentraram <b>61.2%</b> dos leads, mostrando que os picos de alta performance são o principal motor.",
-            "diagnostico": "Os leads estão fortemente concentrados em poucos dias, com 22 dias ativos em 25 e média de <b>7.52</b> por dia; quarta‑feira e sábado são os dias de maior volume.",
-            "conversao": "Não há dados de disparos de e‑mail, portanto não é possível medir taxa de abertura, clique ou leads por clique; é necessário exportar os relatórios da RD Station para acompanhar a conversão.",
+            "motor": "Os leads concentram‑se nos picos de <b>16/09</b> (49), <b>19/09</b> (49) e <b>20/09</b> (17), que somam <b>61.2%</b> do total.",
+            "diagnostico": "Nos 25 dias analisados, os leads apareceram em 22 dias, com média de 7.52 por dia. Quarta‑feira e sábado são os dias mais produtivos, com médias de 14.75 e 17.0 leads respectivamente.",
+            "conversao": "Não há exportação de dados da RD Station; faltam métricas de abertura, clique e leads por clique, essenciais para avaliar a eficiência dos disparos de e‑mail.",
             "sustenta": [
-              "Total de leads no período: 188",
-              "Dias com leads: 22 de 25",
-              "Média diária de leads: 7.52",
-              "Top 3 dias (16, 19 e 20/09) concentram 61.2% dos leads",
-              "Valor estimado por disparo de WhatsApp: R$0.42 (canal ainda sem disparos)"
+              "Total de leads: 188",
+              "Média diária: 7.52",
+              "Dias com leads: 22",
+              "Concentração nos 3 maiores dias: 61.2%",
+              "Valor por disparo de WhatsApp: R$0.42"
             ],
-            "recomendacao": "Iniciar disparos de WhatsApp duas vezes por semana, nas quartas‑feiras às 10h e nos sábados às 11h, pois são os dias com maior geração de leads; manter a cadência de 2 envios semanais e, após validar o desempenho, testar envios de e‑mail em dias de menor volume (segunda ou terça) para equilibrar a captação.",
-            "whatsapp": "Canal pronto, aguardando os primeiros disparos."
+            "recomendacao": "Inicie um teste controlado de disparos via WhatsApp nas quartas‑feiras e sábados, às 14h, com 1 a 2 envios por semana, focando nos dias que historicamente geram maior volume de leads. Monitore a resposta e ajuste a cadência conforme os resultados.",
+            "whatsapp": "Canal WhatsApp está pronto e aguardando os primeiros disparos."
           }
         }
       ],
@@ -5150,73 +5152,73 @@
           "2026-10-03": {
             "tema": "Sábado de crédito – simule já",
             "assunto": "Confira a oferta de crédito, *|PRIMEIRO_NOME|*",
-            "mensagem": "Olá, *|PRIMEIRO_NOME|*! Simule seu crédito e veja se cabe no seu orçamento. [link]"
+            "mensagem": "Olá, *|PRIMEIRO_NOME|*! Simule seu crédito e veja se cabe no seu orçamento. 😊 [link]"
           },
           "2026-10-04": {
-            "tema": "Reimpacto – crédito",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Ainda dá tempo de simular seu crédito. Confira! [link]"
+            "tema": "Reforço de crédito – viu?",
+            "assunto": "Você viu? Simule seu crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Ainda dá tempo de simular o crédito e conferir as condições. [link]"
           },
           "2026-10-07": {
-            "tema": "Quarta de salário – organize finanças",
-            "assunto": "Salário chegou, *|PRIMEIRO_NOME|*",
-            "mensagem": "Seu salário já caiu. Que tal organizar e simular um crédito que cabe no seu orçamento? [link]"
+            "tema": "Quarta do salário – organize finanças",
+            "assunto": "Salário chegou, *|PRIMEIRO_NOME|*: veja seu crédito",
+            "mensagem": "Bom dia, *|PRIMEIRO_NOME|*. Organize seu orçamento e simule crédito que se encaixe. 📊 [link]"
           },
           "2026-10-10": {
             "tema": "Sábado de crédito – aproveite",
             "assunto": "Oferta de crédito para você, *|PRIMEIRO_NOME|*",
-            "mensagem": "Bom dia, *|PRIMEIRO_NOME|*. Simule agora e descubra as condições do crédito. [link]"
+            "mensagem": "Olá, *|PRIMEIRO_NOME|*. Consulte as condições e descubra se cabe no seu orçamento. [link]"
           },
           "2026-10-11": {
-            "tema": "Reimpacto – lembrete de crédito",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*",
-            "mensagem": "Olá, *|PRIMEIRO_NOME|*. Não perca a chance de simular seu crédito. Acesse aqui: [link]"
+            "tema": "Reforço de crédito – viu?",
+            "assunto": "Você viu? Simule crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Ainda pode simular e conferir as condições. [link]"
           },
           "2026-10-14": {
-            "tema": "Quarta de crédito – consulte condições",
-            "assunto": "Confira as condições, *|PRIMEIRO_NOME|*",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Consulte as condições e veja se o crédito cabe no seu orçamento. [link]"
+            "tema": "Quarta de crédito – simule já",
+            "assunto": "Confira o crédito disponível, *|PRIMEIRO_NOME|*",
+            "mensagem": "Olá, *|PRIMEIRO_NOME|*. Simule agora e veja se cabe no seu orçamento. [link]"
           },
           "2026-10-17": {
-            "tema": "Sábado de crédito – simule já",
-            "assunto": "Simule seu crédito hoje, *|PRIMEIRO_NOME|*",
-            "mensagem": "Olá, *|PRIMEIRO_NOME|*. Simule seu crédito e veja se cabe no seu orçamento. [link]"
+            "tema": "Sábado de crédito – simule hoje",
+            "assunto": "Não perca, *|PRIMEIRO_NOME|*: simule seu crédito",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Consulte as condições e descubra o melhor crédito para você. [link]"
           },
           "2026-10-18": {
-            "tema": "Crédito Crefaz – simule agora",
-            "assunto": "Você viu? Simule seu crédito Crefaz",
-            "mensagem": "Ainda dá tempo de simular seu crédito Crefaz e ver se cabe no seu orçamento 😊 [link]"
+            "tema": "Reimpacto de crédito — veja a oferta",
+            "assunto": "Você viu? Simule seu crédito hoje",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*, ainda dá tempo de simular o crédito que você viu ontem. Confira se cabe no seu orçamento. 😊 [link]"
           },
           "2026-10-21": {
-            "tema": "Quarta de crédito – simule já",
-            "assunto": "Simule seu crédito Crefaz hoje",
-            "mensagem": "Confira as condições do crédito Crefaz e veja se cabe no seu orçamento. Simule agora [link]"
+            "tema": "Quarta do crédito — simule agora",
+            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito hoje",
+            "mensagem": "Olá *|PRIMEIRO_NOME|*, que tal simular um crédito e ver se cabe no seu orçamento? Consulte as condições e aproveite. 😊 [link]"
           },
           "2026-10-24": {
-            "tema": "Sábado de crédito – consulte",
-            "assunto": "Consulte as condições do crédito Crefaz",
-            "mensagem": "Aproveite o sábado para consultar as condições do crédito Crefaz e simular sem compromisso. [link]"
+            "tema": "Sábado de crédito — veja sua simulação",
+            "assunto": "Simule seu crédito neste sábado, *|PRIMEIRO_NOME|*",
+            "mensagem": "Bom dia *|PRIMEIRO_NOME|*, aproveite o sábado para simular um crédito e organizar suas finanças. Veja se cabe no seu orçamento. [link]"
           },
           "2026-10-25": {
-            "tema": "Sábado de crédito – consulte",
-            "assunto": "Você viu? Consulte o crédito Crefaz",
-            "mensagem": "Reforçamos: ainda dá tempo de consultar o crédito Crefaz e simular. Não perca! 😊 [link]"
+            "tema": "Reimpacto de crédito — não perca",
+            "assunto": "Você viu? Última chance de simular",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, ainda dá tempo de simular o crédito que enviamos ontem. Consulte as condições e veja se cabe no seu orçamento. 😊 [link]"
           },
           "2026-10-28": {
-            "tema": "Quarta de crédito – veja opções",
-            "assunto": "Veja as opções de crédito Crefaz",
-            "mensagem": "Descubra as opções de crédito Crefaz e veja se cabe no seu orçamento. Simule já [link]"
+            "tema": "Quarta do crédito — simule já",
+            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito hoje",
+            "mensagem": "Olá *|PRIMEIRO_NOME|*, simule agora um crédito e veja se cabe no seu orçamento. Consulte as condições e aproveite. [link]"
           },
           "2026-10-31": {
-            "tema": "Sábado de crédito – simule",
-            "assunto": "Simule seu crédito Crefaz neste sábado",
-            "mensagem": "Neste sábado, simule seu crédito Crefaz e confira as condições. 😊 [link]"
+            "tema": "Sábado de crédito — simule fácil",
+            "assunto": "Simule seu crédito neste sábado, *|PRIMEIRO_NOME|*",
+            "mensagem": "Bom dia *|PRIMEIRO_NOME|*, sábado é dia de organizar as finanças. Simule um crédito e veja se cabe no seu orçamento. 😊 [link]"
           }
         },
-        "estrategia": "Combinando <b>9</b> envios de e‑mail (janela 12h‑14h) e <b>4</b> disparos de WhatsApp nos dias <b>Domingo</b>, <b>Quarta</b> e <b>Sábado</b>, aproveitamos que nos últimos testes <b>49</b> leads foram gerados em <b>Quarta</b> (16/09) e <b>49</b> leads em <b>Sábado</b> (19/09), representando <b>52%</b> do total; assim incentivamos o parceiro a <b>simular</b> e <b>consultar as condições</b>.",
+        "estrategia": "A estratégia para outubro combina <b>9</b> envios de e‑mail e <b>4</b> mensagens de WhatsApp, aproveitando os dias <b>Domingo</b>, <b>Quarta</b> e <b>Sábado</b>, que já mostraram forte geração de leads (os <b>49</b> leads de 16/09 e <b>49</b> de 19/09 representaram <b>52%</b> do total). Cada contato convidará o parceiro a <b>simular</b> e <b>consultar as condições</b> do crédito, ajudando o cliente a <b>ver se cabe no seu orçamento</b>. O horário de disparo será mantido na janela de <b>12h‑14h</b> para maximizar a abertura.",
         "notas": {
-          "email": "Se o parceiro usar só e‑mail, terá <b>13</b> envios mensais nos mesmos dias (<b>Domingo</b>, <b>Quarta</b>, <b>Sábado</b>) sem disparos de WhatsApp.",
-          "whatsapp": "Se usar só WhatsApp, serão <b>9</b> mensagens distribuídas nas <b>Quarta</b> e <b>Sábado</b>, sem envios de e‑mail."
+          "email": "Se o parceiro optar apenas por e‑mail, aumentaremos para <b>13</b> envios mensais, mantendo os mesmos dias da semana e a janela de <b>12h‑14h</b>, sem mensagens de WhatsApp.",
+          "whatsapp": "Usando só WhatsApp, enviaremos <b>9</b> mensagens nos dias <b>Quarta</b> e <b>Sábado</b>, embora ainda não haja histórico de desempenho para esse canal."
         },
         "evidencias": [
           "Sem histórico de e-mail no hub ainda: os dias da semana foram escolhidos pelo padrão de leads — 16/09 (quarta, 49 leads) e 19/09 (sábado, 49 leads) concentram 52% do total."
