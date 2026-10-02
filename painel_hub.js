@@ -35,6 +35,12 @@
   // deve publicar os dados num JSON aberto.
   var SENHA_HASH = 55505968;
 
+  // Modulo do bot de WhatsApp. Mesmo esquema do cronograma: so o hash
+  // (FNV-1a) fica aqui, com outro sal. O PIN e o mesmo 1738.
+  var BOT_HASH = 308924309;
+  var BOT_STATUS_URL = "https://raw.githubusercontent.com/SupertrocoWeb/painel/main/status_bot.json";
+  var BOT_STATUS_FALLBACK = "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/status_bot.json";
+
   if (!document.getElementById("pst-fonts")) {
     var lk = document.createElement("link");
     lk.id = "pst-fonts";
@@ -652,7 +658,82 @@
   @media(prefers-reduced-motion:reduce){
     .trilho{animation:none} .tela,.conteudo,.meses,.canal-det,.modal,.mbox{transition:none}
     .wcol .wbar,.wd .b,.brow .bf,.vs .f,.pl .f{transition:none}
+    .bot-ponto.vivo::after{animation:none}
   }
+
+  /* ---------- modulo do bot de WhatsApp ---------- */
+  .bot-topo{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+  .bot-sit{display:inline-flex;align-items:center;gap:8px;padding:6px 13px;border-radius:999px;
+    font-size:12.5px;font-weight:700;border:1px solid var(--linha);background:var(--sub-bg)}
+  .bot-ponto{width:9px;height:9px;border-radius:50%;background:var(--fraco);flex:none;position:relative}
+  .bot-ponto.vivo{background:#16a34a}
+  .bot-ponto.vivo::after{content:"";position:absolute;inset:-4px;border-radius:50%;
+    border:2px solid #16a34a;opacity:.45;animation:bot-pulso 2s ease-out infinite}
+  .bot-ponto.alerta{background:#f59e0b}
+  .bot-ponto.morto{background:#dc2626}
+  @keyframes bot-pulso{0%{transform:scale(.7);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+
+  .bot-grade{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:18px}
+  .bot-cel{border:1px solid var(--linha);border-radius:14px;padding:13px 15px;background:var(--sub-bg)}
+  .bot-cel .r{font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;font-weight:800;
+    color:var(--fraco);margin-bottom:5px}
+  .bot-cel .v{font-family:var(--disp);font-weight:800;font-size:23px;line-height:1.1}
+  .bot-cel .s{font-size:11.5px;color:var(--fraco);margin-top:3px}
+  .bot-cel.bom .v{color:#16a34a} .bot-cel.ruim .v{color:#dc2626} .bot-cel.meio .v{color:#f59e0b}
+
+  .bot-barra{height:7px;border-radius:99px;background:var(--linha);overflow:hidden;margin-top:8px}
+  .bot-barra i{display:block;height:100%;border-radius:99px;background:var(--brand);transition:width .5s}
+
+  .bot-sec{margin-top:20px}
+  .bot-sec h5{font-family:var(--disp);font-weight:800;font-size:13px;margin-bottom:10px;
+    text-transform:uppercase;letter-spacing:.5px;color:var(--fraco)}
+
+  .bot-dias{display:flex;align-items:flex-end;gap:5px;height:76px;padding:4px 0}
+  /* max-width: com poucos dias de historico a barra viraria um bloco gigante */
+  .bot-dia{flex:1 1 0;max-width:52px;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .bot-dia .cl{width:100%;background:var(--brand);border-radius:4px 4px 2px 2px;min-height:3px;
+    transition:height .4s}
+  .bot-dia .cl.zero{background:var(--linha)}
+  .bot-dia .dt{font-size:9.5px;color:var(--fraco);white-space:nowrap}
+
+  .bot-aviso{display:flex;gap:9px;padding:11px 14px;border-radius:11px;font-size:13px;
+    margin-bottom:10px;align-items:flex-start}
+  .bot-aviso.ok{background:rgba(22,163,74,.09);border:1px solid rgba(22,163,74,.26);color:#15803d}
+  .bot-aviso.at{background:rgba(245,158,11,.09);border:1px solid rgba(245,158,11,.26);color:#b45309}
+  .bot-aviso.er{background:rgba(220,38,38,.09);border:1px solid rgba(220,38,38,.26);color:#b91c1c}
+
+  .bot-msg{border:1px solid var(--linha);border-radius:14px;padding:15px;background:var(--sub-bg);
+    white-space:pre-wrap;word-break:break-word;font-size:13.5px;line-height:1.62;max-height:270px;
+    overflow:auto}
+  .bot-msg b{font-weight:700}
+  .bot-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .bot-meta span{font-size:11px;padding:3px 9px;border-radius:7px;background:var(--linha);
+    color:var(--fraco);font-weight:600}
+
+  .bot-nota{font-size:12px;color:var(--fraco);margin-top:16px;padding-top:14px;
+    border-top:1px solid var(--linha);line-height:1.6}
+  .bot-carregando{text-align:center;padding:42px;color:var(--fraco);font-size:13.5px}
+
+  /* atalho para o painel local: o endereco mora no localStorage de quem
+     usa, nunca neste arquivo — ele e publico. */
+  .bot-painel{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:16px;
+    padding-top:15px;border-top:1px solid var(--linha)}
+  .bot-painel .lk{display:inline-flex;align-items:center;gap:7px;padding:8px 15px;border-radius:10px;
+    background:var(--brand);color:var(--deep);font-weight:700;font-size:13px;text-decoration:none;
+    border:none;cursor:pointer}
+  .bot-painel .lk:hover{filter:brightness(1.07)}
+  .bot-painel .lk svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2;
+    stroke-linecap:round;stroke-linejoin:round}
+  .bot-painel .mini{font-size:11.5px;color:var(--fraco);background:none;border:none;
+    cursor:pointer;text-decoration:underline;padding:0}
+  .bot-painel .end{font-size:11.5px;color:var(--fraco);font-family:var(--mono,monospace)}
+  .bot-cfg{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start;width:100%}
+  .bot-cfg input{flex:1;min-width:210px;padding:9px 12px;border-radius:10px;
+    border:1px solid var(--linha);background:var(--sub-bg);color:inherit;font-size:13px;
+    font-family:var(--mono,monospace)}
+  .bot-cfg input:focus{outline:none;border-color:var(--brand)}
+  .bot-cfg .err{width:100%;font-size:11.5px;color:#dc2626}
+  .bot-cfg .dica{width:100%;font-size:11.5px;color:var(--fraco);line-height:1.55}
   `;
 
   // ---------------------------------------------------------------------
@@ -800,6 +881,8 @@
     var VOLTA = '<svg viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>';
     var XIS = '<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>';
     var BAIXAR = '<svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+    var ABRIR_EXT = '<svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/>' +
+      '<path d="M18 14v5a1.8 1.8 0 0 1-1.8 1.8H5A1.8 1.8 0 0 1 3.2 19V7.8A1.8 1.8 0 0 1 5 6h5"/></svg>';
     var CHECK = '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
     var INFO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5v.5"/></svg>';
     var MAIL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>';
@@ -861,6 +944,11 @@
       var livre = sessao("crono") === "1";
       return '<button class="btn crono" id="bt-crono" title="Gerar o cronograma de disparos do próximo mês">' +
         (livre ? ABERTO : CADEADO) + 'Cronograma</button>';
+    }
+    function botaoBot() {
+      var livre = sessao("bot") === "1";
+      return '<button class="btn crono" id="bt-bot" title="Situação do disparador de WhatsApp">' +
+        (livre ? WPP : CADEADO) + 'Bot</button>';
     }
 
     // ---------- trocas com fade ----------
@@ -1329,7 +1417,7 @@
         ' · e-mail + WhatsApp</div></div></div>' +
         '<div class="dir"><span class="chip" id="chip-periodo">' + esc(aba.periodo) + '</span>' +
         '<span class="chip live">Atualizado <b style="margin-left:4px">' + esc(D.atualizado) + '</b></span>' +
-        botaoCrono() + botaoTema() + '</div></div>';
+        botaoCrono() + botaoBot() + botaoTema() + '</div></div>';
 
       tela.innerHTML = topo + navAbas(h.abas) + esteira() + conteudoHub() + rodape();
       ligarHub();
@@ -1340,6 +1428,7 @@
       });
       ligarTema();
       $("bt-crono").addEventListener("click", function () { abrirCronograma("hub"); });
+      $("bt-bot").addEventListener("click", abrirBot);
     }
 
     function ligarHub() {
@@ -1931,7 +2020,7 @@
         '<div class="dir"><button class="btn volta" id="voltar">' + VOLTA + 'Todos os parceiros</button>' +
         '<span class="chip" id="chip-periodo">' + esc(aba.periodo) + '</span>' +
         '<span class="chip live">Atualizado <b style="margin-left:4px">' +
-        esc(D.atualizado) + '</b></span>' + botaoCrono() + botaoTema() + '</div></div>';
+        esc(D.atualizado) + '</b></span>' + botaoCrono() + botaoBot() + botaoTema() + '</div></div>';
 
       tela.innerHTML = topo + navAbas(p.abas) + conteudoParceiro(p) + rodape();
       ligarTopoParceiro(p);
@@ -1952,6 +2041,7 @@
       });
       ligarTema();
       $("bt-crono").addEventListener("click", function () { abrirCronograma(p.id); });
+      $("bt-bot").addEventListener("click", abrirBot);
     }
 
     function ligarParceiro(p) {
@@ -2077,6 +2167,302 @@
       return '<div class="mhd"><span class="ic">' + (icone || CAL) + '</span><div><h3>' + esc(titulo) +
         '</h3><div class="sub">' + esc(sub) + '</div></div><div class="acoes">' + (extra || "") + '</div>' +
         '<button class="tbtn mfecha" data-fechar aria-label="Fechar">' + XIS + '</button></div>';
+    }
+
+
+    // =================================================================
+    // MODULO DO BOT DE WHATSAPP
+    // =================================================================
+    // Le o status_bot.json publicado pelo proprio disparador. E somente
+    // leitura: o bot roda num servidor interno, atras da VPN, e esta
+    // pagina e estatica e publica — ela nao tem como mandar comando
+    // nenhum para la. Pausar, reenfileirar e editar mensagem ficam no
+    // painel local do bot.
+
+    var botCache = null;
+
+    function abrirBot() {
+      if (sessao("bot") === "1") { telaBot(); } else { telaSenhaBot(); }
+    }
+
+    function telaSenhaBot() {
+      abrirModal(cabecalhoModal("Disparador de WhatsApp", "Área protegida", "", CADEADO) +
+        '<div class="mcorpo centro"><div class="cadeado">' + CADEADO + '</div>' +
+        '<h4>Área protegida</h4><div class="exp">Digite a senha de 4 dígitos para ver a situação do bot.</div>' +
+        '<form id="f-pinb" autocomplete="off"><div class="pin" id="pinb">' +
+        [0, 1, 2, 3].map(function (i) {
+          return '<input type="password" inputmode="numeric" maxlength="1" pattern="[0-9]*" aria-label="Dígito ' + (i + 1) + '" data-i="' + i + '">';
+        }).join("") + '</div><div class="msg-erro" id="pinb-msg" aria-live="polite"></div>' +
+        '<button class="btn-pri" type="submit">' + ABERTO + 'Liberar</button></form></div>', "estreito");
+      var ins = modal.querySelectorAll(".pin input");
+      ins[0].focus();
+      ins.forEach(function (inp, i) {
+        inp.addEventListener("input", function () {
+          inp.value = inp.value.replace(/\D/g, "").slice(-1);
+          if (inp.value && i < 3) ins[i + 1].focus();
+          if (i === 3 && inp.value) conferirBot();
+        });
+        inp.addEventListener("keydown", function (ev) {
+          if (ev.key === "Backspace" && !inp.value && i > 0) { ins[i - 1].focus(); ins[i - 1].value = ""; }
+          if (ev.key === "ArrowLeft" && i > 0) ins[i - 1].focus();
+          if (ev.key === "ArrowRight" && i < 3) ins[i + 1].focus();
+        });
+        inp.addEventListener("paste", function (ev) {
+          var t = ((ev.clipboardData || window.clipboardData).getData("text") || "").replace(/\D/g, "").slice(0, 4);
+          if (!t) return;
+          ev.preventDefault();
+          t.split("").forEach(function (ch, j) { if (ins[j]) ins[j].value = ch; });
+          if (t.length === 4) conferirBot(); else ins[t.length].focus();
+        });
+      });
+      modal.querySelector("#f-pinb").addEventListener("submit", function (ev) { ev.preventDefault(); conferirBot(); });
+      function conferirBot() {
+        var pin = Array.prototype.map.call(ins, function (x) { return x.value; }).join("");
+        var msg = modal.querySelector("#pinb-msg"), caixa = modal.querySelector("#pinb");
+        if (pin.length < 4) { msg.textContent = "Digite os 4 dígitos."; return; }
+        if (hash("bot|" + pin) === BOT_HASH) {
+          sessao("bot", "1");
+          var b = $("bt-bot");
+          if (b) b.innerHTML = WPP + "Bot";
+          telaBot();
+        } else {
+          msg.textContent = "Senha incorreta. Tente de novo.";
+          caixa.classList.remove("erro");
+          void caixa.offsetWidth;
+          caixa.classList.add("erro");
+          ins.forEach(function (x) { x.value = ""; });
+          ins[0].focus();
+        }
+      }
+    }
+
+    function telaBot() {
+      abrirModal(cabecalhoModal("Disparador de WhatsApp", "Carregando...", "", WPP) +
+        '<div class="mcorpo"><div class="bot-carregando">Buscando a situação do bot...</div></div>', "medio");
+      buscarBot(function (erro, dados) {
+        if (erro) { pintarBotErro(erro); return; }
+        botCache = dados;
+        pintarBot(dados);
+      });
+    }
+
+    function buscarBot(pronto) {
+      // O arquivo muda a cada poucos minutos; o parametro evita cache de CDN.
+      var url = BOT_STATUS_URL + "?t=" + Date.now();
+      fetch(url, { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        .then(function (d) { pronto(null, d); })
+        .catch(function () {
+          fetch(BOT_STATUS_FALLBACK)
+            .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+            .then(function (d) { pronto(null, d); })
+            .catch(function (e) { pronto(e); });
+        });
+    }
+
+    function pintarBotErro(e) {
+      var corpo = '<div class="mcorpo">' +
+        '<div class="bot-aviso er"><div><b>Não foi possível ler a situação do bot.</b><br>' +
+        'O arquivo <code>status_bot.json</code> ainda não foi publicado, ou o bot está fora do ar.<br>' +
+        '<span style="opacity:.75">' + esc(e && e.message || e) + '</span></div></div>' +
+        '<div class="bot-nota">O bot publica esse arquivo a cada poucos minutos quando está rodando ' +
+        'com a publicação ligada. Se ele acabou de ser configurado, aguarde o primeiro envio.</div></div>';
+      abrirModal(cabecalhoModal("Disparador de WhatsApp", "Sem dados", "", WPP) + corpo, "medio");
+    }
+
+    function botIdade(iso) {
+      if (!iso) return { txt: "—", min: Infinity };
+      var min = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
+      if (min < 1) return { txt: "agora", min: min };
+      if (min < 60) return { txt: "há " + min + " min", min: min };
+      var h = Math.floor(min / 60);
+      if (h < 24) return { txt: "há " + h + "h", min: min };
+      return { txt: "há " + Math.floor(h / 24) + "d", min: min };
+    }
+
+    function botHora(iso) {
+      if (!iso) return "—";
+      var d = new Date(iso);
+      return d.toLocaleDateString("pt-BR") + " " + d.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+    }
+
+    function pintarBot(d) {
+      var idade = botIdade(d.gerado_em);
+      var cx = d.conexao || {}, mt = d.motor || {}, hj = d.hoje || {}, fl = d.fila || {};
+
+      // Status velho significa bot parado, mesmo que o arquivo diga "rodando".
+      var desatualizado = idade.min > 20;
+      var vivo = mt.rodando && cx.estado === "conectado" && !desatualizado;
+
+      var classe = vivo ? (mt.pausado ? "alerta" : "vivo") : "morto";
+      var rotulo = desatualizado ? "sem sinal" :
+        (!mt.rodando ? "motor parado" :
+          (mt.pausado ? "pausado" :
+            (cx.estado === "conectado" ? "no ar" : esc(cx.estado || "desconhecido"))));
+
+      var topo = '<div class="bot-topo">' +
+        '<span class="bot-sit"><span class="bot-ponto ' + classe + '"></span>' + rotulo + '</span>' +
+        (cx.numero ? '<span class="chip">' + esc(cx.numero) + '</span>' : '') +
+        '<span class="chip">Atualizado <b style="margin-left:4px">' + idade.txt + '</b></span>' +
+        '</div>';
+
+      var avisos = "";
+
+      if (desatualizado) {
+        avisos += '<div class="bot-aviso er"><div><b>Sem sinal do bot.</b> ' +
+          'A última atualização foi ' + idade.txt + ' (' + botHora(d.gerado_em) + '). ' +
+          'Provavelmente o processo está parado no servidor.</div></div>';
+      }
+      if (cx.precisa_parear) {
+        avisos += '<div class="bot-aviso at"><div><b>Precisa parear o aparelho.</b> ' +
+          'O QR Code aparece no painel local do bot.</div></div>';
+      }
+      if (cx.numero_autorizado === false) {
+        avisos += '<div class="bot-aviso er"><div><b>Número pareado não é o autorizado.</b> ' +
+          'O bot está recusando todos os disparos.</div></div>';
+      }
+      if (!desatualizado && d.report && d.report.situacao === "atenção") {
+        avisos += '<div class="bot-aviso at"><div><b>Atenção:</b> ' +
+          (d.report.problemas || []).map(esc).join(" · ") + '</div></div>';
+      }
+      if (!avisos && vivo) {
+        avisos = '<div class="bot-aviso ok"><div><b>Tudo certo.</b> ' +
+          'O bot está conectado e disparando dentro da janela configurada.</div></div>';
+      }
+
+      var teto = hj.teto || 0;
+      var pct = teto ? Math.min(100, Math.round((hj.enviados || 0) / teto * 100)) : 0;
+
+      var cels =
+        cel("Enviados hoje", hj.enviados || 0,
+            teto ? pct + "% de " + teto : "sem teto", (hj.enviados ? "bom" : ""),
+            '<div class="bot-barra"><i style="width:' + pct + '%"></i></div>') +
+        cel("Na fila", fl.pendente || 0, "aguardando envio", "") +
+        cel("Falhas hoje", hj.falhas || 0, (fl.falhou || 0) + " aguardando decisão", hj.falhas ? "ruim" : "") +
+        cel("Inválidos hoje", hj.invalidos || 0, "fora do WhatsApp", hj.invalidos ? "meio" : "") +
+        cel("Total enviado", fl.enviado || 0, "desde o início", "") +
+        cel("Último disparo", botIdade(d.ultimo_disparo_em).txt, botHora(d.ultimo_disparo_em), "");
+
+      var dias = (d.historico_dias || []).slice(0, 14).reverse();
+      var maximo = Math.max.apply(null, dias.map(function (x) { return x.enviados || 0; }).concat([1]));
+
+      var grafico = dias.length ? '<div class="bot-sec"><h5>Últimos dias</h5><div class="bot-dias">' +
+        dias.map(function (x) {
+          var alt = Math.round((x.enviados || 0) / maximo * 62);
+          var dd = x.dia.slice(8, 10) + "/" + x.dia.slice(5, 7);
+          return '<div class="bot-dia" title="' + esc(x.dia) + ': ' + (x.enviados || 0) + ' enviado(s)">' +
+            '<div class="cl' + (x.enviados ? '' : ' zero') + '" style="height:' + Math.max(3, alt) + 'px"></div>' +
+            '<div class="dt">' + dd + '</div></div>';
+        }).join("") + '</div></div>' : "";
+
+      var cad = d.cadencia || {};
+      var janela = '<div class="bot-sec"><h5>Cadência configurada</h5>' +
+        '<div class="bot-meta"><span>Janela ' + esc(cad.janela || "—") + '</span>' +
+        '<span>Intervalo ' + ((cad.intervalo_s || []).join("–") || "—") + 's</span>' +
+        '<span>Teto ' + (hj.teto || "—") + '/dia</span>' +
+        '<span>' + (cad.aquecimento_ativo ? "Aquecimento ligado" : "Sem aquecimento") + '</span></div></div>';
+
+      var m = (d.modelos || [])[0];
+      var mensagem = m ? '<div class="bot-sec"><h5>Mensagem ativa</h5>' +
+        '<div class="bot-msg">' + esc(m.corpo).replace(/\*([^*\n]+)\*/g, "<b>$1</b>") + '</div>' +
+        '<div class="bot-meta"><span>' + esc(m.nome) + ' v' + m.versao + '</span>' +
+        '<span>' + m.caracteres + ' caracteres</span>' +
+        '<span>' + (m.tem_imagem ? "com imagem: " + esc(m.imagem) : "sem imagem") + '</span></div></div>' : "";
+
+      var corpo = '<div class="mcorpo">' + topo + avisos +
+        '<div class="bot-grade">' + cels + '</div>' + grafico + janela + mensagem +
+        '<div class="bot-nota">Este painel é somente leitura. O bot roda num servidor interno, ' +
+        'atrás da VPN, e esta página é pública e estática — ela não envia comando nenhum para lá. ' +
+        'Pausar, reenfileirar falhas e editar a mensagem são feitos no painel local do bot.</div>' +
+        blocoPainelLocal() +
+        '</div>';
+
+      var atualizar = '<button class="tbtn" id="bot-recarregar" title="Atualizar">' + SETA + '</button>';
+
+      abrirModal(cabecalhoModal("Disparador de WhatsApp", "Atualizado " + idade.txt, atualizar, WPP) + corpo, "medio");
+
+      var bt = modal.querySelector("#bot-recarregar");
+      if (bt) bt.addEventListener("click", telaBot);
+      ligarPainelLocal();
+    }
+
+    // -----------------------------------------------------------------
+    // Atalho para o painel de controle do bot
+    // -----------------------------------------------------------------
+    // O endereco e interno e so funciona
+    // para quem esta na VPN. Ele fica no localStorage de cada pessoa,
+    // e NAO neste arquivo: o painel_hub.js e publico, e publicar um IP
+    // interno aqui entregaria a topologia da rede a qualquer visitante.
+    // Custo: cada pessoa informa o endereco uma vez, no proprio navegador.
+
+    function enderecoPainel() {
+      var v = ler("bot-painel");
+      return v && /^https?:\/\//i.test(v) ? v : null;
+    }
+
+    function blocoPainelLocal() {
+      var end = enderecoPainel();
+      if (!end) {
+        return '<div class="bot-painel"><div class="bot-cfg">' +
+          '<input id="bot-end" type="url" placeholder="http://servidor-interno:porta" ' +
+          'aria-label="Endereço do painel de controle" autocomplete="off">' +
+          '<button class="lk" id="bot-salvar-end">Salvar</button>' +
+          '<div class="err" id="bot-end-err"></div>' +
+          '<div class="dica">Informe o endereço do painel de controle do bot para criar um atalho. ' +
+          'Ele fica guardado só neste navegador — não vai para a página publicada.</div>' +
+          '</div></div>';
+      }
+      return '<div class="bot-painel">' +
+        '<button class="lk" id="bot-abrir">' + ABRIR_EXT + 'Abrir painel de controle</button>' +
+        '<span class="end">' + esc(end) + '</span>' +
+        '<button class="mini" id="bot-trocar-end">alterar</button>' +
+        '</div>';
+    }
+
+    function ligarPainelLocal() {
+      var abrir = modal.querySelector("#bot-abrir");
+      if (abrir) {
+        abrir.addEventListener("click", function () {
+          var end = enderecoPainel();
+          if (end) window.open(end, "_blank", "noopener,noreferrer");
+        });
+      }
+      var trocar = modal.querySelector("#bot-trocar-end");
+      if (trocar) {
+        trocar.addEventListener("click", function () {
+          guardar("bot-painel", "");
+          if (botCache) pintarBot(botCache); else telaBot();
+        });
+      }
+      var salvar = modal.querySelector("#bot-salvar-end");
+      if (salvar) {
+        var campo = modal.querySelector("#bot-end");
+        var err = modal.querySelector("#bot-end-err");
+        var confirmar = function () {
+          var v = (campo.value || "").trim();
+          if (!v) { err.textContent = "Digite o endereço."; return; }
+          if (!/^https?:\/\//i.test(v)) v = "http://" + v;
+          var u;
+          try { u = new URL(v); } catch (e) { err.textContent = "Endereço inválido."; return; }
+          if (u.protocol !== "http:" && u.protocol !== "https:") {
+            err.textContent = "Use http:// ou https://.";
+            return;
+          }
+          guardar("bot-painel", u.origin);
+          if (botCache) pintarBot(botCache); else telaBot();
+        };
+        salvar.addEventListener("click", confirmar);
+        campo.addEventListener("keydown", function (ev) {
+          if (ev.key === "Enter") { ev.preventDefault(); confirmar(); }
+        });
+        campo.focus();
+      }
+    }
+
+    function cel(rot, val, sub, classe, extra) {
+      return '<div class="bot-cel ' + (classe || "") + '"><div class="r">' + esc(rot) + '</div>' +
+        '<div class="v">' + esc(val) + '</div>' +
+        '<div class="s">' + esc(sub || "") + '</div>' + (extra || "") + '</div>';
     }
 
     function abrirCronograma(escopo) {
