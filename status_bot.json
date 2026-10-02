@@ -1,0 +1,69 @@
+{
+  "versao": 1,
+  "gerado_em": "2026-10-02T17:22:40.823Z",
+  "dia": "2026-10-02",
+  "conexao": {
+    "estado": "desligado",
+    "numero": null,
+    "numero_autorizado": true,
+    "conectado_desde": null,
+    "precisa_parear": false,
+    "tentativas_reconexao": 0
+  },
+  "motor": {
+    "rodando": false,
+    "pausado": false,
+    "aguardando": null,
+    "uptime_s": 0
+  },
+  "hoje": {
+    "enviados": 0,
+    "falhas": 0,
+    "invalidos": 0,
+    "teto": 30,
+    "restante": 30
+  },
+  "fila": {
+    "pendente": 0,
+    "reservado": 0,
+    "enviado": 0,
+    "falhou": 0,
+    "invalido": 0,
+    "quarentena": 0,
+    "total": 0
+  },
+  "cadencia": {
+    "janela": "09:00–20:00",
+    "dias_semana": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "intervalo_s": [
+      8,
+      20
+    ],
+    "aquecimento_ativo": false
+  },
+  "historico_dias": [],
+  "report": {
+    "situacao": "motor parado",
+    "problemas": [],
+    "resumo": null
+  },
+  "ultimo_disparo_em": null,
+  "eventos_recentes": [],
+  "modelos": [
+    {
+      "nome": "superadds",
+      "versao": 2,
+      "corpo": "🎉 *Você acaba de viver o SuperAdds*.\n\nSeus pontos Supertroco já chegaram, e você também está concorrendo a 1 óculos Meta, que será sorteado na festa de encerramento.\n\nAgora imagine isso acontecendo todos os dias nos PDVs da(o) *{{GroupName}}*: ofertas de marcas personalizadas para cada perfil de cliente, em tempo real, logo após a finalização da compra.\n\nCom o *SuperAdds*, cada compra gera uma oportunidade. Marcas se conectam aos seus clientes com ofertas personalizadas de produtos e serviços, enquanto novas receitas são geradas para o seu negócio.\n\n*Seu PDV já tem audiência. Agora ele também pode ser mídia.*\n\n👉 Fale com nosso time e conheça o SuperAdds: https://w.app/supertrococomercial",
+      "tem_imagem": true,
+      "imagem": "superadds.jpg",
+      "caracteres": 698,
+      "atualizado_em": "2026-10-02 16:18:49"
+    }
+  ]
+}
