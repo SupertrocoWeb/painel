@@ -264,6 +264,30 @@
   .kleg{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:10px}
   .kleg span{display:inline-flex;align-items:center;gap:6px}
 
+  /* ---------- remuneracao (comissao x por aquisicao) ---------- */
+  .mix{display:flex;gap:2px;height:7px;border-radius:4px;overflow:hidden;margin-top:9px}
+  .mix span{display:block;height:100%;cursor:default}
+  .mix span:first-child{border-radius:4px 0 0 4px} .mix span:last-child{border-radius:0 4px 4px 0}
+  .mix-leg{display:flex;gap:6px 14px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:7px}
+  .mix-leg span{display:inline-flex;align-items:center;gap:6px}
+  .mix-leg i{width:9px;height:9px;border-radius:3px;display:inline-block}
+  .rm{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .rm-p{flex:1 1 220px;min-width:0;border:1px solid var(--line);border-radius:13px;padding:13px 15px;background:var(--soft)}
+  .rm-p:last-child{box-shadow:inset 0 0 0 1px var(--brand)}
+  .rm-h{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--muted);flex-wrap:wrap}
+  .rm-h i{width:9px;height:9px;border-radius:3px;display:inline-block}
+  .rm-h .st{margin-left:auto}
+  .rm-regra{font-family:var(--disp);font-weight:700;font-size:14px;margin-top:6px}
+  .rm-v{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:-.02em;margin-top:4px}
+  .rm-s{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .rm-s b{color:var(--ink);font-family:var(--disp)}
+  .rm-seta{display:grid;place-items:center;color:var(--muted2);flex:0 0 auto}
+  .rm-seta svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+  .rm-tot{text-align:right}
+  .rm-tot span{display:block;font-size:11px;color:var(--muted)}
+  .rm-tot b{font-family:var(--disp);font-weight:800;font-size:19px}
+  @media(max-width:620px){ .rm-seta{display:none} .rm-tot{text-align:left} }
+
   .seg{display:inline-flex;background:var(--seg);border-radius:9px;padding:3px;gap:2px;max-width:100%;overflow-x:auto}
   .seg button{border:0;background:transparent;font-size:12px;color:var(--muted);
     padding:6px 11px;border-radius:7px;cursor:pointer;transition:.15s;white-space:nowrap}
@@ -294,6 +318,14 @@
   .wcol .wv{font-family:var(--disp);font-weight:700;font-size:12px;white-space:nowrap}
   .wcol .wl{font-size:10px;color:var(--muted);text-align:center;white-space:nowrap;
     overflow:hidden;text-overflow:ellipsis;max-width:100%}
+  .wcol.marcada{box-shadow:inset 1.5px 0 0 var(--accent)}
+  .wtag{position:absolute;top:-14px;left:4px;font-size:9.5px;font-weight:700;color:var(--warn-ink);
+    background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:999px;padding:1px 7px;
+    white-space:nowrap;z-index:1}
+  .wtag.dir{left:auto;right:2px}
+  .pt-vazio{fill:var(--card);stroke:var(--muted2);stroke-width:1.5}
+  .marco{stroke:var(--accent);stroke-width:1.5}
+  .marco-t{fill:var(--warn-ink);font-size:10px;font-weight:700;font-family:var(--body)}
   .wcol .wdot{position:absolute;top:0;width:7px;height:7px;border-radius:50%;
     background:var(--accent);box-shadow:0 0 0 3px rgba(242,169,59,.22)}
 
@@ -1264,15 +1296,21 @@
     function hubNumeros(aba) {
       var k = aba.kpis, g = [];
       if (k.parceiros_vendas) {
-        g.push(["Receita gerada", moeda(k.vendas), aba.periodo, true]);
-        g.push(["Comissão Supertroco", moeda(k.comissao), "somando as taxas das parcerias de venda", true]);
+        // "Vendas geradas" e o faturamento do parceiro; "Receita Supertroco" e o que
+        // a Supertroco ganha — comissao e/ou valor por aquisicao, conforme o periodo.
+        var rec = receitaDe(k);
+        g.push(["Vendas geradas", moeda(k.vendas), aba.periodo, true]);
+        g.push(["Receita Supertroco", moeda(rec),
+                k.remuneracao === "misto" ? moeda(k.receita_comissao) + " comissão + " + moeda(k.receita_aquisicao) + " por aquisição"
+                : k.remuneracao === "aquisicao" ? "valor pago por aquisição"
+                : "comissão sobre as vendas", true]);
       }
       if (k.parceiros_leads) {
         g.push(["Leads gerados", nf(k.leads), k.parceiros_leads + (k.parceiros_leads > 1 ? " parcerias" : " parceria") + " medida em leads", true]);
       }
       if (k.parceiros_vendas) {
         g.push(["Aquisições", nf(k.aquisicoes), "novos usuários no período", false]);
-        g.push(["CAC médio", moeda(k.cac, 2), "comissão ÷ aquisições", false]);
+        g.push(["Receita por aquisição", moeda(k.cac, 2), "receita Supertroco ÷ aquisições", false]);
       }
       g.push(["Campanhas de e-mail", nf(k.campanhas), k.campanhas ? mil(k.entregues) + " e-mails entregues" : "nenhum envio no período", false]);
       g.push(["Abertura média", k.campanhas ? nf(k.abertura, 1) + "%" : "—", k.campanhas ? "CTR de " + nf(k.ctr, 2) + "%" : "sem e-mail no período", false, !k.campanhas]);
@@ -1312,12 +1350,15 @@
               '<span class="gi"><span class="r">Pico</span><span class="v">' + (r.pico ? nf(r.pico.v) + " · " + esc(r.pico.d) : "—") + '</span></span>' +
               '<span class="gi"><span class="r">Dias com lead</span><span class="v">' + nf(r.dias_com_lead) + " de " + nf(r.dias_ativos) + '</span></span>';
           } else {
-            grid = '<span class="gi"><span class="r">Receita</span><span class="v">' + moeda(r.vendas) + '</span></span>' +
-              '<span class="gi"><span class="r">Comissão</span><span class="v">' + moeda(r.comissao) + '</span></span>' +
-              '<span class="gi"><span class="r">Pedidos</span><span class="v">' + nf(r.pedidos) + '</span></span>' +
-              '<span class="gi"><span class="r">CAC</span><span class="v">' + moeda(r.cac, 2) + '</span></span>';
+            grid = '<span class="gi"><span class="r">Vendas</span><span class="v">' + moeda(r.vendas) + '</span></span>' +
+              '<span class="gi"><span class="r">' + (r.remuneracao === "comissao" || !r.remuneracao ? "Comissão" : "Receita Supertroco") +
+              '</span><span class="v">' + moeda(receitaDe(r)) + '</span></span>' +
+              '<span class="gi"><span class="r">Aquisições</span><span class="v">' + nf(r.aquisicoes) + '</span></span>' +
+              '<span class="gi"><span class="r">Por aquisição</span><span class="v">' + moeda(r.cac, 2) + '</span></span>';
           }
-          var pe = p.modelo === "leads" ? "mede leads" : (p.taxa_comissao ? nf(p.taxa_comissao * 100, 0) + "% de comissão" : "mede vendas");
+          var pe = p.modelo === "leads" ? "mede leads"
+            : p.remuneracao_atual ? p.remuneracao_atual
+            : (p.taxa_comissao ? nf(p.taxa_comissao * 100, 0) + "% de comissão" : "mede vendas");
           return '<button class="pc' + (r ? "" : " apagado") + '" data-parceiro="' + esc(p.id) + '">' +
             '<span class="faixa" style="background:linear-gradient(90deg,' +
             esc(p.cores.brand) + ',' + esc(p.cores.brand_lite) + ')"></span>' +
@@ -1377,7 +1418,7 @@
     function hubParticipacao(aba) {
       if (!aba.participacao || aba.participacao.length < 2) return "";
       var maxF = Math.max.apply(null, aba.participacao.map(function (p) { return p.vendas; })) || 1;
-      return '<div class="row"><div class="painel"><h3>Participação na receita</h3>' +
+      return '<div class="row"><div class="painel"><h3>Participação nas vendas</h3>' +
         '<div class="cap">Quanto cada parceria de vendas representa do total gerado no período</div>' +
         '<div class="part">' + aba.participacao.map(function (p) {
           return '<div class="pl"><div class="h"><span>' + esc(p.nome) + '</span>' +
@@ -1448,13 +1489,86 @@
     // =================================================================
     // TELA 2 — CRM DO PARCEIRO
     // =================================================================
-    function kpi(src, lbl, val, sub, star, alerta, nd) {
+    function kpi(src, lbl, val, sub, star, alerta, nd, extra) {
       return '<div class="kpi' + (star ? " star" : "") + '" title="' +
         esc(lbl + ": " + val + " — " + sub + (alerta ? " (" + alerta + ")" : "")) + '">' +
         '<div class="top"><span class="lbl">' + esc(lbl) + '</span>' +
         '<span class="src ' + src + '"></span></div>' +
         '<div class="v' + (nd ? " nd" : "") + '">' + esc(val) + '</div><div class="sub">' + esc(sub) + '</div>' +
-        (alerta ? '<div class="alerta">' + esc(alerta) + '</div>' : '') + '</div>';
+        (extra || "") + (alerta ? '<div class="alerta">' + esc(alerta) + '</div>' : '') + '</div>';
+    }
+
+    // ---------- remuneracao: comissao sobre vendas x valor por aquisicao ----------
+    // A Supertroco ganhava 10% de comissao; desde 01/10/2026 a Sorte Online paga
+    // R$ 30 por aquisicao. O hub.json traz o modelo de cada aba ("comissao",
+    // "aquisicao" ou "misto", quando a aba cobre os dois) e os periodos.
+    var COR_PERIODO = ["var(--brand)", "var(--accent)", "var(--r3)", "var(--r1)"];
+    function receitaDe(k) { return k.receita !== undefined ? k.receita : k.comissao; }
+    function remunInfo(k) {
+      var per = k.periodos_remuneracao || [], ult = per[per.length - 1], pri = per[0];
+      if (k.remuneracao === "aquisicao") {
+        return { rotulo: "Receita", curto: "receita",
+                 sub: (ult ? ult.regra : "valor por aquisição") + " · " + nf(k.aquisicoes) + " aquisições",
+                 cac: "Receita por aquisição", cacSub: "receita ÷ aquisições" };
+      }
+      if (k.remuneracao === "misto") {
+        return { rotulo: "Receita Supertroco", curto: "receita",
+                 sub: moeda(k.receita_comissao) + " em comissão + " + moeda(k.receita_aquisicao) + " por aquisição",
+                 cac: "Receita por aquisição",
+                 cacSub: pri && ult ? moeda(pri.por_aquisicao, 2) + " na comissão → " + moeda(ult.por_aquisicao, 2) + " agora"
+                                    : "receita ÷ aquisições" };
+      }
+      return { rotulo: "Comissão", curto: "comissão", sub: "no período", cac: "CAC", cacSub: "comissão ÷ aquisições" };
+    }
+    function periodoTxt(x) {
+      var a = x.ini.slice(0, 5), b = x.fim.slice(0, 5), ano = x.fim.slice(6);
+      return a === b ? a + "/" + ano : a + " a " + b + "/" + ano;
+    }
+    function barraMix(per, total) {
+      var t = total || 1;
+      return '<div class="mix" role="img" aria-label="' + esc(per.map(function (x) {
+          return x.regra + ": " + moeda(x.receita);
+        }).join(" · ")) + '">' + per.map(function (x, i) {
+          return '<span style="width:' + Math.max(1.5, x.receita / t * 100).toFixed(1) + '%;background:' +
+            COR_PERIODO[i % 4] + '" data-tip="' + esc(moeda(x.receita, 2) + " · " + nf(x.receita / t * 100, 0) + "%\n" +
+            x.regra + " · " + periodoTxt(x)) + '"></span>';
+        }).join("") + '</div>';
+    }
+    function regraNaData(p, iso) {
+      var r = null;
+      (p.remuneracao || []).forEach(function (x) { if (x.desde <= iso) r = x; });
+      return r;
+    }
+    function blocoRemuneracao(aba, p) {
+      var k = aba.kpis, per = k.periodos_remuneracao || [];
+      if (per.length < 2) return "";
+      var pri = per[0], ult = per[per.length - 1];
+      var fator = pri.por_aquisicao ? ult.por_aquisicao / pri.por_aquisicao : 0;
+      var cards = per.map(function (x, i) {
+        return (i ? '<div class="rm-seta" aria-hidden="true">' + SETA + '</div>' : '') +
+          '<div class="rm-p"><div class="rm-h"><i style="background:' + COR_PERIODO[i % 4] + '"></i>' +
+          esc(periodoTxt(x)) + (i === per.length - 1 ? '<span class="st ok">modelo atual</span>' : '') + '</div>' +
+          '<div class="rm-regra">' + esc(x.regra) + '</div>' +
+          '<div class="rm-v">' + moeda(x.receita, 2) + '</div>' +
+          '<div class="rm-s">' + nf(x.aquisicoes) + ' aquisições · <b>' + moeda(x.por_aquisicao, 2) +
+          '</b> por aquisição</div></div>';
+      }).join("");
+      var leitura = fator > 1.05
+        ? "No modelo atual cada aquisição rende <b>" + moeda(ult.por_aquisicao, 2) + "</b> — <b>" + nf(fator, 1) +
+          "×</b> o que rendia na comissão (" + moeda(pri.por_aquisicao, 2) + "). Agora o que move a receita são as " +
+          "<b>aquisições</b>, não o valor das vendas."
+        : fator && fator < 0.95
+          ? "No modelo atual cada aquisição rende <b>" + moeda(ult.por_aquisicao, 2) + "</b>, menos que na comissão (" +
+            moeda(pri.por_aquisicao, 2) + ")."
+          : "A receita por aquisição ficou parecida nos dois modelos.";
+      return '<div class="row"><div class="painel"><div class="hrow"><div><h3>Remuneração da parceria</h3>' +
+        '<div class="cap">O modelo mudou em ' + esc(ult.ini) + ' — a receita da Supertroco soma os períodos</div></div>' +
+        '<div class="rm-tot"><span>Receita total</span><b>' + moeda(receitaDe(k), 2) + '</b></div></div>' +
+        '<div class="rm">' + cards + '</div>' + barraMix(per, receitaDe(k)) +
+        '<div class="mix-leg">' + per.map(function (x, i) {
+          return '<span><i style="background:' + COR_PERIODO[i % 4] + '"></i>' + esc(x.regra) + ' · ' +
+            nf(x.receita / (receitaDe(k) || 1) * 100, 0) + '%</span>';
+        }).join("") + '</div><div class="tagbox" style="margin-top:12px">' + leitura + '</div></div></div>';
     }
     function legendaFontes(p) {
       return '<div class="kleg"><span><i class="src res"></i>' +
@@ -1496,11 +1610,17 @@
       var conta = k.pedidos_com_sessao === undefined ? "pedidos ÷ sessões"
         : parcial ? nf(k.pedidos_com_sessao) + " dos " + nf(k.pedidos) + " pedidos ÷ " + nf(k.sessoes) + " sessões"
                   : nf(k.pedidos_com_sessao) + " pedidos ÷ " + nf(k.sessoes) + " sessões";
+      var rm = remunInfo(k);
+      var semVendas = (k.dias_com_vendas !== undefined && k.dias_com_vendas < k.dias_ativos)
+        ? "vendas preenchidas em " + k.dias_com_vendas + " de " + k.dias_ativos + " dias" : null;
       var c2 = [
-        kpi("res", "Vendas", moeda(k.vendas), aba.periodo, true),
-        kpi("res", "Comissão", moeda(k.comissao), "no período", true),
+        kpi("res", "Vendas", moeda(k.vendas), aba.periodo, true, semVendas),
+        // Na aba de outubro (R$ 30 por aquisicao) a "Comissão" vira "Receita";
+        // na visao geral, "Receita Supertroco" com a composicao dos dois modelos.
+        kpi("res", rm.rotulo, moeda(receitaDe(k), k.remuneracao === "comissao" || !k.remuneracao ? 0 : 2), rm.sub, true, null, false,
+            k.remuneracao === "misto" ? barraMix(k.periodos_remuneracao || [], receitaDe(k)) : ""),
         kpi("res", "Aquisições", nf(k.aquisicoes), "novos usuários", true),
-        kpi("res", "CAC", moeda(k.cac, 2), "comissão ÷ aquisições", true),
+        kpi("res", rm.cac, moeda(k.cac, 2), rm.cacSub, true),
         kpi("res", "Pedidos", nf(k.pedidos), "no período", true),
         kpi("res", "Ticket médio", moeda(k.tkm, 2), "vendas ÷ pedidos", false),
         kpi("res", "Conversão", nf(k.conversao, 2) + "%", conta, false, parcial),
@@ -1527,12 +1647,14 @@
         seg.setDate(dt.getDate() - ((dt.getDay() + 6) % 7));
         var id = seg.getFullYear() + "-" + (seg.getMonth() + 1) + "-" + seg.getDate();
         if (!atual || atual.id !== id) {
-          atual = { id: id, ini: d.d, fim: d.d, valor: 0, pedidos: 0, envios: 0, wpp: 0 };
+          atual = { id: id, ini: d.d, fim: d.d, valor: 0, pedidos: 0, envios: 0, wpp: 0, isos: [], receita: 0 };
           grupos.push(atual);
         }
         atual.fim = d.d;
         atual.valor += d[chave] || 0;
         atual.pedidos += d.pedidos || 0;
+        atual.receita += d.receita || 0;
+        atual.isos.push(d.iso);
         if (d.send) atual.envios++;
         if (d.wpp) atual.wpp++;
       });
@@ -1548,10 +1670,15 @@
       var s = porSemana(dias, cfg.chave);
       var mx = Math.max.apply(null, s.map(function (x) { return x.valor; })) || 1;
       return '<div class="wbars">' + s.map(function (x) {
+        var marco = null;
+        (cfg.marcos || []).forEach(function (m) { if (x.isos.indexOf(m.iso) >= 0) marco = m; });
         var dica = cfg.fmt(x.valor) + "\n" + x.ini + " a " + x.fim +
-          (cfg.chave === "vendas" ? " · " + x.pedidos + " pedidos" : "") +
+          (cfg.chave === "vendas" ? " · " + x.pedidos + " pedidos · receita Supertroco " + moeda(x.receita, 2) : "") +
+          (marco ? "\nMudança de remuneração em " + marco.txt : "") +
           (x.envios ? "\n" + x.envios + " dia(s) com e-mail" : "") + (x.wpp ? "\n" + x.wpp + " dia(s) com WhatsApp" : "");
-        return '<div class="wcol" data-tip="' + esc(dica) + '">' +
+        return '<div class="wcol' + (marco ? " marcada" : "") + '" data-tip="' + esc(dica) + '">' +
+          (marco ? '<span class="wtag' + (s.indexOf(x) > s.length / 2 ? " dir" : "") + '">' +
+            esc(marco.txt.split(" · ").pop()) + '</span>' : '') +
           (x.envios || x.wpp ? '<span class="wdot"' + (!x.envios ? ' style="background:var(--wpp)"' : '') + '></span>' : '') +
           '<span class="wv">' + esc(cfg.chave === "vendas" ? curto(x.valor) : nf(x.valor)) + '</span>' +
           '<div class="wbar" style="height:' + Math.max(4, x.valor / mx * 100).toFixed(1) + '%"></div>' +
@@ -1573,8 +1700,11 @@
           '" y="' + (y + 3.5).toFixed(1) + '" text-anchor="end">' + esc(cfg.eixo(mx * f)) + '</text>';
       });
       function dica(d) {
-        return cfg.fmt(d[cfg.chave]) + "\n" + d.d + " · " + (d.dow || "") +
+        var venda = cfg.chave === "vendas" && d.sem_vendas ? "vendas ainda não preenchidas" : cfg.fmt(d[cfg.chave]);
+        return venda + "\n" + d.d + " · " + (d.dow || "") +
           (cfg.chave === "vendas" ? " · " + d.pedidos + " pedidos · " + d.novos + " aquisições" : "") +
+          (cfg.chave === "vendas" && d.receita !== undefined
+            ? "\nReceita Supertroco: " + moeda(d.receita, 2) + (d.remun === "aquisicao" ? " (por aquisição)" : " (comissão)") : "") +
           (d.send ? "\nE-mail: " + d.send : "") + (d.wpp ? "\nWhatsApp: " + d.wpp : "");
       }
       var corpo = "";
@@ -1598,11 +1728,23 @@
         });
       } else {
         X = function (i) { return n === 1 ? pl + iw / 2 : pl + iw * i / (n - 1); };
-        var pts = dias.map(function (d, i) { return X(i).toFixed(1) + "," + Y(d[cfg.chave] || 0).toFixed(1); });
-        var linha = "M" + pts.join(" L");
-        var area = linha + " L" + X(n - 1).toFixed(1) + "," + (pt + ih) + " L" + X(0).toFixed(1) + "," + (pt + ih) + " Z";
-        corpo += '<path d="' + area + '" fill="var(--brand)" fill-opacity=".1"/><path class="lpath" d="' + linha + '"/>';
+        // Dia sem venda preenchida interrompe a linha: cair a zero diria "nao vendeu".
+        var trechos = [], atual = [];
         dias.forEach(function (d, i) {
+          if (d.sem_vendas) { if (atual.length) trechos.push(atual); atual = []; return; }
+          atual.push(i);
+        });
+        if (atual.length) trechos.push(atual);
+        trechos.forEach(function (t) {
+          var linha = "M" + t.map(function (i) { return X(i).toFixed(1) + "," + Y(dias[i][cfg.chave] || 0).toFixed(1); }).join(" L");
+          var area = linha + " L" + X(t[t.length - 1]).toFixed(1) + "," + (pt + ih) + " L" + X(t[0]).toFixed(1) + "," + (pt + ih) + " Z";
+          corpo += '<path d="' + area + '" fill="var(--brand)" fill-opacity=".1"/><path class="lpath" d="' + linha + '"/>';
+        });
+        dias.forEach(function (d, i) {
+          if (d.sem_vendas) {
+            corpo += '<circle class="pt-vazio" cx="' + X(i).toFixed(1) + '" cy="' + (pt + ih).toFixed(1) + '" r="3"/>';
+            return;
+          }
           corpo += '<circle class="pt' + (d.send || d.wpp ? " hit" : "") + '" cx="' + X(i).toFixed(1) + '" cy="' +
             Y(d[cfg.chave] || 0).toFixed(1) + '" r="' + (d.send || d.wpp ? 4.5 : (n > 25 ? 0 : 3)) + '"/>';
         });
@@ -1616,18 +1758,38 @@
       });
       var passo = Math.max(1, Math.ceil(n / 8)), rot = "";
       dias.forEach(function (d, i) {
-        if (i % passo === 0 || i === n - 1) {
+        // O ultimo rotulo sempre aparece; o regular colado nele sai.
+        if (i === n - 1 || (i % passo === 0 && n - 1 - i > passo / 2)) {
           rot += '<text class="xlabel" x="' + X(i).toFixed(1) + '" y="' + (H - 8) + '">' + esc(d.d) + '</text>';
         }
       });
+      // Marco da troca de remuneracao (ex.: 01/10 — R$ 30 por aquisicao).
+      var marcos = "";
+      (cfg.marcos || []).forEach(function (m) {
+        var i = -1;
+        dias.forEach(function (d, j) { if (d.iso === m.iso) i = j; });
+        if (i < 0) return;
+        var x = i === 0 ? X(0) : (X(i - 1) + X(i)) / 2;
+        var direita = x > pl + iw * 0.7;
+        marcos += '<line class="marco" x1="' + x.toFixed(1) + '" y1="' + (pt - 6) + '" x2="' + x.toFixed(1) +
+          '" y2="' + (pt + ih) + '"/><text class="marco-t" x="' + (x + (direita ? -6 : 6)).toFixed(1) + '" y="' + (pt + 2) +
+          '" text-anchor="' + (direita ? "end" : "start") + '">' + esc(m.txt) + '</text>';
+      });
       return '<div class="chart"><svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' +
-        esc(cfg.nome) + ' por dia">' + grade + corpo + zonas + rot + '</svg></div>';
+        esc(cfg.nome) + ' por dia">' + grade + corpo + marcos + zonas + rot + '</svg></div>';
     }
 
     function pintarGrafico(aba, p) {
       var g = $("grafico");
       if (!g) return;
       var cfg = cfgResultado(p);
+      cfg.marcos = [];
+      aba.dias.forEach(function (d, i) {
+        if (i && d.remun && d.remun !== aba.dias[i - 1].remun) {
+          var r = regraNaData(p, d.iso);
+          cfg.marcos.push({ iso: d.iso, txt: d.d + " · " + (r ? r.descricao : "novo modelo") });
+        }
+      });
       g.innerHTML = estado.gran === "dia" ? graficoDia(aba.dias, cfg) : graficoSemana(aba.dias, cfg);
     }
 
@@ -1922,12 +2084,25 @@
           '</b> · média <b>' + nf(tot / dias.length, 1) + '</b> por dia · <b>' + disparos + '</b> dia(s) com disparo</div>';
       } else {
         var s = dias.reduce(function (a, d) {
-          a.v += d.vendas; a.c += d.comissao; a.p += d.pedidos; a.n += d.novos; return a;
-        }, { v: 0, c: 0, p: 0, n: 0 });
+          a.v += d.vendas; a.c += (d.receita !== undefined ? d.receita : d.comissao); a.p += d.pedidos; a.n += d.novos;
+          a.m[d.remun || "comissao"] = 1; return a;
+        }, { v: 0, c: 0, p: 0, n: 0, m: {} });
+        // O rotulo segue o que esta na tela: comissao, receita por aquisicao ou os dois.
+        var rotRec = s.m.comissao && s.m.aquisicao ? "receita Supertroco" : s.m.aquisicao ? "receita" : "comissão";
         resumo = '<div class="resumo"><b>' + dias.length + '</b> dias · vendas <b>' +
-          moeda(s.v) + '</b> · comissão <b>' + moeda(s.c, 2) + '</b> · pedidos <b>' + nf(s.p) +
+          moeda(s.v) + '</b> · ' + rotRec + ' <b>' + moeda(s.c, 2) + '</b> · pedidos <b>' + nf(s.p) +
           '</b> · aquisições <b>' + nf(s.n) + '</b> · <b>' + disparos + '</b> dia(s) com disparo</div>';
       }
+      var colRec = !leads ? (rotRec.charAt(0).toUpperCase() + rotRec.slice(1)) : "";
+      var recDia = function (d) { return d.receita !== undefined ? d.receita : d.comissao; };
+      var tagRec = function (d) {
+        return s && s.m.comissao && s.m.aquisicao
+          ? '<span class="pill ' + (d.remun === "aquisicao" ? "wpp" : "no") + '" style="margin-left:6px;padding:1px 7px">' +
+            (d.remun === "aquisicao" ? "aquisição" : "comissão") + '</span>' : "";
+      };
+      var vendaDia = function (d, fmt) {
+        return d.sem_vendas ? '<span title="vendas ainda não preenchidas na planilha" style="color:var(--muted2)">&mdash;</span>' : fmt;
+      };
       if (estado.modo === "tabela") {
         if (leads) {
           corpo = '<div class="tw"><table><thead><tr><th>Dia</th><th>Semana</th><th class="n">Leads</th>' +
@@ -1939,13 +2114,13 @@
             }).join("") + '</tbody></table></div>';
         } else {
           corpo = '<div class="tw"><table><thead><tr><th>Dia</th><th class="n">Vendas (R$)</th>' +
-            '<th class="n">Comissão</th><th class="n">Pedidos</th><th class="n">Aquisições</th>' +
+            '<th class="n">' + esc(colRec) + '</th><th class="n">Pedidos</th><th class="n">Aquisições</th>' +
             '<th class="n">Ticket</th><th class="n">Conversão</th><th>Disparos no dia</th></tr></thead><tbody>' +
             dias.map(function (d) {
-              return '<tr class="' + (d.vendas === mx ? "peak" : "") + '"><td>' + esc(d.d) + '</td>' +
-                '<td class="n">' + nf(d.vendas) + '</td><td class="n">' + nf(d.comissao, 2) + '</td>' +
-                '<td class="n">' + nf(d.pedidos) + '</td><td class="n">' + nf(d.novos) + '</td>' +
-                '<td class="n">' + nf(d.tkm, 2) + '</td>' +
+              return '<tr class="' + (d.vendas === mx ? "peak" : "") + '"><td>' + esc(d.d) + tagRec(d) + '</td>' +
+                '<td class="n">' + vendaDia(d, nf(d.vendas)) + '</td><td class="n">' + nf(recDia(d), 2) + '</td>' +
+                '<td class="n">' + vendaDia(d, nf(d.pedidos)) + '</td><td class="n">' + nf(d.novos) + '</td>' +
+                '<td class="n">' + vendaDia(d, nf(d.tkm, 2)) + '</td>' +
                 '<td class="n">' + (d.conv === null ? "&mdash;" : nf(d.conv, 2) + "%") + '</td>' +
                 '<td>' + pilulas(d) + '</td></tr>';
             }).join("") + '</tbody></table></div>';
@@ -1959,8 +2134,9 @@
             (leads
               ? '<div class="dv">' + nf(d.leads) + ' leads</div><div class="d1" style="font-size:10.5px">acumulado ' + nf(d.acum) +
                 '</div><div class="d2"><span>' + nf(d.pct, 1) + '% do período</span></div>'
-              : '<div class="dv">' + moeda(d.vendas) + '</div>' +
-                '<div class="d1" style="font-size:10.5px">comissão ' + moeda(d.comissao, 2) + '</div>' +
+              : '<div class="dv">' + vendaDia(d, moeda(d.vendas)) + '</div>' +
+                '<div class="d1" style="font-size:10.5px">' + (d.remun === "aquisicao" ? "receita " : "comissão ") +
+                moeda(recDia(d), 2) + '</div>' +
                 '<div class="d2"><span>' + d.pedidos + ' ped.</span><span>' + d.novos + ' aquis.</span>' +
                 '<span>' + (d.conv === null ? "&mdash;" : nf(d.conv, 1) + "%") + '</span></div>') + '</div>';
         }).join("") + '</div>';
@@ -2000,7 +2176,8 @@
           ' e o export da RD na pasta <code>parceiros/' + esc(p.id) + '/</code> e rode o gerar_hub.py.</div></div>' +
           blocoCanais(aba, p) + '</div>';
       }
-      return '<div class="conteudo" id="conteudo">' + blocoKpis(aba, p) + blocoResultado(aba, p) +
+      return '<div class="conteudo" id="conteudo">' + blocoKpis(aba, p) +
+        (p.modelo === "leads" ? "" : blocoRemuneracao(aba, p)) + blocoResultado(aba, p) +
         blocoCanais(aba, p) + blocoCross() + blocoIA(aba, p) + '</div>';
     }
 
@@ -2009,8 +2186,13 @@
       if (!p) { estado.tela = "hub"; return telaHub(); }
       aplicarTema({ cores: p.cores, cores_escuro: p.cores_escuro, rampa: p.rampa });
       var aba = abaDe(p.abas, estado.aba);
+      var rems = p.remuneracao || [], atual = rems[rems.length - 1];
       var sub = esc(p.segmento) + ' · ' + (p.modelo === "leads" ? "resultado medido em leads"
-        : nf((p.taxa_comissao || 0) * 100, 0) + '% de comissão') +
+        : p.remuneracao_atual
+          ? esc(p.remuneracao_atual) + (rems.length > 1 && atual
+              ? ' desde ' + esc(ddmm(atual.desde) + "/" + atual.desde.slice(0, 4)) +
+                ' <span style="color:var(--muted2)">(antes ' + esc(rems[rems.length - 2].descricao) + ')</span>' : '')
+          : nf((p.taxa_comissao || 0) * 100, 0) + '% de comissão') +
         (p.ficticio ? ' · <b style="color:var(--warn-ink)">dados de teste</b>' : '');
       var topo = '<div class="topo"><div class="marca">' +
         '<span class="sig" style="background:' + esc(p.cores.brand) + '">' +
