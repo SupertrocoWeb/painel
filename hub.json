@@ -60,26 +60,26 @@
         "ate": "04/10",
         "parceiros_ativos": 2,
         "kpis": {
-          "vendas": 32035.87,
+          "vendas": 34582.36,
           "comissao": 3110.87,
           "receita": 5270.87,
           "receita_comissao": 3110.87,
           "receita_aquisicao": 2160.0,
           "remuneracao": "misto",
-          "pedidos": 832,
+          "pedidos": 901,
           "aquisicoes": 588,
-          "sessoes": 16963,
+          "sessoes": 20492,
           "cac": 8.96,
-          "tkm": 38.5,
-          "conversao": 3.93,
-          "pedidos_com_sessao": 666,
+          "tkm": 38.38,
+          "conversao": 3.59,
+          "pedidos_com_sessao": 735,
           "leads": 188,
           "parceiros_vendas": 1,
           "parceiros_leads": 1,
-          "abertura": 10.1,
-          "ctr": 0.27,
-          "campanhas": 37,
-          "entregues": 25576285.0,
+          "abertura": 9.9,
+          "ctr": 0.26,
+          "campanhas": 38,
+          "entregues": 26956286.0,
           "wpp_disparos": 0,
           "wpp_campanhas": 0,
           "wpp_investimento": 0.0,
@@ -88,11 +88,11 @@
         },
         "email": {
           "funil": {
-            "entregues": 25576285.0,
-            "aberturas": 2572112.0,
-            "cliques": 68888.0
+            "entregues": 26956286.0,
+            "aberturas": 2663469.0,
+            "cliques": 70958.0
           },
-          "envios": 37
+          "envios": 38
         },
         "whatsapp": null,
         "parceiros": [
@@ -105,20 +105,20 @@
             "cor_lite": "#5DD9D7",
             "tem_dados": true,
             "periodo": "01/08/2026 a 04/10/2026",
-            "vendas": 32035.87,
+            "vendas": 34582.36,
             "comissao": 3110.87,
-            "pedidos": 832,
+            "pedidos": 901,
             "receita": 5270.87,
             "receita_aquisicao": 2160.0,
             "remuneracao": "misto",
             "cac": 8.96,
             "aquisicoes": 588,
-            "tkm": 38.5,
+            "tkm": 38.38,
             "email": {
-              "campanhas": 35,
-              "entregues": 25381673.0,
-              "abertura": 10.1,
-              "ctr": 0.27
+              "campanhas": 36,
+              "entregues": 26761674.0,
+              "abertura": 9.9,
+              "ctr": 0.26
             },
             "whatsapp": null
           },
@@ -155,22 +155,22 @@
             "id": "sorte_online",
             "nome": "Sorte Online",
             "cor": "#15B8B6",
-            "vendas": 32035.87,
+            "vendas": 34582.36,
             "comissao": 3110.87,
             "receita": 5270.87,
             "fatia": 100.0
           }
         ],
         "ia": {
-          "destaque": "O resultado foi impulsionado pelos <b>R$ 32.035,87</b> em vendas da Sorte Online, que gerou <b>832</b> pedidos com um CAC de <b>R$ 8,96</b>. No segmento de leads, a Crefaz produziu <b>188</b> leads, com pico de <b>49</b> leads em 16/09, mantendo média de <b>7,52</b> leads por dia.",
-          "comparativo": "A taxa de abertura do e‑mail da Sorte Online foi de <b>10,1%</b> com CTR de <b>0,27%</b>, ligeiramente superior à da Crefaz, que registrou <b>7,9%</b> de abertura e <b>0,26%</b> de CTR. Enquanto a Sorte Online entregou mais de 25 milhões de e‑mails, a Crefaz enviou menos de 200 mil, refletindo a diferença de escala entre os modelos de vendas e leads. Ambos os parceiros ainda não utilizam o canal WhatsApp, o que representa uma oportunidade não explorada.",
+          "destaque": "O resultado foi puxado pelos <b>901 pedidos</b> da Sorte Online, que converteu <b>3.59%</b> das sessões em vendas, gerando <b>R$34.582,36</b> em receita, enquanto a Crefaz entregou <b>188 leads</b> com pico de <b>49</b> em um único dia.",
+          "comparativo": "A Sorte Online enviou 36 campanhas de e‑mail com taxa de abertura de <b>9.9%</b> e CTR de <b>0.26%</b>, já a Crefaz fez apenas 2 campanhas, abertura de <b>7.9%</b> e o mesmo CTR. Ambos não utilizaram WhatsApp, perdendo um canal de conversão. Em termos de resultado, a parceria de vendas trouxe receita significativa, enquanto a de leads gerou volume de contatos, porém menos rentável.",
           "alertas": [
-            "CAC da Sorte Online (<b>R$ 8,96</b>) está acima da média esperada para o segmento de loterias",
-            "Taxa de abertura e CTR de ambos os parceiros estão abaixo de 12% e 0,3% respectivamente, indicando baixa eficiência criativa",
-            "Ausência total de disparos e campanhas de WhatsApp limita a diversificação de canais",
-            "Período de análise da Crefaz é curto (25 dias) e o volume de leads (<b>188</b>) pode não ser suficiente para sustentar metas de crescimento"
+            "CTR baixo (<b>0.26%</b>) em ambos os parceiros",
+            "CAC da Sorte Online em <b>R$8.96</b> pode comprometer margem",
+            "Ausência total de disparos e investimentos em WhatsApp",
+            "Concentração de leads da Crefaz em poucos dias (pico de <b>49</b>) indica volatilidade"
           ],
-          "prioridade": "Concentrar esforços na Sorte Online no próximo ciclo, pois ela já demonstra alta geração de receita. Recomenda‑se otimizar a segmentação e criativos para reduzir o CAC, testar variações de assunto e conteúdo para melhorar a taxa de abertura e CTR, e iniciar campanhas piloto de WhatsApp para ampliar a captação e retenção de clientes."
+          "prioridade": "Concentrar esforços na Sorte Online no próximo ciclo, pois ela já demonstra maior geração de receita. É recomendável otimizar o CAC reduzindo custos de aquisição, aumentar a frequência e segmentação das campanhas de e‑mail para melhorar a taxa de abertura, e iniciar ações de WhatsApp para complementar o funil de vendas e ampliar a taxa de conversão."
         }
       },
       {
@@ -181,26 +181,26 @@
         "ate": "04/10",
         "parceiros_ativos": 1,
         "kpis": {
-          "vendas": 927.29,
+          "vendas": 3473.78,
           "comissao": 0,
           "receita": 2160.0,
           "receita_comissao": 0,
           "receita_aquisicao": 2160.0,
           "remuneracao": "aquisicao",
-          "pedidos": 43,
+          "pedidos": 112,
           "aquisicoes": 72,
-          "sessoes": 1009,
+          "sessoes": 4538,
           "cac": 30.0,
-          "tkm": 21.56,
-          "conversao": 4.26,
-          "pedidos_com_sessao": 43,
+          "tkm": 31.02,
+          "conversao": 2.47,
+          "pedidos_com_sessao": 112,
           "leads": 0,
           "parceiros_vendas": 1,
           "parceiros_leads": 0,
-          "abertura": 2.6,
-          "ctr": 0.1,
-          "campanhas": 1,
-          "entregues": 696332.0,
+          "abertura": 5.3,
+          "ctr": 0.13,
+          "campanhas": 2,
+          "entregues": 2076333.0,
           "wpp_disparos": 0,
           "wpp_campanhas": 0,
           "wpp_investimento": 0.0,
@@ -209,11 +209,11 @@
         },
         "email": {
           "funil": {
-            "entregues": 696332.0,
-            "aberturas": 17894.0,
-            "cliques": 679.0
+            "entregues": 2076333.0,
+            "aberturas": 109251.0,
+            "cliques": 2749.0
           },
-          "envios": 1
+          "envios": 2
         },
         "whatsapp": null,
         "parceiros": [
@@ -226,20 +226,20 @@
             "cor_lite": "#5DD9D7",
             "tem_dados": true,
             "periodo": "01/10/2026 a 04/10/2026",
-            "vendas": 927.29,
+            "vendas": 3473.78,
             "comissao": 0.0,
-            "pedidos": 43,
+            "pedidos": 112,
             "receita": 2160.0,
             "receita_aquisicao": 2160.0,
             "remuneracao": "aquisicao",
             "cac": 30.0,
             "aquisicoes": 72,
-            "tkm": 21.56,
+            "tkm": 31.02,
             "email": {
-              "campanhas": 1,
-              "entregues": 696332.0,
-              "abertura": 2.6,
-              "ctr": 0.1
+              "campanhas": 2,
+              "entregues": 2076333.0,
+              "abertura": 5.3,
+              "ctr": 0.13
             },
             "whatsapp": null
           }
@@ -249,22 +249,22 @@
             "id": "sorte_online",
             "nome": "Sorte Online",
             "cor": "#15B8B6",
-            "vendas": 927.29,
+            "vendas": 3473.78,
             "comissao": 0.0,
             "receita": 2160.0,
             "fatia": 100.0
           }
         ],
         "ia": {
-          "destaque": "O resultado foi puxado pelo volume massivo de envios de e‑mail (<b>696,332</b> entregas), porém a taxa de abertura (<b>2.6%</b>) e o CTR (<b>0.1%</b>) ficaram muito baixos, limitando a receita a <b>R$2,160</b>.",
-          "comparativo": "Com apenas um parceiro ativo, a eficiência do e‑mail mostrou-se fraca: apesar de muitas entregas, o engajamento foi insuficiente para gerar mais vendas. Não houve disparos nem conversões pelo WhatsApp, o que elimina qualquer contribuição desse canal. O modelo de aquisição gerou <b>R$2,160</b> em receita, mas o CAC de <b>R$30</b> por aquisição deixa a margem praticamente nula.",
+          "destaque": "O resultado foi puxado pelas <b>3473,78</b> em vendas geradas via e‑mail, porém o <b>CTR de 0,13%</b> indica baixa efetividade.",
+          "comparativo": "Com apenas o parceiro Sorte Online ativo, o e‑mail foi responsável por 2 campanhas que entregaram 2.076.333 mensagens, gerando 112 pedidos e 72 aquisições. O canal WhatsApp não teve disparos nem conversões. A taxa de abertura de <b>5,3%</b> foi razoável, mas o CTR ficou muito abaixo da média.",
           "alertas": [
-            "Taxa de abertura de <b>2.6%</b> muito abaixo da média do setor.",
-            "CTR de <b>0.1%</b> indica baixa relevância da mensagem.",
-            "Ausência total de atividade no WhatsApp, perdendo potencial de conversão.",
-            "CAC igual à receita por aquisição (R$30), sem margem de lucro."
+            "CTR de 0,13% muito baixo",
+            "Nenhum disparo ou conversão via WhatsApp",
+            "CAC de R$30,00 por aquisição próximo ao valor da receita por aquisição (R$31,02)",
+            "Conversão geral de 2,47% pode ser otimizada"
           ],
-          "prioridade": "Concentrar esforços no próximo ciclo em melhorar o engajamento dos e‑mails (segmentação, assunto e conteúdo) e iniciar testes de campanhas no WhatsApp para diversificar os canais. Avaliar a possibilidade de mudar para modelo de comissão, que pode melhorar a rentabilidade se a taxa de conversão subir."
+          "prioridade": "Concentrar esforços no próximo ciclo no parceiro Sorte Online, focando em melhorar a taxa de cliques do e‑mail (segmentação, criativos e CTA) e iniciar testes de campanha no WhatsApp para diversificar a fonte de conversões. Também é recomendável renegociar ou otimizar o custo de aquisição para reduzir o CAC."
         }
       },
       {
@@ -377,15 +377,15 @@
           }
         ],
         "ia": {
-          "destaque": "O resultado do período foi dominado pelas <b>R$18.283,58</b> em vendas da Sorte Online, impulsionadas por 13 envios de e‑mail que alcançaram <b>12,2%</b> de abertura; já o Crefaz entregou <b>188 leads</b> com média diária de <b>7,52</b> leads.",
-          "comparativo": "A Sorte Online utilizou 13 campanhas de e‑mail, entregando 8,84 mi mensagens, enquanto o Crefaz fez apenas 2 campanhas com 194 mil entregas. Ambas mantiveram CTR idêntico de 0,26 %, porém a taxa de abertura da Sorte Online foi 4,3 pontos percentual superior. Em termos de resultado, a parceria de vendas gerou <b>R$1.828,37</b> de receita, contra 188 leads da parceria de crédito. Nenhum dos parceiros utilizou o canal WhatsApp neste mês.",
+          "destaque": "O resultado foi puxado principalmente pelas <b>R$18.283,58</b> de vendas da Sorte Online, que gerou <b>R$1.828,37</b> de comissão, impulsionadas por 13 campanhas de e‑mail com alta entrega. No segmento de crédito, a Crefaz entregou <b>188</b> leads, com pico de <b>49</b> leads em 16/09.",
+          "comparativo": "A eficiência de e‑mail foi semelhante em CTR (0,26%) para ambos os parceiros, porém a taxa de abertura da Sorte Online foi <b>12,2%</b>, bem acima dos <b>7,9%</b> da Crefaz. Enquanto a Sorte Online converteu 444 pedidos gerando receita, a Crefaz focou em geração de leads, totalizando 188 no período. Nenhum dos parceiros utilizou WhatsApp, o que indica oportunidade de diversificação de canais.",
           "alertas": [
-            "CTR de 0,26 % está muito abaixo da média esperada para campanhas de e‑mail.",
-            "Crefaz enviou apenas 2 campanhas, limitando o potencial de geração de leads.",
-            "Custo de aquisição (CAC) da Sorte Online de <b>R$7,40</b> pode comprometer margem se não houver aumento de volume.",
-            "Ausência total de disparos por WhatsApp reduz oportunidades de conversão multicanal."
+            "Taxa de abertura da Crefaz está abaixo da média esperada (<b>7,9%</b>)",
+            "Crefaz operou apenas até 25/09, reduzindo a janela de captura de leads",
+            "Ausência total de disparos por WhatsApp para ambos os parceiros",
+            "Pico de leads da Crefaz concentrado em um único dia (49 em 16/09) indica volatilidade"
           ],
-          "prioridade": "Concentrar esforços na parceria com a Sorte Online, pois já demonstra capacidade de gerar receita significativa. Recomenda‑se otimizar a segmentação e o conteúdo para elevar o CTR, testar mensagens de WhatsApp para complementar as campanhas de e‑mail e buscar reduzir o CAC através de negociação de custos ou aumento de volume de vendas."
+          "prioridade": "No próximo ciclo, o foco deve ser a Crefaz, pois há grande potencial de ampliar a geração de leads e melhorar o engajamento de e‑mail. Recomenda‑se aumentar o número de campanhas, otimizar o conteúdo para elevar a taxa de abertura e iniciar disparos segmentados por WhatsApp para diversificar a fonte de leads. Simultaneamente, manter a performance da Sorte Online, monitorando o CAC (<b>R$7,40</b>) e explorando oportunidades de upsell via WhatsApp."
         }
       },
       {
@@ -471,39 +471,39 @@
           }
         ],
         "ia": {
-          "destaque": "O resultado de <b>R$12.825,00</b> foi impulsionado pelo volume massivo de entregas de e‑mail (<b>15.842.400</b> mensagens) que gerou <b>345 pedidos</b> e uma comissão de <b>R$1.282,50</b>. O modelo de remuneração por comissão e o CAC de <b>R$4,77</b> mantiveram a rentabilidade.",
-          "comparativo": "Com apenas o parceiro Sorte Online ativo, a eficiência do e‑mail mostrou-se alta em termos de volume, mas o <b>CTR de 0,28%</b> indica baixa taxa de cliques. Não há atividade no canal WhatsApp, portanto não há contribuição desse meio. O modelo de vendas por comissão gerou <b>R$1.282,50</b> de receita, sem custos de aquisição, mas há espaço para melhorar a conversão do tráfego entregue.",
+          "destaque": "O resultado de <b>R$12.825,00</b> em vendas foi impulsionado pelo volume massivo de entregas de e‑mail (15.842.400), que gerou <b>345 pedidos</b> e <b>R$1.282,50</b> de receita de comissão. A taxa de abertura de <b>9,2%</b> e o CTR de <b>0,28%</b> foram os principais motores.",
+          "comparativo": "Com apenas um parceiro ativo, a eficiência do e‑mail foi a única fonte de receita, entregando 21 campanhas que converteram em 345 pedidos. O custo de aquisição (CAC) ficou em <b>R$4,77</b>, indicando boa rentabilidade, porém a taxa de abertura e o CTR permanecem modestos. O canal WhatsApp não foi utilizado, representando uma oportunidade não explorada para complementar o desempenho.",
           "alertas": [
-            "CTR muito baixo (0,28%) pode limitar o crescimento de vendas",
-            "Ausência total de disparos e conversões no WhatsApp impede diversificação de canais",
-            "Alto número de entregas pode indicar problemas de qualidade de lista ou segmentação",
-            "CAC de R$4,77, embora aceitável, pode subir se a taxa de conversão não melhorar"
+            "Taxa de abertura de <b>9,2%</b> está abaixo da média do setor para loterias",
+            "CTR de <b>0,28%</b> indica baixo engajamento dos destinatários",
+            "Ausência total de disparos e conversões via WhatsApp",
+            "Alto volume de entregas (15,8 mi) sem segmentação avançada pode gerar desgaste de lista"
           ],
-          "prioridade": "Concentrar esforços no próximo ciclo em otimizar a campanha de e‑mail para elevar o CTR, revisando criativos e segmentação, e iniciar um piloto de WhatsApp para testar a geração de leads e conversões adicionais. O foco deve ser melhorar a qualidade das entregas e integrar o canal WhatsApp para diversificar a fonte de receita."
+          "prioridade": "No próximo ciclo, o foco deve ser a otimização das campanhas de e‑mail para melhorar abertura e CTR, investindo em segmentação e testes de assunto. Paralelamente, é crucial implantar o canal WhatsApp, iniciando com pequenas campanhas piloto para captar leads e aumentar a taxa de conversão, diversificando a fonte de receita."
         }
       }
     ],
     "kpis": {
-      "vendas": 32035.87,
+      "vendas": 34582.36,
       "comissao": 3110.87,
       "receita": 5270.87,
       "receita_comissao": 3110.87,
       "receita_aquisicao": 2160.0,
       "remuneracao": "misto",
-      "pedidos": 832,
+      "pedidos": 901,
       "aquisicoes": 588,
-      "sessoes": 16963,
+      "sessoes": 20492,
       "cac": 8.96,
-      "tkm": 38.5,
-      "conversao": 3.93,
-      "pedidos_com_sessao": 666,
+      "tkm": 38.38,
+      "conversao": 3.59,
+      "pedidos_com_sessao": 735,
       "leads": 188,
       "parceiros_vendas": 1,
       "parceiros_leads": 1,
-      "abertura": 10.1,
-      "ctr": 0.27,
-      "campanhas": 37,
-      "entregues": 25576285.0,
+      "abertura": 9.9,
+      "ctr": 0.26,
+      "campanhas": 38,
+      "entregues": 26956286.0,
       "wpp_disparos": 0,
       "wpp_campanhas": 0,
       "wpp_investimento": 0.0,
@@ -515,7 +515,7 @@
         "id": "sorte_online",
         "nome": "Sorte Online",
         "cor": "#15B8B6",
-        "vendas": 32035.87,
+        "vendas": 34582.36,
         "comissao": 3110.87,
         "receita": 5270.87,
         "fatia": 100.0
@@ -524,7 +524,7 @@
     "ticker": [
       {
         "rot": "Vendas geradas",
-        "val": "R$ 32.036",
+        "val": "R$ 34.582",
         "tipo": "neutro"
       },
       {
@@ -549,7 +549,7 @@
       },
       {
         "rot": "E-mails entregues",
-        "val": "25,6 mi",
+        "val": "27,0 mi",
         "tipo": "neutro"
       },
       {
@@ -559,14 +559,14 @@
       },
       {
         "rot": "Sorte Online",
-        "val": "R$ 32.036",
-        "var": 28.7,
+        "val": "R$ 34.582",
+        "var": 179.4,
         "cor": "#15B8B6",
         "tipo": "bom"
       },
       {
         "rot": "Sorte Online · ticket",
-        "val": "R$ 38,50",
+        "val": "R$ 38,38",
         "cor": "#15B8B6",
         "tipo": "neutro"
       },
@@ -591,15 +591,15 @@
       }
     ],
     "ia": {
-      "destaque": "O resultado foi impulsionado pelos <b>R$ 32.035,87</b> em vendas da Sorte Online, que gerou <b>832</b> pedidos com um CAC de <b>R$ 8,96</b>. No segmento de leads, a Crefaz produziu <b>188</b> leads, com pico de <b>49</b> leads em 16/09, mantendo média de <b>7,52</b> leads por dia.",
-      "comparativo": "A taxa de abertura do e‑mail da Sorte Online foi de <b>10,1%</b> com CTR de <b>0,27%</b>, ligeiramente superior à da Crefaz, que registrou <b>7,9%</b> de abertura e <b>0,26%</b> de CTR. Enquanto a Sorte Online entregou mais de 25 milhões de e‑mails, a Crefaz enviou menos de 200 mil, refletindo a diferença de escala entre os modelos de vendas e leads. Ambos os parceiros ainda não utilizam o canal WhatsApp, o que representa uma oportunidade não explorada.",
+      "destaque": "O resultado foi puxado pelos <b>901 pedidos</b> da Sorte Online, que converteu <b>3.59%</b> das sessões em vendas, gerando <b>R$34.582,36</b> em receita, enquanto a Crefaz entregou <b>188 leads</b> com pico de <b>49</b> em um único dia.",
+      "comparativo": "A Sorte Online enviou 36 campanhas de e‑mail com taxa de abertura de <b>9.9%</b> e CTR de <b>0.26%</b>, já a Crefaz fez apenas 2 campanhas, abertura de <b>7.9%</b> e o mesmo CTR. Ambos não utilizaram WhatsApp, perdendo um canal de conversão. Em termos de resultado, a parceria de vendas trouxe receita significativa, enquanto a de leads gerou volume de contatos, porém menos rentável.",
       "alertas": [
-        "CAC da Sorte Online (<b>R$ 8,96</b>) está acima da média esperada para o segmento de loterias",
-        "Taxa de abertura e CTR de ambos os parceiros estão abaixo de 12% e 0,3% respectivamente, indicando baixa eficiência criativa",
-        "Ausência total de disparos e campanhas de WhatsApp limita a diversificação de canais",
-        "Período de análise da Crefaz é curto (25 dias) e o volume de leads (<b>188</b>) pode não ser suficiente para sustentar metas de crescimento"
+        "CTR baixo (<b>0.26%</b>) em ambos os parceiros",
+        "CAC da Sorte Online em <b>R$8.96</b> pode comprometer margem",
+        "Ausência total de disparos e investimentos em WhatsApp",
+        "Concentração de leads da Crefaz em poucos dias (pico de <b>49</b>) indica volatilidade"
       ],
-      "prioridade": "Concentrar esforços na Sorte Online no próximo ciclo, pois ela já demonstra alta geração de receita. Recomenda‑se otimizar a segmentação e criativos para reduzir o CAC, testar variações de assunto e conteúdo para melhorar a taxa de abertura e CTR, e iniciar campanhas piloto de WhatsApp para ampliar a captação e retenção de clientes."
+      "prioridade": "Concentrar esforços na Sorte Online no próximo ciclo, pois ela já demonstra maior geração de receita. É recomendável otimizar o CAC reduzindo custos de aquisição, aumentar a frequência e segmentação das campanhas de e‑mail para melhorar a taxa de abertura, e iniciar ações de WhatsApp para complementar o funil de vendas e ampliar a taxa de conversão."
     },
     "cronograma": {
       "mes": "2026-11",
@@ -639,7 +639,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.485,
+            "nota": 0.516,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           },
@@ -649,9 +649,9 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -660,7 +660,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
             "nota": 0.934,
             "parceiro": "crefaz"
@@ -682,8 +682,8 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias)",
+            "volume": 771975,
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias)",
             "nota": 1.0,
             "parceiro": "sorte_online"
           },
@@ -693,7 +693,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
             "nota": 1.0,
             "parceiro": "crefaz"
@@ -706,7 +706,7 @@
             "janela": "17h | 19h",
             "volume": null,
             "motivo": "Reimpacto do e-mail de 06/11 para quem não abriu",
-            "nota": 0.959,
+            "nota": 1.006,
             "parceiro": "sorte_online"
           },
           {
@@ -728,7 +728,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.607,
+            "nota": 0.645,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           },
@@ -738,9 +738,9 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -749,7 +749,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
             "nota": 0.934,
             "parceiro": "crefaz"
@@ -760,8 +760,8 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias)",
+            "volume": 771975,
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias)",
             "nota": 1.0,
             "parceiro": "sorte_online"
           },
@@ -771,7 +771,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
             "nota": 1.0,
             "parceiro": "crefaz"
@@ -784,7 +784,7 @@
             "janela": "17h | 19h",
             "volume": null,
             "motivo": "Reimpacto do e-mail de 13/11 para quem não abriu",
-            "nota": 0.959,
+            "nota": 1.006,
             "parceiro": "sorte_online"
           },
           {
@@ -795,7 +795,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.607,
+            "nota": 0.645,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           },
@@ -805,9 +805,9 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -816,7 +816,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
             "nota": 0.934,
             "parceiro": "crefaz"
@@ -838,8 +838,8 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) · Feriado nacional: Dia da Consciência Negra",
+            "volume": 771975,
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) · Feriado nacional: Dia da Consciência Negra",
             "nota": 0.8,
             "parceiro": "sorte_online"
           },
@@ -849,7 +849,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
             "nota": 1.0,
             "parceiro": "crefaz"
@@ -862,7 +862,7 @@
             "janela": "17h | 19h",
             "volume": null,
             "motivo": "Reimpacto do e-mail de 20/11 para quem não abriu",
-            "nota": 0.959,
+            "nota": 1.006,
             "parceiro": "sorte_online"
           },
           {
@@ -884,7 +884,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.607,
+            "nota": 0.645,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           },
@@ -894,9 +894,9 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -905,7 +905,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
             "nota": 0.934,
             "parceiro": "crefaz"
@@ -916,8 +916,8 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) · Black Friday",
+            "volume": 771975,
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) · Black Friday",
             "nota": 1.1,
             "parceiro": "sorte_online"
           },
@@ -927,7 +927,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
             "nota": 1.0,
             "parceiro": "crefaz"
@@ -940,7 +940,7 @@
             "janela": "17h | 19h",
             "volume": null,
             "motivo": "Reimpacto do e-mail de 27/11 para quem não abriu",
-            "nota": 0.959,
+            "nota": 1.006,
             "parceiro": "sorte_online"
           },
           {
@@ -949,7 +949,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Domingo: média de 6,3 leads por dia (3 dias no histórico)",
             "nota": 0.515,
             "parceiro": "crefaz"
@@ -962,7 +962,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.667,
+            "nota": 0.71,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           }
@@ -976,7 +976,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.485,
+            "nota": 0.516,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           },
@@ -986,9 +986,9 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -997,7 +997,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
             "nota": 0.934,
             "parceiro": "crefaz"
@@ -1008,7 +1008,7 @@
             "tipo": "repique",
             "base": "Não abriram o e-mail anterior",
             "janela": "18h | 20h",
-            "volume": 645615,
+            "volume": 691412,
             "motivo": "Repique do e-mail de 04/11 para quem não abriu",
             "nota": 0.747,
             "parceiro": "crefaz"
@@ -1019,8 +1019,8 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias)",
+            "volume": 771975,
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias)",
             "nota": 1.0,
             "parceiro": "sorte_online"
           },
@@ -1030,7 +1030,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
             "nota": 1.0,
             "parceiro": "crefaz"
@@ -1041,7 +1041,7 @@
             "tipo": "repique",
             "base": "Não abriram o e-mail anterior",
             "janela": "18h | 20h",
-            "volume": 645615,
+            "volume": 691412,
             "motivo": "Repique do e-mail de 06/11 para quem não abriu",
             "nota": 0.8,
             "parceiro": "sorte_online"
@@ -1054,7 +1054,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.607,
+            "nota": 0.645,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           },
@@ -1064,9 +1064,9 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -1075,7 +1075,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
             "nota": 0.934,
             "parceiro": "crefaz"
@@ -1086,7 +1086,7 @@
             "tipo": "repique",
             "base": "Não abriram o e-mail anterior",
             "janela": "18h | 20h",
-            "volume": 645615,
+            "volume": 691412,
             "motivo": "Repique do e-mail de 11/11 para quem não abriu",
             "nota": 0.747,
             "parceiro": "crefaz"
@@ -1097,8 +1097,8 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias)",
+            "volume": 771975,
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias)",
             "nota": 1.0,
             "parceiro": "sorte_online"
           },
@@ -1108,7 +1108,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
             "nota": 1.0,
             "parceiro": "crefaz"
@@ -1119,7 +1119,7 @@
             "tipo": "repique",
             "base": "Não abriram o e-mail anterior",
             "janela": "18h | 20h",
-            "volume": 645615,
+            "volume": 691412,
             "motivo": "Repique do e-mail de 13/11 para quem não abriu",
             "nota": 0.8,
             "parceiro": "sorte_online"
@@ -1132,7 +1132,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.607,
+            "nota": 0.645,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           },
@@ -1142,9 +1142,9 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -1153,7 +1153,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
             "nota": 0.934,
             "parceiro": "crefaz"
@@ -1164,7 +1164,7 @@
             "tipo": "repique",
             "base": "Não abriram o e-mail anterior",
             "janela": "18h | 20h",
-            "volume": 645615,
+            "volume": 691412,
             "motivo": "Repique do e-mail de 18/11 para quem não abriu",
             "nota": 0.747,
             "parceiro": "crefaz"
@@ -1175,8 +1175,8 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) · Feriado nacional: Dia da Consciência Negra",
+            "volume": 771975,
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) · Feriado nacional: Dia da Consciência Negra",
             "nota": 0.8,
             "parceiro": "sorte_online"
           },
@@ -1186,7 +1186,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
             "nota": 1.0,
             "parceiro": "crefaz"
@@ -1197,7 +1197,7 @@
             "tipo": "repique",
             "base": "Não abriram o e-mail anterior",
             "janela": "18h | 20h",
-            "volume": 645615,
+            "volume": 691412,
             "motivo": "Repique do e-mail de 20/11 para quem não abriu",
             "nota": 0.64,
             "parceiro": "sorte_online"
@@ -1210,7 +1210,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.607,
+            "nota": 0.645,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           },
@@ -1220,9 +1220,9 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -1231,7 +1231,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
             "nota": 0.934,
             "parceiro": "crefaz"
@@ -1242,9 +1242,9 @@
             "tipo": "repique",
             "base": "Não abriram o e-mail anterior",
             "janela": "18h | 20h",
-            "volume": 645615,
+            "volume": 691412,
             "motivo": "Repique do e-mail de 24/11 para quem não abriu",
-            "nota": 0.516,
+            "nota": 0.539,
             "parceiro": "sorte_online"
           },
           {
@@ -1253,8 +1253,8 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) · Black Friday",
+            "volume": 771975,
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) · Black Friday",
             "nota": 1.1,
             "parceiro": "sorte_online"
           },
@@ -1264,7 +1264,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
             "nota": 1.0,
             "parceiro": "crefaz"
@@ -1275,7 +1275,7 @@
             "tipo": "principal",
             "base": "Engajados",
             "janela": "18h | 20h",
-            "volume": 722025,
+            "volume": 771975,
             "motivo": "Domingo: média de 6,3 leads por dia (3 dias no histórico)",
             "nota": 0.515,
             "parceiro": "crefaz"
@@ -1288,7 +1288,7 @@
             "janela": "16h | 18h",
             "volume": 776348,
             "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-            "nota": 0.667,
+            "nota": 0.71,
             "rotulo": "Resultado do Sorteio",
             "parceiro": "sorte_online"
           }
@@ -1302,7 +1302,7 @@
             "janela": "17h | 19h",
             "volume": null,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -1323,7 +1323,7 @@
             "base": "Contatos com opt-in de WhatsApp",
             "janela": "10h | 12h",
             "volume": null,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) — perfil do público, sem histórico de WhatsApp",
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
             "nota": 1.0,
             "parceiro": "sorte_online"
           },
@@ -1346,7 +1346,7 @@
             "janela": "17h | 19h",
             "volume": null,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -1367,7 +1367,7 @@
             "base": "Contatos com opt-in de WhatsApp",
             "janela": "10h | 12h",
             "volume": null,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) — perfil do público, sem histórico de WhatsApp",
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
             "nota": 1.0,
             "parceiro": "sorte_online"
           },
@@ -1390,7 +1390,7 @@
             "janela": "17h | 19h",
             "volume": null,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -1411,7 +1411,7 @@
             "base": "Contatos com opt-in de WhatsApp",
             "janela": "10h | 12h",
             "volume": null,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) — perfil do público, sem histórico de WhatsApp · Feriado nacional: Dia da Consciência Negra",
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp · Feriado nacional: Dia da Consciência Negra",
             "nota": 0.8,
             "parceiro": "sorte_online"
           },
@@ -1434,7 +1434,7 @@
             "janela": "17h | 19h",
             "volume": null,
             "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
-            "nota": 0.645,
+            "nota": 0.674,
             "parceiro": "sorte_online"
           },
           {
@@ -1455,7 +1455,7 @@
             "base": "Contatos com opt-in de WhatsApp",
             "janela": "10h | 12h",
             "volume": null,
-            "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) — perfil do público, sem histórico de WhatsApp · Black Friday",
+            "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp · Black Friday",
             "nota": 1.1,
             "parceiro": "sorte_online"
           },
@@ -1489,7 +1489,7 @@
             "janela": "10h | 12h",
             "volume": null,
             "motivo": "Segunda: 12,6% de abertura média (8 envios) · R$ 409 em vendas por dia de disparo (7 dias) — perfil do público, sem histórico de WhatsApp · Cyber Monday; 1ª parcela do 13º salário (até 30/11)",
-            "nota": 0.667,
+            "nota": 0.71,
             "parceiro": "sorte_online"
           }
         ]
@@ -1498,23 +1498,23 @@
         "ambos": {
           "sorte_online": {
             "email_envios": 13,
-            "email_volume": 9657940,
-            "aberturas": 1122799,
-            "cliques": 25816,
+            "email_volume": 10057540,
+            "aberturas": 1121801,
+            "cliques": 26447,
             "wpp_envios": 4,
             "wpp_volume": null,
             "resultado": {
               "unidade": "vendas",
-              "valor": 12892.65,
-              "por_disparo": 991.74,
+              "valor": 13464.26,
+              "por_disparo": 1035.71,
               "dias": 13
             }
           },
           "crefaz": {
             "email_envios": 9,
-            "email_volume": 6498225,
-            "aberturas": 687687,
-            "cliques": 17370,
+            "email_volume": 6947775,
+            "aberturas": 725064,
+            "cliques": 18270,
             "wpp_envios": 4,
             "wpp_volume": null,
             "resultado": null
@@ -1523,23 +1523,23 @@
         "email": {
           "sorte_online": {
             "email_envios": 17,
-            "email_volume": 12240400,
-            "aberturas": 1122799,
-            "cliques": 25816,
+            "email_volume": 12823188,
+            "aberturas": 1121801,
+            "cliques": 26447,
             "wpp_envios": 0,
             "wpp_volume": null,
             "resultado": {
               "unidade": "vendas",
-              "valor": 12892.65,
-              "por_disparo": 991.74,
+              "valor": 13464.26,
+              "por_disparo": 1035.71,
               "dias": 13
             }
           },
           "crefaz": {
             "email_envios": 12,
-            "email_volume": 8435070,
-            "aberturas": 687687,
-            "cliques": 17370,
+            "email_volume": 9022011,
+            "aberturas": 725064,
+            "cliques": 18270,
             "wpp_envios": 0,
             "wpp_volume": null,
             "resultado": null
@@ -1566,11 +1566,11 @@
           }
         }
       },
-      "estrategia": "Sorte Online recebeu todos os envios de e‑mail nas segundas (<b>4</b> recorrentes), terças (<b>4</b> principais) e sextas (<b>5</b> principais), aproveitando a maior taxa de abertura nas sextas (13,3 %) e o pico de cliques entre 18h‑24h; Crefaz ficou com os envios de e‑mail nas quartas (<b>4</b>) e sábados (<b>4</b>) e um domingo, seguindo a concentração de 52 % dos leads nesses dias. No WhatsApp, Sorte Online assumiu os sábados (<b>4</b> envios) e Crefaz os quintas (<b>2</b>) e domingos (<b>2</b>), garantindo um parceiro por dia conforme a regra.",
+      "estrategia": "Sorte Online ficou com as segundas‑feira (recorrentes) e terças e sextas‑feira (principais) no e‑mail, mantendo a cadência de <b>3,0</b> envios por semana e aproveitando a melhor taxa de abertura (<b>13,6%</b>) nas segundas; Crefaz recebeu as quartas‑feira e sábados (principais) no e‑mail, pois historicamente <b>52%</b> dos leads surgem nesses dias. No WhatsApp, Sorte Online foi alocado aos sábados (<b>4</b> envios) alinhado ao pico de cliques (18h‑24h), enquanto Crefaz recebeu quintas e domingos (<b>4</b> envios) seguindo seu padrão de geração de leads.",
       "cuidados": [
-        "Monitorar taxa de abertura e CTR nos dias programados, especialmente nas sextas e nos horários de 18h‑24h.",
-        "Verificar entrega e engajamento nos feriados (Finados, Proclamação da República, Consciência Negra, Black Friday, Cyber Monday) já incluídos no cronograma.",
-        "Acompanhar a geração de leads de Crefaz nas quartas e sábados para confirmar a eficácia da escolha desses dias."
+        "Acompanhar a taxa de abertura nas segundas recorrentes para garantir que o <b>13,6%</b> continue acima da média geral.",
+        "Monitorar a performance dos disparos nos feriados (02/11, 15/11, 20/11) já que o motor os manteve intencionalmente.",
+        "Verificar a saturação no WhatsApp nos sábados e nos dias de quinta/domingo para evitar queda de engajamento."
       ],
       "regras": [
         "Um parceiro por dia na base engajada de e-mail.",
@@ -1676,7 +1676,7 @@
           "ini": "2026-08-01",
           "fim": "2026-10-04",
           "kpis": {
-            "vendas": 32035.87,
+            "vendas": 34582.36,
             "comissao": 3110.87,
             "receita": 5270.87,
             "receita_comissao": 3110.87,
@@ -1700,23 +1700,23 @@
                 "fim": "04/10/2026",
                 "receita": 2160.0,
                 "aquisicoes": 72,
-                "vendas": 927.29,
+                "vendas": 3473.78,
                 "por_aquisicao": 30.0
               }
             ],
-            "pedidos": 832,
+            "pedidos": 901,
             "aquisicoes": 588,
             "cac": 8.96,
-            "sessoes": 16963,
-            "tkm": 38.5,
-            "conversao": 3.93,
-            "pedidos_com_sessao": 666,
-            "dias_com_sessao": 35,
+            "sessoes": 20492,
+            "tkm": 38.38,
+            "conversao": 3.59,
+            "pedidos_com_sessao": 735,
+            "dias_com_sessao": 38,
             "dias_ativos": 65,
-            "dias_com_vendas": 62,
-            "abertura": 10.1,
-            "ctr": 0.27,
-            "campanhas": 35,
+            "dias_com_vendas": 65,
+            "abertura": 9.9,
+            "ctr": 0.26,
+            "campanhas": 36,
             "wpp_disparos": 0
           },
           "dias": [
@@ -2902,20 +2902,20 @@
               "iso": "2026-10-02",
               "d": "02/10",
               "dow": "Sexta",
-              "send": null,
-              "n_env": 0,
+              "send": "engajados · 7% ab.",
+              "n_env": 1,
               "wpp": null,
               "n_wpp": 0,
-              "vendas": 0.0,
+              "vendas": 2090.99,
               "comissao": 0.0,
               "receita": 1020.0,
               "remun": "aquisicao",
-              "sem_vendas": true,
-              "pedidos": 0,
+              "sem_vendas": false,
+              "pedidos": 50,
               "novos": 34,
-              "sessoes": 0,
-              "tkm": 0,
-              "conv": null
+              "sessoes": 2121,
+              "tkm": 41.82,
+              "conv": 2.36
             },
             {
               "iso": "2026-10-03",
@@ -2925,16 +2925,16 @@
               "n_env": 0,
               "wpp": null,
               "n_wpp": 0,
-              "vendas": 0.0,
+              "vendas": 415.0,
               "comissao": 0.0,
               "receita": 300.0,
               "remun": "aquisicao",
-              "sem_vendas": true,
-              "pedidos": 0,
+              "sem_vendas": false,
+              "pedidos": 17,
               "novos": 10,
-              "sessoes": 0,
-              "tkm": 0,
-              "conv": null
+              "sessoes": 978,
+              "tkm": 24.41,
+              "conv": 1.74
             },
             {
               "iso": "2026-10-04",
@@ -2944,25 +2944,25 @@
               "n_env": 0,
               "wpp": null,
               "n_wpp": 0,
-              "vendas": 0.0,
+              "vendas": 40.5,
               "comissao": 0.0,
               "receita": 30.0,
               "remun": "aquisicao",
-              "sem_vendas": true,
-              "pedidos": 0,
+              "sem_vendas": false,
+              "pedidos": 2,
               "novos": 1,
-              "sessoes": 0,
-              "tkm": 0,
-              "conv": null
+              "sessoes": 430,
+              "tkm": 20.25,
+              "conv": 0.47
             }
           ],
           "email": {
-            "envios": 35,
-            "periodo": "03/08/2026 a 01/10/2026",
+            "envios": 36,
+            "periodo": "03/08/2026 a 02/10/2026",
             "engajado": {
-              "ab": 14.48,
-              "ctr": 0.37,
-              "n": 26
+              "ab": 14.09,
+              "ctr": 0.36,
+              "n": 27
             },
             "deseng": {
               "ab": 1.2,
@@ -2970,13 +2970,13 @@
               "n": 8
             },
             "funil": {
-              "entregues": 25381673.0,
-              "aberturas": 2556704.0,
-              "cliques": 68380.0
+              "entregues": 26761674.0,
+              "aberturas": 2648061.0,
+              "cliques": 70450.0
             },
-            "abertura": 10.1,
-            "ctr": 0.27,
-            "descad": 37090.0,
+            "abertura": 9.9,
+            "ctr": 0.26,
+            "descad": 37413.0,
             "dias": [
               [
                 "Sábado",
@@ -2984,14 +2984,14 @@
                 6
               ],
               [
-                "Sexta",
-                10.87,
-                3
-              ],
-              [
                 "Segunda",
                 10.65,
                 11
+              ],
+              [
+                "Sexta",
+                9.81,
+                4
               ],
               [
                 "Quarta",
@@ -3032,8 +3032,8 @@
               ],
               [
                 "15h–18h",
-                0.24,
-                11
+                0.23,
+                12
               ]
             ],
             "top": [
@@ -3073,18 +3073,18 @@
           },
           "whatsapp": null,
           "ia": {
-            "motor": "A base engajada tem <b>14.48%</b> de abertura contra <b>1.2%</b> da desengajada, diferença de <b>13.28 pontos</b>; isso reflete diretamente na geração de receita, já que os contatos mais engajados convertem muito mais.",
-            "diagnostico": "O e‑mail apresenta taxa de abertura baixa (<b>10.1%</b>) e CTR ainda menor (<b>0.27%</b>), o que limita o fluxo de cliques para o site. Nos dias em que enviamos para a base engajada, observamos picos de vendas (ex.: 04/08, 05/09, 11/09).",
-            "conversao": "A taxa de conversão do site é <b>3.93%</b>, mas a passagem de cliques para pedidos está em torno de <b>1.2%</b> (68.380 cliques → 832 pedidos), indicando gargalo pós‑clique; cada pedido custa aproximadamente <b>R$8.96</b> de CAC.",
+            "motor": "A base engajada tem abertura de <b>14.09%</b> contra <b>1.2%</b> da desengajada, diferença de <b>12.89 pontos</b>, refletindo maior geração de receita nos disparos para engajados.",
+            "diagnostico": "Dias com disparos para a base engajada mostraram picos de vendas, como 04/08 (R$ 2,770) e 11/09 (R$ 4,164), enquanto disparos para desengajados geraram vendas baixas, ex.: 05/08 (R$ 941) com abertura de 1%.",
+            "conversao": "A taxa de conversão do site está em <b>3.59%</b>, porém a taxa de abertura geral é <b>9.9%</b> e o CTR apenas <b>0.26%</b>, indicando que o gargalo está no engajamento do e‑mail; cada pedido custa em média R$ <b>8.96</b> de CAC.",
             "sustenta": [
-              "<b>10.1%</b> taxa de abertura geral",
-              "<b>0.27%</b> taxa de cliques (CTR)",
-              "<b>3.93%</b> taxa de conversão do site",
-              "<b>R$8.96</b> CAC médio por pedido",
-              "<b>R$32,035.87</b> faturamento total"
+              "<b>14.09%</b> taxa de abertura da base engajada",
+              "<b>1.2%</b> taxa de abertura da base desengajada",
+              "<b>R$ 34,582.36</b> em vendas no período",
+              "<b>901</b> pedidos realizados",
+              "<b>R$ 8.96</b> CAC médio por aquisição"
             ],
-            "recomendacao": "Envie a próxima campanha na <b>sábado</b> às <b>19h</b> para a <b>base engajada</b>, com repique na <b>segunda às 10h</b>. Use assunto similar a \"*|PRIMEIRO_NOME|*, aproveite a surpresa da Loto\" que tem histórico de alta abertura.",
-            "whatsapp": "O canal WhatsApp está pronto, aguardando os primeiros disparos; cada disparo custa R$0.42."
+            "recomendacao": "Enviar disparos às <b>Sábados</b> entre <b>18h–24h</b> para a base engajada, com repique 24h depois para quem não abriu; usar assunto padrão \"*|PRIMEIRO_NOME|*, sua chance de ganhar R$ X hoje!\" para manter a personalização e a taxa de abertura alta.",
+            "whatsapp": "Canal WhatsApp está pronto, aguardando os primeiros disparos."
           }
         },
         {
@@ -3095,7 +3095,7 @@
           "ini": "2026-10-01",
           "fim": "2026-10-04",
           "kpis": {
-            "vendas": 927.29,
+            "vendas": 3473.78,
             "comissao": 0.0,
             "receita": 2160.0,
             "receita_comissao": 0.0,
@@ -3109,23 +3109,23 @@
                 "fim": "04/10/2026",
                 "receita": 2160.0,
                 "aquisicoes": 72,
-                "vendas": 927.29,
+                "vendas": 3473.78,
                 "por_aquisicao": 30.0
               }
             ],
-            "pedidos": 43,
+            "pedidos": 112,
             "aquisicoes": 72,
             "cac": 30.0,
-            "sessoes": 1009,
-            "tkm": 21.56,
-            "conversao": 4.26,
-            "pedidos_com_sessao": 43,
-            "dias_com_sessao": 1,
+            "sessoes": 4538,
+            "tkm": 31.02,
+            "conversao": 2.47,
+            "pedidos_com_sessao": 112,
+            "dias_com_sessao": 4,
             "dias_ativos": 4,
-            "dias_com_vendas": 1,
-            "abertura": 2.6,
-            "ctr": 0.1,
-            "campanhas": 1,
+            "dias_com_vendas": 4,
+            "abertura": 5.3,
+            "ctr": 0.13,
+            "campanhas": 2,
             "wpp_disparos": 0
           },
           "dias": [
@@ -3152,20 +3152,20 @@
               "iso": "2026-10-02",
               "d": "02/10",
               "dow": "Sexta",
-              "send": null,
-              "n_env": 0,
+              "send": "engajados · 7% ab.",
+              "n_env": 1,
               "wpp": null,
               "n_wpp": 0,
-              "vendas": 0.0,
+              "vendas": 2090.99,
               "comissao": 0.0,
               "receita": 1020.0,
               "remun": "aquisicao",
-              "sem_vendas": true,
-              "pedidos": 0,
+              "sem_vendas": false,
+              "pedidos": 50,
               "novos": 34,
-              "sessoes": 0,
-              "tkm": 0,
-              "conv": null
+              "sessoes": 2121,
+              "tkm": 41.82,
+              "conv": 2.36
             },
             {
               "iso": "2026-10-03",
@@ -3175,16 +3175,16 @@
               "n_env": 0,
               "wpp": null,
               "n_wpp": 0,
-              "vendas": 0.0,
+              "vendas": 415.0,
               "comissao": 0.0,
               "receita": 300.0,
               "remun": "aquisicao",
-              "sem_vendas": true,
-              "pedidos": 0,
+              "sem_vendas": false,
+              "pedidos": 17,
               "novos": 10,
-              "sessoes": 0,
-              "tkm": 0,
-              "conv": null
+              "sessoes": 978,
+              "tkm": 24.41,
+              "conv": 1.74
             },
             {
               "iso": "2026-10-04",
@@ -3194,25 +3194,25 @@
               "n_env": 0,
               "wpp": null,
               "n_wpp": 0,
-              "vendas": 0.0,
+              "vendas": 40.5,
               "comissao": 0.0,
               "receita": 30.0,
               "remun": "aquisicao",
-              "sem_vendas": true,
-              "pedidos": 0,
+              "sem_vendas": false,
+              "pedidos": 2,
               "novos": 1,
-              "sessoes": 0,
-              "tkm": 0,
-              "conv": null
+              "sessoes": 430,
+              "tkm": 20.25,
+              "conv": 0.47
             }
           ],
           "email": {
-            "envios": 1,
-            "periodo": "01/10/2026 a 01/10/2026",
+            "envios": 2,
+            "periodo": "01/10/2026 a 02/10/2026",
             "engajado": {
-              "ab": 0.0,
-              "ctr": 0.0,
-              "n": 1
+              "ab": 6.62,
+              "ctr": 0.15,
+              "n": 2
             },
             "deseng": {
               "ab": 0.0,
@@ -3220,14 +3220,19 @@
               "n": 0
             },
             "funil": {
-              "entregues": 696332.0,
-              "aberturas": 17894.0,
-              "cliques": 679.0
+              "entregues": 2076333.0,
+              "aberturas": 109251.0,
+              "cliques": 2749.0
             },
-            "abertura": 2.6,
-            "ctr": 0.1,
-            "descad": 5.0,
+            "abertura": 5.3,
+            "ctr": 0.13,
+            "descad": 328.0,
             "dias": [
+              [
+                "Sexta",
+                6.62,
+                1
+              ],
               [
                 "Quinta",
                 0.0,
@@ -3237,11 +3242,16 @@
             "horarios": [
               [
                 "15h–18h",
-                0.0,
-                1
+                0.15,
+                2
               ]
             ],
             "top": [
+              {
+                "ab": 6.62,
+                "assunto": "*|PRIMEIRO_NOME|*, R$ 82 Milhões* acumulados para sábado 🍀",
+                "data": "02/10"
+              },
               {
                 "ab": 0.0,
                 "assunto": "*|PRIMEIRO_NOME|*, hoje é a sua última chance de levar R$ 75 milhões*",
@@ -3253,6 +3263,11 @@
                 "ab": 0.0,
                 "assunto": "*|PRIMEIRO_NOME|*, hoje é a sua última chance de levar R$ 75 milhões*",
                 "data": "01/10"
+              },
+              {
+                "ab": 6.62,
+                "assunto": "*|PRIMEIRO_NOME|*, R$ 82 Milhões* acumulados para sábado 🍀",
+                "data": "02/10"
               }
             ]
           },
@@ -3260,18 +3275,18 @@
           "parcial": true,
           "ate": "04/10",
           "ia": {
-            "motor": "Diferença de abertura entre base engajada (<b>0%</b>) e desengajada (<b>0%</b>) é nula, indicando que a falta de engajamento não está gerando receita; sem aberturas, a remuneração por aquisição (R$ 2160) depende apenas das aquisições diretas.",
-            "diagnostico": "A campanha enviou 696332 e‑mails, gerou 17894 aberturas (2.6%) e 679 cliques (0.1%), mas concentrou‑se em 43 pedidos e R$ 927,29 de vendas apenas no dia 01/10, mostrando baixa correlação entre engajamento e conversão.",
-            "conversao": "O site converteu 43 pedidos em 1009 sessões (taxa de <b>4.26%</b>), porém o custo por aquisição (R$ 30) supera o ticket médio (R$ 21.56), resultando em déficit de R$ 362.71; o gargalo está na geração de leads qualificados via e‑mail.",
+            "motor": "A base engajada apresenta taxa de abertura de <b>6.62%</b> contra <b>0%</b> da desengajada, diferença de <b>6.62 pontos</b>, indicando que focar nos engajados pode elevar a receita de R$ 2,160 obtida por aquisição.",
+            "diagnostico": "A taxa de abertura geral foi de 5.3%, mas nas campanhas para a base engajada chegou a 6.62%, gerando 72 aquisições que resultaram em R$ 2,160 de receita para a Supertroco. O baixo CTR (0.13%) sugere que poucos cliques estão convertendo em vendas.",
+            "conversao": "O site converteu 2.47% (112 pedidos em 4,538 sessões), enquanto o e‑mail tem CTR de 0.13% e abertura de 5.3%, apontando o clique como gargalo. Cada pedido custa R$ 30 em aquisição, deixando margem de apenas R$ 1.02 por pedido.",
             "sustenta": [
-              "Entregues: 696332",
-              "Aberturas: 17894",
-              "Cliques: 679",
-              "Conversão site: 4.26%",
-              "CAC: 30"
+              "Taxa de abertura geral: 5.3% (109,251 aberturas de 2,076,333 entregues).",
+              "Taxa de clique geral: 0.13% (2,749 cliques).",
+              "Conversão no site: 2.47% (112 pedidos de 4,538 sessões).",
+              "Custo de aquisição por pedido: R$ 30, gerando margem de R$ 1.02 por pedido.",
+              "Receita total da Supertroco: R$ 2,160 em 72 aquisições."
             ],
-            "recomendacao": "Enviar nova campanha na próxima quinta‑feira, entre 15h e 18h, para a base engajada (mesmo 1 contato) usando o assunto “*|PRIMEIRO_NOME|*, hoje é a sua última chance de levar R$ 75 milhões”, e repetir (re‑pique) no sábado às 15h para quem não abriu.",
-            "whatsapp": "Canal WhatsApp está pronto e aguardando os primeiros disparos."
+            "recomendacao": "Envie a próxima campanha na sexta‑feira, entre 15h e 18h, para a base engajada, com repique na segunda‑feira seguinte no mesmo horário. Use assunto no formato \"*|PRIMEIRO_NOME|*, oportunidade de R$ XX mil hoje!\" mantendo a personalização e o destaque de valor.",
+            "whatsapp": "O canal WhatsApp está pronto; recomendamos iniciar um teste controlado com 1 a 2 disparos por semana, custo R$ 0.42 por disparo, para validar resultados."
           }
         },
         {
@@ -4001,18 +4016,18 @@
           "parcial": false,
           "ate": "30/09",
           "ia": {
-            "motor": "<b>15.0</b> pontos a mais de abertura na base engajada vs desengajada, refletindo potencial de aumento de receita ao focar nesses leads.",
-            "diagnostico": "Os dias com disparos para engajados (ex.: 05/09, 11/09) apresentaram picos de vendas, como R$4,164 em 11/09 com 19% de abertura, indicando forte correlação entre abertura e faturamento.",
-            "conversao": "A taxa de conversão do site está em <b>3.25%</b> (444 pedidos/13,680 sessões) enquanto o CTR da campanha é apenas <b>0.26%</b>, sinalizando que o gargalo está na geração de cliques; cada pedido custa R$7.4 em aquisição.",
+            "motor": "<b>15%</b> de abertura na base engajada vs <b>0%</b> na desengajada, indicando que a receita provém quase que exclusivamente dos contatos engajados.",
+            "diagnostico": "Nos dias em que enviamos para engajados (ex.: 05/09, 11/09) a taxa de abertura chegou a 18‑19% e gerou R$ 1.133 e R$ 4.164 respectivamente, mostrando correlação positiva. Contudo, mesmo sem abertura (ex.: 02/09) houve R$ 925 em vendas, indicando que outras fontes também contribuem.",
+            "conversao": "A taxa de conversão do site foi de <b>3.25%</b> (444 pedidos em 13.680 sessões). O gargalo está no baixo CTR de <b>0.26%</b> e na taxa de abertura de <b>12.2%</b>, limitando o fluxo de cliques que alimentam a conversão, custando aproximadamente R$ 41.18 por pedido.",
             "sustenta": [
               "Entregues: 8,842,941 e-mails",
-              "Aberturas: 1,077,298 (12.2% taxa geral)",
+              "Aberturas: 1,077,298 (12.2% de taxa de abertura)",
               "Cliques: 23,150 (CTR 0.26%)",
-              "Conversão site: 3.25% (444 pedidos)",
-              "CAC: R$7.4 por aquisição"
+              "Pedidos: 444 com ticket médio de R$ 41.18",
+              "Receita Supertroco: R$ 1,828.37 (CAC R$ 7.40 por aquisição)"
             ],
-            "recomendacao": "Enviar a próxima campanha na sexta‑feira, às 19h, para a base engajada, com repique na segunda‑feira às 10h; usar assunto no formato “*|PRIMEIRO_NOME|*, uma surpresa exclusiva para você aproveitar hoje”.",
-            "whatsapp": "Canal WhatsApp está pronto e aguardando os primeiros disparos; custo por disparo R$0.42."
+            "recomendacao": "Envie a campanha principal nas sextas‑feiras, entre 18h e 24h, para a base engajada; repita (repique) no sábado pela manhã (09h–12h) para o mesmo público. Use assunto personalizado no estilo \"*|PRIMEIRO_NOME|*, uma surpresa para você aproveitar na Loto deste ano\" que já gerou 18.8% de abertura.",
+            "whatsapp": "O canal WhatsApp está pronto e aguardando os primeiros disparos; cada disparo custa R$ 0,42."
           }
         },
         {
@@ -4756,18 +4771,18 @@
           "parcial": false,
           "ate": "31/08",
           "ia": {
-            "motor": "A base engajada tem <b>14.1%</b> de abertura contra <b>1.2%</b> da desengajada, diferença de <b>12.9</b> pontos – isso concentra a maior parte da receita nos contatos mais engajados.",
-            "diagnostico": "Os disparos para a base engajada (ex.: 03/08, 04/08, 07/08) geraram picos de vendas acima de R$2.7 mil, enquanto o disparo para desengajados (05/08) resultou em vendas bem menores. O baixo índice geral de abertura (9.2%) indica que grande parte da lista ainda não está sendo ativada.",
-            "conversao": "A taxa de conversão do site está em <b>7.87%</b>, mas a abertura de e‑mail é só <b>9.2%</b> e o CTR <b>0.28%</b>, apontando o gargalo na captura de atenção. Cada pedido custa em média R$4.77 de aquisição (CAC).",
+            "motor": "A base engajada tem <b>14.1%</b> de abertura contra <b>1.2%</b> da desengajada, diferença de <b>12.9 pontos</b>; isso se reflete diretamente na receita, pois os dias com engajamento geram vendas muito superiores.",
+            "diagnostico": "Nos dias em que enviamos para engajados (ex.: 04/08) a abertura foi 14% e a venda foi R$ 2.770 (100 pedidos); já nos dias de desengajados (05/08) a abertura caiu para 1% e a venda foi R$ 941 (43 pedidos). O padrão mostra forte correlação entre taxa de abertura e volume de vendas.",
+            "conversao": "A taxa de conversão do site foi de <b>7.87%</b>, enquanto a taxa de abertura foi <b>9.2%</b> e o CTR <b>0.28%</b>. O gargalo está no CTR, que limita os cliques que alimentam a conversão. Cada pedido custa em média R$ 4.77 (CAC).",
             "sustenta": [
-              "<b>345</b> pedidos gerados",
-              "Receita total de <b>R$12,825.00</b>",
-              "Receita da Supertroco de <b>R$1,282.50</b> (10% comissão)",
-              "CAC de <b>R$4.77</b> por aquisição",
-              "Taxa média de abertura de <b>9.2%</b>"
+              "<b>14.1%</b> de abertura na base engajada",
+              "<b>1.2%</b> de abertura na base desengajada",
+              "R$ 2.770 de vendas em 04/08 (engajados)",
+              "R$ 941 de vendas em 05/08 (desengajados)",
+              "<b>345</b> pedidos no período"
             ],
-            "recomendacao": "Envie a próxima campanha no sábado (ex.: 07/09) às 19h para a base engajada, com repique na segunda-feira às 13h para a mesma base. Use assunto no padrão \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀\" que já provou alta abertura.",
-            "whatsapp": "Canal WhatsApp está pronto, aguardando os primeiros disparos."
+            "recomendacao": "Enviar a campanha principal aos sábados, entre 18h e 24h, para a base engajada; repetir (repique) na segunda-feira, entre 12h e 15h, para a mesma base. Use assunto no padrão \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀\" ou variações que incluam o nome e a palavra \"sorteio\".",
+            "whatsapp": "O canal WhatsApp está pronto e aguardando os primeiros disparos."
           }
         }
       ],
@@ -4809,7 +4824,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.485,
+              "nota": 0.516,
               "rotulo": "Resultado do Sorteio"
             },
             {
@@ -4818,9 +4833,9 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-06",
@@ -4828,8 +4843,8 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias)",
+              "volume": 771975,
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias)",
               "nota": 1.0
             },
             {
@@ -4840,7 +4855,7 @@
               "janela": "17h | 19h",
               "volume": null,
               "motivo": "Reimpacto do e-mail de 06/11 para quem não abriu",
-              "nota": 0.959
+              "nota": 1.006
             },
             {
               "data": "2026-11-09",
@@ -4850,7 +4865,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.607,
+              "nota": 0.645,
               "rotulo": "Resultado do Sorteio"
             },
             {
@@ -4859,9 +4874,9 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-13",
@@ -4869,8 +4884,8 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias)",
+              "volume": 771975,
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias)",
               "nota": 1.0
             },
             {
@@ -4881,7 +4896,7 @@
               "janela": "17h | 19h",
               "volume": null,
               "motivo": "Reimpacto do e-mail de 13/11 para quem não abriu",
-              "nota": 0.959
+              "nota": 1.006
             },
             {
               "data": "2026-11-16",
@@ -4891,7 +4906,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.607,
+              "nota": 0.645,
               "rotulo": "Resultado do Sorteio"
             },
             {
@@ -4900,9 +4915,9 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-20",
@@ -4910,8 +4925,8 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) · Feriado nacional: Dia da Consciência Negra",
+              "volume": 771975,
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) · Feriado nacional: Dia da Consciência Negra",
               "nota": 0.8
             },
             {
@@ -4922,7 +4937,7 @@
               "janela": "17h | 19h",
               "volume": null,
               "motivo": "Reimpacto do e-mail de 20/11 para quem não abriu",
-              "nota": 0.959
+              "nota": 1.006
             },
             {
               "data": "2026-11-23",
@@ -4932,7 +4947,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.607,
+              "nota": 0.645,
               "rotulo": "Resultado do Sorteio"
             },
             {
@@ -4941,9 +4956,9 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-27",
@@ -4951,8 +4966,8 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) · Black Friday",
+              "volume": 771975,
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) · Black Friday",
               "nota": 1.1
             },
             {
@@ -4963,7 +4978,7 @@
               "janela": "17h | 19h",
               "volume": null,
               "motivo": "Reimpacto do e-mail de 27/11 para quem não abriu",
-              "nota": 0.959
+              "nota": 1.006
             },
             {
               "data": "2026-11-30",
@@ -4973,7 +4988,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.667,
+              "nota": 0.71,
               "rotulo": "Resultado do Sorteio"
             }
           ],
@@ -4986,7 +5001,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.485,
+              "nota": 0.516,
               "rotulo": "Resultado do Sorteio"
             },
             {
@@ -4995,9 +5010,9 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-06",
@@ -5005,8 +5020,8 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias)",
+              "volume": 771975,
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias)",
               "nota": 1.0
             },
             {
@@ -5015,7 +5030,7 @@
               "tipo": "repique",
               "base": "Não abriram o e-mail anterior",
               "janela": "18h | 20h",
-              "volume": 645615,
+              "volume": 691412,
               "motivo": "Repique do e-mail de 06/11 para quem não abriu",
               "nota": 0.8
             },
@@ -5027,7 +5042,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.607,
+              "nota": 0.645,
               "rotulo": "Resultado do Sorteio"
             },
             {
@@ -5036,9 +5051,9 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-13",
@@ -5046,8 +5061,8 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias)",
+              "volume": 771975,
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias)",
               "nota": 1.0
             },
             {
@@ -5056,7 +5071,7 @@
               "tipo": "repique",
               "base": "Não abriram o e-mail anterior",
               "janela": "18h | 20h",
-              "volume": 645615,
+              "volume": 691412,
               "motivo": "Repique do e-mail de 13/11 para quem não abriu",
               "nota": 0.8
             },
@@ -5068,7 +5083,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.607,
+              "nota": 0.645,
               "rotulo": "Resultado do Sorteio"
             },
             {
@@ -5077,9 +5092,9 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-20",
@@ -5087,8 +5102,8 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) · Feriado nacional: Dia da Consciência Negra",
+              "volume": 771975,
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) · Feriado nacional: Dia da Consciência Negra",
               "nota": 0.8
             },
             {
@@ -5097,7 +5112,7 @@
               "tipo": "repique",
               "base": "Não abriram o e-mail anterior",
               "janela": "18h | 20h",
-              "volume": 645615,
+              "volume": 691412,
               "motivo": "Repique do e-mail de 20/11 para quem não abriu",
               "nota": 0.64
             },
@@ -5109,7 +5124,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.607,
+              "nota": 0.645,
               "rotulo": "Resultado do Sorteio"
             },
             {
@@ -5118,9 +5133,9 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias)",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-26",
@@ -5128,9 +5143,9 @@
               "tipo": "repique",
               "base": "Não abriram o e-mail anterior",
               "janela": "18h | 20h",
-              "volume": 645615,
+              "volume": 691412,
               "motivo": "Repique do e-mail de 24/11 para quem não abriu",
-              "nota": 0.516
+              "nota": 0.539
             },
             {
               "data": "2026-11-27",
@@ -5138,8 +5153,8 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) · Black Friday",
+              "volume": 771975,
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) · Black Friday",
               "nota": 1.1
             },
             {
@@ -5150,7 +5165,7 @@
               "janela": "16h | 18h",
               "volume": 776348,
               "motivo": "Recorrente: “Resultado do Sorteio” toda segunda no histórico",
-              "nota": 0.667,
+              "nota": 0.71,
               "rotulo": "Resultado do Sorteio"
             }
           ],
@@ -5163,7 +5178,7 @@
               "janela": "17h | 19h",
               "volume": null,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-06",
@@ -5172,7 +5187,7 @@
               "base": "Contatos com opt-in de WhatsApp",
               "janela": "10h | 12h",
               "volume": null,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) — perfil do público, sem histórico de WhatsApp",
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
               "nota": 1.0
             },
             {
@@ -5183,7 +5198,7 @@
               "janela": "17h | 19h",
               "volume": null,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-13",
@@ -5192,7 +5207,7 @@
               "base": "Contatos com opt-in de WhatsApp",
               "janela": "10h | 12h",
               "volume": null,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) — perfil do público, sem histórico de WhatsApp",
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
               "nota": 1.0
             },
             {
@@ -5203,7 +5218,7 @@
               "janela": "17h | 19h",
               "volume": null,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-20",
@@ -5212,7 +5227,7 @@
               "base": "Contatos com opt-in de WhatsApp",
               "janela": "10h | 12h",
               "volume": null,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) — perfil do público, sem histórico de WhatsApp · Feriado nacional: Dia da Consciência Negra",
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp · Feriado nacional: Dia da Consciência Negra",
               "nota": 0.8
             },
             {
@@ -5223,7 +5238,7 @@
               "janela": "17h | 19h",
               "volume": null,
               "motivo": "Terça: 8,3% de abertura média (3 envios) · R$ 1.163 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp",
-              "nota": 0.645
+              "nota": 0.674
             },
             {
               "data": "2026-11-27",
@@ -5232,7 +5247,7 @@
               "base": "Contatos com opt-in de WhatsApp",
               "janela": "10h | 12h",
               "volume": null,
-              "motivo": "Sexta: 16,0% de abertura média (2 envios) · R$ 2.670 em vendas por dia de disparo (2 dias) — perfil do público, sem histórico de WhatsApp · Black Friday",
+              "motivo": "Sexta: 12,9% de abertura média (3 envios) · R$ 2.477 em vendas por dia de disparo (3 dias) — perfil do público, sem histórico de WhatsApp · Black Friday",
               "nota": 1.1
             },
             {
@@ -5243,36 +5258,36 @@
               "janela": "10h | 12h",
               "volume": null,
               "motivo": "Segunda: 12,6% de abertura média (8 envios) · R$ 409 em vendas por dia de disparo (7 dias) — perfil do público, sem histórico de WhatsApp · Cyber Monday; 1ª parcela do 13º salário (até 30/11)",
-              "nota": 0.667
+              "nota": 0.71
             }
           ]
         },
         "projecao": {
           "ambos": {
             "email_envios": 13,
-            "email_volume": 9657940,
-            "aberturas": 1122799,
-            "cliques": 25816,
+            "email_volume": 10057540,
+            "aberturas": 1121801,
+            "cliques": 26447,
             "wpp_envios": 4,
             "wpp_volume": null,
             "resultado": {
               "unidade": "vendas",
-              "valor": 12892.65,
-              "por_disparo": 991.74,
+              "valor": 13464.26,
+              "por_disparo": 1035.71,
               "dias": 13
             }
           },
           "email": {
             "email_envios": 17,
-            "email_volume": 12240400,
-            "aberturas": 1122799,
-            "cliques": 25816,
+            "email_volume": 12823188,
+            "aberturas": 1121801,
+            "cliques": 26447,
             "wpp_envios": 0,
             "wpp_volume": null,
             "resultado": {
               "unidade": "vendas",
-              "valor": 12892.65,
-              "por_disparo": 991.74,
+              "valor": 13464.26,
+              "por_disparo": 1035.71,
               "dias": 13
             }
           },
@@ -5288,127 +5303,127 @@
         },
         "dias": {
           "2026-11-02": {
-            "tema": "Resultado do Sorteio – confira hoje",
-            "assunto": "*|PRIMEIRO_NOME|*, veja o resultado do sorteio",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, o resultado do sorteio de hoje já está disponível. Confira e jogue com responsabilidade. [link]"
+            "tema": "Resultado do Sorteio – Finados",
+            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje",
+            "mensagem": "Confira o resultado do sorteio de hoje 🍀 e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-11-03": {
-            "tema": "Bolão da Semana – participe agora",
-            "assunto": "*|PRIMEIRO_NOME|*, bolão da semana está aberto",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, confira os jogos e bolões desta semana e jogue com responsabilidade. Boa sorte! 🍀 [link]"
+            "tema": "Bolão da Semana – Jogue Agora",
+            "assunto": "*|PRIMEIRO_NOME|*, R$ 102 milhões acumulados para amanhã 🍀",
+            "mensagem": "Confira os bolões da semana 🍀, participe e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-11-06": {
-            "tema": "Sexta de Loto – concorra hoje",
-            "assunto": "*|PRIMEIRO_NOME|*, sexta de Loto com novos concursos",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira os concursos de hoje e participe com responsabilidade. Boa sorte! 🍀 [link]"
+            "tema": "Sexta de Bolões – Jogue Hoje",
+            "assunto": "*|PRIMEIRO_NOME|*, aposte com praticidade",
+            "mensagem": "Confira as apostas da sexta, jogue com responsabilidade e aumente a emoção. Boa sorte! [link]"
           },
           "2026-11-07": {
-            "tema": "Sexta de Loto – lembrete",
-            "assunto": "*|PRIMEIRO_NOME|*, lembrete do concurso de sexta",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, ainda dá tempo de conferir o concurso de sexta e jogar com responsabilidade. Não perca! [link]"
+            "tema": "Reimpacto – Bolão de Sexta",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu o bolão de sexta?",
+            "mensagem": "Confira novamente o bolão de sexta 🍀 e jogue com responsabilidade. Última chance! [link]"
           },
           "2026-11-08": {
-            "tema": "Sexta de Loto – segunda chance",
-            "assunto": "*|PRIMEIRO_NOME|*, segunda chance: concurso de sexta",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, se ainda não viu, confira o concurso de sexta e jogue com responsabilidade. Aproveite! [link]"
+            "tema": "Reenvio – Bolão de Sexta",
+            "assunto": "Você viu? Bolão de sexta ainda está aberto",
+            "mensagem": "Confira o bolão que enviamos ontem, participe e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-11-09": {
-            "tema": "Resultado do Sorteio – confira",
-            "assunto": "*|PRIMEIRO_NOME|*, veja o resultado de hoje",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, o resultado do sorteio já está disponível. Confira e jogue com responsabilidade. [link]"
+            "tema": "Resultado do Sorteio – Segunda",
+            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje",
+            "mensagem": "Confira o resultado do sorteio de hoje 🍀 e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-11-10": {
-            "tema": "Novos jogos – participe",
-            "assunto": "*|PRIMEIRO_NOME|*, novos jogos da semana",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, confira os novos jogos e bolões e jogue com responsabilidade. Boa sorte! 🍀 [link]"
+            "tema": "Terça de Jogos – Participe",
+            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana",
+            "mensagem": "Confira as novidades de jogos para hoje 🍀, jogue com responsabilidade e boa sorte! [link]"
           },
           "2026-11-13": {
-            "tema": "Sexta da Loto – jogue hoje",
-            "assunto": "*|PRIMEIRO_NOME|*, descubra o bolão da sexta",
-            "mensagem": "Confira os jogos da semana e participe do bolão. Jogue com responsabilidade! 🎟️ [link]"
+            "tema": "Sexta da Loto — confira os bolões",
+            "assunto": "*|PRIMEIRO_NOME|*, confira os jogos da semana",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, a Loto tem bolões quentes esta semana. Confira e jogue com responsabilidade! 🍀 [link]"
           },
           "2026-11-14": {
-            "tema": "Sábado de reforço – não perca",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu o bolão de sexta?",
-            "mensagem": "Você viu a dica de sexta? Ainda dá tempo de conferir e jogar com responsabilidade. [link]"
+            "tema": "Sábado de reimpacto — você viu?",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira o bolão",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, caso tenha perdido, confira o bolão de sexta e jogue com responsabilidade. [link]"
           },
           "2026-11-15": {
-            "tema": "Domingo de feriado – jogue agora",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu a oferta de sexta?",
-            "mensagem": "No feriado da Proclamação da República, confira os jogos e participe do bolão. Jogue com responsabilidade! [link]"
+            "tema": "Domingo de feriado — repita a chance",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, jogue no feriado",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, no feriado da Proclamação da República aproveite para conferir os jogos e jogue com responsabilidade. [link]"
           },
           "2026-11-16": {
-            "tema": "Resultado do Sorteio – veja agora",
-            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje",
-            "mensagem": "Confira o resultado do sorteio e veja os próximos concursos. Jogue com responsabilidade! [link]"
+            "tema": "Resultado do Sorteio — veja agora",
+            "assunto": "*|PRIMEIRO_NOME|*, veja o resultado do sorteio",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira o resultado do sorteio de hoje e jogue com responsabilidade. [link]"
           },
           "2026-11-17": {
-            "tema": "Terça da Loto – novidades",
-            "assunto": "*|PRIMEIRO_NOME|*, novidades de jogos para a terça",
-            "mensagem": "Confira as novidades de jogos e bolões da semana. Jogue com responsabilidade! 🎲 [link]"
+            "tema": "Terça da Loto — novidades",
+            "assunto": "*|PRIMEIRO_NOME|*, novidades nos bolões da terça",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, tem novidades nos bolões de terça. Confira e jogue com responsabilidade! [link]"
           },
           "2026-11-20": {
-            "tema": "Sexta da Consciência – jogue",
-            "assunto": "*|PRIMEIRO_NOME|*, jogue neste feriado da Consciência Negra",
-            "mensagem": "No feriado da Consciência Negra, confira os jogos e participe do bolão. Jogue com responsabilidade! [link]"
+            "tema": "Sexta da Consciência — jogue consciente",
+            "assunto": "*|PRIMEIRO_NOME|*, jogue consciente neste feriado",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, no feriado da Consciência Negra confira os jogos e jogue com responsabilidade. [link]"
           },
           "2026-11-21": {
-            "tema": "Sábado de bolões — confira",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Bolão de sábado",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, não perca o bolão de sábado! Confira os jogos e jogue com responsabilidade. Boa sorte! 🍀 [link]"
+            "tema": "Sábado de reimpacto — você viu?",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira o bolão de sexta",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, reforçando o e‑mail de sexta: confira o bolão e jogue com responsabilidade. [link]"
           },
           "2026-11-22": {
-            "tema": "Resultado do Sorteio – veja novamente",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Resultado do sorteio",
-            "mensagem": "Confira o resultado do sorteio de hoje e jogue com responsabilidade. [link]"
+            "tema": "Domingo de Bolão – não perca",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu? Última chance de bolão",
+            "mensagem": "Domingo é dia de reforçar seu bolão! Confira os jogos da semana e jogue com responsabilidade. [link]"
           },
           "2026-11-23": {
-            "tema": "Resultado do Sorteio – confira agora",
+            "tema": "Resultado do Sorteio – confira",
             "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje",
-            "mensagem": "O resultado do sorteio já está disponível. Confira e jogue com responsabilidade 🍀. [link]"
+            "mensagem": "O resultado do sorteio já saiu. Confira os números e jogue com responsabilidade. [link]"
           },
           "2026-11-24": {
-            "tema": "Bolões da semana – participe",
-            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana esperam por você",
-            "mensagem": "Confira os bolões e concursos desta semana, escolha seu número e jogue com responsabilidade. [link]"
+            "tema": "Terça de Loto – jogue hoje",
+            "assunto": "*|PRIMEIRO_NOME|*, aproveite a chance na Loto desta terça",
+            "mensagem": "Confira as apostas da terça e participe dos bolões. Jogue com responsabilidade! 🍀 [link]"
           },
           "2026-11-26": {
-            "tema": "Bolões da semana – lembrete",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Bolões da semana",
-            "mensagem": "Lembrete: os bolões da semana ainda estão abertos. Confira e jogue com responsabilidade. [link]"
+            "tema": "Quinta de Bolão – última chamada",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu? Última chamada para o bolão",
+            "mensagem": "Não perca a chance de entrar no bolão da quinta. Confira os jogos e jogue com responsabilidade. [link]"
           },
           "2026-11-27": {
-            "tema": "Black Friday – jogos e bolões",
+            "tema": "Black Friday Loteria – jogue agora",
             "assunto": "*|PRIMEIRO_NOME|*, Black Friday com jogos especiais",
-            "mensagem": "Aproveite a Black Friday para participar dos nossos bolões. Confira e jogue com responsabilidade 🎉. [link]"
+            "mensagem": "Aproveite a Black Friday para apostar nos concursos. Confira as opções e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-28": {
-            "tema": "Reforço – bolões da Black Friday",
-            "assunto": "*|PRIMEIRO_NOME|*, reforço: bolões da Black Friday",
-            "mensagem": "Reforço: ainda dá tempo de entrar nos bolões da Black Friday. Confira e jogue com responsabilidade. [link]"
+            "tema": "Sábado de Reforço – não perca",
+            "assunto": "*|PRIMEIRO_NOME|*, lembrete: confira o bolão de sábado",
+            "mensagem": "Reforço de sábado! Confira os jogos que ainda estão abertos e jogue com responsabilidade. [link]"
           },
           "2026-11-30": {
-            "tema": "Cyber Monday – resultado do sorteio",
-            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio nesta Cyber Monday",
-            "mensagem": "No Cyber Monday, confira o resultado do sorteio e jogue com responsabilidade 💻. [link]"
+            "tema": "Cyber Monday – resultado",
+            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de Cyber Monday",
+            "mensagem": "Resultado do sorteio de hoje já está disponível. Confira e jogue com responsabilidade. [link]"
           }
         },
-        "estrategia": "Neste mês vamos combinar 13 envios de e‑mail nas janelas de <b>18h‑20h</b> e 4 disparos de WhatsApp, focando nas segundas‑feiras para o “Resultado do Sorteio” (taxa de abertura <b>13,6%</b>) e nas sextas‑feiras, que historicamente têm a melhor abertura (<b>13,3%</b>) e CTR de <b>0,37%</b> entre 18h‑24h. Aproveitamos a média de vendas de <b>R$ 992</b> nos dias de disparo contra <b>R$ 201</b> nos dias sem envio, mantendo a cadência de <b>2,9</b> dias por semana, e destacamos os jogos, bolões e concursos da semana, convidando o público a conferir e jogar com responsabilidade.",
+        "estrategia": "Manteremos envios em <b>sábado</b> para aproveitar a taxa de abertura de <b>12,7%</b> e nos horários de <b>18h–24h</b> onde o CTR foi de <b>0,37%</b>. O disparo recorrente de “Resultado do Sorteio” continuará nas <b>segundas</b> com <b>13,6%</b> de abertura. A cadência de <b>3,0</b> dias por semana será preservada, combinando e‑mail e WhatsApp nos dias definidos; confira os jogos, bolões e concursos da semana e jogue com responsabilidade.",
         "notas": {
-          "email": "Se o parceiro usar apenas e‑mail, aumentará para <b>17</b> envios mensais, mantendo a janela das <b>18h‑20h</b>, mas perderá a oportunidade de contato imediato que o WhatsApp pode gerar.",
-          "whatsapp": "Usar só WhatsApp, sem histórico, iniciará 9 envios mensais, permitindo mensagens instantâneas, porém sem o apoio dos resultados de abertura e venda já comprovados nos e‑mails."
+          "email": "Usar somente e‑mail aumentará a frequência para <b>17</b> envios no mês, concentrando a comunicação nos dias de maior abertura, mas eliminará o alcance imediato do WhatsApp.",
+          "whatsapp": "Com apenas WhatsApp, serão <b>9</b> envios no mês, porém sem histórico de desempenho, exigindo monitoramento cuidadoso para ajustar a cadência."
         },
         "evidencias": [
-          "Abertura dos engajados: melhor na sexta (13,3% em 2 envio(s)); média geral 10,6%.",
-          "Vendas em dia de disparo para engajados: média de R$ 992 (24 dias) contra R$ 201 nos dias sem disparo.",
+          "Abertura dos engajados: melhor na sábado (12,7% em 5 envio(s)); média geral 10,4%.",
+          "Vendas em dia de disparo para engajados: média de R$ 1.036 (25 dias) contra R$ 217 nos dias sem disparo.",
           "Melhor faixa para clique: 18h–24h (CTR de 0,37% em 2 envio(s)).",
-          "Cadência atual para engajados: 2,9 dias de disparo por semana — o cronograma mantém esse ritmo.",
+          "Cadência atual para engajados: 3,0 dias de disparo por semana — o cronograma mantém esse ritmo.",
           "Disparo recorrente mantido: “Resultado do Sorteio” toda segunda (4 envios, 13,6% de abertura)."
         ],
         "premissas": [
           "Um parceiro por dia na base engajada de e-mail e um por dia no WhatsApp — os parceiros dividem a mesma base de contatos.",
-          "E-mail principal: 3 por semana para engajados (cadência atual: 2,9 dias de disparo por semana), na janela 18h | 20h.",
-          "Volume do e-mail: ≈ 722 mil contatos (mediana dos últimos 5 envios para engajados).",
+          "E-mail principal: 3 por semana para engajados (cadência atual: 3,0 dias de disparo por semana), na janela 18h | 20h.",
+          "Volume do e-mail: ≈ 772 mil contatos (mediana dos últimos 5 envios para engajados).",
           "Repique (só e-mail): dia seguinte ao melhor e-mail da semana, só para quem não abriu.",
           "WhatsApp: 1 por semana junto com o e-mail, ou 2 por semana só com WhatsApp; R$ 0,42 por disparo.",
           "Sem histórico de WhatsApp: janelas 10h | 12h e 17h | 19h do calendário de referência até chegarem os primeiros dados.",
@@ -5422,7 +5437,7 @@
           "volume_por_disparo": null,
           "historico": false
         },
-        "volume_email": 722025,
+        "volume_email": 771975,
         "fonte_volume": "mediana dos últimos 5 envios para engajados"
       }
     },
@@ -5966,18 +5981,18 @@
           },
           "whatsapp": null,
           "ia": {
-            "motor": "Os picos de leads ocorrem na <b>Quarta (16/09)</b> e <b>Sábado (19/09)</b> com <b>49</b> leads cada, somando <b>61.2%</b> dos <b>188</b> leads no período; os disparos de e‑mail nesses dias (base total · 8% ab.) geraram <b>98</b> leads, enquanto a taxa de abertura foi <b>7.9%</b> e o CTR <b>0.26%</b>.",
-            "diagnostico": "Os leads estão fortemente concentrados em poucos dias, especialmente nas quartas e sábados, que representam mais da metade do total. Nos demais dias a geração é baixa, indicando dependência dos disparos de e‑mail para os picos.",
-            "conversao": "Abertura de e‑mail foi de <b>7.9%</b> e clique <b>0.26%</b>, resultando em <b>37.01%</b> de leads por clique. Foram gerados <b>98</b> leads nos dias com disparo de e‑mail; falta medir a conversão do WhatsApp, essencial para avaliar o novo canal.",
+            "motor": "Os leads concentram‑se nos picos de <b>16/09</b> (Quarta) e <b>19/09</b> (Sábado), que juntos responderam por <b>61.2%</b> do total, coincidindo com os disparos de e‑mail que geraram <b>8%</b> de abertura.",
+            "diagnostico": "A maior parte dos leads ocorre nas quartas (<b>14.75</b> por dia) e sábados (<b>17.0</b> por dia), enquanto os demais dias ficam abaixo de <b>6</b> leads diários. Nos 22 dias com geração, 98 leads vieram em dias com disparo de e‑mail, indicando forte correlação entre envio e conversão.",
+            "conversao": "A campanha enviou <b>194,612</b> e‑mails, com taxa de abertura de <b>7.9%</b> e CTR de <b>0.26%</b>. Cada clique gerou <b>37.01%</b> de leads, totalizando <b>188</b> leads no período.",
             "sustenta": [
-              "<b>188</b> leads totais",
-              "<b>49</b> leads em 16/09 (Quarta)",
-              "<b>49</b> leads em 19/09 (Sábado)",
-              "<b>61.2%</b> dos leads concentrados nos 3 maiores dias",
-              "<b>0.26%</b> CTR de e‑mail"
+              "Total de leads: 188",
+              "Leads nos dias de pico (16/09, 19/09, 20/09): 115",
+              "Taxa de abertura de e‑mail: 7.9%",
+              "CTR de e‑mail: 0.26%",
+              "Leads por clique: 37.01%"
             ],
-            "recomendacao": "Manter disparos de e‑mail nas <b>quartas</b> e <b>sábados</b> entre <b>15h e 18h</b>, com cadência de duas envios por semana (um em cada dia). Iniciar teste controlado de WhatsApp com 1 a 2 disparos semanais nesses mesmos dias e horários para validar a taxa de conversão.",
-            "whatsapp": "Canal pronto, aguardando os primeiros disparos de WhatsApp."
+            "recomendacao": "Priorizar envios de e‑mail nas quartas e sábados, entre 15h e 18h, com cadência de duas disparos semanais (uma quarta e um sábado), mantendo o mesmo assunto de alta performance. Monitorar abertura e clique para ajustar criativos.",
+            "whatsapp": "Canal WhatsApp está pronto, aguardando os primeiros disparos."
           }
         },
         {
@@ -6450,18 +6465,18 @@
           "parcial": true,
           "ate": "25/09",
           "ia": {
-            "motor": "Os picos de leads ocorrem na <b>Quarta (16/09)</b> e <b>Sábado (19/09)</b> com <b>49</b> leads cada, somando <b>61.2%</b> dos <b>188</b> leads no período; os disparos de e‑mail nesses dias (base total · 8% ab.) geraram <b>98</b> leads, enquanto a taxa de abertura foi <b>7.9%</b> e o CTR <b>0.26%</b>.",
-            "diagnostico": "Os leads estão fortemente concentrados em poucos dias, especialmente nas quartas e sábados, que representam mais da metade do total. Nos demais dias a geração é baixa, indicando dependência dos disparos de e‑mail para os picos.",
-            "conversao": "Abertura de e‑mail foi de <b>7.9%</b> e clique <b>0.26%</b>, resultando em <b>37.01%</b> de leads por clique. Foram gerados <b>98</b> leads nos dias com disparo de e‑mail; falta medir a conversão do WhatsApp, essencial para avaliar o novo canal.",
+            "motor": "Os leads concentram‑se nos picos de <b>16/09</b> (Quarta) e <b>19/09</b> (Sábado), que juntos responderam por <b>61.2%</b> do total, coincidindo com os disparos de e‑mail que geraram <b>8%</b> de abertura.",
+            "diagnostico": "A maior parte dos leads ocorre nas quartas (<b>14.75</b> por dia) e sábados (<b>17.0</b> por dia), enquanto os demais dias ficam abaixo de <b>6</b> leads diários. Nos 22 dias com geração, 98 leads vieram em dias com disparo de e‑mail, indicando forte correlação entre envio e conversão.",
+            "conversao": "A campanha enviou <b>194,612</b> e‑mails, com taxa de abertura de <b>7.9%</b> e CTR de <b>0.26%</b>. Cada clique gerou <b>37.01%</b> de leads, totalizando <b>188</b> leads no período.",
             "sustenta": [
-              "<b>188</b> leads totais",
-              "<b>49</b> leads em 16/09 (Quarta)",
-              "<b>49</b> leads em 19/09 (Sábado)",
-              "<b>61.2%</b> dos leads concentrados nos 3 maiores dias",
-              "<b>0.26%</b> CTR de e‑mail"
+              "Total de leads: 188",
+              "Leads nos dias de pico (16/09, 19/09, 20/09): 115",
+              "Taxa de abertura de e‑mail: 7.9%",
+              "CTR de e‑mail: 0.26%",
+              "Leads por clique: 37.01%"
             ],
-            "recomendacao": "Manter disparos de e‑mail nas <b>quartas</b> e <b>sábados</b> entre <b>15h e 18h</b>, com cadência de duas envios por semana (um em cada dia). Iniciar teste controlado de WhatsApp com 1 a 2 disparos semanais nesses mesmos dias e horários para validar a taxa de conversão.",
-            "whatsapp": "Canal pronto, aguardando os primeiros disparos de WhatsApp."
+            "recomendacao": "Priorizar envios de e‑mail nas quartas e sábados, entre 15h e 18h, com cadência de duas disparos semanais (uma quarta e um sábado), mantendo o mesmo assunto de alta performance. Monitorar abertura e clique para ajustar criativos.",
+            "whatsapp": "Canal WhatsApp está pronto, aguardando os primeiros disparos."
           }
         }
       ],
@@ -6508,7 +6523,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
               "nota": 0.934
             },
@@ -6528,7 +6543,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
               "nota": 1.0
             },
@@ -6548,7 +6563,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
               "nota": 0.934
             },
@@ -6558,7 +6573,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
               "nota": 1.0
             },
@@ -6568,7 +6583,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
               "nota": 0.934
             },
@@ -6588,7 +6603,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
               "nota": 1.0
             },
@@ -6608,7 +6623,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
               "nota": 0.934
             },
@@ -6618,7 +6633,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
               "nota": 1.0
             },
@@ -6628,7 +6643,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Domingo: média de 6,3 leads por dia (3 dias no histórico)",
               "nota": 0.515
             }
@@ -6640,7 +6655,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
               "nota": 0.934
             },
@@ -6650,7 +6665,7 @@
               "tipo": "repique",
               "base": "Não abriram o e-mail anterior",
               "janela": "18h | 20h",
-              "volume": 645615,
+              "volume": 691412,
               "motivo": "Repique do e-mail de 04/11 para quem não abriu",
               "nota": 0.747
             },
@@ -6660,7 +6675,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
               "nota": 1.0
             },
@@ -6670,7 +6685,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
               "nota": 0.934
             },
@@ -6680,7 +6695,7 @@
               "tipo": "repique",
               "base": "Não abriram o e-mail anterior",
               "janela": "18h | 20h",
-              "volume": 645615,
+              "volume": 691412,
               "motivo": "Repique do e-mail de 11/11 para quem não abriu",
               "nota": 0.747
             },
@@ -6690,7 +6705,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
               "nota": 1.0
             },
@@ -6700,7 +6715,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
               "nota": 0.934
             },
@@ -6710,7 +6725,7 @@
               "tipo": "repique",
               "base": "Não abriram o e-mail anterior",
               "janela": "18h | 20h",
-              "volume": 645615,
+              "volume": 691412,
               "motivo": "Repique do e-mail de 18/11 para quem não abriu",
               "nota": 0.747
             },
@@ -6720,7 +6735,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
               "nota": 1.0
             },
@@ -6730,7 +6745,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Quarta: média de 14,8 leads por dia (4 dias no histórico)",
               "nota": 0.934
             },
@@ -6740,7 +6755,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Sábado: média de 17,0 leads por dia (3 dias no histórico)",
               "nota": 1.0
             },
@@ -6750,7 +6765,7 @@
               "tipo": "principal",
               "base": "Engajados",
               "janela": "18h | 20h",
-              "volume": 722025,
+              "volume": 771975,
               "motivo": "Domingo: média de 6,3 leads por dia (3 dias no histórico)",
               "nota": 0.515
             }
@@ -6851,18 +6866,18 @@
         "projecao": {
           "ambos": {
             "email_envios": 9,
-            "email_volume": 6498225,
-            "aberturas": 687687,
-            "cliques": 17370,
+            "email_volume": 6947775,
+            "aberturas": 725064,
+            "cliques": 18270,
             "wpp_envios": 4,
             "wpp_volume": null,
             "resultado": null
           },
           "email": {
             "email_envios": 12,
-            "email_volume": 8435070,
-            "aberturas": 687687,
-            "cliques": 17370,
+            "email_volume": 9022011,
+            "aberturas": 725064,
+            "cliques": 18270,
             "wpp_envios": 0,
             "wpp_volume": null,
             "resultado": null
@@ -6880,79 +6895,79 @@
         "dias": {
           "2026-11-04": {
             "tema": "Quarta de crédito – simule já",
-            "assunto": "Confira a oferta de crédito, *|PRIMEIRO_NOME|*",
-            "mensagem": "Olá, *|PRIMEIRO_NOME|*! Simule seu crédito e veja se cabe no seu orçamento. [link]"
+            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito hoje",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Que tal simular um crédito que cabe no seu orçamento? Consulte as condições e veja se é a sua hora. [link]"
           },
           "2026-11-05": {
-            "tema": "Quinta – você viu? Simule",
-            "assunto": "Você viu o e‑mail de 04/11? *|PRIMEIRO_NOME|*",
-            "mensagem": "Perdeu a chance de simular? Consulte as condições agora. [link]"
+            "tema": "Você viu? – reimpacto 04/11",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira novamente",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Reforçando a oportunidade de simular crédito. Veja se cabe no seu orçamento. [link]"
           },
           "2026-11-07": {
-            "tema": "Sábado de crédito – veja se cabe",
-            "assunto": "Oferta de crédito para você, *|PRIMEIRO_NOME|*",
-            "mensagem": "Bom dia! Simule seu crédito e organize suas finanças. [link]"
+            "tema": "Sábado de crédito – simule agora",
+            "assunto": "*|PRIMEIRO_NOME|*, sexta do crédito",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Simule um crédito que se ajusta ao seu plano e veja se cabe no seu orçamento. [link]"
           },
           "2026-11-08": {
-            "tema": "Domingo – lembrete de crédito",
-            "assunto": "Você viu a oferta de 07/11? *|PRIMEIRO_NOME|*",
-            "mensagem": "Ainda dá tempo de simular. Consulte as condições. [link]"
+            "tema": "Reimpacto de sábado – você viu?",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, última chance de simular",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Ainda dá tempo de simular o crédito que pode atender suas necessidades. Consulte as condições. [link]"
           },
           "2026-11-11": {
-            "tema": "Quarta de crédito – simule já",
-            "assunto": "Nova oportunidade de crédito, *|PRIMEIRO_NOME|*",
-            "mensagem": "Olá! Simule seu crédito e veja se cabe no seu orçamento. [link]"
+            "tema": "Quarta de crédito – veja condições",
+            "assunto": "*|PRIMEIRO_NOME|*, crédito que se adapta ao seu plano",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Simule agora e descubra se o crédito cabe no seu orçamento. Consulte as condições. [link]"
           },
           "2026-11-12": {
-            "tema": "Quinta – você viu? Simule",
-            "assunto": "Reenvio: oportunidade de crédito, *|PRIMEIRO_NOME|*",
-            "mensagem": "Não perca! Consulte as condições e simule agora. [link]"
+            "tema": "Reimpacto 11/11 – você viu?",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira novamente",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Reforçando a chance de simular crédito que se encaixa no seu orçamento. Veja as condições. [link]"
           },
           "2026-11-14": {
-            "tema": "Sábado de crédito – simule hoje",
-            "assunto": "Última chance de crédito nesta semana, *|PRIMEIRO_NOME|*",
-            "mensagem": "Aproveite e simule seu crédito. Organize seu orçamento. [link]"
+            "tema": "Sábado de crédito – simule já",
+            "assunto": "*|PRIMEIRO_NOME|*, oportunidade de crédito neste sábado",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Simule um crédito que combina com seu planejamento financeiro. Consulte as condições. [link]"
           },
           "2026-11-18": {
-            "tema": "Quarta do crédito – simule já",
-            "assunto": "🌟 *|PRIMEIRO_NOME|*, simule sua linha de crédito",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, que tal simular um crédito que cabe no seu orçamento? Clique aqui [link]"
+            "tema": "Quarta de crédito – simule já",
+            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito hoje",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, que tal simular um crédito que cabe no seu orçamento? 😊 [link]"
           },
           "2026-11-19": {
-            "tema": "Quinta do crédito – veja novamente",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira a oferta de crédito",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, ainda dá tempo de consultar as condições do crédito. Acesse [link]"
+            "tema": "Revisite: crédito – veja se cabe",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu o crédito que preparamos?",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, você viu nossa oferta? Com o adiantamento salarial amanhã, simule e veja se cabe no seu orçamento. [link]"
           },
           "2026-11-21": {
-            "tema": "Sábado do crédito – simule agora",
-            "assunto": "🌞 *|PRIMEIRO_NOME|*, simule seu crédito neste sábado",
-            "mensagem": "Bom dia *|PRIMEIRO_NOME|*, veja se o crédito cabe no seu orçamento neste fim de semana. [link]"
+            "tema": "Sábado de crédito – simule agora",
+            "assunto": "*|PRIMEIRO_NOME|*, aproveite o sábado para simular seu crédito",
+            "mensagem": "Bom sábado, *|PRIMEIRO_NOME|*! Simule seu crédito e veja se cabe no seu orçamento. 😊 [link]"
           },
           "2026-11-22": {
-            "tema": "Domingo de crédito – lembrete",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*, lembrete de crédito",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, reforçando: consulte as condições do crédito e veja se cabe no seu plano. [link]"
+            "tema": "Revisite: crédito de sábado",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu a oferta de sábado?",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, ainda dá tempo de simular o crédito do sábado e conferir se cabe no seu orçamento. [link]"
           },
           "2026-11-25": {
-            "tema": "Quarta do crédito – simule já",
-            "assunto": "🔔 *|PRIMEIRO_NOME|*, simule seu crédito hoje",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, descubra como o crédito pode se encaixar no seu orçamento. Simule aqui [link]"
+            "tema": "Quarta de crédito – confira",
+            "assunto": "*|PRIMEIRO_NOME|*, descubra condições de crédito hoje",
+            "mensagem": "Olá *|PRIMEIRO_NOME|*, consulte as condições e veja se o crédito cabe no seu orçamento. 😊 [link]"
           },
           "2026-11-28": {
-            "tema": "Sábado do crédito – veja opções",
-            "assunto": "🌟 *|PRIMEIRO_NOME|*, opções de crédito neste sábado",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, veja as opções de crédito disponíveis e simule sem compromisso. [link]"
+            "tema": "Sábado de crédito – simule",
+            "assunto": "*|PRIMEIRO_NOME|*, sábado é dia de simular crédito",
+            "mensagem": "Feliz sábado, *|PRIMEIRO_NOME|*! Simule seu crédito e veja se cabe no seu orçamento. [link]"
           },
           "2026-11-29": {
-            "tema": "Domingo do crédito – simule fácil",
-            "assunto": "*|PRIMEIRO_NOME|*, simule crédito neste domingo",
-            "mensagem": "Bom domingo *|PRIMEIRO_NOME|*, confira se o crédito cabe no seu orçamento. Simule agora [link]"
+            "tema": "Domingo de crédito – veja opções",
+            "assunto": "*|PRIMEIRO_NOME|*, domingo tranquilo? Simule crédito",
+            "mensagem": "Bom domingo, *|PRIMEIRO_NOME|*. Consulte as condições e veja se cabe no seu orçamento. 😊 [link]"
           }
         },
-        "estrategia": "Vamos enviar <b>9</b> e‑mails nos dias Domingo, Quarta, Quinta e Sábado dentro da janela 18h‑20h e <b>4</b> mensagens de WhatsApp nos mesmos dias, aproveitando que as datas de 16/09 (quarta) e 19/09 (sábado) geraram <b>49</b> leads cada, representando 52% do total; assim, maximizamos a geração de leads de crédito ao incentivar o usuário a <b>simular</b> e <b>consultar as condições</b>.",
+        "estrategia": "Com base no histórico de <b>49</b> leads nas quartas e sábados, que concentraram <b>52%</b> do total, o plano combina envios em domingos, quartas, quintas e sábados, totalizando <b>9</b> e‑mails e <b>4</b> mensagens por WhatsApp, sempre no horário de <b>18h‑20h</b>. A sequência semanal garante contato frequente, permitindo que os parceiros <b>simulem</b> e <b>consultem as condições</b> de crédito, aumentando a chance de conversão. Nos dias de pagamento, reforçamos a importância da organização financeira.",
         "notas": {
-          "email": "Usar apenas e‑mail concentra a comunicação na janela de 18h‑20h, permitindo mensurar a taxa de abertura, mas perde o alcance imediato que o WhatsApp pode trazer.",
-          "whatsapp": "Com apenas WhatsApp, não há histórico para comparar desempenho, então será necessário monitorar a taxa de resposta desde o primeiro disparo."
+          "email": "Usando apenas e‑mail, o parceiro terá <b>12</b> envios mensais no horário de <b>18h‑20h</b>, sem mensagens de WhatsApp.",
+          "whatsapp": "Com WhatsApp exclusivo, o parceiro enviará <b>9</b> mensagens nos dias Domingo, Quarta e Sábado, porém ainda não há histórico de desempenho para esse canal."
         },
         "evidencias": [
           "Sem histórico de e-mail no hub ainda: os dias da semana foram escolhidos pelo padrão de leads — 16/09 (quarta, 49 leads) e 19/09 (sábado, 49 leads) concentram 52% do total."
@@ -6960,7 +6975,7 @@
         "premissas": [
           "Um parceiro por dia na base engajada de e-mail e um por dia no WhatsApp — os parceiros dividem a mesma base de contatos.",
           "E-mail principal: 2 por semana para engajados (definido no parceiro.json), na janela 18h | 20h.",
-          "Volume do e-mail: ≈ 722 mil contatos (mediana dos últimos envios para engajados da base Supertroco (compartilhada entre os parceiros)).",
+          "Volume do e-mail: ≈ 772 mil contatos (mediana dos últimos envios para engajados da base Supertroco (compartilhada entre os parceiros)).",
           "Repique (só e-mail): dia seguinte ao melhor e-mail da semana, só para quem não abriu.",
           "WhatsApp: 1 por semana junto com o e-mail, ou 2 por semana só com WhatsApp; R$ 0,42 por disparo.",
           "Sem histórico de WhatsApp: janelas 10h | 12h e 17h | 19h do calendário de referência até chegarem os primeiros dados.",
@@ -6974,7 +6989,7 @@
           "volume_por_disparo": null,
           "historico": false
         },
-        "volume_email": 722025,
+        "volume_email": 771975,
         "fonte_volume": "mediana dos últimos envios para engajados da base Supertroco (compartilhada entre os parceiros)"
       }
     }
