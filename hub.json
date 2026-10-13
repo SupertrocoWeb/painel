@@ -162,12 +162,15 @@
           }
         ],
         "ia": {
-          "destaque": "[Defina GROQ_API_KEY para a leitura comparativa.]",
-          "comparativo": "[Defina GROQ_API_KEY.]",
+          "destaque": "O resultado foi puxado principalmente pelas <b>40536.8</b> reais em vendas da Sorte Online, impulsionadas por 39 campanhas de e‑mail com <b>9.2%</b> de abertura. No segmento de crédito, a Crefaz gerou <b>188</b> leads, com pico de <b>49</b> leads em 16/09, apesar de apenas 2 envios de e‑mail.",
+          "comparativo": "A Sorte Online mostrou maior eficiência de volume, com 30,9 milhões de e‑mails entregues e taxa de abertura de 9.2%, porém o CTR ficou baixo (0.24%). Já a Crefaz, com apenas 194 mil entregas, teve CTR ligeiramente superior (0.26%) e gerou leads de forma consistente, mas a escassez de campanhas limita o alcance. Nenhum dos parceiros utilizou WhatsApp, representando uma oportunidade não explorada em ambos os casos.",
           "alertas": [
-            "Defina GROQ_API_KEY para gerar os alertas."
+            "CTR da Sorte Online abaixo de 0.3% pode indicar baixa relevância do conteúdo",
+            "CAC da Sorte Online em R$13.03 pode subir se o volume de aquisições cair",
+            "Crefaz depende de poucos dias de pico para gerar leads, risco de volatilidade",
+            "Ausência total de ações por WhatsApp reduz potencial de conversão em ambos os parceiros"
           ],
-          "prioridade": "[Defina GROQ_API_KEY.]"
+          "prioridade": "Concentrar esforços na Sorte Online no próximo ciclo, pois já demonstra capacidade de gerar receita significativa. É recomendável otimizar o conteúdo das campanhas para melhorar o CTR, reduzir o CAC e iniciar testes de disparos via WhatsApp para ampliar a taxa de conversão. Paralelamente, incrementar a frequência de e‑mail da Crefaz e integrar um fluxo de WhatsApp pode estabilizar a geração de leads e reduzir a dependência de picos pontuais."
         }
       },
       {
@@ -253,12 +256,15 @@
           }
         ],
         "ia": {
-          "destaque": "[Defina GROQ_API_KEY para a leitura comparativa.]",
-          "comparativo": "[Defina GROQ_API_KEY.]",
+          "destaque": "O volume de <b>6,235,499</b> e‑mails entregues gerou <b>333</b> pedidos, mas a taxa de abertura de <b>5.0%</b> e o CTR de <b>0.12%</b> indicam baixa efetividade.",
+          "comparativo": "Com apenas o parceiro Sorte Online, o canal e‑mail foi o único responsável pelas aquisições, resultando em <b>213</b> aquisições e receita de <b>R$6,390.00</b>. O custo de aquisição (CAC) ficou em <b>R$30.00</b>, próximo ao custo por mil (TKM) de <b>R$28.31</b>. Não houve disparos ou conversões via WhatsApp, limitando a diversificação de canais.",
           "alertas": [
-            "Defina GROQ_API_KEY para gerar os alertas."
+            "Taxa de abertura de <b>5.0%</b> está muito abaixo da média esperada.",
+            "CTR de <b>0.12%</b> indica engajamento fraco dos e‑mails.",
+            "Ausência de atividade no WhatsApp pode estar perdendo oportunidades de conversão.",
+            "Alto número de entregas (<b>6.2M</b>) sem correspondência em leads ou conversões adicionais."
           ],
-          "prioridade": "[Defina GROQ_API_KEY.]"
+          "prioridade": "No próximo ciclo, o foco deve ser melhorar o engajamento dos e‑mails (aumentar abertura e CTR) através de segmentação e testes de assunto, além de ativar o canal WhatsApp para complementar a geração de leads e reduzir a dependência exclusiva do e‑mail."
         }
       },
       {
@@ -371,12 +377,15 @@
           }
         ],
         "ia": {
-          "destaque": "[Defina GROQ_API_KEY para a leitura comparativa.]",
-          "comparativo": "[Defina GROQ_API_KEY.]",
+          "destaque": "<b>R$18.283,58</b> em vendas foram gerados pelo parceiro Sorte Online, impulsionados por <b>13 campanhas de e‑mail</b> que alcançaram <b>8,84 mi</b> entregas com <b>12,2 %</b> de abertura. No segmento de crédito, Crefaz entregou <b>188 leads</b>, com pico de <b>49 leads</b> em 16/09, apesar de apenas <b>2 campanhas</b> e <b>7,9 %</b> de abertura.",
+          "comparativo": "Sorte Online mostrou maior eficiência de e‑mail em volume, entregando quase 9 mi de mensagens e convertendo em <b>444 pedidos</b>, enquanto Crefaz, com entrega de <b>0,19 mi</b>, gerou <b>188 leads</b>. Ambos mantiveram o mesmo <b>CTR de 0,26 %</b>, mas o custo de aquisição de Sorte Online (<b>R$7,40</b> por pedido) está acima da média desejada. Nenhum dos parceiros utilizou WhatsApp, perdendo um canal potencial de conversão.",
           "alertas": [
-            "Defina GROQ_API_KEY para gerar os alertas."
+            "CAC de Sorte Online está em <b>R$7,40</b>, indicando margem apertada",
+            "Crefaz tem baixa taxa de abertura (<b>7,9 %</b>) e poucas campanhas, limitando alcance",
+            "Ausência total de ações por WhatsApp reduz oportunidades de engajamento",
+            "Pico de leads de Crefaz em 16/09 (49) evidencia alta volatilidade diária"
           ],
-          "prioridade": "[Defina GROQ_API_KEY.]"
+          "prioridade": "O próximo ciclo deve focar em Crefaz, ampliando a frequência e segmentação das campanhas de e‑mail para elevar a taxa de abertura e estabilizar a geração de leads. Além disso, implementar uma estratégia de WhatsApp pode transformar leads em oportunidades de crédito, aumentando a conversão e diversificando os canais de aquisição."
         }
       },
       {
@@ -462,12 +471,15 @@
           }
         ],
         "ia": {
-          "destaque": "[Defina GROQ_API_KEY para a leitura comparativa.]",
-          "comparativo": "[Defina GROQ_API_KEY.]",
+          "destaque": "O resultado de <b>R$12.825,00</b> em vendas foi impulsionado pelo grande volume de entregas de e‑mail (<b>15.842.400</b> mensagens) que gerou <b>345 pedidos</b> e uma taxa de conversão de <b>7,87%</b>.",
+          "comparativo": "Com apenas o parceiro Sorte Online ativo, a eficiência do canal de e‑mail foi a responsável pelo desempenho, apresentando 21 campanhas com taxa de abertura de <b>9,2%</b> e CTR de <b>0,28%</b>. O WhatsApp não foi utilizado, portanto não há contribuição desse canal. Não há outros parceiros para comparar, mas o custo de aquisição (CAC) ficou em <b>R$4,77</b> por pedido, enquanto o custo por mil envios (TKM) foi de <b>R$37,17</b>.",
           "alertas": [
-            "Defina GROQ_API_KEY para gerar os alertas."
+            "Taxa de abertura (<b>9,2%</b>) e CTR (<b>0,28%</b>) estão abaixo da média esperada para campanhas de e‑mail.",
+            "Alto custo por mil envios (TKM <b>R$37,17</b>) pode comprometer a rentabilidade.",
+            "Ausência total de disparos e conversões via WhatsApp indica oportunidade não explorada.",
+            "Nenhum lead gerado, limitando diversificação de modelo de negócio."
           ],
-          "prioridade": "[Defina GROQ_API_KEY.]"
+          "prioridade": "No próximo ciclo, o foco deve ser otimizar a performance do e‑mail, investindo em segmentação e criativos para elevar abertura e CTR, além de iniciar testes piloto no WhatsApp para validar um novo canal de conversão. Paralelamente, monitorar o CAC e buscar reduzir o TKM, garantindo que o custo de aquisição permaneça sustentável."
         }
       }
     ],
@@ -579,12 +591,15 @@
       }
     ],
     "ia": {
-      "destaque": "[Defina GROQ_API_KEY para a leitura comparativa.]",
-      "comparativo": "[Defina GROQ_API_KEY.]",
+      "destaque": "O resultado foi puxado principalmente pelas <b>40536.8</b> reais em vendas da Sorte Online, impulsionadas por 39 campanhas de e‑mail com <b>9.2%</b> de abertura. No segmento de crédito, a Crefaz gerou <b>188</b> leads, com pico de <b>49</b> leads em 16/09, apesar de apenas 2 envios de e‑mail.",
+      "comparativo": "A Sorte Online mostrou maior eficiência de volume, com 30,9 milhões de e‑mails entregues e taxa de abertura de 9.2%, porém o CTR ficou baixo (0.24%). Já a Crefaz, com apenas 194 mil entregas, teve CTR ligeiramente superior (0.26%) e gerou leads de forma consistente, mas a escassez de campanhas limita o alcance. Nenhum dos parceiros utilizou WhatsApp, representando uma oportunidade não explorada em ambos os casos.",
       "alertas": [
-        "Defina GROQ_API_KEY para gerar os alertas."
+        "CTR da Sorte Online abaixo de 0.3% pode indicar baixa relevância do conteúdo",
+        "CAC da Sorte Online em R$13.03 pode subir se o volume de aquisições cair",
+        "Crefaz depende de poucos dias de pico para gerar leads, risco de volatilidade",
+        "Ausência total de ações por WhatsApp reduz potencial de conversão em ambos os parceiros"
       ],
-      "prioridade": "[Defina GROQ_API_KEY.]"
+      "prioridade": "Concentrar esforços na Sorte Online no próximo ciclo, pois já demonstra capacidade de gerar receita significativa. É recomendável otimizar o conteúdo das campanhas para melhorar o CTR, reduzir o CAC e iniciar testes de disparos via WhatsApp para ampliar a taxa de conversão. Paralelamente, incrementar a frequência de e‑mail da Crefaz e integrar um fluxo de WhatsApp pode estabilizar a geração de leads e reduzir a dependência de picos pontuais."
     },
     "cronograma": {
       "mes": "2026-11",
@@ -1551,8 +1566,12 @@
           }
         }
       },
-      "estrategia": "",
-      "cuidados": [],
+      "estrategia": "O calendário de e‑mail alocou o <b>02</b>, <b>03</b>, <b>06</b>, <b>09</b>, <b>10</b>, <b>13</b>, <b>16</b>, <b>17</b>, <b>20</b>, <b>23</b>, <b>24</b>, <b>27</b> e <b>30</b> para a Sorte Online, seguindo sua cadência de segunda, terça e sexta; já o Crefaz recebeu as quartas‑feiras (<b>04</b>, <b>11</b>, <b>18</b>, <b>25</b>) e sábados (<b>07</b>, <b>14</b>, <b>21</b>, <b>28</b>) mais um domingo (<b>29</b>), conforme o padrão de geração de leads. No WhatsApp, a Sorte Online ficou com os sábados (<b>07</b>, <b>14</b>, <b>21</b>, <b>28</b>) aproveitando a maior taxa de abertura, enquanto o Crefaz recebeu quintas (<b>05</b>, <b>19</b>) e domingos (<b>08</b>, <b>22</b>) alinhados ao histórico d…",
+      "cuidados": [
+        "Verificar entregabilidade e taxa de abertura nos feriados (02,15,20) e nos dias de alta compra (27,30).",
+        "Monitorar a conformidade de opt‑out após cada disparo, sobretudo nos envios de WhatsApp aos sábados.",
+        "Confirmar a cadência de <b>3</b> dias para a Sorte Online e a frequência semanal para o Crefaz, corrigindo desvios imediatamente."
+      ],
       "regras": [
         "Um parceiro por dia na base engajada de e-mail.",
         "Um parceiro por dia no WhatsApp.",
@@ -3211,14 +3230,18 @@
           },
           "whatsapp": null,
           "ia": {
-            "motor": "[Defina GROQ_API_KEY para gerar esta resenha.]",
-            "diagnostico": "[Defina GROQ_API_KEY para a análise automática.]",
-            "conversao": "[Defina GROQ_API_KEY.]",
+            "motor": "<b>13.7%</b> de abertura na base engajada vs <b>1.2%</b> na desengajada, diferença de <b>12.5 pontos percentuais</b>, refletindo maior contribuição da base engajada para a receita de R$40,536.80.",
+            "diagnostico": "Os disparos para a base engajada geraram picos de vendas, como 04/08 (R$2,770) e 11/09 (R$4,164), enquanto os envios à base desengajada apresentaram resultados modestos, exemplo 05/08 (R$941). O índice geral de abertura de e‑mail (9.2%) está abaixo da taxa da base engajada, indicando oportunidade de segmentação.",
+            "conversao": "A taxa de conversão do site foi de 3.38% (1,122 pedidos em 28,304 sessões). O CTR dos e‑mails está em 0.24%, o principal gargalo que limita o fluxo de visitas; cada pedido custa R$13.03 em CAC.",
             "sustenta": [
-              "Defina GROQ_API_KEY para gerar os pontos de apoio."
+              "Vendas totais: R$40,536.80",
+              "Pedidos realizados: 1,122",
+              "CAC médio: R$13.03",
+              "Ticket médio: R$36.13",
+              "Receita da Supertroco: R$9,500.87"
             ],
-            "recomendacao": "[Defina GROQ_API_KEY.]",
-            "whatsapp": ""
+            "recomendacao": "Envie a próxima campanha às 19h de sábado, focando na base engajada (<b>13.7%</b> de abertura), com assunto tipo '*|PRIMEIRO_NOME|*, sua surpresa de hoje na Loto', e faça repique na segunda‑feira às 13h para a mesma base. Use padrão de assunto com personalização e promessa de prêmio, mantendo a frequência de 1 envio por semana.",
+            "whatsapp": "Canal WhatsApp está pronto, aguardando os primeiros disparos."
           }
         },
         {
@@ -3591,14 +3614,18 @@
           "parcial": true,
           "ate": "12/10",
           "ia": {
-            "motor": "[Defina GROQ_API_KEY para gerar esta resenha.]",
-            "diagnostico": "[Defina GROQ_API_KEY para a análise automática.]",
-            "conversao": "[Defina GROQ_API_KEY.]",
+            "motor": "A base engajada tem taxa de abertura de <b>6.22%</b> contra <b>0%</b> da base desengajada, indicando que apenas os contatos ativos geram abertura e, consequentemente, a maior parte da receita de aquisições.",
+            "diagnostico": "Os dias com melhor abertura (Sexta – 6.62% e Terça – 5.83%) coincidem com os maiores picos de vendas (ex.: 02/10 R$ 2.090,99 e 06/10 R$ 2.374,48). Contudo, a taxa de abertura geral está baixa (5.0%) e o CTR de 0.12% limita o tráfego para o site.",
+            "conversao": "A taxa de conversão do site está em <b>2.7%</b>, mas o gargalo está no CTR (<b>0.12%</b>), resultando em apenas 7.247 cliques a partir de 6.235.499 entregas; isso equivale a um custo médio de <b>R$ 19.19</b> por pedido (R$ 6.390 CAC ÷ 333 pedidos).",
             "sustenta": [
-              "Defina GROQ_API_KEY para gerar os pontos de apoio."
+              "<b>5.0%</b> taxa de abertura geral",
+              "<b>0.12%</b> CTR geral",
+              "<b>2.7%</b> taxa de conversão site",
+              "<b>R$ 30</b> CAC por aquisição",
+              "<b>R$ 19.19</b> custo médio por pedido"
             ],
-            "recomendacao": "[Defina GROQ_API_KEY.]",
-            "whatsapp": ""
+            "recomendacao": "Enviar e‑mails para a base engajada nas Sextas‑feiras, entre 15h e 18h, usando assunto no padrão \"*|PRIMEIRO_NOME|*, R$ XX milhões acumulados\" (ex.: \"*|PRIMEIRO_NOME|*, R$ 82 milhões acumulados para sábado 🍀\"). Caso não haja abertura, repicar na Terça‑feira, 12h‑15h, com variação do valor acumulado.",
+            "whatsapp": "O canal WhatsApp está pronto e aguardando os primeiros disparos; ainda não há resultados."
           }
         },
         {
@@ -4328,14 +4355,18 @@
           "parcial": false,
           "ate": "30/09",
           "ia": {
-            "motor": "[Defina GROQ_API_KEY para gerar esta resenha.]",
-            "diagnostico": "[Defina GROQ_API_KEY para a análise automática.]",
-            "conversao": "[Defina GROQ_API_KEY.]",
+            "motor": "A base engajada tem <b>15.0%</b> de abertura contra <b>0.0%</b> da desengajada, indicando que a receita vem quase que exclusivamente dos contatos engajados.",
+            "diagnostico": "Dias com disparos para engajados (ex.: 05/09, 11/09) apresentaram picos de vendas (R$ 1,133 e R$ 4,164), porém há vendas relevantes mesmo sem abertura (ex.: 02/09, 03/09). O e‑mail ajuda, mas não é o único motor de conversão.",
+            "conversao": "A taxa de conversão do site foi <b>3.25%</b> (444 pedidos/13,680 sessões). O gargalo está na baixa abertura (<b>12.2%</b>) e CTR (<b>0.26%</b>), que limitam o volume de tráfego qualificado. Cada pedido custa em média R$ 4.12 em aquisição (CAC total R$ 1,828.37/444).",
             "sustenta": [
-              "Defina GROQ_API_KEY para gerar os pontos de apoio."
+              "<b>12.2%</b> taxa de abertura geral",
+              "<b>0.26%</b> taxa de cliques (CTR)",
+              "<b>3.25%</b> taxa de conversão do site",
+              "<b>R$ 1,828.37</b> de receita para a Supertroco (10% comissão)",
+              "<b>R$ 7.40</b> CAC por aquisição"
             ],
-            "recomendacao": "[Defina GROQ_API_KEY.]",
-            "whatsapp": ""
+            "recomendacao": "Enviar a campanha às <b>19h</b> de <b>sexta‑feira</b> para a base engajada, usando assunto no formato \"*|PRIMEIRO_NOME|*, uma surpresa para você aproveitar hoje\". Repetir (repique) no sábado às <b>10h</b> para quem não abriu, mantendo a mesma personalização. Manter o padrão de assunto curto, com nome e promessa de benefício imediato.",
+            "whatsapp": "O canal WhatsApp está pronto, aguardando os primeiros disparos."
           }
         },
         {
@@ -5079,14 +5110,18 @@
           "parcial": false,
           "ate": "31/08",
           "ia": {
-            "motor": "[Defina GROQ_API_KEY para gerar esta resenha.]",
-            "diagnostico": "[Defina GROQ_API_KEY para a análise automática.]",
-            "conversao": "[Defina GROQ_API_KEY.]",
+            "motor": "A base engajada registra abertura de <b>14.1%</b> enquanto a desengajada apenas <b>1.2%</b>; esse gap indica que as vendas concentram‑se na base engajada, potencializando a receita.",
+            "diagnostico": "Nos dias em que enviamos para a base engajada (ex.: 04/08, 07/08, 08/08) as vendas ultrapassaram R$2 700, enquanto o disparo para desengajados (05/08) gerou apenas R$941. Isso evidencia que a taxa de abertura está diretamente ligada ao volume de pedidos.",
+            "conversao": "A taxa de conversão do site está em <b>7.87%</b>, porém a abertura de e‑mail é de <b>9.2%</b> e o CTR de <b>0.28%</b>, indicando que o maior gargalo está na geração de cliques. Cada pedido custa R$4.77 em aquisição, totalizando R$1 282,5 de receita para a Supertroco.",
             "sustenta": [
-              "Defina GROQ_API_KEY para gerar os pontos de apoio."
+              "Receita total: R$12 825,00",
+              "Pedidos realizados: 345",
+              "Ticket médio: R$37,17",
+              "CAC: R$4,77",
+              "Abertura geral: 9.2% (engajada 14.1%, desengajada 1.2%)"
             ],
-            "recomendacao": "[Defina GROQ_API_KEY.]",
-            "whatsapp": ""
+            "recomendacao": "Para o próximo ciclo, programe envios às <b>Sábados</b> entre <b>18h e 24h</b> (horário com maior CTR de 0.4) para a base engajada, utilizando o padrão de assunto “*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀”. Caso não haja abertura, faça repique na <b>Segunda‑feira</b> no mesmo horário, mantendo a personalização e o emoji de sorte.",
+            "whatsapp": "O canal WhatsApp está pronto, aguardando os primeiros disparos."
           }
         }
       ],
@@ -5607,115 +5642,115 @@
         },
         "dias": {
           "2026-11-02": {
-            "tema": "Feriado — Finados",
-            "assunto": "*|PRIMEIRO_NOME|*, feriado — Finados",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Resultado do Sorteio – confira",
+            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de Finados",
+            "mensagem": "Confira o resultado do sorteio de hoje. Jogue com responsabilidade. [link]"
           },
           "2026-11-03": {
-            "tema": "Bolões da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Bolões da semana – confira",
+            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana para apostar",
+            "mensagem": "Confira os bolões e concursos desta semana. Jogue com responsabilidade. [link]"
           },
           "2026-11-06": {
-            "tema": "Aposte com praticidade",
-            "assunto": "*|PRIMEIRO_NOME|*, aposte com praticidade",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Sexta de jogos – confira",
+            "assunto": "*|PRIMEIRO_NOME|*, jogos e bolões para a sexta",
+            "mensagem": "Confira as apostas de sexta e os concursos disponíveis. Jogue com responsabilidade. [link]"
           },
           "2026-11-07": {
-            "tema": "Confira os concursos",
-            "assunto": "*|PRIMEIRO_NOME|*, confira os concursos",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Reforço: jogos de sexta",
+            "assunto": "*|PRIMEIRO_NOME|*, viu os jogos de sexta?",
+            "mensagem": "Confira novamente os bolões de sexta. Jogue com responsabilidade. [link]"
           },
           "2026-11-08": {
-            "tema": "Você viu? Reimpacto da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu isso?",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Reenvio: jogos de sexta – confira",
+            "assunto": "*|PRIMEIRO_NOME|*, não perdeu os jogos de sexta?",
+            "mensagem": "Confira os bolões da sexta que ainda estão valendo. Jogue com responsabilidade. [link]"
           },
           "2026-11-09": {
-            "tema": "Seus jogos da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, seus jogos da semana",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Resultado do Sorteio – confira",
+            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje",
+            "mensagem": "Confira o resultado do sorteio de hoje. Jogue com responsabilidade. [link]"
           },
           "2026-11-10": {
-            "tema": "Bolões da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Novos bolões – confira",
+            "assunto": "*|PRIMEIRO_NOME|*, novos bolões para apostar",
+            "mensagem": "Confira os novos bolões e concursos da semana. Jogue com responsabilidade. [link]"
           },
           "2026-11-13": {
-            "tema": "Aposte com praticidade",
-            "assunto": "*|PRIMEIRO_NOME|*, aposte com praticidade",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Sexta da Loteria — jogue hoje",
+            "assunto": "*|PRIMEIRO_NOME|*, confira o bolão da sexta 🍀",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira os jogos de hoje e participe do bolão da sexta. Jogue com responsabilidade! [link]"
           },
           "2026-11-14": {
-            "tema": "Confira os concursos",
-            "assunto": "*|PRIMEIRO_NOME|*, confira os concursos",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Sábado – você viu?",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu o bolão de sexta?",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, você viu o bolão de sexta? Confira e jogue com responsabilidade! [link]"
           },
           "2026-11-15": {
-            "tema": "Feriado — Proclamação da República",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu isso?",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Domingo – repita o bolão",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu? Bolão de sexta ainda vale",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira o bolão de sexta e jogue com responsabilidade neste feriado da Proclamação da República! [link]"
           },
           "2026-11-16": {
-            "tema": "Seus jogos da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, seus jogos da semana",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Resultado do Sorteio",
+            "assunto": "*|PRIMEIRO_NOME|*, confira o resultado do sorteio",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira o resultado do sorteio de hoje e jogue com responsabilidade! [link]"
           },
           "2026-11-17": {
-            "tema": "Bolões da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Terça de Loteria — nova chance",
+            "assunto": "*|PRIMEIRO_NOME|*, nova chance de bolão nesta terça 🍀",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira a nova chance de bolão da terça e jogue com responsabilidade! [link]"
           },
           "2026-11-20": {
-            "tema": "Feriado — Dia da Consciência Negra",
-            "assunto": "*|PRIMEIRO_NOME|*, feriado — Dia da Consciência Negra",
+            "tema": "Sexta da Consciência Negra — jogue",
+            "assunto": "*|PRIMEIRO_NOME|*, Sexta da Consciência Negra: confira o bolão",
             "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
           },
           "2026-11-21": {
-            "tema": "Confira os concursos",
-            "assunto": "*|PRIMEIRO_NOME|*, confira os concursos",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Sábado – lembrete do bolão",
+            "assunto": "*|PRIMEIRO_NOME|*, lembrete: bolão de sexta ainda está aberto",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, lembrete: o bolão de sexta ainda está disponível. Confira e jogue com responsabilidade! [link]"
           },
           "2026-11-22": {
-            "tema": "Você viu? Reimpacto da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu isso?",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Domingo de sorte — confira o bolão",
+            "assunto": "*|PRIMEIRO_NOME|*, não perdeu a chance de jogar hoje",
+            "mensagem": "Domingo é dia de bolão! Confira os jogos da semana e participe do nosso concurso. Jogue com responsabilidade. Boa sorte! 🍀 [link]"
           },
           "2026-11-23": {
-            "tema": "Seus jogos da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, seus jogos da semana",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Resultado do Sorteio – veja agora",
+            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje",
+            "mensagem": "Confira o resultado do sorteio de hoje e veja se sua aposta foi premiada. Jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-24": {
-            "tema": "Bolões da semana",
+            "tema": "Terça de jogos – participe do bolão",
             "assunto": "*|PRIMEIRO_NOME|*, bolões da semana",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "mensagem": "Confira os jogos de terça e entre no bolão exclusivo. Jogue com responsabilidade e aumente a diversão. 🍀 [link]"
           },
           "2026-11-26": {
-            "tema": "Você viu? Reimpacto da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu isso?",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Quinta de sorte – última chance",
+            "assunto": "*|PRIMEIRO_NOME|*, última chance de participar do bolão",
+            "mensagem": "Não perca a última chance de entrar no bolão de quinta. Confira os números e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-27": {
-            "tema": "Black Friday",
-            "assunto": "*|PRIMEIRO_NOME|*, Black Friday",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Black Friday da Loto – jogue e ganhe",
+            "assunto": "*|PRIMEIRO_NOME|*, Black Friday com jogos especiais",
+            "mensagem": "Black Friday chegou! Confira jogos especiais e participe do concurso. Jogue com responsabilidade e aproveite a emoção. 🍀 [link]"
           },
           "2026-11-28": {
-            "tema": "Resultado e novas apostas",
-            "assunto": "*|PRIMEIRO_NOME|*, resultado e novas apostas",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Sábado de sorte – reforço do bolão",
+            "assunto": "*|PRIMEIRO_NOME|*, reforço: não perca o bolão de sábado",
+            "mensagem": "Reforço de sábado! Confira o bolão que ainda está aberto e jogue com responsabilidade. Boa sorte! 🍀 [link]"
           },
           "2026-11-30": {
-            "tema": "Cyber Monday",
-            "assunto": "*|PRIMEIRO_NOME|*, Cyber Monday",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
+            "tema": "Cyber Monday – veja o resultado",
+            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de Cyber Monday",
+            "mensagem": "Cyber Monday: confira o resultado do sorteio de hoje e saiba se ganhou. Jogue com responsabilidade. 🍀 [link]"
           }
         },
-        "estrategia": "",
+        "estrategia": "Vamos combinar 13 envios de e‑mail nos dias segunda, sexta, sábado e terça, aproveitando a taxa de abertura média de <b>12,6%</b> no sábado e o melhor horário de clique entre <b>18h e 24h</b> (CTR <b>0,37%</b>), além de 4 disparos de WhatsApp nos mesmos dias, reforçando os resultados de venda médios de <b>R$ 1.087</b> nos dias de disparo e incluindo o conteúdo recorrente “Resultado do Sorteio” nas segundas (abertura <b>13,4%</b>). Cada mensagem trará jogos, bolões e concursos da semana, convidando o público a “confira” e “jogue com responsabilidade”.",
         "notas": {
-          "email": "",
-          "whatsapp": ""
+          "email": "Usar somente e‑mail mantém a taxa de abertura comprovada (<b>12,6%</b> no sábado) e o histórico de vendas de <b>R$ 1.087</b> por disparo, porém reduz o alcance nos dias em que o WhatsApp poderia complementar a comunicação.",
+          "whatsapp": "Optar apenas por WhatsApp abre um canal ainda sem histórico, permitindo testar novos horários e mensagens, mas sem a garantia de taxa de abertura ou de vendas observada nos e‑mails."
         },
         "evidencias": [
           "Abertura dos engajados: melhor na sábado (12,6% em 5 envio(s)); média geral 10,3%.",
@@ -6285,14 +6320,18 @@
           },
           "whatsapp": null,
           "ia": {
-            "motor": "[Defina GROQ_API_KEY para gerar esta resenha.]",
-            "diagnostico": "[Defina GROQ_API_KEY para a análise automática.]",
-            "conversao": "[Defina GROQ_API_KEY.]",
+            "motor": "<b>49</b> leads em 16/09 (Qua) e <b>49</b> em 19/09 (Sáb) impulsionaram <b>61,2%</b> do total, coincidindo com os disparos de e‑mail (abertura <b>7,9%</b>, CTR <b>0,26%</b>).",
+            "diagnostico": "Os leads se concentram nos dias de pico (Quarta e Sábado) com média de <b>14,75</b> e <b>17,0</b> por dia, enquanto nos demais dias a média fica abaixo de <b>5</b>. Foram 22 dias com geração de leads, indicando alta dependência de eventos específicos.",
+            "conversao": "Taxa de abertura de <b>7,9%</b> e CTR de <b>0,26%</b> geraram <b>508</b> cliques, dos quais <b>37,01%</b> converteram em leads (≈ 188 leads). Falta medir a taxa de entrega por campanha para validar a qualidade da base.",
             "sustenta": [
-              "Defina GROQ_API_KEY para gerar os pontos de apoio."
+              "Total de leads: 188",
+              "Média diária: 7,52",
+              "Leads nos dias de disparo: 98",
+              "Leads por clique: 37,01%",
+              "Custo por disparo WhatsApp (pronto): R$ 0,42"
             ],
-            "recomendacao": "[Defina GROQ_API_KEY.]",
-            "whatsapp": ""
+            "recomendacao": "Manter disparos de e‑mail nas quartas‑feiras e sábados, preferencialmente entre 15h e 18h, com cadência de duas envios por semana (uma em cada dia). Iniciar testes controlados no WhatsApp com 1 a 2 mensagens semanais, nos mesmos dias e horários, para avaliar a conversão sem comprometer o orçamento.",
+            "whatsapp": "Canal WhatsApp está configurado e pronto, aguardando os primeiros disparos."
           }
         },
         {
@@ -6765,14 +6804,18 @@
           "parcial": true,
           "ate": "25/09",
           "ia": {
-            "motor": "[Defina GROQ_API_KEY para gerar esta resenha.]",
-            "diagnostico": "[Defina GROQ_API_KEY para a análise automática.]",
-            "conversao": "[Defina GROQ_API_KEY.]",
+            "motor": "<b>49</b> leads em 16/09 (Qua) e <b>49</b> em 19/09 (Sáb) impulsionaram <b>61,2%</b> do total, coincidindo com os disparos de e‑mail (abertura <b>7,9%</b>, CTR <b>0,26%</b>).",
+            "diagnostico": "Os leads se concentram nos dias de pico (Quarta e Sábado) com média de <b>14,75</b> e <b>17,0</b> por dia, enquanto nos demais dias a média fica abaixo de <b>5</b>. Foram 22 dias com geração de leads, indicando alta dependência de eventos específicos.",
+            "conversao": "Taxa de abertura de <b>7,9%</b> e CTR de <b>0,26%</b> geraram <b>508</b> cliques, dos quais <b>37,01%</b> converteram em leads (≈ 188 leads). Falta medir a taxa de entrega por campanha para validar a qualidade da base.",
             "sustenta": [
-              "Defina GROQ_API_KEY para gerar os pontos de apoio."
+              "Total de leads: 188",
+              "Média diária: 7,52",
+              "Leads nos dias de disparo: 98",
+              "Leads por clique: 37,01%",
+              "Custo por disparo WhatsApp (pronto): R$ 0,42"
             ],
-            "recomendacao": "[Defina GROQ_API_KEY.]",
-            "whatsapp": ""
+            "recomendacao": "Manter disparos de e‑mail nas quartas‑feiras e sábados, preferencialmente entre 15h e 18h, com cadência de duas envios por semana (uma em cada dia). Iniciar testes controlados no WhatsApp com 1 a 2 mensagens semanais, nos mesmos dias e horários, para avaliar a conversão sem comprometer o orçamento.",
+            "whatsapp": "Canal WhatsApp está configurado e pronto, aguardando os primeiros disparos."
           }
         }
       ],
@@ -7190,80 +7233,80 @@
         },
         "dias": {
           "2026-11-04": {
-            "tema": "Crédito na hora certa",
-            "assunto": "*|PRIMEIRO_NOME|*, crédito na hora certa",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Quarta de crédito – simule agora",
+            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito hoje",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Que tal simular um crédito que cabe no seu orçamento? 😊 Acesse: [link]"
           },
           "2026-11-05": {
-            "tema": "Você viu? Reimpacto da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu isso?",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Quarta de crédito – lembrete",
+            "assunto": "Você viu? Simule seu crédito",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Ainda dá tempo de simular seu crédito. Veja as condições: [link]"
           },
           "2026-11-07": {
-            "tema": "Sexta do crédito",
+            "tema": "Sábado de crédito – veja se cabe",
             "assunto": "*|PRIMEIRO_NOME|*, sexta do crédito",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "mensagem": "Olá! Simule seu crédito e veja se cabe no seu orçamento. 😊 Comece agora: [link]"
           },
           "2026-11-08": {
-            "tema": "Simule em poucos minutos",
-            "assunto": "*|PRIMEIRO_NOME|*, simule em poucos minutos",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Sábado de crédito – lembrete",
+            "assunto": "Você viu? Simule seu crédito",
+            "mensagem": "Oi, ainda pode simular seu crédito. Confira as opções: [link]"
           },
           "2026-11-11": {
-            "tema": "Crédito sem sair de casa",
-            "assunto": "*|PRIMEIRO_NOME|*, crédito sem sair de casa",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Quarta de crédito – consulte condições",
+            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito hoje",
+            "mensagem": "Olá! Consulte as condições de crédito e veja se cabe no seu orçamento. 😊 Acesse: [link]"
           },
           "2026-11-12": {
-            "tema": "Você viu? Reimpacto da semana",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu isso?",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Quarta de crédito – lembrete",
+            "assunto": "Você viu? Simule seu crédito",
+            "mensagem": "Oi, ainda dá tempo de simular seu crédito. Veja as opções: [link]"
           },
           "2026-11-14": {
-            "tema": "Organize as contas do mês",
-            "assunto": "*|PRIMEIRO_NOME|*, organize as contas do mês",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Sábado de crédito – simule já",
+            "assunto": "*|PRIMEIRO_NOME|*, crédito rápido para seu fim de semana",
+            "mensagem": "Olá! Simule seu crédito agora e veja se cabe no seu orçamento. 😊 Clique: [link]"
           },
           "2026-11-18": {
-            "tema": "Sexta do crédito",
-            "assunto": "*|PRIMEIRO_NOME|*, sexta do crédito",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Quarta de crédito – simule agora",
+            "assunto": "Simule seu crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Simule um crédito que cabe no seu orçamento. 😊 [link]"
           },
           "2026-11-19": {
-            "tema": "Dia do adiantamento",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu isso?",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Quinta de crédito – veja se cabe",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Organize seu orçamento antes do adiantamento salarial dia 20. Simule e veja se cabe. 😊 [link]"
           },
           "2026-11-21": {
-            "tema": "Crédito sem sair de casa",
+            "tema": "Sábado de crédito – consulte as condições",
             "assunto": "*|PRIMEIRO_NOME|*, crédito sem sair de casa",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Consulte as condições e simule um crédito que se encaixe no seu plano. 😊 [link]"
           },
           "2026-11-22": {
-            "tema": "Crédito na hora certa",
-            "assunto": "*|PRIMEIRO_NOME|*, crédito na hora certa",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Domingo de crédito – veja novamente",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Ainda dá tempo de simular seu crédito e conferir as condições. 😊 [link]"
           },
           "2026-11-25": {
-            "tema": "Organize as contas do mês",
-            "assunto": "*|PRIMEIRO_NOME|*, organize as contas do mês",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Quarta de crédito – veja se cabe",
+            "assunto": "Simule seu crédito hoje, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Simule hoje e descubra se o crédito cabe no seu orçamento. 😊 [link]"
           },
           "2026-11-28": {
-            "tema": "Sexta do crédito",
-            "assunto": "*|PRIMEIRO_NOME|*, sexta do crédito",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Sábado de crédito – simule já",
+            "assunto": "Descubra seu crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Simule já e veja as condições do crédito que pode ser seu. 😊 [link]"
           },
           "2026-11-29": {
-            "tema": "Simule em poucos minutos",
-            "assunto": "*|PRIMEIRO_NOME|*, simule em poucos minutos",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Precisa de crédito? Simule na Crefaz e consulte as condições: [link]"
+            "tema": "Domingo de crédito – consulte condições",
+            "assunto": "Seu crédito espera, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Consulte as condições e simule um crédito que se ajuste ao seu plano. 😊 [link]"
           }
         },
-        "estrategia": "",
+        "estrategia": "Distribuiremos <b>9</b> envios de e‑mail e <b>4</b> de WhatsApp nos dias Domingo, Quarta, Quinta e Sábado, aproveitando a janela de <b>18h‑20h</b> para e‑mail. O histórico mostra que as quartas e sábados (16/09 e 19/09) geraram <b>49</b> leads cada, somando <b>52%</b> do total, por isso reforçaremos esses dias com chamadas para <b>simular</b> ou <b>consultar as condições</b>.",
         "notas": {
-          "email": "",
-          "whatsapp": ""
+          "email": "Usar somente e‑mail concentrará todos os <b>9</b> disparos no horário de <b>18h‑20h</b>, focando nos dias de maior performance.",
+          "whatsapp": "Com apenas WhatsApp, os <b>9</b> envios serão distribuídos nos mesmos dias, mas sem histórico de desempenho, exigindo monitoramento cuidadoso da taxa de resposta."
         },
         "evidencias": [
           "Sem histórico de e-mail no hub ainda: os dias da semana foram escolhidos pelo padrão de leads — 16/09 (quarta, 49 leads) e 19/09 (sábado, 49 leads) concentram 52% do total."
