@@ -479,6 +479,42 @@
   .brow .bv{font-family:var(--disp);font-weight:600;text-align:right;color:var(--ink2);font-size:12px;white-space:nowrap}
   .vazio{color:var(--muted);font-size:13px;padding:26px 0;text-align:center;line-height:1.6}
 
+  /* ---------- catalogo de campanhas e tabelas de cruzamento ---------- */
+  table.cat{min-width:720px}
+  table.cat th{padding-bottom:7px}
+  button.ord{all:unset;cursor:pointer;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;
+    border-radius:5px;padding:2px 3px;margin:-2px -3px}
+  button.ord:hover{color:var(--ink)}
+  button.ord.on{color:var(--brand);font-weight:700}
+  .app.escuro button.ord.on{color:var(--brand-lite)}
+  button.ord:focus-visible{outline:2px solid var(--brand)}
+  table.cat td{padding:9px 10px}
+  table.cat td.cn{white-space:normal;min-width:220px;line-height:1.45}
+  table.cat td.cn .pill{margin-left:2px;padding:1px 8px;font-size:10.5px}
+  table.cat .hr{color:var(--muted2);font-size:11.5px}
+  table.cat tbody tr:hover td{background:var(--soft)}
+  table.cat tfoot td{border-top:2px solid var(--line);border-bottom:none;font-weight:700;color:var(--ink);
+    padding-top:11px;font-size:12.5px}
+
+  /* ---------- funil do relatorio mensal (lead -> contrato) ---------- */
+  .fc{display:flex;flex-direction:column;gap:9px;margin-top:14px}
+  .fc-sec{display:flex;align-items:center;gap:7px;font-size:10.5px;font-weight:700;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.05em;margin-top:6px}
+  .fc-sec:first-child{margin-top:0}
+  .fc-l{display:grid;grid-template-columns:minmax(0,150px) 84px minmax(0,1fr) minmax(0,190px);gap:12px;
+    align-items:center;font-size:12.5px;cursor:default}
+  .fc-n{display:flex;align-items:center;gap:7px;color:var(--ink2);min-width:0}
+  .fc-v{font-family:var(--disp);font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+  .fc-t{display:block;height:12px;background:var(--track);border-radius:6px;overflow:hidden}
+  .fc-f{display:block;height:100%;border-radius:6px;transition:width .6s cubic-bezier(.3,1,.4,1)}
+  .fc-f.res{background:linear-gradient(90deg,var(--brand),var(--brand-lite))}
+  .fc-f.rd{background:linear-gradient(90deg,var(--accent),var(--accent-lite))}
+  .fc-p{font-size:11.5px;color:var(--muted)}
+  .fc-p b{color:var(--ink);font-family:var(--disp)}
+  .fc-fim{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .vs .t.ref{margin-top:4px;height:7px}
+  .vs .t.ref .f{background:var(--muted2)}
+
   /* ---------- IA ---------- */
   .ia{background:linear-gradient(155deg,var(--deep),var(--deep2));color:#DCEFEF;border-radius:16px;
     padding:22px 25px;margin-top:13px;box-shadow:var(--sh);transition:background .45s ease}
@@ -679,6 +715,8 @@
     .campos{grid-template-columns:minmax(0,1fr)}
     .week{height:118px} .track{height:120px} .wbars{height:160px}
     .brow{grid-template-columns:42px minmax(0,1fr) 84px}
+    .fc-l{grid-template-columns:minmax(0,1fr) auto;row-gap:5px}
+    .fc-t,.fc-p{grid-column:1/-1}
     .trilho{animation-duration:30s}
     .topo .dir{margin-left:0}
     .mcorpo{padding:16px}
@@ -689,7 +727,7 @@
   }
   @media(prefers-reduced-motion:reduce){
     .trilho{animation:none} .tela,.conteudo,.meses,.canal-det,.modal,.mbox{transition:none}
-    .wcol .wbar,.wd .b,.brow .bf,.vs .f,.pl .f{transition:none}
+    .wcol .wbar,.wd .b,.brow .bf,.vs .f,.pl .f,.fc-f{transition:none}
     .bot-ponto.vivo::after{animation:none}
   }
 
@@ -1306,7 +1344,9 @@
                 : "comissão sobre as vendas", true]);
       }
       if (k.parceiros_leads) {
-        g.push(["Leads gerados", nf(k.leads), k.parceiros_leads + (k.parceiros_leads > 1 ? " parcerias" : " parceria") + " medida em leads", true]);
+        g.push(["Leads gerados", nf(k.leads), k.leads_pagos
+          ? nf(k.leads_pagos) + (k.leads_pagos > 1 ? " contratos pagos · " : " contrato pago · ") + moeda(k.leads_volume)
+          : k.parceiros_leads + (k.parceiros_leads > 1 ? " parcerias" : " parceria") + " medida em leads", true]);
       }
       if (k.parceiros_vendas) {
         g.push(["Aquisições", nf(k.aquisicoes), "novos usuários no período", false]);
@@ -1344,6 +1384,11 @@
             grid = '<span class="gi" style="grid-column:1/-1"><span class="r">' +
               (p.sem_dados ? "Aguardando os primeiros dados" : "Sem dados em " + esc(aba.nome)) +
               '</span><span class="v" style="color:var(--muted2)">—</span></span>';
+          } else if (p.modelo === "leads" && r.fonte === "funil") {
+            grid = '<span class="gi"><span class="r">Leads</span><span class="v">' + nf(r.leads) + '</span></span>' +
+              '<span class="gi"><span class="r">Digitados</span><span class="v">' + nf(r.digitados) + '</span></span>' +
+              '<span class="gi"><span class="r">Pagos</span><span class="v">' + nf(r.pagos) + '</span></span>' +
+              '<span class="gi"><span class="r">Volume pago</span><span class="v">' + moeda(r.volume) + '</span></span>';
           } else if (p.modelo === "leads") {
             grid = '<span class="gi"><span class="r">Leads</span><span class="v">' + nf(r.leads) + '</span></span>' +
               '<span class="gi"><span class="r">Média por dia</span><span class="v">' + nf(r.media_dia, 1) + '</span></span>' +
@@ -1356,7 +1401,7 @@
               '<span class="gi"><span class="r">Aquisições</span><span class="v">' + nf(r.aquisicoes) + '</span></span>' +
               '<span class="gi"><span class="r">Por aquisição</span><span class="v">' + moeda(r.cac, 2) + '</span></span>';
           }
-          var pe = p.modelo === "leads" ? "mede leads"
+          var pe = p.modelo === "leads" ? (p.fonte_resultado === "funil" ? "leads e contratos · relatório mensal" : "mede leads")
             : p.remuneracao_atual ? p.remuneracao_atual
             : (p.taxa_comissao ? nf(p.taxa_comissao * 100, 0) + "% de comissão" : "mede vendas");
           return '<button class="pc' + (r ? "" : " apagado") + '" data-parceiro="' + esc(p.id) + '">' +
@@ -1415,6 +1460,33 @@
         '</div></div>';
     }
 
+    // Os 4 numeros da RD (entregues, bounce, aberturas, cliques) de todos os parceiros.
+    function hubTabelaEmail(aba) {
+      var k = aba.kpis;
+      if (!k.campanhas) return "";
+      var porId = {};
+      aba.parceiros.forEach(function (r) { porId[r.id] = r; });
+      var linhas = D.parceiros.map(function (p) {
+        var r = porId[p.id], em = r && r.email;
+        return '<tr><td><span class="src" style="background:' + esc(p.cores.brand) + ';margin-right:8px"></span>' +
+          esc(p.nome) + '</td>' + (em
+            ? '<td class="n">' + nf(em.campanhas) + '</td><td class="n">' + nf(em.entregues) + '</td><td class="n">' +
+              nfOu(em.bounce) + '</td><td class="n">' + nfOu(em.aberturas) + '</td><td class="n">' + nfOu(em.cliques) +
+              '</td><td class="n">' + nf(em.abertura, 1) + '%</td><td class="n">' + nf(em.ctr, 2) + '%</td>'
+            : '<td colspan="7" style="color:var(--muted)">sem e-mail neste período</td>') + '</tr>';
+      }).join("");
+      return '<div class="row"><div class="painel"><div class="hrow"><div><h3>E-mail por parceiro</h3>' +
+        '<div class="cap">Entregues, bounce, aberturas e cliques únicos da RD Station · ' + esc(aba.nome) + '</div></div>' +
+        (k.bounce_pct !== undefined ? '<span class="cm mail">' + MAIL + 'bounce ' + nf(k.bounce_pct, 2) + '%</span>' : '') +
+        '</div><div class="tw"><table class="cat"><thead><tr><th>Parceiro</th><th class="n">Campanhas</th>' +
+        '<th class="n">Entregues</th><th class="n">Bounce</th><th class="n">Aberturas</th><th class="n">Cliques</th>' +
+        '<th class="n">Abertura</th><th class="n">CTR</th></tr></thead><tbody>' + linhas + '</tbody>' +
+        '<tfoot><tr><td>Total</td><td class="n">' + nf(k.campanhas) + '</td><td class="n">' + nf(k.entregues) +
+        '</td><td class="n">' + nfOu(k.bounce) + '</td><td class="n">' + nfOu(k.aberturas) + '</td><td class="n">' +
+        nfOu(k.cliques) + '</td><td class="n">' + nf(k.abertura, 1) + '%</td><td class="n">' + nf(k.ctr, 2) +
+        '%</td></tr></tfoot></table></div></div></div>';
+    }
+
     function hubParticipacao(aba) {
       if (!aba.participacao || aba.participacao.length < 2) return "";
       var maxF = Math.max.apply(null, aba.participacao.map(function (p) { return p.vendas; })) || 1;
@@ -1431,7 +1503,7 @@
     function hubIA(aba) {
       var ia = aba.ia || {};
       if (!ia.destaque && !ia.comparativo) return "";
-      var alertas = (ia.alertas || []).map(function (x) { return "<li>" + rich(x) + "</li>"; }).join("");
+      var alertas = [].concat(ia.alertas || []).map(function (x) { return "<li>" + rich(x) + "</li>"; }).join("");
       return '<div class="ia"><div class="hd"><span class="sp">' + ESTRELA + '</span>' +
         '<h3>Leitura comparativa do agente · ' + esc(aba.nome) + '</h3>' +
         '<span class="mod">Groq · gpt-oss-120b</span></div>' +
@@ -1445,7 +1517,7 @@
     function conteudoHub() {
       var aba = abaDe(D.hub.abas, estado.aba);
       return '<div class="conteudo" id="conteudo">' + hubNumeros(aba) +
-        '<div class="row">' + hubCards(aba) + '</div>' + hubCanais(aba) + hubParticipacao(aba) +
+        '<div class="row">' + hubCards(aba) + '</div>' + hubCanais(aba) + hubTabelaEmail(aba) + hubParticipacao(aba) +
         hubIA(aba) + '</div>';
     }
 
@@ -1576,10 +1648,125 @@
         '<span><i class="src rd"></i>e-mail (RD Station)</span><span><i class="src wp"></i>WhatsApp</span></div>';
     }
 
+    // ---------- parceiro de leads com relatorio MENSAL (ex.: Crefaz) ----------
+    // O relatorio nao tem dia a dia: o CRM mostra o funil do lead ao contrato e o
+    // cruza com o funil do e-mail do mesmo periodo (razao entre totais).
+    function kpisFunil(aba, p) {
+      var k = aba.kpis, e = aba.email, f = (e && e.funil) || {};
+      var semRd = !e, aguarda = "aguardando export da RD";
+      var cards = [
+        kpi("res", "Leads recebidos", nf(k.leads), nf(k.leads_unicos) + " únicos (" + nf(k.pct_unicos, 1) + "%)", true),
+        kpi("res", "Digitados", nf(k.digitados), nf(k.pct_digitado, 1) + "% dos leads únicos", true),
+        kpi("res", "Pagos", nf(k.pagos), "adesão de " + nf(k.adesao, 1) + "% dos únicos", true),
+        kpi("res", "Volume pago", moeda(k.volume, 2), k.ticket_medio ? "ticket médio " + moeda(k.ticket_medio, 2) : "sem contrato pago", true),
+        kpi("res", "Faturamento (" + p.nome + ")", k.faturamento !== null && k.faturamento !== undefined ? moeda(k.faturamento, 2) : "—",
+            k.faturamento ? "inclui propostas que fecham no mês seguinte" : "não informado no relatório", true, null, !k.faturamento),
+        kpi("rd", "Leads por clique", k.leads_por_clique !== null ? nf(k.leads_por_clique, 1) + "%" : "—",
+            semRd ? aguarda : nf(k.leads) + " leads ÷ " + nf(f.cliques) + " cliques", false, null, k.leads_por_clique === null),
+        kpi("rd", "Volume por clique", k.volume_por_clique !== null ? moeda(k.volume_por_clique, 2) : "—",
+            semRd ? aguarda : "volume pago ÷ cliques no e-mail", false, null, k.volume_por_clique === null),
+        kpi("rd", "Abertura média", semRd ? "—" : nf(e.abertura, 1) + "%",
+            semRd ? aguarda : nf(e.envios) + (e.envios > 1 ? " campanhas" : " campanha") + " no período", false, null, semRd),
+        kpi("rd", "CTR médio", semRd ? "—" : nf(e.ctr, 2) + "%", semRd ? aguarda : "cliques ÷ entregues", false, null, semRd),
+        kpi("rd", "Bounce", e && e.bounce_pct !== undefined ? nf(e.bounce_pct, 2) + "%" : "—",
+            e ? nfOu(f.bounce) + " e-mails voltaram" : aguarda, false, e && e.bounce_pct > 2 ? "acima de 2% — vale higienizar a base" : null, !e)
+      ];
+      return '<div class="kpis">' + cards.join("") + '</div>' + legendaFontes(p);
+    }
+
+    function passoFunil(nome, valor, taxa, texto, fonte) {
+      return '<div class="fc-l" data-tip="' + esc(nf(valor) + " · " + nome + (texto ? "\n" + nf(taxa, taxa < 1 ? 2 : 1) + "% " + texto : "")) + '">' +
+        '<span class="fc-n"><i class="src ' + fonte + '"></i>' + esc(nome) + '</span>' +
+        '<span class="fc-v">' + nf(valor) + '</span>' +
+        '<span class="fc-t"><span class="fc-f ' + fonte + '" style="width:' + Math.max(1.5, Math.min(100, taxa)).toFixed(1) + '%"></span></span>' +
+        '<span class="fc-p">' + (texto ? '<b>' + nf(taxa, taxa < 1 ? 2 : 1) + '%</b> ' + esc(texto) : 'base do funil') + '</span></div>';
+    }
+
+    function blocoFunilCredito(aba, p) {
+      var k = aba.kpis, e = aba.email, f = (e && e.funil) || {}, ref = k.referencia;
+      var passos = (e ? '<div class="fc-sec"><i class="src rd"></i>E-mail · RD Station</div>' +
+          passoFunil("Entregues", f.entregues, 100, "", "rd") +
+          passoFunil("Aberturas únicas", f.aberturas, f.entregues ? f.aberturas / f.entregues * 100 : 0, "das entregas", "rd") +
+          passoFunil("Cliques únicos", f.cliques, f.aberturas ? f.cliques / f.aberturas * 100 : 0, "das aberturas", "rd")
+        : '<div class="aviso-inline">Sem e-mails da RD neste período: o funil começa nos leads.</div>') +
+        '<div class="fc-sec"><i class="src res"></i>Relatório da ' + esc(p.nome) + '</div>' +
+        passoFunil("Leads recebidos", k.leads, e && f.cliques ? k.leads / f.cliques * 100 : 100, e && f.cliques ? "dos cliques*" : "", "res") +
+        passoFunil("Leads únicos", k.leads_unicos, k.pct_unicos, "dos recebidos", "res") +
+        passoFunil("Digitados", k.digitados, k.pct_digitado, "dos únicos", "res") +
+        passoFunil("Pagos", k.pagos, k.pct_pago_digitado, "dos digitados", "res");
+      var fim = '<div class="fc-fim"><div class="rm-p"><div class="rm-h">Volume pago</div><div class="rm-v">' + moeda(k.volume, 2) +
+        '</div><div class="rm-s">' + (k.ticket_medio ? 'ticket médio <b>' + moeda(k.ticket_medio, 2) + '</b>' : 'sem contrato pago') + '</div></div>' +
+        (k.faturamento ? '<div class="rm-p"><div class="rm-h">Faturamento (critério ' + esc(p.nome) + ')</div><div class="rm-v">' + moeda(k.faturamento, 2) +
+          '</div><div class="rm-s">inclui propostas que fecham no mês seguinte</div></div>' : '') +
+        (e && k.volume_por_clique ? '<div class="rm-p"><div class="rm-h">Cada clique no e-mail</div><div class="rm-v">' +
+          moeda(k.volume_por_clique, 2) + '</div><div class="rm-s">em volume pago · ' + moeda(k.volume_por_mil, 2) +
+          ' a cada mil entregues</div></div>' : '') + '</div>';
+      var txt = (aba.ia && aba.ia.motor) ? '<div class="tagbox" style="margin-top:12px">' + rich(aba.ia.motor) + '</div>' : '';
+      var esquerda = '<div class="painel"><div class="hrow"><div><h3>Do e-mail ao contrato</h3>' +
+        '<div class="cap">Funil do período · a barra mostra quanto passou da etapa anterior</div></div></div>' +
+        '<div class="fc">' + passos + '</div>' + fim + txt +
+        (e ? '<div class="ar-nota" style="margin-top:10px">* razão entre os totais do período: o relatório não informa a origem de cada lead.</div>' : '') +
+        '</div>';
+      return '<div class="row r-72-28">' + esquerda + blocoReferencia(aba, p) + '</div>';
+    }
+
+    function blocoReferencia(aba, p) {
+      var k = aba.kpis, ref = k.referencia, obs = (p.relatorio || {}).observacao;
+      var linhas = "";
+      if (ref) {
+        var itens = [["Digitação", "digitados ÷ únicos", k.pct_digitado, ref.pct_digitado, "%"],
+                     ["Adesão", "pagos ÷ únicos", k.adesao, ref.adesao, "%"],
+                     ["Pagos ÷ digitados", "", k.pct_pago_digitado, ref.pct_pago_digitado, "%"],
+                     ["Ticket médio", "volume ÷ pagos", k.ticket_medio, ref.ticket_medio, "R$"]];
+        linhas = itens.filter(function (x) { return x[2] !== null && x[2] !== undefined && x[3] !== null && x[3] !== undefined; })
+          .map(function (x) {
+            var mx = Math.max(x[2], x[3]) || 1;
+            var fmt = function (v) { return x[4] === "R$" ? moeda(v, 0) : nf(v, 1) + "%"; };
+            return '<div class="vs"><div class="h"><span>' + esc(x[0]) + (x[1] ? ' <span style="color:var(--muted2)">· ' + esc(x[1]) + '</span>' : '') +
+              '</span><b>' + fmt(x[2]) + '</b></div>' +
+              '<span class="t" data-tip="' + esc(fmt(x[2]) + "\n" + aba.nome) + '"><span class="f eng" style="width:' + Math.max(2, x[2] / mx * 100).toFixed(1) + '%"></span></span>' +
+              '<span class="t ref" data-tip="' + esc(fmt(x[3]) + "\nindicadores gerais do relatório") + '"><span class="f" style="width:' +
+              Math.max(2, x[3] / mx * 100).toFixed(1) + '%"></span></span>' +
+              '<div class="cap" style="margin-top:5px">indicadores gerais: <b style="color:var(--ink)">' + fmt(x[3]) + '</b></div></div>';
+          }).join("");
+      }
+      return '<div class="painel"><h3>Comparação com os indicadores gerais</h3>' +
+        '<div class="cap">' + esc(aba.nome) + ' × bloco “Indicadores Gerais” do relatório da ' + esc(p.nome) +
+        ' (o arquivo não informa o período desse bloco)</div>' +
+        (linhas ? '<div class="versus" style="margin-top:14px">' + linhas + '</div>'
+                : '<div class="vazio">O relatório não trouxe indicadores gerais.</div>') +
+        (ref ? '<div class="legenda"><span><i style="background:var(--brand)"></i>' + esc(aba.nome) + '</span>' +
+          '<span><i style="background:var(--muted2)"></i>Indicadores gerais · ' + nf(ref.leads) + ' leads, ' + nf(ref.pagos) + ' pagos' +
+          (ref.negados !== null && ref.negados !== undefined ? ', ' + nf(ref.negados) + ' negados' : '') + '</span></div>' : '') +
+        (obs ? '<div class="tagbox" style="margin-top:12px"><b>Observação da ' + esc(p.nome) + ':</b> ' + esc(obs) + '</div>' : '') +
+        '</div>';
+    }
+
+    function blocoMensal(aba) {
+      var m = aba.mensal || [];
+      if (!m.length) return "";
+      var c = function (v, fn) { return v === null || v === undefined ? '<span style="color:var(--muted2)">—</span>' : fn(v); };
+      return '<div class="row"><div class="painel"><div class="hrow"><div><h3>Cruzamento mensal</h3>' +
+        '<div class="cap">O que a RD entregou ao lado do que o parceiro reportou, mês a mês</div></div></div>' +
+        '<div class="tw"><table class="cat"><thead><tr><th>Mês</th><th class="n">E-mails</th><th class="n">Entregues</th>' +
+        '<th class="n">Bounce</th><th class="n">Aberturas</th><th class="n">Cliques</th><th class="n">Leads</th>' +
+        '<th class="n">Leads/clique</th><th class="n">Digitados</th><th class="n">Pagos</th><th class="n">Volume pago</th>' +
+        '<th class="n">Faturamento</th></tr></thead><tbody>' + m.map(function (x) {
+          return '<tr><td>' + esc(x.nome) + (x.tem_relatorio ? '' : ' <span class="pill no">sem relatório</span>') + '</td>' +
+            '<td class="n">' + nf(x.campanhas) + '</td><td class="n">' + nf(x.entregues) + '</td><td class="n">' + nf(x.bounce) +
+            '</td><td class="n">' + nf(x.aberturas) + '</td><td class="n">' + nf(x.cliques) + '</td><td class="n">' + c(x.leads, nf) +
+            '</td><td class="n">' + c(x.leads_por_clique, function (v) { return nf(v, 1) + "%"; }) + '</td><td class="n">' +
+            c(x.digitados, nf) + '</td><td class="n">' + c(x.pagos, nf) + '</td><td class="n">' +
+            c(x.volume, function (v) { return moeda(v, 2); }) + '</td><td class="n">' +
+            c(x.faturamento, function (v) { return moeda(v, 2); }) + '</td></tr>';
+        }).join("") + '</tbody></table></div></div></div>';
+    }
+
     function blocoKpis(aba, p) {
       var k = aba.kpis;
       var semRd = !aba.email;
       var camp = aba.email ? aba.email.envios + " campanhas no período" : "aguardando export da RD";
+      if (p.modelo === "leads" && k.fonte === "funil") return kpisFunil(aba, p);
       if (p.modelo === "leads") {
         var pico = k.pico, semana = (k.semana || []).slice().sort(function (a, b) { return b[1] - a[1]; });
         var melhor = semana[0];
@@ -1794,6 +1981,7 @@
     }
 
     function blocoResultado(aba, p) {
+      if (aba.kpis && aba.kpis.fonte === "funil") return blocoFunilCredito(aba, p);
       if (!aba.dias.length) {
         return '<div class="row"><div class="painel"><h3>' + (p.modelo === "leads" ? "Leads" : "Vendas") +
           ' × disparos</h3><div class="vazio">Sem ' + (p.modelo === "leads" ? "leads" : "vendas") +
@@ -1910,6 +2098,65 @@
         '<div class="cap">Consolidado do período · cada fatia é onde o público parou</div>' + argolaEmail(e) + '</div>';
     }
 
+    // ---------- e-mail: os 4 numeros da RD e o catalogo de campanhas ----------
+    function nfOu(x, c) { return x === undefined || x === null ? "—" : nf(x, c); }
+    function numerosEmail(e) {
+      var f = e.funil || {}, saiu = (f.entregues || 0) + (f.bounce || 0);
+      return '<div class="kpis k4">' +
+        kpi("rd", "Entregues", nf(f.entregues), nf(e.envios) + " campanhas · " + nf(saiu) + " e-mails saíram", true) +
+        kpi("rd", "Bounce (únicos)", nfOu(f.bounce), e.bounce_pct !== undefined ? nf(e.bounce_pct, 2) + "% do que saiu" : "não veio no export",
+            false, e.bounce_pct > 2 ? "acima de 2% — vale higienizar a base" : null, f.bounce === undefined) +
+        kpi("rd", "Aberturas (únicas)", nf(f.aberturas), nf(e.abertura, 1) + "% das entregas", true) +
+        kpi("rd", "Cliques (únicos)", nf(f.cliques), "CTR " + nf(e.ctr, 2) + "% · " +
+            nf(f.aberturas ? f.cliques / f.aberturas * 100 : 0, 1) + "% das aberturas", true) + '</div>';
+    }
+    var catEstado = { col: "iso", dir: -1, todas: false };
+    var CAT_COLS = [["iso", "Data", 0], ["nome", "Campanha", 0], ["entregues", "Entregues", 1], ["bounce", "Bounce", 1],
+                    ["aberturas", "Aberturas", 1], ["cliques", "Cliques", 1], ["abertura", "Abertura", 1], ["ctr", "CTR", 1]];
+    function blocoCatalogo(e) {
+      if (!e || !(e.catalogo || []).length) return "";
+      return '<div class="painel" style="margin-top:13px"><div class="hrow"><div><h3>Catálogo de campanhas</h3>' +
+        '<div class="cap">Cada disparo do período com entregues, bounce, aberturas e cliques únicos · ' +
+        'toque no título de uma coluna para ordenar</div></div>' +
+        '<span class="cm mail">' + MAIL + nf(e.catalogo.length) + ' campanhas</span></div><div id="cat-email"></div></div>';
+    }
+    function pintarCatalogo(e) {
+      var alvo = $("cat-email");
+      if (!alvo || !e || !e.catalogo) return;
+      var c = catEstado.col, dir = catEstado.dir;
+      var lin = e.catalogo.slice().sort(function (a, b) {
+        var x = c === "iso" ? a.iso + a.hora : a[c], y = c === "iso" ? b.iso + b.hora : b[c];
+        if (typeof x === "string") { x = x.toLowerCase(); y = String(y).toLowerCase(); }
+        return (x > y ? 1 : x < y ? -1 : 0) * dir;
+      });
+      var lim = catEstado.todas ? lin.length : Math.min(10, lin.length), f = e.funil || {};
+      alvo.innerHTML = '<div class="tw"><table class="cat"><thead><tr>' + CAT_COLS.map(function (col) {
+          var on = col[0] === c;
+          return '<th' + (col[2] ? ' class="n"' : '') + '><button class="ord' + (on ? " on" : "") + '" data-col="' + col[0] +
+            '" aria-label="Ordenar por ' + col[1] + '">' + col[1] + (on ? (dir > 0 ? " ↑" : " ↓") : "") + '</button></th>';
+        }).join("") + '</tr></thead><tbody>' + lin.slice(0, lim).map(function (x) {
+          return '<tr><td>' + esc(x.data.slice(0, 5)) + ' <span class="hr">' + esc(x.hora) + '</span></td>' +
+            '<td class="cn"><span title="' + esc(x.assunto) + '">' + esc(x.nome) + '</span> <span class="pill no">' + esc(x.base) + '</span></td>' +
+            '<td class="n">' + nf(x.entregues) + '</td><td class="n">' + nf(x.bounce) + '</td><td class="n">' + nf(x.aberturas) +
+            '</td><td class="n">' + nf(x.cliques) + '</td><td class="n">' + nf(x.abertura, 1) + '%</td><td class="n">' +
+            nf(x.ctr, 2) + '%</td></tr>';
+        }).join("") + '</tbody><tfoot><tr><td colspan="2">Total · ' + nf(lin.length) + ' campanhas</td><td class="n">' +
+        nf(f.entregues) + '</td><td class="n">' + nfOu(f.bounce) + '</td><td class="n">' + nf(f.aberturas) + '</td><td class="n">' +
+        nf(f.cliques) + '</td><td class="n">' + nf(e.abertura, 1) + '%</td><td class="n">' + nf(e.ctr, 2) + '%</td></tr></tfoot></table></div>' +
+        (lin.length > 10 ? '<div style="margin-top:10px"><button class="btn" id="cat-todas">' +
+          (catEstado.todas ? "Mostrar só as 10 primeiras" : "Ver todas as " + lin.length + " campanhas") + '</button></div>' : "");
+      alvo.querySelectorAll("button.ord").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var col = b.getAttribute("data-col");
+          if (col === catEstado.col) catEstado.dir = -catEstado.dir;
+          else { catEstado.col = col; catEstado.dir = col === "nome" ? 1 : -1; }
+          pintarCatalogo(e);
+        });
+      });
+      var t = alvo.querySelector("#cat-todas");
+      if (t) t.addEventListener("click", function () { catEstado.todas = !catEstado.todas; pintarCatalogo(e); });
+    }
+
     function detalheEmail(aba, p) {
       var e = aba.email;
       if (!e) {
@@ -1924,7 +2171,9 @@
           '</div></div><div class="painel fx"><h3>Funil de e-mail</h3>' + argolaEmail(null, true) + '</div>' +
           '<div class="selo-f"><span>Aguardando o export da RD Station</span></div></div>';
       }
-      return '<div class="row r-3" style="margin-top:0">' + cartaoSemana(e) + cartaoHorario(e) + cartaoArgolaEmail(e) + '</div>';
+      return numerosEmail(e) +
+        '<div class="row r-3">' + cartaoSemana(e) + cartaoHorario(e) + cartaoArgolaEmail(e) + '</div>' +
+        blocoCatalogo(e);
     }
 
     function detalheWpp(aba, p) {
@@ -2155,7 +2404,7 @@
     function blocoIA(aba, p) {
       var ia = aba.ia || {};
       if (!ia.diagnostico && !ia.motor) return "";
-      var sust = (ia.sustenta || []).map(function (x) { return "<li>" + rich(x) + "</li>"; }).join("");
+      var sust = [].concat(ia.sustenta || []).map(function (x) { return "<li>" + rich(x) + "</li>"; }).join("");
       return '<div class="ia"><div class="hd"><span class="sp">' + ESTRELA + '</span>' +
         '<h3>Análise do agente — ' + esc(p.nome) + ' · ' + esc(aba.nome) + '</h3>' +
         '<span class="mod">Groq · gpt-oss-120b</span></div>' +
@@ -2178,7 +2427,8 @@
       }
       return '<div class="conteudo" id="conteudo">' + blocoKpis(aba, p) +
         (p.modelo === "leads" ? "" : blocoRemuneracao(aba, p)) + blocoResultado(aba, p) +
-        blocoCanais(aba, p) + blocoCross() + blocoIA(aba, p) + '</div>';
+        blocoCanais(aba, p) + (aba.kpis && aba.kpis.fonte === "funil" ? blocoMensal(aba) : blocoCross()) +
+        blocoIA(aba, p) + '</div>';
     }
 
     function telaParceiro() {
@@ -2187,7 +2437,8 @@
       aplicarTema({ cores: p.cores, cores_escuro: p.cores_escuro, rampa: p.rampa });
       var aba = abaDe(p.abas, estado.aba);
       var rems = p.remuneracao || [], atual = rems[rems.length - 1];
-      var sub = esc(p.segmento) + ' · ' + (p.modelo === "leads" ? "resultado medido em leads"
+      var sub = esc(p.segmento) + ' · ' + (p.modelo === "leads"
+          ? (p.fonte_resultado === "funil" ? "leads e contratos pelo relatório mensal do parceiro" : "resultado medido em leads")
         : p.remuneracao_atual
           ? esc(p.remuneracao_atual) + (rems.length > 1 && atual
               ? ' desde ' + esc(ddmm(atual.desde) + "/" + atual.desde.slice(0, 4)) +
@@ -2230,6 +2481,7 @@
       var aba = abaDe(p.abas, estado.aba);
       pintarGrafico(aba, p);
       pintarCross(aba, p);
+      pintarCatalogo(aba.email);
       ligarArgolas();
 
       root.querySelectorAll("#seg-gran button").forEach(function (b) {
@@ -2256,6 +2508,7 @@
           det.classList.add("saindo");
           setTimeout(function () {
             det.innerHTML = c === "whatsapp" ? detalheWpp(aba, p) : detalheEmail(aba, p);
+            if (c !== "whatsapp") pintarCatalogo(aba.email);
             ligarArgolas();
             void det.offsetWidth;
             det.classList.remove("saindo");
