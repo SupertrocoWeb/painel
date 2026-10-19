@@ -3,8 +3,8 @@
   "atualizado": "19/10/2026",
   "rodape": "Powered by Tibério Ferreira for Supertroco",
   "hub": {
-    "periodo": "01/08/2026 a 18/10/2026",
-    "parceiros": 2,
+    "periodo": "01/08/2026 a 19/10/2026",
+    "parceiros": 3,
     "cores": {
       "brand": "#15B8B6",
       "brand_lite": "#5DD9D7",
@@ -55,14 +55,14 @@
       {
         "id": "geral",
         "nome": "Visão geral",
-        "periodo": "01/08/2026 a 18/10/2026",
+        "periodo": "01/08/2026 a 19/10/2026",
         "parcial": false,
-        "ate": "18/10",
-        "parceiros_ativos": 2,
+        "ate": "19/10",
+        "parceiros_ativos": 3,
         "kpis": {
           "vendas": 46071.61,
           "comissao": 3110.87,
-          "receita": 40830.87,
+          "receita": 40938.37,
           "receita_vendas": 10250.87,
           "receita_leads": 30580.0,
           "receita_comissao": 3110.87,
@@ -83,6 +83,14 @@
               "cor": "#E67939",
               "receita": 30580.0,
               "regra": "volume pago (relatório do parceiro)"
+            },
+            {
+              "id": "porto_bank",
+              "nome": "Porto Bank",
+              "modelo": "midia",
+              "cor": "#2C3DA8",
+              "receita": 107.5,
+              "regra": "valor por disparo de WhatsApp"
             }
           ],
           "remuneracao": "misto",
@@ -98,6 +106,13 @@
           "parceiros_leads": 1,
           "leads_pagos": 3,
           "leads_volume": 30580.0,
+          "parceiros_midia": 1,
+          "midia_disparos": 250,
+          "midia_entregues": 248,
+          "midia_cliques": 0,
+          "midia_receita": 107.5,
+          "midia_custo": 79.78,
+          "midia_margem": 27.72,
           "abertura": 9.1,
           "ctr": 0.24,
           "campanhas": 43,
@@ -106,10 +121,11 @@
           "aberturas": 2972755.0,
           "cliques": 77667.0,
           "bounce_pct": 0.92,
-          "wpp_disparos": 0,
-          "wpp_campanhas": 0,
-          "wpp_investimento": 0.0,
+          "wpp_disparos": 250,
+          "wpp_campanhas": 2,
+          "wpp_investimento": 107.5,
           "wpp_conversoes": 0,
+          "wpp_custo_meta": 79.78,
           "wpp_valor_convertido": 0.0
         },
         "email": {
@@ -121,7 +137,18 @@
           },
           "envios": 43
         },
-        "whatsapp": null,
+        "whatsapp": {
+          "funil": {
+            "disparos": 250,
+            "entregues": 248,
+            "lidas": 0,
+            "cliques": 0,
+            "conversoes": 0
+          },
+          "campanhas": 2,
+          "investimento": 107.5,
+          "valor_convertido": 0.0
+        },
         "parceiros": [
           {
             "id": "sorte_online",
@@ -189,6 +216,36 @@
               "ctr": 0.26
             },
             "whatsapp": null
+          },
+          {
+            "id": "porto_bank",
+            "nome": "Porto Bank",
+            "segmento": "Serviços financeiros",
+            "modelo": "midia",
+            "cor": "#2C3DA8",
+            "cor_lite": "#809AD9",
+            "tem_dados": true,
+            "periodo": "19/10/2026 a 19/10/2026",
+            "receita_supertroco": 107.5,
+            "receita_regra": "por_disparo",
+            "receita_regra_txt": "valor por disparo de WhatsApp",
+            "fonte": "meta",
+            "disparos": 250,
+            "entregues": 248,
+            "lidas": 0,
+            "cliques": 0,
+            "receita": 107.5,
+            "custo_meta": 79.78,
+            "margem": 27.72,
+            "tx_entrega": 99.2,
+            "ctr_wpp": 0.0,
+            "valor_por_disparo": 0.43,
+            "email": null,
+            "whatsapp": {
+              "disparos": 250,
+              "conversoes": 0,
+              "investimento": 107.5
+            }
           }
         ],
         "participacao": [
@@ -203,28 +260,28 @@
           }
         ],
         "ia": {
-          "destaque": "<b>R$ 30.580,00</b> de receita veio do parceiro de leads (Crefaz), representando quase 75% do total, enquanto o parceiro de vendas (Sorte Online) gerou <b>R$ 10.250,87</b> com 832 aquisições, resultando em <b>R$ 12,32</b> por aquisição.",
-          "comparativo": "O e‑mail da Sorte Online tem taxa de bounce de <b>0,91%</b> contra <b>2,99%</b> da Crefaz, e taxa de abertura de <b>9,1%</b> versus <b>7,9%</b>. O CTR é levemente menor (0,24% x 0,26%). Em receita, a Sorte Online entrega <b>R$ 12,32</b> por aquisição, já a Crefaz gera <b>R$ 10.193,33</b> por lead pago, porém com apenas 3 leads convertidos. Ambos não utilizam WhatsApp, mantendo <b>0</b> disparos.",
+          "destaque": "<b>R$30.580,00</b> de receita veio do parceiro Crefaz, representando cerca de <b>75%</b> do total, enquanto o e‑mail da Sorte Online manteve baixa taxa de bounce (<b>0,91%</b>) e boa taxa de abertura (<b>9,1%</b>).",
+          "comparativo": "A Sorte Online mostrou eficiência de e‑mail superior (bounce 0,91% vs 2,99% da Crefaz) e taxa de abertura de 9,1% contra 7,9% da Crefaz, com CTR praticamente igual (0,24% vs 0,26%). A Crefaz gerou 183 leads, porém apenas 3 foram pagos, indicando baixa conversão. O canal WhatsApp da Porto Bank entregou 99,2% das mensagens, mas não gerou cliques nem conversões, resultando em margem de apenas R$27,72.",
           "alertas": [
-            "Crefaz depende de poucos leads pagos (apenas 3), risco de volatilidade de receita.",
-            "Taxa de bounce da Crefaz (2,99%) está acima da média, indicando problemas de entregabilidade.",
-            "Canal WhatsApp está inativo, perdendo oportunidade de conversão multicanal.",
-            "Conversão geral de 3,24% é baixa considerando o volume massivo de e‑mails entregues."
+            "Taxa de bounce da Crefaz (2,99%) está muito acima da média (0,92%).",
+            "Conversão de leads da Crefaz é de 1,6% (3 pagos de 183), risco de dependência de poucos leads.",
+            "Campanha WhatsApp da Porto Bank não converteu (0 conversões em 250 disparos).",
+            "Receita por aquisição (R$12,32) está bem abaixo do valor acordado de R$30 por aquisição."
           ],
-          "prioridade": "Concentrar esforços no parceiro Crefaz: otimizar a taxa de entrega (reduzir bounce), melhorar a taxa de digitização e conversão de leads, e iniciar campanhas de WhatsApp para ampliar o funil. Paralelamente, manter a eficiência de e‑mail da Sorte Online, mas explorar o WhatsApp para potencializar ainda mais as aquisições."
+          "prioridade": "Concentrar esforços no parceiro Crefaz para melhorar a qualidade da base de e‑mail e a taxa de conversão de leads, revisando segmentação e fluxo de nutrição, ao mesmo tempo que se otimiza a mensagem e o call‑to‑action das campanhas WhatsApp da Porto Bank para gerar pelo menos alguma conversão. Paralelamente, renegociar ou ajustar a remuneração por aquisição da Sorte Online para aproximar a receita real (R$12,32) do valor contratado (R$30)."
         }
       },
       {
         "id": "2026-10",
         "nome": "Outubro 2026",
-        "periodo": "01/10/2026 a 18/10/2026",
+        "periodo": "01/10/2026 a 19/10/2026",
         "parcial": true,
-        "ate": "18/10",
-        "parceiros_ativos": 1,
+        "ate": "19/10",
+        "parceiros_ativos": 2,
         "kpis": {
           "vendas": 14963.03,
           "comissao": 0,
-          "receita": 7140.0,
+          "receita": 7247.5,
           "receita_vendas": 7140.0,
           "receita_leads": 0,
           "receita_comissao": 0,
@@ -237,6 +294,14 @@
               "cor": "#15B8B6",
               "receita": 7140.0,
               "regra": "R$ 30 por aquisição"
+            },
+            {
+              "id": "porto_bank",
+              "nome": "Porto Bank",
+              "modelo": "midia",
+              "cor": "#2C3DA8",
+              "receita": 107.5,
+              "regra": "valor por disparo de WhatsApp"
             }
           ],
           "remuneracao": "aquisicao",
@@ -252,6 +317,13 @@
           "parceiros_leads": 0,
           "leads_pagos": 0,
           "leads_volume": 0,
+          "parceiros_midia": 1,
+          "midia_disparos": 250,
+          "midia_entregues": 248,
+          "midia_cliques": 0,
+          "midia_receita": 107.5,
+          "midia_custo": 79.78,
+          "midia_margem": 27.72,
           "abertura": 5.4,
           "ctr": 0.12,
           "campanhas": 7,
@@ -260,10 +332,11 @@
           "aberturas": 418537.0,
           "cliques": 9458.0,
           "bounce_pct": 1.25,
-          "wpp_disparos": 0,
-          "wpp_campanhas": 0,
-          "wpp_investimento": 0.0,
+          "wpp_disparos": 250,
+          "wpp_campanhas": 2,
+          "wpp_investimento": 107.5,
           "wpp_conversoes": 0,
+          "wpp_custo_meta": 79.78,
           "wpp_valor_convertido": 0.0
         },
         "email": {
@@ -275,7 +348,18 @@
           },
           "envios": 7
         },
-        "whatsapp": null,
+        "whatsapp": {
+          "funil": {
+            "disparos": 250,
+            "entregues": 248,
+            "lidas": 0,
+            "cliques": 0,
+            "conversoes": 0
+          },
+          "campanhas": 2,
+          "investimento": 107.5,
+          "valor_convertido": 0.0
+        },
         "parceiros": [
           {
             "id": "sorte_online",
@@ -309,6 +393,36 @@
               "ctr": 0.12
             },
             "whatsapp": null
+          },
+          {
+            "id": "porto_bank",
+            "nome": "Porto Bank",
+            "segmento": "Serviços financeiros",
+            "modelo": "midia",
+            "cor": "#2C3DA8",
+            "cor_lite": "#809AD9",
+            "tem_dados": true,
+            "periodo": "19/10/2026 a 19/10/2026",
+            "receita_supertroco": 107.5,
+            "receita_regra": "por_disparo",
+            "receita_regra_txt": "valor por disparo de WhatsApp",
+            "fonte": "meta",
+            "disparos": 250,
+            "entregues": 248,
+            "lidas": 0,
+            "cliques": 0,
+            "receita": 107.5,
+            "custo_meta": 79.78,
+            "margem": 27.72,
+            "tx_entrega": 99.2,
+            "ctr_wpp": 0.0,
+            "valor_por_disparo": 0.43,
+            "email": null,
+            "whatsapp": {
+              "disparos": 250,
+              "conversoes": 0,
+              "investimento": 107.5
+            }
           }
         ],
         "participacao": [
@@ -323,15 +437,15 @@
           }
         ],
         "ia": {
-          "destaque": "O resultado de <b>R$7.140</b> foi impulsionado por <b>316 aquisições</b>, porém a taxa de abertura de <b>5,4%</b> e o CTR de <b>0,12%</b> permanecem muito baixos, sinalizando que o engajamento do e‑mail está fraco.",
-          "comparativo": "Em relação ao mês anterior, a receita caiu de R$32.408 (setembro) para R$7.140 (até 18/10), mas isso reflete o período parcial. O único parceiro ativo, Sorte Online, apresenta entrega massiva (7,68 mi) com bounce de 1,25%, porém a abertura de 5,4% e o clique de 0,12% são inferiores ao esperado para campanhas de loterias. Não há atividade de WhatsApp, o que limita a diversificação de canais.",
+          "destaque": "O resultado do período foi puxado principalmente pela receita de <b>R$7,140.00</b> da Sorte Online, proveniente de 316 aquisições; o canal WhatsApp da Porto Bank gerou apenas <b>R$107.50</b> com 250 disparos.",
+          "comparativo": "A campanha de e‑mail da Sorte Online entregou 7,680,631 mensagens com taxa de entrega de 98.75% (bounce 1.25%), taxa de abertura de 5.4% e CTR de 0.12%, mostrando boa penetração porém baixa conversão de cliques. Já o WhatsApp da Porto Bank teve entrega de 99.2% (248 de 250), mas CTR e conversões foram zero, indicando falta de engajamento. Em termos de receita, o modelo de vendas (Sorte Online) responde por <b>R$7,140.00</b> (98,5% do total), enquanto o modelo de mídia (Porto Bank) representa apenas <b>R$107.50</b> (1,5%).",
           "alertas": [
-            "Taxa de abertura de e‑mail abaixo de 10% (5,4%).",
-            "CTR extremamente baixa (0,12%).",
-            "Receita por aquisição (R$22,59) inferior ao valor de referência de R$30.",
-            "Dados de outubro ainda parciais, podendo distorcer a visão de desempenho."
+            "Bounce de e‑mail em 1.25% pode indicar problemas de lista ou entregabilidade.",
+            "CTR de e‑mail muito baixo (0.12%), sinalizando necessidade de melhorar criativos ou segmentação.",
+            "WhatsApp não gerou nenhuma conversão apesar de 250 disparos, risco de investimento sem retorno.",
+            "Dados de outubro estão parciais (até 19/10), o ritmo estimado pode mudar ao fechar o mês."
           ],
-          "prioridade": "Concentrar esforços no parceiro Sorte Online no próximo ciclo, focando em melhorar a qualidade das listas e a criatividade das mensagens para elevar a taxa de abertura e o CTR. Testar segmentações mais refinadas, otimizar linhas de assunto e incluir chamadas para ação mais claras. Paralelamente, iniciar um piloto de WhatsApp para complementar o e‑mail e reduzir a dependência de um único canal, negociando ainda uma remuneração mais próxima dos R$30 por aquisição."
+          "prioridade": "Concentrar esforços no canal WhatsApp da Porto Bank no próximo ciclo, testando novas mensagens, chamadas à ação mais claras e segmentação refinada para transformar entregas em cliques e conversões; paralelamente, otimizar o conteúdo dos e‑mails da Sorte Online para elevar o CTR, já que a base de entregas e abertura está sólida e pode gerar mais receita com pequenas melhorias."
         }
       },
       {
@@ -380,6 +494,13 @@
           "parceiros_leads": 1,
           "leads_pagos": 3,
           "leads_volume": 30580.0,
+          "parceiros_midia": 0,
+          "midia_disparos": 0,
+          "midia_entregues": 0,
+          "midia_cliques": 0,
+          "midia_receita": 0,
+          "midia_custo": 0,
+          "midia_margem": 0,
           "abertura": 12.1,
           "ctr": 0.26,
           "campanhas": 15,
@@ -392,6 +513,7 @@
           "wpp_campanhas": 0,
           "wpp_investimento": 0.0,
           "wpp_conversoes": 0,
+          "wpp_custo_meta": 0.0,
           "wpp_valor_convertido": 0.0
         },
         "email": {
@@ -485,15 +607,15 @@
           }
         ],
         "ia": {
-          "destaque": "<b>Crefaz</b> foi responsável por <b>R$30.580,00</b> da receita total, apesar de ter um volume de e‑mail muito menor e taxas de entrega e abertura inferiores ao parceiro de vendas.",
-          "comparativo": "O e‑mail da Sorte Online entregou 8,84 mi mensagens com bounce de 0,7 % e taxa de abertura de 12,2 %, enquanto Crefaz enviou 0,19 mi com bounce de 2,99 % e abertura de 7,9 %. Ambos mantiveram CTR de 0,26 %. Em receita, Sorte Online gerou R$1.828,37 (R$7,40 por aquisição) e Crefaz R$30.580,00 (cerca de R$10.193,33 por lead pago). Não há atividade de WhatsApp em nenhum dos parceiros.",
+          "destaque": "<b>R$ 30.580,00</b> da Crefaz representou 94% da receita de setembro, impulsionando o resultado total, enquanto a Sorte Online contribuiu com apenas <b>R$ 1.828,37</b>.",
+          "comparativo": "A taxa de bounce da Crefaz (2,99%) está quatro vezes maior que a da Sorte Online (0,7%), indicando problemas de entregabilidade. A taxa de abertura da Crefaz (7,9%) também é inferior à da Sorte Online (12,2%), embora ambas apresentem CTR idêntico (0,26%). No modelo de leads, apenas 3 dos 183 leads foram pagos (1,6% de conversão), enquanto a Sorte Online converteu 247 aquisições em 444 pedidos, gerando R$ 7,40 por aquisição.",
           "alertas": [
-            "Bounce de 2,99 % em Crefaz está muito acima da média de 0,75 % do consolidado.",
-            "Taxa de abertura de Crefaz (7,9 %) está abaixo da média geral (12,1 %).",
-            "Conversão de leads pagos em Crefaz é baixa: apenas 3 de 183 leads (1,6 %).",
-            "Dependência excessiva de Crefaz para a maior parte da receita (94 % do total)."
+            "Bounce elevado da Crefaz (2,99%) pode comprometer a entrega de futuros e‑mails.",
+            "Conversão de leads pagos da Crefaz está muito baixa (1,6%).",
+            "Concentração de receita: mais de 90% vem de um único parceiro (Crefaz).",
+            "Ausência de atividade no WhatsApp, canal ainda não explorado."
           ],
-          "prioridade": "Concentrar esforços no parceiro Crefaz no próximo ciclo: melhorar a qualidade das listas de e‑mail para reduzir bounce, otimizar o conteúdo para elevar a taxa de abertura e implementar um follow‑up mais eficaz para transformar leads digitados em pagos, reduzindo a alta dependência de poucos leads pagos que sustentam a maior parte da receita."
+          "prioridade": "Concentrar esforços na Crefaz para melhorar a qualidade dos leads e reduzir o bounce dos e‑mails, revisando a lista de contatos e otimizando a segmentação. Paralelamente, buscar ampliar a performance da Sorte Online, aumentando o número de campanhas e explorando o WhatsApp para diversificar a fonte de receita e reduzir a dependência de um único parceiro."
         }
       },
       {
@@ -534,6 +656,13 @@
           "parceiros_leads": 0,
           "leads_pagos": 0,
           "leads_volume": 0,
+          "parceiros_midia": 0,
+          "midia_disparos": 0,
+          "midia_entregues": 0,
+          "midia_cliques": 0,
+          "midia_receita": 0,
+          "midia_custo": 0,
+          "midia_margem": 0,
           "abertura": 9.2,
           "ctr": 0.28,
           "campanhas": 21,
@@ -546,6 +675,7 @@
           "wpp_campanhas": 0,
           "wpp_investimento": 0.0,
           "wpp_conversoes": 0,
+          "wpp_custo_meta": 0.0,
           "wpp_valor_convertido": 0.0
         },
         "email": {
@@ -605,15 +735,15 @@
           }
         ],
         "ia": {
-          "destaque": "<b>R$ 1.282,50</b> de receita em agosto foi gerado exclusivamente pela Sorte Online, com <b>269 aquisições</b> ao custo de R$ 30 cada, impulsionadas por um volume massivo de <b>15,842,400</b> e‑mails entregues.",
-          "comparativo": "A eficiência de e‑mail da Sorte Online apresenta taxa de abertura de 9,2% e CTR de 0,28%, indicadores abaixo da média do mercado, embora o bounce esteja em 0,86%. Em setembro, o parceiro Crefaz trouxe R$ 30.580,00 de receita, sugerindo que canais ou estratégias diferentes (possivelmente WhatsApp) podem gerar resultados superiores. No total, a receita de vendas de agosto depende 100% da Sorte Online, enquanto a diversificação aparece apenas a partir de setembro.",
+          "destaque": "O resultado de <b>R$1.282,50</b> em agosto foi impulsionado por <b>269 aquisições</b> ao custo de R$30 cada, gerando um ganho médio de <b>R$4,77 por aquisição</b>. Contudo, a taxa de abertura de <b>9,2%</b> e o CTR de <b>0,28%</b> indicam baixo engajamento dos e‑mails.",
+          "comparativo": "Com apenas o parceiro Sorte Online ativo, a eficiência de e‑mail apresenta abertura abaixo da média do mercado (≈20%) e CTR também inferior (≈1%). O bounce de 0,86% está dentro do aceitável, mas a ausência de disparos via WhatsApp limita a diversificação de canais. Não há dados de outros parceiros para comparar métricas de e‑mail, mas a receita futura dependerá de melhorar esse engajamento.",
           "alertas": [
-            "Taxa de abertura de 9,2% está bem abaixo do benchmark de 20% para campanhas de e‑mail.",
-            "CTR de 0,28% indica baixo engajamento dos destinatários.",
-            "Concentração de 100% da receita em um único parceiro aumenta risco de volatilidade.",
-            "Ausência de atividade no canal WhatsApp impede avaliação de potencial adicional."
+            "Taxa de abertura de 9,2% muito abaixo do esperado.",
+            "CTR de 0,28% indica baixa conversão de cliques.",
+            "Dependência de um único parceiro (Sorte Online) para receita.",
+            "Nenhum disparo ou conversão via WhatsApp registrado."
           ],
-          "prioridade": "No próximo ciclo, o foco deve ser a Sorte Online: otimizar a taxa de abertura e CTR através de segmentação mais refinada, testes A/B de assunto e conteúdo, e introduzir campanhas de WhatsApp para complementar o e‑mail. Paralelamente, buscar novos parceiros ou ampliar a presença de Crefaz para reduzir a dependência de um único canal e melhorar a estabilidade da receita."
+          "prioridade": "No próximo ciclo, o foco deve ser melhorar o engajamento dos e‑mails da Sorte Online, investindo em segmentação, testes A/B de assunto e conteúdo, além de otimizar o design para aumentar cliques. Paralelamente, é crítico buscar novos parceiros ou ativar o canal WhatsApp para reduzir a concentração de risco e ampliar a fonte de receita."
         }
       }
     ],
@@ -636,6 +766,15 @@
           "fonte": "mensal",
           "regra": "volume pago (relatório do parceiro)",
           "desde": "2026-09"
+        },
+        {
+          "id": "porto_bank",
+          "nome": "Porto Bank",
+          "cor": "#4A5CC6",
+          "cor_escuro": "#7F7FDE",
+          "fonte": "diario",
+          "regra": "valor por disparo de WhatsApp",
+          "desde": "2026-10"
         }
       ],
       "meses": [
@@ -671,18 +810,20 @@
           "nome": "Outubro 2026",
           "curto": "Out",
           "parcial": true,
-          "ate": "18/10",
+          "ate": "19/10",
           "valores": {
             "sorte_online": 7140.0,
-            "crefaz": null
+            "crefaz": null,
+            "porto_bank": 107.5
           },
           "pendentes": [
             "crefaz"
           ],
           "projecao": {
-            "sorte_online": 12296.67
+            "sorte_online": 12296.67,
+            "porto_bank": 175.39
           },
-          "total": 7140.0
+          "total": 7247.5
         }
       ],
       "datas": [
@@ -764,7 +905,8 @@
         "2026-10-15",
         "2026-10-16",
         "2026-10-17",
-        "2026-10-18"
+        "2026-10-18",
+        "2026-10-19"
       ],
       "por_dia": {
         "sorte_online": [
@@ -843,6 +985,7 @@
           120.0,
           240.0,
           510.0,
+          0,
           0,
           0,
           0,
@@ -927,14 +1070,97 @@
           0,
           0,
           0,
+          0,
           0
+        ],
+        "porto_bank": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          107.5
         ]
       }
     },
     "kpis": {
       "vendas": 46071.61,
       "comissao": 3110.87,
-      "receita": 40830.87,
+      "receita": 40938.37,
       "receita_vendas": 10250.87,
       "receita_leads": 30580.0,
       "receita_comissao": 3110.87,
@@ -955,6 +1181,14 @@
           "cor": "#E67939",
           "receita": 30580.0,
           "regra": "volume pago (relatório do parceiro)"
+        },
+        {
+          "id": "porto_bank",
+          "nome": "Porto Bank",
+          "modelo": "midia",
+          "cor": "#2C3DA8",
+          "receita": 107.5,
+          "regra": "valor por disparo de WhatsApp"
         }
       ],
       "remuneracao": "misto",
@@ -970,6 +1204,13 @@
       "parceiros_leads": 1,
       "leads_pagos": 3,
       "leads_volume": 30580.0,
+      "parceiros_midia": 1,
+      "midia_disparos": 250,
+      "midia_entregues": 248,
+      "midia_cliques": 0,
+      "midia_receita": 107.5,
+      "midia_custo": 79.78,
+      "midia_margem": 27.72,
       "abertura": 9.1,
       "ctr": 0.24,
       "campanhas": 43,
@@ -978,10 +1219,11 @@
       "aberturas": 2972755.0,
       "cliques": 77667.0,
       "bounce_pct": 0.92,
-      "wpp_disparos": 0,
-      "wpp_campanhas": 0,
-      "wpp_investimento": 0.0,
+      "wpp_disparos": 250,
+      "wpp_campanhas": 2,
+      "wpp_investimento": 107.5,
       "wpp_conversoes": 0,
+      "wpp_custo_meta": 79.78,
       "wpp_valor_convertido": 0.0
     },
     "participacao": [
@@ -998,7 +1240,7 @@
     "ticker": [
       {
         "rot": "Receita Supertroco",
-        "val": "R$ 40.831",
+        "val": "R$ 40.938",
         "tipo": "bom"
       },
       {
@@ -1028,7 +1270,7 @@
       },
       {
         "rot": "WhatsApp",
-        "val": "pronto para os 1ºs disparos",
+        "val": "250 disparos",
         "tipo": "neutro"
       },
       {
@@ -1061,18 +1303,411 @@
         "val": "3 · R$ 30.580",
         "cor": "#E67939",
         "tipo": "bom"
+      },
+      {
+        "rot": "Porto Bank · disparos",
+        "val": "250",
+        "cor": "#2C3DA8",
+        "tipo": "neutro"
+      },
+      {
+        "rot": "Porto Bank · receita",
+        "val": "R$ 107,50",
+        "cor": "#2C3DA8",
+        "tipo": "bom"
       }
     ],
-    "ia": {
-      "destaque": "<b>R$ 30.580,00</b> de receita veio do parceiro de leads (Crefaz), representando quase 75% do total, enquanto o parceiro de vendas (Sorte Online) gerou <b>R$ 10.250,87</b> com 832 aquisições, resultando em <b>R$ 12,32</b> por aquisição.",
-      "comparativo": "O e‑mail da Sorte Online tem taxa de bounce de <b>0,91%</b> contra <b>2,99%</b> da Crefaz, e taxa de abertura de <b>9,1%</b> versus <b>7,9%</b>. O CTR é levemente menor (0,24% x 0,26%). Em receita, a Sorte Online entrega <b>R$ 12,32</b> por aquisição, já a Crefaz gera <b>R$ 10.193,33</b> por lead pago, porém com apenas 3 leads convertidos. Ambos não utilizam WhatsApp, mantendo <b>0</b> disparos.",
-      "alertas": [
-        "Crefaz depende de poucos leads pagos (apenas 3), risco de volatilidade de receita.",
-        "Taxa de bounce da Crefaz (2,99%) está acima da média, indicando problemas de entregabilidade.",
-        "Canal WhatsApp está inativo, perdendo oportunidade de conversão multicanal.",
-        "Conversão geral de 3,24% é baixa considerando o volume massivo de e‑mails entregues."
+    "whatsapp_meta": {
+      "url": "https://superadds-painel.mkt-7c4.workers.dev/painel",
+      "mapa": [
+        {
+          "parceiro": "porto_bank",
+          "nome": "Porto Bank",
+          "prefixos": [
+            "portobank_"
+          ],
+          "nomes": [
+            "consorcio_clt_emprestimo"
+          ],
+          "desde": "2026-10-17"
+        }
       ],
-      "prioridade": "Concentrar esforços no parceiro Crefaz: otimizar a taxa de entrega (reduzir bounce), melhorar a taxa de digitização e conversão de leads, e iniciar campanhas de WhatsApp para ampliar o funil. Paralelamente, manter a eficiência de e‑mail da Sorte Online, mas explorar o WhatsApp para potencializar ainda mais as aquisições."
+      "valores": {
+        "porto_bank": {
+          "valor": 0.43,
+          "base": "enviadas"
+        }
+      },
+      "cores": {
+        "crefaz": {
+          "nome": "Crefaz",
+          "claro": "#E67939",
+          "escuro": "#D07036"
+        },
+        "porto_bank": {
+          "nome": "Porto Bank",
+          "claro": "#4A5CC6",
+          "escuro": "#7F7FDE"
+        },
+        "sorte_online": {
+          "nome": "Sorte Online",
+          "claro": "#15B8B6",
+          "escuro": "#14A8A7"
+        }
+      },
+      "copia": {
+        "versao": "1.1.0",
+        "atualizado": "2026-10-19T19:25:30.868Z",
+        "dias": 89,
+        "periodo": {
+          "inicio": "2026-07-22",
+          "fim": "2026-10-19"
+        },
+        "conta": {
+          "id": "1774644040252864",
+          "nome": "Superadds media intelligence &  technology LTDA",
+          "moeda": "BRL",
+          "fuso": "25",
+          "revisao": "APPROVED",
+          "verificacao": "pending",
+          "saude": {
+            "envio": "BLOCKED",
+            "travas": [
+              {
+                "entidade": "BUSINESS",
+                "codigo": 141010,
+                "tipo": "verificacao",
+                "descricao": "A empresa ainda não passou pela verificação da Meta",
+                "solucao": null
+              },
+              {
+                "entidade": "BUSINESS",
+                "codigo": 141015,
+                "tipo": "limite",
+                "descricao": "A empresa atingiu o limite de conversas iniciadas em 24h",
+                "solucao": null
+              }
+            ]
+          }
+        },
+        "numero": {
+          "numero": "+55 11 94959-7275",
+          "nome": "Superadds",
+          "qualidade": "GREEN",
+          "status": "CONNECTED",
+          "status_nome": "AVAILABLE_WITHOUT_REVIEW",
+          "vazao": "STANDARD",
+          "faixa": "TIER_250",
+          "limite": 250,
+          "saude": {
+            "envio": "BLOCKED",
+            "travas": [
+              {
+                "entidade": "PHONE_NUMBER",
+                "codigo": 141012,
+                "tipo": "limite",
+                "descricao": "O número atingiu o limite de conversas iniciadas pela empresa em 24h",
+                "solucao": null
+              },
+              {
+                "entidade": "BUSINESS",
+                "codigo": 141010,
+                "tipo": "verificacao",
+                "descricao": "A empresa ainda não passou pela verificação da Meta",
+                "solucao": null
+              },
+              {
+                "entidade": "BUSINESS",
+                "codigo": 141015,
+                "tipo": "limite",
+                "descricao": "A empresa atingiu o limite de conversas iniciadas em 24h",
+                "solucao": null
+              }
+            ]
+          }
+        },
+        "limite_24h": {
+          "faixa": "TIER_250",
+          "limite": 250,
+          "ilimitado": false,
+          "usados": 250,
+          "restantes": 0,
+          "pct": 100
+        },
+        "metricas_templates_ativas": true,
+        "templates": [
+          {
+            "id": "3467359573424673",
+            "nome": "3p_direct_integration_test_template",
+            "status": "APPROVED",
+            "categoria": "UTILITY",
+            "idioma": "en_US",
+            "qualidade": "UNKNOWN",
+            "motivo": null,
+            "cabecalho": "TEXT",
+            "botao_url": false,
+            "opt_out": false,
+            "resumo": "Welcome! This is a test message from the WhatsApp Business Platform. You have successfully configured your WhatsApp Business account and com",
+            "totais": {
+              "enviadas": 0,
+              "entregues": 0,
+              "lidas": 0,
+              "cliques": 0,
+              "cliques_unicos": 0,
+              "custo": 0
+            },
+            "parceiro": "teste",
+            "situacao_nome": "teste"
+          },
+          {
+            "id": "1116699660850896",
+            "nome": "consorcio_clt_emprestimo",
+            "status": "APPROVED",
+            "categoria": "MARKETING",
+            "idioma": "pt_BR",
+            "qualidade": "UNKNOWN",
+            "motivo": null,
+            "cabecalho": "IMAGE",
+            "botao_url": true,
+            "opt_out": false,
+            "resumo": "*Tem planos pela frente?* ✨ O supermercado Ayumi trouxe uma oportunidade que pode ajudar você a dar aquele próximo passo. Seja para organiza",
+            "totais": {
+              "enviadas": 10,
+              "entregues": 10,
+              "lidas": 0,
+              "cliques": 0,
+              "cliques_unicos": 0,
+              "custo": 3.22,
+              "estimado": true
+            },
+            "parceiro": "porto_bank",
+            "situacao_nome": "excecao"
+          },
+          {
+            "id": "1098451569701893",
+            "nome": "portobank_consorcio_casa",
+            "status": "APPROVED",
+            "categoria": "MARKETING",
+            "idioma": "pt_BR",
+            "qualidade": "UNKNOWN",
+            "motivo": null,
+            "cabecalho": "IMAGE",
+            "botao_url": true,
+            "opt_out": false,
+            "resumo": "*Conquiste sua casa nova!* 🏠 O supermercado Ayumi trouxe uma opção do Porto Bank para ajudar você nessa conquista. Com o *Consórcio Porto B",
+            "totais": {
+              "enviadas": 248,
+              "entregues": 246,
+              "lidas": 0,
+              "cliques": 0,
+              "cliques_unicos": 0,
+              "custo": 79.14,
+              "estimado": true
+            },
+            "parceiro": "porto_bank",
+            "situacao_nome": "padrao"
+          }
+        ],
+        "por_dia_template": [
+          {
+            "data": "2026-10-16",
+            "template_id": "1098451569701893",
+            "enviadas": 5,
+            "entregues": 5,
+            "lidas": 0,
+            "cliques": 0,
+            "cliques_unicos": 0,
+            "custo": 1.61,
+            "estimado": true
+          },
+          {
+            "data": "2026-10-16",
+            "template_id": "1116699660850896",
+            "enviadas": 3,
+            "entregues": 3,
+            "lidas": 0,
+            "cliques": 0,
+            "cliques_unicos": 0,
+            "custo": 0.97,
+            "estimado": true
+          },
+          {
+            "data": "2026-10-19",
+            "template_id": "1098451569701893",
+            "enviadas": 243,
+            "entregues": 241,
+            "lidas": 0,
+            "cliques": 0,
+            "cliques_unicos": 0,
+            "custo": 77.53,
+            "estimado": true
+          },
+          {
+            "data": "2026-10-19",
+            "template_id": "1116699660850896",
+            "enviadas": 7,
+            "entregues": 7,
+            "lidas": 0,
+            "cliques": 0,
+            "cliques_unicos": 0,
+            "custo": 2.25,
+            "estimado": true
+          }
+        ],
+        "gastos": {
+          "moeda": "BRL",
+          "total": 82.4602,
+          "volume": 260,
+          "por_categoria": {
+            "UTILITY": {
+              "custo": 0.105,
+              "volume": 3
+            },
+            "MARKETING": {
+              "custo": 82.3552,
+              "volume": 256
+            },
+            "SERVICE": {
+              "custo": 0,
+              "volume": 1
+            }
+          },
+          "por_dia": [
+            {
+              "data": "2026-10-15",
+              "custo": 0.035,
+              "volume": 1,
+              "pagas": 1
+            },
+            {
+              "data": "2026-10-16",
+              "custo": 2.6436,
+              "volume": 11,
+              "pagas": 10
+            },
+            {
+              "data": "2026-10-19",
+              "custo": 79.7816,
+              "volume": 248,
+              "pagas": 248
+            }
+          ],
+          "preco_dia": {
+            "2026-10-15|UTILITY": 0.035,
+            "2026-10-19|MARKETING": 0.3217,
+            "2026-10-16|UTILITY": 0.035,
+            "2026-10-16|MARKETING": 0.3217
+          }
+        },
+        "volume": {
+          "enviadas": 262,
+          "entregues": 260,
+          "por_dia": [
+            {
+              "data": "2026-10-15",
+              "enviadas": 1,
+              "entregues": 1
+            },
+            {
+              "data": "2026-10-16",
+              "enviadas": 11,
+              "entregues": 11
+            },
+            {
+              "data": "2026-10-19",
+              "enviadas": 250,
+              "entregues": 248
+            }
+          ]
+        },
+        "webhook": {
+          "unicos_24h": 250,
+          "status_24h": {
+            "enviadas": 250,
+            "entregues": 256,
+            "lidas": 186,
+            "falhas": 40
+          },
+          "status_por_dia": [
+            {
+              "data": "2026-10-16",
+              "sent": 6,
+              "delivered": 7,
+              "read": 2,
+              "failed": 0
+            },
+            {
+              "data": "2026-10-19",
+              "sent": 250,
+              "delivered": 256,
+              "read": 186,
+              "failed": 40
+            }
+          ],
+          "erros": [
+            {
+              "codigo": 131026,
+              "titulo": "Message undeliverable",
+              "total": 22,
+              "h24": 22,
+              "ultima": "2026-10-19T16:46:23.965Z",
+              "gravidade": "media",
+              "explicacao": "Número não entregável (inválido ou sem WhatsApp)"
+            },
+            {
+              "codigo": 131049,
+              "titulo": "This message was not delivered to maintain healthy ecosystem engagement.",
+              "total": 13,
+              "h24": 13,
+              "ultima": "2026-10-19T16:46:33.896Z",
+              "gravidade": "media",
+              "explicacao": "A Meta segurou marketing para quem já recebeu muito (não reenviar antes de 24h)"
+            },
+            {
+              "codigo": 130472,
+              "titulo": "User's number is part of an experiment",
+              "total": 4,
+              "h24": 4,
+              "ultima": "2026-10-19T13:21:09.359Z",
+              "gravidade": "info",
+              "explicacao": "Número em um experimento da Meta: marketing não é entregue a ele (não reenviar)"
+            },
+            {
+              "codigo": 131048,
+              "titulo": "Spam Rate limit hit",
+              "total": 1,
+              "h24": 1,
+              "ultima": "2026-10-19T18:19:33.022Z",
+              "gravidade": "alta",
+              "explicacao": "Mensagens marcadas como spam: o número está com restrição de qualidade"
+            }
+          ],
+          "respostas_24h": 5,
+          "respostas_periodo": 10,
+          "pedidos_de_saida": 0,
+          "eventos": [
+            {
+              "quando": "2026-10-16T19:03:01.098Z",
+              "campo": "phone_number_name_update",
+              "titulo": "Pedido de nome de exibição “Ayumi”: adiado pela Meta",
+              "gravidade": "info",
+              "detalhe": null
+            }
+          ]
+        },
+        "erros": []
+      }
+    },
+    "ia": {
+      "destaque": "<b>R$30.580,00</b> de receita veio do parceiro Crefaz, representando cerca de <b>75%</b> do total, enquanto o e‑mail da Sorte Online manteve baixa taxa de bounce (<b>0,91%</b>) e boa taxa de abertura (<b>9,1%</b>).",
+      "comparativo": "A Sorte Online mostrou eficiência de e‑mail superior (bounce 0,91% vs 2,99% da Crefaz) e taxa de abertura de 9,1% contra 7,9% da Crefaz, com CTR praticamente igual (0,24% vs 0,26%). A Crefaz gerou 183 leads, porém apenas 3 foram pagos, indicando baixa conversão. O canal WhatsApp da Porto Bank entregou 99,2% das mensagens, mas não gerou cliques nem conversões, resultando em margem de apenas R$27,72.",
+      "alertas": [
+        "Taxa de bounce da Crefaz (2,99%) está muito acima da média (0,92%).",
+        "Conversão de leads da Crefaz é de 1,6% (3 pagos de 183), risco de dependência de poucos leads.",
+        "Campanha WhatsApp da Porto Bank não converteu (0 conversões em 250 disparos).",
+        "Receita por aquisição (R$12,32) está bem abaixo do valor acordado de R$30 por aquisição."
+      ],
+      "prioridade": "Concentrar esforços no parceiro Crefaz para melhorar a qualidade da base de e‑mail e a taxa de conversão de leads, revisando segmentação e fluxo de nutrição, ao mesmo tempo que se otimiza a mensagem e o call‑to‑action das campanhas WhatsApp da Porto Bank para gerar pelo menos alguma conversão. Paralelamente, renegociar ou ajustar a remuneração por aquisição da Sorte Online para aproximar a receita real (R$12,32) do valor contratado (R$30)."
     },
     "cronograma": {
       "mes": "2026-11",
@@ -1105,6 +1740,17 @@
       "variantes": {
         "ambos": [
           {
+            "data": "2026-11-02",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp · Feriado nacional: Finados",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-03",
             "canal": "email",
             "tipo": "principal",
@@ -1127,6 +1773,17 @@
             "parceiro": "crefaz"
           },
           {
+            "data": "2026-11-04",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Quarta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-05",
             "canal": "whatsapp",
             "tipo": "reimpacto",
@@ -1136,6 +1793,17 @@
             "motivo": "Reimpacto do e-mail de 04/11 para quem não abriu",
             "nota": 1.014,
             "parceiro": "crefaz"
+          },
+          {
+            "data": "2026-11-06",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Sexta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
           },
           {
             "data": "2026-11-06",
@@ -1182,6 +1850,17 @@
             "parceiro": "crefaz"
           },
           {
+            "data": "2026-11-09",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp · Salário cai (5º dia útil)",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-10",
             "canal": "email",
             "tipo": "principal",
@@ -1204,6 +1883,17 @@
             "parceiro": "crefaz"
           },
           {
+            "data": "2026-11-11",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Quarta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-12",
             "canal": "whatsapp",
             "tipo": "reimpacto",
@@ -1213,6 +1903,17 @@
             "motivo": "Reimpacto do e-mail de 11/11 para quem não abriu",
             "nota": 1.014,
             "parceiro": "crefaz"
+          },
+          {
+            "data": "2026-11-13",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Sexta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
           },
           {
             "data": "2026-11-13",
@@ -1235,6 +1936,28 @@
             "motivo": "Reimpacto do e-mail de 13/11 para quem não abriu",
             "nota": 0.908,
             "parceiro": "sorte_online"
+          },
+          {
+            "data": "2026-11-15",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos · Feriado nacional: Proclamação da República",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
+            "data": "2026-11-17",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Terça: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
           },
           {
             "data": "2026-11-17",
@@ -1271,6 +1994,17 @@
           },
           {
             "data": "2026-11-20",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Sexta: sem envio nesse dia no histórico — escolhido para espaçar os disparos · Feriado nacional: Dia da Consciência Negra",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
+            "data": "2026-11-20",
             "canal": "email",
             "tipo": "principal",
             "base": "Engajados",
@@ -1303,6 +2037,17 @@
             "parceiro": "sorte_online"
           },
           {
+            "data": "2026-11-23",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-24",
             "canal": "email",
             "tipo": "principal",
@@ -1325,6 +2070,17 @@
             "parceiro": "crefaz"
           },
           {
+            "data": "2026-11-25",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Quarta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-26",
             "canal": "whatsapp",
             "tipo": "reimpacto",
@@ -1334,6 +2090,17 @@
             "motivo": "Reimpacto do e-mail de 25/11 para quem não abriu",
             "nota": 1.014,
             "parceiro": "crefaz"
+          },
+          {
+            "data": "2026-11-27",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Sexta: sem envio nesse dia no histórico — escolhido para espaçar os disparos · Black Friday",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
           },
           {
             "data": "2026-11-27",
@@ -1389,6 +2156,17 @@
             "motivo": "Segunda: sem envio nesse dia no histórico — escolhido para espaçar os disparos · Cyber Monday; 1ª parcela do 13º salário (até 30/11); Último dia útil do mês — orçamento apertado",
             "nota": 1.278,
             "parceiro": "crefaz"
+          },
+          {
+            "data": "2026-11-30",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp · Cyber Monday; 1ª parcela do 13º salário (até 30/11); Último dia útil do mês — orçamento apertado",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
           }
         ],
         "email": [
@@ -1670,6 +2448,28 @@
         ],
         "whatsapp": [
           {
+            "data": "2026-11-01",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
+            "data": "2026-11-02",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp · Feriado nacional: Finados",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-03",
             "canal": "whatsapp",
             "tipo": "disparo",
@@ -1692,6 +2492,17 @@
             "parceiro": "crefaz"
           },
           {
+            "data": "2026-11-05",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "10h | 12h",
+            "volume": 250,
+            "motivo": "Quinta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-06",
             "canal": "whatsapp",
             "tipo": "disparo",
@@ -1712,6 +2523,17 @@
             "motivo": "Sábado: 7,8% de abertura média (1 envio) — perfil do público, sem histórico de WhatsApp",
             "nota": 0.987,
             "parceiro": "crefaz"
+          },
+          {
+            "data": "2026-11-08",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
           },
           {
             "data": "2026-11-09",
@@ -1747,6 +2569,17 @@
             "parceiro": "crefaz"
           },
           {
+            "data": "2026-11-12",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Quinta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-13",
             "canal": "whatsapp",
             "tipo": "disparo",
@@ -1758,6 +2591,39 @@
             "parceiro": "sorte_online"
           },
           {
+            "data": "2026-11-14",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "10h | 12h",
+            "volume": 250,
+            "motivo": "Sábado: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
+            "data": "2026-11-15",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos · Feriado nacional: Proclamação da República",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
+            "data": "2026-11-16",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-17",
             "canal": "whatsapp",
             "tipo": "disparo",
@@ -1767,6 +2633,17 @@
             "motivo": "Terça: 7,7% de abertura média (4 envios) · R$ 1.466 em vendas por dia de disparo (4 dias) — perfil do público, sem histórico de WhatsApp",
             "nota": 0.708,
             "parceiro": "sorte_online"
+          },
+          {
+            "data": "2026-11-18",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "10h | 12h",
+            "volume": 250,
+            "motivo": "Quarta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
           },
           {
             "data": "2026-11-19",
@@ -1802,6 +2679,28 @@
             "parceiro": "crefaz"
           },
           {
+            "data": "2026-11-22",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
+            "data": "2026-11-23",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "17h | 19h",
+            "volume": 250,
+            "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
+          },
+          {
             "data": "2026-11-24",
             "canal": "whatsapp",
             "tipo": "disparo",
@@ -1822,6 +2721,17 @@
             "motivo": "Quarta: 8,1% de abertura média (1 envio) — perfil do público, sem histórico de WhatsApp",
             "nota": 1.0,
             "parceiro": "crefaz"
+          },
+          {
+            "data": "2026-11-26",
+            "canal": "whatsapp",
+            "tipo": "disparo",
+            "base": "Contatos com opt-in de WhatsApp",
+            "janela": "10h | 12h",
+            "volume": 250,
+            "motivo": "Quinta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+            "nota": 0.0,
+            "parceiro": "porto_bank"
           },
           {
             "data": "2026-11-27",
@@ -1893,6 +2803,15 @@
             "wpp_envios": 4,
             "wpp_volume": null,
             "resultado": null
+          },
+          "porto_bank": {
+            "email_envios": 0,
+            "email_volume": 0,
+            "aberturas": 0,
+            "cliques": 0,
+            "wpp_envios": 13,
+            "wpp_volume": 3250,
+            "resultado": null
           }
         },
         "email": {
@@ -1918,6 +2837,15 @@
             "wpp_envios": 0,
             "wpp_volume": null,
             "resultado": null
+          },
+          "porto_bank": {
+            "email_envios": 0,
+            "email_volume": 0,
+            "aberturas": 0,
+            "cliques": 0,
+            "wpp_envios": 0,
+            "wpp_volume": null,
+            "resultado": null
           }
         },
         "whatsapp": {
@@ -1938,14 +2866,23 @@
             "wpp_envios": 9,
             "wpp_volume": null,
             "resultado": null
+          },
+          "porto_bank": {
+            "email_envios": 0,
+            "email_volume": 0,
+            "aberturas": 0,
+            "cliques": 0,
+            "wpp_envios": 12,
+            "wpp_volume": 3000,
+            "resultado": null
           }
         }
       },
-      "estrategia": "Sorte Online ficou com os envios de e‑mail nas terças, sextas e um domingo (<b>9</b> datas) e os disparos de WhatsApp aos sábados (<b>4</b> datas); Crefaz recebeu os e‑mails distribuídos em quartas, segundas, quintas e sábados (<b>9</b> datas) e os WhatsApp nas quintas (<b>4</b> datas), seguindo a cadência de <b>2,4</b> envios por semana e as janelas de melhor performance indicadas.",
+      "estrategia": "Sorte Online recebeu as terças (<b>03</b>, <b>10</b>, <b>17</b>, <b>24</b>) e sextas (<b>06</b>, <b>13</b>, <b>20</b>, <b>27</b>) e o domingo <b>29</b>, pois seu modelo de vendas tem maior abertura nas segundas e melhor clique entre 18h‑24h; Crefaz ficou com as quartas (<b>04</b>, <b>11</b>, <b>25</b>), segundas (<b>09</b>, <b>30</b>), quinta <b>19</b> e sábados (<b>07</b>, <b>21</b>, <b>28</b>), alinhado à sua melhor taxa de abertura nas quartas e clique 15h‑18h; o WhatsApp foi distribuído alternando sábados para Sorte Online, quintas/quarta para Crefaz e os demais dias úteis para Porto Bank, garantindo um parceiro por canal a cada dia.",
       "cuidados": [
-        "Verificar a entrega e taxa de abertura nos dias de feriado (Finados, Proclamação da República, Consciência Negra) conforme o plano já definido.",
-        "Acompanhar o CTR nas faixas horárias recomendadas (18h–24h para Sorte Online, 15h–18h para Crefaz) e ajustar o horário se houver queda.",
-        "Garantir que não haja sobreposição de canais no mesmo dia e registrar eventuais desvios da cadência de <b>2,4</b> envios/semana."
+        "Verificar a entrega e a taxa de abertura nos dias de feriado (02, 15, 20) para ajustar possíveis quedas de performance",
+        "Monitorar a performance de clique nas faixas horárias indicadas (18h‑24h para Sorte Online, 15h‑18h para Crefaz) em cada disparo",
+        "Confirmar que o volume de envios de WhatsApp de Porto Bank não sobrecarrega a base já utilizada pelos envios de e‑mail dos demais parceiros"
       ],
       "regras": [
         "Um parceiro por dia na base engajada de e-mail.",
@@ -2042,6 +2979,9 @@
         "whatsapp": false
       },
       "fonte_resultado": "vendas",
+      "whatsapp_meta": false,
+      "valor_por_disparo": null,
+      "receita_base": null,
       "relatorio": null,
       "receita_regra": "remuneracao",
       "receita_regra_txt": "R$ 30 por aquisição",
@@ -4302,18 +5242,18 @@
           },
           "whatsapp": null,
           "ia": {
-            "motor": "<b>13.7%</b> de abertura na base engajada vs <b>1.2%</b> na desengajada, diferença de <b>12.5 pontos percentuais</b>, refletindo maior geração de receita pela base engajada.",
-            "diagnostico": "Campanhas enviadas para a base engajada apresentam abertura média de 13.7% e CTR de 0.34%, gerando a maior parte das vendas diárias (ex.: 19/08 – 104.029 aberturas, 2.018 cliques e 10 pedidos). A base desengajada tem abertura de 1.2% e CTR de 0.11%, resultando em vendas muito menores (ex.: 19/08 – 5.472 aberturas, 454 cliques e apenas 10 pedidos).",
-            "conversao": "A taxa de conversão do site está em <b>3.24%</b>, enquanto a taxa de abertura dos e‑mails é <b>9.1%</b> e o CTR <b>0.24%</b>, indicando que o gargalo está na captação de atenção (abertura e clique). Cada pedido representa em média R$35.47 de receita, logo melhorar abertura e CTR aumentará diretamente o volume de pedidos.",
+            "motor": "A base engajada registra abertura de <b>13.7%</b> contra <b>1.2%</b> da desengajada, diferença de <b>12.5 p.p.</b>. Essa disparidade eleva a receita dos envios à base engajada, que gera a maior parte das vendas.",
+            "diagnostico": "Os dias em que foram enviados disparos para a base engajada apresentam picos de vendas (ex.: 04/08 – 100 pedidos, 15/08 – 23 pedidos) e maiores taxas de abertura. Já os poucos envios à base desengajada resultam em aberturas mínimas (<1%) e vendas quase nulas, indicando baixa efetividade.",
+            "conversao": "A taxa de abertura geral é de <b>9.1%</b> e o CTR de <b>0.24%</b>, bem abaixo dos <b>13.7%</b> da base engajada. O gargalo está na captação de cliques, que limita a conversão do site (3.24%) e gera menos pedidos por entrega.",
             "sustenta": [
-              "Entregas totais: <b>32,365,972</b>",
-              "Aberturas totais: <b>2,957,347</b>",
-              "Cliques totais: <b>77,159</b>",
-              "Taxa de conversão site: <b>3.24%</b>",
-              "Receita total: R$<b>46,071.61</b>"
+              "Entregas totais: 32,365,972",
+              "Aberturas totais: 2,957,347",
+              "Cliques totais: 77,159",
+              "Conversão site: 3.24%",
+              "Receita total: R$46,071.61"
             ],
-            "recomendacao": "Enviar a próxima campanha na <b>sábado</b> às <b>19h</b> para a <b>base engajada</b>, com repique na <b>segunda-feira</b> às <b>19h</b>. Use assunto no padrão dos top assuntos, por exemplo: \"*|PRIMEIRO_NOME|*, R$ 102 Milhões acumulados para amanhã 🍀\" ou variações que incluam o valor do prêmio e a palavra \"surpresa\".",
-            "whatsapp": "O canal WhatsApp está pronto, ainda sem disparos."
+            "recomendacao": "Enviar a campanha na <b>sábado</b> às <b>19h</b> para a <b>base engajada</b>, com repique na <b>segunda-feira</b> às <b>10h</b>. Use assunto no estilo dos top assuntos, por exemplo: \"*|PRIMEIRO_NOME|*, R$ 102 Milhões acumulados para amanhã 🍀\".",
+            "whatsapp": "O canal WhatsApp está pronto e aguardando os primeiros disparos; ainda não há resultados."
           }
         },
         {
@@ -4903,18 +5843,18 @@
           "parcial": true,
           "ate": "18/10",
           "ia": {
-            "motor": "A base engajada tem abertura de <b>6.22%</b> contra <b>0.0%</b> da desengajada, indicando que o engajamento impulsiona a maior parte da receita de <b>R$ 7,140.00</b>.",
-            "diagnostico": "Os disparos para a base engajada geraram picos de vendas (ex.: 06/10 com 73 pedidos e 2,374.48 R$) enquanto as campanhas para a base total, com abertura zero, resultaram em vendas baixas. A correlação entre abertura acima de 5% e aumento de pedidos confirma que o e‑mail ainda é motor de conversão.",
-            "conversao": "A taxa de conversão do site está em <b>2.68%</b>, enquanto a abertura geral foi de <b>5.4%</b> e o CTR de <b>0.12%</b>, apontando baixa efetividade dos cliques. O gargalo está no CTR, que reduz o fluxo de visitas; cada pedido gera um custo de <b>R$ 14.00</b> para a Supertroco (R$ 7,140 ÷ 510 pedidos).",
+            "motor": "A base engajada tem <b>6.22%</b> de abertura contra <b>0%</b> na desengajada, ou seja <b>6.22 pontos percentuais</b> a mais, e concentra praticamente toda a receita da Supertroco.",
+            "diagnostico": "Nos dias em que enviamos para a base engajada (02/10, 06/10, 15/10) a taxa de abertura subiu para 6‑7% e as vendas dispararam, superando R$2 000. Já as campanhas para a base total apresentaram 0% de abertura, mas ainda geraram vendas modestamente menores, indicando que a abertura impacta fortemente o resultado.",
+            "conversao": "A taxa de conversão do site está em <b>2.68%</b> (510 pedidos/19 039 sessões). O gargalo está no CTR baixo (<b>0.12%</b>), que gera apenas 9 458 cliques a partir de 7.68 mi entregas. Cada pedido representa <b>R$ 14.00</b> de receita para a Supertroco, mostrando que melhorar cliques eleva diretamente a receita.",
             "sustenta": [
-              "Abertura média da base engajada: <b>6.22%</b>",
-              "CTR médio da base engajada: <b>0.13%</b>",
-              "Total de entregas no período: <b>7,680,631</b>",
-              "Vendas totais: <b>R$ 14,963.03</b>",
-              "Aquisições realizadas: <b>316</b>"
+              "<b>6.22%</b> taxa de abertura na base engajada",
+              "<b>0%</b> taxa de abertura na base desengajada",
+              "<b>0.12%</b> CTR geral",
+              "<b>2.68%</b> taxa de conversão do site",
+              "<b>R$ 14.00</b> de receita média por pedido"
             ],
-            "recomendacao": "Envie a próxima campanha na <b>Sexta‑feira</b> entre <b>15h e 18h</b> para a base engajada, com repique na <b>Segunda‑feira</b> ao mesmo horário; use assunto no padrão dos top assuntos, por exemplo: \"*|PRIMEIRO_NOME|*, R$ 82 Milhões* acumulados para sábado 🍀\".",
-            "whatsapp": "O canal WhatsApp está pronto e aguardando os primeiros disparos; cada disparo custa R$0,42."
+            "recomendacao": "Enviar nova campanha para a base engajada nas <b>sextas‑feiras</b> entre <b>15h e 18h</b>, usando assunto no padrão \"*|PRIMEIRO_NOME|*, R$ 85 Milhões acumulados para sexta 🍀\"; repetir (repique) na segunda‑feira seguinte para quem não abriu, mantendo o mesmo segmento e horário. ",
+            "whatsapp": "Canal pronto, aguardando os primeiros disparos (custo R$ 0.42 por envio)."
           }
         },
         {
@@ -5831,21 +6771,18 @@
           "parcial": false,
           "ate": "30/09",
           "ia": {
-            "motor": "A base engajada apresenta abertura média de <b>15%</b> contra <b>0%</b> na desengajada, o que se reflete diretamente na receita total de R$<b>18.283,58</b>.",
-            "diagnostico": "Os disparos para a base engajada geram picos de vendas, como em 11/09 (R$4.164, 33 pedidos) e 14/09 (52 pedidos). Nos dias sem disparo, as vendas caem significativamente, evidenciando a dependência do e‑mail para conversão.",
-            "conversao": "A taxa de conversão do site está em 3.25% (444 pedidos/13.680 sessões) e o CTR dos e‑mails é apenas 0.26% (23.150 cliques/8.842.941 entregas), indicando que o gargalo está na geração de cliques; isso resulta em um custo médio de R$41,18 por pedido.",
+            "motor": "A base <b>engajada</b> tem abertura de <b>15.0%</b> contra <b>0.0%</b> da desengajada, indicando que toda a receita vem dos engajados.",
+            "diagnostico": "Dias com disparos para a base engajada e taxa de abertura acima de 10% (ex.: 05/09, 11/09, 14/09, 16/09, 22/09) apresentaram vendas superiores a R$1 000, enquanto envios com 0% de abertura (02/09, 03/09, 07/09, 30/09) geraram vendas baixas.",
+            "conversao": "A taxa de conversão do site foi de <b>3.25%</b> (444 pedidos em 13 680 sessões). O gargalo está no engajamento do e‑mail (abertura 12.2% e CTR 0.26%), limitando o fluxo de visitas que geram pedidos, cujo ticket médio é R$41.18.",
             "sustenta": [
-              "Entregas totais: 8.842.941",
-              "Aberturas totais: 1.077.298",
-              "Taxa de abertura média: 12.2%",
-              "Taxa de cliques (CTR) média: 0.26%",
-              "Receita total: R$18.283,58",
-              "Ticket médio: R$41,18",
-              "Aquisições: 247",
-              "Receita por aquisição: R$7,40"
+              "Entregues: 8,842,941",
+              "Bounces: 62,051",
+              "Aberturas: 1,077,298",
+              "Cliques: 23,150",
+              "Pedidos: 444"
             ],
-            "recomendacao": "Para otimizar resultados, envie a próxima campanha na sexta‑feira, entre 19h e 21h, para a base engajada, com repique 2 horas depois. Use assunto no formato \"*|PRIMEIRO_NOME|*, uma surpresa para você aproveitar na Loto deste ano\" ou \"*|PRIMEIRO_NOME|*, R$ 102 Milhões acumulados para amanhã 🍀\" que já mostraram altas taxas de abertura.",
-            "whatsapp": "O canal WhatsApp está configurado e pronto; ainda não há disparos, aguardando o primeiro teste."
+            "recomendacao": "Envie a campanha para a base engajada nas <b>sextas</b> às <b>19h</b> (horário de maior abertura) e faça repique na <b>quarta</b> às <b>10h</b>. Use assunto no padrão dos top assuntos, como \"*|PRIMEIRO_NOME|*, uma surpresa para você aproveitar na Loto deste ano\".",
+            "whatsapp": "Canal pronto, aguardando os primeiros disparos."
           }
         },
         {
@@ -6888,18 +7825,18 @@
           "parcial": false,
           "ate": "31/08",
           "ia": {
-            "motor": "A base engajada tem <b>14.1%</b> de abertura contra <b>1.2%</b> da desengajada, diferença de <b>12.9 pontos</b>; isso explica a maior parte dos <b>R$12,825</b> em vendas, já que a maior parte das conversões vem dos engajados.",
-            "diagnostico": "Os disparos para a base engajada (ex.: 04/08, 14% de abertura) geraram 100 pedidos e R$2,770, enquanto envios à desengajada (ex.: 05/08, 1% de abertura) resultaram em apenas 43 pedidos e R$941. A correlação entre alta abertura e volume de vendas é clara.",
-            "conversao": "A taxa de abertura geral foi de 9.2% e o CTR de 0.28%, bem abaixo das médias de engajamento; isso limita a conversão do site (7.87%). O gargalo está na captação de cliques, que impacta diretamente nos <b>345</b> pedidos gerados.",
+            "motor": "A base engajada tem taxa de abertura de <b>14.1%</b> contra <b>1.2%</b> da desengajada, diferença de <b>12.9 pontos percentuais</b>, concentrando a maior parte das vendas e da receita da Supertroco.",
+            "diagnostico": "Nos dias em que enviamos para a base engajada, como 04/08 e 15/08, registramos picos de vendas (R$ 2.770 e R$ 1.687) e maior número de pedidos. Quando a campanha foi para a base desengajada, como 05/08, as vendas foram baixas (R$ 941) apesar de entrega similar. Isso demonstra que a alta taxa de abertura da base engajada impulsiona diretamente as conversões.",
+            "conversao": "A taxa de abertura geral foi de <b>9.2%</b> e o CTR de <b>0.28%</b>, bem abaixo das médias da base engajada. Com taxa de conversão do site de <b>7.87%</b>, gerou <b>345</b> pedidos, cada um valendo em média R$ <b>37.17</b>. O gargalo está na baixa abertura e CTR, limitando o volume de visitas que se convertem em pedidos.",
             "sustenta": [
-              "<b>14.1%</b> taxa de abertura na base engajada",
-              "<b>1.2%</b> taxa de abertura na base desengajada",
-              "<b>345</b> pedidos realizados",
-              "<b>R$12,825</b> em vendas no período",
-              "<b>R$1,282.5</b> de receita para a Supertroco"
+              "Entregas totais: 15,842,400",
+              "Aberturas totais: 1,461,512",
+              "Cliques totais: 44,551",
+              "Pedidos realizados: 345",
+              "Receita total: R$ 12,825.00"
             ],
-            "recomendacao": "Enviar e‑mails à base engajada aos sábados entre 18h e 24h (melhor dia e horário), usando assunto no padrão \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀\"; repetir (repique) o mesmo conteúdo 2 dias depois para quem não abriu, mantendo a mesma linha de assunto.",
-            "whatsapp": "Canal pronto, ainda sem disparos."
+            "recomendacao": "Envie a campanha para a base engajada às <b>Sábados</b> entre <b>18h–24h</b>, usando assunto padrão \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀\" que já rendeu <b>16.31%</b> de abertura. Repique na <b>Segunda</b> entre <b>12h–15h</b> para reforçar a mensagem e captar quem não abriu no sábado. Mantenha o foco na base engajada, pois ela entrega a maior parte das conversões.",
+            "whatsapp": "Canal WhatsApp está pronto e aguardando os primeiros disparos."
           }
         }
       ],
@@ -7330,90 +8267,90 @@
         },
         "dias": {
           "2026-11-03": {
-            "tema": "Terça de Bolões — confira e jogue",
-            "assunto": "*|PRIMEIRO_NOME|*, confira os bolões da semana",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, veja os jogos e bolões disponíveis hoje. Jogue com responsabilidade. [link]"
+            "tema": "Terça de Bolões — confira",
+            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana para você",
+            "mensagem": "Confira os bolões de hoje e aumente a diversão. Jogue com responsabilidade. Boa sorte! 🍀 [link]"
           },
           "2026-11-06": {
-            "tema": "Sexta de Loto — jogue agora",
-            "assunto": "*|PRIMEIRO_NOME|*, sexta de sorte na Loto",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, os concursos de sexta já estão abertos. Confira e jogue com responsabilidade. 🍀 [link]"
+            "tema": "Sexta de Jogos — confira",
+            "assunto": "*|PRIMEIRO_NOME|*, jogos e bolões imperdíveis",
+            "mensagem": "Confira os jogos e bolões deste fim de semana. Jogue com responsabilidade e aproveite a chance. 🍀 [link]"
           },
           "2026-11-07": {
-            "tema": "Sábado de Reforço — não perca",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Bolões de sábado",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, ainda dá tempo de entrar nos bolões de sábado. Confira e jogue com responsabilidade. [link]"
+            "tema": "Sábado - lembrete de bolão",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu o bolão de sexta?",
+            "mensagem": "Você viu o bolão de sexta? Confira agora e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-08": {
-            "tema": "Domingo de Repetição — veja",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Concurso de domingo",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, o concurso de domingo está disponível. Confira e jogue com responsabilidade. [link]"
+            "tema": "Domingo - lembrete de bolão",
+            "assunto": "*|PRIMEIRO_NOME|*, você ainda pode conferir o bolão",
+            "mensagem": "Ainda dá tempo! Confira o bolão de sexta e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-10": {
-            "tema": "Terça de Loto — novas chances",
-            "assunto": "*|PRIMEIRO_NOME|*, novas chances na Loto hoje",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, confira os jogos de hoje e participe dos bolões. Jogue com responsabilidade. 🍀 [link]"
+            "tema": "Terça de Bolões — confira",
+            "assunto": "*|PRIMEIRO_NOME|*, novos bolões para apostar",
+            "mensagem": "Confira os novos bolões disponíveis hoje. Jogue com responsabilidade e boa sorte. 🍀 [link]"
           },
           "2026-11-13": {
-            "tema": "Sexta de Bolões — última chance",
-            "assunto": "*|PRIMEIRO_NOME|*, sexta de bolões imperdível",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, os bolões de sexta já estão disponíveis. Confira e jogue com responsabilidade. [link]"
+            "tema": "Sexta de Jogos — confira",
+            "assunto": "*|PRIMEIRO_NOME|*, jogos da sexta esperam por você",
+            "mensagem": "Confira os jogos de sexta e participe dos bolões. Jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-14": {
-            "tema": "Sábado de Repetição — não perca",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Bolões de sábado",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, ainda dá tempo de entrar nos bolões de sábado. Confira e jogue com responsabilidade. 🍀 [link]"
+            "tema": "Sábado - lembrete de jogos",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu o convite de sexta?",
+            "mensagem": "Você viu o convite de sexta? Confira os jogos e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-17": {
-            "tema": "Terça de jogos — confira",
+            "tema": "Terça de Bolões — confira",
             "assunto": "*|PRIMEIRO_NOME|*, confira os bolões da semana",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, tem bolões fresquinhos para a semana. Confira e jogue com responsabilidade. Boa sorte! [link]"
+            "mensagem": "Confira os jogos da semana e participe dos bolões. Jogue com responsabilidade 🍀 [link]"
           },
           "2026-11-20": {
-            "tema": "Sexta da Consciência — jogue",
-            "assunto": "*|PRIMEIRO_NOME|*, jogue no feriado com responsabilidade",
-            "mensagem": "Feliz Dia da Consciência Negra! Aproveite o feriado para conferir os concursos de hoje. Jogue com responsabilidade. 🍀 [link]"
+            "tema": "Sexta da Consciência Negra — jogue",
+            "assunto": "*|PRIMEIRO_NOME|*, jogue no feriado da Consciência Negra",
+            "mensagem": "No feriado da Consciência Negra, confira os concursos e bolões disponíveis. Jogue com responsabilidade 🍀 [link]"
           },
           "2026-11-21": {
-            "tema": "Sábado de reforço — veja",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu o convite de sexta?",
-            "mensagem": "Oi, caso ainda não tenha conferido, os concursos de hoje estão disponíveis. Confira e jogue com responsabilidade. [link]"
+            "tema": "Você viu? – Bolões da Sexta",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu? Bolões da Consciência Negra",
+            "mensagem": "Você viu o e‑mail? Ainda dá tempo de entrar nos bolões da Consciência Negra. Jogue com responsabilidade 🍀 [link]"
           },
           "2026-11-22": {
-            "tema": "Domingo de segunda chance",
-            "assunto": "*|PRIMEIRO_NOME|*, segunda chance para o concurso de sexta",
-            "mensagem": "Ainda dá tempo de participar dos jogos de sexta. Confira e jogue com responsabilidade. [link]"
+            "tema": "Repique – Bolões da Consciência Negra",
+            "assunto": "*|PRIMEIRO_NOME|*, ainda dá tempo – bolões da Sexta",
+            "mensagem": "Reenvio: confira os bolões da Consciência Negra e participe. Jogue com responsabilidade 🍀 [link]"
           },
           "2026-11-24": {
-            "tema": "Terça de apostas — confira",
-            "assunto": "*|PRIMEIRO_NOME|*, novos bolões para você",
-            "mensagem": "Novos bolões abertos nesta terça. Confira os detalhes e jogue com responsabilidade. 🍀 [link]"
+            "tema": "Terça de Jogos – confira",
+            "assunto": "*|PRIMEIRO_NOME|*, confira os jogos desta terça",
+            "mensagem": "Confira os jogos e bolões da semana. Jogue com responsabilidade 🍀 [link]"
           },
           "2026-11-26": {
-            "tema": "Quinta de segunda chance",
-            "assunto": "*|PRIMEIRO_NOME|*, não perdeu a chance de terça?",
-            "mensagem": "Se ainda não viu, os bolões de terça ainda estão valendo. Confira e jogue com responsabilidade. [link]"
+            "tema": "Repique – Jogos da Terça",
+            "assunto": "*|PRIMEIRO_NOME|*, ainda dá tempo – jogos da terça",
+            "mensagem": "Reenvio: veja os jogos e bolões da última terça e participe. Jogue com responsabilidade 🍀 [link]"
           },
           "2026-11-27": {
             "tema": "Sexta Black Friday — jogue",
-            "assunto": "*|PRIMEIRO_NOME|*, Black Friday de jogos",
-            "mensagem": "Black Friday chegou! Aproveite os concursos especiais de hoje. Confira e jogue com responsabilidade. 🍀 [link]"
+            "assunto": "*|PRIMEIRO_NOME|*, Black Friday de jogos e bolões",
+            "mensagem": "Aproveite a Black Friday para conferir os bolões e concursos. Jogue com responsabilidade 🍀 [link]"
           },
           "2026-11-28": {
-            "tema": "Reimpacto Loteria — confira agora",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Jogue com responsabilidade",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, não perca a chance de conferir os bolões da semana 🍀 Jogue com responsabilidade! [link]"
+            "tema": "Sábado de bolão — confira os jogos",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu? Jogue o bolão de hoje",
+            "mensagem": "Confira os jogos da semana e participe do bolão. Jogue com responsabilidade! 🍀 [link]"
           },
           "2026-11-29": {
-            "tema": "Domingo de Sorte — participe",
-            "assunto": "*|PRIMEIRO_NOME|*, descubra os jogos da semana",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, veja os concursos e bolões que estão rolando 🎲 Confirme e jogue com responsabilidade. [link]"
+            "tema": "Domingo de sorte — jogue agora",
+            "assunto": "*|PRIMEIRO_NOME|*, aproveite o concurso de domingo",
+            "mensagem": "Confira o concurso de hoje e jogue com responsabilidade. Boa sorte! 🍀 [link]"
           }
         },
-        "estrategia": "Manteremos a cadência de <b>2,4</b> envios por semana nos dias <b>Domingo, Sexta, Sábado e Terça</b>, dentro da janela de <b>18h‑20h</b>, onde o CTR histórico foi de <b>0,36%</b>. Nos dias de disparo, a média de vendas foi de <b>R$ 1.079</b> contra <b>R$ 311</b> nos dias sem envio, e o conteúdo abordará jogos, bolões e concursos da semana, com “confira” e “jogue com responsabilidade”.",
+        "estrategia": "Vamos combinar os envios nos dias <b>Domingo</b>, <b>Sexta</b>, <b>Sábado</b> e <b>Terça</b> dentro da janela de <b>18h‑20h</b>, aproveitando a taxa de abertura média de <b>9,6%</b> (pico de <b>12,0%</b> nas segundas) e o CTR de <b>0,36%</b> entre 18h‑24h. Ao integrar e‑mail e WhatsApp mantemos a cadência de <b>2,4</b> envios por semana, potencializando as vendas que já superam <b>R$ 1.079</b> nos dias de disparo versus <b>R$ 311</b> nos dias sem contato, com foco em jogos, bolões e concursos da semana, confira e jogue com responsabilidade.",
         "notas": {
-          "email": "Com apenas e‑mail, o plano aumenta para <b>13</b> envios mensais, ampliando a presença nos dias <b>Domingo, Quinta, Sexta, Sábado e Terça</b>, mas perde a oportunidade de testar o canal de WhatsApp.",
-          "whatsapp": "Usar só WhatsApp gera <b>9</b> envios nos dias <b>Domingo, Sexta e Terça</b>, porém ainda não há histórico de desempenho para esse canal."
+          "email": "Usar apenas e‑mail mantém a taxa de abertura de <b>9,6%</b> e o melhor horário de 18h‑20h, mas reduz o alcance que o WhatsApp poderia trazer nos mesmos dias.",
+          "whatsapp": "Com apenas WhatsApp, sem histórico, não há dados de abertura, mas ainda podemos seguir a mesma cadência de <b>2,4</b> envios semanais nos dias programados."
         },
         "evidencias": [
           "Abertura dos engajados: melhor na segunda (12,0% em 8 envio(s)); média geral 9,6%.",
@@ -7513,6 +8450,9 @@
         "whatsapp": false
       },
       "fonte_resultado": "funil",
+      "whatsapp_meta": false,
+      "valor_por_disparo": null,
+      "receita_base": null,
       "relatorio": {
         "observacao": "Nosso processo de vendas considera dois tipos de leads para o faturamento, os que fecham a proposta no mesmo mês de entrada e os que fecham no mês seguinte. Com base nisso, o faturamento para este mês foi de R$ 47.980,00 Qualquer dúvida estou à disposição.",
         "geral": {
@@ -7713,17 +8653,18 @@
             }
           ],
           "ia": {
-            "motor": "Do envio ao contrato, o maior gargalo está nas <b>aberturas → cliques</b> (<b>96,7%</b> permanecem) e nos <b>digitados → pagos</b> do relatório (<b>91,2%</b> permanecem).",
-            "diagnostico": "Foram digitadas <b>34</b> propostas, das quais <b>3</b> foram pagas, gerando <b>R$ 30.580,00</b> de volume pago e um ticket médio de <b>R$ 10.193,33</b>. O faturamento considerado pelo parceiro foi <b>R$ 47.980,00</b>, com adesão de <b>1,72%</b> sobre leads únicos.",
-            "conversao": "A taxa de abertura foi de <b>7,92%</b> e a taxa de cliques sobre entregas <b>0,26%</b>, com <b>2,99%</b> de bounce nas tentativas.",
+            "motor": "O caminho vai de <b>194.612</b> e‑mails entregues → <b>15.408</b> aberturas (7,9%) → <b>508</b> cliques (0,26%). A maior perda está na etapa <b>aberturas → cliques</b>, onde <b>96,7%</b> dos usuários permanecem sem avançar. No funil do parceiro, de <b>34</b> propostas digitadas apenas <b>3</b> se convertem em contratos pagos, com <b>91,2%</b> retidos na etapa digitados → pagos.",
+            "diagnostico": "Foram digitadas <b>34</b> propostas, das quais <b>3</b> resultaram em contratos pagos, gerando um volume de <b>R$ 30.580,00</b> (receita da Supertroco) e ticket médio de <b>R$ 10.193,33</b>. O parceiro reportou faturamento de <b>R$ 47.980,00</b> considerando fechamentos no mesmo mês e no mês seguinte.",
+            "conversao": "A taxa de abertura foi de <b>7,9%</b> e a taxa de cliques de <b>0,26%</b>, com <b>2,99%</b> de bounce (entregues + bounce).",
             "sustenta": [
-              "Entregues: 194.612",
-              "Bounce: 5.989 (2,99% das tentativas)",
-              "Aberturas: 15.408 (7,92% das entregas)",
-              "Cliques: 508 (0,26% das entregas)"
+              "<b>194.612</b> e‑mails entregues",
+              "<b>15.408</b> aberturas (7,9% das entregas)",
+              "<b>508</b> cliques (0,26% das entregas)",
+              "<b>174</b> leads únicos",
+              "<b>3</b> contratos pagos (8,8% dos digitados)"
             ],
-            "recomendacao": "Para o próximo ciclo, teste envios nas quartas e sábados, horário 15h–18h (melhores dias/horários identificados), mantendo as bases A e B com cadência semanal. Solicite ao parceiro a origem de cada lead e dados diários de recebimento para melhorar a atribuição e o acompanhamento de performance.",
-            "whatsapp": "Canal WhatsApp está pronto, aguardando os primeiros disparos; cada disparo tem custo de R$ 0,42."
+            "recomendacao": "Para o próximo ciclo, mantenha a base atual e teste envios nas quartas e sábados, preferencialmente entre 15h e 18h, já que esses dias/hora mostraram melhor performance. Defina uma cadência semanal de duas campanhas e solicite ao parceiro que inclua a origem de cada lead (e‑mail, WhatsApp, etc.) e forneça os dados diários de leads recebidos, digitados e pagos para melhorar o acompanhamento.",
+            "whatsapp": "Canal pronto, ainda sem disparos."
           }
         },
         {
@@ -7903,17 +8844,18 @@
           "parcial": false,
           "ate": "30/09",
           "ia": {
-            "motor": "Do envio ao contrato, o maior gargalo está nas <b>aberturas → cliques</b> (<b>96,7%</b> permanecem) e nos <b>digitados → pagos</b> do relatório (<b>91,2%</b> permanecem).",
-            "diagnostico": "Foram digitadas <b>34</b> propostas, das quais <b>3</b> foram pagas, gerando <b>R$ 30.580,00</b> de volume pago e um ticket médio de <b>R$ 10.193,33</b>. O faturamento considerado pelo parceiro foi <b>R$ 47.980,00</b>, com adesão de <b>1,72%</b> sobre leads únicos.",
-            "conversao": "A taxa de abertura foi de <b>7,92%</b> e a taxa de cliques sobre entregas <b>0,26%</b>, com <b>2,99%</b> de bounce nas tentativas.",
+            "motor": "O caminho vai de <b>194.612</b> e‑mails entregues → <b>15.408</b> aberturas (7,9%) → <b>508</b> cliques (0,26%). A maior perda está na etapa <b>aberturas → cliques</b>, onde <b>96,7%</b> dos usuários permanecem sem avançar. No funil do parceiro, de <b>34</b> propostas digitadas apenas <b>3</b> se convertem em contratos pagos, com <b>91,2%</b> retidos na etapa digitados → pagos.",
+            "diagnostico": "Foram digitadas <b>34</b> propostas, das quais <b>3</b> resultaram em contratos pagos, gerando um volume de <b>R$ 30.580,00</b> (receita da Supertroco) e ticket médio de <b>R$ 10.193,33</b>. O parceiro reportou faturamento de <b>R$ 47.980,00</b> considerando fechamentos no mesmo mês e no mês seguinte.",
+            "conversao": "A taxa de abertura foi de <b>7,9%</b> e a taxa de cliques de <b>0,26%</b>, com <b>2,99%</b> de bounce (entregues + bounce).",
             "sustenta": [
-              "Entregues: 194.612",
-              "Bounce: 5.989 (2,99% das tentativas)",
-              "Aberturas: 15.408 (7,92% das entregas)",
-              "Cliques: 508 (0,26% das entregas)"
+              "<b>194.612</b> e‑mails entregues",
+              "<b>15.408</b> aberturas (7,9% das entregas)",
+              "<b>508</b> cliques (0,26% das entregas)",
+              "<b>174</b> leads únicos",
+              "<b>3</b> contratos pagos (8,8% dos digitados)"
             ],
-            "recomendacao": "Para o próximo ciclo, teste envios nas quartas e sábados, horário 15h–18h (melhores dias/horários identificados), mantendo as bases A e B com cadência semanal. Solicite ao parceiro a origem de cada lead e dados diários de recebimento para melhorar a atribuição e o acompanhamento de performance.",
-            "whatsapp": "Canal WhatsApp está pronto, aguardando os primeiros disparos; cada disparo tem custo de R$ 0,42."
+            "recomendacao": "Para o próximo ciclo, mantenha a base atual e teste envios nas quartas e sábados, preferencialmente entre 15h e 18h, já que esses dias/hora mostraram melhor performance. Defina uma cadência semanal de duas campanhas e solicite ao parceiro que inclua a origem de cada lead (e‑mail, WhatsApp, etc.) e forneça os dados diários de leads recebidos, digitados e pagos para melhorar o acompanhamento.",
+            "whatsapp": "Canal pronto, ainda sem disparos."
           }
         }
       ],
@@ -8332,79 +9274,79 @@
         "dias": {
           "2026-11-04": {
             "tema": "Quarta de crédito – simule já",
-            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito com Crefaz",
-            "mensagem": "Oi *|PRIMEIRO_NOME|* 😊, que tal simular um crédito de até R$ 4.000? Veja se cabe no seu orçamento. [link]"
+            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito até R$ 4.000",
+            "mensagem": "Simule seu crédito 💰 e veja se cabe no seu orçamento. Fale agora! [link]"
           },
           "2026-11-05": {
-            "tema": "Quinta de crédito – reimpacto",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*, ainda dá tempo de simular",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, lembrando do crédito de até R$ 4.000 que pode ser seu. Consulte as condições. [link]"
+            "tema": "Quinta de reimpacto – viu?",
+            "assunto": "Você viu? Simule seu crédito agora",
+            "mensagem": "Ainda dá tempo de simular seu crédito. Consulte as condições aqui: [link]"
           },
           "2026-11-07": {
-            "tema": "Sábado de crédito – veja as condições",
-            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito neste sábado",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, simule um crédito de até R$ 4.000 e veja se cabe no seu orçamento. [link]"
+            "tema": "Sábado de crédito – veja opções",
+            "assunto": "*|PRIMEIRO_NOME|*, crédito rápido até R$ 4.000",
+            "mensagem": "Confira como solicitar crédito rápido e organizar suas finanças. Simule já: [link]"
           },
           "2026-11-09": {
-            "tema": "Segunda de organização – simule seu crédito",
-            "assunto": "*|PRIMEIRO_NOME|*, organize seu orçamento com crédito",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, seu salário chegou. Simule um crédito de até R$ 4.000 e organize as contas. [link]"
+            "tema": "Segunda de salário – organize seu orçamento",
+            "assunto": "*|PRIMEIRO_NOME|*, organize seu salário com crédito",
+            "mensagem": "Com o salário chegando, veja se cabe um crédito no seu orçamento. Simule e consulte condições: [link]"
           },
           "2026-11-11": {
             "tema": "Quarta de crédito – simule agora",
-            "assunto": "*|PRIMEIRO_NOME|*, veja as condições de crédito Crefaz",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, simule um crédito de até R$ 4.000 e veja se cabe no seu orçamento. [link]"
+            "assunto": "*|PRIMEIRO_NOME|*, crédito sem sair de casa",
+            "mensagem": "Simule seu crédito e descubra se cabe no seu orçamento. Comece aqui: [link]"
           },
           "2026-11-12": {
-            "tema": "Quinta de crédito – reimpacto",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*, ainda dá tempo de simular",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, reforçando: crédito de até R$ 4.000 disponível. Consulte as condições. [link]"
+            "tema": "Reimpacto – já simulou?",
+            "assunto": "Você viu? Simule seu crédito hoje",
+            "mensagem": "Ainda dá tempo de consultar as condições do crédito. Simule aqui: [link]"
           },
           "2026-11-18": {
-            "tema": "Quarta de crédito – última chance",
-            "assunto": "*|PRIMEIRO_NOME|*, última oportunidade de simular crédito",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, ainda dá tempo de simular um crédito de até R$ 4.000. Veja se cabe no seu orçamento. [link]"
+            "tema": "Quarta – crédito disponível",
+            "assunto": "*|PRIMEIRO_NOME|*, crédito até R$ 4.000, simule",
+            "mensagem": "Aproveite e simule seu crédito agora. Veja se cabe no seu orçamento: [link]"
           },
           "2026-11-19": {
-            "tema": "Quinta do crédito – simule já",
-            "assunto": "*|PRIMEIRO_NOME|*, veja se cabe no seu orçamento",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Aproveite o adiantamento de salário de amanhã e simule seu crédito. Veja se cabe no seu orçamento. [link]"
+            "tema": "Quinta de crédito – simule já",
+            "assunto": "Simule seu crédito antes do adiantamento",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, que tal simular um crédito de até R$ 4.000 e organizar seu adiantamento salarial? Veja se cabe no seu orçamento 😊 [link]"
           },
           "2026-11-21": {
-            "tema": "Sábado de crédito – consulte condições",
-            "assunto": "*|PRIMEIRO_NOME|*, consulte as condições do crédito",
-            "mensagem": "Olá, *|PRIMEIRO_NOME|*! No fim de semana, simule seu crédito e veja se cabe no seu orçamento. [link]"
+            "tema": "Sábado de crédito – consulte as condições",
+            "assunto": "Confira as condições de crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Olá, *|PRIMEIRO_NOME|*. Consulte as condições de crédito de até R$ 4.000 e veja se cabe no seu orçamento. [link]"
           },
           "2026-11-23": {
-            "tema": "Segunda repique – você viu?",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Simule seu crédito",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Ainda dá tempo de simular o crédito e conferir as condições. [link]"
+            "tema": "Sábado de crédito – consulte as condições",
+            "assunto": "Você viu? Simule crédito até R$ 4.000",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*. Você viu nossa oferta? Simule crédito de até R$ 4.000 e veja se cabe no seu orçamento. [link]"
           },
           "2026-11-25": {
-            "tema": "Quarta do crédito – simule agora",
-            "assunto": "*|PRIMEIRO_NOME|*, simule seu crédito hoje",
-            "mensagem": "Olá, *|PRIMEIRO_NOME|*! Simule seu crédito e veja se cabe no seu orçamento. [link]"
+            "tema": "Quarta de crédito – simule agora",
+            "assunto": "Simule crédito de até R$ 4.000 nesta quarta",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, simule um crédito de até R$ 4.000 e veja se cabe no seu orçamento. [link]"
           },
           "2026-11-26": {
-            "tema": "Quinta reimpacto – veja o e‑mail",
-            "assunto": "*|PRIMEIRO_NOME|*, veja o e‑mail de ontem",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Reforçando o e‑mail de quarta: simule seu crédito e confira as condições. [link]"
+            "tema": "Quinta de crédito – reforce sua simulação",
+            "assunto": "Reforce sua simulação de crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, ainda dá tempo de simular crédito de até R$ 4.000. Confira se cabe no seu orçamento. [link]"
           },
           "2026-11-28": {
-            "tema": "Sábado de crédito – veja condições",
-            "assunto": "*|PRIMEIRO_NOME|*, veja as condições do crédito",
-            "mensagem": "Olá, *|PRIMEIRO_NOME|*! Simule seu crédito neste sábado e veja se cabe no seu orçamento. [link]"
+            "tema": "Sábado de crédito – simule já",
+            "assunto": "Simule crédito de até R$ 4.000 neste sábado",
+            "mensagem": "Olá *|PRIMEIRO_NOME|*, simule crédito de até R$ 4.000 e veja se cabe no seu orçamento antes do fim de semana. [link]"
           },
           "2026-11-30": {
-            "tema": "Segunda Cyber Monday – organize finanças",
-            "assunto": "*|PRIMEIRO_NOME|*, organize seu orçamento pós‑13º",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Cyber Monday chegou, a 1ª parcela do 13º já caiu. Simule crédito e organize seu orçamento. [link]"
+            "tema": "Segunda de crédito – organize seu orçamento",
+            "assunto": "Cyber Monday: simule crédito e organize seu orçamento",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, no Cyber Monday você pode simular crédito de até R$ 4.000 e organizar o orçamento da última parcela do 13º. [link]"
           }
         },
-        "estrategia": "A estratégia combina envios nas quartas, quando a taxa de abertura foi <b>8.0%</b>, totalizando <b>9</b> e‑mails e <b>4</b> mensagens de WhatsApp, sempre entre <b>15h</b> e <b>18h</b> para aproveitar o CTR de <b>0.26%</b>. Os conteúdos focam em simular crédito, consultar as condições e reforçar a organização financeira nos dias de pagamento.",
+        "estrategia": "A estratégia combina os 9 envios de e‑mail e 4 disparos de WhatsApp nos dias <b>Quarta</b>, <b>Quinta</b>, <b>Segunda</b> e <b>Sábado</b>, aproveitando a taxa de abertura mais alta nas quartas (<b>8,0%</b>) e o melhor horário de clique entre 15h e 18h (<b>0,26%</b>) para convidar o público a simular crédito, consultar as condições e ver se cabe no seu orçamento. Os envios serão feitos dentro da janela de 16h‑18h para e‑mail, reforçando a mensagem de organização financeira nos dias de pagamento.",
         "notas": {
-          "email": "Usando só e‑mail, aumentaria para <b>12</b> envios mensais, mantendo o horário das <b>15h</b> às <b>18h</b> nas quartas, mas perderia a presença no WhatsApp.",
-          "whatsapp": "Com apenas WhatsApp, seriam <b>9</b> mensagens no mês, nos mesmos dias, porém sem dados de desempenho anteriores para otimizar o horário."
+          "email": "Usar somente e‑mail mantém a janela de 16h‑18h e a taxa de abertura de <b>8,0%</b> nas quartas, mas reduz o alcance que os disparos de WhatsApp poderiam trazer.",
+          "whatsapp": "Com WhatsApp ainda sem histórico, a campanha iniciará 4 envios nos mesmos dias, permitindo construir métricas de abertura e clique a partir do zero."
         },
         "evidencias": [
           "Abertura dos envios do parceiro: melhor na quarta (8,0% em 1 envio(s)); média geral 7,9%.",
@@ -8429,6 +9371,892 @@
         },
         "volume_email": 97306,
         "fonte_volume": "mediana dos últimos 2 envios do parceiro"
+      }
+    },
+    {
+      "id": "porto_bank",
+      "nome": "Porto Bank",
+      "segmento": "Serviços financeiros",
+      "site": "https://www.portobank.com.br/",
+      "modelo": "midia",
+      "cores": {
+        "brand": "#2C3DA8",
+        "brand_lite": "#809AD9",
+        "deep": "#0A0047",
+        "deep2": "#2F2663",
+        "accent": "#00A1FC",
+        "accent_lite": "#66CAFC",
+        "bg": "#F1F2F9",
+        "soft": "#F7F8FC",
+        "ink": "#14123A",
+        "line": "#E3E5F1",
+        "grafico": "#4A5CC6",
+        "grafico_escuro": "#7F7FDE"
+      },
+      "cores_escuro": {
+        "bg": "#04001B",
+        "card": "#060029",
+        "soft": "#080037",
+        "line": "#241F43",
+        "ink": "#F9FAFD",
+        "ink2": "#C8C8D3",
+        "muted": "#9391A4",
+        "muted2": "#716E86",
+        "track": "#1C173C",
+        "seg": "#04001B",
+        "brand": "#4E5CB6",
+        "brand_lite": "#809AD9",
+        "accent": "#00A1FC",
+        "accent_lite": "#66CAFC",
+        "deep": "#0A0047",
+        "deep2": "#2F2663"
+      },
+      "rampa": {
+        "claro": [
+          "#D5D8EE",
+          "#2C3DA8",
+          "#233186",
+          "#1B2668",
+          "#141B4C"
+        ],
+        "escuro": [
+          "#19184E",
+          "#31377E",
+          "#4E5CB6",
+          "#8790CD",
+          "#B5BBE0"
+        ]
+      },
+      "taxa_comissao": null,
+      "remuneracao": [],
+      "remuneracao_atual": null,
+      "valor_por_lead": null,
+      "ordem": 3,
+      "ficticio": false,
+      "whatsapp_cfg": {
+        "ativo": true,
+        "valor_por_disparo": 0.43,
+        "custo_por_disparo": null,
+        "volume_por_disparo": 250,
+        "arquivo": "parceiros/porto_bank/whatsapp.xlsx"
+      },
+      "fontes": {
+        "resultado": true,
+        "rd": false,
+        "whatsapp": true
+      },
+      "fonte_resultado": "meta",
+      "whatsapp_meta": true,
+      "valor_por_disparo": 0.43,
+      "receita_base": "enviadas",
+      "relatorio": null,
+      "receita_regra": "por_disparo",
+      "receita_regra_txt": "valor por disparo de WhatsApp",
+      "sem_dados": false,
+      "abas": [
+        {
+          "id": "geral",
+          "nome": "Visão geral",
+          "sub": "toda a parceria",
+          "periodo": "19/10/2026 a 19/10/2026",
+          "ini": "2026-10-19",
+          "fim": "2026-10-19",
+          "kpis": {
+            "fonte": "meta",
+            "disparos": 250,
+            "entregues": 248,
+            "lidas": 0,
+            "cliques": 0,
+            "tx_entrega": 99.2,
+            "tx_leitura": 0.0,
+            "ctr_wpp": 0.0,
+            "receita": 107.5,
+            "custo_meta": 79.78,
+            "margem": 27.72,
+            "margem_pct": 25.8,
+            "custo_por_entregue": 0.3217,
+            "receita_por_disparo": 0.43,
+            "receita_base": "enviadas",
+            "dias_ativos": 1,
+            "media_dia": 250.0,
+            "pico": {
+              "d": "19/10",
+              "iso": "2026-10-19",
+              "v": 250,
+              "dia": "Segunda"
+            },
+            "templates": [
+              "consorcio_clt_emprestimo",
+              "portobank_consorcio_casa"
+            ],
+            "estimado": true,
+            "abertura": null,
+            "ctr": null,
+            "campanhas": 0,
+            "wpp_disparos": 250,
+            "receita_supertroco": 107.5
+          },
+          "dias": [
+            {
+              "iso": "2026-10-19",
+              "d": "19/10",
+              "dow": "Segunda",
+              "send": null,
+              "n_env": 0,
+              "wpp": "250 disparos",
+              "n_wpp": 2,
+              "disparos": 250,
+              "entregues": 248,
+              "lidas": 0,
+              "cliques": 0,
+              "receita": 107.5,
+              "custo": 79.78,
+              "margem": 27.72,
+              "templates": [
+                "consorcio_clt_emprestimo",
+                "portobank_consorcio_casa"
+              ],
+              "estimado": true
+            }
+          ],
+          "email": null,
+          "whatsapp": {
+            "campanhas": 2,
+            "disparos": 250,
+            "periodo": "19/10/2026 a 19/10/2026",
+            "valor_por_disparo": 0.43,
+            "investimento": 107.5,
+            "custo_por_disparo": 0.3191,
+            "custo_total": 79.78,
+            "entregues": 248,
+            "lidas": 0,
+            "cliques": 0,
+            "respostas": 0,
+            "conversoes": 0,
+            "valor_convertido": 0,
+            "tx_entrega": 99.2,
+            "tx_leitura": null,
+            "ctr": 0.0,
+            "tx_conversao": 0.0,
+            "custo_por_conversao": null,
+            "roas": null,
+            "receita_por_disparo": 0.0,
+            "funil": {
+              "disparos": 250,
+              "entregues": 248,
+              "lidas": 0,
+              "cliques": 0,
+              "conversoes": 0
+            },
+            "criterio_dia": "cliques por disparo",
+            "semana": [
+              [
+                "Segunda",
+                0.0,
+                2,
+                0,
+                0,
+                250
+              ]
+            ],
+            "melhor_dia": [
+              "Segunda",
+              0.0,
+              2,
+              0,
+              0,
+              250
+            ],
+            "top_cliques": [],
+            "horarios": [
+              [
+                "09h–12h",
+                0.0,
+                2
+              ]
+            ]
+          },
+          "por_template": [
+            {
+              "nome": "portobank_consorcio_casa",
+              "template_id": "1098451569701893",
+              "enviadas": 243,
+              "entregues": 241,
+              "lidas": 0,
+              "cliques": 0,
+              "custo": 77.53,
+              "dias": 1,
+              "estimado": true,
+              "receita": 104.49,
+              "margem": 26.96,
+              "tx_entrega": 99.2,
+              "tx_leitura": 0.0,
+              "ctr": 0.0
+            },
+            {
+              "nome": "consorcio_clt_emprestimo",
+              "template_id": "1116699660850896",
+              "enviadas": 7,
+              "entregues": 7,
+              "lidas": 0,
+              "cliques": 0,
+              "custo": 2.25,
+              "dias": 1,
+              "estimado": true,
+              "receita": 3.01,
+              "margem": 0.76,
+              "tx_entrega": 100.0,
+              "tx_leitura": 0.0,
+              "ctr": 0.0
+            }
+          ],
+          "ia": {
+            "motor": "<b>250</b> disparos, <b>248</b> entregues, <b>0</b> leituras e <b>0</b> cliques – volume máximo atingido e taxa de entrega de <b>99,2%</b>.",
+            "diagnostico": "A receita total foi de R$ 107,50 contra um custo Meta de R$ 79,78, gerando margem bruta de R$ 27,72 (<b>25,8%</b>). O custo por entrega ficou em R$ 0,3217.",
+            "conversao": "O template <i>consorcio_clt_emprestimo</i> teve a melhor taxa de entrega (100%) e o <i>portobank_consorcio_casa</i> a menor (99,2%). Ambos registraram 0% de leitura e 0% de cliques, sem diferença entre eles.",
+            "sustenta": [
+              "Disparos: 250",
+              "Entregues: 248",
+              "Taxa de entrega: 99,2%",
+              "Receita: R$ 107,50",
+              "Margem: R$ 27,72"
+            ],
+            "recomendacao": "Para o próximo ciclo, mantenha o volume dentro do limite diário de 250 disparos, distribuindo 200 mensagens para <i>portobank_consorcio_casa</i> e 50 para <i>consorcio_clt_emprestimo</i> na terça‑feira (20/10) às 10h. Evite reenviar para o mesmo número antes de 24 h, monitore a qualidade GREEN e ajuste o horário se houver aumento de erros de webhook.",
+            "whatsapp": "Canal saudável (qualidade GREEN), limite de 250 pessoas em 24 h totalmente utilizado, com 40 erros de webhook (códigos 131026, 131049, 130472, 131048)."
+          }
+        },
+        {
+          "id": "2026-10",
+          "nome": "Outubro 2026",
+          "sub": "1 dias com dados",
+          "periodo": "19/10/2026 a 19/10/2026",
+          "ini": "2026-10-19",
+          "fim": "2026-10-19",
+          "kpis": {
+            "fonte": "meta",
+            "disparos": 250,
+            "entregues": 248,
+            "lidas": 0,
+            "cliques": 0,
+            "tx_entrega": 99.2,
+            "tx_leitura": 0.0,
+            "ctr_wpp": 0.0,
+            "receita": 107.5,
+            "custo_meta": 79.78,
+            "margem": 27.72,
+            "margem_pct": 25.8,
+            "custo_por_entregue": 0.3217,
+            "receita_por_disparo": 0.43,
+            "receita_base": "enviadas",
+            "dias_ativos": 1,
+            "media_dia": 250.0,
+            "pico": {
+              "d": "19/10",
+              "iso": "2026-10-19",
+              "v": 250,
+              "dia": "Segunda"
+            },
+            "templates": [
+              "consorcio_clt_emprestimo",
+              "portobank_consorcio_casa"
+            ],
+            "estimado": true,
+            "abertura": null,
+            "ctr": null,
+            "campanhas": 0,
+            "wpp_disparos": 250,
+            "receita_supertroco": 107.5
+          },
+          "dias": [
+            {
+              "iso": "2026-10-19",
+              "d": "19/10",
+              "dow": "Segunda",
+              "send": null,
+              "n_env": 0,
+              "wpp": "250 disparos",
+              "n_wpp": 2,
+              "disparos": 250,
+              "entregues": 248,
+              "lidas": 0,
+              "cliques": 0,
+              "receita": 107.5,
+              "custo": 79.78,
+              "margem": 27.72,
+              "templates": [
+                "consorcio_clt_emprestimo",
+                "portobank_consorcio_casa"
+              ],
+              "estimado": true
+            }
+          ],
+          "email": null,
+          "whatsapp": {
+            "campanhas": 2,
+            "disparos": 250,
+            "periodo": "19/10/2026 a 19/10/2026",
+            "valor_por_disparo": 0.43,
+            "investimento": 107.5,
+            "custo_por_disparo": 0.3191,
+            "custo_total": 79.78,
+            "entregues": 248,
+            "lidas": 0,
+            "cliques": 0,
+            "respostas": 0,
+            "conversoes": 0,
+            "valor_convertido": 0,
+            "tx_entrega": 99.2,
+            "tx_leitura": null,
+            "ctr": 0.0,
+            "tx_conversao": 0.0,
+            "custo_por_conversao": null,
+            "roas": null,
+            "receita_por_disparo": 0.0,
+            "funil": {
+              "disparos": 250,
+              "entregues": 248,
+              "lidas": 0,
+              "cliques": 0,
+              "conversoes": 0
+            },
+            "criterio_dia": "cliques por disparo",
+            "semana": [
+              [
+                "Segunda",
+                0.0,
+                2,
+                0,
+                0,
+                250
+              ]
+            ],
+            "melhor_dia": [
+              "Segunda",
+              0.0,
+              2,
+              0,
+              0,
+              250
+            ],
+            "top_cliques": [],
+            "horarios": [
+              [
+                "09h–12h",
+                0.0,
+                2
+              ]
+            ]
+          },
+          "por_template": [
+            {
+              "nome": "portobank_consorcio_casa",
+              "template_id": "1098451569701893",
+              "enviadas": 243,
+              "entregues": 241,
+              "lidas": 0,
+              "cliques": 0,
+              "custo": 77.53,
+              "dias": 1,
+              "estimado": true,
+              "receita": 104.49,
+              "margem": 26.96,
+              "tx_entrega": 99.2,
+              "tx_leitura": 0.0,
+              "ctr": 0.0
+            },
+            {
+              "nome": "consorcio_clt_emprestimo",
+              "template_id": "1116699660850896",
+              "enviadas": 7,
+              "entregues": 7,
+              "lidas": 0,
+              "cliques": 0,
+              "custo": 2.25,
+              "dias": 1,
+              "estimado": true,
+              "receita": 3.01,
+              "margem": 0.76,
+              "tx_entrega": 100.0,
+              "tx_leitura": 0.0,
+              "ctr": 0.0
+            }
+          ],
+          "parcial": true,
+          "ate": "19/10",
+          "ia": {
+            "motor": "<b>250</b> disparos, <b>248</b> entregues, <b>0</b> leituras e <b>0</b> cliques – volume máximo atingido e taxa de entrega de <b>99,2%</b>.",
+            "diagnostico": "A receita total foi de R$ 107,50 contra um custo Meta de R$ 79,78, gerando margem bruta de R$ 27,72 (<b>25,8%</b>). O custo por entrega ficou em R$ 0,3217.",
+            "conversao": "O template <i>consorcio_clt_emprestimo</i> teve a melhor taxa de entrega (100%) e o <i>portobank_consorcio_casa</i> a menor (99,2%). Ambos registraram 0% de leitura e 0% de cliques, sem diferença entre eles.",
+            "sustenta": [
+              "Disparos: 250",
+              "Entregues: 248",
+              "Taxa de entrega: 99,2%",
+              "Receita: R$ 107,50",
+              "Margem: R$ 27,72"
+            ],
+            "recomendacao": "Para o próximo ciclo, mantenha o volume dentro do limite diário de 250 disparos, distribuindo 200 mensagens para <i>portobank_consorcio_casa</i> e 50 para <i>consorcio_clt_emprestimo</i> na terça‑feira (20/10) às 10h. Evite reenviar para o mesmo número antes de 24 h, monitore a qualidade GREEN e ajuste o horário se houver aumento de erros de webhook.",
+            "whatsapp": "Canal saudável (qualidade GREEN), limite de 250 pessoas em 24 h totalmente utilizado, com 40 erros de webhook (códigos 131026, 131049, 130472, 131048)."
+          }
+        }
+      ],
+      "cronograma": {
+        "mes": "2026-11",
+        "nome": "Novembro 2026",
+        "gerado_em": "19/10/2026",
+        "fatos": {
+          "2026-11-02": [
+            "Feriado nacional: Finados"
+          ],
+          "2026-11-03": [
+            "Benefícios do INSS caindo na conta"
+          ],
+          "2026-11-09": [
+            "Salário cai (5º dia útil)"
+          ],
+          "2026-11-15": [
+            "Feriado nacional: Proclamação da República"
+          ],
+          "2026-11-19": [
+            "Adiantamento salarial (dia 20)"
+          ],
+          "2026-11-20": [
+            "Feriado nacional: Dia da Consciência Negra"
+          ],
+          "2026-11-24": [
+            "Começa o pagamento do INSS do mês"
+          ],
+          "2026-11-27": [
+            "Black Friday"
+          ],
+          "2026-11-30": [
+            "Cyber Monday",
+            "1ª parcela do 13º salário (até 30/11)",
+            "Último dia útil do mês — orçamento apertado"
+          ]
+        },
+        "variantes": {
+          "ambos": [
+            {
+              "data": "2026-11-02",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp · Feriado nacional: Finados",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-04",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Quarta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-06",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Sexta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-09",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp · Salário cai (5º dia útil)",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-11",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Quarta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-13",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Sexta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-15",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos · Feriado nacional: Proclamação da República",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-17",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Terça: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-20",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Sexta: sem envio nesse dia no histórico — escolhido para espaçar os disparos · Feriado nacional: Dia da Consciência Negra",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-23",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-25",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Quarta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-27",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Sexta: sem envio nesse dia no histórico — escolhido para espaçar os disparos · Black Friday",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-30",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp · Cyber Monday; 1ª parcela do 13º salário (até 30/11); Último dia útil do mês — orçamento apertado",
+              "nota": 0.0
+            }
+          ],
+          "email": [],
+          "whatsapp": [
+            {
+              "data": "2026-11-01",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-02",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp · Feriado nacional: Finados",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-05",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "10h | 12h",
+              "volume": 250,
+              "motivo": "Quinta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-08",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-12",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Quinta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-14",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "10h | 12h",
+              "volume": 250,
+              "motivo": "Sábado: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-15",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos · Feriado nacional: Proclamação da República",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-16",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-18",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "10h | 12h",
+              "volume": 250,
+              "motivo": "Quarta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-22",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Domingo: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-23",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "17h | 19h",
+              "volume": 250,
+              "motivo": "Segunda: média de 0,0 cliques por dia (1 dia no histórico) — perfil do público, sem histórico de WhatsApp",
+              "nota": 0.0
+            },
+            {
+              "data": "2026-11-26",
+              "canal": "whatsapp",
+              "tipo": "disparo",
+              "base": "Contatos com opt-in de WhatsApp",
+              "janela": "10h | 12h",
+              "volume": 250,
+              "motivo": "Quinta: sem envio nesse dia no histórico — escolhido para espaçar os disparos",
+              "nota": 0.0
+            }
+          ]
+        },
+        "projecao": {
+          "ambos": {
+            "email_envios": 0,
+            "email_volume": 0,
+            "aberturas": 0,
+            "cliques": 0,
+            "wpp_envios": 13,
+            "wpp_volume": 3250,
+            "resultado": null
+          },
+          "email": {
+            "email_envios": 0,
+            "email_volume": 0,
+            "aberturas": 0,
+            "cliques": 0,
+            "wpp_envios": 0,
+            "wpp_volume": null,
+            "resultado": null
+          },
+          "whatsapp": {
+            "email_envios": 0,
+            "email_volume": 0,
+            "aberturas": 0,
+            "cliques": 0,
+            "wpp_envios": 12,
+            "wpp_volume": 3000,
+            "resultado": null
+          }
+        },
+        "dias": {
+          "2026-11-01": {
+            "tema": "Domingo de crédito – simule já",
+            "assunto": "Olá *|PRIMEIRO_NOME|*, descubra seu crédito",
+            "mensagem": "Quer saber se cabe no seu orçamento? Simule seu crédito agora e organize suas finanças 😊 [link]"
+          },
+          "2026-11-02": {
+            "tema": "Finados – crédito tranquilo",
+            "assunto": "Finados: veja condições de crédito",
+            "mensagem": "No feriado, aproveite para consultar as condições de crédito e planejar seu próximo passo 😊 [link]"
+          },
+          "2026-11-04": {
+            "tema": "Quarta de crédito – simule já",
+            "assunto": "Quarta: descubra seu limite de crédito",
+            "mensagem": "Confira se o crédito cabe no seu orçamento e organize suas contas. Simule agora! [link]"
+          },
+          "2026-11-05": {
+            "tema": "Simule em poucos minutos",
+            "assunto": "Quinta: simule crédito antes do almoço",
+            "mensagem": "Aproveite a manhã para simular seu crédito e ver as condições. Organize seu orçamento. [link]"
+          },
+          "2026-11-06": {
+            "tema": "Sexta do crédito – simule agora",
+            "assunto": "Sexta: veja se cabe no seu orçamento",
+            "mensagem": "Finalize a semana simulando seu crédito e planejando as próximas despesas 😊 [link]"
+          },
+          "2026-11-08": {
+            "tema": "Domingo de crédito – veja opções",
+            "assunto": "Domingo: descubra opções de crédito",
+            "mensagem": "Use o domingo para consultar condições de crédito e organizar seu plano financeiro. [link]"
+          },
+          "2026-11-09": {
+            "tema": "Segunda de salário – organize finanças",
+            "assunto": "Segunda: salário chegou, veja seu crédito",
+            "mensagem": "Com o salário na conta, é hora de organizar o orçamento. Consulte as condições de crédito e planeje 😊 [link]"
+          },
+          "2026-11-11": {
+            "tema": "Quarta de crédito – simule já",
+            "assunto": "Simule seu crédito hoje, *|PRIMEIRO_NOME|*",
+            "mensagem": "Quer saber se cabe no seu orçamento? Simule agora e descubra. [link]"
+          },
+          "2026-11-12": {
+            "tema": "Quinta de crédito – consulte condições",
+            "assunto": "Consulte as condições de crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Veja as opções que o Porto Bank oferece e veja se encaixa no seu plano. [link]"
+          },
+          "2026-11-13": {
+            "tema": "Sexta do crédito – veja se cabe",
+            "assunto": "Veja se o crédito cabe no seu orçamento, *|PRIMEIRO_NOME|*",
+            "mensagem": "Faça uma simulação rápida e descubra a melhor solução para você. [link]"
+          },
+          "2026-11-14": {
+            "tema": "Sábado de crédito – simule já",
+            "assunto": "Simule seu crédito neste sábado, *|PRIMEIRO_NOME|*",
+            "mensagem": "Aproveite o fim de semana para organizar suas finanças e simular seu crédito. [link]"
+          },
+          "2026-11-15": {
+            "tema": "Domingo de feriado – simule crédito",
+            "assunto": "Feriado! Simule seu crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Mesmo no feriado, você pode simular e planejar seu próximo passo. [link]"
+          },
+          "2026-11-16": {
+            "tema": "Segunda de crédito – organize finanças",
+            "assunto": "Organize sua semana com uma simulação, *|PRIMEIRO_NOME|*",
+            "mensagem": "Comece a semana verificando se o crédito cabe no seu orçamento. Simule agora. [link]"
+          },
+          "2026-11-17": {
+            "tema": "Terça de crédito – veja condições",
+            "assunto": "Confira as condições de crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Descubra as opções disponíveis e veja se atendem ao seu plano financeiro. [link]"
+          },
+          "2026-11-18": {
+            "tema": "Quarta de crédito – simule já",
+            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito hoje",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, que tal simular um crédito que cabe no seu orçamento? É rápido e sem compromisso. 😊 [link]"
+          },
+          "2026-11-20": {
+            "tema": "Sexta da Consciência – crédito consciente",
+            "assunto": "Você viu? Crédito especial na Sexta Negra",
+            "mensagem": "Feliz Dia da Consciência Negra! Aproveite para consultar as condições de crédito do Porto Bank e organizar suas finanças. 🌟 [link]"
+          },
+          "2026-11-22": {
+            "tema": "Domingo de crédito – veja se cabe",
+            "assunto": "*|PRIMEIRO_NOME|*, domingo é dia de planejar",
+            "mensagem": "Domingo tranquilo? Simule seu crédito e veja como encaixa no seu planejamento financeiro. 📊 [link]"
+          },
+          "2026-11-23": {
+            "tema": "Segunda de crédito – comece a semana",
+            "assunto": "*|PRIMEIRO_NOME|*, dê o start na sua semana",
+            "mensagem": "Boa segunda! Consulte as condições do Porto Bank e descubra opções que se ajustam ao seu bolso. 👍 [link]"
+          },
+          "2026-11-25": {
+            "tema": "Quarta de crédito – oportunidade",
+            "assunto": "*|PRIMEIRO_NOME|*, oportunidade de crédito hoje",
+            "mensagem": "É quarta! Simule agora e veja se o crédito cabe no seu planejamento financeiro. 💡 [link]"
+          },
+          "2026-11-26": {
+            "tema": "Quinta de crédito – veja suas opções",
+            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito nesta quinta",
+            "mensagem": "Quinta-feira é ótima para organizar finanças. Simule seu crédito e compare condições. 📈 [link]"
+          },
+          "2026-11-27": {
+            "tema": "Black Friday de crédito – simule já",
+            "assunto": "Black Friday! Crédito especial no Porto Bank",
+            "mensagem": "Aproveite a Black Friday para simular crédito e planejar suas compras com tranquilidade. 🛍️ [link]"
+          },
+          "2026-11-30": {
+            "tema": "Cyber Monday – simule crédito",
+            "assunto": "Cyber Monday, *|PRIMEIRO_NOME|*: veja se cabe",
+            "mensagem": "Aproveite a Cyber Monday para organizar seu orçamento antes da 1ª parcela do 13º. Simule crédito e consulte as condições agora [link]"
+          }
+        },
+        "estrategia": "O plano de novembro prevê <b>13</b> disparos de WhatsApp distribuídos nos dias Domingo, Segunda, Terça, Quarta e Sexta, focando em mensagens de 'simule', 'consulte as condições' e 'veja se cabe no seu orçamento' para o segmento de crédito; se optar apenas por WhatsApp, serão <b>12</b> envios nos dias Domingo, Segunda, Quarta, Quinta e Sábado, mantendo a mesma abordagem.",
+        "notas": {
+          "email": "Se usar apenas e‑mail, não haverá envios, pois o plano define zero e‑mails para o mês.",
+          "whatsapp": "Com WhatsApp exclusivo, o volume será <b>12</b> envios, mas sem histórico anterior para comparar desempenho."
+        },
+        "evidencias": [],
+        "premissas": [
+          "Um parceiro por dia na base engajada de e-mail e um por dia no WhatsApp — os parceiros dividem a mesma base de contatos.",
+          "E-mail principal: 0 por semana para engajados (sem e-mail: parceiro só de WhatsApp), na janela 18h | 20h.",
+          "Volume do e-mail: ≈ 761 mil contatos (mediana dos últimos envios para engajados da base Supertroco (compartilhada entre os parceiros)).",
+          "Repique (só e-mail): dia seguinte ao melhor e-mail da semana, só para quem não abriu.",
+          "WhatsApp: 3 por semana junto com o e-mail, ou 3 por semana só com WhatsApp; R$ 0,43 por disparo.",
+          "Sem histórico de WhatsApp: janelas 10h | 12h e 17h | 19h do calendário de referência até chegarem os primeiros dados.",
+          "Feriado reduz a prioridade do dia; pagamento e data comercial aumentam."
+        ],
+        "janela_email": "18h | 20h",
+        "email_por_semana": 0,
+        "whatsapp": {
+          "valor_por_disparo": 0.43,
+          "custo_por_disparo": null,
+          "volume_por_disparo": 250,
+          "historico": false
+        },
+        "volume_email": 761227,
+        "fonte_volume": "mediana dos últimos envios para engajados da base Supertroco (compartilhada entre os parceiros)"
       }
     }
   ]
