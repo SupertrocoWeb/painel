@@ -575,6 +575,45 @@
   .rc-faixa{fill:var(--brand);fill-opacity:.06}
   .rc-sw{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 
+  /* ---------- WhatsApp oficial (Meta) ao vivo ---------- */
+  .wa-dir{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+  .wa-st{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;padding:5px 11px;border-radius:999px;
+    border:1px solid var(--line);color:var(--ink2);background:var(--card);white-space:nowrap;cursor:default}
+  .wa-st i{width:8px;height:8px;border-radius:50%;background:var(--muted2);position:relative}
+  .wa-st.vivo i{background:var(--pos)}
+  .wa-st.vivo i::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--pos);opacity:0;animation:wa-pulso 2s ease-out infinite}
+  .wa-st.copia{background:var(--warn-bg);border-color:var(--warn-line);color:var(--warn-ink)}
+  .wa-st.copia i{background:var(--warn-ink)}
+  @keyframes wa-pulso{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+  .wa .kpis.wa-k{margin-top:14px}
+  .wa-meter{height:6px;border-radius:4px;background:var(--track);overflow:hidden;margin-top:9px}
+  .wa-meter i{display:block;height:100%;border-radius:4px;background:var(--pos);transition:width .6s cubic-bezier(.3,1,.4,1)}
+  .wa-meter.alto i{background:var(--warn-ink)} .wa-meter.cheio i{background:var(--neg)}
+  .wa-g2{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:22px;margin-top:18px;align-items:start}
+  .wa-sub h4{font-family:var(--disp);font-size:14px;font-weight:700;margin:0}
+  .wa-sub code,.wa code{font-size:11.5px;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:0 5px}
+  .wa-graf{margin-top:8px}
+  .wa-graf svg{width:100%;height:auto;display:block;overflow:visible}
+  .wa-av{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+  .wa-av li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;align-items:start;padding:10px 12px;border-radius:12px;
+    border:1px solid var(--line);background:var(--card)}
+  .wa-av .ic{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff;background:var(--muted2)}
+  .wa-av li.alta{border-color:rgba(217,87,58,.45);background:linear-gradient(0deg,rgba(217,87,58,.06),rgba(217,87,58,.06)),var(--card)}
+  .wa-av li.alta .ic{background:var(--neg)}
+  .wa-av li.media{border-color:var(--warn-line)}
+  .wa-av li.media .ic{background:var(--warn-ink)}
+  .wa-av .gv{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .wa-av li.alta .gv{color:var(--neg)} .wa-av li.media .gv{color:var(--warn-ink)}
+  .wa-av b{display:block;font-size:13px;line-height:1.35;margin-top:1px}
+  .wa-av div > span:not(.gv){display:block;font-size:12px;color:var(--muted);line-height:1.45;margin-top:2px}
+  .wa-av small{display:block;font-size:10.5px;color:var(--muted2);margin-top:3px}
+  .wa-tag{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 8px;border-radius:999px;white-space:nowrap;
+    background:var(--track);color:var(--muted)}
+  .wa-tag.ok{background:var(--wpp-bg);color:var(--wpp-ink)}
+  .wa-tag.aviso{background:var(--warn-bg);color:var(--warn-ink)}
+  .wa-tag.erro{background:rgba(217,87,58,.12);color:var(--neg)}
+  .app.escuro .wa-av li.alta{background:linear-gradient(0deg,rgba(255,138,107,.08),rgba(255,138,107,.08)),var(--card)}
+
   /* ---------- IA ---------- */
   .ia{background:linear-gradient(155deg,var(--deep),var(--deep2));color:#DCEFEF;border-radius:16px;
     padding:22px 25px;margin-top:13px;box-shadow:var(--sh);transition:background .45s ease}
@@ -756,6 +795,8 @@
     .bn{grid-template-columns:repeat(2,minmax(0,1fr))}
     .r-2,.r-3,.r-72-28{grid-template-columns:minmax(0,1fr)}
     .rc-corpo{grid-template-columns:minmax(0,1fr);gap:6px}
+    .wa-g2{grid-template-columns:minmax(0,1fr)}
+    .wa-dir{justify-content:flex-start}
     .rc-lado{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:14px}
     .ia .cols{grid-template-columns:minmax(0,1fr)}
     .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -790,7 +831,8 @@
   }
   @media(prefers-reduced-motion:reduce){
     .trilho{animation:none} .tela,.conteudo,.meses,.canal-det,.modal,.mbox{transition:none}
-    .wcol .wbar,.wd .b,.brow .bf,.vs .f,.pl .f,.fc-f,.rc-col{transition:none}
+    .wcol .wbar,.wd .b,.brow .bf,.vs .f,.pl .f,.fc-f,.rc-col,.wa-meter i{transition:none}
+    .wa-st.vivo i::after{animation:none}
     .bot-ponto.vivo::after{animation:none}
   }
 
@@ -1051,8 +1093,9 @@
         app.style.setProperty("--" + k.replace(/_/g, "-"), mapa[k]);
       });
       app.classList.toggle("escuro", escuro);
-      // As cores das series do grafico de receita tem degrau proprio no escuro.
+      // As cores das series dos graficos (receita e WhatsApp) tem degrau proprio no escuro.
       if ($("graf-rec")) pintarReceita();
+      if ($("wa-vivo")) pintarWA();
     }
     function botaoTema() {
       var escuro = estado.tema === "escuro";
@@ -1149,6 +1192,8 @@
       tRec = setTimeout(function () {
         var g = $("graf-rec");
         if (g && Math.abs(g.clientWidth - largRec) > 8) { largRec = g.clientWidth; pintarReceita(); }
+        var wg = $("wa-graf"), wv = $("wa-vivo");
+        if (wg && wv) desenharWAGrafico(wv.getAttribute("data-parceiro") || null);
       }, 150);
     });
 
@@ -1434,7 +1479,9 @@
       }
       g.push(["Campanhas de e-mail", nf(k.campanhas), k.campanhas ? mil(k.entregues) + " e-mails entregues" : "nenhum envio no período", false]);
       g.push(["Abertura média", k.campanhas ? nf(k.abertura, 1) + "%" : "—", k.campanhas ? "CTR de " + nf(k.ctr, 2) + "%" : "sem e-mail no período", false, !k.campanhas]);
-      g.push(["WhatsApp", k.wpp_disparos ? nf(k.wpp_disparos) : "Pronto", k.wpp_disparos ? "disparos · " + moeda(k.wpp_investimento) + " investidos" : "aguardando os primeiros disparos", false, !k.wpp_disparos]);
+      g.push(["WhatsApp", k.wpp_disparos ? nf(k.wpp_disparos) : "Pronto", !k.wpp_disparos ? "aguardando os primeiros disparos"
+        : k.wpp_custo_meta ? "disparos · " + moeda(k.wpp_custo_meta, 2) + " de custo na Meta"
+        : "disparos · " + moeda(k.wpp_investimento) + " investidos", false, !k.wpp_disparos]);
       if (k.parceiros_vendas && g.length < 8) g.push(["Pedidos", nf(k.pedidos), "ticket médio " + moeda(k.tkm, 2), false]);
       if (k.parceiros_vendas && g.length < 8) g.push(["Conversão do site", nf(k.conversao, 2) + "%", "pedidos ÷ sessões", false]);
       return '<div class="bn">' + g.slice(0, 8).map(function (x) {
@@ -1464,6 +1511,11 @@
             grid = '<span class="gi" style="grid-column:1/-1"><span class="r">' +
               (p.sem_dados ? "Aguardando os primeiros dados" : "Sem dados em " + esc(aba.nome)) +
               '</span><span class="v" style="color:var(--muted2)">—</span></span>';
+          } else if (p.modelo === "midia") {
+            grid = '<span class="gi"><span class="r">Disparos</span><span class="v">' + nf(r.disparos) + '</span></span>' +
+              '<span class="gi"><span class="r">Receita</span><span class="v">' + moeda(r.receita, 2) + '</span></span>' +
+              '<span class="gi"><span class="r">Custo Meta</span><span class="v">' + moeda(r.custo_meta, 2) + '</span></span>' +
+              '<span class="gi"><span class="r">Margem</span><span class="v">' + moeda(r.margem, 2) + '</span></span>';
           } else if (p.modelo === "leads" && r.fonte === "funil") {
             grid = '<span class="gi"><span class="r">Leads</span><span class="v">' + nf(r.leads) + '</span></span>' +
               '<span class="gi"><span class="r">Digitados</span><span class="v">' + nf(r.digitados) + '</span></span>' +
@@ -1481,7 +1533,8 @@
               '<span class="gi"><span class="r">Aquisições</span><span class="v">' + nf(r.aquisicoes) + '</span></span>' +
               '<span class="gi"><span class="r">Por aquisição</span><span class="v">' + moeda(r.cac, 2) + '</span></span>';
           }
-          var pe = p.modelo === "leads" ? (p.fonte_resultado === "funil" ? "leads e contratos · relatório mensal" : "mede leads")
+          var pe = p.modelo === "midia" ? (p.valor_por_disparo ? moeda(p.valor_por_disparo, 2) + " por disparo · Meta" : "mídia no WhatsApp")
+            : p.modelo === "leads" ? (p.fonte_resultado === "funil" ? "leads e contratos · relatório mensal" : "mede leads")
             : p.remuneracao_atual ? p.remuneracao_atual
             : (p.taxa_comissao ? nf(p.taxa_comissao * 100, 0) + "% de comissão" : "mede vendas");
           return '<button class="pc' + (r ? "" : " apagado") + '" data-parceiro="' + esc(p.id) + '">' +
@@ -1491,7 +1544,7 @@
             '<span class="ini" style="background:' + esc(p.cores.brand) + '">' +
             esc(p.nome.charAt(0)) + '</span><span><span class="nm">' + esc(p.nome) + '</span>' +
             '<span class="sg" style="display:block">' + esc(p.segmento) + '</span></span>' +
-            '<span class="modelo">' + (p.modelo === "leads" ? "Leads" : "Vendas") + '</span></span>' +
+            '<span class="modelo">' + (p.modelo === "leads" ? "Leads" : p.modelo === "midia" ? "Mídia" : "Vendas") + '</span></span>' +
             '<span class="grid">' + grid + '</span>' +
             (r ? miniCanais(r.email, r.whatsapp) : "") +
             '<span class="rodape">' +
@@ -2000,6 +2053,460 @@
       pintarReceita();
     }
 
+    // =================================================================
+    // WHATSAPP OFICIAL (Meta) — ao vivo pelo Worker superadds-painel
+    // =================================================================
+    // O Worker guarda o token da Meta; o painel so le o JSON agregado (sem telefone de
+    // cliente). Enquanto ele nao responde, vale a copia que veio no hub.json.
+    var WA = { vivo: null, quando: 0, erro: null, timer: null, todos: false, carregando: false,
+               periodo: ler("wa-periodo") || "30" };
+    var WA_PERIODOS = [["hoje", "Hoje"], ["7", "7 dias"], ["30", "30 dias"], ["89", "90 dias"]];
+    var WA_REFRESCO = 180000;
+    var RX_T_PADRAO = /^[a-z0-9]+(_[a-z0-9]+)+$/, RX_T_TESTE = /(^|_)(teste|test|sample|hello_world)(_|$)/i;
+    var WA_STATUS = { APPROVED: "aprovado", PENDING: "em análise", REJECTED: "rejeitado", PAUSED: "pausado",
+                      DISABLED: "desativado", IN_APPEAL: "em recurso", PENDING_DELETION: "excluído",
+                      LIMIT_EXCEEDED: "limite excedido", ARCHIVED: "arquivado" };
+    var WA_QUAL = { GREEN: "Alta", YELLOW: "Média", RED: "Baixa", UNKNOWN: "Sem nota" };
+    var WA_CAT = { MARKETING: "marketing", UTILITY: "utilidade", AUTHENTICATION: "autenticação", SERVICE: "serviço" };
+    var WA_GRAV = { alta: ["Agir agora", 0], media: ["Atenção", 1], info: ["Para saber", 2] };
+
+    function waCfg() { return (D && D.hub && D.hub.whatsapp_meta) || null; }
+    function waDados() { return WA.vivo || (waCfg() || {}).copia || null; }
+    function p2(n) { return (n < 10 ? "0" : "") + n; }
+    function isoDe(d) { return d.getFullYear() + "-" + p2(d.getMonth() + 1) + "-" + p2(d.getDate()); }
+    function waDesde() {
+      var d = new Date();
+      if (WA.periodo !== "hoje") d.setDate(d.getDate() - (parseInt(WA.periodo, 10) - 1));
+      return isoDe(d);
+    }
+    function waPeriodoTxt() {
+      return WA.periodo === "hoje" ? "hoje" : "últimos " + (WA.periodo === "89" ? "90" : WA.periodo) + " dias";
+    }
+    function waHora(iso) {
+      if (!iso) return "";
+      var d = new Date(iso);
+      return isNaN(d) ? "" : p2(d.getDate()) + "/" + p2(d.getMonth() + 1) + " " + p2(d.getHours()) + ":" + p2(d.getMinutes());
+    }
+    // Mesma regra do gerar_hub.py: lista de excecoes do parceiro, depois o prefixo.
+    function waDono(nome) {
+      var n = String(nome || "").trim().toLowerCase(), mapa = (waCfg() || {}).mapa || [], i, j;
+      for (i = 0; i < mapa.length; i++) if ((mapa[i].nomes || []).indexOf(n) >= 0) return [mapa[i].parceiro, "excecao"];
+      for (i = 0; i < mapa.length; i++) {
+        for (j = 0; j < (mapa[i].prefixos || []).length; j++) {
+          if (n.indexOf(mapa[i].prefixos[j]) === 0) return [mapa[i].parceiro, RX_T_PADRAO.test(n) ? "padrao" : "excecao"];
+        }
+      }
+      if (RX_T_TESTE.test(n)) return ["teste", "teste"];
+      return [null, "sem_dono"];
+    }
+    // Envio anterior ao "desde" do parceiro (testes de validacao) conta como teste.
+    function waDonoNaData(nome, data) {
+      var dono = waDono(nome)[0];
+      var r = ((waCfg() || {}).mapa || []).filter(function (m) { return m.parceiro === dono; })[0];
+      return r && r.desde && data < r.desde ? "teste" : dono;
+    }
+    function waCor(pid) {
+      var c = ((waCfg() || {}).cores || {})[pid];
+      if (!c) return pid === "teste" ? "var(--muted2)" : "var(--track2, var(--muted2))";
+      return app.classList.contains("escuro") ? c.escuro : c.claro;
+    }
+    function waNome(pid) {
+      if (pid === "teste") return "Testes";
+      if (!pid) return "Sem parceiro";
+      var c = ((waCfg() || {}).cores || {})[pid];
+      return c ? c.nome : pid;
+    }
+    function waPrefixo(pid) {
+      var r = ((waCfg() || {}).mapa || []).filter(function (m) { return m.parceiro === pid; })[0];
+      return r && r.prefixos && r.prefixos[0] ? r.prefixos[0] : "parceiro_";
+    }
+    function waMoeda(v, c, moedaConta) {
+      var m = moedaConta && moedaConta !== "BRL" ? moedaConta + " " : "R$ ";
+      return m + nf(v, c === undefined ? 2 : c);
+    }
+
+    function waCarregar() {
+      var c = waCfg();
+      if (!c || !c.url || WA.carregando) return;
+      WA.carregando = true;
+      fetch(c.url + "?dias=89").then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      }).then(function (j) {
+        WA.vivo = j; WA.erro = null; WA.quando = Date.now();
+      }).catch(function (e) {
+        WA.erro = e.message || "sem resposta";
+      }).then(function () {
+        WA.carregando = false;
+        pintarWA();
+      });
+    }
+    function waRelogio() {
+      if (WA.timer) return;
+      WA.timer = setInterval(function () { if (!document.hidden) waCarregar(); }, WA_REFRESCO);
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden && Date.now() - WA.quando > WA_REFRESCO) waCarregar();
+      });
+    }
+
+    // Totais do periodo escolhido: por template, por parceiro e por dia.
+    function waAgregar(d, pid) {
+      var desde = waDesde(), nomes = {}, porT = {}, porP = {}, porDia = {};
+      var zero = function () { return { enviadas: 0, entregues: 0, lidas: 0, cliques: 0, custo: 0 }; };
+      var soma = function (alvo, x) {
+        alvo.enviadas += x.enviadas || 0; alvo.entregues += x.entregues || 0; alvo.lidas += x.lidas || 0;
+        alvo.cliques += x.cliques || 0; alvo.custo += x.custo || 0;
+      };
+      (d.templates || []).forEach(function (t) { nomes[t.id] = t.nome; });
+      var tot = zero();
+      (d.por_dia_template || []).forEach(function (x) {
+        if (x.data < desde) return;
+        var nome = nomes[x.template_id] || x.template_id, dono = waDonoNaData(nome, x.data) || "";
+        if (pid && dono !== pid) return;
+        var t = porT[x.template_id] = porT[x.template_id] || Object.assign({ id: x.template_id, nome: nome, dono: dono }, zero());
+        soma(t, x);
+        var pp = porP[dono] = porP[dono] || Object.assign({ id: dono, templates: {} }, zero());
+        soma(pp, x); pp.templates[nome] = 1;
+        soma(tot, x);
+        if (x.estimado) { t.estimado = true; pp.estimado = true; tot.estimado = true; }
+        var dd = porDia[x.data] = porDia[x.data] || { data: x.data, por: {}, tpl: {} };
+        dd.por[dono] = (dd.por[dono] || 0) + (x.enviadas || 0);
+        dd.tpl[nome] = (dd.tpl[nome] || 0) + (x.enviadas || 0);
+      });
+      var valores = (waCfg() || {}).valores || {};
+      Object.keys(porP).forEach(function (k) {
+        var v = valores[k], pp = porP[k];
+        pp.receita = v && v.valor ? (v.base === "entregues" ? pp.entregues : pp.enviadas) * v.valor : null;
+        pp.n_templates = Object.keys(pp.templates).length;
+      });
+      var g = { custo: 0, volume: 0, pagas: 0 };
+      ((d.gastos || {}).por_dia || []).forEach(function (x) {
+        if (x.data < desde) return;
+        g.custo += x.custo || 0; g.volume += x.volume || 0; g.pagas += x.pagas || 0;
+      });
+      // Sem metricas de template (ainda nao ligadas), o volume da conta substitui.
+      var vol = { enviadas: 0, entregues: 0 };
+      ((d.volume || {}).por_dia || []).forEach(function (x) {
+        if (x.data < desde) return;
+        vol.enviadas += x.enviadas || 0; vol.entregues += x.entregues || 0;
+      });
+      var falhas = 0;
+      (((d.webhook || {}).status_por_dia) || []).forEach(function (x) { if (x.data >= desde) falhas += x.failed || 0; });
+      return { desde: desde, porT: porT, porP: porP, porDia: porDia, tot: tot, gasto: g, vol: vol, falhas: falhas };
+    }
+
+    // Avisos: do Worker (leitura), do limite, do numero, dos templates, do webhook e da Meta.
+    function waAvisos(d, pid) {
+      var av = [];
+      var add = function (g, t, det, quando) { av.push({ g: g, t: t, det: det || "", quando: quando || "" }); };
+      var meus = function (nome) { return !pid || waDono(nome)[0] === pid; };
+      (d.erros || []).forEach(function (e) {
+        if (e.fonte === "metricas_templates") {
+          add("alta", "Métricas por template desligadas na Meta",
+            "Sem elas não há enviadas, cliques e custo por template (nem por parceiro). Ligue uma vez: veja o LEIA-ME do Worker. (" + e.mensagem + ")");
+        } else if (String(e.codigo) === "190") {
+          add("alta", "Token da Meta inválido ou vencido", "Gere um token novo de Usuário do Sistema e troque o segredo WA_TOKEN no Worker.");
+        } else {
+          add(e.fonte === "configuração" ? "alta" : "media", "Leitura da Meta falhou: " + e.fonte, e.mensagem);
+        }
+      });
+      var lim = d.limite_24h || {};
+      if (lim.pct !== null && lim.pct !== undefined) {
+        if (lim.pct >= 100) add("alta", "Limite de 24h atingido", nf(lim.usados) + " de " + nf(lim.limite) + " pessoas: novos envios de marketing só quando a janela de 24h liberar.");
+        else if (lim.pct >= 80) add("media", "Limite de 24h quase no fim", nf(lim.usados) + " de " + nf(lim.limite) + " pessoas (" + nf(lim.pct, 0) + "%) · restam " + nf(lim.restantes) + ". O limite é da BM inteira, somando todos os parceiros.");
+      }
+      var num_ = d.numero || {};
+      if (num_.qualidade === "RED" || num_.qualidade === "YELLOW") {
+        add(num_.qualidade === "RED" ? "alta" : "media", "Qualidade do número: " + WA_QUAL[num_.qualidade].toLowerCase(),
+          "A Meta reduz o limite e pode pausar templates se a qualidade cair. Diminua o volume e revise público e frequência.");
+      }
+      // Travas de envio: limite de 24h e verificacao ja tem aviso proprio; o resto aparece aqui.
+      var outras = [], vistas = {};
+      [num_.saude, (d.conta || {}).saude].forEach(function (s) {
+        if (!s || !s.envio || s.envio === "AVAILABLE") return;
+        (s.travas || []).forEach(function (t) {
+          if (t.tipo === "limite" || t.tipo === "verificacao" || vistas[t.codigo]) return;
+          vistas[t.codigo] = 1;
+          outras.push(t.descricao + (t.solucao ? " — " + t.solucao : ""));
+        });
+        if (outras.length && !vistas._dito) {
+          vistas._dito = 1;
+          add(s.envio === "BLOCKED" ? "alta" : "media", "Envio " + (s.envio === "BLOCKED" ? "bloqueado" : "limitado") + " pela Meta", "");
+        }
+      });
+      if (outras.length) av[av.length - 1].det = outras.join(" · ");
+      var conta = d.conta || {};
+      if (conta.verificacao && conta.verificacao !== "verified" && !pid) {
+        add("info", conta.verificacao === "pending" ? "Verificação da empresa em análise na Meta" : "Empresa ainda não verificada na Meta",
+          "Sem verificação o limite fica em 250 pessoas por 24h; verificada, sobe para 2.000.");
+      }
+      (d.templates || []).forEach(function (t) {
+        if (!meus(t.nome)) return;
+        var dono = waDono(t.nome), st = String(t.status || "").toUpperCase(), nomeT = "“" + t.nome + "”";
+        if (["REJECTED", "PAUSED", "DISABLED"].indexOf(st) >= 0) {
+          add("alta", "Template " + nomeT + " " + (WA_STATUS[st] || st.toLowerCase()), t.motivo ? "Motivo: " + t.motivo : "Use o template reserva enquanto isso.");
+        } else if (st === "PENDING" || st === "IN_APPEAL") {
+          add("info", "Template " + nomeT + " " + WA_STATUS[st], "Ainda não pode ser enviado.");
+        }
+        if (t.qualidade === "RED" || t.qualidade === "YELLOW") {
+          add(t.qualidade === "RED" ? "alta" : "media", "Qualidade do template " + nomeT + ": " + WA_QUAL[t.qualidade].toLowerCase(),
+            "Muitas pessoas bloquearam ou denunciaram. Pause, revise o texto e o público.");
+        }
+        if (dono[1] === "excecao") {
+          add("info", "Template " + nomeT + " fora do padrão de nome",
+            "Atribuído a " + waNome(dono[0]) + " pela lista de exceções. O nome de um template não muda: no próximo, crie com o prefixo " + waPrefixo(dono[0]) + ".");
+        } else if (dono[1] === "sem_dono" && !pid) {
+          add("media", "Template " + nomeT + " sem parceiro",
+            "Os envios dele não entram em nenhum CRM. Recrie com o prefixo do parceiro ou inclua o nome na lista 'templates' do parceiro.json.");
+        }
+        if (t.categoria === "MARKETING" && !t.opt_out && st === "APPROVED") {
+          add("media", "Template " + nomeT + " sem botão de parar de receber",
+            "O manual exige a opção de saída nos templates de marketing; inclua no próximo.");
+        }
+      });
+      var est = (d.por_dia_template || []).filter(function (x) {
+        return x.estimado && (!pid || waDonoNaData((d.templates || []).filter(function (t) { return t.id === x.template_id; }).map(function (t) { return t.nome; })[0], x.data) === pid);
+      });
+      if (est.length) {
+        add("info", "Parte dos envios é estimada pelo custo",
+          "Envios feitos antes de ligar as métricas por template (" + est.map(function (x) { return x.data.slice(8) + "/" + x.data.slice(5, 7); })
+            .filter(function (v, i, a) { return a.indexOf(v) === i; }).join(", ") +
+          "): a Meta informa só o custo; enviadas e entregues = custo ÷ preço por mensagem do dia. Leituras e cliques desses dias não existem.");
+      }
+      var wh = d.webhook || {};
+      (wh.erros || []).forEach(function (e) {
+        add(e.gravidade || "media", "Erro " + e.codigo + " · " + nf(e.total) + (e.total > 1 ? " mensagens" : " mensagem"),
+          (e.explicacao || e.titulo || "") + (e.h24 ? " · " + nf(e.h24) + " nas últimas 24h" : ""), e.ultima);
+      });
+      if (wh.pedidos_de_saida) {
+        add("info", nf(wh.pedidos_de_saida) + (wh.pedidos_de_saida > 1 ? " pedidos" : " pedido") + " para parar de receber",
+          "Respostas como “SAIR” ou “parar” no período: tire esses contatos das próximas listas.");
+      }
+      (wh.eventos || []).forEach(function (ev) {
+        var m = /“([^”]+)”/.exec(ev.titulo || "");
+        if (m && !meus(m[1])) return;
+        add(ev.gravidade || "info", ev.titulo, ev.detalhe, ev.quando);
+      });
+      av.sort(function (a, b) {
+        return (WA_GRAV[a.g] || WA_GRAV.info)[1] - (WA_GRAV[b.g] || WA_GRAV.info)[1] || (b.quando > a.quando ? 1 : b.quando < a.quando ? -1 : 0);
+      });
+      return av;
+    }
+
+    function waStatusChip() {
+      var d = waDados();
+      if (WA.vivo) {
+        return '<span class="wa-st vivo" data-tip="' + esc("Ao vivo · Meta + webhook\nAtualiza sozinho a cada 3 minutos (o Worker guarda 5 min de cache)") +
+          '"><i></i>ao vivo · ' + esc(waHora(WA.vivo.atualizado)) + '</span>';
+      }
+      if (d) {
+        return '<span class="wa-st copia" data-tip="' + esc((WA.erro ? "O Worker não respondeu (" + WA.erro + ")" : "Conectando ao Worker…") +
+          "\nMostrando a cópia do último gerar_hub.py") + '"><i></i>' + (WA.carregando ? "conectando… · " : "") + 'cópia de ' + esc(waHora(d.atualizado)) + '</span>';
+      }
+      return '<span class="wa-st off"><i></i>' + (WA.carregando ? "conectando…" : "aguardando o Worker") + '</span>';
+    }
+
+    function blocoWA(p) {
+      if (!waCfg()) return "";
+      return '<div class="row"><div class="painel wa" id="wa-vivo" data-parceiro="' + (p ? esc(p.id) : "") + '">' + conteudoWA(p) + '</div></div>';
+    }
+
+    function conteudoWA(p) {
+      var d = waDados(), pid = p ? p.id : null;
+      var cab = '<div class="hrow"><div><h3>' + (p ? "WhatsApp ao vivo · " + esc(p.nome) : "WhatsApp oficial · Meta") + '</h3>' +
+        '<div class="cap">' + (p ? "Templates " + esc(waPrefixo(pid)) + "… · números direto da BM e do webhook"
+          : "Limite, gastos, templates e alertas direto da BM e do webhook · cada disparo vai para o parceiro pelo nome do template") +
+        '</div></div><div class="wa-dir">' + waStatusChip() + '<div class="seg" id="seg-wa">' + WA_PERIODOS.map(function (o) {
+          return '<button data-wp="' + o[0] + '"' + (WA.periodo === o[0] ? ' class="on"' : '') + '>' + esc(o[1]) + '</button>';
+        }).join("") + '</div></div></div>';
+      if (!d) {
+        return cab + '<div class="aviso-canal">' + INFO + '<div><b>Falta publicar o Worker <code>superadds-painel</code>.</b> ' +
+          'Ele busca na Meta o limite, os gastos e os templates, e no webhook os erros e avisos. O passo a passo está em ' +
+          '<code>hub/worker_painel/LEIA-ME.md</code>. Depois de publicado, este bloco se atualiza sozinho.</div></div>';
+      }
+      var ag = waAgregar(d, pid), lim = d.limite_24h || {}, num_ = d.numero || {}, moeda_ = (d.conta || {}).moeda;
+      var semMetricas = d.metricas_templates_ativas === false;
+      var env = semMetricas && !pid ? ag.vol.enviadas : ag.tot.enviadas;
+      var entr = semMetricas && !pid ? ag.vol.entregues : ag.tot.entregues;
+      var meter = function (pct) {
+        return '<div class="wa-meter' + (pct >= 100 ? " cheio" : pct >= 80 ? " alto" : "") + '"><i style="width:' + Math.min(100, Math.max(0, pct || 0)).toFixed(1) + '%"></i></div>';
+      };
+      var tLim = kpi("wp", "Limite de 24h", lim.limite ? nf(lim.usados) + " / " + nf(lim.limite) : lim.ilimitado ? "sem teto" : "—",
+        lim.limite ? "pessoas únicas · restam " + nf(lim.restantes) + (p ? " · dividido entre os parceiros" : " · faixa " + (lim.faixa || "")) : "faixa da BM ainda não lida",
+        true, lim.pct >= 80 ? (lim.pct >= 100 ? "limite atingido" : nf(lim.pct, 0) + "% usado") : null, !lim.limite, lim.limite ? meter(lim.pct) : "");
+      var tiles;
+      if (p) {
+        var pp = ag.porP[pid] || { enviadas: 0, entregues: 0, lidas: 0, cliques: 0, custo: 0, receita: 0 };
+        var rec = pp.receita || 0, custoP = pp.custo || 0;
+        tiles = [tLim,
+          kpi("res", "Receita (" + waPeriodoTxt() + ")", moeda(rec, 2), (p.valor_por_disparo ? moeda(p.valor_por_disparo, 2) + " × " : "") + nf(p.receita_base === "entregues" ? pp.entregues : pp.enviadas) + " " + (p.receita_base === "entregues" ? "entregues" : "disparos"), true),
+          kpi("wp", "Custo na Meta", waMoeda(custoP, 2, moeda_), pp.entregues ? waMoeda(custoP / pp.entregues, 2, moeda_) + " por mensagem entregue" : "cobrado por mensagem entregue", false),
+          kpi("res", "Margem", moeda(rec - custoP, 2), rec ? nf((rec - custoP) / rec * 100, 1) + "% da receita" : "receita − custo na Meta", true),
+          kpi("wp", "Mensagens", nf(pp.enviadas), "entregues " + nf(pp.enviadas ? pp.entregues / pp.enviadas * 100 : 0, 1) + "% · cliques " + nf(pp.cliques), false)];
+      } else {
+        var cobradas = ag.gasto.pagas || ag.gasto.volume;
+        tiles = [tLim,
+          kpi("wp", "Gasto na Meta", waMoeda(ag.gasto.custo, 2, moeda_), waPeriodoTxt() + " · " + nf(ag.gasto.volume) + " mensagens", true, null, !d.gastos),
+          kpi("wp", "Custo médio", cobradas ? waMoeda(ag.gasto.custo / cobradas, 3, moeda_) : "—", "gasto ÷ mensagens cobradas (entregues)", false, null, !cobradas),
+          kpi("wp", "Mensagens", (ag.tot.estimado ? "≈ " : "") + nf(env), "entregues " + nf(env ? entr / env * 100 : 0, 1) + "%" +
+            (semMetricas ? "" : ag.tot.estimado && !ag.tot.lidas && !ag.tot.cliques ? " · leituras e cliques só nos envios feitos depois de ligar as métricas"
+              : " · lidas " + nf(entr ? ag.tot.lidas / entr * 100 : 0, 1) + "% · " + nf(ag.tot.cliques) + " cliques"), true),
+          kpi("wp", "Qualidade", WA_QUAL[num_.qualidade] || "—", (num_.numero || "") + (num_.vazao ? " · vazão " + String(num_.vazao).toLowerCase() : ""), false,
+            num_.qualidade === "RED" || num_.qualidade === "YELLOW" ? "qualidade em queda" : null, !num_.qualidade)];
+      }
+      var avisos = waAvisos(d, pid), mostra = WA.todos ? avisos : avisos.slice(0, 4);
+      var cnt = { alta: 0, media: 0, info: 0 };
+      avisos.forEach(function (a) { cnt[a.g] = (cnt[a.g] || 0) + 1; });
+      var listaAv = avisos.length ? '<ul class="wa-av">' + mostra.map(function (a) {
+          var g = WA_GRAV[a.g] || WA_GRAV.info;
+          return '<li class="' + esc(a.g) + '"><span class="ic" aria-hidden="true">' + (a.g === "alta" ? "!" : a.g === "media" ? "▲" : "i") +
+            '</span><div><span class="gv">' + esc(g[0]) + '</span><b>' + esc(a.t) + '</b>' + (a.det ? '<span>' + esc(a.det) + '</span>' : '') +
+            (a.quando ? '<small>' + esc(waHora(a.quando)) + '</small>' : '') + '</div></li>';
+        }).join("") + '</ul>' + (avisos.length > 4 ? '<button class="btn" id="wa-todos" style="margin-top:10px">' +
+          (WA.todos ? "Mostrar só os 4 primeiros" : "Ver todos os " + avisos.length + " avisos") + '</button>' : '')
+        : '<div class="vazio" style="padding:18px 0">Nenhum aviso: limite, qualidade e templates em dia.</div>';
+      var serie = waSeries(ag, pid);
+      var legenda = serie.length > 1 ? '<div class="legenda" style="margin:10px 0 0">' + serie.map(function (s) {
+        return '<span><i style="background:' + esc(waCor(s.id)) + '"></i>' + esc(s.nome) + '</span>';
+      }).join("") + '</div>' : '';
+      var corpo = '<div class="kpis wa-k">' + tiles.join("") + '</div>' +
+        '<div class="wa-g2"><div class="wa-sub"><h4>Disparos por dia' + (p ? "" : ", por parceiro") + '</h4>' +
+        '<div class="cap">Mensagens enviadas pelos templates · ' + waPeriodoTxt() + (semMetricas ? " · ligue as métricas de template para ver por parceiro" : "") + '</div>' +
+        legenda + '<div id="wa-graf" class="chart wa-graf"></div></div>' +
+        '<div class="wa-sub"><h4>Avisos e alertas</h4><div class="cap">' + (avisos.length
+          ? nf(cnt.alta) + " para agir · " + nf(cnt.media) + " de atenção · " + nf(cnt.info) + " para saber" : "Meta, webhook e templates") +
+        '</div>' + listaAv + '</div></div>';
+      if (!p) corpo += waTabelaParceiros(ag);
+      corpo += waTabelaTemplates(d, ag, pid);
+      return cab + corpo;
+    }
+
+    // Series do grafico: parceiros na ordem do hub, depois testes e sem parceiro.
+    function waSeries(ag, pid) {
+      if (pid) return [{ id: pid, nome: waNome(pid) }];
+      var ids = Object.keys(ag.porP), ordem = D.parceiros.map(function (p) { return p.id; }).concat(["teste", ""]);
+      return ordem.filter(function (id) { return ids.indexOf(id) >= 0; }).map(function (id) { return { id: id, nome: waNome(id) }; });
+    }
+
+    function waTabelaParceiros(ag) {
+      var linhas = waSeries(ag, null).map(function (s) {
+        var x = ag.porP[s.id], rec = x.receita;
+        return '<tr><td><span class="src" style="background:' + esc(waCor(s.id)) + ';margin-right:8px"></span>' + esc(s.nome) + '</td>' +
+          '<td class="n">' + nf(x.n_templates) + '</td><td class="n">' + (x.estimado ? '<span class="hr" data-tip="parte estimada pelo custo">≈ </span>' : '') +
+          nf(x.enviadas) + '</td><td class="n">' + nf(x.entregues) +
+          ' <span class="hr">' + nf(x.enviadas ? x.entregues / x.enviadas * 100 : 0, 0) + '%</span></td><td class="n">' + nf(x.lidas) +
+          '</td><td class="n">' + nf(x.cliques) + '</td><td class="n">' + moeda(x.custo, 2) + '</td><td class="n">' +
+          (rec === null ? '<span class="hr">—</span>' : moeda(rec, 2)) + '</td><td class="n">' +
+          (rec === null ? '<span class="hr">—</span>' : moeda(rec - x.custo, 2)) + '</td></tr>';
+      }).join("");
+      if (!linhas) return "";
+      var t = ag.tot, recT = 0, temRec = false;
+      Object.keys(ag.porP).forEach(function (k) { if (ag.porP[k].receita !== null) { recT += ag.porP[k].receita; temRec = true; } });
+      return '<div class="wa-sub" style="margin-top:16px"><h4>Por parceiro</h4><div class="cap">Disparos atribuídos pelo nome do template · ' +
+        'receita = valor por disparo do parceiro.json · ' + waPeriodoTxt() + '</div><div class="tw"><table class="cat"><thead><tr>' +
+        '<th>Parceiro</th><th class="n">Templates</th><th class="n">Enviadas</th><th class="n">Entregues</th><th class="n">Lidas</th>' +
+        '<th class="n">Cliques</th><th class="n">Custo Meta</th><th class="n">Receita</th><th class="n">Margem</th></tr></thead><tbody>' + linhas +
+        '</tbody><tfoot><tr><td>Total</td><td></td><td class="n">' + nf(t.enviadas) + '</td><td class="n">' + nf(t.entregues) + '</td><td class="n">' +
+        nf(t.lidas) + '</td><td class="n">' + nf(t.cliques) + '</td><td class="n">' + moeda(t.custo, 2) + '</td><td class="n">' +
+        (temRec ? moeda(recT, 2) : "—") + '</td><td class="n">' + (temRec ? moeda(recT - t.custo, 2) : "—") + '</td></tr></tfoot></table></div></div>';
+    }
+
+    function waTabelaTemplates(d, ag, pid) {
+      var ts = (d.templates || []).filter(function (t) { return !pid || waDono(t.nome)[0] === pid; });
+      if (!ts.length) return '<div class="wa-sub" style="margin-top:16px"><h4>Templates</h4><div class="vazio" style="padding:14px 0">Nenhum template ' +
+        (pid ? "com o prefixo " + esc(waPrefixo(pid)) + " ou na lista do parceiro.json." : "na conta.") + '</div></div>';
+      var SIT = { padrao: ["ok", "no padrão"], excecao: ["aviso", "exceção"], teste: ["neutro", "teste"], sem_dono: ["erro", "sem parceiro"] };
+      var linhas = ts.map(function (t) {
+        var dono = waDono(t.nome), x = ag.porT[t.id] || { enviadas: 0, entregues: 0, cliques: 0, custo: 0 }, sit = SIT[dono[1]];
+        var st = String(t.status || "").toUpperCase();
+        return '<tr><td class="cn"><span data-tip="' + esc(t.nome + "\n" + (t.resumo || "")) + '"><b>' + esc(t.nome) + '</b></span> ' +
+          '<span class="wa-tag ' + sit[0] + '">' + esc(sit[1]) + '</span></td>' +
+          (pid ? '' : '<td><span class="src" style="background:' + esc(waCor(dono[0] || "")) + ';margin-right:6px"></span>' + esc(waNome(dono[0])) + '</td>') +
+          '<td><span class="wa-tag ' + (st === "APPROVED" ? "ok" : ["REJECTED", "PAUSED", "DISABLED"].indexOf(st) >= 0 ? "erro" : "neutro") + '">' +
+          esc(WA_STATUS[st] || st.toLowerCase()) + '</span></td><td>' + esc(WA_CAT[t.categoria] || String(t.categoria || "").toLowerCase()) +
+          '</td><td>' + esc(WA_QUAL[t.qualidade] || "—") + '</td><td>' + (t.opt_out ? "sim" : '<span class="hr">não</span>') + '</td>' +
+          '<td class="n">' + (x.estimado ? '<span class="hr" data-tip="parte estimada pelo custo">≈ </span>' : '') + nf(x.enviadas) +
+          '</td><td class="n">' + nf(x.entregues) + '</td><td class="n">' + nf(x.cliques) +
+          '</td><td class="n">' + moeda(x.custo, 2) + '</td></tr>';
+      }).join("");
+      return '<div class="wa-sub" style="margin-top:16px"><h4>Templates</h4><div class="cap">Padrão de nome: <code>' +
+        esc(pid ? waPrefixo(pid) : "parceiro_") + 'varejo_campanha_v1</code> · o prefixo decide o parceiro · ' + waPeriodoTxt() +
+        '</div><div class="tw"><table class="cat"><thead><tr><th>Template</th>' + (pid ? '' : '<th>Parceiro</th>') +
+        '<th>Status</th><th>Categoria</th><th>Qualidade</th><th>Botão de saída</th><th class="n">Enviadas</th>' +
+        '<th class="n">Entregues</th><th class="n">Cliques</th><th class="n">Custo Meta</th></tr></thead><tbody>' + linhas +
+        '</tbody></table></div></div>';
+    }
+
+    function desenharWAGrafico(pid) {
+      var el = $("wa-graf"), d = waDados();
+      if (!el || !d) return;
+      var ag = waAgregar(d, pid), serie = waSeries(ag, pid);
+      var dias = [], ini = new Date(waDesde() + "T12:00:00"), hoje = isoDe(new Date());
+      for (var dt0 = ini; isoDe(dt0) <= hoje; dt0 = new Date(dt0.getTime() + 86400000)) dias.push(isoDe(dt0));
+      if (!serie.length || !Object.keys(ag.porDia).length) {
+        el.innerHTML = '<div class="vazio" style="padding:30px 0">' + (d.metricas_templates_ativas === false
+          ? "As métricas por template ainda não estão ligadas na Meta." : "Nenhum disparo de template " + waPeriodoTxt() + ".") + '</div>';
+        return;
+      }
+      var W = Math.max(300, Math.round(el.clientWidth || 640)), H = 210, pl = 40, pr = 8, pt = 14, pb = 26;
+      var iw = W - pl - pr, ih = H - pt - pb, n = dias.length, banda = iw / n;
+      var totDia = dias.map(function (iso) {
+        var x = ag.porDia[iso];
+        return x ? serie.reduce(function (a, s) { return a + (x.por[s.id] || 0); }, 0) : 0;
+      });
+      var mx = tetoBonito(Math.max.apply(null, totDia) || 1), Y = function (v) { return pt + ih * (1 - v / mx); };
+      var larg = Math.min(24, Math.max(2, banda * 0.62)), base = pt + ih, s = "";
+      [0, 0.5, 1].forEach(function (f) {
+        var y = Y(mx * f);
+        s += '<line class="gline" x1="' + pl + '" y1="' + y.toFixed(1) + '" x2="' + (W - pr) + '" y2="' + y.toFixed(1) + '"/>' +
+          '<text class="glabel" x="' + (pl - 6) + '" y="' + (y + 3.5).toFixed(1) + '" text-anchor="end">' + esc(curto(mx * f)) + '</text>';
+      });
+      var passo = Math.max(1, Math.ceil(n / (W < 500 ? 5 : 9)));
+      dias.forEach(function (iso, i) {
+        var cx = pl + banda * i + banda / 2, x0 = cx - larg / 2, x = ag.porDia[iso], yb = base;
+        if (x) {
+          var segs = serie.filter(function (sr) { return x.por[sr.id] > 0; });
+          segs.forEach(function (sr, k) {
+            var h = x.por[sr.id] / mx * ih, topo = k === segs.length - 1, y1 = yb - h;
+            s += topo ? barraTopo(x0, y1, larg, yb - y1, "", waCor(sr.id))
+              : '<rect x="' + x0.toFixed(1) + '" y="' + (y1 + (h > 3 ? 2 : 0)).toFixed(1) + '" width="' + larg.toFixed(1) + '" height="' +
+                Math.max(1, h - (h > 3 ? 2 : 0)).toFixed(1) + '" fill="' + esc(waCor(sr.id)) + '"/>';
+            yb = y1;
+          });
+        }
+        var dm = iso.slice(8) + "/" + iso.slice(5, 7);
+        if (i === n - 1 || (i % passo === 0 && n - 1 - i > passo / 2)) {
+          s += '<text class="xlabel" x="' + cx.toFixed(1) + '" y="' + (H - 8) + '">' + esc(dm) + '</text>';
+        }
+        var dica = [nf(totDia[i]) + " mensagens enviadas", dm];
+        if (x) {
+          serie.forEach(function (sr) { if (x.por[sr.id]) dica.push(sr.nome + ": " + nf(x.por[sr.id])); });
+          Object.keys(x.tpl).forEach(function (t) { dica.push("· " + t + ": " + nf(x.tpl[t])); });
+        } else dica.push("sem disparo de template");
+        s += '<rect class="hitzone" x="' + (pl + banda * i).toFixed(1) + '" y="' + pt + '" width="' + banda.toFixed(1) + '" height="' + ih +
+          '" data-tip="' + esc(dica.join("\n")) + '"/>';
+      });
+      el.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="img" aria-label="Disparos de WhatsApp por dia">' + s + '</svg>';
+    }
+
+    function pintarWA() {
+      var el = $("wa-vivo");
+      if (!el) return;
+      var pid = el.getAttribute("data-parceiro") || null;
+      var p = pid ? D.parceiros.filter(function (x) { return x.id === pid; })[0] : null;
+      el.innerHTML = conteudoWA(p);
+      desenharWAGrafico(pid);
+      root.querySelectorAll("#seg-wa button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          WA.periodo = b.getAttribute("data-wp");
+          guardar("wa-periodo", WA.periodo);
+          pintarWA();
+        });
+      });
+      var t = $("wa-todos");
+      if (t) t.addEventListener("click", function () { WA.todos = !WA.todos; pintarWA(); });
+    }
+
     function hubIA(aba) {
       var ia = aba.ia || {};
       if (!ia.destaque && !ia.comparativo) return "";
@@ -2017,7 +2524,7 @@
     function conteudoHub() {
       var aba = abaDe(D.hub.abas, estado.aba);
       return '<div class="conteudo" id="conteudo">' + hubNumeros(aba) + hubReceita(aba) +
-        '<div class="row">' + hubCards(aba) + '</div>' + hubCanais(aba) + hubTabelaEmail(aba) + hubParticipacao(aba) +
+        '<div class="row">' + hubCards(aba) + '</div>' + hubCanais(aba) + hubTabelaEmail(aba) + blocoWA(null) + hubParticipacao(aba) +
         hubIA(aba) + '</div>';
     }
 
@@ -2057,6 +2564,7 @@
       });
       ligarArgolas();
       ligarReceita();
+      pintarWA();
     }
 
     // =================================================================
@@ -2144,8 +2652,11 @@
         }).join("") + '</div><div class="tagbox" style="margin-top:12px">' + leitura + '</div></div></div>';
     }
     function legendaFontes(p) {
+      if (p.modelo === "midia") {
+        return '<div class="kleg"><span><i class="src res"></i>receita e margem</span><span><i class="src wp"></i>WhatsApp (Meta)</span></div>';
+      }
       return '<div class="kleg"><span><i class="src res"></i>' +
-        (p.modelo === "leads" ? "leads do parceiro" : "vendas do parceiro") + '</span>' +
+        (p.modelo === "leads" ? "leads do parceiro" : p.modelo === "midia" ? "receita e margem" : "vendas do parceiro") + '</span>' +
         '<span><i class="src rd"></i>e-mail (RD Station)</span><span><i class="src wp"></i>WhatsApp</span></div>';
     }
 
@@ -2263,11 +2774,54 @@
         }).join("") + '</tbody></table></div></div></div>';
     }
 
+    // ---------- parceiro de MIDIA (paga por disparo de WhatsApp; dados da Meta) ----------
+    function kpisMidia(aba, p) {
+      var k = aba.kpis, base = k.receita_base === "entregues" ? "entregues" : "disparos";
+      var nBase = base === "entregues" ? k.entregues : k.disparos;
+      var cards = [
+        kpi("res", "Receita Supertroco", moeda(k.receita, 2), moeda(k.receita_por_disparo || 0, 2) + " × " + nf(nBase) + " " + base, true),
+        kpi("wp", "Disparos", (k.estimado ? "≈ " : "") + nf(k.disparos), k.estimado ? "parte estimada pelo custo (envios antes das métricas)"
+            : nf(k.dias_ativos) + (k.dias_ativos === 1 ? " dia" : " dias") + " com disparo · média " + nf(k.media_dia, 0) + "/dia", true),
+        kpi("wp", "Entregues", nf(k.entregues), nf(k.tx_entrega, 1) + "% dos disparos", true),
+        kpi("wp", "Cliques", k.estimado && !k.cliques ? "—" : nf(k.cliques),
+            k.estimado && !k.cliques ? "a Meta não tem cliques dos envios feitos antes de ligar as métricas" : "CTR de " + nf(k.ctr_wpp, 2) + "% das entregues",
+            true, null, k.estimado && !k.cliques),
+        kpi("res", "Margem", moeda(k.margem, 2), k.margem_pct !== null && k.margem_pct !== undefined ? nf(k.margem_pct, 1) + "% da receita" : "receita − custo na Meta", true,
+            k.margem < 0 ? "custo maior que a receita" : null),
+        kpi("wp", "Custo na Meta", moeda(k.custo_meta, 2), "cobrado por mensagem entregue", false),
+        kpi("wp", "Custo por mensagem", k.custo_por_entregue !== null ? moeda(k.custo_por_entregue, 3) : "—", "custo ÷ entregues", false, null, k.custo_por_entregue === null),
+        kpi("wp", "Taxa de leitura", k.estimado && !k.lidas ? "—" : nf(k.tx_leitura, 1) + "%",
+            k.estimado && !k.lidas ? "sem dado para os envios antes das métricas" : nf(k.lidas) + " lidas · a Meta guarda leituras por 7 dias",
+            false, null, k.estimado && !k.lidas),
+        kpi("wp", "Pico de disparos", k.pico ? nf(k.pico.v) : "—", k.pico ? k.pico.d + " · " + k.pico.dia.toLowerCase() : "sem disparos", false),
+        kpi("wp", "Templates", nf((k.templates || []).length), (k.templates || []).join(", ") || "nenhum ainda", false)
+      ];
+      return '<div class="kpis">' + cards.join("") + '</div>' + legendaFontes(p);
+    }
+
+    function blocoMargem(aba, p) {
+      var k = aba.kpis, mx = Math.max(k.receita, k.custo_meta) || 1;
+      var linha = function (nome, v, cls, dica) {
+        return '<div class="vs" data-tip="' + esc(dica) + '"><div class="h"><span>' + esc(nome) + '</span><b>' + moeda(v, 2) + '</b></div>' +
+          '<span class="t"><span class="f ' + cls + '" style="width:' + Math.max(2, Math.abs(v) / mx * 100).toFixed(1) + '%"></span></span></div>';
+      };
+      var txt = (aba.ia && aba.ia.motor) ? rich(aba.ia.motor)
+        : k.disparos ? "Cada disparo rende <b>" + moeda(k.receita_por_disparo || 0, 2) + "</b> e custa em média <b>" +
+          moeda(k.disparos ? k.custo_meta / k.disparos : 0, 3) + "</b> na Meta." : "Aguardando os primeiros disparos.";
+      return '<div class="painel"><h3>Receita × custo na Meta</h3><div class="cap">' + esc(aba.periodo) +
+        ' · a Meta cobra por mensagem entregue</div><div class="versus" style="margin-top:14px">' +
+        linha("Receita Supertroco", k.receita, "eng", moeda(k.receita, 2) + "\n" + nf(k.disparos) + " disparos × " + moeda(k.receita_por_disparo || 0, 2)) +
+        linha("Custo na Meta", k.custo_meta, "des", moeda(k.custo_meta, 2) + "\n" + nf(k.entregues) + " mensagens entregues") +
+        linha("Margem", k.margem, k.margem < 0 ? "des" : "pico", moeda(k.margem, 2) + "\nreceita − custo") +
+        '</div><div class="tagbox" style="margin-top:12px">' + txt + '</div></div>';
+    }
+
     function blocoKpis(aba, p) {
       var k = aba.kpis;
       var semRd = !aba.email;
       var camp = aba.email ? aba.email.envios + " campanhas no período" : "aguardando export da RD";
       if (p.modelo === "leads" && k.fonte === "funil") return kpisFunil(aba, p);
+      if (p.modelo === "midia") return kpisMidia(aba, p);
       if (p.modelo === "leads") {
         var pico = k.pico, semana = (k.semana || []).slice().sort(function (a, b) { return b[1] - a[1]; });
         var melhor = semana[0];
@@ -2322,6 +2876,9 @@
 
     // ---------- resultado x disparos ----------
     function cfgResultado(p) {
+      if (p.modelo === "midia") {
+        return { chave: "disparos", nome: "Disparos", fmt: function (v) { return nf(v) + " disparos"; }, eixo: curto, tipo: "colunas" };
+      }
       return p.modelo === "leads"
         ? { chave: "leads", nome: "Leads", fmt: function (v) { return nf(v); }, eixo: function (v) { return nf(v); }, tipo: "colunas" }
         : { chave: "vendas", nome: "Vendas", fmt: function (v) { return moeda(v); }, eixo: curto, tipo: "linha" };
@@ -2362,6 +2919,7 @@
         (cfg.marcos || []).forEach(function (m) { if (x.isos.indexOf(m.iso) >= 0) marco = m; });
         var dica = cfg.fmt(x.valor) + "\n" + x.ini + " a " + x.fim +
           (cfg.chave === "vendas" ? " · " + x.pedidos + " pedidos · receita Supertroco " + moeda(x.receita, 2) : "") +
+          (cfg.chave === "disparos" ? " · receita " + moeda(x.receita, 2) : "") +
           (marco ? "\nMudança de remuneração em " + marco.txt : "") +
           (x.envios ? "\n" + x.envios + " dia(s) com e-mail" : "") + (x.wpp ? "\n" + x.wpp + " dia(s) com WhatsApp" : "");
         return '<div class="wcol' + (marco ? " marcada" : "") + '" data-tip="' + esc(dica) + '">' +
@@ -2393,6 +2951,9 @@
           (cfg.chave === "vendas" ? " · " + d.pedidos + " pedidos · " + d.novos + " aquisições" : "") +
           (cfg.chave === "vendas" && d.receita !== undefined
             ? "\nReceita Supertroco: " + moeda(d.receita, 2) + (d.remun === "aquisicao" ? " (por aquisição)" : " (comissão)") : "") +
+          (cfg.chave === "disparos" ? "\n" + nf(d.entregues) + " entregues · " + nf(d.lidas) + " lidas · " + nf(d.cliques) + " cliques" +
+            "\nReceita " + moeda(d.receita, 2) + " · custo Meta " + moeda(d.custo, 2) + " · margem " + moeda(d.margem, 2) +
+            ((d.templates || []).length ? "\n" + d.templates.join(", ") : "") : "") +
           (d.send ? "\nE-mail: " + d.send : "") + (d.wpp ? "\nWhatsApp: " + d.wpp : "");
       }
       var corpo = "";
@@ -2478,12 +3039,17 @@
           cfg.marcos.push({ iso: d.iso, txt: d.d + " · " + (r ? r.descricao : "novo modelo") });
         }
       });
-      g.innerHTML = estado.gran === "dia" ? graficoDia(aba.dias, cfg) : graficoSemana(aba.dias, cfg);
+      var dias = p.modelo === "midia" ? aba.dias.map(function (d) { return Object.assign({}, d, { wpp: null }); }) : aba.dias;
+      g.innerHTML = estado.gran === "dia" ? graficoDia(dias, cfg) : graficoSemana(dias, cfg);
     }
 
     function blocoResultado(aba, p) {
       if (aba.kpis && aba.kpis.fonte === "funil") return blocoFunilCredito(aba, p);
       if (!aba.dias.length) {
+        if (p.modelo === "midia") {
+          return '<div class="row"><div class="painel"><h3>Disparos de WhatsApp</h3><div class="vazio">Nenhum disparo dos templates ' +
+            'deste parceiro ainda. Os números chegam da Meta assim que o primeiro template for enviado.</div></div></div>';
+        }
         return '<div class="row"><div class="painel"><h3>' + (p.modelo === "leads" ? "Leads" : "Vendas") +
           ' × disparos</h3><div class="vazio">Sem ' + (p.modelo === "leads" ? "leads" : "vendas") +
           ' registrados neste período ainda.</div></div></div>';
@@ -2492,18 +3058,19 @@
       var cfg = cfgResultado(p);
       var op = [["semana", "Por semana"], ["dia", "Dia a dia"]];
       return '<div class="row r-72-28"><div class="painel">' +
-        '<div class="hrow"><div><h3>' + cfg.nome + ' × disparos</h3>' +
+        '<div class="hrow"><div><h3>' + (p.modelo === "midia" ? "Disparos de WhatsApp por dia" : cfg.nome + ' × disparos') + '</h3>' +
         '<div class="cap">' + (p.modelo === "leads" ? "Leads por dia; dias com disparo marcados acima da coluna"
-                                                   : "Receita do parceiro; períodos com disparo marcados em destaque") +
+          : p.modelo === "midia" ? "Mensagens enviadas por dia pelos templates do parceiro (dados da Meta)"
+          : "Receita do parceiro; períodos com disparo marcados em destaque") +
         '</div></div><div class="seg" id="seg-gran">' + op.map(function (o) {
           return '<button data-g="' + o[0] + '"' + (estado.gran === o[0] ? ' class="on"' : '') +
             '>' + esc(o[1]) + '</button>';
         }).join("") + '</div></div><div id="grafico"></div>' +
         '<div class="legenda"><span><i style="background:var(--brand)"></i>' + cfg.nome + '</span>' +
-        '<span><i style="background:var(--accent);border-radius:50%"></i>Disparo de e-mail</span>' +
-        '<span><i style="background:var(--wpp);border-radius:50%"></i>Disparo de WhatsApp</span>' +
+        (p.modelo === "midia" ? '' : '<span><i style="background:var(--accent);border-radius:50%"></i>Disparo de e-mail</span>' +
+        '<span><i style="background:var(--wpp);border-radius:50%"></i>Disparo de WhatsApp</span>') +
         '<span>' + aba.dias.length + ' dias no período</span></div></div>' +
-        (p.modelo === "leads" ? blocoPicos(aba) : blocoMotor(aba)) + '</div>';
+        (p.modelo === "leads" ? blocoPicos(aba) : p.modelo === "midia" ? blocoMargem(aba, p) : blocoMotor(aba)) + '</div>';
     }
 
     function blocoMotor(aba) {
@@ -2815,6 +3382,47 @@
         (!d.send && !d.wpp ? '<span class="pill no">sem disparo</span>' : '');
     }
 
+    // Cruzamento diario do parceiro de midia: cada dia ja e de disparo (templates da Meta).
+    function crossMidia(dias) {
+      var s = dias.reduce(function (a, d) {
+        a.disp += d.disparos; a.entr += d.entregues; a.cl += d.cliques; a.rec += d.receita; a.custo += d.custo;
+        if (d.disparos) a.dias++;
+        return a;
+      }, { disp: 0, entr: 0, cl: 0, rec: 0, custo: 0, dias: 0 });
+      var mx = Math.max.apply(null, dias.map(function (d) { return d.disparos; })) || 1;
+      var resumo = '<div class="resumo"><b>' + dias.length + '</b> dias · disparos <b>' + nf(s.disp) + '</b> em <b>' + s.dias +
+        '</b> dia(s) · entregues <b>' + nf(s.entr) + '</b> · cliques <b>' + nf(s.cl) + '</b> · receita <b>' + moeda(s.rec, 2) +
+        '</b> · custo Meta <b>' + moeda(s.custo, 2) + '</b> · margem <b>' + moeda(s.rec - s.custo, 2) + '</b></div>';
+      var corpo;
+      if (estado.modo === "tabela") {
+        corpo = '<div class="tw"><table><thead><tr><th>Dia</th><th>Semana</th><th class="n">Disparos</th><th class="n">Entregues</th>' +
+          '<th class="n">Lidas</th><th class="n">Cliques</th><th class="n">Receita</th><th class="n">Custo Meta</th>' +
+          '<th class="n">Margem</th><th>Templates</th></tr></thead><tbody>' + dias.map(function (d) {
+            return '<tr class="' + (d.disparos === mx && mx > 0 ? "peak" : "") + '"><td>' + esc(d.d) + '</td><td>' + esc(d.dow) + '</td>' +
+              '<td class="n">' + nf(d.disparos) + '</td><td class="n">' + nf(d.entregues) + '</td><td class="n">' + nf(d.lidas) +
+              '</td><td class="n">' + nf(d.cliques) + '</td><td class="n">' + nf(d.receita, 2) + '</td><td class="n">' + nf(d.custo, 2) +
+              '</td><td class="n">' + nf(d.margem, 2) + '</td><td>' + ((d.templates || []).length
+                ? (d.templates || []).map(function (t) { return '<span class="pill wpp">' + esc(t) + '</span>'; }).join(" ")
+                : '<span class="pill no">sem disparo</span>') + '</td></tr>';
+          }).join("") + '</tbody></table></div>';
+      } else if (estado.modo === "cartoes") {
+        corpo = '<div class="cards">' + dias.map(function (d) {
+          return '<div class="dcard ' + (d.disparos ? "hit" : "") + '"><div class="d1"><span>' + esc(d.d) + ' · ' + esc(CURTA[d.dow] || "") +
+            '</span>' + (d.disparos ? '<span class="dot w"></span>' : '') + '</div><div class="dv">' + nf(d.disparos) + ' disparos</div>' +
+            '<div class="d1" style="font-size:10.5px">receita ' + moeda(d.receita, 2) + '</div><div class="d2"><span>' + nf(d.entregues) +
+            ' entr.</span><span>' + nf(d.cliques) + ' cliq.</span><span>' + moeda(d.custo, 2) + '</span></div></div>';
+        }).join("") + '</div>';
+      } else {
+        corpo = '<div class="bars">' + dias.map(function (d) {
+          return '<div class="brow ' + (d.disparos ? "hit" : "") + '" data-tip="' + esc(nf(d.disparos) + " disparos\n" + d.d + " · receita " +
+            moeda(d.receita, 2) + "\n" + nf(d.entregues) + " entregues · " + nf(d.cliques) + " cliques") + '"><div class="bn2">' + esc(d.d) +
+            '</div><div class="bt"><div class="bf" style="width:' + Math.max(1, d.disparos / mx * 100).toFixed(1) + '%"></div></div>' +
+            '<div class="bv">' + nf(d.disparos) + ' disp.</div></div>';
+        }).join("") + '</div>';
+      }
+      return resumo + corpo;
+    }
+
     function pintarCross(aba, p) {
       var alvo = $("cross");
       if (!alvo) return;
@@ -2823,6 +3431,7 @@
         alvo.innerHTML = '<div class="vazio">Nenhum dia no período selecionado.</div>';
         return;
       }
+      if (p.modelo === "midia") { alvo.innerHTML = crossMidia(dias); return; }
       var leads = p.modelo === "leads";
       var chave = leads ? "leads" : "vendas";
       var disparos = dias.filter(function (d) { return d.send || d.wpp; }).length;
@@ -2911,7 +3520,8 @@
         '<span class="mod">Groq · gpt-oss-120b</span></div>' +
         '<p class="t">' + rich(ia.diagnostico || "") + '</p>' +
         (ia.conversao ? '<div class="box b" style="margin-bottom:15px"><b>' +
-          (p.modelo === "leads" ? "Abertura, clique e leads:" : "Conversão e abertura:") + '</b> ' +
+          (p.modelo === "leads" ? "Abertura, clique e leads:" : p.modelo === "midia" ? "Entrega, leitura e clique:"
+            : "Conversão e abertura:") + '</b> ' +
           rich(ia.conversao) + '</div>' : '') +
         '<div class="cols"><div><h4>O que os dados sustentam</h4><ul>' + sust + '</ul></div>' +
         '<div><h4>Recomendação para o próximo ciclo</h4>' +
@@ -2920,6 +3530,12 @@
 
     function conteudoParceiro(p) {
       var aba = abaDe(p.abas, estado.aba);
+      if (p.sem_dados && p.modelo === "midia") {
+        return '<div class="conteudo" id="conteudo"><div class="painel"><div class="vazio"><b>' + esc(p.nome) +
+          ' ainda não tem disparos registrados.</b><br>Os números chegam sozinhos da Meta assim que um template ' +
+          esc(waPrefixo(p.id)) + '… (ou da lista de exceções do parceiro.json) for enviado e o Worker superadds-painel estiver publicado.' +
+          '</div></div>' + blocoWA(p) + '</div>';
+      }
       if (p.sem_dados) {
         return '<div class="conteudo" id="conteudo"><div class="painel"><div class="vazio"><b>' + esc(p.nome) +
           ' ainda não tem dados.</b><br>Coloque a planilha de ' + (p.modelo === "leads" ? "leads" : "vendas") +
@@ -2928,7 +3544,8 @@
       }
       return '<div class="conteudo" id="conteudo">' + blocoKpis(aba, p) +
         (p.modelo === "leads" ? "" : blocoRemuneracao(aba, p)) + blocoResultado(aba, p) +
-        blocoCanais(aba, p) + (aba.kpis && aba.kpis.fonte === "funil" ? blocoMensal(aba) : blocoCross()) +
+        (p.modelo === "midia" ? blocoWA(p) : blocoCanais(aba, p)) +
+        (aba.kpis && aba.kpis.fonte === "funil" ? blocoMensal(aba) : blocoCross()) +
         blocoIA(aba, p) + '</div>';
     }
 
@@ -2938,7 +3555,9 @@
       aplicarTema({ cores: p.cores, cores_escuro: p.cores_escuro, rampa: p.rampa });
       var aba = abaDe(p.abas, estado.aba);
       var rems = p.remuneracao || [], atual = rems[rems.length - 1];
-      var sub = esc(p.segmento) + ' · ' + (p.modelo === "leads"
+      var sub = esc(p.segmento) + ' · ' + (p.modelo === "midia"
+          ? (p.valor_por_disparo ? moeda(p.valor_por_disparo, 2) + " por disparo de WhatsApp" : "mídia no WhatsApp") + " · dados da Meta (API oficial)"
+        : p.modelo === "leads"
           ? (p.fonte_resultado === "funil" ? "leads e contratos pelo relatório mensal do parceiro" : "resultado medido em leads")
         : p.remuneracao_atual
           ? esc(p.remuneracao_atual) + (rems.length > 1 && atual
@@ -2984,6 +3603,7 @@
       pintarCross(aba, p);
       pintarCatalogo(aba.email);
       ligarArgolas();
+      pintarWA();
 
       root.querySelectorAll("#seg-gran button").forEach(function (b) {
         b.addEventListener("click", function () {
@@ -4335,6 +4955,9 @@
         telaHub();
       }
       requestAnimationFrame(function () { tela.classList.add("on"); });
+      // WhatsApp oficial: busca o Worker agora e a cada 3 minutos com a aba visivel.
+      waCarregar();
+      waRelogio();
     }
 
     function falha(msg) {
