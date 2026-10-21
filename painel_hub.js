@@ -58,6 +58,7 @@
 
   var CSS = `
   :host{ all:initial; display:block; }
+  [hidden]{display:none !important}
   *{box-sizing:border-box;margin:0;padding:0}
   .app{
     --brand:#15B8B6; --brand-lite:#5DD9D7; --deep:#0C3035; --deep2:#0A2429;
@@ -790,6 +791,141 @@
   .btn-sec .gira{border-color:var(--line);border-top-color:var(--brand)}
   @keyframes gira{to{transform:rotate(360deg)}}
 
+  /* ---------- pagina enxuta: 4 numeros, o resto sob demanda ---------- */
+  .kpis.enx .kpi{padding:16px 18px}
+  .kpis.enx .kpi .v{font-size:26px}
+  .kpis.k-mais{margin-top:12px}
+  .mais-bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:10px}
+  .mais-bar .kleg{margin-top:0}
+  .btn.mini{padding:6px 11px;font-size:12px;box-shadow:none}
+  .btn.mini .chev{width:13px;height:13px;transition:transform .25s ease}
+  .btn.mini[aria-expanded="true"] .chev{transform:rotate(180deg)}
+  .secs{margin-top:24px;border-top:1px solid var(--line)}
+  .sec{border-bottom:1px solid var(--line)}
+  .sec > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 4px}
+  .sec > summary::-webkit-details-marker{display:none}
+  .sec-t{display:flex;align-items:baseline;gap:6px 12px;flex-wrap:wrap;min-width:0}
+  .sec-t b{font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:-.01em;transition:color .15s}
+  .sec-t small{font-size:12px;color:var(--muted)}
+  .sec > summary > .chev{width:17px;height:17px;margin-left:auto;flex:0 0 auto;stroke:var(--muted);fill:none;stroke-width:2;transition:transform .25s ease}
+  .sec[open] > summary > .chev{transform:rotate(180deg)}
+  .sec > summary:hover .sec-t b{color:var(--brand)}
+  .sec-c{padding:0 0 20px}
+  .sec-c > .row:first-child,.sec-c > .ia:first-child{margin-top:0}
+  .alerta-s{color:var(--neg);font-weight:600}
+
+  /* ---------- tracking por produto ---------- */
+  .trk-fun{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:2px 0 12px}
+  .trk-p{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--soft);min-width:0}
+  .trk-p .r{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted)}
+  .trk-p .v{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:-.02em;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .trk-p .s{font-size:11px;color:var(--muted2);margin-top:1px}
+  .trk td small{display:block;font-size:10.5px;color:var(--muted2)}
+  .trk .jan{font-size:12px;white-space:nowrap}
+  .trk tr.trk-parc td{background:var(--warn-bg)}
+  .trk .flag{display:inline-block;font-size:9.5px;font-weight:700;padding:0 6px;border-radius:999px;margin-left:5px;
+    background:var(--warn-bg);color:var(--warn-ink);border:1px solid var(--warn-line);vertical-align:1px;cursor:default}
+  .trk .hr{color:var(--muted2)}
+  .trk-base{font-size:12px;color:var(--ink2);margin:0 0 12px}
+  .trk-base b{font-family:var(--disp)}
+  .trk-nota{font-size:11px;color:var(--muted);margin-top:10px;line-height:1.55}
+  @media(max-width:1080px){ .trk-fun{grid-template-columns:repeat(2,minmax(0,1fr))} }
+
+  /* ---------- modo exibicao (telao) ---------- */
+  .tv{position:fixed;inset:0;z-index:2147483000;display:flex;flex-direction:column;overflow:hidden;
+    background:radial-gradient(120% 90% at 0% 0%,var(--deep2),#041417 72%);color:#EAF7F7;font-family:var(--body);
+    --tvc:var(--brand);--tvl:var(--brand-lite)}
+  .tv::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(55% 50% at 100% 0%,color-mix(in srgb,var(--tvc) 30%,transparent),transparent 70%)}
+  .tv.ocioso{cursor:none}
+  .tv-top{position:relative;display:flex;align-items:center;gap:clamp(12px,1.4vw,28px);
+    padding:clamp(14px,2.4vh,30px) clamp(20px,3.2vw,64px) 0}
+  .tv-marca{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;font-size:clamp(12px,1vw,19px);
+    color:#9FC2C4;white-space:nowrap}
+  .tv-marca svg{width:clamp(22px,1.9vw,36px);height:auto}
+  .tv-tit{font-family:var(--disp);font-weight:800;font-size:clamp(18px,1.8vw,36px);color:#fff;letter-spacing:-.015em;
+    padding-left:clamp(12px,1.4vw,28px);border-left:1px solid rgba(255,255,255,.14);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tv-dir{margin-left:auto;display:flex;align-items:center;gap:clamp(12px,1.4vw,26px);font-size:clamp(12px,.95vw,18px);
+    color:#9FC2C4;white-space:nowrap}
+  .tv-hora{font-family:var(--disp);font-weight:700;color:#fff;font-size:clamp(16px,1.4vw,28px)}
+  .tv-live{display:inline-flex;align-items:center;gap:8px}
+  .tv-live i{width:.7em;height:.7em;border-radius:50%;background:#3DD598;animation:tv-pulso 2s infinite}
+  .tv-live.copia i{background:#F4C675;animation:none}
+  @keyframes tv-pulso{0%{box-shadow:0 0 0 0 rgba(61,213,152,.55)}100%{box-shadow:0 0 0 .8em rgba(61,213,152,0)}}
+  .tv-palco{position:relative;flex:1;min-height:0;display:flex;
+    padding:clamp(14px,3vh,44px) clamp(20px,3.2vw,64px) clamp(74px,10vh,116px)}
+  .tv-slide{flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;gap:clamp(12px,2.4vh,34px);
+    animation:tv-entra .7s cubic-bezier(.2,.8,.2,1)}
+  .tv-slide.fixo{animation:none}
+  @keyframes tv-entra{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .tv-k{font-size:clamp(12px,.95vw,19px);color:#9FC2C4;font-weight:600;letter-spacing:.07em;text-transform:uppercase}
+  .tv-hero{font-family:var(--disp);font-weight:800;letter-spacing:-.04em;line-height:.95;color:#fff;font-size:clamp(52px,8.4vw,176px)}
+  .tv-hero small{font-size:.42em;color:#9FC2C4;letter-spacing:-.01em}
+  .tv-sub{font-size:clamp(13px,1.1vw,22px);color:#BFD9DA}
+  .tv-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.3vw,26px)}
+  .tv-grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tv-c{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);border-radius:clamp(12px,1.1vw,22px);
+    padding:clamp(14px,1.5vw,30px);min-width:0}
+  .tv-c.forte{background:linear-gradient(150deg,var(--tvc),color-mix(in srgb,var(--tvc) 55%,#041417));border-color:transparent}
+  .tv-c .r{font-size:clamp(12px,.95vw,19px);color:#A9CBCD}
+  .tv-c.forte .r{color:rgba(255,255,255,.85)}
+  .tv-c .v{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;color:#fff;font-size:clamp(26px,3.3vw,68px);
+    margin-top:.2em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tv-c .s{font-size:clamp(11px,.85vw,17px);color:#8DB5B7;margin-top:.35em}
+  .tv-c.forte .s{color:rgba(255,255,255,.78)}
+  .tv-pc{display:flex;align-items:center;gap:clamp(12px,1.3vw,26px)}
+  .tv-ini{width:clamp(48px,4.4vw,90px);height:clamp(48px,4.4vw,90px);border-radius:22%;display:grid;place-items:center;
+    font-family:var(--disp);font-weight:800;color:#fff;font-size:clamp(22px,2.2vw,44px);flex:0 0 auto}
+  .tv-nome{font-family:var(--disp);font-weight:800;color:#fff;letter-spacing:-.02em;font-size:clamp(28px,3.3vw,68px);line-height:1.05}
+  .tv-barras{flex:1;min-height:clamp(100px,16vh,300px);display:flex;align-items:flex-end;gap:clamp(4px,.6vw,14px)}
+  .tv-b{flex:1 1 0;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px}
+  .tv-bb,.tv-pilha{width:100%;max-width:120px;border-radius:8px 8px 3px 3px;min-height:3px;display:flex;
+    flex-direction:column-reverse;overflow:hidden;background:var(--tvl)}
+  .tv-pilha{background:transparent}
+  .tv-pilha i{display:block;width:100%;flex:0 0 auto}
+  .tv-bv{font-family:var(--disp);font-weight:700;color:#fff;font-size:clamp(11px,.9vw,18px);white-space:nowrap;min-height:1.2em}
+  .tv-bl{font-size:clamp(10px,.8vw,16px);color:#9FC2C4;white-space:nowrap;min-height:1.2em}
+  .tv-leg{display:flex;gap:18px;flex-wrap:wrap;font-size:clamp(11px,.85vw,17px);color:#BFD9DA}
+  .tv-leg i{display:inline-block;width:.8em;height:.8em;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  .tv-wa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(14px,2vw,40px);align-items:stretch}
+  .tv-lim{display:flex;flex-direction:column;justify-content:center;gap:clamp(8px,1.2vh,16px)}
+  .tv-meter{height:clamp(10px,1.2vh,18px);border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
+  .tv-meter i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#3DD598,#F4C675)}
+  .tv-av{display:grid;gap:10px}
+  .tv-av div{border-left:4px solid #FF8A6B;background:rgba(255,138,107,.1);border-radius:0 12px 12px 0;
+    padding:clamp(10px,1vw,18px) clamp(14px,1.2vw,22px)}
+  .tv-av b{display:block;color:#fff;font-size:clamp(13px,1.05vw,21px)}
+  .tv-av span{display:block;color:#F3C9BD;font-size:clamp(11px,.85vw,16px);margin-top:4px}
+  .tv-trk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,40px)}
+  .tv-fun{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(8px,1vw,18px);margin-top:clamp(8px,1.4vh,18px)}
+  .tv-fun .tv-c .v{font-size:clamp(22px,2.5vw,52px)}
+  .tv-fun .tv-c:last-child{grid-column:1/-1}
+  .tv-lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(8px,1vw,18px)}
+  .tv-lista div{background:rgba(255,255,255,.045);border-radius:14px;padding:clamp(10px,1vw,18px) clamp(14px,1.2vw,22px)}
+  .tv-lista b{display:block;color:#fff;font-family:var(--disp);font-size:clamp(14px,1.2vw,24px)}
+  .tv-lista span{display:block;color:#A9CBCD;font-size:clamp(11px,.9vw,17px);margin-top:3px}
+  .tv-ctrl{position:absolute;left:50%;bottom:clamp(16px,2.6vh,30px);transform:translateX(-50%);display:flex;align-items:center;gap:4px;
+    background:rgba(4,20,23,.8);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:6px;
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:opacity .4s ease;z-index:2}
+  .tv.ocioso .tv-ctrl{opacity:0;pointer-events:none}
+  .tv-ctrl button{border:0;background:transparent;color:#DCEFEF;border-radius:10px;padding:8px 11px;cursor:pointer;
+    display:inline-flex;align-items:center;gap:6px;font-size:13px;font-family:var(--body)}
+  .tv-ctrl button:hover{background:rgba(255,255,255,.1)}
+  .tv-ctrl button:focus-visible{outline:2px solid var(--tvl);outline-offset:1px}
+  .tv-ctrl svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2.2}
+  .tv-dots{display:flex;align-items:center;gap:6px;padding:0 8px}
+  .tv-dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25);transition:width .3s ease}
+  .tv-dots i.on{background:#fff;width:22px;border-radius:999px}
+  .tv-vel{display:inline-flex;gap:2px;padding:0 6px;border-left:1px solid rgba(255,255,255,.12);border-right:1px solid rgba(255,255,255,.12)}
+  .tv-vel button{padding:6px 8px;font-size:12px;color:#9FC2C4}
+  .tv-vel button.on{background:rgba(255,255,255,.14);color:#fff;font-weight:600}
+  .tv-prog{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.06)}
+  .tv-prog i{display:block;height:100%;width:0;background:var(--tvl)}
+  .tv-dica{position:absolute;top:clamp(70px,11vh,130px);left:50%;transform:translateX(-50%);z-index:3;
+    background:rgba(4,20,23,.88);border:1px solid rgba(255,255,255,.16);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px}
+  @media(max-width:900px){ .tv-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .tv-wa,.tv-trk{grid-template-columns:minmax(0,1fr)} }
+  @media(prefers-reduced-motion:reduce){ .tv-slide{animation:none} .tv-live i{animation:none} .tv-prog i{transition:none !important} }
+
   @media(max-width:1280px){ .kpis{grid-template-columns:repeat(4,minmax(0,1fr))} }
   @media(max-width:1080px){
     .bn{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -1480,7 +1616,7 @@
       g.push(["Campanhas de e-mail", nf(k.campanhas), k.campanhas ? mil(k.entregues) + " e-mails entregues" : "nenhum envio no período", false]);
       g.push(["Abertura média", k.campanhas ? nf(k.abertura, 1) + "%" : "—", k.campanhas ? "CTR de " + nf(k.ctr, 2) + "%" : "sem e-mail no período", false, !k.campanhas]);
       g.push(["WhatsApp", k.wpp_disparos ? nf(k.wpp_disparos) : "Pronto", !k.wpp_disparos ? "aguardando os primeiros disparos"
-        : k.wpp_custo_meta ? "disparos · " + moeda(k.wpp_custo_meta, 2) + " de custo na Meta"
+        : k.wpp_custo_meta ? "disparos · " + moeda(k.wpp_custo_meta, 2) + " de custo na Meta" + (WA.vivo ? " · ao vivo" : "")
         : "disparos · " + moeda(k.wpp_investimento) + " investidos", false, !k.wpp_disparos]);
       if (k.parceiros_vendas && g.length < 8) g.push(["Pedidos", nf(k.pedidos), "ticket médio " + moeda(k.tkm, 2), false]);
       if (k.parceiros_vendas && g.length < 8) g.push(["Conversão do site", nf(k.conversao, 2) + "%", "pedidos ÷ sessões", false]);
@@ -2068,7 +2204,7 @@
                       LIMIT_EXCEEDED: "limite excedido", ARCHIVED: "arquivado" };
     var WA_QUAL = { GREEN: "Alta", YELLOW: "Média", RED: "Baixa", UNKNOWN: "Sem nota" };
     var WA_CAT = { MARKETING: "marketing", UTILITY: "utilidade", AUTHENTICATION: "autenticação", SERVICE: "serviço" };
-    var WA_GRAV = { alta: ["Agir agora", 0], media: ["Atenção", 1], info: ["Para saber", 2] };
+    var WA_GRAV = { alta: ["Importante", 0], media: ["Atenção", 1], info: ["Para saber", 2] };
 
     function waCfg() { return (D && D.hub && D.hub.whatsapp_meta) || null; }
     function waDados() { return WA.vivo || (waCfg() || {}).copia || null; }
@@ -2133,12 +2269,16 @@
         if (!r.ok) throw new Error("HTTP " + r.status);
         return r.json();
       }).then(function (j) {
+        var mudou = !WA.vivo || WA.vivo.atualizado !== j.atualizado;
         WA.vivo = j; WA.erro = null; WA.quando = Date.now();
+        if (mudou) { aplicarVivo(); WA.pendente = true; }
       }).catch(function (e) {
         WA.erro = e.message || "sem resposta";
       }).then(function () {
         WA.carregando = false;
-        pintarWA();
+        if (WA.aoCarregar) { var f = WA.aoCarregar; WA.aoCarregar = null; WA.pendente = false; f(); return; }
+        if (WA.pendente) { WA.pendente = false; redesenhar(); }
+        else { pintarWA(); if (TV.on) tvAtualizar(); }
       });
     }
     function waRelogio() {
@@ -2150,8 +2290,8 @@
     }
 
     // Totais do periodo escolhido: por template, por parceiro e por dia.
-    function waAgregar(d, pid) {
-      var desde = waDesde(), nomes = {}, porT = {}, porP = {}, porDia = {};
+    function waAgregar(d, pid, desdeFixo) {
+      var desde = desdeFixo || waDesde(), nomes = {}, porT = {}, porP = {}, porDia = {};
       var zero = function () { return { enviadas: 0, entregues: 0, lidas: 0, cliques: 0, custo: 0 }; };
       var soma = function (alvo, x) {
         alvo.enviadas += x.enviadas || 0; alvo.entregues += x.entregues || 0; alvo.lidas += x.lidas || 0;
@@ -2195,6 +2335,32 @@
       return { desde: desde, porT: porT, porP: porP, porDia: porDia, tot: tot, gasto: g, vol: vol, falhas: falhas };
     }
 
+    // [singular, plural, o que fazer, proporcional?] — proporcional: depende de cada destinatario.
+    var WA_ERRO_TXT = {
+      131048: ["envio barrado por excesso de bloqueios recentes", "envios barrados por excesso de bloqueios recentes",
+        "A Meta não entregou porque, nos últimos envios, algumas pessoas bloquearam ou denunciaram o número. O termômetro é a qualidade do número: se ela segue Alta, foi pontual. Se esse número crescer, reduza o volume e revise a lista.", true],
+      131049: ["pessoa não recebeu por excesso de marketing", "pessoas não receberam por excesso de marketing",
+        "A Meta segura o marketing de quem já recebeu muitas mensagens de empresas. Não é bloqueio do número; só não reenvie para elas antes de 24h.", true],
+      131026: ["número sem WhatsApp ou inválido", "números sem WhatsApp ou inválidos",
+        "Tire esses números da lista antes do próximo envio.", true],
+      130472: ["número em teste da própria Meta", "números em teste da própria Meta",
+        "A Meta não entrega marketing para uma pequena parte das pessoas, num experimento dela. Não é falha nossa; não reenvie.", true],
+      131050: ["pessoa pediu para não receber marketing", "pessoas pediram para não receber marketing",
+        "Tire da lista e não envie mais para elas.", true],
+      131056: ["envio rápido demais para a mesma pessoa", "envios rápidos demais para a mesma pessoa",
+        "Espaçar os envios para o mesmo número resolve.", true],
+      130429: ["envio acima da velocidade permitida", "envios acima da velocidade permitida",
+        "O disparador mandou rápido demais; ele deve esperar e tentar de novo.", true],
+      131053: ["mensagem com imagem ou mídia inválida", "mensagens com imagem ou mídia inválida",
+        "Confira a arte (JPG, RGB, até 5 MB) e suba de novo pelo curl.", false],
+      131042: ["mensagem não enviada por problema de pagamento", "mensagens não enviadas por problema de pagamento",
+        "Confira o cartão na conta do WhatsApp (Gerenciador do WhatsApp > Configurações > Pagamentos).", false],
+      132015: ["envio com template pausado", "envios com template pausado", "Use o template reserva e revise o texto pausado.", false],
+      132016: ["envio com template desativado", "envios com template desativado", "Crie um template novo; o desativado não volta.", false],
+      132001: ["envio com template não encontrado", "envios com template não encontrado", "Confira o nome e o idioma exatos do template no disparador.", false],
+      132000: ["envio com variáveis erradas no template", "envios com variáveis erradas no template", "Confira as variáveis que o disparador manda.", false],
+    };
+
     // Avisos: do Worker (leitura), do limite, do numero, dos templates, do webhook e da Meta.
     function waAvisos(d, pid) {
       var av = [];
@@ -2212,8 +2378,10 @@
       });
       var lim = d.limite_24h || {};
       if (lim.pct !== null && lim.pct !== undefined) {
-        if (lim.pct >= 100) add("alta", "Limite de 24h atingido", nf(lim.usados) + " de " + nf(lim.limite) + " pessoas: novos envios de marketing só quando a janela de 24h liberar.");
-        else if (lim.pct >= 80) add("media", "Limite de 24h quase no fim", nf(lim.usados) + " de " + nf(lim.limite) + " pessoas (" + nf(lim.pct, 0) + "%) · restam " + nf(lim.restantes) + ". O limite é da BM inteira, somando todos os parceiros.");
+        if (lim.pct >= 100) add("info", "Cota do dia usada: " + nf(lim.usados) + " de " + nf(lim.limite) + " pessoas",
+          "Normal depois de uma campanha que usa a cota toda. Novos envios de marketing quando a janela de 24h liberar: as vagas voltam 24h depois de cada envio.");
+        else if (lim.pct >= 80) add("info", "Cota do dia quase no fim: restam " + nf(lim.restantes) + " pessoas",
+          nf(lim.usados) + " de " + nf(lim.limite) + " (" + nf(lim.pct, 0) + "%). A cota é da BM inteira, somando todos os parceiros.");
       }
       var num_ = d.numero || {};
       if (num_.qualidade === "RED" || num_.qualidade === "YELLOW") {
@@ -2274,9 +2442,22 @@
           "): a Meta informa só o custo; enviadas e entregues = custo ÷ preço por mensagem do dia. Leituras e cliques desses dias não existem.");
       }
       var wh = d.webhook || {};
+      // Erros de entrega em linguagem simples e com a proporcao: 1 em 250 nao e o mesmo
+      // que 100 em 250. Os que dependem de cada destinatario ficam mais brandos quando sao
+      // pontuais; pagamento, conta, token e template continuam graves com 1 ocorrencia.
+      var enviados = ((wh.status_por_dia) || []).reduce(function (a, x) { return a + (x.sent || 0); }, 0);
       (wh.erros || []).forEach(function (e) {
-        add(e.gravidade || "media", "Erro " + e.codigo + " · " + nf(e.total) + (e.total > 1 ? " mensagens" : " mensagem"),
-          (e.explicacao || e.titulo || "") + (e.h24 ? " · " + nf(e.h24) + " nas últimas 24h" : ""), e.ultima);
+        var tx = WA_ERRO_TXT[e.codigo], n = e.total, share = enviados ? n / enviados * 100 : null;
+        var g = e.gravidade || "media";
+        if (tx && tx[3] && share !== null) {
+          if (e.codigo === 131048) g = share < 1 || n <= 2 ? "info" : share < 5 ? "media" : "alta";
+          else g = share < 2 ? "info" : g === "info" ? "info" : "media";
+        }
+        var titulo = tx ? nf(n) + " " + (n === 1 ? tx[0] : tx[1])
+          : nf(n) + (n === 1 ? " mensagem não entregue" : " mensagens não entregues") + (e.titulo ? " (" + e.titulo + ")" : "");
+        var det = (share !== null ? nf(share, share < 1 ? 1 : 0) + "% dos " + nf(enviados) + " envios do período. " : "") +
+          (tx ? tx[2] : (e.explicacao || "")) + " (código " + e.codigo + (e.h24 ? "; " + nf(e.h24) + " nas últimas 24h" : "") + ")";
+        add(g, titulo, det, e.ultima);
       });
       if (wh.pedidos_de_saida) {
         add("info", nf(wh.pedidos_de_saida) + (wh.pedidos_de_saida > 1 ? " pedidos" : " pedido") + " para parar de receber",
@@ -2329,11 +2510,11 @@
       var env = semMetricas && !pid ? ag.vol.enviadas : ag.tot.enviadas;
       var entr = semMetricas && !pid ? ag.vol.entregues : ag.tot.entregues;
       var meter = function (pct) {
-        return '<div class="wa-meter' + (pct >= 100 ? " cheio" : pct >= 80 ? " alto" : "") + '"><i style="width:' + Math.min(100, Math.max(0, pct || 0)).toFixed(1) + '%"></i></div>';
+        return '<div class="wa-meter' + (pct >= 80 ? " alto" : "") + '"><i style="width:' + Math.min(100, Math.max(0, pct || 0)).toFixed(1) + '%"></i></div>';
       };
       var tLim = kpi("wp", "Limite de 24h", lim.limite ? nf(lim.usados) + " / " + nf(lim.limite) : lim.ilimitado ? "sem teto" : "—",
         lim.limite ? "pessoas únicas · restam " + nf(lim.restantes) + (p ? " · dividido entre os parceiros" : " · faixa " + (lim.faixa || "")) : "faixa da BM ainda não lida",
-        true, lim.pct >= 80 ? (lim.pct >= 100 ? "limite atingido" : nf(lim.pct, 0) + "% usado") : null, !lim.limite, lim.limite ? meter(lim.pct) : "");
+        true, lim.pct >= 80 ? (lim.pct >= 100 ? "cota do dia usada" : nf(lim.pct, 0) + "% usado") : null, !lim.limite, lim.limite ? meter(lim.pct) : "");
       var tiles;
       if (p) {
         var pp = ag.porP[pid] || { enviadas: 0, entregues: 0, lidas: 0, cliques: 0, custo: 0, receita: 0 };
@@ -2374,7 +2555,7 @@
         '<div class="cap">Mensagens enviadas pelos templates · ' + waPeriodoTxt() + (semMetricas ? " · ligue as métricas de template para ver por parceiro" : "") + '</div>' +
         legenda + '<div id="wa-graf" class="chart wa-graf"></div></div>' +
         '<div class="wa-sub"><h4>Avisos e alertas</h4><div class="cap">' + (avisos.length
-          ? nf(cnt.alta) + " para agir · " + nf(cnt.media) + " de atenção · " + nf(cnt.info) + " para saber" : "Meta, webhook e templates") +
+          ? (cnt.alta ? nf(cnt.alta) + (cnt.alta > 1 ? " importantes · " : " importante · ") : "") + nf(cnt.media) + " de atenção · " + nf(cnt.info) + " para saber" : "Meta, webhook e templates") +
         '</div>' + listaAv + '</div></div>';
       if (!p) corpo += waTabelaParceiros(ag);
       corpo += waTabelaTemplates(d, ag, pid);
@@ -2507,6 +2688,250 @@
       if (t) t.addEventListener("click", function () { WA.todos = !WA.todos; pintarWA(); });
     }
 
+    // =================================================================
+    // META SO AO VIVO
+    // Parceiro de midia (paga por disparo de WhatsApp): os numeros saem do Worker.
+    // O hub.json traz a copia do momento em que o gerar_hub.py rodou; quando o Worker
+    // responde, o painel refaz o parceiro e as somas do hub (receita, WhatsApp,
+    // grafico de receita e esteira) com os dados ao vivo e a copia sai da tela.
+    // Dias mais antigos que a janela do Worker (90 dias) ficam com a copia: ja fecharam.
+    // =================================================================
+    var D0 = null, PRONTO = false;
+    function clone(x) { return JSON.parse(JSON.stringify(x)); }
+    function hojeIso() { return isoDe(new Date()); }
+    function brData(iso) { return iso.slice(8, 10) + "/" + iso.slice(5, 7) + "/" + iso.slice(0, 4); }
+    function r2(v) { return Math.round((v || 0) * 100) / 100; }
+    function pctJs(a, b, c) { var f = Math.pow(10, c); return b ? Math.round(a / b * 100 * f) / f : 0; }
+    function dowDe(iso) { return DOM_SAB[dataIso(iso).getDay()]; }
+
+    // Disparos do parceiro por dia, somando os templates dele (mesma regra de dono do gerar_hub.py).
+    function diasMidiaVivo(p, d) {
+      var nomes = {}, por = {};
+      (d.templates || []).forEach(function (t) { nomes[t.id] = t.nome; });
+      (d.por_dia_template || []).forEach(function (x) {
+        var nome = nomes[x.template_id] || x.template_id;
+        if (waDonoNaData(nome, x.data) !== p.id) return;
+        var r = por[x.data] = por[x.data] || { disparos: 0, entregues: 0, lidas: 0, cliques: 0, custo: 0, templates: {}, estimado: false };
+        r.disparos += x.enviadas || 0; r.entregues += x.entregues || 0; r.lidas += x.lidas || 0;
+        r.cliques += x.cliques || 0; r.custo += x.custo || 0; r.templates[nome] = 1;
+        if (x.estimado) r.estimado = true;
+      });
+      return por;
+    }
+    function diaMidia(iso, r, p) {
+      r = r || { disparos: 0, entregues: 0, lidas: 0, cliques: 0, custo: 0, templates: {} };
+      var base = p.receita_base === "entregues" ? r.entregues : r.disparos;
+      var receita = r2(base * (p.valor_por_disparo || 0));
+      return { iso: iso, d: ddmm(iso), dow: dowDe(iso), send: "", n_env: 0, wpp: "", n_wpp: 0,
+        disparos: r.disparos, entregues: r.entregues, lidas: r.lidas, cliques: r.cliques,
+        receita: receita, custo: r2(r.custo), margem: r2(receita - r.custo),
+        templates: Object.keys(r.templates).sort(), estimado: !!r.estimado };
+    }
+    // Mesmas contas do kpis_midia do gerar_hub.py.
+    function kpisMidiaJs(dias, antigo) {
+      var s = { disparos: 0, entregues: 0, lidas: 0, cliques: 0, receita: 0, custo: 0 }, ativos = [], tpls = {}, est = false;
+      dias.forEach(function (d) {
+        s.disparos += d.disparos; s.entregues += d.entregues; s.lidas += d.lidas; s.cliques += d.cliques;
+        s.receita += d.receita; s.custo += d.custo;
+        if (d.disparos) ativos.push(d);
+        (d.templates || []).forEach(function (t) { tpls[t] = 1; });
+        if (d.estimado) est = true;
+      });
+      var pico = ativos.reduce(function (m, d) { return !m || d.disparos > m.disparos ? d : m; }, null);
+      return Object.assign({}, antigo, {
+        fonte: "meta", disparos: s.disparos, entregues: s.entregues, lidas: s.lidas, cliques: s.cliques,
+        tx_entrega: pctJs(s.entregues, s.disparos, 1), tx_leitura: pctJs(s.lidas, s.entregues, 1),
+        ctr_wpp: pctJs(s.cliques, s.entregues, 2), receita: r2(s.receita), custo_meta: r2(s.custo),
+        margem: r2(s.receita - s.custo), margem_pct: s.receita ? pctJs(s.receita - s.custo, s.receita, 1) : null,
+        custo_por_entregue: s.entregues ? Math.round(s.custo / s.entregues * 10000) / 10000 : null,
+        dias_ativos: ativos.length, media_dia: ativos.length ? Math.round(s.disparos / ativos.length * 10) / 10 : 0,
+        pico: pico ? { d: pico.d, iso: pico.iso, v: pico.disparos, dia: pico.dow } : null,
+        templates: Object.keys(tpls).sort(), estimado: est,
+        receita_supertroco: r2(s.receita), wpp_disparos: s.disparos
+      });
+    }
+
+    function aplicarVivo() {
+      if (!D0) return;
+      D = clone(D0);
+      var d = WA.vivo;
+      if (!d) return;
+      var janela = (d.periodo || {}).inicio || "0000-00-00", hoje = hojeIso(), delta = {};
+      D.parceiros.forEach(function (p) {
+        if (p.modelo !== "midia" || p.sem_dados) return;
+        var vivo = diasMidiaVivo(p, d), copia = {};
+        (abaDe(p.abas, "geral").dias || []).forEach(function (x) { copia[x.iso] = x; });
+        var isos = Object.keys(vivo).concat(Object.keys(copia)).sort();
+        if (!isos.length) return;
+        var todos = [];
+        for (var dia = dataIso(isos[0]); isoDe(dia) <= hoje; dia.setDate(dia.getDate() + 1)) {
+          var iso = isoDe(dia), x;
+          if (iso < janela && copia[iso]) x = copia[iso];
+          else {
+            x = diaMidia(iso, vivo[iso], p);
+            if (copia[iso]) { x.send = copia[iso].send || ""; x.n_env = copia[iso].n_env || 0; }
+          }
+          todos.push(x);
+        }
+        p.abas.forEach(function (a) {
+          var antes = a.kpis;
+          var dias = a.id === "geral" ? todos : todos.filter(function (x) { return x.iso.slice(0, 7) === a.id; });
+          a.dias = dias;
+          a.kpis = kpisMidiaJs(dias, antes);
+          if (dias.length) {
+            a.ini = dias[0].iso; a.fim = dias[dias.length - 1].iso;
+            a.periodo = brData(a.ini) + " a " + brData(a.fim);
+            if (a.id !== "geral") a.ate = ddmm(a.fim);
+          }
+          var k = a.kpis, dl = delta[a.id] = delta[a.id] || { rec: 0, disp: 0, entr: 0, cl: 0, receita: 0, custo: 0, p: {} };
+          dl.rec += k.receita_supertroco - (antes.receita_supertroco || 0);
+          dl.disp += k.disparos - (antes.disparos || 0);
+          dl.entr += k.entregues - (antes.entregues || 0);
+          dl.cl += k.cliques - (antes.cliques || 0);
+          dl.receita += k.receita - (antes.receita || 0);
+          dl.custo += k.custo_meta - (antes.custo_meta || 0);
+          dl.p[p.id] = k;
+        });
+      });
+      D.hub.abas.forEach(function (a) {
+        var dl = delta[a.id], k = a.kpis;
+        if (!dl) return;
+        k.receita = r2(k.receita + dl.rec);
+        (k.receita_por_parceiro || []).forEach(function (x) { if (dl.p[x.id]) x.receita = dl.p[x.id].receita_supertroco; });
+        k.midia_disparos = (k.midia_disparos || 0) + dl.disp;
+        k.midia_entregues = (k.midia_entregues || 0) + dl.entr;
+        k.midia_cliques = (k.midia_cliques || 0) + dl.cl;
+        k.midia_receita = r2((k.midia_receita || 0) + dl.receita);
+        k.midia_custo = r2((k.midia_custo || 0) + dl.custo);
+        k.midia_margem = r2(k.midia_receita - k.midia_custo);
+        k.wpp_disparos = (k.wpp_disparos || 0) + dl.disp;
+        k.wpp_custo_meta = r2((k.wpp_custo_meta || 0) + dl.custo);
+        (a.parceiros || []).forEach(function (r) {
+          var pk = dl.p[r.id];
+          if (!pk) return;
+          Object.assign(r, { disparos: pk.disparos, entregues: pk.entregues, lidas: pk.lidas, cliques: pk.cliques,
+            receita: pk.receita, custo_meta: pk.custo_meta, margem: pk.margem, tx_entrega: pk.tx_entrega,
+            ctr_wpp: pk.ctr_wpp, receita_supertroco: pk.receita_supertroco });
+          if (r.whatsapp) r.whatsapp.disparos = pk.disparos;
+        });
+      });
+      D.hub.kpis = D.hub.abas[0].kpis;
+      vivoNaSerie(hoje);
+      vivoNaEsteira();
+    }
+
+    // Grafico de crescimento da receita: mes a mes, ritmo do mes corrente e dia a dia.
+    function vivoNaSerie(hoje) {
+      var S = D.hub.receita_serie;
+      if (!S) return;
+      D.parceiros.forEach(function (p) {
+        if (p.modelo !== "midia" || p.sem_dados) return;
+        var info = S.parceiros.filter(function (x) { return x.id === p.id; })[0];
+        if (!info) return;
+        S.meses.forEach(function (m) {
+          if (!info.desde || m.id < info.desde) return;
+          var a = p.abas.filter(function (x) { return x.id === m.id; })[0];
+          if (!a) return;
+          var v = a.kpis.receita_supertroco || 0;
+          m.valores[p.id] = v;
+          m.pendentes = (m.pendentes || []).filter(function (id) { return id !== p.id; });
+          m.projecao = m.projecao || {};
+          var ultimo = new Date(+m.id.slice(0, 4), +m.id.slice(5, 7), 0).getDate();
+          var ate = m.id === hoje.slice(0, 7) ? +hoje.slice(8, 10) : (a.ate ? +a.ate.slice(0, 2) : ultimo);
+          if (ate > 0 && ate < ultimo) m.projecao[p.id] = r2(v / ate * ultimo); else delete m.projecao[p.id];
+          var t = 0;
+          Object.keys(m.valores).forEach(function (id) { t += m.valores[id] || 0; });
+          m.total = r2(t);
+        });
+        var dias = abaDe(p.abas, "geral").dias || [], fimP = dias.length ? dias[dias.length - 1].iso : null;
+        if (fimP && S.datas.length && fimP > S.datas[S.datas.length - 1]) {
+          var extra = [], dd = dataIso(S.datas[S.datas.length - 1]);
+          for (;;) { dd.setDate(dd.getDate() + 1); var iso = isoDe(dd); if (iso > fimP) break; extra.push(iso); }
+          S.datas = S.datas.concat(extra);
+          Object.keys(S.por_dia).forEach(function (id) { S.por_dia[id] = S.por_dia[id].concat(extra.map(function () { return 0; })); });
+        }
+        var porIso = {};
+        dias.forEach(function (x) { porIso[x.iso] = x.receita || 0; });
+        S.por_dia[p.id] = S.datas.map(function (iso) { return porIso[iso] || 0; });
+      });
+    }
+
+    function vivoNaEsteira() {
+      var k = D.hub.abas[0].kpis;
+      (D.hub.ticker || []).forEach(function (t) {
+        if (t.rot === "Receita Supertroco") t.val = moeda(k.receita);
+        else if (t.rot === "WhatsApp" && k.wpp_disparos) t.val = nf(k.wpp_disparos) + " disparos";
+        D.parceiros.forEach(function (p) {
+          if (p.modelo !== "midia" || p.sem_dados) return;
+          var g = abaDe(p.abas, "geral").kpis;
+          if (t.rot === p.nome + " · disparos") t.val = nf(g.disparos);
+          else if (t.rot === p.nome + " · receita") { t.val = moeda(g.receita, 2); t.tipo = g.receita ? "bom" : "neutro"; }
+        });
+      });
+    }
+
+    // Refaz a tela atual com os dados novos (ao vivo ou hub.json relido no telao).
+    function redesenhar() {
+      if (!PRONTO) return;
+      var c = $("conteudo");
+      if (estado.tela === "parceiro") {
+        var p = parceiroAtual();
+        if (p && c) { c.outerHTML = conteudoParceiro(p); ligarParceiro(p); }
+      } else if (c) {
+        c.outerHTML = conteudoHub();
+        ligarHub();
+        var tk = root.querySelector(".ticker");
+        if (tk) tk.outerHTML = esteira();
+      }
+      if (TV.on) tvAtualizar();
+    }
+
+    // ---------- pagina enxuta: secoes recolhiveis e os 4 numeros principais ----------
+    function secAberta(id, padrao) { var v = ler("sec-" + id); return v === null ? !!padrao : v === "1"; }
+    function secao(id, titulo, resumo, html, padrao) {
+      if (!html) return "";
+      return '<details class="sec" data-sec="' + esc(id) + '"' + (secAberta(id, padrao) ? " open" : "") + '>' +
+        '<summary><span class="sec-t"><b>' + esc(titulo) + '</b>' + (resumo ? '<small>' + resumo + '</small>' : '') + '</span>' + CHEV +
+        '</summary><div class="sec-c">' + html + '</div></details>';
+    }
+    function ligarSecoes() {
+      root.querySelectorAll("details.sec").forEach(function (s) {
+        s.addEventListener("toggle", function () {
+          guardar("sec-" + s.getAttribute("data-sec"), s.open ? "1" : "0");
+          var w = s.querySelector("#wa-vivo");
+          if (s.open && w) desenharWAGrafico(w.getAttribute("data-parceiro") || null);
+        });
+      });
+    }
+    function kpisEnxutos(cards, p) {
+      var mais = ler("kpis-mais") === "1", resto = cards.slice(4);
+      return '<div class="kpis k4 enx">' + cards.slice(0, 4).join("") + '</div>' +
+        (resto.length ? '<div class="kpis k-mais"' + (mais ? '' : ' hidden') + '>' + resto.join("") + '</div>' +
+          '<div class="mais-bar"><button class="btn mini" id="bt-kpis" aria-expanded="' + mais + '">' + CHEV +
+          (mais ? "Menos indicadores" : "Mais " + resto.length + " indicadores") + '</button>' + (mais ? legendaFontes(p) : '') + '</div>' : '');
+    }
+    function resumoWA(pid) {
+      var d = waDados();
+      if (!d) return "aguardando o Worker da Meta";
+      var av = waAvisos(d, pid), alta = 0, media = 0, lim = d.limite_24h || {};
+      av.forEach(function (a) { if (a.g === "alta") alta++; else if (a.g === "media") media++; });
+      return (WA.vivo ? "ao vivo" : "cópia de " + esc(waHora(d.atualizado))) +
+        (lim.limite ? " · limite " + nf(lim.usados) + " de " + nf(lim.limite) : "") +
+        (alta ? ' · <span class="alerta-s">' + nf(alta) + (alta > 1 ? " avisos importantes" : " aviso importante") + '</span>'
+          : media ? " · " + nf(media) + " de atenção" : " · nenhum aviso importante");
+    }
+    function resumoCanais(aba) {
+      return (aba.email ? nf(aba.email.envios) + " e-mails · abertura " + nf(aba.email.abertura, 1) + "%" : "sem e-mail no período") +
+        " · " + (aba.whatsapp ? nf(aba.whatsapp.disparos) + " disparos de WhatsApp" : "WhatsApp pronto");
+    }
+    function hubEmail(aba) {
+      var e = aba.email, k = aba.kpis;
+      if (!e) return '<div class="row"><div class="painel"><div class="vazio">Nenhum e-mail no período.</div></div></div>';
+      return '<div class="row"><div class="painel"><div class="hrow"><div><h3>E-mail · RD Station</h3>' +
+        '<div class="cap">Todos os parceiros · ' + esc(aba.nome) + '</div></div>' +
+        '<span class="cm mail">' + MAIL + nf(k.campanhas) + ' campanhas</span></div>' + argolaEmail(e) + '</div></div>' + hubTabelaEmail(aba);
+    }
+
     function hubIA(aba) {
       var ia = aba.ia || {};
       if (!ia.destaque && !ia.comparativo) return "";
@@ -2522,10 +2947,15 @@
     }
 
     function conteudoHub() {
-      var aba = abaDe(D.hub.abas, estado.aba);
+      var aba = abaDe(D.hub.abas, estado.aba), k = aba.kpis;
       return '<div class="conteudo" id="conteudo">' + hubNumeros(aba) + hubReceita(aba) +
-        '<div class="row">' + hubCards(aba) + '</div>' + hubCanais(aba) + hubTabelaEmail(aba) + blocoWA(null) + hubParticipacao(aba) +
-        hubIA(aba) + '</div>';
+        '<div class="row">' + hubCards(aba) + '</div><div class="secs">' +
+        secao("hub-wa", "WhatsApp ao vivo", resumoWA(null), blocoWA(null)) +
+        secao("hub-email", "E-mail · RD Station", k.campanhas ? nf(k.campanhas) + " campanhas · abertura " + nf(k.abertura, 1) + "% · CTR " + nf(k.ctr, 2) + "%"
+          : "sem e-mail no período", hubEmail(aba)) +
+        secao("hub-part", "Participação nas vendas", "quanto cada parceria de vendas representa", hubParticipacao(aba)) +
+        secao("hub-ia", "Leitura comparativa do agente", "Groq · leitura feita em " + esc(D.atualizado), hubIA(aba)) +
+        '</div></div>';
     }
 
     function telaHub() {
@@ -2537,7 +2967,7 @@
         ' · e-mail + WhatsApp</div></div></div>' +
         '<div class="dir"><span class="chip" id="chip-periodo">' + esc(aba.periodo) + '</span>' +
         '<span class="chip live">Atualizado <b style="margin-left:4px">' + esc(D.atualizado) + '</b></span>' +
-        botaoCrono() + botaoBot() + botaoTema() + '</div></div>';
+        botaoTV() + botaoCrono() + botaoBot() + botaoTema() + '</div></div>';
 
       tela.innerHTML = topo + navAbas(h.abas) + esteira() + conteudoHub() + rodape();
       ligarHub();
@@ -2549,6 +2979,7 @@
       ligarTema();
       $("bt-crono").addEventListener("click", function () { abrirCronograma("hub"); });
       $("bt-bot").addEventListener("click", abrirBot);
+      $("bt-tv").addEventListener("click", function () { tvAbrir(true); });
     }
 
     function ligarHub() {
@@ -2565,6 +2996,7 @@
       ligarArgolas();
       ligarReceita();
       pintarWA();
+      ligarSecoes();
     }
 
     // =================================================================
@@ -2683,7 +3115,7 @@
         kpi("rd", "Bounce", e && e.bounce_pct !== undefined ? nf(e.bounce_pct, 2) + "%" : "—",
             e ? nfOu(f.bounce) + " e-mails voltaram" : aguarda, false, e && e.bounce_pct > 2 ? "acima de 2% — vale higienizar a base" : null, !e)
       ];
-      return '<div class="kpis">' + cards.join("") + '</div>' + legendaFontes(p);
+      return kpisEnxutos(cards, p);
     }
 
     function passoFunil(nome, valor, taxa, texto, fonte) {
@@ -2694,7 +3126,7 @@
         '<span class="fc-p">' + (texto ? '<b>' + nf(taxa, taxa < 1 ? 2 : 1) + '%</b> ' + esc(texto) : 'base do funil') + '</span></div>';
     }
 
-    function blocoFunilCredito(aba, p) {
+    function blocoFunilCredito(aba, p, semLado) {
       var k = aba.kpis, e = aba.email, f = (e && e.funil) || {}, ref = k.referencia;
       var passos = (e ? '<div class="fc-sec"><i class="src rd"></i>E-mail · RD Station</div>' +
           passoFunil("Entregues", f.entregues, 100, "", "rd") +
@@ -2719,7 +3151,7 @@
         '<div class="fc">' + passos + '</div>' + fim + txt +
         (e ? '<div class="ar-nota" style="margin-top:10px">* razão entre os totais do período: o relatório não informa a origem de cada lead.</div>' : '') +
         '</div>';
-      return '<div class="row r-72-28">' + esquerda + blocoReferencia(aba, p) + '</div>';
+      return semLado ? '<div class="row">' + esquerda + '</div>' : '<div class="row r-72-28">' + esquerda + blocoReferencia(aba, p) + '</div>';
     }
 
     function blocoReferencia(aba, p) {
@@ -2782,12 +3214,12 @@
         kpi("res", "Receita Supertroco", moeda(k.receita, 2), moeda(k.receita_por_disparo || 0, 2) + " × " + nf(nBase) + " " + base, true),
         kpi("wp", "Disparos", (k.estimado ? "≈ " : "") + nf(k.disparos), k.estimado ? "parte estimada pelo custo (envios antes das métricas)"
             : nf(k.dias_ativos) + (k.dias_ativos === 1 ? " dia" : " dias") + " com disparo · média " + nf(k.media_dia, 0) + "/dia", true),
-        kpi("wp", "Entregues", nf(k.entregues), nf(k.tx_entrega, 1) + "% dos disparos", true),
         kpi("wp", "Cliques", k.estimado && !k.cliques ? "—" : nf(k.cliques),
             k.estimado && !k.cliques ? "a Meta não tem cliques dos envios feitos antes de ligar as métricas" : "CTR de " + nf(k.ctr_wpp, 2) + "% das entregues",
             true, null, k.estimado && !k.cliques),
         kpi("res", "Margem", moeda(k.margem, 2), k.margem_pct !== null && k.margem_pct !== undefined ? nf(k.margem_pct, 1) + "% da receita" : "receita − custo na Meta", true,
             k.margem < 0 ? "custo maior que a receita" : null),
+        kpi("wp", "Entregues", nf(k.entregues), nf(k.tx_entrega, 1) + "% dos disparos", false),
         kpi("wp", "Custo na Meta", moeda(k.custo_meta, 2), "cobrado por mensagem entregue", false),
         kpi("wp", "Custo por mensagem", k.custo_por_entregue !== null ? moeda(k.custo_por_entregue, 3) : "—", "custo ÷ entregues", false, null, k.custo_por_entregue === null),
         kpi("wp", "Taxa de leitura", k.estimado && !k.lidas ? "—" : nf(k.tx_leitura, 1) + "%",
@@ -2796,7 +3228,7 @@
         kpi("wp", "Pico de disparos", k.pico ? nf(k.pico.v) : "—", k.pico ? k.pico.d + " · " + k.pico.dia.toLowerCase() : "sem disparos", false),
         kpi("wp", "Templates", nf((k.templates || []).length), (k.templates || []).join(", ") || "nenhum ainda", false)
       ];
-      return '<div class="kpis">' + cards.join("") + '</div>' + legendaFontes(p);
+      return kpisEnxutos(cards, p);
     }
 
     function blocoMargem(aba, p) {
@@ -2842,7 +3274,7 @@
           kpi("rd", "Abertura média", k.abertura === null ? "—" : nf(k.abertura, 1) + "%", camp, false, null, k.abertura === null),
           kpi("rd", "CTR médio", k.ctr === null ? "—" : nf(k.ctr, 2) + "%", semRd ? "aguardando export da RD" : "cliques ÷ entregues", false, null, k.ctr === null)
         ];
-        return '<div class="kpis">' + cards.join("") + '</div>' + legendaFontes(p);
+        return kpisEnxutos(cards, p);
       }
       var parcial = (k.dias_com_sessao !== undefined && k.dias_com_sessao < k.dias_ativos)
         ? "base parcial: " + k.dias_com_sessao + " de " + k.dias_ativos + " dias com sessão"
@@ -2871,7 +3303,7 @@
         kpi("rd", "Abertura média", k.abertura === null ? "—" : nf(k.abertura, 1) + "%", camp, false, null, k.abertura === null),
         kpi("rd", "CTR médio", k.ctr === null ? "—" : nf(k.ctr, 2) + "%", "cliques ÷ entregues", false, null, k.ctr === null)
       ];
-      return '<div class="kpis">' + c2.join("") + '</div>' + legendaFontes(p);
+      return kpisEnxutos(c2, p);
     }
 
     // ---------- resultado x disparos ----------
@@ -3043,8 +3475,8 @@
       g.innerHTML = estado.gran === "dia" ? graficoDia(dias, cfg) : graficoSemana(dias, cfg);
     }
 
-    function blocoResultado(aba, p) {
-      if (aba.kpis && aba.kpis.fonte === "funil") return blocoFunilCredito(aba, p);
+    function blocoResultado(aba, p, semLado) {
+      if (aba.kpis && aba.kpis.fonte === "funil") return blocoFunilCredito(aba, p, semLado);
       if (!aba.dias.length) {
         if (p.modelo === "midia") {
           return '<div class="row"><div class="painel"><h3>Disparos de WhatsApp</h3><div class="vazio">Nenhum disparo dos templates ' +
@@ -3057,7 +3489,7 @@
       if (!estado.gran) estado.gran = (p.modelo === "leads" || aba.dias.length <= 14) ? "dia" : "semana";
       var cfg = cfgResultado(p);
       var op = [["semana", "Por semana"], ["dia", "Dia a dia"]];
-      return '<div class="row r-72-28"><div class="painel">' +
+      return '<div class="row' + (semLado ? '' : ' r-72-28') + '"><div class="painel">' +
         '<div class="hrow"><div><h3>' + (p.modelo === "midia" ? "Disparos de WhatsApp por dia" : cfg.nome + ' × disparos') + '</h3>' +
         '<div class="cap">' + (p.modelo === "leads" ? "Leads por dia; dias com disparo marcados acima da coluna"
           : p.modelo === "midia" ? "Mensagens enviadas por dia pelos templates do parceiro (dados da Meta)"
@@ -3070,7 +3502,7 @@
         (p.modelo === "midia" ? '' : '<span><i style="background:var(--accent);border-radius:50%"></i>Disparo de e-mail</span>' +
         '<span><i style="background:var(--wpp);border-radius:50%"></i>Disparo de WhatsApp</span>') +
         '<span>' + aba.dias.length + ' dias no período</span></div></div>' +
-        (p.modelo === "leads" ? blocoPicos(aba) : p.modelo === "midia" ? blocoMargem(aba, p) : blocoMotor(aba)) + '</div>';
+        (semLado ? '' : p.modelo === "leads" ? blocoPicos(aba) : p.modelo === "midia" ? blocoMargem(aba, p) : blocoMotor(aba)) + '</div>';
     }
 
     function blocoMotor(aba) {
@@ -3352,17 +3784,19 @@
       return dias.slice(Math.max(0, dias.length - n));   // a partir do ultimo dia COM dado
     }
 
-    function blocoCross() {
+    function blocoCross(semToggle) {
       var janelas = [["3", "3 dias"], ["7", "7 dias"], ["30", "30 dias"],
                      ["tudo", "Tudo"], ["custom", "Personalizado"]];
       var modos = [["tabela", "Tabela"], ["cartoes", "Cartões"], ["grafico", "Gráfico"]];
-      return '<div class="row"><div class="painel">' +
+      if (semToggle) estado.aberto = true;
+      return '<div class="row"><div class="painel">' + (semToggle ? '<div class="cap" style="margin:0 0 12px">' +
+        'Cada dia de resultado ao lado dos disparos correspondentes</div><div class="cbody" id="cbody">' : '' +
         '<div class="hrow"><div><h3>Cruzamento diário</h3>' +
         '<div class="cap">Cada dia de resultado ao lado dos disparos correspondentes</div></div>' +
         '<button class="btn" id="bt-toggle"><svg viewBox="0 0 24 24"><path d="' +
         (estado.aberto ? "M6 15l6-6 6 6" : "M6 9l6 6 6-6") + '"/></svg>' +
         (estado.aberto ? "Ocultar" : "Mostrar") + '</button></div>' +
-        '<div class="cbody" id="cbody"' + (estado.aberto ? "" : " hidden") + '>' +
+        '<div class="cbody" id="cbody"' + (estado.aberto ? "" : " hidden") + '>') +
         '<div class="ctrl"><div class="seg" id="seg-janela">' + janelas.map(function (j) {
           return '<button data-j="' + j[0] + '"' + (estado.janela === j[0] ? ' class="on"' : '') +
             '>' + esc(j[1]) + '</button>';
@@ -3528,6 +3962,128 @@
         '<div class="box a">' + rich(ia.recomendacao || "") + '</div></div></div></div>';
     }
 
+    // ---------- Tracking por produto (modelo "Tracking PortoBank" da planilha do time) ----------
+    // Disparos e cliques: Meta ao vivo, pelos templates de cada produto. Janela de horario:
+    // MariaDB (lida no gerar_hub.py). Lead, contrato e producao: relatorio diario do parceiro.
+    // Taxas: clique = cliques ÷ disparos; lead = leads ÷ cliques; conversao = contratos ÷ leads.
+    var MES3 = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+    function trkDia(iso) { return iso.slice(8) + "/" + MES3[+iso.slice(5, 7) - 1]; }
+    function trkPct(a, b) { if (!b) return "—"; var v = a / b * 100; return nf(v, v && v < 1 ? 2 : 1) + "%"; }
+    function trkProduto(p) {
+      var lista = p.tracking.produtos, id = ler("trk-" + p.id);
+      return lista.filter(function (x) { return x.id === id; })[0] || lista[0];
+    }
+    function trkMeta(prod) {
+      var d = waDados(), nomes = {}, por = {};
+      if (!d) return por;
+      (d.templates || []).forEach(function (t) { nomes[t.id] = t.nome; });
+      (d.por_dia_template || []).forEach(function (x) {
+        var nome = nomes[x.template_id] || x.template_id;
+        if (prod.templates.indexOf(nome) < 0) return;
+        var m = por[x.data] = por[x.data] || { disparos: 0, cliques: 0, templates: {}, estimado: false };
+        m.disparos += x.enviadas || 0; m.cliques += x.cliques || 0; m.templates[nome] = 1;
+        if (x.estimado) m.estimado = true;
+      });
+      return por;
+    }
+    function trkLinhas(p, prod) {
+      var t = p.tracking, meta = trkMeta(prod), hoje = hojeIso(), fim = t.fim && t.fim < hoje ? t.fim : hoje, out = [];
+      for (var dia = dataIso(t.inicio); isoDe(dia) <= fim; dia.setDate(dia.getDate() + 1)) {
+        var iso = isoDe(dia), r = prod.dias[iso] || {}, m = meta[iso];
+        // Sem metrica do template na Meta nesse dia (acontece com o CLT), os disparos vem do
+        // banco (envios aceitos pela API) e o clique fica sem dado.
+        var banco = !m && r.janela ? r.janela.envios_banco : 0;
+        out.push({ iso: iso, dow: dowDe(iso), jan: r.janela || null, disp: m ? m.disparos : banco, cl: m ? m.cliques : null,
+          doBanco: !!banco, tpls: m ? Object.keys(m.templates) : (r.janela ? r.janela.templates : []), estimado: !!(m && m.estimado),
+          rel: r.acessos_st !== undefined, lead: r.acessos_st || 0, total: r.acessos_total || 0, conv: r.contratos || 0,
+          prod: r.producao || 0, parcial: !!r.parcial, incompleto: !!r.incompleto });
+      }
+      return out;
+    }
+    function trkTotais(linhas) {
+      return linhas.reduce(function (s, x) {
+        s.disp += x.disp; s.conv += x.conv; s.prod += x.prod;
+        if (x.cl !== null) { s.cl += x.cl; s.dispMeta += x.disp; }       // taxa de clique so onde ha clique medido
+        if (x.doBanco) s.doBanco++;
+        if (x.rel) { s.lead += x.lead; if (!x.parcial && !x.incompleto) { s.leadOk += x.lead; s.diasOk++; } }
+        return s;
+      }, { disp: 0, cl: 0, dispMeta: 0, doBanco: 0, lead: 0, conv: 0, prod: 0, leadOk: 0, diasOk: 0 });
+    }
+    function blocoTracking(p) {
+      var t = p.tracking;
+      if (!t || !t.produtos || !t.produtos.length) return "";
+      var prod = trkProduto(p), linhas = trkLinhas(p, prod), s = trkTotais(linhas), base = prod.linha_de_base;
+      var vazio = '<span class="hr">—</span>';
+      var passo = function (src, nome, v, sub) {
+        return '<div class="trk-p"><div class="r"><i class="src ' + src + '"></i>' + esc(nome) + '</div><div class="v">' + esc(v) +
+          '</div><div class="s">' + esc(sub) + '</div></div>';
+      };
+      var funil = '<div class="trk-fun">' + passo("wp", "Disparos", nf(s.disp), s.doBanco ? (s.dispMeta ? "Meta ao vivo + MariaDB ◦" : "MariaDB ◦ (sem métrica na Meta)") : "Meta ao vivo") +
+        passo("wp", "Cliques", nf(s.cl), "taxa de clique " + trkPct(s.cl, s.dispMeta)) +
+        passo("res", "Leads*", nf(s.lead), "acessos SuperTroco no relatório") +
+        passo("res", "Contratos", nf(s.conv), "conversão " + trkPct(s.conv, s.lead)) +
+        passo("res", "Produção", moeda(s.prod, 2), "relatório da " + p.nome) + '</div>';
+      var linhaBase = base ? '<div class="trk-base">Acessos SuperTroco por dia: <b>' + nf(base.acessos_st_dia, 1) + '</b> antes do WhatsApp (' +
+        ddmm(base.de) + ' a ' + ddmm(base.ate) + ')' + (s.diasOk ? ' · <b>' + nf(s.leadOk / s.diasOk, 1) + '</b> desde ' + ddmm(t.inicio) +
+        ' (dias completos do relatório)' : ' · desde ' + ddmm(t.inicio) + ': ainda sem dia completo no relatório') + '</div>' : '';
+      var rows = linhas.map(function (x) {
+        var jan = x.jan ? '<span class="jan">' + esc(x.jan.faixas.join(" + ") || "—") + '</span><small>' +
+          esc(x.jan.primeiro.replace(":", "h") + " a " + x.jan.ultimo.replace(":", "h")) + '</small>' : vazio;
+        var flag = x.parcial ? '<span class="flag" data-tip="O relatório foi gerado no meio deste dia">parcial</span>'
+          : x.incompleto ? '<span class="flag" data-tip="' + esc("Acessos totais do dia muito abaixo da média de antes (" + nf(x.total) +
+            "): o relatório do parceiro parece incompleto") + '">incompleto?</span>' : '';
+        var rel = function (v) { return x.rel ? v : vazio; };
+        return '<tr class="' + (x.parcial ? "trk-parc" : "") + '"><td><b>' + esc(trkDia(x.iso)) + '</b><small>' + esc(CURTA[x.dow] || "") + '</small></td>' +
+          '<td>' + jan + '</td><td>' + (x.tpls.length ? x.tpls.map(function (n) { return '<span class="pill wpp">' + esc(n) + '</span>'; }).join(" ")
+            : '<span class="hr">sem disparo</span>') + '</td>' +
+          '<td class="n">' + (x.estimado ? '<span class="hr" data-tip="estimado pelo custo">≈ </span>' : '') +
+            (x.doBanco ? '<span class="hr" data-tip="A Meta não trouxe a métrica deste template neste dia: envios aceitos, contados no MariaDB">◦ </span>' : '') +
+            nf(x.disp) + '</td>' +
+          '<td class="n">' + (x.cl === null ? vazio : nf(x.cl)) + '</td><td class="n">' + (x.cl === null ? vazio : trkPct(x.cl, x.disp)) + '</td>' +
+          '<td class="n">' + rel(nf(x.lead) + flag) + '</td><td class="n">' + rel(x.cl === null ? vazio : trkPct(x.lead, x.cl)) + '</td>' +
+          '<td class="n">' + rel(nf(x.conv)) + '</td><td class="n">' + rel(trkPct(x.conv, x.lead)) + '</td>' +
+          '<td class="n">' + rel(moeda(x.prod, 2)) + '</td></tr>';
+      }).join("");
+      var ate = (t.porto || {}).atualizado_ate, banco = t.banco || {};
+      return '<div class="row" id="trk"><div class="painel trk"><div class="hrow"><div><h3>Tracking · ' + esc(prod.nome) + '</h3>' +
+        '<div class="cap">' + brData(t.inicio) + (t.fim ? ' a ' + brData(t.fim) : '') + ' · disparos e cliques da Meta ao vivo · leads e contratos do relatório da ' +
+        esc(p.nome) + (ate ? ' (até ' + ddmm(ate) + ')' : ' (ainda sem relatório)') + '</div></div>' +
+        (t.produtos.length > 1 ? '<div class="seg" id="seg-trk">' + t.produtos.map(function (x) {
+          return '<button data-trk="' + esc(x.id) + '"' + (x.id === prod.id ? ' class="on"' : '') + '>' + esc(x.nome) + '</button>';
+        }).join("") + '</div>' : '') + '</div>' + funil + linhaBase +
+        '<div class="tw"><table class="cat"><thead><tr><th>Dia</th><th>Janela dos disparos</th><th>Template</th><th class="n">Disparos</th>' +
+        '<th class="n">Cliques</th><th class="n">Tx de clique</th><th class="n">Lead*</th><th class="n">Tx de lead</th><th class="n">Conversão</th>' +
+        '<th class="n">Tx de conversão</th><th class="n">Produção</th></tr></thead><tbody>' + rows + '</tbody><tfoot><tr><td>Total</td><td></td><td></td>' +
+        '<td class="n">' + nf(s.disp) + '</td><td class="n">' + nf(s.cl) + '</td><td class="n">' + trkPct(s.cl, s.dispMeta) + '</td>' +
+        '<td class="n">' + nf(s.lead) + '</td><td class="n">' + trkPct(s.lead, s.cl) + '</td><td class="n">' + nf(s.conv) + '</td>' +
+        '<td class="n">' + trkPct(s.conv, s.lead) + '</td><td class="n">' + moeda(s.prod, 2) + '</td></tr></tfoot></table></div>' +
+        '<div class="trk-nota">* Lead = acessos de origem SuperTroco no relatório da ' + esc(p.nome) + ', somando todos os canais da SuperTroco ' +
+        '(não só o WhatsApp). Por isso a taxa de lead (leads ÷ cliques) pode passar de 100%. Para medir só o WhatsApp, a ' + esc(p.nome) +
+        ' precisa separar a origem (ex.: UTM no link do template).' + (s.doBanco ? ' ◦ Em ' + nf(s.doBanco) + (s.doBanco > 1 ? ' dias' : ' dia') +
+        ' a Meta não trouxe a métrica do template: os disparos vêm do MariaDB e o clique fica sem dado.' : '') +
+        ' Janela dos disparos: MariaDB' + (banco.lido_em ? ', lido em ' + esc(banco.lido_em) : '') +
+        (banco.ok === false ? ' (cópia: o banco não respondeu no último gerar_hub.py)' : '') + '.</div></div></div>';
+    }
+    function ligarTracking(p) {
+      root.querySelectorAll("#seg-trk button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          guardar("trk-" + p.id, b.getAttribute("data-trk"));
+          var el = $("trk");
+          if (el) el.outerHTML = blocoTracking(p);
+          ligarTracking(p);
+        });
+      });
+    }
+    function ligarEnxuto(p) {
+      var b = $("bt-kpis");
+      if (b) b.addEventListener("click", function () {
+        guardar("kpis-mais", ler("kpis-mais") === "1" ? "0" : "1");
+        var c = $("conteudo");
+        if (c) { c.outerHTML = conteudoParceiro(p); ligarParceiro(p); }
+      });
+      ligarTracking(p);
+    }
+
     function conteudoParceiro(p) {
       var aba = abaDe(p.abas, estado.aba);
       if (p.sem_dados && p.modelo === "midia") {
@@ -3542,11 +4098,20 @@
           ' e o export da RD na pasta <code>parceiros/' + esc(p.id) + '/</code> e rode o gerar_hub.py.</div></div>' +
           blocoCanais(aba, p) + '</div>';
       }
-      return '<div class="conteudo" id="conteudo">' + blocoKpis(aba, p) +
-        (p.modelo === "leads" ? "" : blocoRemuneracao(aba, p)) + blocoResultado(aba, p) +
-        (p.modelo === "midia" ? blocoWA(p) : blocoCanais(aba, p)) +
-        (aba.kpis && aba.kpis.fonte === "funil" ? blocoMensal(aba) : blocoCross()) +
-        blocoIA(aba, p) + '</div>';
+      var funil = aba.kpis && aba.kpis.fonte === "funil";
+      var lado = funil ? ["Comparação com os indicadores gerais", "relatório do parceiro", blocoReferencia(aba, p)]
+        : p.modelo === "leads" ? ["Onde estão os leads", "maiores dias e dia da semana", blocoPicos(aba)]
+        : p.modelo === "midia" ? ["Receita × custo na Meta", "a Meta cobra por mensagem entregue", blocoMargem(aba, p)]
+        : ["Motor do resultado", "abertura da base engajada × desengajada", blocoMotor(aba)];
+      var secs = (p.modelo === "midia" ? secao("p-wa", "WhatsApp ao vivo", resumoWA(p.id), blocoWA(p))
+          : secao("p-canais", "Canais de disparo", esc(resumoCanais(aba)), blocoCanais(aba, p))) +
+        secao("p-remun", "Remuneração", "como a receita da Supertroco é calculada", p.modelo === "leads" ? "" : blocoRemuneracao(aba, p)) +
+        secao("p-lado", lado[0], esc(lado[1]), lado[2] ? '<div class="row">' + lado[2] + '</div>' : "") +
+        (funil ? secao("p-mensal", "Cruzamento mensal", "o que a RD entregou ao lado do relatório", blocoMensal(aba))
+          : secao("p-dia", "Dia a dia", "cada dia de resultado ao lado dos disparos", blocoCross(true))) +
+        secao("p-ia", "Análise do agente", "Groq · leitura feita em " + esc(D.atualizado), blocoIA(aba, p));
+      return '<div class="conteudo" id="conteudo">' + blocoKpis(aba, p) + (p.tracking ? blocoTracking(p) : '') +
+        blocoResultado(aba, p, true) + '<div class="secs">' + secs + '</div></div>';
     }
 
     function telaParceiro() {
@@ -3573,7 +4138,7 @@
         '<div class="dir"><button class="btn volta" id="voltar">' + VOLTA + 'Todos os parceiros</button>' +
         '<span class="chip" id="chip-periodo">' + esc(aba.periodo) + '</span>' +
         '<span class="chip live">Atualizado <b style="margin-left:4px">' +
-        esc(D.atualizado) + '</b></span>' + botaoCrono() + botaoBot() + botaoTema() + '</div></div>';
+        esc(D.atualizado) + '</b></span>' + botaoTV() + botaoCrono() + botaoBot() + botaoTema() + '</div></div>';
 
       tela.innerHTML = topo + navAbas(p.abas) + conteudoParceiro(p) + rodape();
       ligarTopoParceiro(p);
@@ -3595,6 +4160,7 @@
       ligarTema();
       $("bt-crono").addEventListener("click", function () { abrirCronograma(p.id); });
       $("bt-bot").addEventListener("click", abrirBot);
+      $("bt-tv").addEventListener("click", function () { tvAbrir(true); });
     }
 
     function ligarParceiro(p) {
@@ -3604,6 +4170,8 @@
       pintarCatalogo(aba.email);
       ligarArgolas();
       pintarWA();
+      ligarSecoes();
+      ligarEnxuto(p);
 
       root.querySelectorAll("#seg-gran button").forEach(function (b) {
         b.addEventListener("click", function () {
@@ -3675,6 +4243,336 @@
       var de = $("dt-de"), ate = $("dt-ate");
       if (de) de.addEventListener("change", function () { estado.de = de.value; pintarCross(aba, p); });
       if (ate) ate.addEventListener("change", function () { estado.ate = ate.value; pintarCross(aba, p); });
+    }
+
+    // =================================================================
+    // MODO EXIBICAO — telao da empresa: slides em tela cheia, girando sozinhos,
+    // com os numeros grandes. Os dados continuam ao vivo (Meta a cada 3 min) e o
+    // hub.json e relido a cada 10 min. Atalho: abrir a pagina com #tv no fim do link.
+    // =================================================================
+    var TV = { on: false, i: 0, seg: +(ler("tv-seg") || 15) || 15, pausa: false, timer: null, relogio: null,
+               ocioso: null, wake: null, hub: null, slides: [], el: null, overflow: "", pedirCheia: false };
+    var MONITOR = '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12.5" rx="2"/><path d="M8.5 20.5h7M12 16.5v4"/></svg>';
+    var EXPANDIR = '<svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
+    var PAUSA = '<svg viewBox="0 0 24 24"><path d="M8.5 5v14M15.5 5v14"/></svg>';
+    var PLAY = '<svg viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z" fill="currentColor"/></svg>';
+    function botaoTV() {
+      return '<button class="btn" id="bt-tv" title="Modo exibição: slides em tela cheia para o telão">' + MONITOR + 'Modo exibição</button>';
+    }
+    function tvCard(rot, val, sub, forte) {
+      return '<div class="tv-c' + (forte ? " forte" : "") + '"><div class="r">' + esc(rot) + '</div><div class="v">' + esc(val) + '</div>' +
+        (sub ? '<div class="s">' + esc(sub) + '</div>' : '') + '</div>';
+    }
+    // Colunas simples; com muitas colunas so alguns rotulos e o maior valor aparecem.
+    function tvBarras(itens, fmt) {
+      var n = itens.length, mx = Math.max.apply(null, itens.map(function (x) { return x.v; })) || 1;
+      var passo = n > 12 ? Math.ceil(n / 8) : 1;
+      return '<div class="tv-barras">' + itens.map(function (x, i) {
+        var mostra = n <= 12 || x.v === mx || i === n - 1;
+        return '<div class="tv-b"><span class="tv-bv">' + (mostra ? esc(fmt(x.v)) : '') + '</span><span class="tv-bb" style="height:' +
+          Math.max(1.5, x.v / mx * 100).toFixed(1) + '%"></span><span class="tv-bl">' + (i % passo === 0 || i === n - 1 ? esc(x.rot) : '') + '</span></div>';
+      }).join("") + '</div>';
+    }
+    // Receita dos ultimos meses, empilhada por parceiro (mesmas cores do grafico do hub).
+    function tvMeses() {
+      var S = serieRec();
+      if (!S || !S.meses.length) return "";
+      var ms = S.meses.slice(-6), mx = Math.max.apply(null, ms.map(function (m) { return m.total || 0; })) || 1;
+      return '<div class="tv-barras">' + ms.map(function (m) {
+        var tot = m.total || 0;
+        var segs = S.parceiros.map(function (pi) {
+          var v = m.valores[pi.id] || 0;
+          return v && tot ? '<i style="height:' + (v / tot * 100).toFixed(2) + '%;background:' + esc(pi.cor_escuro || pi.cor) + '"></i>' : '';
+        }).join("");
+        return '<div class="tv-b"><span class="tv-bv">' + esc(moedaCurta(tot)) + '</span><span class="tv-pilha" style="height:' +
+          Math.max(1.5, tot / mx * 100).toFixed(1) + '%">' + segs + '</span><span class="tv-bl">' + esc(m.curto + (m.parcial ? " *" : "")) + '</span></div>';
+      }).join("") + '</div><div class="tv-leg">' + S.parceiros.map(function (pi) {
+        return '<span><i style="background:' + esc(pi.cor_escuro || pi.cor) + '"></i>' + esc(pi.nome) + '</span>';
+      }).join("") + '<span>* mês em andamento</span></div>';
+    }
+    function tvModelo(p) {
+      return p.modelo === "midia" ? (p.valor_por_disparo ? moeda(p.valor_por_disparo, 2) + " por disparo de WhatsApp" : "mídia no WhatsApp")
+        : p.modelo === "leads" ? "resultado em leads" : (p.remuneracao_atual || "vendas");
+    }
+    // Os 4 numeros de cada parceiro: os mesmos da frente da pagina dele.
+    function tvNumeros(p, a) {
+      var k = a.kpis;
+      if (p.modelo === "midia") return [
+        ["Receita Supertroco", moeda(k.receita, 2), nf(k.disparos) + " disparos × " + moeda(k.receita_por_disparo || 0, 2)],
+        ["Disparos", nf(k.disparos), nf(k.tx_entrega, 1) + "% entregues"],
+        ["Cliques", nf(k.cliques), "CTR de " + nf(k.ctr_wpp, 2) + "% das entregues"],
+        ["Margem", moeda(k.margem, 2), "receita − custo na Meta"]];
+      if (p.modelo === "leads" && k.fonte === "funil") return [
+        ["Volume pago", moeda(k.volume), "receita Supertroco"],
+        ["Leads recebidos", nf(k.leads), nf(k.leads_unicos) + " únicos"],
+        ["Digitados", nf(k.digitados), nf(k.pct_digitado, 1) + "% dos únicos"],
+        ["Pagos", nf(k.pagos), "adesão de " + nf(k.adesao, 1) + "%"]];
+      if (p.modelo === "leads") return [
+        ["Leads", nf(k.leads), a.periodo], ["Média por dia", nf(k.media_dia, 1), "leads por dia"],
+        ["Pico diário", k.pico ? nf(k.pico.v) : "—", k.pico ? k.pico.d + " · " + k.pico.dia.toLowerCase() : ""],
+        ["Dias com lead", nf(k.dias_com_lead) + " de " + nf(k.dias_ativos), "dias com pelo menos 1 lead"]];
+      var rm = remunInfo(k);
+      return [[rm.rotulo, moeda(receitaDe(k)), rm.sub], ["Vendas", moeda(k.vendas), "geradas para o parceiro"],
+        ["Aquisições", nf(k.aquisicoes), "novos usuários"], [rm.cac, moeda(k.cac, 2), rm.cacSub]];
+    }
+    function tvSerie(p, a) {
+      if (a.kpis.fonte === "funil") {
+        var m = (a.mensal || []).filter(function (x) { return x.leads !== null && x.leads !== undefined; }).slice(0, 6).reverse();
+        return m.length ? '<div class="tv-k">Leads por mês</div>' +
+          tvBarras(m.map(function (x) { return { rot: x.nome.slice(0, 3), v: x.leads || 0 }; }), nf) : "";
+      }
+      var chave = p.modelo === "midia" ? "disparos" : p.modelo === "leads" ? "leads" : "vendas";
+      var dias = (a.dias || []).slice(-30);
+      if (!dias.length) return "";
+      return '<div class="tv-k">' + (chave === "vendas" ? "Vendas por dia" : chave === "leads" ? "Leads por dia" : "Disparos por dia") +
+        ' · últimos ' + dias.length + ' dias</div>' +
+        tvBarras(dias.map(function (d) { return { rot: d.d, v: d[chave] || 0 }; }), chave === "vendas" ? curto : nf);
+    }
+
+    function tvSlides() {
+      var out = [], g = D.hub.abas[0], k = g.kpis, mesId = hojeIso().slice(0, 7);
+      var mesA = D.hub.abas.filter(function (a) { return a.id === mesId; })[0];
+      var porP = (k.receita_por_parceiro || []).filter(function (x) { return x.receita > 0; });
+      out.push({ tit: "Receita Supertroco", html:
+        '<div class="tv-k">Receita Supertroco · toda a parceria</div><div class="tv-hero">' + esc(moeda(k.receita)) + '</div>' +
+        '<div class="tv-sub">' + esc(g.periodo) + ' · soma de todos os parceiros, cada um pela sua regra</div>' +
+        '<div class="tv-grid">' + tvCard("Neste mês", mesA ? moeda(mesA.kpis.receita) : "—",
+          mesA ? mesA.nome + (mesA.parcial && mesA.ate ? " · até " + mesA.ate : "") : "sem dados no mês", true) +
+        porP.slice(0, 3).map(function (x) { return tvCard(x.nome, moeda(x.receita), x.regra || ""); }).join("") + '</div>' + tvMeses() });
+
+      var d = waDados();
+      if (d) {
+        var hoje = hojeIso(), d7 = new Date();
+        d7.setDate(d7.getDate() - 6);
+        var agH = waAgregar(d, null, hoje), ag7 = waAgregar(d, null, isoDe(d7)), lim = d.limite_24h || {}, num_ = d.numero || {};
+        var importantes = waAvisos(d, null).filter(function (x) { return x.g === "alta"; });
+        var th = agH.tot, t7 = ag7.tot;
+        out.push({ tit: "WhatsApp ao vivo", cor: "#1BAF7A", lite: "#5FD6A6", html:
+          '<div class="tv-k">WhatsApp oficial · Meta ' + (WA.vivo ? "ao vivo" : "· cópia de " + esc(waHora(d.atualizado))) + '</div>' +
+          '<div class="tv-wa"><div class="tv-lim"><div class="tv-k">Limite de 24h da conta</div>' +
+          '<div class="tv-hero">' + (lim.limite ? nf(lim.usados) + '<small> / ' + nf(lim.limite) + '</small>' : '—') + '</div>' +
+          '<div class="tv-meter"><i style="width:' + Math.min(100, Math.max(0, lim.pct || 0)) + '%"></i></div>' +
+          '<div class="tv-sub">pessoas únicas nas últimas 24h' + (lim.limite ? ' · restam ' + nf(lim.restantes || 0) : '') + '</div></div>' +
+          '<div class="tv-grid g3">' +
+          tvCard("Enviadas hoje", nf(th.enviadas), "entregues " + nf(th.enviadas ? th.entregues / th.enviadas * 100 : 0, 1) + "%", true) +
+          tvCard("Lidas hoje", nf(th.lidas), "leituras de hoje, de envios de qualquer dia") +
+          tvCard("Cliques hoje", nf(th.cliques), "nos botões dos templates") +
+          tvCard("Enviadas · 7 dias", nf(t7.enviadas), nf(t7.cliques) + " cliques") +
+          tvCard("Gasto na Meta · 7 dias", waMoeda(ag7.gasto.custo, 2, (d.conta || {}).moeda), nf(ag7.gasto.volume) + " mensagens cobradas") +
+          tvCard("Qualidade do número", WA_QUAL[num_.qualidade] || "—", num_.numero || "") + '</div></div>' +
+          (importantes.length ? '<div class="tv-av">' + importantes.slice(0, 2).map(function (x) {
+            return '<div><b>' + esc(x.t) + '</b>' + (x.det ? '<span>' + esc(x.det) + '</span>' : '') + '</div>';
+          }).join("") + '</div>' : '') });
+      }
+
+      D.parceiros.forEach(function (p) {
+        if (p.sem_dados) return;
+        var a = abaDe(p.abas, "geral");
+        out.push({ tit: p.nome, cor: p.cores.brand, lite: p.cores.brand_lite, html:
+          '<div class="tv-pc"><span class="tv-ini" style="background:' + esc(p.cores.brand) + '">' + esc(p.nome.charAt(0)) + '</span>' +
+          '<div><div class="tv-k">' + esc(p.segmento) + ' · ' + esc(tvModelo(p)) + '</div><div class="tv-nome">' + esc(p.nome) + '</div></div></div>' +
+          '<div class="tv-grid">' + tvNumeros(p, a).map(function (c, i) { return tvCard(c[0], c[1], c[2], i === 0); }).join("") + '</div>' +
+          tvSerie(p, a) });
+      });
+
+      D.parceiros.forEach(function (p) {
+        if (!p.tracking || !p.tracking.produtos || !p.tracking.produtos.length) return;
+        out.push({ tit: "Tracking · " + p.nome, cor: p.cores.brand, lite: p.cores.brand_lite, html:
+          '<div class="tv-k">' + esc(p.nome) + ' · do disparo ao contrato, por produto, desde ' + esc(brData(p.tracking.inicio)) + '</div>' +
+          '<div class="tv-trk">' + p.tracking.produtos.map(function (prod) {
+            var s = trkTotais(trkLinhas(p, prod));
+            return '<div><div class="tv-nome" style="font-size:clamp(20px,2vw,40px)">' + esc(prod.nome) + '</div><div class="tv-fun">' +
+              tvCard("Disparos", nf(s.disp), s.doBanco ? (s.dispMeta ? "Meta ao vivo + MariaDB" : "MariaDB (sem métrica na Meta)") : "Meta ao vivo", true) +
+              tvCard("Cliques", nf(s.cl), "taxa de clique " + trkPct(s.cl, s.dispMeta)) +
+              tvCard("Leads*", nf(s.lead), "acessos SuperTroco") + tvCard("Contratos", nf(s.conv), "conversão " + trkPct(s.conv, s.lead)) +
+              tvCard("Produção", moeda(s.prod, 2), "relatório da " + p.nome) + '</div></div>';
+          }).join("") + '</div><div class="tv-sub">* Leads = acessos de origem SuperTroco no relatório da ' + esc(p.nome) +
+          ', de todos os canais da SuperTroco</div>' });
+      });
+
+      if (k.campanhas) {
+        out.push({ tit: "E-mail · RD Station", cor: "#2A78D6", lite: "#7FB2EE", html:
+          '<div class="tv-k">E-mail · RD Station · ' + esc(g.periodo) + '</div>' +
+          '<div class="tv-grid">' + tvCard("Campanhas", nf(k.campanhas), "todos os parceiros", true) +
+          tvCard("E-mails entregues", mil(k.entregues), "") + tvCard("Abertura média", nf(k.abertura, 1) + "%", "aberturas únicas ÷ entregues") +
+          tvCard("CTR médio", nf(k.ctr, 2) + "%", "cliques ÷ entregues") + '</div>' +
+          '<div class="tv-lista">' + (g.parceiros || []).filter(function (r) { return r.email; }).map(function (r) {
+            return '<div><b>' + esc(r.nome) + '</b><span>' + nf(r.email.campanhas) + ' campanhas · ' + mil(r.email.entregues) +
+              ' entregues · abertura ' + nf(r.email.abertura, 1) + '% · CTR ' + nf(r.email.ctr, 2) + '%</span></div>';
+          }).join("") + '</div>' });
+      }
+      return out;
+    }
+
+    function tvAbrir(cheia) {
+      if (TV.on) return;
+      TV.on = true; TV.i = 0; TV.pausa = false; TV.pedirCheia = !cheia;
+      var el = document.createElement("div");
+      el.className = "tv"; el.id = "tv"; el.tabIndex = -1;
+      el.setAttribute("role", "region"); el.setAttribute("aria-label", "Modo exibição");
+      el.innerHTML = '<div class="tv-top"><span class="tv-marca">' + TREVO + 'Hub de Parceiros · Supertroco</span>' +
+        '<span class="tv-tit" id="tv-tit"></span><span class="tv-dir"><span class="tv-live" id="tv-live"></span>' +
+        '<span class="tv-hora" id="tv-hora"></span></span></div><div class="tv-palco" id="tv-palco"></div>' +
+        (cheia ? '' : '<div class="tv-dica" id="tv-dica">Clique na tela para entrar em tela cheia</div>') +
+        '<div class="tv-ctrl" id="tv-ctrl"><button data-tv="ant" title="Anterior (←)">' + VOLTA + '</button>' +
+        '<button data-tv="pausa" id="tv-pausa" title="Pausar ou continuar (espaço)">' + PAUSA + '</button>' +
+        '<button data-tv="prox" title="Próximo (→)">' + SETA + '</button><span class="tv-dots" id="tv-dots"></span>' +
+        '<span class="tv-vel">' + [10, 15, 30].map(function (n) {
+          return '<button data-tv-seg="' + n + '"' + (TV.seg === n ? ' class="on"' : '') + ' title="' + n + ' segundos por slide">' + n + 's</button>';
+        }).join("") + '</span><button data-tv="cheia" title="Tela cheia">' + EXPANDIR + '</button>' +
+        '<button data-tv="sair" title="Sair (Esc)">' + XIS + 'Sair</button></div><div class="tv-prog"><i id="tv-barra"></i></div>';
+      app.appendChild(el);
+      TV.el = el;
+      TV.overflow = document.documentElement.style.overflow;
+      document.documentElement.style.overflow = "hidden";
+      el.addEventListener("click", tvClique);
+      el.addEventListener("mousemove", tvAcordar);
+      document.addEventListener("keydown", tvTecla);
+      if (!tvAbrir.ligado) {
+        tvAbrir.ligado = true;
+        document.addEventListener("visibilitychange", function () { if (TV.on && !document.hidden) tvWake(true); });
+      }
+      TV.slides = tvSlides();
+      tvIr(0);
+      tvRelogio();
+      tvAcordar();
+      tvWake(true);
+      if (cheia) tvTelaCheia();
+      clearInterval(TV.hub);
+      TV.hub = setInterval(tvRecarregarHub, 600000);
+      el.focus();
+    }
+    function tvFechar() {
+      if (!TV.on) return;
+      TV.on = false;
+      clearTimeout(TV.timer); clearInterval(TV.relogio); clearTimeout(TV.ocioso); clearInterval(TV.hub);
+      document.removeEventListener("keydown", tvTecla);
+      if (document.fullscreenElement && document.exitFullscreen) { try { document.exitFullscreen(); } catch (e) { /* ja saiu */ } }
+      tvWake(false);
+      if (TV.el) { TV.el.remove(); TV.el = null; }
+      document.documentElement.style.overflow = TV.overflow || "";
+      if (location.hash === "#tv" || location.hash === "#telao") {
+        try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* sem historico */ }
+      }
+    }
+    function tvAtualizar() {
+      if (!TV.on) return;
+      TV.slides = tvSlides();
+      if (TV.i >= TV.slides.length) TV.i = 0;
+      tvPintar(false);
+      tvDots();
+    }
+    function tvIr(i) {
+      var n = TV.slides.length;
+      if (!n) return;
+      TV.i = (i + n) % n;
+      tvPintar(true);
+      tvDots();
+      tvAgendar();
+    }
+    function tvPintar(anima) {
+      var s = TV.slides[TV.i], palco = $("tv-palco");
+      if (!s || !palco) return;
+      TV.el.style.setProperty("--tvc", s.cor || "var(--brand)");
+      TV.el.style.setProperty("--tvl", s.lite || "var(--brand-lite)");
+      palco.innerHTML = '<div class="tv-slide' + (anima ? "" : " fixo") + '">' + s.html + '</div>';
+      $("tv-tit").textContent = s.tit;
+      var live = $("tv-live");
+      if (live) {
+        live.className = "tv-live" + (WA.vivo ? "" : " copia");
+        live.innerHTML = '<i></i>' + (WA.vivo ? "ao vivo · Meta " + esc(waHora(WA.vivo.atualizado).slice(6)) : "dados de " + esc(D.atualizado));
+      }
+    }
+    function tvDots() {
+      var el = $("tv-dots");
+      if (el) el.innerHTML = TV.slides.map(function (s, i) { return '<i' + (i === TV.i ? ' class="on"' : '') + ' title="' + esc(s.tit) + '"></i>'; }).join("");
+    }
+    function tvAgendar() {
+      clearTimeout(TV.timer);
+      var barra = $("tv-barra");
+      if (barra) { barra.style.transition = "none"; barra.style.width = "0%"; void barra.offsetWidth; }
+      if (TV.pausa || !TV.on) return;
+      if (barra) { barra.style.transition = "width " + TV.seg + "s linear"; barra.style.width = "100%"; }
+      TV.timer = setTimeout(function () { tvIr(TV.i + 1); }, TV.seg * 1000);
+    }
+    function tvPausar(v) {
+      TV.pausa = v;
+      var b = $("tv-pausa");
+      if (b) b.innerHTML = v ? PLAY : PAUSA;
+      tvAgendar();
+    }
+    function tvClique(ev) {
+      var dica = $("tv-dica");
+      if (dica) dica.remove();
+      var b = ev.target && ev.target.closest ? ev.target.closest("button") : null;
+      if (!b) {
+        if (TV.pedirCheia && !document.fullscreenElement) { TV.pedirCheia = false; tvTelaCheia(); }
+        return;
+      }
+      var a = b.getAttribute("data-tv"), sg = b.getAttribute("data-tv-seg");
+      if (sg) {
+        TV.seg = +sg; guardar("tv-seg", sg);
+        root.querySelectorAll(".tv-vel button").forEach(function (x) { x.classList.toggle("on", x === b); });
+        tvAgendar();
+        return;
+      }
+      if (a === "ant") tvIr(TV.i - 1);
+      else if (a === "prox") tvIr(TV.i + 1);
+      else if (a === "pausa") tvPausar(!TV.pausa);
+      else if (a === "cheia") tvTelaCheia();
+      else if (a === "sair") tvFechar();
+    }
+    function tvTecla(ev) {
+      if (!TV.on) return;
+      if (ev.key === "ArrowRight") { tvIr(TV.i + 1); ev.preventDefault(); }
+      else if (ev.key === "ArrowLeft") { tvIr(TV.i - 1); ev.preventDefault(); }
+      else if (ev.key === " ") { tvPausar(!TV.pausa); ev.preventDefault(); }
+      else if (ev.key === "Escape" && !document.fullscreenElement) tvFechar();
+      tvAcordar();
+    }
+    function tvAcordar() {
+      if (!TV.el) return;
+      TV.el.classList.remove("ocioso");
+      clearTimeout(TV.ocioso);
+      TV.ocioso = setTimeout(function () { if (TV.el) TV.el.classList.add("ocioso"); }, 3500);
+    }
+    function tvTelaCheia() {
+      var el = TV.el;
+      if (!el) return;
+      if (document.fullscreenElement) { if (document.exitFullscreen) document.exitFullscreen(); return; }
+      var f = el.requestFullscreen || el.webkitRequestFullscreen;
+      if (!f) return;
+      try { var r = f.call(el); if (r && r.catch) r.catch(function () { /* o navegador recusou */ }); } catch (e) { /* sem permissao */ }
+    }
+    function tvRelogio() {
+      var f = function () {
+        var h = $("tv-hora"), d = new Date();
+        if (h) h.textContent = p2(d.getDate()) + "/" + p2(d.getMonth() + 1) + " · " + p2(d.getHours()) + ":" + p2(d.getMinutes());
+      };
+      f();
+      clearInterval(TV.relogio);
+      TV.relogio = setInterval(f, 15000);
+    }
+    // A tela do telao nao apaga sozinha enquanto o modo estiver ligado (se o navegador deixar).
+    function tvWake(ligar) {
+      try {
+        if (ligar && navigator.wakeLock && !TV.wake) {
+          navigator.wakeLock.request("screen").then(function (w) {
+            TV.wake = w;
+            w.addEventListener("release", function () { TV.wake = null; });
+          }).catch(function () { /* recusado */ });
+        } else if (!ligar && TV.wake) { TV.wake.release(); TV.wake = null; }
+      } catch (e) { /* sem suporte */ }
+    }
+    function tvRecarregarHub() {
+      if (window.__hubDados) return;                  // previa local: nao ha o que reler
+      baixar(HUB_URL).catch(function () { return baixar(HUB_URL_FALLBACK); }).then(function (dados) {
+        if (!dados || !dados.hub || !dados.parceiros) return;
+        if (JSON.stringify(dados) === JSON.stringify(D0)) return;
+        D0 = clone(dados);
+        aplicarVivo();
+        redesenhar();
+      }).catch(function () { /* tenta de novo no proximo ciclo */ });
     }
 
     // =================================================================
@@ -4928,6 +5826,7 @@
         throw new Error("hub.json no formato antigo — rode o gerar_hub.py novo");
       }
       D = dados;
+      D0 = clone(dados);
       inicializarVistos();
       var modo = ler("modo"); if (modo) estado.modo = modo;
       var gran = ler("gran"); if (gran) estado.gran = gran;
@@ -4947,16 +5846,29 @@
         });
       }
 
-      var salva = ler("tela");
-      if (salva && salva !== "hub" && D.parceiros.some(function (p) { return p.id === salva; })) {
-        estado.tela = "parceiro"; estado.parceiro = salva;
-        telaParceiro();
+      var salva = ler("tela"), montou = false;
+      var montar = function () {
+        if (montou) return;
+        montou = true; PRONTO = true;
+        if (salva && salva !== "hub" && D.parceiros.some(function (p) { return p.id === salva; })) {
+          estado.tela = "parceiro"; estado.parceiro = salva;
+          telaParceiro();
+        } else {
+          telaHub();
+        }
+        requestAnimationFrame(function () { tela.classList.add("on"); });
+        if (location.hash === "#tv" || location.hash === "#telao") tvAbrir(false);
+      };
+      // WhatsApp oficial: os numeros da Meta so aparecem ao vivo. A tela espera o Worker
+      // (ate 6 s); sem resposta, abre com a copia do hub.json e troca quando ele responder.
+      // Depois, busca de novo a cada 3 minutos com a aba visivel.
+      if (waCfg() && waCfg().url) {
+        WA.aoCarregar = montar;
+        setTimeout(function () { if (!montou) { WA.aoCarregar = null; montar(); } }, 6000);
+        waCarregar();
       } else {
-        telaHub();
+        montar();
       }
-      requestAnimationFrame(function () { tela.classList.add("on"); });
-      // WhatsApp oficial: busca o Worker agora e a cada 3 minutos com a aba visivel.
-      waCarregar();
       waRelogio();
     }
 
