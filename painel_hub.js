@@ -4855,9 +4855,27 @@
           painel("Classe estimada", "pela renda do bureau (estimativa)", barras(lista(pf.classe), nf, "var(--s1)")) + '</div>' +
         '<div class="row r-2">' + painel("Personalidade de rotina", "quando a pessoa fica longe ou perto do celular", rotinaBarras(pf.rotina)) +
           painel("Melhor janela para enviar", "respeita o horário do disparador (9h–19h)", barras(lista(pf.janelas), nf, "var(--s1)")) + '</div>' +
+        fluxoPainel(f.fluxo) +
         '<div class="row r-2">' + painel("Turno em que lê × turno em que compra", "pessoas", matriz(pf.turnos)) +
           painel("Situação e persona", "pessoas", '<h4 class="bi-sub">Situação</h4>' + barras(lista(pf.situacao), nf, "var(--s1)") +
             '<h4 class="bi-sub">Persona</h4>' + barras(lista(pf.persona), nf, "var(--s1)")) + '</div>';
+    }
+    // Movimento no caixa (todos os clientes das lojas, consultas de CPF no PDV) x hora em que as
+    // mensagens foram lidas: as duas em % do dia, no mesmo eixo.
+    function fluxoPainel(fl) {
+      if (!fl) return "";
+      var pct = function (v) { return pctTxt(v, 1); };
+      var nota = nf(fl.lojas) + (fl.lojas === 1 ? " loja" : " lojas") + " · " + brData(fl.de) + " a " + brData(fl.ate) +
+        " · " + nf(fl.consultas) + " consultas no caixa · " + nf(fl.leituras) + " leituras";
+      return '<div class="row r-2">' +
+        painel("Movimento no caixa × leitura das mensagens", "% do dia em cada hora · caixa: todos os clientes das lojas (consultas de CPF no PDV)",
+          colunas(fl.por_hora.map(function (x) { return x.h; }), [
+            { nome: "Movimento no caixa", cor: "var(--s1)", v: fl.por_hora.map(function (x) { return x.caixa || 0; }) },
+            { nome: "Leitura das mensagens", cor: "var(--s2)", v: fl.por_hora.map(function (x) { return x.leitura || 0; }) }],
+            { W: 740, fmt: pct, eixo: function (v) { return nf(v, 0) + "%"; }, rotulo: "Movimento no caixa e leitura por hora" }) +
+          '<div class="bi-nota">' + esc(nota) + '</div>') +
+        painel("Movimento por dia da semana", "consultas no caixa por dia, em média",
+          barras(fl.por_dia.map(function (x) { return { r: x.rotulo, v: x.n }; }), nf, "var(--s1)")) + '</div>';
     }
     function psFiltradas() {
       var b = AREA.busca.trim().toLowerCase();
