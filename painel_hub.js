@@ -5,14 +5,15 @@
    COLAR_NA_RD.html, que e um carregador curto e busca este arquivo
    publicado no GitHub.
 
-   Duas telas: o Hub (consolidado de todos os parceiros) e o CRM de
-   cada parceiro, com o tema da marca dele. Cada tela tem:
-     - Visao geral e Visao mes a mes (os meses vem do hub.json: mes
-       novo aparece sozinho, sem mexer aqui);
-     - modo noturno;
-     - os canais E-mail (RD Station) e WhatsApp;
-     - o cronograma de disparos do proximo mes, protegido por senha,
-       com download em XLSX e PDF.
+   Telas: o Hub (consolidado de todos os parceiros), o CRM de cada
+   parceiro (com o tema da marca dele) e duas areas do estudo do Power BI
+   "Personas SuperAdds":
+     - WhatsApp: disparos, disparador x Meta e financeiro (so numeros
+       agregados);
+     - Personas: comportamento e pessoas. Esses dados chegam CIFRADOS no
+       hub.json e so abrem com a senha, que nao esta neste arquivo.
+   Cada tela tem Visao geral e Visao mes a mes (os meses vem do hub.json),
+   modo noturno e o cronograma de disparos do proximo mes.
    =================================================================== */
 (function () {
   "use strict";
@@ -36,7 +37,7 @@
   var SENHA_HASH = 55505968;
 
   // Modulo do bot de WhatsApp. Mesmo esquema do cronograma: so o hash
-  // (FNV-1a) fica aqui, com outro sal. O PIN e o mesmo 1738.
+  // (FNV-1a) fica aqui, com outro sal.
   var BOT_HASH = 308924309;
   var BOT_STATUS_URL = "https://raw.githubusercontent.com/SupertrocoWeb/painel/main/status_bot.json";
   var BOT_STATUS_FALLBACK = "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/status_bot.json";
@@ -1045,6 +1046,87 @@
   .bot-cfg input:focus{outline:none;border-color:var(--brand)}
   .bot-cfg .err{width:100%;font-size:11.5px;color:#dc2626}
   .bot-cfg .dica{width:100%;font-size:11.5px;color:var(--fraco);line-height:1.55}
+
+  /* ---------- areas WhatsApp e Personas (estudo do Power BI) ---------- */
+  /* Cores validadas no validador de paleta (daltonismo), passo proprio no escuro */
+  .app{--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;
+    --st-resp:#1baf7a;--st-leu:#2a78d6;--st-nleu:#eb6834;--st-sem:#6250d6;--st-nent:#eda100;--st-saiu:#e87ba4;
+    --cf-padrao:#184f95;--cf-pista:#3987e5;--cf-sem:#86b6ef}
+  .app.escuro{--s1:#3987e5;--s2:#d95926;--s3:#199e70;
+    --st-resp:#199e70;--st-leu:#3987e5;--st-nleu:#d95926;--st-sem:#9085e9;--st-nent:#c98500;--st-saiu:#d55181;
+    --cf-padrao:#5598e7;--cf-pista:#2a78d6;--cf-sem:#184f95}
+  .bi-cab{display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap;margin:2px 0 14px}
+  .bi-fonte{font-size:11.5px;color:var(--muted)}
+  .bi-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .bi-filtro{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+  .bi-filtro select,.bi-fps select,.bi-fps input{font:inherit;font-size:12.5px;color:var(--ink);background:var(--card);
+    border:1px solid var(--line);border-radius:9px;padding:7px 10px;max-width:100%}
+  .bi-filtro select:focus,.bi-fps select:focus,.bi-fps input:focus{outline:none;border-color:var(--brand)}
+  .bi-rosca{display:grid;grid-template-columns:minmax(150px,200px) minmax(0,1fr);gap:18px;align-items:center;margin-top:8px}
+  .bi-rosca svg{width:100%;height:auto}
+  .bi-rosca path{stroke:var(--card);stroke-width:2;transition:opacity .15s}
+  .bi-rosca path:hover{opacity:.82}
+  .bi-rv{font-family:var(--disp);font-weight:800;font-size:22px;fill:var(--ink)}
+  .bi-rr{font-size:10.5px;fill:var(--muted)}
+  .bi-leg{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .bi-leg li{display:grid;grid-template-columns:12px minmax(0,1fr) auto auto;gap:8px;align-items:center;font-size:12.5px}
+  .bi-leg i{width:11px;height:11px;border-radius:3px}
+  .bi-leg b{font-family:var(--disp);font-variant-numeric:tabular-nums}
+  .bi-leg small{color:var(--muted);min-width:44px;text-align:right;font-variant-numeric:tabular-nums}
+  .bi-col svg{width:100%;height:auto;display:block;margin-top:6px}
+  .bi-col rect{transition:opacity .15s}
+  .bi-col rect:hover{opacity:.8}
+  .bi-grade{stroke:var(--line);stroke-width:1}
+  .bi-eixo{font-size:10px;fill:var(--muted)}
+  .bi-val{font-size:10.5px;font-weight:600;fill:var(--ink2)}
+  .bi-col .legenda{margin-top:8px;flex-wrap:wrap}
+  .pl .h small{font-weight:400;color:var(--muted);font-family:var(--body);margin-left:4px}
+  .bi-pilha{display:flex !important;gap:2px;background:transparent !important}
+  .bi-pilha .f{border-radius:0 !important}
+  .bi-pilha .f:first-child{border-radius:7px 0 0 7px !important}
+  .bi-pilha .f:last-child{border-radius:0 7px 7px 0 !important}
+  .bi-pilha .f:only-child{border-radius:7px !important}
+  .bi-saude{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+  .bi-saude > div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--soft)}
+  .bi-saude .r{font-size:11.5px;color:var(--muted)}
+  .bi-saude .v{font-family:var(--disp);font-weight:800;font-size:20px;margin-top:3px}
+  .bi-saude .alerta-v{color:var(--warn-ink)}
+  .bi-travas{margin-top:10px;font-size:12px;color:var(--warn-ink);background:var(--warn-bg);border:1px solid var(--warn-line);
+    border-radius:10px;padding:9px 12px;line-height:1.55}
+  .bi-nota{font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.55}
+  .bi-retrato .bi-sec{padding:14px 0;border-top:1px solid var(--line)}
+  .bi-retrato .bi-sec:first-of-type{border-top:none;padding-top:6px}
+  .bi-retrato h4{font-family:var(--disp);font-size:13.5px;font-weight:700;margin-bottom:5px;color:var(--ink)}
+  .bi-retrato p,.bi-retrato li{font-size:13.5px;line-height:1.65;color:var(--ink2);max-width:110ch}
+  .bi-retrato ul{padding-left:18px;display:flex;flex-direction:column;gap:5px}
+  table.cat.bi-t{min-width:0}
+  table.cat.bi-t td:first-child{white-space:normal;overflow-wrap:anywhere;min-width:110px}
+  table.cat.bi-t.largo{min-width:1320px}
+  table.cat.bi-t.largo td{white-space:normal;line-height:1.4}
+  table.cat.bi-t.largo td:nth-child(n+2):nth-child(-n+4),table.cat.bi-t.largo td:nth-child(10){min-width:128px}
+  table.cat.bi-t.largo td:nth-child(5){min-width:175px}
+  table.cat.bi-t.largo td:first-child,table.cat.bi-t.largo td:nth-child(6),table.cat.bi-t.largo td:nth-child(8),
+  table.cat.bi-t.largo td:nth-child(9),table.cat.bi-t.largo td.n{white-space:nowrap;overflow-wrap:normal;min-width:0}
+  .bi-sub{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:14px 0 8px}
+  .bi-sub:first-of-type{margin-top:6px}
+  .bi-mat{min-width:0 !important}
+  .bi-mat td.n{text-align:center}
+  .bi-senha{max-width:440px;margin:34px auto;text-align:center;padding:30px 28px}
+  .bi-senha .cadeado{margin:0 auto 14px}
+  .bi-senha form{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;justify-content:center}
+  .bi-senha input{flex:1;min-width:180px;font:inherit;font-size:14px;padding:11px 13px;border-radius:10px;
+    border:1px solid var(--line);background:var(--card);color:var(--ink)}
+  .bi-senha input:focus{outline:none;border-color:var(--brand)}
+  .bi-senha .msg-erro{margin-top:10px}
+  .bi-fps{display:flex;gap:8px 12px;flex-wrap:wrap;align-items:center;margin:12px 0 4px}
+  .bi-fps label{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+  .bi-fps input{min-width:190px}
+  .bi-n{margin-left:auto;font-size:12px;color:var(--muted)}
+  .bi-pq{display:block;min-width:220px;white-space:normal;font-size:11.5px;color:var(--muted);line-height:1.45}
+  .bi-pag{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:12px;font-size:12px;color:var(--muted)}
+  @media (max-width:1100px){.bi-3{grid-template-columns:minmax(0,1fr)}}
+  @media (max-width:640px){.bi-rosca{grid-template-columns:minmax(0,1fr)}.bi-rosca svg{max-width:200px;margin:0 auto}
+    .bi-saude{grid-template-columns:minmax(0,1fr)}.bi-n{margin-left:0}}
   `;
 
   // ---------------------------------------------------------------------
@@ -1202,8 +1284,8 @@
     function rodape() {
       return '<div class="rodape-hub"><span class="p"><span class="d"></span>' +
         esc(D.rodape || "Powered by Tibério Ferreira for Supertroco") + '</span>' +
-        '<span class="f">Dados de RD Station (e-mail), WhatsApp e dos parceiros (resultado) · ' +
-        'publicado automaticamente · nenhuma chave de API fica exposta nesta página.</span></div>';
+        '<span class="f">Dados de RD Station (e-mail), do disparador e da Meta (WhatsApp) e dos parceiros (resultado) · ' +
+        'publicado automaticamente · nenhuma chave de API ou senha fica exposta nesta página.</span></div>';
     }
 
     // =================================================================
@@ -1354,7 +1436,8 @@
       });
       guardar("meses-vistos", JSON.stringify(Object.keys(ids)));
     }
-    function navAbas(abas) {
+    // extra: botoes a mais na mesma linha (no Hub, as areas WhatsApp e Personas)
+    function navAbas(abas, extra) {
       var meses = abas.filter(function (a) { return a.id !== "geral"; });
       var emMes = estado.aba !== "geral";
       var aberto = estado.mesesAbertos || emMes;
@@ -1367,7 +1450,7 @@
         '" data-nav="meses" aria-expanded="' + (aberto ? "true" : "false") + '" aria-controls="meses">' +
         CAL + 'Visão mês a mês' + (atual ? '<span class="sel">' + esc(atual.nome) + '</span>' : "") +
         (algumNovo && !emMes ? '<span class="ponto" title="Mês novo disponível"></span>' : "") + CHEV +
-        '</button></div><div class="meses' + (aberto ? " on" : "") + '" id="meses">' +
+        '</button>' + (extra || "") + '</div><div class="meses' + (aberto ? " on" : "") + '" id="meses">' +
         (meses.length ? meses.map(function (m) {
           var novo = visto.indexOf(m.id) < 0;
           return '<button class="mes' + (m.id === estado.aba ? " on" : "") + '" data-aba="' + esc(m.id) + '">' +
@@ -1376,7 +1459,7 @@
         }).join("") : '<span class="vazio-m">Nenhum mês com dados ainda.</span>') + '</div></div>';
     }
     function ligarNav(abas, redesenhar) {
-      var bts = root.querySelectorAll(".nav .nv");
+      var bts = root.querySelectorAll(".nav .nv[data-nav]");
       bts.forEach(function (b) {
         b.addEventListener("click", function () {
           var alvo = b.getAttribute("data-nav");
@@ -1412,7 +1495,7 @@
     // Atualiza os botoes sem recriar a linha de meses (preserva o fade).
     function atualizarNav(abas) {
       var emMes = estado.aba !== "geral";
-      var bts = root.querySelectorAll(".nav .nv");
+      var bts = root.querySelectorAll(".nav .nv[data-nav]");
       if (bts[0]) bts[0].classList.toggle("on", !emMes);
       if (bts[1]) {
         bts[1].classList.toggle("on", emMes);
@@ -1615,9 +1698,14 @@
       }
       g.push(["Campanhas de e-mail", nf(k.campanhas), k.campanhas ? mil(k.entregues) + " e-mails entregues" : "nenhum envio no período", false]);
       g.push(["Abertura média", k.campanhas ? nf(k.abertura, 1) + "%" : "—", k.campanhas ? "CTR de " + nf(k.ctr, 2) + "%" : "sem e-mail no período", false, !k.campanhas]);
-      g.push(["WhatsApp", k.wpp_disparos ? nf(k.wpp_disparos) : "Pronto", !k.wpp_disparos ? "aguardando os primeiros disparos"
-        : k.wpp_custo_meta ? "disparos · " + moeda(k.wpp_custo_meta, 2) + " de custo na Meta" + (WA.vivo ? " · ao vivo" : "")
-        : "disparos · " + moeda(k.wpp_investimento) + " investidos", false, !k.wpp_disparos]);
+      if (wppNoHub()) {
+        g.push(["WhatsApp", k.wpp_disparos ? nf(k.wpp_disparos) : "Pronto", !k.wpp_disparos ? "aguardando os primeiros disparos"
+          : k.wpp_custo_meta ? "disparos · " + moeda(k.wpp_custo_meta, 2) + " de custo na Meta" + (WA.vivo ? " · ao vivo" : "")
+          : "disparos · " + moeda(k.wpp_investimento) + " investidos", false, !k.wpp_disparos]);
+      } else if (wbi() && wbi().disparos) {
+        var kd = wbi().disparos.kpis;
+        g.push(["WhatsApp · leitura", pctTxt(kd.taxa_leitura, 0), "de " + nf(kd.entregues) + " entregues · detalhes na área WhatsApp", false]);
+      }
       if (k.parceiros_vendas && g.length < 8) g.push(["Pedidos", nf(k.pedidos), "ticket médio " + moeda(k.tkm, 2), false]);
       if (k.parceiros_vendas && g.length < 8) g.push(["Conversão do site", nf(k.conversao, 2) + "%", "pedidos ÷ sessões", false]);
       return '<div class="bn">' + g.slice(0, 8).map(function (x) {
@@ -1631,7 +1719,7 @@
       return '<span class="canais-mini">' +
         (email ? '<span class="cm mail">' + MAIL + nf(email.campanhas) + ' e-mails · ' + nf(email.abertura, 1) + '% ab.</span>'
                : '<span class="cm off">' + MAIL + 'sem e-mail no período</span>') +
-        (wpp ? '<span class="cm wpp">' + WPP + nf(wpp.disparos) + ' disparos</span>'
+        (!wppNoHub() ? '' : wpp ? '<span class="cm wpp">' + WPP + nf(wpp.disparos) + ' disparos</span>'
              : '<span class="cm wpp">' + WPP + 'WhatsApp pronto</span>') + '</span>';
     }
 
@@ -1643,7 +1731,15 @@
         '<div class="parc" style="margin-top:14px">' + D.parceiros.map(function (p) {
           var r = porId[p.id];
           var grid;
-          if (!r) {
+          // Parceiro so de WhatsApp com Tracking (Porto Bank): sem o canal no hub, o cartao mostra o
+          // resultado do relatorio do parceiro.
+          var trk = !wppNoHub() && p.tracking && p.tracking.produtos && p.tracking.produtos.length ? trkResumo(p) : null;
+          if (trk) {
+            grid = '<span class="gi"><span class="r">Acessos SuperTroco*</span><span class="v">' + nf(trk.lead) + '</span></span>' +
+              '<span class="gi"><span class="r">Contratos</span><span class="v">' + nf(trk.conv) + '</span></span>' +
+              '<span class="gi"><span class="r">Produção</span><span class="v">' + moeda(trk.prod, 2) + '</span></span>' +
+              '<span class="gi"><span class="r">Desde</span><span class="v">' + esc(ddmm(p.tracking.inicio)) + '</span></span>';
+          } else if (!r) {
             grid = '<span class="gi" style="grid-column:1/-1"><span class="r">' +
               (p.sem_dados ? "Aguardando os primeiros dados" : "Sem dados em " + esc(aba.nome)) +
               '</span><span class="v" style="color:var(--muted2)">—</span></span>';
@@ -1669,18 +1765,19 @@
               '<span class="gi"><span class="r">Aquisições</span><span class="v">' + nf(r.aquisicoes) + '</span></span>' +
               '<span class="gi"><span class="r">Por aquisição</span><span class="v">' + moeda(r.cac, 2) + '</span></span>';
           }
-          var pe = p.modelo === "midia" ? (p.valor_por_disparo ? moeda(p.valor_por_disparo, 2) + " por disparo · Meta" : "mídia no WhatsApp")
+          var pe = trk ? "acessos e contratos · relatório da " + p.nome
+            : p.modelo === "midia" ? (p.valor_por_disparo ? moeda(p.valor_por_disparo, 2) + " por disparo · Meta" : "mídia no WhatsApp")
             : p.modelo === "leads" ? (p.fonte_resultado === "funil" ? "leads e contratos · relatório mensal" : "mede leads")
             : p.remuneracao_atual ? p.remuneracao_atual
             : (p.taxa_comissao ? nf(p.taxa_comissao * 100, 0) + "% de comissão" : "mede vendas");
-          return '<button class="pc' + (r ? "" : " apagado") + '" data-parceiro="' + esc(p.id) + '">' +
+          return '<button class="pc' + (r || trk ? "" : " apagado") + '" data-parceiro="' + esc(p.id) + '">' +
             '<span class="faixa" style="background:linear-gradient(90deg,' +
             esc(p.cores.brand) + ',' + esc(p.cores.brand_lite) + ')"></span>' +
             '<span class="corpo"><span class="cab">' +
             '<span class="ini" style="background:' + esc(p.cores.brand) + '">' +
             esc(p.nome.charAt(0)) + '</span><span><span class="nm">' + esc(p.nome) + '</span>' +
             '<span class="sg" style="display:block">' + esc(p.segmento) + '</span></span>' +
-            '<span class="modelo">' + (p.modelo === "leads" ? "Leads" : p.modelo === "midia" ? "Mídia" : "Vendas") + '</span></span>' +
+            '<span class="modelo">' + (trk ? "Tracking" : p.modelo === "leads" ? "Leads" : p.modelo === "midia" ? "Mídia" : "Vendas") + '</span></span>' +
             '<span class="grid">' + grid + '</span>' +
             (r ? miniCanais(r.email, r.whatsapp) : "") +
             '<span class="rodape">' +
@@ -2873,6 +2970,7 @@
     // Refaz a tela atual com os dados novos (ao vivo ou hub.json relido no telao).
     function redesenhar() {
       if (!PRONTO) return;
+      if (estado.tela === "wpp" || estado.tela === "personas") return;   // areas sem dado ao vivo
       var c = $("conteudo");
       if (estado.tela === "parceiro") {
         var p = parceiroAtual();
@@ -2922,7 +3020,7 @@
     }
     function resumoCanais(aba) {
       return (aba.email ? nf(aba.email.envios) + " e-mails · abertura " + nf(aba.email.abertura, 1) + "%" : "sem e-mail no período") +
-        " · " + (aba.whatsapp ? nf(aba.whatsapp.disparos) + " disparos de WhatsApp" : "WhatsApp pronto");
+        (!wppNoHub() ? "" : " · " + (aba.whatsapp ? nf(aba.whatsapp.disparos) + " disparos de WhatsApp" : "WhatsApp pronto"));
     }
     function hubEmail(aba) {
       var e = aba.email, k = aba.kpis;
@@ -2950,7 +3048,7 @@
       var aba = abaDe(D.hub.abas, estado.aba), k = aba.kpis;
       return '<div class="conteudo" id="conteudo">' + hubNumeros(aba) + hubReceita(aba) +
         '<div class="row">' + hubCards(aba) + '</div><div class="secs">' +
-        secao("hub-wa", "WhatsApp ao vivo", resumoWA(null), blocoWA(null)) +
+        (wppNoHub() ? secao("hub-wa", "WhatsApp ao vivo", resumoWA(null), blocoWA(null)) : "") +
         secao("hub-email", "E-mail · RD Station", k.campanhas ? nf(k.campanhas) + " campanhas · abertura " + nf(k.abertura, 1) + "% · CTR " + nf(k.ctr, 2) + "%"
           : "sem e-mail no período", hubEmail(aba)) +
         secao("hub-part", "Participação nas vendas", "quanto cada parceria de vendas representa", hubParticipacao(aba)) +
@@ -2958,28 +3056,38 @@
         '</div></div>';
     }
 
+    // O topo do Hub vale tambem para as areas WhatsApp e Personas
+    function subHub() {
+      var h = D.hub;
+      return 'Supertroco · ' + h.parceiros + (h.parceiros === 1 ? ' parceria ativa' : ' parcerias ativas') +
+        (wppNoHub() ? ' · e-mail + WhatsApp' : ' · e-mail, WhatsApp e personas');
+    }
+    function topoHub(chip) {
+      return '<div class="topo"><div class="marca"><span class="sig">' + TREVO + '</span>' +
+        '<div><h1>Hub de Parceiros</h1><div class="sub">' + esc(subHub()) + '</div></div></div>' +
+        '<div class="dir"><span class="chip" id="chip-periodo">' + esc(chip) + '</span>' +
+        '<span class="chip live">Atualizado <b style="margin-left:4px">' + esc(D.atualizado) + '</b></span>' +
+        botaoTV() + botaoCrono() + botaoBot() + botaoTema() + '</div></div>';
+    }
+    function ligarTopoHub() {
+      ligarTema();
+      $("bt-crono").addEventListener("click", function () { abrirCronograma("hub"); });
+      $("bt-bot").addEventListener("click", abrirBot);
+      $("bt-tv").addEventListener("click", function () { tvAbrir(true); });
+    }
+
     function telaHub() {
       aplicarTema(null);
       var h = D.hub, aba = abaDe(h.abas, estado.aba);
-      var topo = '<div class="topo"><div class="marca"><span class="sig">' + TREVO + '</span>' +
-        '<div><h1>Hub de Parceiros</h1>' +
-        '<div class="sub">Supertroco · ' + h.parceiros + (h.parceiros === 1 ? ' parceria ativa' : ' parcerias ativas') +
-        ' · e-mail + WhatsApp</div></div></div>' +
-        '<div class="dir"><span class="chip" id="chip-periodo">' + esc(aba.periodo) + '</span>' +
-        '<span class="chip live">Atualizado <b style="margin-left:4px">' + esc(D.atualizado) + '</b></span>' +
-        botaoTV() + botaoCrono() + botaoBot() + botaoTema() + '</div></div>';
-
-      tela.innerHTML = topo + navAbas(h.abas) + esteira() + conteudoHub() + rodape();
+      tela.innerHTML = topoHub(aba.periodo) + navAbas(h.abas, botoesArea(null)) + esteira() + conteudoHub() + rodape();
       ligarHub();
       ligarNav(h.abas, function () {
         var c = $("conteudo");
         if (c) c.outerHTML = conteudoHub();
         ligarHub(true);
       });
-      ligarTema();
-      $("bt-crono").addEventListener("click", function () { abrirCronograma("hub"); });
-      $("bt-bot").addEventListener("click", abrirBot);
-      $("bt-tv").addEventListener("click", function () { tvAbrir(true); });
+      ligarBotoesArea();
+      ligarTopoHub();
     }
 
     function ligarHub() {
@@ -3763,10 +3871,12 @@
           : '<span><b>' + (cfg.valor_por_disparo ? moeda(cfg.valor_por_disparo, 2) : "—") + '</b><span>por disparo</span></span>' +
             '<span><b>0</b><span>disparos</span></span>') + '</span>' +
         '</span><span class="st ' + (w ? "ok" : "pronto") + '">' + (w ? "ativo" : "terreno pronto") + '</span></button>';
-      return '<div class="row"><div class="painel"><div class="hrow"><div><h3>Canais de disparo</h3>' +
-        '<div class="cap">Toque num canal para ver a análise completa dele</div></div></div>' +
-        '<div class="canais" role="tablist">' + cardMail + cardWpp + '</div>' +
-        '<div class="canal-det" id="canal-det">' + (estado.canal === "whatsapp" ? detalheWpp(aba, p) : detalheEmail(aba, p)) +
+      var comWpp = wppNoHub();       // sem o canal antigo, so o e-mail (o WhatsApp tem area propria)
+      return '<div class="row"><div class="painel"><div class="hrow"><div><h3>' + (comWpp ? 'Canais de disparo' : 'E-mail · RD Station') + '</h3>' +
+        '<div class="cap">' + (comWpp ? 'Toque num canal para ver a análise completa dele' : 'Campanhas deste parceiro, pela API da RD Station') +
+        '</div></div></div>' +
+        '<div class="canais" role="tablist">' + cardMail + (comWpp ? cardWpp : '') + '</div>' +
+        '<div class="canal-det" id="canal-det">' + (comWpp && estado.canal === "whatsapp" ? detalheWpp(aba, p) : detalheEmail(aba, p)) +
         '</div></div></div>';
     }
 
@@ -4009,9 +4119,18 @@
         return s;
       }, { disp: 0, cl: 0, dispMeta: 0, doBanco: 0, lead: 0, conv: 0, prod: 0, leadOk: 0, diasOk: 0 });
     }
+    // Soma de todos os produtos (cartao do parceiro no hub)
+    function trkResumo(p) {
+      return p.tracking.produtos.reduce(function (acc, prod) {
+        var s = trkTotais(trkLinhas(p, prod));
+        acc.lead += s.lead; acc.conv += s.conv; acc.prod += s.prod; acc.disp += s.disp;
+        return acc;
+      }, { lead: 0, conv: 0, prod: 0, disp: 0 });
+    }
     function blocoTracking(p) {
       var t = p.tracking;
       if (!t || !t.produtos || !t.produtos.length) return "";
+      if (!wppNoHub()) return blocoTrackingResultados(p);
       var prod = trkProduto(p), linhas = trkLinhas(p, prod), s = trkTotais(linhas), base = prod.linha_de_base;
       var vazio = '<span class="hr">—</span>';
       var passo = function (src, nome, v, sub) {
@@ -4064,6 +4183,53 @@
         ' Janela dos disparos: MariaDB' + (banco.lido_em ? ', lido em ' + esc(banco.lido_em) : '') +
         (banco.ok === false ? ' (cópia: o banco não respondeu no último gerar_hub.py)' : '') + '.</div></div></div>';
     }
+    // Sem o canal no hub: os resultados do parceiro (acessos, contratos, producao) dia a dia, com a
+    // janela e a contagem dos disparos so como contexto. Leitura, clique e custo: area WhatsApp.
+    function blocoTrackingResultados(p) {
+      var t = p.tracking, prod = trkProduto(p), linhas = trkLinhas(p, prod), s = trkTotais(linhas), base = prod.linha_de_base;
+      var vazio = '<span class="hr">—</span>', ate = (t.porto || {}).atualizado_ate, banco = t.banco || {};
+      var passo = function (src, nome, v, sub) {
+        return '<div class="trk-p"><div class="r"><i class="src ' + src + '"></i>' + esc(nome) + '</div><div class="v">' + esc(v) +
+          '</div><div class="s">' + esc(sub) + '</div></div>';
+      };
+      var funil = '<div class="trk-fun" style="grid-template-columns:repeat(4,minmax(0,1fr))">' +
+        passo("wp", "Disparos", nf(s.disp), "do disparador, no período") +
+        passo("res", "Acessos SuperTroco*", nf(s.lead), "no relatório da " + p.nome) +
+        passo("res", "Contratos", nf(s.conv), "conversão " + trkPct(s.conv, s.lead)) +
+        passo("res", "Produção", moeda(s.prod, 2), "relatório da " + p.nome) + '</div>';
+      var linhaBase = base ? '<div class="trk-base">Acessos SuperTroco por dia: <b>' + nf(base.acessos_st_dia, 1) + '</b> antes do WhatsApp (' +
+        ddmm(base.de) + ' a ' + ddmm(base.ate) + ')' + (s.diasOk ? ' · <b>' + nf(s.leadOk / s.diasOk, 1) + '</b> desde ' + ddmm(t.inicio) +
+        ' (dias completos do relatório)' : ' · desde ' + ddmm(t.inicio) + ': ainda sem dia completo no relatório') + '</div>' : '';
+      var rows = linhas.map(function (x) {
+        var jan = x.jan ? '<span class="jan">' + esc(x.jan.faixas.join(" + ") || "—") + '</span><small>' +
+          esc(x.jan.primeiro.replace(":", "h") + " a " + x.jan.ultimo.replace(":", "h")) + '</small>' : vazio;
+        var flag = x.parcial ? '<span class="flag" data-tip="O relatório foi gerado no meio deste dia">parcial</span>'
+          : x.incompleto ? '<span class="flag" data-tip="' + esc("Acessos totais do dia muito abaixo da média de antes (" + nf(x.total) +
+            "): o relatório do parceiro parece incompleto") + '">incompleto?</span>' : '';
+        var rel = function (v) { return x.rel ? v : vazio; };
+        return '<tr class="' + (x.parcial ? "trk-parc" : "") + '"><td><b>' + esc(trkDia(x.iso)) + '</b><small>' + esc(CURTA[x.dow] || "") + '</small></td>' +
+          '<td>' + jan + '</td><td>' + (x.tpls.length ? x.tpls.map(function (n) { return '<span class="pill">' + esc(n) + '</span>'; }).join(" ")
+            : '<span class="hr">sem disparo</span>') + '</td>' +
+          '<td class="n">' + (x.disp ? nf(x.disp) : vazio) + '</td>' +
+          '<td class="n">' + rel(nf(x.lead) + flag) + '</td><td class="n">' + rel(nf(x.total)) + '</td>' +
+          '<td class="n">' + rel(nf(x.conv)) + '</td><td class="n">' + rel(trkPct(x.conv, x.lead)) + '</td>' +
+          '<td class="n">' + rel(moeda(x.prod, 2)) + '</td></tr>';
+      }).join("");
+      return '<div class="row" id="trk"><div class="painel trk"><div class="hrow"><div><h3>Tracking · ' + esc(prod.nome) + '</h3>' +
+        '<div class="cap">' + brData(t.inicio) + (t.fim ? ' a ' + brData(t.fim) : '') + ' · acessos, contratos e produção do relatório da ' +
+        esc(p.nome) + (ate ? ' (até ' + ddmm(ate) + ')' : ' (ainda sem relatório)') + '</div></div>' +
+        (t.produtos.length > 1 ? '<div class="seg" id="seg-trk">' + t.produtos.map(function (x) {
+          return '<button data-trk="' + esc(x.id) + '"' + (x.id === prod.id ? ' class="on"' : '') + '>' + esc(x.nome) + '</button>';
+        }).join("") + '</div>' : '') + '</div>' + funil + linhaBase +
+        '<div class="tw"><table class="cat"><thead><tr><th>Dia</th><th>Janela dos disparos</th><th>Template</th><th class="n">Disparos</th>' +
+        '<th class="n">Acessos SuperTroco*</th><th class="n">Acessos totais</th><th class="n">Contratos</th>' +
+        '<th class="n">Tx de conversão</th><th class="n">Produção</th></tr></thead><tbody>' + rows + '</tbody><tfoot><tr><td>Total</td><td></td><td></td>' +
+        '<td class="n">' + nf(s.disp) + '</td><td class="n">' + nf(s.lead) + '</td><td></td><td class="n">' + nf(s.conv) + '</td>' +
+        '<td class="n">' + trkPct(s.conv, s.lead) + '</td><td class="n">' + moeda(s.prod, 2) + '</td></tr></tfoot></table></div>' +
+        '<div class="trk-nota">* Acessos de origem SuperTroco no relatório da ' + esc(p.nome) + ', somando todos os canais da SuperTroco ' +
+        '(não só o WhatsApp). Para medir só o WhatsApp, a ' + esc(p.nome) + ' precisa separar a origem (ex.: UTM no link do template). ' +
+        'Janela e disparos: dados do disparador gravados pela ponte' + (banco.lido_em ? ', de ' + esc(banco.lido_em) : '') + '.</div></div></div>';
+    }
     function ligarTracking(p) {
       root.querySelectorAll("#seg-trk button").forEach(function (b) {
         b.addEventListener("click", function () {
@@ -4086,6 +4252,12 @@
 
     function conteudoParceiro(p) {
       var aba = abaDe(p.abas, estado.aba);
+      // Parceiro so de WhatsApp com Tracking (Porto Bank), sem o canal no hub: so o Tracking.
+      if (!wppNoHub() && p.tracking && p.tracking.produtos && p.tracking.produtos.length &&
+          (p.sem_dados || p.modelo === "midia")) {
+        return '<div class="conteudo" id="conteudo">' + blocoTracking(p) +
+          '<div class="bi-nota">Leitura, cliques e custo de cada template ficam na área <b>WhatsApp</b> do hub.</div></div>';
+      }
       if (p.sem_dados && p.modelo === "midia") {
         return '<div class="conteudo" id="conteudo"><div class="painel"><div class="vazio"><b>' + esc(p.nome) +
           ' ainda não tem disparos registrados.</b><br>Os números chegam sozinhos da Meta assim que um template ' +
@@ -4120,7 +4292,9 @@
       aplicarTema({ cores: p.cores, cores_escuro: p.cores_escuro, rampa: p.rampa });
       var aba = abaDe(p.abas, estado.aba);
       var rems = p.remuneracao || [], atual = rems[rems.length - 1];
-      var sub = esc(p.segmento) + ' · ' + (p.modelo === "midia"
+      var sub = esc(p.segmento) + ' · ' + (!wppNoHub() && p.tracking && p.modelo === "midia"
+          ? "Tracking: acessos, contratos e produção pelo relatório diário da " + esc(p.nome)
+        : p.modelo === "midia"
           ? (p.valor_por_disparo ? moeda(p.valor_por_disparo, 2) + " por disparo de WhatsApp" : "mídia no WhatsApp") + " · dados da Meta (API oficial)"
         : p.modelo === "leads"
           ? (p.fonte_resultado === "funil" ? "leads e contratos pelo relatório mensal do parceiro" : "resultado medido em leads")
@@ -4246,6 +4420,514 @@
     }
 
     // =================================================================
+    // AREAS WHATSAPP E PERSONAS — inspiradas no Power BI "Personas SuperAdds"
+    // WhatsApp: so numeros agregados (disparador, Meta e custos), aberta a todos.
+    // Personas: o que vem das pessoas chega CIFRADO no hub.json (AES-GCM; chave derivada da
+    // senha com PBKDF2). A senha nao esta neste arquivo nem no hub.json: so quem a digita abre,
+    // e os dados abertos ficam so na memoria desta pagina.
+    // =================================================================
+    var AREA = { wpp: ler("area-wpp") || "disparos", ps: "comportamento", filtro: "base",
+                 busca: "", fSit: "", fRot: "", fPer: "", pag: 0 };
+    var PS = null;
+    var PS_POR_PAGINA = 50;
+    var ORDEM_ST = ["Respondeu", "Leu", "Entregue, não leu", "Sem status da Meta", "Não entregue", "Saiu"];
+    var ST_COR = { "Respondeu": "var(--st-resp)", "Leu": "var(--st-leu)", "Entregue, não leu": "var(--st-nleu)",
+                   "Sem status da Meta": "var(--st-sem)", "Não entregue": "var(--st-nent)", "Saiu": "var(--st-saiu)" };
+    function wppNoHub() { return !!(D && D.hub && D.hub.whatsapp_meta); }    // canal antigo (Meta ao vivo)
+    function wbi() { return (D && D.hub && D.hub.whatsapp_bi) || null; }
+    function pctTxt(v, c) { return v === null || v === undefined ? "—" : nf(v, c === undefined ? 1 : c) + "%"; }
+    function minTxt(v) { return v === null || v === undefined ? "—" : nf(v, 0) + " min"; }
+    function moedaOu(v, c) { return v === null || v === undefined ? "—" : moeda(v, c); }
+    function dataHora(s) {               // "2026-10-23T13:51:00-03:00" ou "2026-10-23 13:51:00"
+      if (!s) return "—";
+      return s.slice(8, 10) + "/" + s.slice(5, 7) + " às " + s.slice(11, 16);
+    }
+
+    // ---------- pecas de desenho (cores pelas variaveis do tema: claro e escuro) ----------
+    function numerosGrandes(lista) {     // [rotulo, valor, sub, destaque, sem dado]
+      return '<div class="bn">' + lista.map(function (x) {
+        return '<div class="c' + (x[3] ? " destaque" : "") + '"><div class="r">' + esc(x[0]) + '</div>' +
+          '<div class="v' + (x[4] ? " nd" : "") + '">' + esc(x[1]) + '</div><div class="s">' + esc(x[2] || "") + '</div></div>';
+      }).join("") + '</div>';
+    }
+    function painel(titulo, cap, corpo, extra) {
+      return '<div class="painel"><div class="hrow"><div><h3>' + esc(titulo) + '</h3>' +
+        (cap ? '<div class="cap">' + cap + '</div>' : '') + '</div>' + (extra || '') + '</div>' + corpo + '</div>';
+    }
+    function barras(itens, fmt, cor, teto) {     // itens [{r, v, cor, sub}]; teto fixo (ex.: 100 para %)
+      if (!itens.length) return '<div class="vazio">Sem dados.</div>';
+      var max = teto || Math.max.apply(null, itens.map(function (x) { return x.v || 0; })) || 1;
+      return '<div class="part">' + itens.map(function (x) {
+        return '<div class="pl" data-tip="' + esc(fmt(x.v) + "\n" + x.r + (x.sub ? " · " + x.sub : "")) + '"><div class="h"><span>' + esc(x.r) +
+          '</span><b>' + esc(fmt(x.v)) + (x.sub ? '<small>' + esc(x.sub) + '</small>' : '') + '</b></div>' +
+          '<span class="t"><span class="f" style="width:' + Math.max(1.5, (x.v || 0) / max * 100).toFixed(1) + '%;background:' +
+          (x.cor || cor || "var(--s1)") + '"></span></span></div>';
+      }).join("") + '</div>';
+    }
+    function rosca(itens, total, rotTotal) {      // itens [{r, v, cor}]
+      var soma = itens.reduce(function (s, x) { return s + x.v; }, 0) || 1, a = -Math.PI / 2, svg = "";
+      itens.forEach(function (x) {
+        var fr = x.v / soma, a1 = fr >= 0.9999 ? a + 2 * Math.PI - 0.0002 : a + fr * 2 * Math.PI;
+        var folga = fr >= 0.9999 ? 0 : 0.012;      // 2px de superficie entre as fatias
+        if (fr > 0) {
+          svg += '<path d="' + arco(90, 90, 84, 54, a + folga, Math.max(a + folga + 0.002, a1 - folga)) + '" fill="' + x.cor +
+            '" data-tip="' + esc(nf(x.v) + " · " + nf(fr * 100, 1) + "%\n" + x.r) + '"></path>';
+        }
+        a = a1;
+      });
+      return '<div class="bi-rosca"><svg viewBox="0 0 180 180" role="img" aria-label="' + esc(nf(total) + " " + rotTotal) + '">' + svg +
+        '<text x="90" y="88" text-anchor="middle" class="bi-rv">' + esc(nf(total)) + '</text>' +
+        '<text x="90" y="106" text-anchor="middle" class="bi-rr">' + esc(rotTotal) + '</text></svg>' +
+        '<ul class="bi-leg">' + itens.map(function (x) {
+          return '<li><i style="background:' + x.cor + '"></i><span>' + esc(x.r) + '</span><b>' + nf(x.v) + '</b><small>' +
+            nf(x.v / soma * 100, 1) + '%</small></li>';
+        }).join("") + '</ul></div>';
+    }
+    // Colunas por categoria: empilhadas (partes de um todo) ou lado a lado (comparacao), um eixo so.
+    // opts.W = largura aproximada do painel em px, para o texto do eixo sair no tamanho certo.
+    function colunas(cats, series, opts) {        // cats [rotulo], series [{nome, cor, v: []}]
+      opts = opts || {};
+      var W = Math.max(300, Math.min(opts.W || 720, (tela.clientWidth || 1400) - 70));   // no celular, o painel e a tela
+      var fmt = opts.fmt || nf, H = 240, mE = 44, mB = 24, mT = 20, n = Math.max(1, cats.length), larg = (W - mE - 6) / n;
+      var tot = cats.map(function (c, i) {
+        var vs = series.map(function (s) { return s.v[i] || 0; });
+        return opts.empilhado ? vs.reduce(function (a, b) { return a + b; }, 0) : Math.max.apply(null, vs);
+      });
+      var max = Math.max.apply(null, tot.concat([1])) * 1.08;
+      var y = function (v) { return mT + (H - mT - mB) * (1 - v / max); }, g = "";
+      [0, 0.5, 1].forEach(function (f) {
+        var yy = y(max / 1.08 * f).toFixed(1);
+        g += '<line x1="' + mE + '" x2="' + W + '" y1="' + yy + '" y2="' + yy + '" class="bi-grade"/>' +
+          '<text x="' + (mE - 6) + '" y="' + (+yy + 3) + '" text-anchor="end" class="bi-eixo">' + esc(opts.eixo ? opts.eixo(max / 1.08 * f) : curto(max / 1.08 * f)) + '</text>';
+      });
+      cats.forEach(function (c, i) {
+        var x0 = mE + i * larg + larg * 0.16, w = larg * 0.68;
+        if (opts.empilhado) {
+          var base = 0;
+          series.forEach(function (s) {
+            var v = s.v[i] || 0;
+            if (!v) return;
+            var y1 = y(base + v), y0 = y(base);
+            g += '<rect x="' + x0.toFixed(1) + '" y="' + y1.toFixed(1) + '" width="' + w.toFixed(1) + '" height="' +
+              Math.max(0.5, y0 - y1 - 2).toFixed(1) + '" fill="' + s.cor + '" data-tip="' + esc(fmt(v) + "\n" + s.nome + " · " + c) + '"/>';
+            base += v;
+          });
+          if (tot[i]) g += '<text x="' + (x0 + w / 2).toFixed(1) + '" y="' + (y(tot[i]) - 6).toFixed(1) + '" text-anchor="middle" class="bi-val">' + esc(fmt(tot[i])) + '</text>';
+        } else {
+          var wb = w / series.length;
+          series.forEach(function (s, j) {
+            var v = s.v[i] || 0, yy = y(v);
+            g += '<rect x="' + (x0 + j * wb + 1).toFixed(1) + '" y="' + yy.toFixed(1) + '" width="' + Math.max(1, wb - 2).toFixed(1) +
+              '" height="' + Math.max(0, H - mB - yy).toFixed(1) + '" rx="3" fill="' + s.cor + '" data-tip="' + esc(fmt(v) + "\n" + s.nome + " · " + c) + '"/>';
+          });
+        }
+        g += '<text x="' + (x0 + w / 2).toFixed(1) + '" y="' + (H - 7) + '" text-anchor="middle" class="bi-eixo">' + esc(c) + '</text>';
+      });
+      return '<div class="bi-col"><svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(opts.rotulo || "gráfico") + '">' + g + '</svg>' +
+        (series.length > 1 ? '<div class="legenda">' + series.map(function (s) {
+          return '<span><i style="background:' + s.cor + '"></i>' + esc(s.nome) + '</span>';
+        }).join("") + '</div>' : '') + '</div>';
+    }
+    function tabela(cab, linhas, rodapeLinha, classe) {    // cab [[titulo, numerico]]; celulas ja escapadas
+      var td = function (l) {
+        return l.map(function (v, i) { return '<td' + (cab[i] && cab[i][1] ? ' class="n"' : '') + '>' + v + '</td>'; }).join("");
+      };
+      return '<div class="tw"><table class="cat bi-t' + (classe ? " " + classe : "") + '"><thead><tr>' + cab.map(function (c) {
+        return '<th' + (c[1] ? ' class="n"' : '') + '>' + esc(c[0]) + '</th>';
+      }).join("") + '</tr></thead><tbody>' + linhas.map(function (l) { return '<tr>' + td(l) + '</tr>'; }).join("") + '</tbody>' +
+        (rodapeLinha ? '<tfoot><tr>' + td(rodapeLinha) + '</tr></tfoot>' : '') + '</table></div>';
+    }
+
+    // ---------- navegacao das areas ----------
+    function botoesArea(ativo) {
+      return (wbi() ? '<button class="nv' + (ativo === "wpp" ? " on" : "") + '" data-area="wpp">' + WPP + 'WhatsApp</button>' : '') +
+        (D.hub.restrito ? '<button class="nv' + (ativo === "personas" ? " on" : "") + '" data-area="personas">' +
+          (PS ? ABERTO : CADEADO) + 'Personas</button>' : '');
+    }
+    function ligarBotoesArea() {
+      root.querySelectorAll(".nav [data-area]").forEach(function (b) {
+        b.addEventListener("click", function () { abrirArea(b.getAttribute("data-area")); });
+      });
+    }
+    function navArea(ativo) {
+      return '<div class="nav"><div class="nav-bts">' +
+        '<button class="nv" data-ir="geral">' + GRADE + 'Visão geral</button>' +
+        '<button class="nv" data-ir="meses">' + CAL + 'Visão mês a mês' + CHEV + '</button>' +
+        botoesArea(ativo) + '</div></div>';
+    }
+    function ligarNavArea() {
+      root.querySelectorAll(".nav [data-ir]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          estado.tela = "hub"; estado.aba = "geral"; estado.mesesAbertos = b.getAttribute("data-ir") === "meses";
+          guardar("tela", "hub");
+          trocar(telaHub);
+        });
+      });
+      ligarBotoesArea();
+    }
+    function abrirArea(id) {
+      if (estado.tela === id) return;
+      estado.tela = id; estado.parceiro = null;
+      guardar("tela", id);
+      trocar(id === "wpp" ? telaWpp : telaPersonas);
+    }
+    function trocarArea(montar, ligar) {
+      trocarConteudo(function () { var c = $("conteudo"); if (c) c.outerHTML = montar(); ligar(); });
+    }
+
+    // ---------- area WhatsApp ----------
+    var WPP_ABAS = [["disparos", "Disparos"], ["meta", "Disparador × Meta"], ["financeiro", "Financeiro"]];
+    function telaWpp() {
+      aplicarTema(null);
+      var w = wbi();
+      tela.innerHTML = topoHub(w ? brData(w.periodo.de) + " a " + brData(w.periodo.ate) : "WhatsApp") +
+        navArea("wpp") + conteudoWpp() + rodape();
+      ligarTopoHub(); ligarNavArea(); ligarWpp();
+    }
+    function conteudoWpp() {
+      var w = wbi();
+      if (!w || !w.disparos) {
+        return '<div class="conteudo" id="conteudo"><div class="painel"><div class="vazio">A área WhatsApp aparece quando a ponte ' +
+          'gravar os dados do estudo no SharePoint e o gerar_hub.py rodar de novo.</div></div></div>';
+      }
+      if ((AREA.wpp === "meta" || AREA.wpp === "financeiro") && !w.meta) AREA.wpp = "disparos";
+      var fonte = AREA.wpp === "disparos" ? "Disparador · dados do estudo de " + dataHora(w.dados_de)
+        : "Disparador + Meta (API oficial)" + (w.meta && w.meta.atualizado ? " · Meta de " + dataHora(w.meta.atualizado) : "");
+      return '<div class="conteudo" id="conteudo"><div class="bi-cab"><div class="seg" id="seg-wpp" role="tablist">' +
+        WPP_ABAS.filter(function (a) { return a[0] === "disparos" || w.meta; }).map(function (a) {
+          return '<button role="tab" data-wpp="' + a[0] + '" aria-selected="' + (AREA.wpp === a[0]) + '"' +
+            (AREA.wpp === a[0] ? ' class="on"' : '') + '>' + esc(a[1]) + '</button>';
+        }).join("") + '</div><span class="bi-fonte">' + esc(fonte) + '</span></div>' +
+        (AREA.wpp === "meta" ? wppMeta(w) : AREA.wpp === "financeiro" ? wppFinanceiro(w) : wppDisparos(w)) + '</div>';
+    }
+    function ligarWpp() {
+      root.querySelectorAll("#seg-wpp button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          if (AREA.wpp === b.getAttribute("data-wpp")) return;
+          AREA.wpp = b.getAttribute("data-wpp");
+          guardar("area-wpp", AREA.wpp);
+          trocarArea(conteudoWpp, ligarWpp);
+        });
+      });
+    }
+    function wppDisparos(w) {
+      var d = w.disparos, k = d.kpis;
+      var nums = numerosGrandes([
+        ["Enviadas", nf(k.enviadas), "aceitas pela API do disparador", true],
+        ["Entregues", nf(k.entregues), pctTxt(k.taxa_entrega) + " das enviadas", true],
+        ["Leram", nf(k.leram), pctTxt(k.taxa_leitura) + " das entregues", true],
+        ["Tempo típico até ler", minTxt(k.tipico_min), "metade leu até aqui · média de " + minTxt(k.media_min), true],
+        ["Não entregues", nf(k.nao_entregues), "o motivo está no quadro abaixo", false],
+        ["Responderam", nf(k.responderam), "respostas registradas no estudo", false, !k.responderam],
+        ["Sem status da Meta", nf(k.sem_status), "a Meta ainda não confirmou a entrega", false, !k.sem_status],
+        ["Período", ddmm(w.periodo.de) + " a " + ddmm(w.periodo.ate), "dias com envio no estudo", false]]);
+      var status = d.por_status.map(function (s) { return { r: s.status, v: s.n, cor: ST_COR[s.status] || "var(--s1)" }; });
+      var series = ORDEM_ST.filter(function (s) { return d.por_dia.some(function (x) { return x[s]; }); }).map(function (s) {
+        return { nome: s, cor: ST_COR[s], v: d.por_dia.map(function (x) { return x[s] || 0; }) };
+      });
+      return nums +
+        '<div class="row r-2">' +
+          painel("Mensagens por dia e status", "dia do envio", colunas(d.por_dia.map(function (x) { return ddmm(x.data); }), series,
+            { empilhado: true, W: 740, rotulo: "Mensagens por dia e status" })) +
+          painel("Como reagiram às mensagens", "cada mensagem pelo status mais avançado", rosca(status, k.enviadas, "enviadas")) + '</div>' +
+        '<div class="row bi-3">' +
+          painel("Por que não foi entregue", "erros devolvidos pela Meta", barras(d.motivos.map(function (m) { return { r: m.motivo, v: m.n }; }), nf, "var(--st-nent)")) +
+          painel("Leitura pela hora do envio", "lidas ÷ entregues", barras(d.por_hora.filter(function (h) { return h.entregues; }).map(function (h) {
+            return { r: h.chave, v: h.taxa_leitura || 0, sub: nf(h.entregues) + " entregues" };
+          }), function (v) { return pctTxt(v, 0); }, "var(--s1)", 100)) +
+          painel("Por template", "", tabela([["Template"], ["Enviadas", 1], ["Leitura", 1], ["Típico", 1]],
+            d.por_template.map(function (t) { return [esc(t.chave), nf(t.enviadas), pctTxt(t.taxa_leitura), minTxt(t.tipico_min)]; }))) + '</div>' +
+        '<div class="row">' + painel("Por loja", "loja onde a compra disparou o envio",
+          tabela([["Loja"], ["Enviadas", 1], ["Entregues", 1], ["Leram", 1], ["Leitura", 1], ["Típico até ler", 1]],
+            d.por_loja.map(function (t) { return [esc(t.chave), nf(t.enviadas), nf(t.entregues), nf(t.leram), pctTxt(t.taxa_leitura), minTxt(t.tipico_min)]; }),
+            [ "<b>Total</b>", nf(k.enviadas), nf(k.entregues), nf(k.leram), pctTxt(k.taxa_leitura), minTxt(k.tipico_min)])) + '</div>';
+    }
+    function wppMeta(w) {
+      var m = w.meta, k = m.kpis, c = m.conta;
+      var nums = numerosGrandes([
+        ["Aceitas pelo disparador", nf(k.aceitas), "o que a API recebeu", true],
+        ["Enviadas pela Meta", nf(k.enviadas), "o que a Meta contou como enviado", true],
+        ["Entregues (Meta)", nf(k.entregues), pctTxt(k.enviadas ? k.entregues / k.enviadas * 100 : null) + " das enviadas", true],
+        ["Lidas (Meta)", nf(k.lidas), pctTxt(k.taxa_leitura) + " das entregues", true],
+        ["Cliques únicos", nf(k.cliques_unicos), pctTxt(k.taxa_clique, 2) + " das entregues", false],
+        ["Respostas", nf(k.respostas), "no webhook, últimos 30 dias", false],
+        ["Pedidos de saída", nf(k.saidas), "Parar promoções, SAIR", false, !k.saidas],
+        ["Aceitas − enviadas", nf(k.aceitas - k.enviadas), "a Meta não enviou (motivo abaixo)", false]]);
+      var tile = function (r, v, alerta) {
+        return '<div><div class="r">' + esc(r) + '</div><div class="v' + (alerta ? " alerta-v" : "") + '">' + esc(v) + '</div></div>';
+      };
+      var saude = '<div class="bi-saude">' + tile("Qualidade do número", c.qualidade, c.qualidade === "Baixa") +
+        tile("Envio pela conta", c.envio, c.envio !== "Liberado") + tile("Verificação da empresa", c.verificacao, c.verificacao !== "Verificada") +
+        tile("Limite de 24h", nf(c.usados) + " de " + nf(c.limite), c.limite && c.usados >= c.limite * 0.9) + '</div>' +
+        (c.travas ? '<div class="bi-travas">' + c.travas.split(" | ").map(esc).join("<br>") + '</div>' : '');
+      return nums +
+        '<div class="row r-2">' +
+          painel("Por dia: disparador × Meta", "aceitas pela API · enviadas e entregues segundo a Meta",
+            colunas(m.por_dia.map(function (x) { return ddmm(x.data); }), [
+              { nome: "Aceitas (disparador)", cor: "var(--s1)", v: m.por_dia.map(function (x) { return x.aceitas; }) },
+              { nome: "Enviadas (Meta)", cor: "var(--s2)", v: m.por_dia.map(function (x) { return x.enviadas; }) },
+              { nome: "Entregues (Meta)", cor: "var(--s3)", v: m.por_dia.map(function (x) { return x.entregues; }) }], { W: 740, rotulo: "Por dia" })) +
+          painel("Saúde da conta na Meta", "WhatsApp Business · " + esc(dataHora(m.atualizado)), saude) + '</div>' +
+        '<div class="row">' +
+          painel("Por template", "", tabela([["Template"], ["Anunciante"], ["Aceitas", 1], ["Enviadas (Meta)", 1], ["Diferença", 1],
+            ["Entregues", 1], ["Lidas", 1], ["Cliques únicos", 1], ["Tx de clique", 1]],
+            m.por_template.map(function (t) {
+              return [esc(t.template), esc(t.anunciante), t.aceitas ? nf(t.aceitas) : '<span class="hr">—</span>', nf(t.enviadas),
+                t.aceitas ? nf(t.aceitas - t.enviadas) : '<span class="hr">—</span>', nf(t.entregues), nf(t.lidas), nf(t.cliques_unicos), pctTxt(t.taxa_clique, 2)];
+            })) + '<div class="bi-nota">O disparador conta tudo o que a API aceitou; a Meta conta e cobra só o que entrega. A diferença são ' +
+            'as mensagens que a Meta recusou (número sem WhatsApp, marketing segurado, limite de spam). Os números da Meta do dia corrente são ' +
+            'estimados e podem mudar até o dia seguinte. Templates sem envio do disparador (testes, modelos novos) aparecem só com os números da Meta.</div>') +
+        '</div><div class="row">' +
+          painel("Erros que a Meta devolveu", "webhook, últimos 30 dias", barras(m.erros.map(function (e) { return { r: e.erro, v: e.total }; }), nf, "var(--st-nent)")) + '</div>';
+    }
+    function wppFinanceiro(w) {
+      var f = w.financeiro, k = f.kpis;
+      var nums = numerosGrandes([
+        ["Custo na Meta", moedaOu(k.custo_meta, 2), "sem impostos, pela API", true],
+        ["Impostos", moedaOu(k.impostos, 2), k.impostos_pct ? nf(k.impostos_pct, 2) + "% sobre o custo" : "em 0% até o contador confirmar", true, !k.impostos_pct],
+        ["Custo final", moedaOu(k.custo_final, 2), "custo na Meta + impostos", true],
+        ["Custo por mensagem entregue", moedaOu(k.por_entregue, 4), "a Meta cobra o que entrega", true],
+        ["Custo por disparo", moedaOu(k.por_disparo, 4), "custo final ÷ aceitas pelo disparador", false],
+        ["Preço da Meta (marketing)", moedaOu(k.preco_marketing, 4), "por mensagem, sem impostos", false],
+        ["Fora do disparador", moedaOu(k.fora_disparador, 2), "testes e envios fora do estudo", false],
+        ["Gasto da conta", moedaOu(k.gasto_conta, 2), "o que a Meta cobrou em 30 dias", false]]);
+      var reais = function (v) { return moeda(v, 2); };
+      return nums +
+        '<div class="row r-2">' +
+          painel("Custo final por dia", "custo na Meta + impostos", colunas(f.por_dia.map(function (x) { return ddmm(x.data); }),
+            [{ nome: "Custo final", cor: "var(--s1)", v: f.por_dia.map(function (x) { return x.custo_final; }) }],
+            { fmt: reais, W: 740, eixo: function (v) { return "R$ " + nf(v, 0); }, rotulo: "Custo final por dia" })) +
+          painel("Impostos aplicados", "o contador confirma o % de cada um",
+            tabela([["Imposto"], ["%", 1]], f.impostos.map(function (i) { return [esc(i.imposto), nf(i.pct, 2) + "%"]; }),
+              ["<b>Total</b>", nf(k.impostos_pct, 2) + "%"]) +
+            '<div class="bi-nota">A Meta informa o custo sem impostos. Os percentuais ficam no SharePoint, em ' +
+            '<b>Bases Dashboards › SuperAdds › financeiro › parametros.xlsx</b> (aba Impostos); o hub recalcula na próxima geração.</div>') + '</div>' +
+        '<div class="row r-2">' +
+          painel("Custo final por template", "", barras(f.por_template.map(function (t) { return { r: t.template, v: t.custo_final }; }), reais, "var(--s1)")) +
+          painel("Custo final por varejista", "rateado pelas entregas de cada dia e template", barras(f.por_varejista.map(function (t) {
+            return { r: t.varejista, v: t.custo_final };
+          }), reais, "var(--s1)")) + '</div>' +
+        '<div class="row">' +
+          painel("Por anunciante", "", tabela([["Anunciante"], ["Enviadas (Meta)", 1], ["Entregues", 1], ["Custo na Meta", 1], ["Impostos", 1],
+            ["Custo final", 1], ["Por entregue", 1]], f.por_anunciante.map(function (a) {
+              return [esc(a.anunciante), nf(a.enviadas), nf(a.entregues), moeda(a.custo_meta, 2), moeda(a.impostos, 2), moeda(a.custo_final, 2),
+                moedaOu(a.por_entregue, 4)];
+            }))) + '</div>';
+    }
+
+    // ---------- area Personas (com senha) ----------
+    function telaPersonas() {
+      aplicarTema(null);
+      tela.innerHTML = topoHub("área protegida") + navArea("personas") + (PS ? conteudoPersonas() : senhaPersonas()) + rodape();
+      ligarTopoHub(); ligarNavArea();
+      if (PS) ligarPersonas(); else ligarSenhaPersonas();
+    }
+    function senhaPersonas() {
+      var r = D.hub.restrito, aviso = "";
+      if (!r) aviso = "A área Personas ainda não foi publicada neste hub.";
+      else if (!window.crypto || !crypto.subtle || typeof DecompressionStream === "undefined") {
+        aviso = "Este navegador não consegue abrir a área protegida. Use uma versão atual do Chrome, Edge, Safari ou Firefox, com a página em https.";
+      }
+      if (aviso) return '<div class="conteudo" id="conteudo"><div class="painel"><div class="vazio">' + esc(aviso) + '</div></div></div>';
+      return '<div class="conteudo" id="conteudo"><div class="painel bi-senha"><div class="cadeado">' + CADEADO + '</div>' +
+        '<h3>Área protegida</h3><div class="cap">Comportamento e Pessoas mostram dados derivados de cada pessoa, só com pseudônimo. ' +
+        'Eles chegam cifrados e só abrem com a senha.</div>' +
+        '<form id="ps-form" autocomplete="off"><input type="password" id="ps-senha" aria-label="Senha" placeholder="Senha">' +
+        '<button class="btn-pri" type="submit" id="ps-ok">' + ABERTO + 'Abrir</button></form>' +
+        '<div class="msg-erro" id="ps-msg" aria-live="polite"></div></div></div>';
+    }
+    function decifrar(senha) {
+      var r = D.hub.restrito, enc = new TextEncoder();
+      var b64 = function (s) {
+        var bin = atob(s), u = new Uint8Array(bin.length);
+        for (var i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+        return u;
+      };
+      return crypto.subtle.importKey("raw", enc.encode(senha), "PBKDF2", false, ["deriveKey"])
+        .then(function (base) {
+          return crypto.subtle.deriveKey({ name: "PBKDF2", salt: b64(r.sal), iterations: r.iter, hash: "SHA-256" },
+            base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+        })
+        .then(function (chave) { return crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(r.iv) }, chave, b64(r.dados)); })
+        .then(function (buf) {
+          if (r.comp !== "gzip") return new TextDecoder().decode(buf);
+          return new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
+        })
+        .then(function (txt) { return JSON.parse(txt); });
+    }
+    function ligarSenhaPersonas() {
+      var f = $("ps-form");
+      if (!f) return;
+      var inp = $("ps-senha");
+      inp.focus();
+      f.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var msg = $("ps-msg"), bt = $("ps-ok");
+        if (!inp.value) { msg.textContent = "Digite a senha."; return; }
+        bt.disabled = true;
+        msg.textContent = "Abrindo…";
+        msg.style.color = "var(--muted)";
+        decifrar(inp.value).then(function (dados) {
+          PS = dados;
+          inp.value = "";
+          root.querySelectorAll('.nav [data-area="personas"]').forEach(function (b) { b.innerHTML = ABERTO + "Personas"; });
+          trocarArea(conteudoPersonas, ligarPersonas);
+        }).catch(function () {
+          bt.disabled = false;
+          msg.style.color = "";
+          msg.textContent = "Senha incorreta. Tente de novo.";
+          inp.value = "";
+          inp.focus();
+        });
+      });
+    }
+    function filtroAtual() {
+      return PS.filtros.filter(function (x) { return x.id === AREA.filtro; })[0] || PS.filtros[0];
+    }
+    function conteudoPersonas() {
+      var abas = [["comportamento", "Comportamento"], ["pessoas", "Pessoas"]];
+      return '<div class="conteudo" id="conteudo"><div class="bi-cab"><div class="seg" id="seg-ps" role="tablist">' +
+        abas.map(function (a) {
+          return '<button role="tab" data-ps="' + a[0] + '" aria-selected="' + (AREA.ps === a[0]) + '"' +
+            (AREA.ps === a[0] ? ' class="on"' : '') + '>' + esc(a[1]) + '</button>';
+        }).join("") + '</div>' + (AREA.ps === "comportamento" ? seletorFiltro() : '') +
+        '<span class="bi-fonte">dados do estudo · pseudônimos, sem nome, telefone ou e-mail</span></div>' +
+        (AREA.ps === "pessoas" ? psPessoas() : psComportamento()) + '</div>';
+    }
+    function seletorFiltro() {
+      var grupos = [];
+      PS.filtros.forEach(function (f) { if (grupos.indexOf(f.grupo) < 0) grupos.push(f.grupo); });
+      return '<label class="bi-filtro">Ver<select id="ps-filtro">' + grupos.map(function (g) {
+        var ops = PS.filtros.filter(function (f) { return f.grupo === g; }).map(function (f) {
+          return '<option value="' + esc(f.id) + '"' + (f.id === AREA.filtro ? " selected" : "") + '>' + esc(f.nome) +
+            ' (' + nf(f.kpis.pessoas) + ')</option>';
+        }).join("");
+        return g === "Toda a base" ? ops : '<optgroup label="' + esc(g) + '">' + ops + '</optgroup>';
+      }).join("") + '</select></label>';
+    }
+    function lista(xs) { return xs.map(function (x) { return { r: x.rotulo, v: x.n }; }); }
+    function rotinaBarras(itens) {
+      var max = Math.max.apply(null, itens.map(function (x) { return x.padrao + x.pista + x.sem_dados; }).concat([1]));
+      var seg = function (v, cor, nome, r) {
+        return v ? '<span class="f" style="width:' + (v / max * 100).toFixed(1) + '%;background:' + cor + '" data-tip="' +
+          esc(nf(v) + "\n" + r + " · " + nome) + '"></span>' : '';
+      };
+      return '<div class="part">' + itens.map(function (x) {
+        var t = x.padrao + x.pista + x.sem_dados;
+        return '<div class="pl"><div class="h"><span>' + esc(x.rotina) + '</span><b>' + nf(t) + '</b></div><span class="t bi-pilha">' +
+          seg(x.padrao, "var(--cf-padrao)", "padrão", x.rotina) + seg(x.pista, "var(--cf-pista)", "pista", x.rotina) +
+          seg(x.sem_dados, "var(--cf-sem)", "sem dados", x.rotina) + '</span></div>';
+      }).join("") + '</div><div class="legenda" style="margin-top:10px"><span><i style="background:var(--cf-padrao)"></i>padrão (confirmada)</span>' +
+        '<span><i style="background:var(--cf-pista)"></i>pista (a confirmar)</span><span><i style="background:var(--cf-sem)"></i>sem dados</span></div>';
+    }
+    function matriz(t) {
+      var max = 1;
+      Object.keys(t.n).forEach(function (k) { max = Math.max(max, t.n[k]); });
+      var temL = t.linhas.filter(function (l) { return t.colunas.some(function (c) { return t.n[l + "|" + c]; }); });
+      var temC = t.colunas.filter(function (c) { return t.linhas.some(function (l) { return t.n[l + "|" + c]; }); });
+      return '<div class="tw"><table class="cat bi-mat"><thead><tr><th>Lê ↓ · compra →</th>' +
+        temC.map(function (c) { return '<th class="n">' + esc(c) + '</th>'; }).join("") + '</tr></thead><tbody>' +
+        temL.map(function (l) {
+          return '<tr><td>' + esc(l) + '</td>' + temC.map(function (c) {
+            var v = t.n[l + "|" + c] || 0;
+            return '<td class="n" style="background:color-mix(in srgb, var(--s1) ' + Math.round(v / max * 45) + '%, transparent)">' +
+              (v ? nf(v) : '<span class="hr">·</span>') + '</td>';
+          }).join("") + '</tr>';
+        }).join("") + '</tbody></table></div>';
+    }
+    function psComportamento() {
+      var f = filtroAtual(), k = f.kpis, pf = f.perfil;
+      var nums = numerosGrandes([
+        ["Pessoas", nf(k.pessoas), f.id === "base" ? "toda a base que recebeu mensagens" : f.grupo + ": " + f.nome, true],
+        ["Taxa de leitura", pctTxt(k.taxa_leitura), nf(k.enviadas) + " mensagens enviadas", true],
+        ["Tempo típico até ler", minTxt(k.tipico_min), "metade de quem leu, leu até aqui", true],
+        ["Ticket típico", k.ticket ? moeda(k.ticket, 2) : "—", nf(k.compras_semana, 1) + " compras por semana, em média", true]]);
+      var ret = '<div class="row"><div class="painel bi-retrato"><div class="hrow"><div><h3>Retrato · ' +
+        esc(f.id === "base" ? "toda a base" : f.nome) + '</h3><div class="cap">Escrito a partir dos dados do estudo: disparos, cadastro ' +
+        'e compras dos últimos 90 dias. Muda com o filtro.</div></div></div>' +
+        f.retrato.map(function (s) {
+          return '<div class="bi-sec"><h4>' + esc(s[0]) + '</h4>' + (Array.isArray(s[1])
+            ? '<ul>' + s[1].map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ul>' : '<p>' + esc(s[1]) + '</p>') + '</div>';
+        }).join("") + '</div></div>';
+      return nums + ret +
+        '<div class="row bi-3">' + painel("Faixa etária", "", barras(lista(pf.faixa_etaria), nf, "var(--s1)")) +
+          painel("Gênero", "", barras(lista(pf.genero), nf, "var(--s1)")) +
+          painel("Classe estimada", "pela renda do bureau (estimativa)", barras(lista(pf.classe), nf, "var(--s1)")) + '</div>' +
+        '<div class="row r-2">' + painel("Personalidade de rotina", "quando a pessoa fica longe ou perto do celular", rotinaBarras(pf.rotina)) +
+          painel("Melhor janela para enviar", "respeita o horário do disparador (9h–19h)", barras(lista(pf.janelas), nf, "var(--s1)")) + '</div>' +
+        '<div class="row r-2">' + painel("Turno em que lê × turno em que compra", "pessoas", matriz(pf.turnos)) +
+          painel("Situação e persona", "pessoas", '<h4 class="bi-sub">Situação</h4>' + barras(lista(pf.situacao), nf, "var(--s1)") +
+            '<h4 class="bi-sub">Persona</h4>' + barras(lista(pf.persona), nf, "var(--s1)")) + '</div>';
+    }
+    function psFiltradas() {
+      var b = AREA.busca.trim().toLowerCase();
+      return PS.pessoas.filter(function (p) {
+        return (!b || p.codigo.toLowerCase().indexOf(b) === 0) && (!AREA.fSit || p.situacao === AREA.fSit) &&
+          (!AREA.fRot || p.rotina === AREA.fRot) && (!AREA.fPer || p.persona === AREA.fPer);
+      });
+    }
+    function opcoes(campo, atual) {
+      var vs = [];
+      PS.pessoas.forEach(function (p) { if (p[campo] && vs.indexOf(p[campo]) < 0) vs.push(p[campo]); });
+      vs.sort();
+      return '<option value="">Todas</option>' + vs.map(function (v) {
+        return '<option value="' + esc(v) + '"' + (v === atual ? " selected" : "") + '>' + esc(v) + '</option>';
+      }).join("");
+    }
+    function psPessoas() {
+      var todas = psFiltradas(), n = todas.length, pags = Math.max(1, Math.ceil(n / PS_POR_PAGINA));
+      AREA.pag = Math.min(AREA.pag, pags - 1);
+      var pag = todas.slice(AREA.pag * PS_POR_PAGINA, (AREA.pag + 1) * PS_POR_PAGINA);
+      var hr = '<span class="hr">—</span>';
+      var filtros = '<div class="bi-fps"><input type="search" id="ps-busca" placeholder="Código da pessoa" value="' + esc(AREA.busca) + '" aria-label="Buscar pelo código">' +
+        '<label>Situação<select id="ps-sit">' + opcoes("situacao", AREA.fSit) + '</select></label>' +
+        '<label>Rotina<select id="ps-rot">' + opcoes("rotina", AREA.fRot) + '</select></label>' +
+        '<label>Persona<select id="ps-per">' + opcoes("persona", AREA.fPer) + '</select></label>' +
+        '<span class="bi-n">' + nf(n) + (n === 1 ? ' pessoa' : ' pessoas') + '</span></div>';
+      var linhas = pag.map(function (p) {
+        return ['<b>' + esc(p.codigo) + '</b>', esc(p.situacao), esc(p.persona),
+          esc(p.rotina) + (p.confianca ? ' <span class="hr">' + esc(p.confianca) + '</span>' : ''), p.janela ? esc(p.janela) : hr,
+          esc(p.canal), '<span class="bi-pq">' + esc(p.porque) + '</span>', p.faixa_etaria ? esc(p.faixa_etaria) : hr,
+          p.genero ? esc(p.genero) : hr, p.loja ? esc(p.loja) : hr, p.ticket ? moeda(p.ticket, 2) : hr,
+          p.compras_90d === null ? hr : nf(p.compras_90d), p.tipico_min === null ? hr : nf(p.tipico_min) + " min"];
+      });
+      var nav = pags > 1 ? '<div class="bi-pag"><button class="btn mini" id="ps-ant"' + (AREA.pag ? '' : ' disabled') + '>Anterior</button>' +
+        '<span>página ' + (AREA.pag + 1) + ' de ' + pags + '</span><button class="btn mini" id="ps-prox"' +
+        (AREA.pag < pags - 1 ? '' : ' disabled') + '>Próxima</button></div>' : '';
+      return '<div class="row">' + painel("Pessoas", "Uma linha por pessoa, só com o pseudônimo (8 primeiros caracteres). Sem nome, telefone, e-mail ou documento.",
+        filtros + tabela([["Código"], ["Situação"], ["Persona"], ["Rotina"], ["Melhor janela"], ["Próximo canal"], ["Por quê"], ["Idade"],
+          ["Gênero"], ["Loja habitual"], ["Ticket médio", 1], ["Compras 90 dias", 1], ["Típico até ler", 1]], linhas, null, "largo") + nav) + '</div>';
+    }
+    function ligarPersonas(focoBusca) {
+      var redesenharPs = function (foco) {
+        var c = $("conteudo");
+        if (c) c.outerHTML = conteudoPersonas();
+        ligarPersonas(foco);
+      };
+      root.querySelectorAll("#seg-ps button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          if (AREA.ps === b.getAttribute("data-ps")) return;
+          AREA.ps = b.getAttribute("data-ps");
+          trocarArea(conteudoPersonas, ligarPersonas);
+        });
+      });
+      var f = $("ps-filtro");
+      if (f) f.addEventListener("change", function () { AREA.filtro = f.value; redesenharPs(); });
+      var busca = $("ps-busca");
+      if (busca) {
+        busca.addEventListener("input", function () { AREA.busca = busca.value; AREA.pag = 0; redesenharPs(true); });
+        if (focoBusca) { busca.focus(); busca.setSelectionRange(busca.value.length, busca.value.length); }
+      }
+      [["ps-sit", "fSit"], ["ps-rot", "fRot"], ["ps-per", "fPer"]].forEach(function (x) {
+        var s = $(x[0]);
+        if (s) s.addEventListener("change", function () { AREA[x[1]] = s.value; AREA.pag = 0; redesenharPs(); });
+      });
+      var ant = $("ps-ant"), prox = $("ps-prox");
+      if (ant) ant.addEventListener("click", function () { AREA.pag--; redesenharPs(); });
+      if (prox) prox.addEventListener("click", function () { AREA.pag++; redesenharPs(); });
+    }
+
+    // =================================================================
     // MODO EXIBICAO — telao da empresa: slides em tela cheia, girando sozinhos,
     // com os numeros grandes. Os dados continuam ao vivo (Meta a cada 3 min) e o
     // hub.json e relido a cada 10 min. Atalho: abrir a pagina com #tv no fim do link.
@@ -4340,6 +5022,19 @@
           mesA ? mesA.nome + (mesA.parcial && mesA.ate ? " · até " + mesA.ate : "") : "sem dados no mês", true) +
         porP.slice(0, 3).map(function (x) { return tvCard(x.nome, moeda(x.receita), x.regra || ""); }).join("") + '</div>' + tvMeses() });
 
+      var wb = wbi();
+      if (!wppNoHub() && wb && wb.disparos) {
+        var kd = wb.disparos.kpis, mk = (wb.meta || {}).kpis || {}, fk = (wb.financeiro || {}).kpis || {};
+        out.push({ tit: "WhatsApp", cor: "#1BAF7A", lite: "#5FD6A6", html:
+          '<div class="tv-k">WhatsApp · disparador e Meta · ' + esc(brData(wb.periodo.de)) + ' a ' + esc(brData(wb.periodo.ate)) + '</div>' +
+          '<div class="tv-hero">' + esc(pctTxt(kd.taxa_leitura, 0)) + '</div>' +
+          '<div class="tv-sub">das mensagens entregues foram lidas · metade em até ' + esc(minTxt(kd.tipico_min)) + '</div>' +
+          '<div class="tv-grid">' + tvCard("Enviadas", nf(kd.enviadas), "aceitas pelo disparador", true) +
+          tvCard("Entregues", nf(kd.entregues), pctTxt(kd.taxa_entrega) + " das enviadas") +
+          tvCard("Cliques únicos", nf(mk.cliques_unicos || 0), "nos botões dos templates (Meta)") +
+          tvCard("Custo por entregue", fk.por_entregue ? moeda(fk.por_entregue, 4) : "—", "custo final na Meta") + '</div>' });
+      }
+
       var d = waDados();
       if (d) {
         var hoje = hojeIso(), d7 = new Date();
@@ -4382,8 +5077,10 @@
           '<div class="tv-trk">' + p.tracking.produtos.map(function (prod) {
             var s = trkTotais(trkLinhas(p, prod));
             return '<div><div class="tv-nome" style="font-size:clamp(20px,2vw,40px)">' + esc(prod.nome) + '</div><div class="tv-fun">' +
-              tvCard("Disparos", nf(s.disp), s.doBanco ? (s.dispMeta ? "Meta ao vivo + MariaDB" : "MariaDB (sem métrica na Meta)") : "Meta ao vivo", true) +
-              tvCard("Cliques", nf(s.cl), "taxa de clique " + trkPct(s.cl, s.dispMeta)) +
+              (wppNoHub()
+                ? tvCard("Disparos", nf(s.disp), s.doBanco ? (s.dispMeta ? "Meta ao vivo + MariaDB" : "MariaDB (sem métrica na Meta)") : "Meta ao vivo", true) +
+                  tvCard("Cliques", nf(s.cl), "taxa de clique " + trkPct(s.cl, s.dispMeta))
+                : tvCard("Disparos", nf(s.disp), "do disparador", true)) +
               tvCard("Leads*", nf(s.lead), "acessos SuperTroco") + tvCard("Contratos", nf(s.conv), "conversão " + trkPct(s.conv, s.lead)) +
               tvCard("Produção", moeda(s.prod, 2), "relatório da " + p.nome) + '</div></div>';
           }).join("") + '</div><div class="tv-sub">* Leads = acessos de origem SuperTroco no relatório da ' + esc(p.nome) +
@@ -5832,6 +6529,7 @@
       var gran = ler("gran"); if (gran) estado.gran = gran;
       var jan = ler("janela"); if (jan && jan !== "custom") estado.janela = jan;
       var canal = ler("canal"); if (canal === "whatsapp" || canal === "email") estado.canal = canal;
+      if (estado.canal === "whatsapp" && !wppNoHub()) estado.canal = "email";
       if (ler("aberto") === "0") estado.aberto = false;
       var tema = ler("tema");
       var escuroSO = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
@@ -5850,7 +6548,14 @@
       var montar = function () {
         if (montou) return;
         montou = true; PRONTO = true;
-        if (salva && salva !== "hub" && D.parceiros.some(function (p) { return p.id === salva; })) {
+        // #whatsapp e #personas abrem direto a area (link para mandar a alguem)
+        if (location.hash === "#whatsapp" && wbi()) salva = "wpp";
+        else if (location.hash === "#personas" && D.hub.restrito) salva = "personas";
+        if (salva === "wpp" && wbi()) {
+          estado.tela = "wpp"; telaWpp();
+        } else if (salva === "personas" && D.hub.restrito) {
+          estado.tela = "personas"; telaPersonas();
+        } else if (salva && salva !== "hub" && D.parceiros.some(function (p) { return p.id === salva; })) {
           estado.tela = "parceiro"; estado.parceiro = salva;
           telaParceiro();
         } else {
