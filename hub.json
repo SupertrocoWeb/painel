@@ -60,20 +60,20 @@
         "ate": "22/10",
         "parceiros_ativos": 2,
         "kpis": {
-          "vendas": 46813.87,
+          "vendas": 49066.87,
           "comissao": 3110.87,
-          "receita": 43890.87,
-          "receita_vendas": 13310.87,
+          "receita": 45150.87,
+          "receita_vendas": 14570.87,
           "receita_leads": 30580.0,
           "receita_comissao": 3110.87,
-          "receita_aquisicao": 10200.0,
+          "receita_aquisicao": 11460.0,
           "receita_por_parceiro": [
             {
               "id": "sorte_online",
               "nome": "Sorte Online",
               "modelo": "vendas",
               "cor": "#15B8B6",
-              "receita": 13310.87,
+              "receita": 14570.87,
               "regra": "R$ 30 por aquisição"
             },
             {
@@ -86,13 +86,13 @@
             }
           ],
           "remuneracao": "misto",
-          "pedidos": 1331,
-          "aquisicoes": 856,
-          "sessoes": 36342,
-          "cac": 15.55,
-          "tkm": 35.17,
-          "conversao": 3.21,
-          "pedidos_com_sessao": 1165,
+          "pedidos": 1414,
+          "aquisicoes": 898,
+          "sessoes": 38807,
+          "cac": 16.23,
+          "tkm": 34.7,
+          "conversao": 3.22,
+          "pedidos_com_sessao": 1248,
           "leads": 183,
           "parceiros_vendas": 1,
           "parceiros_leads": 1,
@@ -140,18 +140,18 @@
             "cor_lite": "#5DD9D7",
             "tem_dados": true,
             "periodo": "01/08/2026 a 22/10/2026",
-            "receita_supertroco": 13310.87,
+            "receita_supertroco": 14570.87,
             "receita_regra": "remuneracao",
             "receita_regra_txt": "R$ 30 por aquisição",
-            "vendas": 46813.87,
+            "vendas": 49066.87,
             "comissao": 3110.87,
-            "pedidos": 1331,
-            "receita": 13310.87,
-            "receita_aquisicao": 10200.0,
+            "pedidos": 1414,
+            "receita": 14570.87,
+            "receita_aquisicao": 11460.0,
             "remuneracao": "misto",
-            "cac": 15.55,
-            "aquisicoes": 856,
-            "tkm": 35.17,
+            "cac": 16.23,
+            "aquisicoes": 898,
+            "tkm": 34.7,
             "email": {
               "campanhas": 48,
               "entregues": 37077143.0,
@@ -204,22 +204,22 @@
             "id": "sorte_online",
             "nome": "Sorte Online",
             "cor": "#15B8B6",
-            "vendas": 46813.87,
+            "vendas": 49066.87,
             "comissao": 3110.87,
-            "receita": 13310.87,
+            "receita": 14570.87,
             "fatia": 100.0
           }
         ],
         "ia": {
-          "destaque": "O resultado do período foi impulsionado principalmente pelos <b>R$ 30.580,00</b> gerados pelo parceiro Crefaz em setembro, que representaram quase 70% da receita total, e pelos <b>R$ 10.200,00</b> de aquisição da Sorte Online em outubro.",
-          "comparativo": "A taxa de entrega de e‑mail da Sorte Online foi superior, com bounce de <b>0,89%</b> contra <b>2,98%</b> da Crefaz, e abertura de <b>10,1%</b> frente a <b>8,2%</b>. O CTR também foi ligeiramente melhor (0,31% x 0,30%). Em termos de receita, Crefaz contribuiu com <b>R$ 30.580,00</b> (≈69,7% do total), enquanto a Sorte Online trouxe <b>R$ 13.310,87</b> (≈30,3%). Contudo, a Sorte Online gerou 856 aquisições, evidenciando seu papel estratégico de geração de demanda, ao passo que a Crefaz converteu apenas 3 leads pagos dos 183 recebidos.",
+          "destaque": "A receita total de <b>R$45,150.87</b> foi impulsionada principalmente pelo parceiro Crefaz, que gerou <b>R$30,580.00</b> em volume pago, enquanto a Sorte Online manteve <b>R$14,570.87</b> de receita de aquisição, apesar de os dados de outubro ainda estarem parciais.",
+          "comparativo": "A Sorte Online apresenta melhor eficiência de e‑mail, com taxa de abertura de <b>10.1%</b> e CTR de <b>0.31%</b>, além de bounce de <b>0.89%</b>, superior ao Crefaz (abertura <b>8.2%</b>, CTR <b>0.30%</b>, bounce <b>2.98%</b>). Em termos de resultado, a Crefaz trouxe mais receita (<b>R$30,580</b>) porém com apenas <b>3</b> leads pagos sobre <b>183</b> gerados, enquanto a Sorte Online converteu <b>898</b> aquisições gerando <b>R$14,570.87</b>. O canal WhatsApp ainda não está ativo em nenhum dos parceiros, representando oportunidade não explorada. O crescimento mensal mostra que outubro ainda está parcial para a Sorte Online, o que pode distorcer a comparação de ritmo.",
           "alertas": [
-            "Bounce elevado da Crefaz (≈3%) indica problemas de qualidade de lista.",
-            "Conversão de leads da Crefaz muito baixa (3 pagos de 183, <2%).",
-            "Relatório de outubro da Crefaz está pendente, impedindo visão completa.",
-            "Crefaz realizou apenas 2 campanhas de e‑mail, limitando alcance."
+            "Bounce da Crefaz está alto (2.98%), risco de entregabilidade",
+            "Taxa de leads pagos da Crefaz é baixa (1.72% dos leads)",
+            "Dados de outubro da Sorte Online são parciais, pode haver ajuste de receita",
+            "CTR geral dos e‑mails (<0.31%) está abaixo do ideal"
           ],
-          "prioridade": "Concentrar esforços no parceiro Crefaz no próximo ciclo: melhorar a higienização das listas para reduzir bounce, ampliar o número de campanhas de e‑mail e implementar um acompanhamento mais rigoroso das conversões de leads, além de garantir a entrega do relatório de outubro. Paralelamente, otimizar a jornada de aquisição da Sorte Online para aumentar o número de aquisições e o ticket médio por aquisição."
+          "prioridade": "Concentrar esforços no parceiro Crefaz para melhorar a qualidade e a conversão dos leads. Reduzir o bounce aprimorando a higienização de listas, otimizar a mensagem para elevar a taxa de abertura e CTR, e trabalhar processos internos para transformar mais leads digitados em pagos. Ao mesmo tempo, finalizar o relatório de outubro da Sorte Online e avaliar a possibilidade de ampliar campanhas de WhatsApp, mas a prioridade imediata é aumentar a eficiência de geração de receita da Crefaz."
         }
       },
       {
@@ -230,31 +230,31 @@
         "ate": "22/10",
         "parceiros_ativos": 1,
         "kpis": {
-          "vendas": 15705.29,
+          "vendas": 17958.29,
           "comissao": 0,
-          "receita": 10200.0,
-          "receita_vendas": 10200.0,
+          "receita": 11460.0,
+          "receita_vendas": 11460.0,
           "receita_leads": 0,
           "receita_comissao": 0,
-          "receita_aquisicao": 10200.0,
+          "receita_aquisicao": 11460.0,
           "receita_por_parceiro": [
             {
               "id": "sorte_online",
               "nome": "Sorte Online",
               "modelo": "vendas",
               "cor": "#15B8B6",
-              "receita": 10200.0,
+              "receita": 11460.0,
               "regra": "R$ 30 por aquisição"
             }
           ],
           "remuneracao": "aquisicao",
-          "pedidos": 542,
-          "aquisicoes": 340,
-          "sessoes": 20388,
+          "pedidos": 625,
+          "aquisicoes": 382,
+          "sessoes": 22853,
           "cac": 30.0,
-          "tkm": 28.98,
-          "conversao": 2.66,
-          "pedidos_com_sessao": 542,
+          "tkm": 28.73,
+          "conversao": 2.73,
+          "pedidos_com_sessao": 625,
           "leads": 0,
           "parceiros_vendas": 1,
           "parceiros_leads": 0,
@@ -302,18 +302,18 @@
             "cor_lite": "#5DD9D7",
             "tem_dados": true,
             "periodo": "01/10/2026 a 22/10/2026",
-            "receita_supertroco": 10200.0,
+            "receita_supertroco": 11460.0,
             "receita_regra": "remuneracao",
             "receita_regra_txt": "R$ 30 por aquisição",
-            "vendas": 15705.29,
+            "vendas": 17958.29,
             "comissao": 0.0,
-            "pedidos": 542,
-            "receita": 10200.0,
-            "receita_aquisicao": 10200.0,
+            "pedidos": 625,
+            "receita": 11460.0,
+            "receita_aquisicao": 11460.0,
             "remuneracao": "aquisicao",
             "cac": 30.0,
-            "aquisicoes": 340,
-            "tkm": 28.98,
+            "aquisicoes": 382,
+            "tkm": 28.73,
             "email": {
               "campanhas": 11,
               "entregues": 10022725.0,
@@ -332,22 +332,22 @@
             "id": "sorte_online",
             "nome": "Sorte Online",
             "cor": "#15B8B6",
-            "vendas": 15705.29,
+            "vendas": 17958.29,
             "comissao": 0.0,
-            "receita": 10200.0,
+            "receita": 11460.0,
             "fatia": 100.0
           }
         ],
         "ia": {
-          "destaque": "<b>340 aquisições</b> geraram <b>R$10.200,00</b> de receita, com remuneração fixa de <b>R$30,00 por aquisição</b>. O volume massivo de e‑mails (10,022,725 entregues) não se traduziu em engajamento, refletindo taxa de abertura de <b>7,9%</b> e CTR de <b>0,27%</b>.",
-          "comparativo": "Com apenas o parceiro Sorte Online ativo, a eficiência do e‑mail mostra bounce baixo (1,15%) mas abertura e clique bem abaixo da média de mercado. Não há dados de WhatsApp, portanto o canal está subutilizado. Em relação aos meses anteriores, a receita de outubro caiu consideravelmente frente a setembro (R$32.408,37), indicando que o ritmo atual de engajamento não sustenta o crescimento.",
+          "destaque": "A receita de <b>R$ 11.460,00</b> em outubro foi impulsionada por <b>382 aquisições</b> ao custo de <b>R$ 30,00</b> cada, resultando em <b>625 pedidos</b>.",
+          "comparativo": "Sorte Online enviou 10.022.725 e‑mails, porém a taxa de abertura foi de 7,9% e o CTR de 0,27%, indicadores bem abaixo da média de mercado. Não há outro parceiro ativo no período para comparar diretamente, mas o histórico de setembro mostra que Crefaz gerou R$ 30.580,00, sugerindo que a diversificação de parceiros pode elevar a receita. O canal WhatsApp ainda não foi utilizado, representando uma oportunidade não explorada.",
           "alertas": [
-            "Taxa de abertura de 7,9% está muito abaixo do benchmark (15‑20%).",
-            "CTR de 0,27% indica baixa efetividade das mensagens.",
-            "Alto volume de entregas (10 milhões) pode gerar custos desnecessários sem retorno.",
-            "Ausência de disparos e conversões via WhatsApp limita diversificação de canais."
+            "Taxa de abertura de 7,9% está muito baixa, indicando baixa atratividade dos assuntos.",
+            "CTR de 0,27% evidencia pouca efetividade dos calls‑to‑action nos e‑mails.",
+            "Dependência de um único parceiro (Sorte Online) aumenta o risco de variações bruscas de receita.",
+            "Relatório pendente de Crefaz impede a visualização completa da performance de outubro."
           ],
-          "prioridade": "Concentrar esforços no parceiro Sorte Online, otimizando a estratégia de e‑mail: segmentar a base, melhorar assuntos e conteúdo, reduzir volume para focar em leads mais qualificados e testar campanhas de WhatsApp para complementar a aquisição. O objetivo é elevar a taxa de abertura e CTR, aumentando a conversão de aquisições sem depender exclusivamente de volume massivo de envios."
+          "prioridade": "No próximo ciclo, o foco deve ser melhorar a performance de e‑mail da Sorte Online, investindo em segmentação, testes A/B de assunto e conteúdo, e limpeza de listas para reduzir bounce. Paralelamente, é crucial ativar o canal WhatsApp e buscar novos parceiros, como Crefaz, para diversificar a fonte de receita e reduzir a dependência de um único modelo."
         }
       },
       {
@@ -509,15 +509,15 @@
           }
         ],
         "ia": {
-          "destaque": "<b>R$ 30.580,00</b> de receita veio do parceiro de leads Crefaz, responsável por 94% do total, porém apenas <b>3 leads pagos</b> (1,6% de conversão) foram registrados; o parceiro de vendas Sorte Online gerou <b>R$ 1.828,37</b> com boa entregabilidade de e‑mail (<b>0,7% bounce</b>) e taxa de abertura de <b>13,2%</b>.",
-          "comparativo": "O e‑mail da Sorte Online apresenta entrega quase perfeita (0,7% de bounce) e abertura de 13,2% com CTR de 0,36%, enquanto o Crefaz tem bounce de 2,98%, abertura de 8,2% e CTR de 0,30%, indicando menor engajamento. Em termos de receita, Crefaz domina com R$ 30.580,00 apesar de gerar poucos leads pagos, já a Sorte Online trouxe R$ 1.828,37 com 247 aquisições. Não há atividade de WhatsApp em nenhum dos parceiros.",
+          "destaque": "O resultado de setembro foi impulsionado principalmente pelos <b>R$30.580,00</b> recebidos do parceiro Crefaz, que representaram <b>94,4%</b> da receita total, enquanto a Sorte Online contribuiu com <b>R$1.828,37</b>.",
+          "comparativo": "A Sorte Online enviou mais de 11,1 mi de e‑mails com taxa de bounce de <b>0,7%</b> e taxa de abertura de <b>13,2%</b>, bem superior à taxa de bounce de <b>2,98%</b> e abertura de <b>8,2%</b> da Crefaz. O CTR da Sorte Online foi <b>0,36%</b>, ligeiramente maior que o <b>0,30%</b> da Crefaz. Em termos de resultados, a Crefaz gerou <b>30580 R$</b> em receita de leads, mas apenas <b>3</b> leads foram pagos (1,6% dos leads), enquanto a Sorte Online converteu <b>247</b> aquisições, gerando <b>R$7,40</b> por aquisição para a Supertroco. Não há atividade de WhatsApp em nenhum dos parceiros neste período.",
           "alertas": [
-            "Bounce rate do e‑mail do Crefaz (2,98%) está muito acima do padrão desejado (<1%).",
-            "Conversão de leads pagos do Crefaz é baixa (3 de 183, 1,6%).",
-            "CTR geral (0,36%) permanece abaixo de metas típicas de 0,5% a 1%.",
-            "Concentração de receita (94%) em um único parceiro de leads aumenta risco de volatilidade."
+            "Crefaz converteu apenas 3 de 183 leads (1,6%), indicando baixa efetividade de qualificação;",
+            "A taxa de bounce da Crefaz (2,98%) está quatro vezes maior que a da Sorte Online, sinalizando problemas de lista ou entregabilidade;",
+            "O CTR geral de 0,36% está abaixo de benchmarks desejáveis para campanhas de performance;",
+            "Mais de 94% da receita total depende de um único parceiro (Crefaz), gerando risco de concentração."
           ],
-          "prioridade": "Concentrar esforços no parceiro Crefaz para melhorar a qualidade e a conversão dos leads: revisar a segmentação, otimizar a jornada de captura (aumentar a taxa de leads digitados) e reduzir o bounce de e‑mail com limpeza de listas. Paralelamente, buscar diversificar a base de receita, ativando campanhas de mídia ou WhatsApp e reforçando a estratégia de e‑mail da Sorte Online para manter sua alta entregabilidade e explorar oportunidades de upsell."
+          "prioridade": "Concentrar esforços no parceiro Crefaz para melhorar a qualidade e a conversão dos leads: revisar a segmentação da base, otimizar o conteúdo dos e‑mails (assuntos mais atrativos) e implementar um follow‑up mais agressivo para transformar leads digitados em pagos. Paralelamente, diversificar a carteira de parceiros de leads ou explorar oportunidades de mídia para reduzir a dependência de um único fluxo de receita."
         }
       },
       {
@@ -637,15 +637,14 @@
           }
         ],
         "ia": {
-          "destaque": "Em agosto a Supertroco registrou receita de <b>R$1.282,50</b>, proveniente de 269 aquisições a <b>R$30</b> cada, totalizando 345 pedidos. A taxa de abertura foi de <b>9,3%</b> e o CTR de <b>0,3%</b>.",
-          "comparativo": "O único parceiro ativo no período, Sorte Online, apresenta excelente entregabilidade (bounce de 0,86%) mas um CTR baixo, indicando que poucos dos que abriram realmente clicam. Não há dados de WhatsApp, portanto o canal está subutilizado. Sem outros parceiros para comparar, a eficiência do e‑mail é o principal ponto de análise.",
+          "destaque": "O resultado de <b>R$ 1.282,50</b> em receita veio exclusivamente da parceria <b>Sorte Online</b>, impulsionado por <b>269 aquisições</b> ao custo de <b>R$ 4,77</b> por aquisição; a taxa de abertura de <b>9,3%</b> e o volume de <b>15,880,258 entregas</b> sustentaram esse desempenho.",
+          "comparativo": "Com apenas um parceiro ativo em agosto, a eficiência de e‑mail da Sorte Online apresenta abertura razoável (9,3%) mas CTR baixo (0,3%), indicando que poucos destinatários clicam nos links. Não há atividade de WhatsApp, o que limita a diversificação de canais. Em relação a futuros parceiros como Crefaz, que aparecerá nos meses seguintes, a dependência de um único parceiro reduz a robustez do portfólio.",
           "alertas": [
-            "CTR de 0,3% está abaixo do esperado para campanhas de aquisição.",
-            "Nenhum disparo de WhatsApp foi realizado, perdendo potencial de conversão.",
-            "Volume de entregas (15,880,258) é muito alto e pode gerar saturação de caixa de entrada.",
-            "Dependência única do modelo de vendas limita a diversificação de receita."
+            "CTR de e‑mail muito baixo (0,3%), risco de baixa conversão de cliques",
+            "Ausência total de disparos e resultados no canal WhatsApp, limitando oportunidades de receita",
+            "Concentração de receita em um único parceiro aumenta vulnerabilidade a variações de performance"
           ],
-          "prioridade": "Concentrar esforços no parceiro Sorte Online no próximo ciclo: otimizar a taxa de cliques com testes A/B de assunto e call‑to‑action, segmentar a base para melhorar relevância e iniciar campanhas de WhatsApp para complementar o funil de aquisição, monitorando de perto bounce e entregas para manter a boa reputação de envio."
+          "prioridade": "Concentrar esforços no próximo ciclo em melhorar a performance de e‑mail da Sorte Online, focando em otimização de assunto e call‑to‑action para elevar o CTR acima de 1%. Paralelamente, iniciar integração de campanhas de WhatsApp com parceiros que já utilizam a API oficial, diversificando fontes de receita e reduzindo a dependência de um único parceiro."
         }
       }
     ],
@@ -705,16 +704,16 @@
           "parcial": true,
           "ate": "22/10",
           "valores": {
-            "sorte_online": 10200.0,
+            "sorte_online": 11460.0,
             "crefaz": null
           },
           "pendentes": [
             "crefaz"
           ],
           "projecao": {
-            "sorte_online": 14372.73
+            "sorte_online": 16148.18
           },
-          "total": 10200.0
+          "total": 11460.0
         }
       ],
       "datas": [
@@ -798,7 +797,9 @@
         "2026-10-17",
         "2026-10-18",
         "2026-10-19",
-        "2026-10-20"
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22"
       ],
       "por_dia": {
         "sorte_online": [
@@ -882,7 +883,9 @@
           300.0,
           210.0,
           300.0,
-          420.0
+          420.0,
+          210.0,
+          1050.0
         ],
         "crefaz": [
           0,
@@ -965,25 +968,27 @@
           0,
           0,
           0,
+          0,
+          0,
           0
         ]
       }
     },
     "kpis": {
-      "vendas": 46813.87,
+      "vendas": 49066.87,
       "comissao": 3110.87,
-      "receita": 43890.87,
-      "receita_vendas": 13310.87,
+      "receita": 45150.87,
+      "receita_vendas": 14570.87,
       "receita_leads": 30580.0,
       "receita_comissao": 3110.87,
-      "receita_aquisicao": 10200.0,
+      "receita_aquisicao": 11460.0,
       "receita_por_parceiro": [
         {
           "id": "sorte_online",
           "nome": "Sorte Online",
           "modelo": "vendas",
           "cor": "#15B8B6",
-          "receita": 13310.87,
+          "receita": 14570.87,
           "regra": "R$ 30 por aquisição"
         },
         {
@@ -996,13 +1001,13 @@
         }
       ],
       "remuneracao": "misto",
-      "pedidos": 1331,
-      "aquisicoes": 856,
-      "sessoes": 36342,
-      "cac": 15.55,
-      "tkm": 35.17,
-      "conversao": 3.21,
-      "pedidos_com_sessao": 1165,
+      "pedidos": 1414,
+      "aquisicoes": 898,
+      "sessoes": 38807,
+      "cac": 16.23,
+      "tkm": 34.7,
+      "conversao": 3.22,
+      "pedidos_com_sessao": 1248,
       "leads": 183,
       "parceiros_vendas": 1,
       "parceiros_leads": 1,
@@ -1035,9 +1040,9 @@
         "id": "sorte_online",
         "nome": "Sorte Online",
         "cor": "#15B8B6",
-        "vendas": 46813.87,
+        "vendas": 49066.87,
         "comissao": 3110.87,
-        "receita": 13310.87,
+        "receita": 14570.87,
         "fatia": 100.0
       }
     ],
@@ -1472,7 +1477,7 @@
         ]
       },
       "meta": {
-        "atualizado": "2026-10-23 15:20:29",
+        "atualizado": "2026-10-23 16:20:25",
         "kpis": {
           "aceitas": 1204,
           "enviadas": 1012,
@@ -1546,9 +1551,9 @@
             "lidas": 551,
             "cliques_unicos": 88,
             "taxa_clique": 9.1,
-            "custo_meta": 311.1,
-            "custo_final": 311.1,
-            "por_entregue": 0.3217
+            "custo_meta": 311.42,
+            "custo_final": 311.42,
+            "por_entregue": 0.322
           },
           {
             "template": "consorcio_clt_emprestimo",
@@ -1592,29 +1597,29 @@
           },
           {
             "erro": "Número em um experimento da Meta: marketing não é entregue a ele (não reenviar) (130472)",
-            "total": 21
+            "total": 22
           }
         ],
         "conta": {
           "qualidade": "Alta",
           "envio": "Limitado",
           "verificacao": "Recusada",
-          "usados": 232,
+          "usados": 221,
           "limite": 250,
           "travas": "A empresa ainda não passou pela verificação da Meta"
         }
       },
       "financeiro": {
         "kpis": {
-          "custo_meta": 320.22,
+          "custo_meta": 320.54,
           "impostos_pct": 0.0,
           "impostos": 0.0,
-          "custo_final": 320.22,
-          "por_entregue": 0.3209,
-          "por_disparo": 0.266,
+          "custo_final": 320.54,
+          "por_entregue": 0.3212,
+          "por_disparo": 0.2662,
           "preco_marketing": 0.3217,
-          "fora_disparador": 3.66,
-          "gasto_conta": 320.84
+          "fora_disparador": 3.98,
+          "gasto_conta": 322.45
         },
         "impostos": [
           {
@@ -1641,7 +1646,7 @@
         "por_template": [
           {
             "template": "portobank_consorcio_casa",
-            "custo_final": 311.1
+            "custo_final": 311.42
           },
           {
             "template": "consorcio_clt_emprestimo",
@@ -1659,7 +1664,7 @@
           },
           {
             "varejista": "Fora do disparador (testes)",
-            "custo_final": 3.66
+            "custo_final": 3.98
           }
         ],
         "por_dia": [
@@ -1689,7 +1694,7 @@
           },
           {
             "data": "2026-10-23",
-            "custo_final": 0.97
+            "custo_final": 1.29
           }
         ],
         "por_anunciante": [
@@ -1697,10 +1702,10 @@
             "anunciante": "Porto Bank",
             "enviadas": 1009,
             "entregues": 995,
-            "custo_meta": 320.11,
+            "custo_meta": 320.43,
             "impostos": 0.0,
-            "custo_final": 320.11,
-            "por_entregue": 0.3217
+            "custo_final": 320.43,
+            "por_entregue": 0.322
           },
           {
             "anunciante": "Teste",
@@ -1719,29 +1724,29 @@
       "kdf": "PBKDF2-SHA256",
       "iter": 600000,
       "comp": "gzip",
-      "sal": "F339SSzQREW44nXLOCkeOw==",
-      "iv": "kLWgCazbw1B+GBrH",
-      "dados": "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"
+      "sal": "0FHnVyaTVnR0Z1+WmNFBgg==",
+      "iv": "2ljdWMUQ4Feu4KMK",
+      "dados": "XCj49sVENdsr8yo+DPvHxNao3EwpkCqr+hHRiuxK0Bi07i8uqnUqssvNM538Cc/49OoaBv3BPTsTzLkL9UTbiL3nqY3ZA/uAH+70x7vb0ZEyIUrri8AVgAoAPOriiTD6YHb3IbZ8bE0TLvMrCmzMnPMQUHG7iZqf/mLjt7N1LTE/7c9ynzixwT7rNaIq+LD0sch/woMnEuxAoqXN5Qas3BEF4aQRo5RAMUYvftK7oeKRsmIxS/9EMBgTzNqQXMNNKEU+ROic/oeNPAmp+8dwNeG6CdT/Ewdcw83blnY5HyH9052tRtkYbfYvY8/gs6bKRgECVY4/d+Fjuw3WXvqcny7nFsuJw0JCLXg4gMjqFWbIjUuHRI3oHL/baxttpv2FRLGbwHQD8ePnE6XgOjN9vxjY8F84iNx0AMPHkYUOqy9QZrDmqMR2xUAGdxIftdBhYkDAvMs2yOfibeX+HdYSbvZdcLYD5WbY2As2Ed0Hf7phWDGN2txmSi+ft4z5DLJT7cC2ynCGPGbmqxNL5Iy92HiX8rzGYS36EmdoOobIPFk9UHFo+Tx2UeW45AabH8+KrnWpmvVBpUENnsSCQIN9HCkL6i/5NtDjRGoPxITH1/A2nqwkgd5vbzRWonXgII/0Ek6k6mq5phud+FXim9T7lRI6Wv5tOn/UK8rgnEMaUuv60LhNTv9G1b/QXQ9INBFFmcNc27+0BTlWIXLoxPZ/kvklbypZvVkxMlG6h6Yw6vj1Fx/wmQx/eiuHbcDdQtMhx1kM1TLrG+41tt94iCWhGWWlr2E4sPRLD9+0lsoxhznNT13SyYQaXReol9GIK8MvtbC8ATr3YG0C9CwAyAK41ZR5DzaxaAjsDPZXjQqY65HkDCYTVK93in0sTHXC4Jo42MtGJiBPx3LIP4RyeU9zcSsFH7wssDP9kb7hmU22uGLyVYKyIDfhzsLXZeHORuz4qn3nnIY5kNFvYlzg60J3V1Hbx48gsrwrkfKZrcUZUKBlO1VM7Mt15+I0Lvm6HIjVEOBbyC6hQjYW5ZiLKvLss2sVcy1cNYc7JvJa5LhxKNjzzKakKOd01XzyFxvowb6xh6UDw7IDgtjNEJyGbuhThVV/mgE5Fyvq4WkpCgqnYAsX73KJXbQMJbink2aQi90DzC0ij1yKZjrEILw+tgNmieCYznzHHueRNf4+oT9XntCjj3F1JJylOruL34sG+5huFCYog7MuenSPx+Z/75TLuktnDmergpYnqCiJVX9tZk9nzQ3s8D3iCYb2FQlSUcjyJpzXrgbl8oE0hCdD921SX0ghewRnbNSo3FIMjeULSYVRyxm5JUYM7PsJ2FMYXA5MYxLvuYi3xdXTBeWKD0iOdkCR6xtAJozaxrmDA8i4xISqejfjv3WMhbFp/exRJzKXvnSZmaUNV2RELZLCt+Y5aXSphWJcM6qqhqwsXVnOrSEkdr+g0ycjUOL5QvktwbDZobXxHbEQ46YAMh/vE7g1utFY48F/PQ7mwjLuLKdXT3Q2RLsFmAri6FRnywJ/0qC1gNMBKksj+PICY3pL/as3jWA6bK19JqnHzOOSWLGQgNMriDTPNZN/mthIZxC4P7XWRRaTym0IQlya2ocG2HKCsjBhppYcZxjElR/L+1mwF55rArbNwN4iBJMvu9LMf9/xPbXaL5xHV/NU0G4BrKGM2YTKAHF4pZgYHGfZmqMC2B3CkFBT8OKxPP7ebiim7e4W3cLNancobTfERAFAlyYS6Of6r156yS9Fh2K9M6TNUv/tGjsjiMaSO0dnXfm9vNULAdCcbnqzo6R2KV4vMQyTP1rDTko5FXaH8VQ8mH0pYqf57S1nydTLsjoR2Um5+CkE7iLWhj6xiPfWC3pPD8H+f033o7HVHpMBmFtYfTO23iI9HUlaGzGz48KY75o6HTwjeegbiQPP6vSAWkp8PewY+N6Etga0wxfFYO1ydWWvteVuUyGpttun+UzO8AyQQPnsC57YsCZOQR/UHo6R7bPH6nCCmKriGG5kPDoVia5OFd0eQvGifoG3KzlUrrjiDqUyP9g23dC0/5xMXXt7gN3kCqVEE0F28LLkdGbpbRpvhki5qHuc0wn8PBpu+Ef/EOrFzlJl8CPVqCRt4zh4UTPhP8mP6m9qVDm5+kKLZqseNCE+X1hOlfUozCzdDvUqZDLqhIEpTc50BaK8HQWRsUgJCXBZGe2ViQKsKaAo/vRIql5Xb84y/OSw9tTu1zvmEa94Fwk+sBnaVQotXJwjF5K06ZhhtHCeEsf15zky7iDKJg3hqm5P3ojYP+BCHz+IIflq7gtgBtdnVSylpJLI2YljWQawhz3mq/+6ZGE7c0PxL8G2k9MRpJzyL9A6zdAtrVigussmTZGoZDiK8VA1lqKf6tBX7Lzusc55rEWUYJ5WQe3iBIxwtAqsOiOgdgevhzqsTWqjPhdYzlsSZlYzwrDsBZbpvR1GkeZc/j4jdlAaAws7qn342xDuFvgQrc0s8Wwi3uoOO4nTtLaIni9U2qvvCn3Fusk3SWgMNkYme+H+bjVY0SsKlZM0B5gdA9q1OhIxyfYcF2diyIC4HIaS9uR1pALl/7gjr2ZlL3JWwHy20eLysqt7OD1AERPukarAYs+Xug/71F+asRWWcrTfWkp5oKP1TMFT7GwQrYNtD1iUDfhb5uIdQYjvi4HSrQS0S0RZPN6+5jrqAj6S6yuWWglHH6ryoUQIChEemxnNTO1+ceKoZ+K3cjcGCg77vZ3Aq2pZwmwQ7CxH09AziMDtBXKzBpW9Yr3+bb6yYjL/EYGflExE0cL5nRGis7yyIVxDCr7E2ILRPwsrAcS3ua+R3obI7KInN1Zsn8HN8OI/1UJCyfMHfUV6Mfhjayn4dAQLrzmvtXp22IHHPBwYpVkWKsjvef+ABXAVkMu70ycV27MsB49dIeTM0tyStPGCZHSSAwHJelGKi1ps+Ap7vd1ULktE2AzpWRp3XrjkJCy46URm/qsz0L6d1tiVKuekJGvQs/619ot/Wjiy/VY7lJ/TQI9kbbYEbmU0UcN2YSnfZpZ6ls8WX5REzr140Zut7+qrDQDvCulYPpt7tmUl0a+j2n8ftNEMWwSgeiSJyH8dAiZb95qbZd6eny8aG2eSk8AK8i0nDyHASmctI692qlfKAtlkH672JoQxjXEuOfeLnAa1Lg9rHvY9g14BZzBkbWiV7K9+P8rflSW5UxjABxNRU9yqVDlO+zb3VfF1qkVI/F9zY42KEfFf41HUw6QMKXTxHO5dWy6BUkieZIjA5BdGGmCoaN0b2p5O/BQmBShcx8vxqg6L6St4cvhSfeAZklwWHzJ64dkHaolz08S4CklryBpzehCz1HlPFVCDnQCrEOKiOURjlsR+rPVF2GZtBndV36jZ3Gs4xyz9iT3mMBF9Ilbr2WUWCJHMHwUSPq1B07IGSuRmoCBQ6M2Zk7VAZEtybd9EdzkV+bdbGGr2eLc6YIfYuvFrSvWghBPnbQSEGb3azV0P/1cTmX9eJ+wr+wB2VcbPn20Z7nYsYwm0l71l5yy4Fau/Gl9MIJWZ5oRUlwCfpga6lcqTM4q+FZB3CDWWWo7xF4+3W8/1DOr/0cvAHWI4j5ykAcK0DYg51l1hlLUB6IYNnrgQ1Paiweld7Wgi0hODMdA5GWHp+P2D4uHKflQ1dBsJgNadVGVhn55nE2YMJObgDxQAVYWBdg8QKXlblWv4sdjx0boZo/VvedDem05OsEbjKaFtzkWUC1OXC769CrpjTd9uEJCSKsfkgANlW8Zd4qCZyan2wqcCtz1FcGlVtHLkm0BSVUAVuFRRZFExbY236q/nm9aW2jY8ObOYo0LlizH8YC9eVSJeoDaBBT4vS6tcSZFxkmmeTPNsuTRWGqX4uzhRSsOhgjgv98ohv3bR7FMEoS1tA9K5xzge5MzKnjts0bPnTOjIs0LpgnvivnZPVwSp3TZq35ROdEzFrZsMgpH7Vbbkvx26Kii9kJ6cznanRC0gHtUeCFUAmAJjEQnPrE1FbVFHzLuwwJ2oyNApN9g4m2D0VvchXomKR+PAVi4q7YAbUqJaJP8Puqex3KpIbl29QyGHyNh920IVzBb3QS/ubRBatdM1kTZpKvuNLxkQQJNSjn9uWm1/B5awfWdLau6a1xRMimv4ZpfcS9hPWMyMfAUg7+8+K0iyn+5/bPVS8cJoiGIhRYKtrVgUgxKWFMWv/1mBo7GT9rl3KUR6/ycq5SkOVvJl6m+eE8hw9hvPOGIn1RTwWvePjgloeU0xM3UblfOA1mhwGpwUZ5LKzXB9U4hQ2MbaXpldkFU4LlvGNcOiHnAr3fGr4UmFh11YDACUQ6G6uOQev9W6o2ZZVa3eqX2p3cByrkjoyJ/DQ50g0h32+TOlaIcZwgasY8sLqfiYNzRq7YJT+cWhLRNAb+/YpciaetzhnjW7agjWHpXHIuy558dIkvvKyLWkbfhG4Rdw2QotAyOCgHytK3A9btpU9c5BfQ8hVHmRfczvkmQCXdr8ssLjqyFUYnSRX45hTNaShkLjlzn06UrrU2g8E4G3vV4susB5INNS9KoCSIINC19kHLEY2kjE+Z8hWEAc/Wvj5Y+NbGyJQu4p0+PsfnniXATeTDnKaS+zgkoG5fK9tISMjYe7xhG3VD7/RF2zYEzntyPtNQGH2i3Wy2W63Q5slvJCH8lS842Rjzbqp6faoI7T6hff+pKsCm8kSuowWgepwbswSj5c1d1l7x9cMkVQe/ceVwLdEa60Ihk8liA81L8HW3y90cGJU39Ao8rJkNSY9Gr/CJVGgfTuxnVigco2wmXCKsZTwP6rkgkC/pxDK/XItAWktRA9ysAzFWgfeeDdDZc+S3gumDngcu65w9CtuaBTzM2aK3fOvSWaHos3ubzm97zUbcbv0tkLrT6W3fIhrK+O2/gAZLuz9mWFdt5SB5Z6Uw5jc4ExZpjnaqf2cajdcAdCxlMMdGZ/bymu8xG0z/wN/t4oHkFXkA1nar5IG41TRE6pSlofWG1ITthutmt2iYyplDAF9vw7L2Wc84zE5BpLhEpP5lCri9+0Ho4kQHcWR096jrhC7YIDdZFwLcnnKrOw46uj7rlNZJBal7KP+kJB2qLb11SGBk8/HNbnK+dQVBvtP6LXsRf7iAD6BQQT9BIVMvOaHQCGXd5wqnZiKqRup4zXz+519GT3U2mhcq0oK7+/RQu/IPFMHSJwqJxdmrrTgBd9FkTJvFRnkGrJMrsiVl8l6WsTYUqqMdM20Kvi2BRO2TEIJanw8c28nFgiJ7b3ybk8o0On0uBpZrnR686kkd3h3VysatGkwLLmJTTNnoZSXy6fhW+dNEnnIvdp0l5Noq6SrDvQbDxP8YYGCyKi6spXybXEXnjAdxPON9czQ0NkkMG6sdDKDy1BiHcP/91fSoSX7OhhDmArpQ099aSunA5jtcAJAZaNnCI9gPIrtrPawuz5xf+LzA1x+4Ejdc5VCsMCjXW9Aw0yVAIiUqcgkWu1zsGe6RAzILjC/0d7k0jZ3tFxtgBf7yZS5JjHcrGlRScqhobTQihNVCMXHyvyjUOK2sFFk0jJg+um+KcLCAj2vhdrcX/FN5pT5jV1O66KN6dC6IQyIGcVq15PmDOMElnOu/HDvP1/P2Ag6y6CYKACQcfLSXTYIt2Oj79BdpOmsApQco7LcE+/UW9q5hg6djxWW3+xzfo/Pl/X3cqNmIJ2lULgmX+w9a7udZzZt+LF3Dw1P0B6DR7NjvrPVGSOQfEhGhAjso4PPyVuDWtmAa6UQmoQEDbkvwXbXIvK6ZVx2FBvUhdCwKmzbKBuGZfeV61eK4lLCKdfuD+5SF/CGGqsvn0IP081ncdqMlX3LGRJzhXUs6Z7NXeRFwkn+4tIuP3cwCwljFWV8tCJ5NM6t8IDSkz+tk4zcEvJZjTOQHfuVLjq59Ppqp3KIqcz3HLv2yHnkhA4BRRPZsZCmrlb0/5n3ZxmSvwESm1gCtmjTandEiA2DLy40+qJpXjqZKTGbaKk/LwR6vXRpgDg78cOqlvFCR/6t4LjYGzAxdM/SjSUiKopZrsxsy9yvXZa6b17dbs0vJrKoNe+0Tvs15IFggZcSD+6S3BFGYUSxGny1Ixl4qeVNP/3GA8vecJV18ownh8Q5RsEGLalvFkszdDgHY++QL7viKambeafTPWmBKRQGeS8rmZwpFEEPzhNHfHeaIdYj3gjKtDGF1UkK1RskCKUzJuqXFhMQWuotYiBhP+j4rS26US2Rk7C96hENWi8JXp12iS0Zp3r5yvJnp61VHYpoV8WElTavYSzUFDbbMFvhZc/W0QQYFW3zJVQ3KugLVuEEsd6M6XforLgMp/aAkezEKJDkz/11yWPShXTegs0DU6QX4e0D1Zdwdz9attdxIcwv/v8qmtGr204t06CQV/nnJAfaiRGRob9emaSx3x+qNEqGBRoWlKWKz7bZPj5kwcnmixjLGbjIHJfUd8PaOZ/VaEWdXymJqQB0hrZ4lja/sRhNKzl0XX42ZqQYTdBPTGnRLpx+9EMf6F8WtHq4fDq56xb1Ot8OOra2fVwPPi+Uu1CqxJZZgpqyuJNFUzWqMHDna+ge7fBxNzFoEbkIy4jco9Kc9bTKjyt9MS/Q7lhlERlDJktFGrxLxxPQpOWYlqB7bIXF+EWQbKW2TS2X7T6Jr/CgtCiE2it4lYP3BBd0mLlAJvGsk4ImfhpSa4W+2YHuky9P+WcM/EYDg9XUwVuT8pfqtpuRGYYU6KCodcoos1ZPdeRpYtJxnWBi977VBMfhwlVF9CyvJjifTjc5A5rvJMW1h2B80BSUq7TD5T2D0gIpEWsRhicA1j8XmB6R05dVEF7wKVNITmp2JmHBxeiXBqV7owGzMrztnhZOvTljj5fzUdmbzwfdazIX23qanF1JTk6kuSO5rdsjnkhcOCoyj3cL5o/5DljCQ8Nbh+4E496mXXeJ/6Z6yvCUHgFNE/Qvz/84d0vKCD226LdRFYkT9u5qbdaeHeNwQiBmeY8jA7S0dS5Ps5H8LC80DUELE3R70t/GSkYDSvTjuZsE08Xr0YZw5llF7aHHTWcTBjHyjv3tfLZpSy78Rb4OEGnrEkPOm7p77ht4uKROZ+cb3UogQdnio7JLx0sTgPWeB0rvFO53w4NvtlQHlvQgZf9Qq6uUOOZjvnwb1iMEGgYVODJbuUp9QwT5Si8XnzYdrsE/DnLEu28Zltv2jf/V4GA95TTCufBSsyhWFpIyO/QnPJ4XtVDf820wAKefUqxfXzhVEDHz/K1rldawltLJ87Y+CeWyCXp4YlpfiKwkxVmr6Ab8Rt3opnJwatW2Hp47ki5GJk8/OZkg4NAXJEnDufyZWqzgKjc6L3mxuEo5AQnZT2noa0EYbsjyOODLdUMuLVw2IhSruDo1UACp5YUMWs37gyPxR3+AkcapWwfA/2YiweH4HJbOUvX03EgHcN8lhFn/TUyE9htxR2BsmeQYG2uyYB03KqyqaOIBJ7gEaxOLq5ZojzY3yZ85C8T2r7V68i9vUt6PTypfHgTPFOHXxeLKsBPdXO7GMyrHIZr6IrlJIFRcDugDkS5qzRK/bmKDa3kSJ5UTEY4kPxF8WkRwZdG5F0WwyRQyL6rgERlbXc3gRFNTzVVBkO5g1OdqkcUlRD2Q0avRKR7eLZsjOtmc8NN4la7PbqcZboB6WFwSjyRz5zzWhM5fFeDC5VncQfQMHl1qyZP1ljqkvJ0jpY9dsdUCpFpNhgsI4lR5Bm0a113JCzM7HXigFfktUMGza17nWx6+BswHUS1Ag35R1g8Z1W48CWgUogR+dKXWIeqpUT1UTYV00yu1aWSdMB5HOxGTPPAUmS34Xz7VmtfE/YsqNW98mvZp9nfxZ6njn16qwEfKYNF7heHWg9sOOLxIBxESA+jKWxgRtglQh6oppc9lEI6St2NDJWmBtXjTPXcDfbLEkrv819kAKexqLdjVQRvn2BZD9r/KQqGZDcbWwZUGErDX7PVuEEAYBc4yIfJ/rTyhs0Vsw8hBsZBuZDEgrd63EjDL/OMhAV8SiO27L8OWJGlk+CjcKtSAwk/2/2Y1IbPfqxCFeDhF7T1w65hesnWvxSAWIIAPolGjWsF1URQ4Lr8tjFerZZ+hPvaV/wRYAUNkJb2Rjj9q5sz+5cJKWESPNPfM4rmhhimBSeQXu01TmfwSkqSUNjgovm1ndkRaA9po6+Nnbp6vA1BLSKS3b5CFELAPISZvrzz32jDDgII5ljtqdGWXI3hAZsftzEI5RbQvWlb08w9eNbgs709jS53ZHldc66dKjggK4Ym+vz06Gth8iMmKyiKlDk1L6o6NPmSkLkv0fMZmkT7qkMDIVvyM9SrGOT28cvz+ziy8ruOjrmfM5e6hFk47VzPIxHxJAk0Le/LrN+neuQgB57NDkz2jeL4u39cFuMMiwXw210po/o8zslCkRyoQajRhx3PHtWFlxyR8zn66Uq4Z3nkygqt7b6bvH5glmLrMSiOsov4F2LDGnd0J7XwgyhJqHLtuh10LGWi8NTcbMgw8rFzwfrJAMljHTz3lg0GMvZDJ5z2RZMy5PlZGdOxgLxoBX/uQcvrjXK9zTOKksItLjpNTr8XvCKCclp1PFKmrBGiWqS8gS9qMZ+6dvIDfr4i39C3b4kTWu0p/ASbOobPd8+UFiy6XziX0txMlDiTsSpqkQTDA1kQvVbMfJ4c3uKTzHl5QLDrhc9pCQrB7Zc4YPk31fSn6vrdi6BLj7nvK8veyXYeeYgGFYsfU5RkYURUQ4EpEvN3oIDFEvPXsYWqVL/2j8dsimy9pKErpmENV7siI9ByIVOLqL9ma/zrIqN3j6zmGVCv8ekph7P5kJspAcMgRKY9rOEcGMMKnO3vxxxjK6FVLGRIsl1yw3s2k0WFGsN9LEiQV1GMHBrCETiHyo1XUhgNaTS52aRW8Ow7GThy98Q95+MAfllwixyyN/fnKe+Yw40WW4Xj9b1952Nl7wSsnLkSxKOHMfowfhQvYKgngiAwLsMbqKNfuhCz01B6LlBfSmZ7mr9JNWueQr9/LPzn8PucM+5e91fVUzMrk1zSK9tUmdg5qU6EtAHve4Ycd4bSORTIkIrUPz2zkGP+nwpQaIyZDdXAtvb4RivSIvgBhk3Dtu0AWojIa+XiAesxyxNTO3U6mS9qoNhcp1/mYa5wUq83b3nTkdg3ie0PaBH5q6kEaxI7phgnuEt2QXebWtJIQ0kmwMCjFDV26ZIxco8rtqJ9WoPF2l32SSgb+iC4DNfZbv3XWvCVGArccHDx+cdKukW200cYAMn4mDHs0M220TQE9MHGu0ajSYEjJ31P3zim29bKB3y9hFmuEvaMfo0JY6ydOqDyrYBsR0czlgh7DdyS1R4bXCC/vBNnOMVBakOiJmjL3qmbWcWbnJxXIVHsStNYF8rcEUH7cQSzicsodpKrSillIzmkaeWXIvnexOMJ+6sIj5GocCOd/5UgiL7b83N7H+xyVyjiMmFOIizh5i0CLXLcNcVfJTLjL2VEkIaORNA2UwursmH3tFVyUUEuL1pEJ2jxK+YLDVmPPfk0RjHIiZGQgRu91xhswwEkmxdYIYeo1oUu3f3HDiURYyHuNwZtRdbXvv4KaNwbARnT3V5rDB3xKhRqNFfvobzkT1A8bMRptesPdV5LImOoJkJf06qPV5GcD8Hny2Q6HaIxGE2Hw1sSBlztHML2q5EfTav/v6eDQqqFBSu896of4eX88COaqRJkKEPa/YGRbfYGrDFnCgx/I/tuMUcljRbm8GtzFIskTKIyugLNXxmhKYsNxqhlDpBuCJDFORnX2r82T3cXsOpbLsUNVm2Tr08J2EuD5a4h9tw7W+7RUJW3BwxqgRgbmF6ptGv/fkkfL6anoC7GeAZsnGalv4YI5ISpRcOkSWDEiYbvoBBhtKGXTDmHSXOGaSEbil6bzsPc4iOFr7EfBqdRvVduH6YR35Y2ScmeGO3xnZY7a8hmxDSmgJ4im7VpVQ5YLXC31PUaGj+UDXAC6NdgAAWSh1VjctZ86L/5Y/mMhAVTVA7LJoVw/XRbp5w8cQHqerECXj6COLyKuGjF1RmcEszwzZRF3Ep3JkUnzjFwkhYcevLD9B4ClXlZaRCMIj9wzMlMBp3JEjPM8ZtU57JCWjb2bAcr1EDTgPrub7UeB4T1piuWB7L0wIDiHtHb9q/TuI75pZU5UureTOvDNESc5TJPp2WflOvo41zWBYdRWycZgeEEYYr+E6sIFXxF6ydyzZuOXPyaGSWrT3kCkBzJSFfnaumaKK4PU6eS8iQUGtkGpkO0XMNy20JEMXlAS8lq87EytkkKc+VmN4uG3GPaCPAczzr7pDvZy2PKp4rBzE5Y0Dl22UiGEVWWfGb2Wcc9YjfY4NBsWppbkdvLcsbocTHYDi9cDjQDap6cvVVOs8Z+q2+vUsIYy/1LfMf382YI8jLLQFOb1yC5HI9+Yqg0BrEhwbkLBLMBWq2iHNXf5BM++ZyBC17BCpoPemtEqlnD99U2fO034XE6zpaEYSI6HOyyJcU351MyRZolueRfEnTGDuDEbIo/jomstzk6h4n5tVkdEEKdFeT2PB+sZiQlj6ZJwBbnBWT6zobz9//rG8gZRlU+xXFN685YFBy+Lrwr2n4X7BSPhoWUZC7nUOmykEVCe375XCWUFRzgR/HaxY+dudUY1eyXznAi59kFihXHFAsKB6Bo2KE1lhfIgAoINAwgj7XRr1+EcnROgMUD7g18eEzTxDZ4co6zR8EPVjNvoP9KlqKdGRDbzQLd+ENpLlD5LnDV0W+dymqj1XMAj5G8A2M1Y/LZrubW0eI9guu21RbpSx8E73ie41Yk+CXuZFisGqr1QXq6oOIeEpLtZKl5ZzQagA02kC6mjYBpVEtPcsY20D1y00BnH++NCZGcuytBW2i41bA16WsG6suwAg9VKYcO1MXOKVM9Bc/Sh+BKY+zWfIFERU1BTqvGjrJi6tbOixNhsIYfyNIIP7mgdVnk64ojMPaf082G+MKjXewPmGzvBnCgiAfQPxELBE2nrojTnkoTXz4rljRyFYstWN1AMtHq/NHlUazn0C3sExPL0ClfNWzd7m7usXYhQAJ1mqdxLVm9Y48Y0sb0ejT8CJjetD7gULOcj55k2r/aVU9WVLGtgyETttZCo1zdorR+9eAlcF3kmanJa4vqpZnnZEC6CRJiVzA9NcxbcqfzQIc1+bPlDdPkx7jjrDs4h7y3DbBewscSgA+XlSniAJsRmyJz14O7VwenUYwVmExZ2CCh8bzzX0iJhR1Art+H+Ar8CyjFzrtCoExn0PsoMFyeJ4Rcz8pZu+kIKk1lXbHFSeU1egdtxagf0G9BJYQnGHpRZHfkc8YvK0HcY+UncTsd9LItUuEO2PZl1xEke+OupER1p1CKAuPWLEYSYn8VR914rBszHaNBGe/pc27k/6tKGGewbXgZAJ8bEAzkqb68p8Hh7eVUAdKzutU3c+YJXRPuShGdH7Y6ojO4Wl0I8ps4oFPmaGTp+eWS5wD5y5CYWnlGLEfwhD0gx24dCd4z3QINK4fSFJbFUThfE/5lCzZA8AvgYt79wGSgeo9uSXBHbi3txNBZlcCN2ksWorB5gFuNjE6Fgd8Pbht0zF1B1ma/wBelb+AkTk865MtQtQSnX6Qphxk6DRMAN2HPBadtwRf1mKSeXTx12i4uUuUHA41rwIJEwjOyZl+4DYlY3j0Vto6BlYvhAYAbyoowQuC0tnNEcE4iHZV+i6r3I7wbvrlYN5VM7P1tXVFBo7sbHnWpsMeifr8kuB6/swnNU1jbhbw6oOunKCIjOOlaqESO6UDqeI2XcQOwJ5oR9/SN5DNWCHGOb68B1ErGVHuhDj4dWeb2rxtXOe5Mqw73aUDO6jGYchqi9GKkRlGgBS/BG39IWHHIOq2X6rFmVsDhgYLylX4GjdRVfNZ7m1aIrshT8CweN0bSwefu93dNkJiHHyVMiqCoxLQejZEQKo3LJQg4ElycAjMjEIiMhTNPTGpDiNVd64Dj8CzyIhFQPiPz9NC9uvcqQB0Y1AtdcI2caj5ofk2rdCTE/nnFrKO/8yx7gKaB2/M7fvkc7yk+rNtuyV0sse8aWKKKti+CyTKEQoUyn/SGMkgFDP6yVW8FFrIC8j1moqBNXZrstHvHqz8C71fKEvjqLfAKMPns1Huyh2PeYEUcuLYENyJx9UTqK/iwvuQi8PBH6c8rdlMvCgC+UMiFKkDcytbrG0rawkwvNZmLn28cy850umxntboH+jMx/Y2x3TPQQGWHcJEQsb3szg+hrIglUINcgRI+WWLOwK0ZgXOW/QZafw5YRYBjbDWR15nVKTuWQ9A2SuupplPy5/N4g2FTnbZbbhJKtIZkGL9r6gL0Y5FXX6Jcyz9ShrtNZm8SpGAsT8cpsdWRiwl1+9SdlqWOoN62wIC5jski8p9GA5TFTTm0JJF9DqF65wXw630J7Ex1Rs4D3scScyK54+zr6EoLkpb6Sw/NNJTwH3xFC4uhX7G2GsAxxNiGCFHqO4PLucwLCUuvTmGBZ3yZLGmbKJgrV7Xg7peS85F1I5SSIyYSjE6D4SEljFKYBqkOJ7ut4CoiUlKAADIxh4Zu9IWZE6twu0ZUpd3Pzts/FYCqtvJ/RJLbRBHqUUcB5OVZ+Vtkc3qHysbkC3kex8wJfccoQoHG2/Ig+OJCMtTkssIfWyt87VcNqYTtRH5LalQK/7f735DsVN3lHv1md7b7O1d72wQMmICQJPDLsX0ZdU8l9sr+uV8dndNRob7jG7TVU3+tskGioyXVJ8goAChxjVBV4lfgg7WSEqk3hcsLONNzJE8GOSmBUkkS0uiz+Lo0tOolFB/05ZN3F5F6jIzR1q/mIZXBEWczM8Ykv3sxOx+X/+u9PnPKnMMF9jBNRsM5BefdrrQbxAVhoq35z4RocTaWa0Zv+MwwHOCZujiCScVyh2bLuTJ3KMjF+MXvZ/0iIDLqUccy/eYAOOE3TpEg5fSDXR47NRDZJSJoB9JjLTwqwYhd97iZXKqH2N3FJhhUpbDadnxPFgs2Ptk7LRWD5psfKxoX8Ooh0tTO4aGYvC8qT81W9I3KxyjOhwsf2ydj5eM+/w7RIEQtiuf27Aq4PJtXegMJMOzcQixrzyat0kAEEDtxXLhXxstoUGorZ2uvkC88/jM4ISF0hB6u2lzv6yBFt5voaAVBYxiTqN8KIz/PlzCk+h2VrrpIEYMJGXtlR4UHQYdmhz9ZPYJoTcw7rq087vvVhc3smqwB0kwhnVDG0Xk7zuUK1yJnZedioqMcwqLxU9zpOpPjNM9zCWwKc9EH5prvyq0U9jAcMKzrUoY16HeLnLAaaDAz8TtLYzwwSS06YKEE4Vb3PDDQZQG90OsjyDR+FN2VrJq4OPL6ShxeAk6Y9pNae3d33WoUfYYmaT5g2irqTTpfrIV3sP0z/2Sxy0CLEg36uIae2DPGWKrm+Qzh/9zUiN3p0XCauMJujAs+InZGTbqZmaKmw4VgsOLrG6ShkJO66LPyPbycWWE2bqKmT0gSar8ljySEGN7b/6wx6tXL3PsvkFvZGOE/vfdg+R0jzv8KEVldcSB+xk0xSYqSQrukoON4jdeWQ76uoBI0QJMd/Q2mzueBfJ5whgzBD63AlMO41wMVJhKOHRGVabdiAeeKNE2/8dtfvXbX0u3gVxOwDw8ZyAQ3F2mm4G8sXN9TY5n9xqqj6/qqeqAabYhxgURC+CQykVLlKYz0+kwESxgoRSI4n7LhwZlHhWhwIwennJZXhtW4cOX36bP7zybCR+OkVKGoMLnkudUkyL+NVzHqSNB3x4OdVWoA51ConIQVHSLg/LQjyvHIdh3MOJqL+icL+ws09pI2CDWbbFmI2eVjkzGPb7mfoTLcCn9hZ8mNZ15KyavvHolx35ENn6DCSHMGUbZPr+WsFrMPQwqenZaWRntZnsPPbiP3W8la8OPqcf9SYrdAK89nlkkPv2fgGmZaeLgvzNmq9GBBjH0mZ9yIu13yXkbzeYfalUw/I0IXW2mY3FmYVZWRbmUldr9xtJH2WnrxutUNMM4UQ1DT1ir2Ixw1wp3uImnn92/FOhxkywdnJn3kGIOqcSieuTBkUV1lPSzqRlhINPi343rRxaQXNrTi8WwTR3p+jHPB9XIDTfZkYoiq9PbEDP6brSZUS8cNWPftEPuVh07HshtYT/U3Anlj4FBOAZhsHUPOcS1sfd4k/3ajcG8U0aQ//VfTZURI6xwP42ZOz3sAZ+9d5fpJ87R7wNE8QJhINpRhCIJvFimVqBq+g3rBCcTr2RkOSaSTUpRaq6gnl0RQEg+PCcssWie5DSHTOp74Yk9kG2Z5wKlWfAir/kjFWc0FZS5Nf8PWlOvNqr4lFjtd8wSzioSOP4zuWVmqg1rl+gPXzgBFMg8KOQWmX8DytHk1mNxHt4WniWNgBENX1Yta4OJFF2X6mfs3xla2Qmo8CJdU26yc3SDJyc25zZPe2v5sCDDi5gey/ux4iLHqGbcSMMuQXsneXBB9P2rUPmz1Pjdb3sdB8pg0qTTdzgeEUIscA4SSt6j5MOelHJa72xOWIQuK5mBkPr/k3YE+WaDQXS+JW9N1GvupeevXWKWfpC9OX9V2Mm7ZPchTkLJMXGD1v9n/cSrG3p0mghgRhj1WfZcw6DZoCRv8hz+uLb/rWOgi5LwMW9H3EBXEkGzT6sQiL6v9gZeRxERyi27TCzpLwmgWCCGRAhhN9FRj9BF8Q198VYNXdSr2LhEF5R0KsWWwSdUR1LO7v7jENvzBvOqSI7+HilbbqkHcBU58t5A4Jo1rXZ2viE4lGn5eXi0CmV+B8mIX8o1Vq6suvOjEOhDSeUVIJ9X9/knh3UmLbOjx4GW1Zpei97hAq0jdMnAyhQ2tVCDqVLvmflRvXUZKmI25RGtde6tnWYjl44z7lUbBji2/BV0hWrNiL3vt0jhBYVLUb7CuKnwQdpVyeC6Ky59eUYKcU+IDiTmP5o5oEXl20Zpw4cilk4Wg9dJIekCL+vTfK+5wx+6PWVDi2dzksQD+JuyEundgHiG3Kxg+xEG+Z5TzHNfOtfCuyden46Bzfn99gOQ2DkzQFWsQlmHZkZ2pxaPXhDsu7sf3GeHWPD/mJ0psYZjuE5gmUO3QFZJO1s2p7kqyDjoetj29Zlj7XI+YL4vzjo9S/kZxuwj/GnoqaWd+YFauju0IBj4waBUX8dknMv/NfVCkn2ZBV8q8vn2ylH2bNdZWSHd47tmd1nfUqTSKwbxEh2Jk9ea33BlYSaUDT2rJLaKve9aQgq4Fzukt4LrGgTfUMY58afrhN/8y7GhcZTAaMe87bExADFQnPDuoohwRdyllTTGW2NEDcOqMg7FMawwcC9Iv3lfMYBpsBbK8IAuf1uj/tNaCyg+8OHfotK/8sa1fT7+AwFJUTDEsITwkTv4L5EeGyOkB8bJ6B0z/G+kGV1Swti4BXE2HukZwqGevbypoOzhf+LF299m5MU8JFrD1faW1FKXl1PduCn1y3MhfCTb2FCp/f6lHUYWKHMuVWEvQ8jcwGSAhb6gucr3Io91RZd+drvXDcM/VkZTx5ONNMYSIjIhfbxXGkask0sYM/NhZeZ4OvTfV7ZcTAyRt8MpJcqzooqfhGylhThiM1KM2DEjjpYQRxqOXOiZ4zSW9btDRRTzh8X6J+Z71791poW8lgTSjRoDpPaFwf0tscJFA2nqhRPrfL/68Q9wNmNqiCHj9L1lxZpMyXIHqqKBWnKQeqhT5wdLThGIOKxjjd6p2imHrNthvngRbbExan2mCBFMsVn8UKVeZvktou2p3v4bsDjqyUuT6/PalTIVtu+0gWSLTLEikY/NoViKMX+v+vQfwnAq2uo+Ja3IlVINNhGKZ8cMfOAgAsCvte7xaCoyeaJ5LXMoVjmmk4T1L4z5h6J/55cmU5CZY1HIRXmBuhNmGOJ5Z00RERLRlX2TEqkIsW3v5UgxiEqHuQQm9wySHzLOVbBNnKntfkiap0l/QFCU4kILi/b8sgWjE1FKhA2Dmi67gxU6f/ohL6VZk8PQiIDeg4AGzcYNhSPVTYNjdmXYsoSa7OnCkbky5846lj4uEMlSuw08yOE/hAfmmhGTOIaZaIVE9TtGQ+nEphVsE296iJJLi2REWDK8vFf8TY/0q4V7G4QQ/R35DDy/2HEBjEj3/D1+Wrbj0ohPTg0pCuXh1/Xbkmd4b4QH//X3B8MhbCwXThnLlPdrzARcwJVqmx+49kfELDWcVDSZUY4LJvO3CBVB7VfYued8uRrohMaz/cQ778vMZh9fqrKozwtr/xJsIf/PBHQbBrJ147BI05gGiy9cuQhWOA/iSuH0vwi49Ekm08V/22gcTbHgFrULKNFRFnHBmneVUIs5l3HIVfYYsm71bVrWKVXVaSYPBKxfM+4t6H7amgtY3wa2JVfein3nNw1LRCewd8VjT1ntyU801Moryl2kIBqJidXVFrtcBapMJAbC1xE+AppS307/BOFdvxEX4D1AJg49iybX8009D5I4RKsbpg0OXVl16SdLue2J/+tpl+WOboYDyVuSM0Evi154JDaDuD7fh6S5vaLtgwJGpJ+zP+EVZO61hfLnciQRPZssb0G+OQ0aWK1+5nQLmwufE3cLTvAvPrVIE6oxHsLLLYSQMRDrM0hcuujUrmefhWIwww+ujMAtUW+ERPLjNZuvWgyRCX7cRY/OA9xkazXmHFC39tUYEeMwt35BImo6UixXaXkKqJ+Ou6pnIHTicCPFhItEP2Rf5hHSEBfhu9LyXlmpBT8SsfzXLSdp9LFPDySkH8jFHFc3J4J/kVO5QSferZA7kQb7IL56MZkpb5Pt65tOCmwio0AHmFh0CYsFa2FuvrAwlIK8kKhDWhXB/2KDW4Uvwgbg3LdL9VhZWsO8N2jO9CQfBpbKtvxWAY4ZSRJAX7EE+JIJfrauUH0Ib/ROxL6zmrBmT2MvSUFhv/eB026HozubcMabWSi7tgZ8QitrUOkd8oZA2LZQ0WCAlCGR9bM9Q5kDB5wojHiVsPgL5EnEmkMKbL7NbP6B3DgIeO/FUWn208xp2VvMIHJDXuz/wFD3yI2lr1DzYKu7nTDdCy90yR69DVfsT+zAQgDXJfrLn9b/nYZxK7PuTBM4tFHk+QAAkRhHqn6Ufxw5by+F7FT6T2+xhu3iPHo2OiIRBlFZ27+J4BX2Tesyw6tgB/ZofLQWYeBkYc5qJG9Z77E1zueeWiYTVo2hvzfXl9NeVFTKKZeGEvQEL19l7CrcwneqnW+BG5Nryz5vpUQZOQbeWbc2rKxaAbPBHnHz7WEgBsbGQ6KFs4wSWjYeKX2lvfaJRA3scV8mkBiOe9+dp2eI8Q49TZ5Vux/dyfKu88fxLjn2M2UppLau/WOEJ1dQdYJZQ9QqZHGZPq++zkkZ+7uJ81VK7DZiVi93hcQYyRxX4cBx5CWQ/zF5v1BtcOBc90ySU+15wNPoKo4XN/9ISEisJBTLyHWfvPvewHT6N80Gr53g6uPJqZzP74K8uOOF648SeG026bf8BETAfnoKukGPp09TuwR0t7w6eZcPdItA5LG2NFY/E8CJfcB2Oplz0UM4MInYXMtlfDTJHjVBPIXPNtIyVYG6BZb2hZ5/XrjCFDCjleu5iPi5cj+zAtiJghu8/hzKX3qvXgLpjBy2DkJoYsNeHYFq3cXEf+DFEKefrg1eLC+AbgfkyoWBCppadQKIdSKSaX+0ZGwW8oLt1E4geOymSUcwpxaNfMyxFEvkaN+nRu2HJt17WxdyEoVP6KgeG/zEYzM1vAHbijhs7jeLrwmt0j1oyIhnrNWzakhucFLrPjlCjgLv/+0WV+cLnh0bc+jbT+sXXlK1giQLmpIQKErGarL2GgYSmrvP56DqBn+rltEYHJL2ejxA0tWNu+WeKwHv0u9+4r7xXB7MAT8vEI1Gxrc9dFtDtD5PwSI0AHDOaU0w+Ooq70C9K3sP/0W0rgIinjkCKgmOnSsxngi4xIfSB9CMSme31QvZDgp2wH44YkKoHxmc9+FcfnNbWj5TWR676mnEPmkRKRy4kZG8wEvCFYoeywGX0DuLtPng+MV6ccM1kYhdbVxvEzMYKho9hbRFNsrOIxpKZeDeApF0zBOOVihOvvKG680y2R0oIeGiAbT+aUq5dsn8KWHnFo0Z4uz1z3P3tNKJxeuTPYhc6UDZQhNfTqHfRieSM7GjVT05bYDPxfoCpt4DDnj5jWY0oADk7tMauKBSEGtpDtxg6NVpjBpMzHZE4v5b7CZJEvaHlMfXNwEEges0CJLWIQ3sU7DJ3wgb9RM0WmVkN/2TX/u0wkHdVFwiWERKJL77Xt1ebHUzZoptoHw2bZDPlEUlu2AFA8Q81DypTWgnVbZ6ArRGoI0Yi8/QRzIX61Y1ZUwfJkLR+vr2g7RKH6i/gsxDJ93CuGf2oW6NSRMDzvbKdcs9qyL1JBcKoEWGxZTEp5h9rKrHjyIj+QBfaQjJUAHtsJWdT7kjvap+1mOsAUIrTnKaCid+xSq/fbqRFNXgeLemjzDZEcu0sn5/tGgWAY/UrAE913KCqQwHpsE5sMtPewcWRSLOHyAESsBWyJbDb2fv8KdAQPLdw8NyxTlC7rABx5o7yOTJ2uWrpyHWRofY98OY9tRiRosYVzl6J8CTmvMxsoZo03rZQHfE4Yr5vrEnlsw05OAeO1T73H+qZ9B8rO/YA7B3PHCfBApFV6PaqELWTtKuPmNbSvI8SCHTrRZFDTqRpDgjsPnLhv6rsB+3b1YRbhdqm5X1t0pbOo4dZrnqDXdyW0gGarMSyl/mFYitufBwjBxxJlR6sEmjL7WSrZI26oye3llfsxFh758CKQYIvWMWBu3M+bdj5xfiWWP8V+8YCuV9YCzauVmuB12T+mMhq5DWMmAHi/x7wIXbTQaZMFLqsN8jTqjUVdf+6k9RO610C8G1r6tgRHxLLvEQ6MslEK4kOZwcp/4g89TrVlH2JyVcsA72DbTR/EmByTQIm9//6EIPObO95kHt9f2Iw6HhZZDAhtwVxjg0jru4LfanFRCjeDWkV4Oj/heuGf3XaFFVeVTVLfpC+Q07srBtbIm+OCsVqAfYxNaSwofX5t1R0EKEfDpLy6PKYU1FU8+GcOcr3OhamIuJmmu3JJOSUhntUb7SG4Oa/F6mI56E04sdn4yU8t4k5oktcMkbF1OC9Z4WvpFFF81LOwKFP39avynwqWQPGALWkDVkDkz2n8O0hHww/6Z8vaMMSECN/+NOFIKV1hSrXXrwQJ9lSq9oX5yefW9cExw6ozo4VPJb1qwS/Ak0jySgY8B2oMqLDTKFQ/vlMDTsq39wDN7+8QpLBQqcEvLTNNfmX8V2LCxSym26141a9iXqfjdishpCX8QgJqHcGoeu6ogAi57V4TwM9tJ1qpW52IJ8EOA+VZDLWq/aFwDu17OB63yrMxhTHZ8PxVT/KsLPj1jxN2csAoiaqMQLsgKR6raJH+sd2bVUz3M1EDYwYkk+w//L9Btp7vHg/3lrWxQ+xaVcGnpFGJC4kKo/qgN7Oo3Ffa2149EcV0noPS/ed/qtsJS85R/PTuepT6jbcBRTYExsjvZB/WXkLqvrj9RoimE6aUJOU5y7XYycM91uXk67afrJjkL6pYhn3JPPUgNf3MrrWXfn9ukoAD4KtKzLapG/173y3EZhAqoQ3Wh/iWGqZlcE1V5UKx0CCUIEzcNKE9f79L82ozSiJtJnBOc0CVuz9wc3l1rt5DuF79GkDx085tK4DleykjvhtF64ur7uM+KS5c3xT478EwOuARDg703caeXyGlOoP51z6MFbZvYHwKOx/v/tB0N6uCPegte6+se8uqHozw1BsQZzsVc68wiTerVLa0xYtSl8fxSEO00iz7OP2EqTOiuBDtQHpFc+nhg0dfnmAf6R3kTvamVoPXzZBP/K2JRuLTuOAZF5ht/BwbJAB5ZBXQ8+eMBhEhVW6WUbp9swK9PnnBNzouumW0K/LJXjJlF8wCOU3xLdiTWX8cKN0efL8I3oANiRY1ZfW3kLw7TYR3hYRoq2+Wzpk7FZkSN+1ZOuS4OPA1KfH3D3SoFfOKCP+xwVEpweTVunuoOc6h+x9VtbRxutftCndMQByn6t3St3qf/gIDCrti9ovEfM3aXlMtfFCoWX4pEyvCjxwKeFF/UhAdKtx7RBy3iqfoRfTkWtNCmPSvC6aX6HbPbf+IxhUG0xqfH75LgUv1D5D3C3z9LNkFrq1EVgDHs4vxIob9gqZxYdY4RPRtrcPj1Z7GOvz9PEsV/9OpnH5z4CZsOOSIl3kkNt0RldKcYXvH+O58Lrw9+mAk0uVBRzH4nI7kdMG6YlgEqx00k4iP14FfsEkLlqLTrbOqMnlr8PQiBSYtvlTYPK+L2ATori9JNh61FFL8aj4W1mVuWCOWl6JgHZdGps4fjpW7Jk3e+AxfiaRhmM+mRP69SDGYi72UH3sSfMsaTNqQX5rIV65GlLcgZ/IpQPfdxRmNl+Bs/c+G8pHgNheqbocppm97lgHSjBWKmxo+DhUVrMjjBEFOKIzu35LFa7wyikDqGiz8Di9PK9i9NiB9arOkRqh0qRT3hyijstZuk6drmG+5PdJ4/DHAASjTsBxEXUUxJzOHqz9DJCVQ5Iny8vAkxmLbiBvgeeNnO02xAA8gX7OXHT8i+R6HMd0T3MJnuKLJOvyrBIT2sb5ftcWPATt4ZAN0847Fa8XFKTfFf7oKywE1KkPcTEynCOa8+n2rgivFbCJaqVHVYMczMO+zwWlD9pZku0ilsjR6L10V9rajRnth6UZfaQZAq6c12HTFW8WRMjQIbn+1oIeBtCl89ZtoXRIK7V3GlpXOXujzTgS+uPewaCDekj6UeVZPx7+If3g9C7oG0bWTvm/gqsu66vvH4rHopudajI7bi1/WoVwfVudal7Z555hVx7SJ9mP7gC9RizHo1V3FdtKf41UcsL3Cr1yMV0lxZaAqX7LpMsqyFRUoMKuw9K4O8BBnskVmrfq4zzswTJS4c5xXLYiXaoiANJQEG11ICVFBTIRVuygWhv7saVbZM2sL66Ka9Kaeslfs7xqHnOyjw+KexHqr0+UEMeLs22hjuaxLpvp/FwHl1UIyhnvfU5SSkSG65+wEdd07cMOa40F4MQRj75k7zxKH5m1kUD9HJc3Qmcj0o40Fcu3XwYhmIXsyL1xG0ujHnnOfqckJLwnyJuKXMNkbdJSjOsNQW6t6wQMHVgh2kgnsGBhUzpBuJ2X7lljjq2x/+rsbBesG1h/rFvMcarqNDk1KhEN1toWRXTDoeT+Pria++COJ+MnGEY6sgubOyodUZWNNc+/uZwzPWYwirl7sZl3me9GRt2kBsypukzrKG2Bij1no+1Pn1EvPnx1yieG7fPW95BJGIgPWRSYgQ6Nz0gwdgJfs9gdRo8kCETfqvXbdncBUVEdMlqH+Z91A+VEKZbY3gy1ypwr3S24GAuO11YkeTZgzQTpkwB7g8RdipV5Wss7YQRxW/RnCZv/X0VIZyN0RQMKIV5oDhkEMU5HxPJ7zjUrwVTp1P38t/PBp6FQHUfMX769rt3aXxP8fniW+7wE4PtQ+vixj4EMj8F4aXNV/v1LifjWtz2MYTkh5uq2sAnsIluZEwR1CeF3Y3xk7wjK5S0LNdZrklVKXanqWmc/KEhJxUWB8Zy2hlCeLcmTWyr8ltV2+82I7abN56J+psZkzQHEAW91WEsJ3qRQlIp2OLYYFxCrWGPU4YPFDFb62OVzpZVWEGJxB3OsRC8M4T6Idhwassg69sFhn61B0pW/jUZcjZ+xyVuYH4YVsnSgfNrVAmqI0WxXr2gu52MqRa5Xws3e5t3GxEYYF0M8V7F/eub1MaTBat4HcyR0FttQbrdpzQOOGaH3mf6VNd0we4IHdZunAfxLiz7w+SxcIaGPDj9wG5+x5C2c2rCvWnjT0or8SnhAHsAED6ATP4sWFgw6Mblsl94G4sCzMfyxFq6Nw8URKblENNDWrNcIKUkHNg8aw9PkVXf1sTpOlR8UFmfSi97xttZOg+ZFwp8de0QbsNxIfQuc7XLSFRMaShLIZ3ABYjjESDkI3PVfpdoxvx6YIccuQQaaIRlWPK9DdNlZS/Sv/llXcB+A4IeReOOHk3RfBIxigUpk2DPWfl9ZIT2+iwqG1pdLRKhMqyd2IUHyLgpm9alFiuxf4r3wzdLrtzxfUx6srb7IUlrORhsgPNrZxPgXowRicxWa8i9zPfaDEBl8pTZwVWUEE9sDmK0oxDzXl8p/ccqqZYZC+XNuSpGKYnNe0B5O7iM9rPz0mgAML8gM4RPM09LitKAb2+cqZATadPZQRfpewDXOhMFI47xUQZonhRyr6qO0vjZ5tdBYQWIKOBDdZ6xCsQr7fKyhYilzsTU2EFjMFyryIvGHGTJGbkWyAvLKJc/MtdQF0nXasniOxMTTl6t0jw9WrmUZzvvbPB9afj8k671VKt2FeRcYzrsQI8D9SBRGLVmdsAGJQ2XDesCMJrQ1DI0cs+2RkrF9hlIpl4Amy7fmEmy5Kh70Mt04cMT5Jr4vLuiFmB3hwaAK112vAUdx2INBrCCf5GTMODk3s7EfXQdm3q5UNb0P9m2u5VWZoHDm6THgk/+jeM6anEICHLXgluDNZ3TYmiZI/7KGAXFiNIGo/1ZH6hwIJ7iS41zjElFPqJ7iFofOjCSqZNSxXJJTZP7P8qO4sly3OxdO04S2rC3s6D82z9+Tcl7r2JHgf1VHija44OdcLis0RVVpbpVO6/1bJChTMmxdr8kEItVFHfs3MI4/dg9He1tijPmvCssvoGBflyOgwA0yNyxH0tqE13kYqQv2RCa/bfQ2+5/8pnv/10eldwAFPhBJWHpaqc5HB2nOY2Lb4OexhP+/dJIlDyeM7B0Qk/340QvdJmJhqg4eQ1V6i1gJPBaySa17+tnnqUsYUQrk7YtMC7AAmriuPFcrZHC1gdH13jW6YWWEeeyxsFYPhTMlZ7MWeHnfi9hxPKMqIJYDxrBHVavnw9JQA58h9im5xHjOX0EgkIdExG1TyHnKCkXNXcGZeY3FsEgca+AWXs4iHmSSnNDx5EFo0b5tuJdUK6Qvqar8rAsjaeslbOKk8EFxB9q3npHlwnajGNqY0/8U/QkyBw/Zz+8UshOVRP3lKnfHkK9zs7g2FJbw/Mx8VNklhBpntacAOXJ/9X92ja9jfV+yfaumPOyMqfkQb5h8L+1om30iZb1QDFnpZgIGr6iFklh9vvSpMTQc8vq63eDizC6XmKHDMDY4iTLMAc/5YABkraSjyB9q2M7Z/NyD05rb42T/iVAwDpViuk7kHfa5QcemYO2qeK24lC1rckbrl3AY8b+B0eQvHWAYwPnvti4dqPlglwE64OtwJ29Nkii0FNpXiZgdCSB/9CXIVr61Jid4Lr+ukBu0aXYWOzgIw0mK5F79hDyjgxxNE7A4mQh/M2MANpd8R3LAcmzLCdS5SdaoD2+ksHb/U9BoQVErH3brYybW0/beZhQGmR+7H27dlsAtJ/K3ouxBycXGS7fMrUcoRapwCly7SQ/SnpQI8FSO8ARWUBlN+8G6FPcbmPWOuhUXwbKTX85IotosnQZSqi4NOmzVRBI1LUjmnW2pOArXxQM32H1T9gBwuM03cr3kdr677mgtO3YNR+/ckPdCeJQvQcKQ/bKiCR9n5jeDZN0batIoAEzBW3BJ0Q+Px0AR/rNN2SuLGGxTkQ6+m89MtpjBq9VC9i5kscRC/VDRcW55A7XDS5W1WdV9hZ8aPaUcHBLTVJxsxB8Uv7NxSW/QILIbNY40kO9L+dCyWo5u5oSqWpZHVn5oW8ZKy/TShSBPjGyFlWLSlTNZslSvdyb3n2NYCuKmO20393xuxcZQA6Yr2kSMTpPzO2td94zzxog/wiDR6JBpr5ALoz1Q+3cL8g90DWooVVsYn41xinNiGDp6H5MtHyCg0cbjyk5gzd3wXm/TSarNjZMTxnQVtijr8sevmxwhdoovm1WT3tpyGNxH2PbehmyjIFs1kT+cxWjYu2tizJzhlDq/pVyrdQwzAhg5B2AcTIfxQgmigLTsN87PDjQ9cbCUt6iR1Fj73GIupEcqIX3iOoR77lLONr1IWO5Er/eWR7iCWWBNdK/f9OMMTYxoihGBgQPJeiLUoepFLliP2hWCBesSmfBOo7cKiL31k4omgBlTyx5vD5KcdelI3QC/Z8TzeXVbpnA45WzJ9dJBzZ/0dMLLXi7hWpEApFBO4TBSn8EW8cQDGjwrZzaudWOKZpaSONqOSKr99uqgRAz4dBETfZDiA2EXUB+Tr0pHq8O0OKDsRyH1lQJR+jTbAuUs0F88pBo52UJYBsB75N8DrhFJ5hOtH5QQFlp/8GiYaeo3E2jAubO8NVsmDK+Qwux8ywKaZv+0aj7wvRVEKQbdal8gSNSYLOpbn3ePZOunYqm8V1jFtXwpHGMH0faa1wFw6RARSQNq+MaXu77mW7t6KXX/Ky7gSbb3RC4NZl+bCBAEQeGiJlEPCFCmU73bswRrH1YeuiEEdIwMk4iziYlACJOLNMvrzkqQDjWFCCEyPirH5ez/wbIvYSAAT91ip4r1QOlmuvEDOh8EDXj8H3MH69Ju3uwU0FML6VSTj99IMUAHj2hb+gx8Mirw+V2miZ6yWZbcDD64bqJF6aBS40uz5OvPXzm8AEV62H4WtmSmsHudJKgh03c0orBoN/fro1TZrYAgxT50hKDPheR15+HJKt7PVqk4J8XqQCHJXnKOCPuprFRruc3ZaUcz1UUAh0mDCQ9dV/tyE98Z3fR0kPxbIrE9ReVywzjejrXVJ9BOKbeDybOLYuOhz6ZcUkfMvcTHUCBwb/w3aMhcLrc2uPcNL7BDO0VAaeQ/0vm2DP2kODVhz3kEBcNB351hasP+SrVs6dd51xWP/vmOcpfzeqVx9WoOronFKHHcUxUMZ7PCSKUqM4YCtdPyaI2xM8tSQNxhcoE7JH/O/KuYSwRI22wvpaUL4qt3SvqQ5EZmVjwUCJL87YYUzWJn+N43/kGSF2jp5sfpkkbvHyxD+QThTMAu6xBwCT2Jfj4qxS+ueXaM5csndi089s0X3Zgzbgwfh5sckHYSJKRbIbHbOXFwGuu9tsTYj8nXr7iTnUrPtprAXw0SYDQHx6pku/ZqdPL8fXFGT+bxNyftj6sCtLmCKEOKXr+Tc791cbYn38rrBcC9aEZOWG7liJFQ8h46xuuJvRSOOj83VDEVJKitlN9kVrZxVmfXu8z56w6d0TaYAJOrxguEFFlFNChedl33bsef5SEH1nLV6oglUGuf9LlLqAIEUOcAdRESrbebYUje3Ivhq0yhXUE04H6ZYR7lZw5IIddlBvYx6APdgpyB8/FeoEc8l28+X2mYGX8iCn+MU6MJ7wyIunQyGqpK5Ip2ly90mRLHqrOdYI/ak8iPDJGelSLFMe3MHSLuriVowQ3LzMm3jjWZ6En/jeuNcYdkmdd8iRxa5F6BFUcZ1J7UnzfAxE8INVVoetpyjn1ZXpXE/w1H1S0jm72iIw5k5gfCyYLTkOaDcaIt+WP9LSAEueHNZIwVFnwe+cpLkfKPSqUGzyeT2wlL/Xa1H90Lm65+JYP/5G62kLCgisQ88iuDCM5o4Dibi+rlWr3Tx3LmyaDclmSu4jCz0kXjuOLBKPgxLH3Bw2yggvGn9P+UEuhw2wQNNd/UCs4mk0GN43dIpGc2Pw6fZGj8fQm+9aZ/atHX7GHngD4grFpiKLd71woK6TWIJTpg6KrJi3ObX2IUVX0Lxi+Fa38GFE7i4Iw+kE2zC4FbfNm0lZ24OEaHQjT2/hgMfRhk9R5pPtpsIZ3RU+V4cTpGPvM3IgdkUu9Ru7qGR5f+htgPQYi4cjvuiEIaeh+f+rwszYFSBIFBERNkqTcFkPcDSacSsq36cSxjpvSUx6WaegVwg717qMZ3jHrb+pqCcHwD+oaSlgGyqoLOon3xOXc/HRLERmQywID0w8ohXZpKB4S0t6IqG/cnf/SLoQrxfMrwdt+ZWB+H5cgJBWbXZKaHqfxmDwCVFyDuD5s6A2xuuONWgG0NbSJ7/0RoMMUC17ELYYSD7rbOcFm532Gw1+EGr/xflVJFwqnT2MaIlMkDv4UgM73sBsYxHSiva17zXCLB5omlzSv1cO5ooH5/A6e3n+MCP+/ST6DpGVrfnsPN6Oypeoz+5PkagR7GalK1garXui2uhSDXzgKLaFQRHgIaKUAwx7hhwAAiTENO6VBkpha8Tgkxk8SwYDmPavbnsNZIB9KCZ0jRPs6OJ5V37PvZlfMAqb592ju24vRm+a0pD0K/zKCcTYBoE3pDKIpva0cX4gLYE1bRcladzbR0+D/EfA0Xz6pFTjxkJ5ZE3LlozkYs0HcWTxJFfcY/XGx8wW/PwNdSM1a9MVp8t66sxygcxYiwqP1FVrK+xynZ7gkjS0/2nL9vatTUe1qno5g1Q0SjzLWD1C1+DUkvDFp62zLaoOP09X51owHIo5mO4JXafqtuEKVEb0+dnVrtrtD7CT7Qezc/y2P7LUGRguDY5CB4JJoLLzCQLtqMlWTT9rMlvN4JUdm+6Pva1Nbo56nXbdY0i9/B5F2YGSi7a0nIftyMOC2PxF+n2FlX1J47Au60hBHUNxC0cH/O0DT4unTBkJBgRlWYYcHunyNxzvGaDBrIB9I+cG8KXNvygTMSI2JrTTqwPTXXkABQ9vMdPJc1xgUG6tgHRjmQQCyGi/IibNts4xMwhQo9aXgIZ9tzugsfAFTgjzyN4JKlQ3AtuJ6uleujmHSRtc/+smIjnocILlyCOsQNEXCi4L7q7L1zPDjMwkoQdzuMPnu/Gz7km3yRmHJlrETyTKax4ibx11b8mpEVUe5iUmBlQdkpECEaWaSWbM39xkc/M36FRUwDpH/KOjq0Qnt3gbS35tHdV60cW6On6CaSCLoxFo2AqWV5yuH07wDmMEqKC3lVdh3xGO0As/Ec+mEpl8bIAKvsbWSVjAy2E8XgnjGXTRXeYlWoSt9zFPtEKL/rEHE8EEmjV/6nPDMaTIvn1vRqVFjy7KPFhV2kW0rNJSoVbNZmKvWlczp+KcKjYrVN3WpeqLY8UQSQhg9jOcQhCYUqxSrOTx+gMXea8B2OzNcamgHNV4v9zA9clFyrCYRQmqDm6XDJktIJY2zmi1voNkI4/8b66qw7zbgC28nHGzw7K2y6pjR3EOMya2O8XiOzfPK6VTyJgqL0Bn88SxtQTQqlKqzbXbBVYj5kyLZbzKlaNn5J2eVdwA3BwudpS2ILmg/UpphFBvEoLzv9adHoE3kI88bldiZT12ySNNfbYwv1ogO443ka63FrmiK9lS38QoMNKsCzD977KLF/fChk1SbsAJomongpxOt22U38eJjyxnFoblJnnDn0GHj12viw5XZSRBeR+w12TafyFHMrkXExL33dk3xEBOnlDKJ+148RVsfTyjHT0oUTjNSQpCq8d6kTgR1Zv7aak2qtwFBCtG3le9HZDZWkBz8RAgg56PAFxnJQY8dPsT8N6QJBjPIRSQvROb4vJr8as5yjFsaVaa7yQqJ+9clKuk6zqbEXMdvD/bFcUZ+y3iIySf0F9aTnhaiJxVj7q3Ohq4oOMf7ckPkkhF8ucqEG2Z2Nb8Doyb4Xyuw0SLcn/RO0JBmLlPrZDnhYfBxE4Z8WWQGbHKgHejteycTVoK6uFgc5LhTVic1rMqlUzQEfCamoEHGk7RwBxpRi15xUzicCgAcKHsDmcN1cieVHxCa+6ADfANPECFFBfctDHUZkJhaUDRCJaYXRLP/iuMv/kYFTbnF9Oy6roEeB81DNuIsuojq/f5VhZY0qhZEadvY/ZfFr7q6Ufyr99IpvOizUf0sJPz6qaM4L08MNJ4inw8kmQ+bKQUIVKC1VQNa7WcvayeJwZm9RSrn9h0RNJ5lYULq5PrIHa79+VoN/KoxhSsfqprZEmlFBrUgmcD1aaFfkaFJgM44CNyA5a7EPCYsUqwPgrJBhijG/1Q+RtOcavngtQ5764rV7FT3lLsm5UhS8ZV21p++xfP2C/lHX9KIspLKPOJp+uzrmQJF2B5no+nleCGK67zOy0QB4N8pMhBwMY5bMH47ypNAMhRWRBjjSmAahJlrYfzbt8oP6KWzdOL1lu43f0Hw7GPrzeXcIsC4Cvx7maCA2xx9/JWV0EHQpQkiPUItwJ7b1OOwcARTONPB4WWt9uxO9W9CRopmGhnAy75yDLwL3NReZSxwl5oaNu2E58LREDQMNjrflCjO+xi/xRFwD2l39IJ9t3AHkOdkROMksCHQRrYBRzey9/UANuqu1XZpb3iSRBfJU+uWcvVg6Fz3TB8PTHg7N7OMQulgm8Ia71Tm85Rk4xMFi3v4l1QOqzMVWgzytlZxgxt3ltbWerexfD9mDyoXrTd3tG0j7qaL3RjD0g2VyhP0PztpMWfiZWMYtRQzzk9cNMJWIzgMpbOGUTM4AqTGNYhp5HDKigA3P/AiBf+U+BnntL0Gaug3OFPZ+b3W2KdjccrEjZ0cuqC5C4nb9g14R5yj1hc2OqcnULgYOeWKv5pumbzEKT6f8lL9oRFG6eHOlqr8ArsGj0rIA/Ivv7yr6QyjU5+89yzD0Fe9+vYpvTprGgCQLRKimZeXD0LZiJBL6dFDyix8pFT13uWdC4JEQrzkO5UrSlnceWixNQxX9EK5/lqvACObqk2GdPXCR5Qv7kgOgz2aBzSlmoGhj0YvYmZFxzCWZdjJxQqNRX/3y6vtHzqajBEXixVuttQbP/qzk8oY/uAjqSe86ffnxzFBPf1GOGd2KT9bTpN5PWeASsl/Fz4G3df9XEz37bP24ysov6l9ndXXd5oh5LEFeWz/gepTTz5dkZt+VDwj3g2ca2oevHqM9/JmU1dUzksl0aq0VPAB9IW6mN9UzkA07sO5EPXtZ/eVoiOXlh/d9EFxSeShJNS0SArGGx79RobjqP2aYTHA842VC7LNpxDV7obZh8RNQ8NDo39S+nOmHpenLIXRW1bW2SHgmPfAmJuc/RfBINU7m/H8lK2PhZy5S3fflY4NLO9MF9ZNT8ebac06Xby3wsDat+wgSEp6RRL5f8BVyD83IQowoiUroafpk/3BczIbfjW8d4EnN4zf0SV7szdvciOTWQHbDY5nLpSNt7RdS/O9G6BrWWNkmCEiRhKb1i8+kFRRMlOhYhVZJMNAzZP0HmEVwEzadqRP5Gu8jv0q20OBP0zYSYgheXGkfjFdjpHJBrrjSPtk1BB67AYALtoG5TAqpJxrCYnDBB0kJ+5eeF8XAR/3opcVhmW/QpuzIbqW47P6cQXseauoomgCO3meD7T7kWKKedQYw+X7MccUlQUXL/XsjHrNi2EDtFNxLZqXDYelWf1ynANjmjLevvDtHMUrZg95KvfU0+q7aOQpjBI3zGRwQeKAFFRmd5lVa6ZBD52eFhtrqxT+D2qzEle+747ximvB6OylS8ASHJQ2I4DyW0ycd4QhjPl05mbHn3rKJ87eDBeIk+Bu2rXP2vgCahlVCMQNzHBNqJaFZ4a8nDxWtY94uIoxPAow1iUxhqrzZ9WSRCY19QIBZ+1xHlnR87nWNkQEu8LvRTK9vWw9VMA9gVDU9kwocGiN/kSXY82+uS/jwsJxTZAXuJKSVPjka1Oah7J/h/jY3ZtFyyw7NcRbIoYJAqPi9PnxyYFWWX4mcYvzoiFH76Hogu2kryqTgz/taxJDIkZOhAMXT1lRzcvohOmikQ4M+Kyh2NR8Od/GHySiTSnOWu+pLLnYWcWebNhDTnI2M0Yyod+ejBWTWoQs1ebBN6lxawhRzYy+w4Lvqs9QO7Buu2C2JAgyjC0qbiB6so/yw2aSjL91WLr9QEtYUAHLz9OaTdEOerfht04LZB36X0k+Glto5mhVSYjG0jCDozO/vpU65hG6bvUlhjJeQ39cSpHEB0mNRWuPEuuB5jGXLXVuGcP9ADq16KvNXq9/JpdhMeEQGS48bDMhH8QwS4BuUy32mUxEK87vg5hcXPVSKGYyf35+Ym/Juux4Tf/Dg6Avexc5zyRCFraEChCd8ZzQT5UeL0XM9WNi5RCus/lNHRVrpUfNZqER7VMYgNmdiyEUy9cqWj3j/i67vH1srz5+HjhJD9Rpgt9QxqCH5S1f7ofkbvgYGbMfRABcYcBqYJpnpEkiqfi3WvV5jelqHNMKfpvELbYfzfQvglKonoi/Io40FL1FoV+KB8XpVD76K0wPhBNmXwG1meKdVLyWXwTHOePgVz3+Y0fOPDu2c8GWNEj3+CCXZ7pnRLfvQI6yLzBrmybSp10znVzAE79CClAAMfkIEr9ti0YBYy17odHPXq39IZdOo+WtYaEPO5iVp9SiVM25DmT/Sufz969KXk1qNoS/KcDxnBQvZEQ2vQYgWCmrfbo+hsMn5d4Zb59fgCLuIMw9JjOuh/D9l0EdeE7/uxjx7BWiwqNgnTZzozCB3EYjDjfjSyrsd4Ccfu9c6TYDtL7Zy8V5ckU2OYyLP4nNR7ERBrGVWamwO5e16tH6lbKq1rXMd5AwGXf8vkXNnBKEtSuXarHuuRYrvZwUNVB6MPUA8KrMhf26horISXptQO1wV2KG8YqoHjslOeE8LLf0g6tWfJCFjHqM6LbGQRTV+CekCaRQYDqP38irWH6GDjtDs8B0U7c4g/NIGr50mIzHfTpssz4erezFwoIKgRIPL9fQJGmY1EdFLAeMPHtM/HJXsgKDhVVZ+l3eieoHlt6cD8u3FEuEV6jwRWX9s2eHAQpHIyCKp+SkcLlA/sv6jDy+JAtWSYHG8gF08WBJtGWjvL1ZFubnv6k+TfLXCe1oE5j4FRcx+qs61iXC66u+HlOe4L191w7BHSfgp7yPN3z4j6PkoXh2oOLuQtbSHogijOd1Ihu0UIhQKkhDQMlQXvT4m+sshnN/4KyEK4AiISvmNyJCIb3/rbDdP2wq3e8m98nk73dI90WRRAA2Z6FRhdwL4yi2P3RCznw2Wl0G46aHxArFkA9DphB2l+gKcKOuyxUOAmUIJvPu4i9prh9HL/Qvqaw57LOOl4AlHRk5rKIOSBMne40IICbT311xexoFCQKmFfEmSWd4lC5dEL9MDy4BP1XG4HURyiEAY5rhUkEifVrk15ehfxsnCEpknUIb7LohmBbqswUadUllPiOUqALrl5KpfcbuX5P0CSTkk5vB7SoW6HlgvItkkTf+H7a0PlSIleObG4snJ9epKv1L9TvK5OGrxGceN5J7TlXIDzSW2nF5RCCOTiodIWL6G5D30f/+NRsEQXc4rwlZCDjL/5EyDvZGipmDL/fsKYvb8dJX99PgM/KAA0qqh9RRO8PkHNNw6nKEteKCGqL7MWdqnl9vjV3uNElicOwnSXPM91EtYPvVYCKoH93x3gs8yWAAH1qjwuHxc03bOGWozOkMP8em27S55Rf/uzfaiUh+9qk6Mn5dfNDdQr/xk+qYgYe9iSIKtGo268yQ6plWo9yUemrAPT+XIJapDayIEnnauzGhaMV9HSgTIg/luh4MbAs65wkooVNjGwfdaGQJm3sDJlvPcBo4YvgyVPhC3V+uZFZY7sEL0RY1BrdbLr8hCsO0v8iYhxZCQtl1i2riCZaStSiUHwy5mBYqboLbmSHe6Gwyy4KyLisAvJ5YWeNFPxzMyU4Zkqpr6Vx3CyoUxwlt2jPpjaEcqsUOQ3PTMquGrKYby7Bpj2JYVNN27UHhU9wk/dhO6BBw73Ucf75JAczGIbFL0gd1de5UrNJw/ciSc7BfnFKVKhwUL15BmsSOyP26K2kVV19UQISH1vxnECldyNxdtvmMLJWeHsVBX8jUQTDkblpzDb9S/vsVNd+RgM5OED7fG+irxiIOdGUwDW6tj8CuDI8i90gx54CMQcopGnu0lnYfWDBRAdKnzfoztiFVt6RGe7whKArxGC7JDpXV5zYM0mpTz+oUoe3d2Nf4cnyMf6FSdfEIsbC1D6WX31mQcCs1UFa67aWBqB/jq27QbsHy+FPGxTYdVFmdH0JjyPil45EPkq34F90YCnoZuAY5shKB/DUp3l/q8HyTWIm4eN5LFyzBLTGNTukdJSF02/VojZNsDOFquaISUrVNkRhGVH8Zn45mbQT69LxSd83ekc9wngAhuo5kTp48mGspQQ3a57nJrQC/G7rY/EN3ZYNDwNvo95+5vhvKD3Lekl/EEaPU0ZltFC6DlyXzd9zojbjgs/iJXSaieITaWdG1h/rOvwNlsE4iuEKGsRJwQfQ8MibmGRyUdOj+aCutjdg/qhOZNbyomGHvUM4DXpJrTQVPJxAEH4L8Qf3/kE2/EJiaMjN4RRNjH0iWqLfLnQF0QdWTlM0iFozi2deqscM1+7aIkEyNQaslwyWFKflpCRjQ7dW9KItGaJu5mdv6sxzCfU0A+CWG52gyL4WrzggJ4Z7T4HYIh+CuCvefij6GLk6fTARvPKFfkxhl58/9radtrNbz4mhaGZRi27VOLAapddFtNk7Y0JiSGLP3c5qkBrrB0tQ5kVrut2bIh4p2Kt3crbU/U+9mb7A+XYmJbPkG03ioThc2leyV1TzZ4YzqQ3syff9xJ+wASf/zutv/nOUH5jerUNc7iiafj+mZ0Br+dToJrzhgSrUuTr0Q9FgnJjv9fa3nH3P88+EK/hgN0zWpOnO7jeNa7HEZGm2CTRC4/EAu2bYXciZhXK398nilOE0ZkP+WH59F1ptNxXYefBtPhtSf4zYnbI8w+zKB2bxrPcbazMuyw8ueEa6GBGvb1ziNFFmar1ovCPJizFXNtV9WaHjQgSCCBpHEXs6yUdxxgm9KIcrb9mCgEG1vPdGKQr+uNgrhgorRY/pGH6Cpety5l5t2kWg+NUBb3UWvu4ZNtSJiEWqrqD/dwHi8op9SRB0XwYI/+euw3W60qJ7Qom0KRYV4GLrsHl2UciFJbT0fgiAxkKY3t2YNIaHxyzuq+f954aBTUMmlphzOx6A8JA0mqqJ1JdLN05IYtmiK0N5fu93Z9/NRFAwmOgszsEIvHgGdM5UKQ8ktH4QTJpisNWc2gRUPCVf4IkAITgHu22r/c0HnUg5tXHM3GCGp8CIEqG9cLlUlDFL0yWemu6hEYXvHkmEkJvHIxSTk9jXENlXjMgE97/iGJ1cT18F6AsdjiH0ItzfVafG8LW7aEv2DDjIoUZ8l6vZElyJR1w8GGhNbSbz1Jat3t6KYJVWIv0XlUmR2l03fx1qXePEslERpZ8gnk0JflEvOwKUBWdg4lVGexPCj8suZ/AJtVigVIF8TCYaX6vbKy/DnLFiJ3LCYnDKdhC4OSQv2835ksWRxSG2PyqnxZlP7k6CENfUj4n0IkadDrXT34OPDYQLv2H6GojmoXV2K3fc2snqjqhh92QWPjr9yu5nOWwgiFIVCatXQELgr/jrRWKfkTybgDjEK6pvDu4901mQbxobqwokIAUD7pd98SChjlLfUSu/wl9g2JZPlVYgtgqB7DL/tJQB89SuaW2od9qzD1b8toomxyvGz0Uh0a+NM3C9O8FcQ6taCtyrqNEaNrv3nFlXPEQxEhw/Z9Us3etAou4iHiEvVqhh6bpqiLHREG+BkUIfkQft1EURhmcYfPkZgRE3jvOjeNbAkxclvWVfWR+Qs56NXQTE/AHtMxC3OAzujDn+BmC++1fVHY5uToWNeiiEOb0BDCQVVmk2W/7WtNqVBfUfGEwkzpKmlhmjhw6Q5uZuPMnQdj1enLH/W/lN2vIHK530q9zqmnzshZw50+bO3+3Ptw/gt2QAUBoUXTf8qkirHqazftKZTqeLaFTvVa8tr8PoILBaQ84l5C1D9ww85PeMFaK5//Rr6ZdO0oHF0gOExOF9AKtuT/bJT+yJCP1kyd41kNji67vax4YluaY3q2ZKIZfzVvD6Bf6bNNiiVdGErFhtUGHHvIslmWJrlWgbqULDN9G5rA1oYLE+DF0h8HSQADMs8OTAvgKPmrov1f90AVogz/mv5T1Qe6wT5lX3ekiNqGSvLyza/Y4LZLIjj6EeItIRnShhYjm4k8eCExXYi5qNtNSECC+ZntXYDGg6PX9jkT6vTjqrdxZPoupgc6rXU4mgwJltzrduOyPyJ0ZXoVYMeZqgjnz6vWlwsdlY6CnkZcUvO4gQImwGism6OpcehdxlgDZwD4u20rKVNCTDMLQDDaLawapE/zc2k9yJGp1zGreKYafAT5YCcbLFKGtCLXvD2n438Sw9I3tZD1XiPbSDvbI689nYbrU6PhNe3WkJJYIpjzdiT/aU/EBhhuQ+4zM0unqjv6jm8uKv4WCjy9xXdRyL8Y5AmHGxI27t/EEUQh1GPF1aKymrYobhSxZlyNlLezk5oEdfDnM5+ZWmvoWayskEbk7+U4V6myVfcyrMb/Jo0L/m1biUaaiwLOSPpCW35fvt0SJcYaMkGcSnw3NfB22meHwdVd0Ce+6td54Zx3bqPNCR+PuNinTfnp/GcNeImP609tORkb9X3ODt6e+kmD7pcTXy+0YBFHziOEX633Y6aTZLwrbVdF8b70cYO7wKLUe8jxBUnoSWFNYIf6IqdhrkTk67RGcZt74LkTAmmTtL8bz1F/uC/UXzm72lk4cwC7Ti+IPcU1LiOxOKxh5nJfZfeNOt6GCs8uFD7f/81s1+wiVHkkYR8TF31Y26Ylx7FJvsF8Rx2S6flM0pdKS0VyXxYjuZl8rnO72xOt/V05xfSpY1vYlVmZHE4VFu1+2Ipd1JjfOPgy+aylzmAJGBdi7Y4YC/DT44ArKArOK4+okLpQl6x8A0h1BxKJZRaBHGQdwpQ+0iq/tH0HK53X4FS957+us/DIPqmNCecAG4824APCsn77LKezVCoKmeMhzJh0PFRs43i5+RHG/zpOdG7NtIpjjKYNO9AhORtZI3vYX0mGn7XNtvwqPRPNgA08+sQYzriZ0f8IwnCLb9gCs1Dq1j4hyTGv5kcYXItPuSePyC8Z8pX3pcoGEkkXGwJboSLj+Vh51dKb/8K24w0vowxW9+lAQH0u+9CTAh3iHWWwyEiZli8ftciIL+cT30YMtubOM2sA8zpeVCxaHdUpfVO2ySZUqdqk7J1fQfkO4E0gYUcYfP2oUl4MziUewjcpSDKSbat+CkHiSEtW/zwB1XhVEERebMJvXQqnnjVgTFy2J1FHu/GpyD5GsWEwDyIRTZKIGoFE2Y0rTG2rZ9sY6hih4js+J/aX9AiCCGm6A6es51hSuZsVclw4L/bfzUrTPLj0mc3ItPMENgnDShTXna+EyI+pkD+oMWyZUk0J44eLAzffnij8M3iBzQeQ5bHM40ol+4bbw0W/wqDK1NDyFr9LmNGs523by+hvgHYQ5kY9IW9txExBfthMuk/3KM/2V7N4wRczohezKibgZ0BQZuv+5O8HHXPalqSLDCsHvI7i1vYE0/tX/VyBSHjASfZpjOxwJCFpQfIYZYzO2LIxA1kMSoIkdfgoC0TKHfE8EkG7QvXd7IgKKDhuQblqNoWX9EHmY3PqBz4/cZl2EsDIGzheKbF4kdXHQbHlHYdSbu41hAoH+DvkRsHN4N+vPMD7C7+TtVcEqs6yUWbWJeJII7azqufQr4cVwtq+4C9IsO8g6n+bGjSQfTvEzUl/oxtMfi8mytaiVWJ/kf5LNoIZneiP1UoOZJfu2OPUzMLH0/a5Me9zJZ423S50Ss0ChdfUXkifdRe7FijsOUxbf76Umy5xwDrZa9pgmnCCSbpthRC2z7hx7B18Qge3jL8WacSeiRYUEukgKasQAU5l/uCnI83OalgV/NnixDcNhsbCPLrZRqykHBedkCgS+/ijL94YZa0STY+97W/Zse8nDWJj0LpOYozdqsaelOovyKwKpdN/YijCiSr0CLwT4aOHFTOPFiDrhTkzeUlOtTaZQZUiQCwBrTW/f15Ra65JnoINyYOtDoibNSZKdh4e6Xflf4sY8fn6MAa7bKK4rjOY+08wxWaaMOenU4s5lrbnypzkPKseojgvXJMEwYc82nIqfZhbZm3gt2QPmbTIV1wxop56UIMcWz+8fzQ1CwfoAnWpBO1NUyb41FpOJg59P+IPpoT5lvf8ehzgKkfrcWbpO2TiYT31IhnC3TwLs5T/kIzT2RaXzgEKjDn0S5wDS3xwaK4ghxLVuiia1atg/Jt7AecgicSdWgq0KgFMw5xxNk3tqdONCCJtoyJVLNDKvwqTCgTZhQzudOFobWLqL3mXEU7k6GhU5lhv89+d/+52gkqR5Sm70TXFcUYOXaljguF7F/29svoyOiCTpt7bBT41Anz2RQuv9fmodinaFrZwAJxhwg8YEV1F2QyZovBguCACHxSVI21klTPx5PdBGu8we75tBLO3jadPl0mhNSjyZJmifI5/wqDP2D1dzJqDigLhptk+EjE9XL9R3Ibme8aui/jmflCzOH4DvniGl9t6WI/R6AEBqTEYyk+yGgxUCfzJeNO0MJN2XJO7zwcW0/ou46M5lBtU2kjZF2oRAXkRQocU0ZsvbelevE1eyswYCPXyee1j2eEf1/Qa5q9keNw3BnEiOHTOGvecvT7CEWVY1xBX+bEcYBhqCvDVKraF/+EdVwDnJOOX+Nroqoeczn8iBK3TtcMT3K+AF+aumkpSRCzBXTnHtNu/Qu5oyUcIrH64VwuBkqim93mYsCm8caoVh6fpXC7aD4qCspV5PJNKeaYEGcgYJGzZ8sjLw55MTuNpuARwXqErLQHTOchbZ5/0uRTRj43BAyToRQfQvYzwqNXijbwfzIsBrlTG/YBND9CgXyAhRqkvHzVao9EQgg++gy8qbzfb7VfbDbkjy9OJFIYsKXDJXhijSTWfes0sbRPa9BzWF9p78mWuFAZs2aZfnE3/i2aFt49vdqqNXCO8qbHaVh2CRQyiOR+AcrWc5/3mi2w1tk5jVxbqrpnQ9i+nFQ0Ukl3q8DqlVwqA5+6P7RmRg179cCHLtFofAZTEHtJcEgq4HCeUt0vthIaLvUOulPxyqYOttOYrnY6TPXC3vzuogyYZAMxLR6aWrgjDNrK+6meduvpNBLAyVM4gtnorEMtv5Z4nkYE3kMcqdBrVsQWFPZc1M8oD3p6oUjQes93acfuNruSfANA0tVHUkP2Djk37cReGu4QVXXYKO+HE8+NJk0LU6lJr6zJCueEtQjYTTXjW5BA/Sen5ir1z0VnEk7so+OV4hchJrEM4xIiWlN838Tv9g4T3QJKdtCt0jkeLomaDw/s3GMa9UCMka+fZI6EqOKtyJyzee/8NeNy4ap1U20n3QbPEAZQjEocU7UxQNeCu48Ze/4mzqXSHtttRWXXlye1zZOrq5TcZ6dwsXfmzoPvT3gzkenh1kNxJ3W0FU7m3Hfbi+Z2QqB8/bnDzBG9ejHax8j+g62Z1cgGzsIudwmvNAevBMDNhfHPP55qM7u14eVidGmWmnjZV1A6SFcmoJ7K857iEE7gFMhjqp3kHMGLPD/PyQjBWQeZA8js2HkTsUaL/5363UFgD6+4xjk0CDsFQZm2Mb6nbW3zNC/ycpWZrzZkRU9oIyCe/Qm2vfDUax+O926qurr0XHcltiLbo5Lz2EDGo5nvG2ty+G05JiwuqlfFCU55kwANmay/css/mN7OUcw+2wQw46Xm6KIEvSwLaQLlSoqG1tbwLz8vxowxn3Z+i74r1J25Z00WiWQNlntfSLUC4S76lzkDsI17Sa4Mm8NJnJIiixXDzbQRyvZuHyvu2yQXl7+i2Lv0giiVvJ802g4RNeRvQQb8So6R7VE8mTkzUl5Pe9c/+3r7eumIqliLZxY+IJ8EWyRGlNuWKec0oWTKdwBNBWVCHX5IXQjGaV2qKyXx9cPAzZcIYjTy9o8b2LU27BbCOIb/A9asF2wu5XMWbxx3ojOkJP9d9mCoprxBXNbIWbK3Y6bezxECR/moKaDFtY1j3cngj0bFUXO2aN8D1CV1UoRbsG+4MUx7dyVVHVp9HM0cejq4KwGdPP7VIAVNQF5GBEqmrT6qEql5sIkXflFlJnz9f5YrRpmAmtR9W0+HrD1+tF8b3IkucQ4v3TcrjgpKYU8/9lKQhG5y42CQ5SZU3mc9BPXzmNvq7eWLh5iaPatdHdQkvpkauSdEF+1dVstGLeswj/dPuXzLKYJJp66sjnw/sXB3dyUMJYPDl5tampMURxVEDhcAtsLKkv1ua24dpuTU6Z3PfXDcbobQBza9P6arfyoqoWbAdqMlnUZUkQqbCxrsspw9kUwElUcLaNeMZg3Rf7/200M5sjTJJPAZliJ0s9qHYRZyTpTpztNbrmLkS8KJ/6o1fGwUxNlSRoXxr/WWfn08SXeO+Ra6k2FSLkXg+YbSlKWtSydBrXmu1AeBlZ+6IejqFTxm4nJ2QrUP2ZYmqeEVzKRfJ3ZN7Tp9HZxr48XTq3gnbFZJRMjupKyy1GY/KbkRwPMX9lm/mzoZpAojuW5nEiXmYdAeBHaT6PAKC0gjwi8aUfrd/yCEb+F4t/iAlcp9UoDWNkLtzhQl5QUvMF9Txk1idtYDPzr8jtAEVUu9OizpHOU0febGU2D0JgR9cLVf35xjiMkd8fK4YOOda5BvmNO3LVYaJkhNN2Zz9fWoENpr5XCravy3GLI+8mQXPHToCRTx4N5U9SPp7R5GWXDMKi7cHdUe4Akky/xFaD2EFT+NsRxkNrfkQzdat4v04GxGctXzPm42bBoB2H43ifwwHA9IEDYiAdVVCGAhGdxPHB6bBqRUykSQIHBvBMNNDAMYXGx7hZYs+q1cRIntt/uM0IUBXjWohWAfujz7sps+uZmSE7Uorz8+j48hko/7OjwBwm/joOdRgdt8hHqXvzfHccXDUI+7FTObcBxcsdg6cmFLxvywOFLOEWFr12mAsEDZLW5RYVlYXxc2YtthwjMZDtoovetCVEyeh+LTQVz21Ei7h0plwnfgq0zS0ypbwqO8BCumGq23m/8+CbxBGrP0UNvG7E8HH6dWQdyQzKnesuryllO6uV2nOoxULzby15IhJD+NWWlFida7isHX4ndInSFI0fl/ZX7raqdZApQbd8QK8z1d67hUS4dGzE9+rZoUSXolNqKiR+1UcR10GaaclRZMlIqTOAStaZIcA1wfGkFqtyHJDDV6cqMDmSx5rO7QMvGaRDhK03RmPNymvs7o5q2eSPgDYMFfPFcRA6osxbdOKrEWd38FjszIy46QwaxixD7Q/ewfSQdJu2+E17VuEjsMjjFT1dRL0OiVyqvU/HlK2XBpY2MgMb5r6WRMP5AJW8dpm4NTsdPg9j8FiBRJcPwocXfXB1SJdKyqMf3RRiUEwH7ia0gDZTG50erqaDNFXmWxyXkBbcubq4+iDrfuZmKVNEA2FlOOZ2ZjG1s9IpSXUWZif5Yzrd+BtQeiwi7TLGubunI1rJsq8HZlg6x1+S7mXHr+xmehN4WIO5lw1NK6rxwfnwi1jQXxWM7Ly1Bl9H961Td96oyrmAFc0vfTB3cQH7hIgmPp+zZyloPDdArzFdS01+tPZHJHASvq6y8RBad0pz++f38THzFBvr5LhoTGBvZC9veAC6kHRXaqZfXcVLC2lsw74dLFX8jxiYNbs2WRnFtCSQgD/Ig+GIHXyMy1VOr4i4XCUO3IAVdBq8oOpJSxfdZmg40NHEVuFhNTGHqicSaOpWj830YedsokiW9LGwVAXyjPuv86M23qJ1UY/Ikvv033/x3R2TW91arUj5/so/B7henjcPP4JTol6TfY6DOzx2gUhCgeWgR+TN+3eVC6LIVapk9TXDHiOCt4k43MAk604RuoyZ2lppzsx2QXXXy20D3iZMlOtgsASPL2hIFwtnTQ8X10gPXYKdBNM/gOyiqbbr/SzS87zZsfxgPhHR5MNhueRHmITq0w/8NzgyEFB4DfCr9oabRCGjq6RMdr6kEZog4N2anjAOP9lwsprXUy8VpvX3UaDYjiNb7GHDuYc1tkknkzISjqG9sf8pjt236wN5R7CKrGvCRzL2fX61aZ1/QijSK6pIJN3Z2tjj51adiGxLa37Bq0lqkdJVLkDEUoVB2zoAIm7ev5n2FG2Vd5f/NY8X7kWS0gjQolKJq5bAwWrMWVoIZLQLgtDGAC77nRhtquQh3uGsN9zANG+Aeip3w3+7hwbdzvsk3PzZD78tuYZl1WlzmpRLowLpYK2HBsTMvpxIZWmUXuW/yEokr8tRJ82qEM6qsaGUqck+HHiIH0EpoiiM4LdBTcFofiXUMbZQmxCSSNcJuEEwR8IQLLbLpWaBxRBOX85fun4gGffFnYMw7UACwSnMnZl5+AGHYDJzeAx0GxzzuArsFoTo0ThKanJtJIBUk/fUq7j9y9Sy8m8fL5M7ay9pVkaPyN6GfKq/R9bi0D72W8jhmAsiOOJoDLNCUy/Vjtup8QrHjsd4Yi1yMPtn8n8hFGT35Hn5TRpsgvqnyE2z9aaZ0xDbAeGwPea6+ggVjGNxnIjmjYzlX+bNtK7AzXzQz+kbWVQ6QEDDQ3gUTmEIVsBnu/zR53eJMyHwozV4W3OeM1GhpGQJ2RPiAxcqBnL2rvIViXpQahK/bD07GKEZBc8B/lBuRkv6oRSF3AweXtofpHfmUSuKLlp0ulS0dLXIIwMB4EW7UBpmepQfUaEg/W5XEX1RlNZy+RjlpDNwIu0ion7uOIFFnaspgLWlGuze2ekZKbfinEvYWf696KIU69ku+PODfLKaRQtbm/XlylPDT3y6PPUr3wovLSjHIu3XCLUDmRq4HLZQq94e6UO4bkGgBbRQqr+82fCq0zIo1nPG3UovtmmMjNMUeJfhYyeAap+QK0qbeVFtlEETsWsKphg88pUuSBOu0dlHMh+unSMW/LEKrPobhWvv4ZSt0EJf+I8pjyeiz/uQf7u/jcQxBFL67VfDLBjdYe6lLT/daMtR6Sm5+HXvcfyKdlOSn6FwNCAJ8s8R+GeSg1tp7gszBJ8MkEi3d4yVh0bdLO8M6s/5/rg816FGRONm52NFhSUf0A9aE8dsYdO/Y47Bs8lO3m8mzrJm8AX7i5ulArtStIgGhSXPOszSP8NQXn4NCKT/P6r/TDJgU4Of5fqMV/gLd6vKpTBshM7hFLFFAIrHgkuiESiYTgHGkuAaX3hI+x4IIUWj4LSjL9whBpk8pjAFkAaBzKqDC2zQlIlr341MT2+UEMGWhsvQELsWpnl1j8tuPeWmQIrFYufFLGP3roxVCdVyy0rbjdbM+gPMXpuNUI43AdqgfDS03VVytfBlGT8QSjqrJeNibvXvSVvdBATyoKl6t22cT7QNHj/2ocAKZwycJEYGhPwqZXk+wwRAHD6H0S77RCAQV29xHy6ajLL/YfDvzwtWyWDJ7E3UA4NoiUEUohy6ULILK0cdAS5XqwNYkOmq2g6JHrzXFJDJSIf9gxvCAN8wJewqkIKd6guVFHR4KuYa7tkDu2w8wbsDhZpjqi2GiTuAu0CeTHoU6DEEa1dqtFCRLizKbAmya91ZFgpgKIWTagaKDylgcFNGAlxdBpgQ1EP6r63bOd7XS/WBHdPTeLnUPfm2Uk17jnAvD5SeWn9c/rKHkINo6wJakdTb4xB1lJuTSJ9g+k+aU8OM04XsTGOC3qqe/piuJqgFU7fJObSvi6oAcHkVuQorzi9gOevCZQaDxCf5/MS7Dw7TFMQ/bZMKqT97DKbxmzNdRzoiT2cs4TZ7mUYnI+I0mVDlaFqUwCdZjmcNKlB3o9whqm+D0MpH79IKWB+FvfRyNmL8RbwaMvbW7CafMEq4MxY7sSrBJhVMqAuamZwp1531ffNPnPwax5XBo4PsVrGTogwdz3g08u4+ro+XSApfP9q/A/5EVpjczj4XAE44/jpTglKZMVGoJBHKo7RYHRzNVF5O07AG+ypcQM9QQNzPrQYpZIXBwaCNx65j4a4GsWqbmbV+i5nDrcitXxRHSVTXrcWueGS8bql1Rn0iOrROWnOXQ/U6Z+xppx5dwj6RdrUE7FOW5Tb460gt/GtHh/PjRmnzsrPHCVNFoP00KV6dzWf1M/FrrdJDpAVEoGFz+AtgUV+QyrNMKhUenppEd0k9DN7H5Gfp6BkouSPWsLPmo7JiWy7QOt/ydi61B7BvNCUUTWb00d6ucNZqr/xIVeYeFrakDn5ydJa+j/xjSd344W2YUdXVCUlgv4JiKmsTnERzoCtlDG0pc/9sAMEKayC8nBAvDP2c+HAGSIF8fVuQznT43iNwLKsRz4Vt8uq7CK7t22yKoZE5h1Mc6YEhdX2R0nfUr3hhWTKpBO5qFR7IXlaVls2VPiHvSFKn9wD5lXZw4IYQ13KAj3YtIffbseOosL0HemfaMBdWH+S71PPsBKSbkOL+U5/YR/NhG3On7yIbHeu406OOykhh2Q+dIIcSPaEP9HHa0AIGHelOQqV2EID8qBOR/8uf1x8Cua2xXZ/eIzSCGeLfuN80k8pGqJmyVkB38n4aJlhrAV+kj5+4dNyRDBMixVxOIFVq5+OnRU+5y/C2Z+XY0TiOUT3q2ImqMpJw9NSgZv1lQqA8yZ3wXH/f3ESbHAouidUi8IamdZVwOzgMkH+gvNmjLxGPiKnaeCw3g1XqDU9Y3uuLtH+fWfG4fXp3948sU7QcGltAo4rZcf8LqByuS9EwCS2Eb2WSdUIxY/ZWUpBHeuDl6jg+c947KzY6t7MJLiCY/4K+/AsjeUtpSfMONNGFk8SMNeoi+Gy0AURCm1SYTrCmWnVUcxWn29LLPlQC6/A0WxRmNfUiAkHYkhSOcAvN+89a3szBPJ/R1vXbepBz1R/Xv2082f2D2BSM+dQyDdja89cW2vyTeU+U7hXpy2cO5rFbD3yn04p4IY/ahOZSPpNP67Lom/h4Usk2azouJ/ATUPw/bEqqSG9VZ9+1DQze9JO2f3TWlJLge2VDuu88w+NhPvmDx8rZo5O4YV4GUe9VTWUIvvGiSDf5Gh81kNhRsjtgrJ8lF9aDue+X7ILKG+Ky8KVYglJLkuFyPfY8E5M811rBb+X6YTXVr2Ff6bBALVSU7azl9zCfr4wpjrQikW6Skx82yIU1A5Dio+E908COOWh2rtWY2iZvhU7J/v6JvAjUJ1fv/6jZqxOR+2BVGVWvSf/Ou6kcl4kmSZHrGEzAGfT6qWD3CFOKldt8O0kW0JDhVLDFvv/nUVOGOI1AL/PgPYkxMpJrb1Il/LSxS8Gwp4LK+8Zx7joBG3DVzicQ7Ybrje8CooGREMW7NlqxG1aDDTxYmeSum2vwUbofF/JLoEXx4M0dv/3UbAECe9YuBjYSZC8P51h0K2gfNuiaxsBfQKnN2Ia9xg8tNkD828m7xcBaMSbTOzv983Jf0bQLmlSzjHHRpIN1rGDG3kdFqCls9w4c+kgGq6ocxwdxHfXzH4zptW4tj5514bDTDYoAN3FxYWAXoVJCsz9ekQ+3Ok/3VpKtX6grG1SiJX0I0GttFN4CW37zSLCO1xmQlB60lS/K/NOE6DY1XlhogjYeaQeaxbHI1VdKu/1h2VlC0jvF7oARnXZemsL+hOWdHVFBVBKmmGhGbGSBwLFjpA4L1vj//Ey1Id1hTykVuxCntNZTDZuL9pkQS4u488NVnkawISo4f2p/FfT3UGaQKiIloEgkDo/IFPyg+/mTAD1x2Bw41fzP4o1o15MSwlXNwJib2ftynqz9ZJEp8fut8FkwNPxyAQAtQuDqzBPDd+w/ftgAqHrXvf5d1qWtWMY2hw7AHLZqIOe2du0iDfUS7dOcYrX5ao5DKDT4Ben96PDfgWmXSbKvEkx9zsA6lQriPaYxUXxFeQmvexYoDsXwYOXzU8HsFhPfHrdBPwdlbKpz/LAK1VB6XgC3Jbs5UCJqZhB/dKJKIb70WZb/JpuV7VWI9p0ou+uaTD+rcryWgFKeIYUesbFGF4JDPvkJ4zTSLU1OSRJHZFaWN4sOSWlrgId5DLOItJgikU/qAc59+rBDdUw50/RceTYEdwvbKOJNciF2kqn5BbUAcA/jJXUpbbqci+2LcsxAC3IneDeHS09IUkbquer8yI3WLHMd+VlH8tu7R3Sw/bVM4UFQZ0EsAFlFfizmcfE/GkAzAWjiP/iq0bjq9lkiES/HNkiNzvDkBkHuVXcovWpsQpnqZFVDAhGRo9SRZHlQTybaPIML5HPpTdXjVVBV6PZYMNFM1pTLwvghaGmloeMAulRVQbNQnJZfxq5s8fRs+JfGh4FRTlDgBUfJ9ZBej7ooXOMj5JlWhpYDGugLZ9gOnGR1k+AOIJUCYvFrZ7yPNP/FeA8AIIiVbWEr3ga4M0gk9+W0YGnKvaPIJmvDC8VUgHYaWFV0bazsqrb2lwA+S9YByHIEHSLrknEdGvuBPmDZPd3zsihaXLuq9WoI9DpOmE7OUwW28agFL4xHxUL5g6Oigdvf9z4cAQ+zMb/88bxxiGGO7QS+PWhqWZcRd38dpFQ78e9YTyWQW+KX8hDXrdYgxKErm0lGVOPIlxG2imteCjJU1jfJ+/xX3rCUjBTAGrYv/Jxb/qdaGg6suGkvBlZ+I39AKOVx5fBQPBYSN3KKsJNjugaLA6vqY0afLX5F2HlDpgbdgBRUDZUBTrAji8kD2zjM2RMBLp978FhDXhq3sFuy7hN2XU/cad0T0CMQJbbiWI1lJ+DcIY4BmGz3VUzip6+0TLjJQmGya1Zkp7YVKmRJDa5NbAfvoDXUWnu/o5FaFAihxiDSaTggr4Es+5CWaAbhRFIQJM8raKEohDZkzLxxAv1VIMbMDxloQTwQCcI8S8twACYZT3QOZ/QtraAMLK9D18M4ap2a+TI5ZfWBGyfqQPsT7w3iL5ahn/ziowE8T5CfOFuJi5wG/Qo7JVun9r6UpwGXIiGIdNw50BqCgo14SJQLiHqzTSNS85+tv9K4E6rZthROQMYIPho/5eTguVC8+GxCJDW/ytJCNu2GQwLnzXbQg8AXOeO8W7oTe7detzzK47hXbiPJhfOZYfUOAq2jIfveCKc4ORRWypb2fxFEPKRn3Z+NDWhyVd/7LdTynnY2CKBEFmUxGjU3RC3aHJ2Vp/Yz5LmHFUqp5Iad0oji0S/Ke7giOJc+OT3J/xS5l7gr0bh8u0TGiaoPm6pBNkUC7qxM+5KYiI8NQQESGt1aed2BLbrqVXjY5RnALY3qTPGD22PXM3v9QYJghaZGJZM2tJAkwMrycO24HAh5hZtjBL8jQVQjjBx5FsHJFxeadJZtHtaW4t6pegf/0nHGu2h+Dk2ObKNzRKFS6xHuG5kEY/CjmNt7I6uEPJhRMsg7wzEd5djysXF95PT90VaSHFJcQgvf6UXmSEz1oLX3Y/q2hJYOgY4zm4SjWUddbWjfxXItAJ6GbbyE1OOwwPHpVQ4mKv/v1yggLuu4w7YgkkMgMtASUlN0TaFwBRJAd1tKeFgp9pDQ0O9eTfpiEBWVcjsx0wylrnZhImUUUjzKix6tE8RaKR+QQP9lC64844uoqHf0ARIOyMyAOmCS3kznf8XV4MnCEFJRfIrdoRAbvU/OOwVOGig5fTLj5U1Z5vpZsiUjY5/MDsp/1ikgVUMpqUGWz42OfoUCddLwaI+W85w4j0URA2KLe7HBbpmJFgbwW4pHAbZQyAWazzRmzq455qyrrZs+jvfdBAXAS34MSraWS45FR0T94MeFjJf5H3CGk1SSRW2bhWymKkLj9KllCLNpT1k89FMO3MdQVxXf8avHd0CZ7WTp2zrJaiwoN1iFxXgMXOCSoLf0uP8t0PjuQcAXc59YOQnic77fjuJv39Gv9Z+8HbdaIeyaFucs4F5aw7+tM3LsQccdMw4on0IYRBSCtYkyUK4iwUcVRW2xhxq6wggvFPpWVR3YNHTsdC6X1p8Pj2rC5VoV+JNaUCTYR0fVgpyGKshxYBlTRLGqbW3U7ODJNj2+AjbJ6xhcLSjGQqMT7TYcYMmVrNRr2ESJKI306AGcYLpeEMh+yhJFgGXQnIixr8BYTxB/MCCEWfwLEHOkpv9NgQSNNpQFDeNTLSswTg2pMK/8wE/A/LhW0JfH8nphrKmNzzn4XdVS+30GUTcoF2Se0ArflZ2z5+jV0ntHcMtm1eLc6Al8syVj+GSQlPEIqTyd1C/QX8ul9ACBqRv7nOVV6lQdEEzMec0hHdTUj36Z+3Lcjas3IwGhMLyhBz34I4F5o2c0hz/c6SlYESCN+B5zGYGHFPly2JUEKojwE7uldDegJBKy5qbFcHlYb36RTp+FJWQiErFVX9Wm7rPzHkQ2fVh2t0VHuPK5XtgfyEkJ2LzZoKxls0lgZW6ai3dK4BJV1TL9G7esdtyKmTlVMsAR9FPvDqj1f4Kxd2tiwSAWOOIWwVyww/boZMbqpFRUXu9m1Yd1eA+9pipUMNYQ5yyHxCOuhks3fEWA40ZlQ8XnOEOLk1IWQ5snzRUIxdux9bMreK5NzJdOZXhMr8hf/40iBNdGUT76Zo71fTWTgA3h4oHvEy/s2915KW9zeTxVwaOqX6lGG+qJS+c0/ZWi/n+auve8uCLeRhDDNEWPkDdNmiEwrtcVtoAQdnHzTKf6Gam9vVSS7u5MFglkLdeggHDc+PpDi375xA2Lwx3NaSnAN6LjMJWM6015tRoriX1HTZyf4CJR390kXv0iS+A39U4guMR2vyNudqHw4W2hJzGHaVKMSxczQzAKmn4mOHmXkXWTelWOkDccfdFukC3xa9VuaGMtb9VCfrwnYD5HgabNTvjEmAb6rDv+p1e/y0SB2s6BJCzr57FfRd3CBp2sgeqSI5m5HcFW66rTfZNl/LIVs8e3nOyP825rw/TmNr1+0WiPVJF631LSAnTWFJABWJaTiavMKVV3WFK7HbkxHyd1HUCcYD1boe6RW+C9TkNhGUoIdaWDyZ/Y6o6ZcBhwuUF72H/+bEfnLpylbHp9MFwSvj7FPsnY7birFcOVvhX9qr5+1vNIKWuI8tsAyv0t6exLh/+jt1+mXGd1kN1EO0E31SitWf0NDcGXQ4OnVDttbBE3OkZip9+NOEs4roLzgjdPv6DgUK8Is5JJe+bZKLkK5pA9Z/YU06lL20HzPbfnwYPPn1WVwmGY3jbohHnm+f8vN+RDs7AJy/Hg/iKn9HHArISWBBEyWUf2PQ7V5+tCrSP1m4Qz93UR4OSMMOzgOK+RCyygIYvzKjcsaLtjdk8v2M3mVz0kXKd4KKe1k1UJhpdhwNQBeXLzzpH4LRu4snn4nTRTymxwb78nwZDnKJe9QB+WPVVsvR9vZKzq1n4IouqsXq+G9gy9SzzMtLmS+EXEF5qnkDErB+EI4eDjtnxL+ie1wxGnOEVjNJpdl2D53xLWZS/2kvSF2U6vMyMjl3dY7/e3aT1DDPcfvhwJLxsc+3g9u4rklmRx4EjS5wZgDaepO4Zz2IFLcrV6cj4bBybo0BN28nqRL9msNPOSvrR21+0hT1Laz1ov5ZqSs1FstpH+lFmtbpQnyRgcA/0OI12kkwHal4j5+kCVRP844hHz1Omg50emRgIGPmKHhMtG7a971vRnDnh8GkK2ulL2TQXWfMv5/2CfY383U47KTkY95G6h8+p5LCmt+Uui21cUTskgqHMjSe8olMTgmLhYBjf/As8I8nyh6ef2bZ8oHQ3Ldn+z/hsYyviOxAffcdddC6dJJoC3llcBkiIRXjPnK9Rx6HO2rMMeBZ31b1JkFA+ihsqHPhGRC55zrjwM5Zhz7qQNv2+fqhjnTY96wLXrg88+u1uWyR0hyuI/jDIm9gE74xXo8aw8TXHNAyBmN+J/+dyBjhAUkjk/C8YedIGA816x+vd/yExNu6yq+lVzU23CeoDuCShixsx7VvRhwrGA8yNuBIuynGETzJaWJV19yA/NPk1z4iusUxZrZsbwPsFxehDuNoVKpT4oWW6iFhyECJomSQInlcef3+nD+1W+VGTaWKhYDEAFlNps1zVO9F4sMHzt3qSfQBT4MGpGqaf0Mc2Z0PU1dII590wfkaaCc4+JEd/vMT67HBkckfiTccR/6czsXG1ZPAX5PwVLbR3c7z5+Z93hZ2RQeK2LJNe/iXTmgUeztJZ7ZPD/OXyrmZ8E0nDZlJ2v0dKEhXb/YgUjyznu913Kx3HVyCOB1/aHD4xKrNg9DExDc97tcyfD1TLVTjmK0XjT79BaWkvgco1ITK9cdtq8D3OvcRz2wDM1UhIc636wBtZYpH/fvsX79ws5hGaesY6I17oYuiSQU50EVeICqk2jVgxTx/oEDeTNHXI9ZQgrE5lqdSm5gpQELPYv8Bm2UJInB1/hgTkTEssoCO9uDcSAOzeF4rlVkRcQkz3v6wKE1wR0umwavntWkeRX18j7k0bVA/hTbS+UC+6zykwKn4Iw/9qQjnBXeDesoGD+oMttCf6u3H6S0cRmj3h6mMqroGIpLz+KaHGPdJ2Gk5WUbv8Vcvck8mZUsgI3fJGnL/I+36CpY1lYfJRuI11eSDOO2rSsUqKlvVGZ8bxyTp3fKL9czCrqumenuIIKLPlCe9eHUlglsBxt2dUdH5QFLVzZKPCr5Yz9P9r8d5bp8IsAsa3wiPxJoKJAjC0Grdw/9u3QBOEz7fZQh6Lk0UsdBR9qs8emg2RPulP9uapxjd0fFu7Z2OfiDFbKgyFCOHKTuSxa8sPS18C9dmLF6yXh6n/67KiuQPY1/xoegukkj2fUu/DMFtK3om5L61I7lA+2E2pKV7iIotY/7Je4QrtygQVWveWoMOpOW4DwPWrCc0xq6EqvmaOo7OL3p/zA9Qqk4AX6y20fL++RZWvEPo7m4D/kh27yUQ2t80zxo6tVTB+l+rpQzn21i9SU0Zb3k9xRPoUT1gesDNhcEJqqvabrTBB+q+3d4IK/IleiO4ebxWKwL57Llhg0HghfHBriJtJRWaq9TXVh2o4GU1kg2aTLNjA0s8it8moQipFjIqwhHyp1/IimOsUCD5qKXNp+pG8VuHZoYX55eWud/sgdg=="
     },
     "ticker": [
       {
         "rot": "Receita Supertroco",
-        "val": "R$ 43.891",
+        "val": "R$ 45.151",
         "tipo": "bom"
       },
       {
         "rot": "Vendas geradas",
-        "val": "R$ 46.814",
+        "val": "R$ 49.067",
         "tipo": "neutro"
       },
       {
         "rot": "Aquisições",
-        "val": "856",
+        "val": "898",
         "tipo": "neutro"
       },
       {
         "rot": "Receita por aquisição",
-        "val": "R$ 15,55",
+        "val": "R$ 16,23",
         "tipo": "neutro"
       },
       {
@@ -1761,14 +1766,14 @@
       },
       {
         "rot": "Sorte Online",
-        "val": "R$ 46.814",
-        "var": 32.8,
+        "val": "R$ 49.067",
+        "var": 11.4,
         "cor": "#15B8B6",
         "tipo": "bom"
       },
       {
         "rot": "Sorte Online · ticket",
-        "val": "R$ 35,17",
+        "val": "R$ 34,70",
         "cor": "#15B8B6",
         "tipo": "neutro"
       },
@@ -1793,15 +1798,15 @@
     ],
     "whatsapp_meta": null,
     "ia": {
-      "destaque": "O resultado do período foi impulsionado principalmente pelos <b>R$ 30.580,00</b> gerados pelo parceiro Crefaz em setembro, que representaram quase 70% da receita total, e pelos <b>R$ 10.200,00</b> de aquisição da Sorte Online em outubro.",
-      "comparativo": "A taxa de entrega de e‑mail da Sorte Online foi superior, com bounce de <b>0,89%</b> contra <b>2,98%</b> da Crefaz, e abertura de <b>10,1%</b> frente a <b>8,2%</b>. O CTR também foi ligeiramente melhor (0,31% x 0,30%). Em termos de receita, Crefaz contribuiu com <b>R$ 30.580,00</b> (≈69,7% do total), enquanto a Sorte Online trouxe <b>R$ 13.310,87</b> (≈30,3%). Contudo, a Sorte Online gerou 856 aquisições, evidenciando seu papel estratégico de geração de demanda, ao passo que a Crefaz converteu apenas 3 leads pagos dos 183 recebidos.",
+      "destaque": "A receita total de <b>R$45,150.87</b> foi impulsionada principalmente pelo parceiro Crefaz, que gerou <b>R$30,580.00</b> em volume pago, enquanto a Sorte Online manteve <b>R$14,570.87</b> de receita de aquisição, apesar de os dados de outubro ainda estarem parciais.",
+      "comparativo": "A Sorte Online apresenta melhor eficiência de e‑mail, com taxa de abertura de <b>10.1%</b> e CTR de <b>0.31%</b>, além de bounce de <b>0.89%</b>, superior ao Crefaz (abertura <b>8.2%</b>, CTR <b>0.30%</b>, bounce <b>2.98%</b>). Em termos de resultado, a Crefaz trouxe mais receita (<b>R$30,580</b>) porém com apenas <b>3</b> leads pagos sobre <b>183</b> gerados, enquanto a Sorte Online converteu <b>898</b> aquisições gerando <b>R$14,570.87</b>. O canal WhatsApp ainda não está ativo em nenhum dos parceiros, representando oportunidade não explorada. O crescimento mensal mostra que outubro ainda está parcial para a Sorte Online, o que pode distorcer a comparação de ritmo.",
       "alertas": [
-        "Bounce elevado da Crefaz (≈3%) indica problemas de qualidade de lista.",
-        "Conversão de leads da Crefaz muito baixa (3 pagos de 183, <2%).",
-        "Relatório de outubro da Crefaz está pendente, impedindo visão completa.",
-        "Crefaz realizou apenas 2 campanhas de e‑mail, limitando alcance."
+        "Bounce da Crefaz está alto (2.98%), risco de entregabilidade",
+        "Taxa de leads pagos da Crefaz é baixa (1.72% dos leads)",
+        "Dados de outubro da Sorte Online são parciais, pode haver ajuste de receita",
+        "CTR geral dos e‑mails (<0.31%) está abaixo do ideal"
       ],
-      "prioridade": "Concentrar esforços no parceiro Crefaz no próximo ciclo: melhorar a higienização das listas para reduzir bounce, ampliar o número de campanhas de e‑mail e implementar um acompanhamento mais rigoroso das conversões de leads, além de garantir a entrega do relatório de outubro. Paralelamente, otimizar a jornada de aquisição da Sorte Online para aumentar o número de aquisições e o ticket médio por aquisição."
+      "prioridade": "Concentrar esforços no parceiro Crefaz para melhorar a qualidade e a conversão dos leads. Reduzir o bounce aprimorando a higienização de listas, otimizar a mensagem para elevar a taxa de abertura e CTR, e trabalhar processos internos para transformar mais leads digitados em pagos. Ao mesmo tempo, finalizar o relatório de outubro da Sorte Online e avaliar a possibilidade de ampliar campanhas de WhatsApp, mas a prioridade imediata é aumentar a eficiência de geração de receita da Crefaz."
     },
     "cronograma": {
       "mes": "2026-11",
@@ -2757,11 +2762,11 @@
           }
         }
       },
-      "estrategia": "<b>Sorte Online</b> ficou com as segundas, terças e sextas no email — dias com melhor abertura (13,1% nas segundas) e clique (CTR 0,43% entre 18h‑24h) — e com os sábados no WhatsApp; <b>Crefaz</b> recebeu as quartas, quintas, sábados e domingo no email, aproveitando a melhor taxa de abertura nas quartas (8,2%), e os dias úteis de quinta, segunda e quarta no WhatsApp, mantendo a cadência de <b>3,2</b> dias.",
+      "estrategia": "Sorte Online ficou com todas as segundas (<b>5</b>), terças (<b>3</b>) e sextas (<b>4</b>) nos envios de e‑mail, aproveitando a taxa de abertura de 13,1% nas segundas; Crefaz recebeu as quartas (<b>3</b>), quinta (<b>1</b>), sábados (<b>4</b>) e domingo (<b>1</b>) nos e‑mails, alinhado ao seu melhor desempenho nas quartas (8,2%). No WhatsApp, Sorte Online tem os sábados (<b>4</b>) e Crefaz cobre as quintas (<b>2</b>), segunda (<b>1</b>) e quarta (<b>1</b>), garantindo um parceiro por dia. A distribuição respeita a cadência de <b>3,2</b> envios por semana para a base engajada e os horários de pico indicados nas evidências.",
       "cuidados": [
-        "Checar entregabilidade nos feriados (02, 15, 20) e nos eventos de Black Friday (27) e Cyber Monday (30) onde há disparos.",
-        "Monitorar a taxa de abertura das segundas recorrentes de <b>Sorte Online</b> para sustentar o <b>14,4%</b> de abertura.",
-        "Ajustar o volume de mensagens no WhatsApp se houver saturação nos sábados de <b>Sorte Online</b> ou nas quintas de <b>Crefaz</b>."
+        "Monitorar entrega e taxa de abertura nos feriados (02/11, 15/11, 20/11) onde há disparos de Sorte Online.",
+        "Acompanhar o desempenho nos horários de pico (18h‑24h para Sorte Online, 15h‑18h para Crefaz) e ajustar se necessário.",
+        "Manter a cadência de <b>3,2</b> envios semanais e atualizar diariamente as listas de opt‑out."
       ],
       "regras": [
         "Um parceiro por dia na base engajada de e-mail.",
@@ -2874,11 +2879,11 @@
           "ini": "2026-08-01",
           "fim": "2026-10-22",
           "kpis": {
-            "vendas": 46813.87,
+            "vendas": 49066.87,
             "comissao": 3110.87,
-            "receita": 13310.87,
+            "receita": 14570.87,
             "receita_comissao": 3110.87,
-            "receita_aquisicao": 10200.0,
+            "receita_aquisicao": 11460.0,
             "remuneracao": "misto",
             "periodos_remuneracao": [
               {
@@ -2895,28 +2900,28 @@
                 "modelo": "aquisicao",
                 "regra": "R$ 30 por aquisição",
                 "ini": "01/10/2026",
-                "fim": "20/10/2026",
-                "receita": 10200.0,
-                "aquisicoes": 340,
-                "vendas": 15705.29,
+                "fim": "22/10/2026",
+                "receita": 11460.0,
+                "aquisicoes": 382,
+                "vendas": 17958.29,
                 "por_aquisicao": 30.0
               }
             ],
-            "pedidos": 1331,
-            "aquisicoes": 856,
-            "cac": 15.55,
-            "sessoes": 36342,
-            "tkm": 35.17,
-            "conversao": 3.21,
-            "pedidos_com_sessao": 1165,
-            "dias_com_sessao": 54,
-            "dias_ativos": 81,
-            "dias_com_vendas": 81,
+            "pedidos": 1414,
+            "aquisicoes": 898,
+            "cac": 16.23,
+            "sessoes": 38807,
+            "tkm": 34.7,
+            "conversao": 3.22,
+            "pedidos_com_sessao": 1248,
+            "dias_com_sessao": 56,
+            "dias_ativos": 83,
+            "dias_com_vendas": 83,
             "abertura": 10.1,
             "ctr": 0.31,
             "campanhas": 48,
             "wpp_disparos": 0,
-            "receita_supertroco": 13310.87
+            "receita_supertroco": 14570.87
           },
           "dias": [
             {
@@ -4457,6 +4462,44 @@
               "sessoes": 615,
               "tkm": 18.94,
               "conv": 3.25
+            },
+            {
+              "iso": "2026-10-21",
+              "d": "21/10",
+              "dow": "Quarta",
+              "send": null,
+              "n_env": 0,
+              "wpp": null,
+              "n_wpp": 0,
+              "vendas": 214.0,
+              "comissao": 0.0,
+              "receita": 210.0,
+              "remun": "aquisicao",
+              "sem_vendas": false,
+              "pedidos": 12,
+              "novos": 7,
+              "sessoes": 374,
+              "tkm": 17.83,
+              "conv": 3.21
+            },
+            {
+              "iso": "2026-10-22",
+              "d": "22/10",
+              "dow": "Quinta",
+              "send": null,
+              "n_env": 1,
+              "wpp": null,
+              "n_wpp": 0,
+              "vendas": 2039.0,
+              "comissao": 0.0,
+              "receita": 1050.0,
+              "remun": "aquisicao",
+              "sem_vendas": false,
+              "pedidos": 71,
+              "novos": 35,
+              "sessoes": 2091,
+              "tkm": 28.72,
+              "conv": 3.4
             }
           ],
           "email": {
@@ -5257,61 +5300,61 @@
           },
           "whatsapp": null,
           "ia": {
-            "motor": "A base engajada tem <b>14.32%</b> de abertura contra <b>1.22%</b> na desengajada, diferença de <b>13.10%</b>, refletindo maior potencial de receita nos envios para engajados.",
-            "diagnostico": "Os disparos para a base engajada geram picos de vendas (ex.: 19/08, 05/09, 11/09) com abertura acima de 13%, enquanto a base total, com abertura baixa, ainda produz vendas, porém em volume menor. Os dias sem disparo apresentam quedas de receita, indicando dependência dos envios de e‑mail para movimentar o funil.",
-            "conversao": "A taxa de abertura geral é <b>10.1%</b> e o CTR <b>0.31%</b>, muito abaixo do CTR de <b>0.45%</b> observado no horário 18h–24h, indicando que o gargalo está na geração de cliques. Dos <b>115,858</b> cliques, apenas <b>1,331</b> se convertem em pedidos (≈1.15%), resultando em um ticket médio de <b>R$ 35.17</b> por pedido.",
+            "motor": "A base engajada tem <b>14.32%</b> de abertura contra <b>1.22%</b> da desengajada, diferença de <b>13.1 pontos</b> que se traduz em maior geração de receita nos dias de disparo para engajados.",
+            "diagnostico": "Nos dias em que enviamos para a base engajada (ex.: 03/08, 04/08, 07/08) a taxa de abertura ficou acima de 13% e as vendas superaram R$ 1 mil, enquanto os envios à base total apresentaram abertura abaixo de 1% e vendas quase nulas. O padrão mostra que alta abertura está correlacionada com volume de pedidos, reforçando a importância de focar na segmentação engajada.",
+            "conversao": "A taxa de conversão do site está em <b>3.22%</b>, enquanto a abertura geral de e‑mail é <b>10.1%</b> e o CTR <b>0.31%</b>. O gargalo está no engajamento do e‑mail (abertura e clique), que limita a geração de tráfego qualificado. Cada pedido gera em média <b>R$ 34.70</b> de receita, indicando que melhorar abertura/CTR pode elevar o volume de pedidos sem aumentar custos.",
             "sustenta": [
-              "<b>14.32%</b> de abertura na base engajada (36 envios)",
-              "<b>1.22%</b> de abertura na base desengajada (8 envios)",
-              "Receita total de <b>R$ 46,813.87</b> em 81 dias",
-              "Ticket médio de <b>R$ 35.17</b> por pedido (1,331 pedidos)",
-              "Conversão do site <b>3.21%</b>"
+              "<b>14.32%</b> taxa de abertura da base engajada vs <b>1.22%</b> da desengajada",
+              "Receita total de <b>R$ 49,066.87</b> em <b>1,414</b> pedidos",
+              "Ticket médio de <b>R$ 34.70</b> por pedido",
+              "Taxa de conversão do site <b>3.22%</b>",
+              "CTR de e‑mail <b>0.31%</b>"
             ],
-            "recomendacao": "Enviar a campanha principal às <b>Quinta‑feira, 19h</b> para a base engajada, usando assunto no estilo \"*|PRIMEIRO_NOME|*, R$ 102 Milhões acumulados para amanhã 🍀\"; repetir (repique) na <b>Segunda‑feira, 10h</b> com variação do assunto focada em surpresa ou cupom especial, mantendo o mesmo segmento de engajados para maximizar abertura e cliques.",
-            "whatsapp": "Canal WhatsApp pronto, aguardando os primeiros disparos; custo por disparo R$ 0.42."
+            "recomendacao": "Envie a campanha principal às <b>Quinta‑feira</b> entre <b>19h e 20h</b> para a <b>base engajada</b>, usando o assunto padrão \"*|PRIMEIRO_NOME|*, R$ 102 Milhões acumulados para amanhã 🍀\". Faça repique na <b>Segunda‑feira</b> às <b>10h</b> com variação do assunto focada em \"surpresa\" ou \"cupom especial\" para reforçar a taxa de abertura. Mantenha a segmentação engajada e monitore a abertura acima de 12% como meta.",
+            "whatsapp": "Canal WhatsApp está pronto e aguardando os primeiros disparos."
           }
         },
         {
           "id": "2026-10",
           "nome": "Outubro 2026",
-          "sub": "20 dias com dados",
+          "sub": "22 dias com dados",
           "periodo": "01/10/2026 a 22/10/2026",
           "ini": "2026-10-01",
           "fim": "2026-10-22",
           "kpis": {
-            "vendas": 15705.29,
+            "vendas": 17958.29,
             "comissao": 0.0,
-            "receita": 10200.0,
+            "receita": 11460.0,
             "receita_comissao": 0.0,
-            "receita_aquisicao": 10200.0,
+            "receita_aquisicao": 11460.0,
             "remuneracao": "aquisicao",
             "periodos_remuneracao": [
               {
                 "modelo": "aquisicao",
                 "regra": "R$ 30 por aquisição",
                 "ini": "01/10/2026",
-                "fim": "20/10/2026",
-                "receita": 10200.0,
-                "aquisicoes": 340,
-                "vendas": 15705.29,
+                "fim": "22/10/2026",
+                "receita": 11460.0,
+                "aquisicoes": 382,
+                "vendas": 17958.29,
                 "por_aquisicao": 30.0
               }
             ],
-            "pedidos": 542,
-            "aquisicoes": 340,
+            "pedidos": 625,
+            "aquisicoes": 382,
             "cac": 30.0,
-            "sessoes": 20388,
-            "tkm": 28.98,
-            "conversao": 2.66,
-            "pedidos_com_sessao": 542,
-            "dias_com_sessao": 20,
-            "dias_ativos": 20,
-            "dias_com_vendas": 20,
+            "sessoes": 22853,
+            "tkm": 28.73,
+            "conversao": 2.73,
+            "pedidos_com_sessao": 625,
+            "dias_com_sessao": 22,
+            "dias_ativos": 22,
+            "dias_com_vendas": 22,
             "abertura": 7.9,
             "ctr": 0.27,
             "campanhas": 11,
             "wpp_disparos": 0,
-            "receita_supertroco": 10200.0
+            "receita_supertroco": 11460.0
           },
           "dias": [
             {
@@ -5693,6 +5736,44 @@
               "sessoes": 615,
               "tkm": 18.94,
               "conv": 3.25
+            },
+            {
+              "iso": "2026-10-21",
+              "d": "21/10",
+              "dow": "Quarta",
+              "send": null,
+              "n_env": 0,
+              "wpp": null,
+              "n_wpp": 0,
+              "vendas": 214.0,
+              "comissao": 0.0,
+              "receita": 210.0,
+              "remun": "aquisicao",
+              "sem_vendas": false,
+              "pedidos": 12,
+              "novos": 7,
+              "sessoes": 374,
+              "tkm": 17.83,
+              "conv": 3.21
+            },
+            {
+              "iso": "2026-10-22",
+              "d": "22/10",
+              "dow": "Quinta",
+              "send": null,
+              "n_env": 1,
+              "wpp": null,
+              "n_wpp": 0,
+              "vendas": 2039.0,
+              "comissao": 0.0,
+              "receita": 1050.0,
+              "remun": "aquisicao",
+              "sem_vendas": false,
+              "pedidos": 71,
+              "novos": 35,
+              "sessoes": 2091,
+              "tkm": 28.72,
+              "conv": 3.4
             }
           ],
           "email": {
@@ -5957,18 +6038,18 @@
           "parcial": true,
           "ate": "22/10",
           "ia": {
-            "motor": "A base engajada registrou <b>11.65%</b> de abertura, enquanto a desengajada ficou em <b>0.0%</b>; essa diferença de <b>11.65 pontos</b> concentra a maior parte das aberturas e, consequentemente, da receita.",
-            "diagnostico": "Nos dias em que enviamos para a base engajada (ex.: 06/10, 13/10) a taxa de abertura foi alta (até 15%) e as vendas dispararam (R$ 2.374,48 e R$ 719,48). Quando enviamos para a base total, a abertura foi 0% mas ainda gerou vendas (ex.: 09/10, R$ 1.095,31), indicando que outros canais podem estar influenciando a conversão.",
-            "conversao": "A taxa de conversão do site foi de <b>2.66%</b>, enquanto a taxa de abertura geral ficou em <b>7.9%</b> e o CTR em <b>0.27%</b>. O gargalo está na baixa abertura e cliques, especialmente na base total. Cada aquisição custa <b>R$30</b>, totalizando 340 aquisições, o que supera o ticket médio de <b>R$28.98</b> por pedido.",
+            "motor": "A base engajada tem taxa de abertura de <b>11.65%</b>, enquanto a desengajada está em <b>0.0%</b>, diferença de <b>11.65 pontos percentuais</b>. Isso indica que a maior parte da receita provém dos contatos engajados.",
+            "diagnostico": "Dias com envios para a base engajada apresentaram maiores taxas de abertura e corresponderam a picos de vendas (ex.: 02/10, 06/10, 13/10). Envios à base total, com abertura de 0%, geraram vendas mais baixas, confirmando a importância do engajamento para a conversão.",
+            "conversao": "A taxa de cliques geral foi de <b>0.27%</b> e a conversão no site <b>2.73%</b>, resultando em <b>625</b> pedidos com ticket médio de <b>R$28.73</b>. O gargalo está no CTR baixo, limitando o número de cliques que se transformam em pedidos.",
             "sustenta": [
-              "<b>11.65%</b> taxa de abertura da base engajada",
-              "<b>0.0%</b> taxa de abertura da base desengajada",
-              "<b>2.66%</b> taxa de conversão do site",
-              "<b>R$30</b> custo por aquisição (340 aquisições)",
-              "<b>R$28.98</b> ticket médio por pedido"
+              "Total de entregas: <b>10,022,725</b>",
+              "Aberturas totais: <b>790,200</b> (<b>7.9%</b>)",
+              "Cliques totais: <b>27,462</b> (<b>0.27%</b>)",
+              "Conversão no site: <b>2.73%</b> gerando <b>625</b> pedidos",
+              "Receita da Supertroco: <b>R$11,460.00</b> (R$30 por aquisição × 382 aquisições)"
             ],
-            "recomendacao": "Enviar nova campanha na <b>segunda-feira</b> entre <b>15h e 18h</b> para a <b>base engajada</b>, com repique no dia seguinte caso a taxa de abertura fique abaixo de <b>10%</b>. Use assunto no padrão \"[Sorteio] [engajados] - Resultado do Sorteio DD/MM\" para manter a consistência de alta performance.",
-            "whatsapp": "O canal WhatsApp está pronto e aguardando os primeiros disparos; cada disparo custa R$0,42."
+            "recomendacao": "Envie a campanha na <b>Segunda-feira</b> entre <b>15h e 18h</b> para a <b>base engajada</b>, com repique <b>2 dias depois</b> (quarta‑feira, mesmo horário) e utilize o padrão de assunto que tem gerado alta abertura, por exemplo: \"[Sorteio] [engajados]- Resultado do Sorteio DD/MM\".",
+            "whatsapp": "O canal WhatsApp está configurado e pronto, aguardando os primeiros disparos."
           }
         },
         {
@@ -6932,18 +7013,18 @@
           "parcial": false,
           "ate": "30/09",
           "ia": {
-            "motor": "<b>15.69%</b> de diferença de abertura entre a base engajada e a desengajada, indicando que toda a receita de R$1,828.37 vem da base engajada.",
-            "diagnostico": "Dias com disparos para engajados (ex.: 11/09, 14/09, 16/09) apresentaram picos de vendas (R$4,164, R$964, R$1,150) e maior número de pedidos, enquanto dias sem disparo tiveram vendas muito menores, evidenciando forte correlação entre envio e conversão.",
-            "conversao": "A taxa de abertura geral foi de 13.2% e o CTR de 0.36%, bem abaixo da taxa de clique da base engajada (0.44%). O gargalo está no CTR, limitando a geração de cliques que alimentam o site, cuja conversão foi 3.25%. Cada pedido gera em média R$41.18 de receita, correspondendo a R$4.12 de comissão para a Supertroco.",
+            "motor": "A base engajada tem abertura de <b>15.69%</b> contra <b>0%</b> na desengajada, indicando que a receita depende quase que exclusivamente dos contatos engajados.",
+            "diagnostico": "Os dias em que houve disparos para a base engajada apresentaram picos de vendas (ex.: 11/09 – 33 pedidos e R$4.164, 20% de abertura). Nos dias sem disparos as vendas foram significativamente menores, mostrando forte correlação entre abertura de e‑mail e volume de pedidos.",
+            "conversao": "A taxa de conversão do site está em <b>3.25%</b>, enquanto o CTR dos e‑mails é de <b>0.36%</b> e a taxa de abertura geral <b>13.2%</b>. O gargalo está no engajamento dos e‑mails (baixo CTR). Cada pedido gera, em média, R$<b>41.18</b> de receita.",
             "sustenta": [
               "Entregas totais: 11,174,160",
               "Aberturas totais: 1,473,785",
               "Cliques totais: 40,652",
-              "Conversão do site: 3.25%",
+              "Conversão site: 3.25%",
               "Receita Supertroco: R$1,828.37"
             ],
-            "recomendacao": "Envie a próxima campanha na sexta-feira, entre 18h e 24h, para a base engajada, com repique no sábado pela manhã (09h–12h) para quem não abriu. Use assunto no formato “*|PRIMEIRO_NOME|*, R$ XX milhões acumulados para amanhã 🍀” – personalize com o valor acumulado do sorteio do dia seguinte.",
-            "whatsapp": "Canal WhatsApp está pronto e aguardando os primeiros disparos; custo por disparo R$0.42."
+            "recomendacao": "Enviar disparos às <b>sextas</b> (melhor dia) entre <b>18h e 24h</b> (horário com maior performance) para a base <b>engajada</b>, com repique na <b>quarta</b> seguinte. Use assunto similar ao top: \"*|PRIMEIRO_NOME|*, R$ 102 Milhões acumulados para amanhã 🍀\".",
+            "whatsapp": "O canal WhatsApp está pronto e aguardando os primeiros disparos; cada disparo custa R$0,42."
           }
         },
         {
@@ -7986,17 +8067,17 @@
           "parcial": false,
           "ate": "31/08",
           "ia": {
-            "motor": "A base engajada tem abertura de <b>14.15%</b> contra <b>1.22%</b> na desengajada, indicando muito maior potencial de receita para quem está engajado.",
-            "diagnostico": "Os disparos para a base engajada geraram a maioria dos pedidos (ex.: 04/08 com 100 pedidos e 14% de abertura). Já as campanhas para desengajados resultaram em poucos cliques e vendas quase nulas. O desempenho do e‑mail está diretamente ligado ao nível de engajamento da base.",
-            "conversao": "A taxa de conversão do site foi de <b>7.87%</b>, enquanto a abertura geral foi de <b>9.3%</b> e o CTR apenas <b>0.3%</b>, apontando o clique como gargalo. Cada pedido representa <b>R$37.17</b> de ticket médio, totalizando <b>345</b> pedidos no mês.",
+            "motor": "A base engajada tem <b>14.15%</b> de abertura contra <b>1.22%</b> da desengajada, diferença de <b>13 pontos</b>, refletindo que a maior parte da receita vem dos engajados.",
+            "diagnostico": "Dias com disparos para engajados (ex.: 04/08, 14% de abertura) geraram 100 pedidos e R$2.770, enquanto disparos para desengajados raramente superaram 2% de abertura e resultaram em menos de 10 pedidos no mês, mostrando forte correlação entre abertura e vendas.",
+            "conversao": "A taxa de conversão do site está em <b>7.87%</b>, porém a taxa média de abertura dos e‑mails é <b>9.3%</b> e o CTR <b>0.3%</b>, indicando que o gargalo está na geração de cliques após a abertura, limitando os 345 pedidos e a receita de R$12,825.",
             "sustenta": [
-              "<b>14.15%</b> taxa de abertura na base engajada vs <b>1.22%</b> na desengajada",
-              "Abertura geral <b>9.3%</b> e CTR <b>0.3%</b>",
-              "Conversão no site <b>7.87%</b> gerando <b>345</b> pedidos",
-              "Receita total <b>R$12.825,00</b> e comissão <b>R$1.282,50</b> para a Supertroco",
-              "Cobertura de sessões em <b>4</b> dias (de 31)"
+              "Entregas totais: 15,880,258",
+              "Aberturas totais: 1,469,157",
+              "Cliques totais: 47,744",
+              "Pedidos: 345",
+              "Receita por aquisição: R$4.77"
             ],
-            "recomendacao": "Enviar a próxima campanha para a base engajada em <b>Sábado</b> às <b>19h</b>, aproveitando o pico de abertura (10.13%). Repetir (repique) na <b>Segunda</b> entre <b>12h‑15h</b>. Use assunto padrão: \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir 🍀\".",
+            "recomendacao": "Envie a campanha para a base engajada aos sábados, preferencialmente entre 18h e 24h (horário com melhor abertura), com repique na segunda-feira entre 12h e 15h. Use assunto no padrão dos top assuntos, como \"*|PRIMEIRO_NOME|*, saiu o resultado do sorteio! Vem conferir🍀\", que já provou gerar <b>16.34%</b> de abertura.",
             "whatsapp": "O canal WhatsApp está pronto, aguardando os primeiros disparos."
           }
         }
@@ -8519,128 +8600,128 @@
         "dias": {
           "2026-11-02": {
             "tema": "Resultado do Sorteio – confira",
-            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje 🍀",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, o resultado do sorteio saiu. Confira os números e jogue com responsabilidade. Boa sorte! [link]"
+            "assunto": "*|PRIMEIRO_NOME|*, resultado de hoje – confira",
+            "mensagem": "🍀 Confira o resultado do sorteio de hoje e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-11-03": {
-            "tema": "Terça da Loto — jogue hoje",
-            "assunto": "*|PRIMEIRO_NOME|*, novidades da Loto para você",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, confira os bolões da semana e jogue com responsabilidade 🍀. Boa sorte! [link]"
+            "tema": "Terça da Loto – jogue hoje",
+            "assunto": "*|PRIMEIRO_NOME|*, novidades da Loto para hoje",
+            "mensagem": "🍀 Confira os jogos da semana, participe dos bolões e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-11-06": {
-            "tema": "Sexta da Loto — jogue agora",
-            "assunto": "*|PRIMEIRO_NOME|*, sexta de jogos e bolões",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira as apostas de sexta e jogue com responsabilidade 🍀. Boa sorte! [link]"
+            "tema": "Sexta da Loto – aposte agora",
+            "assunto": "*|PRIMEIRO_NOME|*, aposte com praticidade",
+            "mensagem": "🍀 Confira as apostas de sexta, entre no bolão e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-11-07": {
-            "tema": "Sábado de Loto — não perca",
-            "assunto": "*|PRIMEIRO_NOME|*, lembrete dos jogos de sexta",
-            "mensagem": "Você viu? Confira os bolões que enviamos ontem e jogue com responsabilidade 🍀. Ainda dá tempo! [link]"
+            "tema": "Sábado – não perca a chance",
+            "assunto": "*|PRIMEIRO_NOME|*, não perca a chance de jogar neste sábado",
+            "mensagem": "🍀 Você viu? Ainda dá tempo de entrar no bolão de sábado. Confira e jogue com responsabilidade. [link]"
           },
           "2026-11-08": {
-            "tema": "Domingo de Loto — veja novamente",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? resultados de sexta",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, reenvio dos jogos de sexta. Confira e jogue com responsabilidade 🍀. Boa sorte! [link]"
+            "tema": "Domingo – última chance",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu? Última chance de jogar",
+            "mensagem": "🍀 Confira o tema de hoje, participe dos bolões e jogue com responsabilidade. Última chance! [link]"
           },
           "2026-11-09": {
             "tema": "Resultado do Sorteio – confira",
-            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje 🍀",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, o resultado do sorteio saiu. Confira os números e jogue com responsabilidade. Boa sorte! [link]"
+            "assunto": "*|PRIMEIRO_NOME|*, resultado de hoje – confira",
+            "mensagem": "🍀 Confira o resultado do sorteio de hoje e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-11-10": {
-            "tema": "Terça da Loto — jogue hoje",
-            "assunto": "*|PRIMEIRO_NOME|*, novidades da Loto nesta terça",
-            "mensagem": "Olá *|PRIMEIRO_NOME|*, confira os bolões da semana e jogue com responsabilidade 🍀. Boa sorte! [link]"
+            "tema": "Terça da Loto – jogue hoje",
+            "assunto": "*|PRIMEIRO_NOME|*, novidades da Loto para hoje",
+            "mensagem": "🍀 Confira os jogos da semana, participe dos bolões e jogue com responsabilidade. Boa sorte! [link]"
           },
           "2026-11-13": {
-            "tema": "Sexta de Bolões — confira",
-            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana esperam por você 🍀",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira os bolões de hoje e jogue com responsabilidade. Boa sorte! [link]"
+            "tema": "Sexta da Loto — jogue agora",
+            "assunto": "*|PRIMEIRO_NOME|*, confira os bolões da semana",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira os jogos da semana e participe dos bolões. Jogue com responsabilidade! 🍀 [link]"
           },
           "2026-11-14": {
-            "tema": "Sábado – lembrete dos bolões",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*, confira os bolões de sexta",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, você viu os bolões de sexta? Confira e jogue com responsabilidade. [link]"
+            "tema": "Sábado – você viu o bolão?",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu o bolão de sexta?",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, reforçando: confira o bolão de sexta e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-15": {
-            "tema": "Domingo de Bolões – lembre-se",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|*, bolões de sexta ainda valem",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, lembre-se dos bolões de sexta e jogue com responsabilidade. Confira! [link]"
+            "tema": "Domingo de feriado – confira o bolão",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu o bolão de sexta?",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, no feriado confira o bolão de sexta e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-16": {
             "tema": "Resultado do Sorteio – confira",
             "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira o resultado do sorteio de hoje e jogue com responsabilidade. [link]"
+            "mensagem": "Confira o resultado do sorteio de hoje e jogue com responsabilidade. [link]"
           },
           "2026-11-17": {
-            "tema": "Terça de Bolões – confira",
-            "assunto": "*|PRIMEIRO_NOME|*, novos bolões para você",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira os bolões de hoje e jogue com responsabilidade. Boa sorte! [link]"
+            "tema": "Terça da Loto — jogue hoje",
+            "assunto": "*|PRIMEIRO_NOME|*, novidades de jogos para terça",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira as novidades de jogos e participe dos bolões. Jogue com responsabilidade! 🍀 [link]"
           },
           "2026-11-18": {
-            "tema": "Quarta de Bolões – confira",
-            "assunto": "*|PRIMEIRO_NOME|*, bolões da semana esperam por você",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira os bolões de hoje e jogue com responsabilidade. Boa sorte! [link]"
+            "tema": "Quarta da Loto — bolões em alta",
+            "assunto": "*|PRIMEIRO_NOME|*, bolões quentes para a semana",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, confira os bolões em alta e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-20": {
-            "tema": "Sexta da Consciência Negra – bolões",
+            "tema": "Sexta da Consciência Negra — jogue",
             "assunto": "*|PRIMEIRO_NOME|*, jogue nos bolões neste feriado",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, neste feriado confira os bolões e jogue com responsabilidade. Boa sorte! [link]"
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, no feriado confira os bolões e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-21": {
-            "tema": "Sábado de Bolão – não perca",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Última chance de bolão",
-            "mensagem": "Confira os bolões da semana e jogue com responsabilidade. Ainda dá tempo de participar! 🍀 [link]"
+            "tema": "Sábado de Bolões — não perca",
+            "assunto": "*|PRIMEIRO_NOME|*, viu o bolão de sábado?",
+            "mensagem": "Confira os bolões de hoje e jogue com responsabilidade. Ainda dá tempo! [link]"
           },
           "2026-11-22": {
-            "tema": "Domingo de Loto – reforce sua aposta",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Loto de domingo está aqui",
-            "mensagem": "Não perca os jogos de domingo, confira e jogue com responsabilidade. 🎲 [link]"
+            "tema": "Domingo de Sorte — veja o bolão",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu? Bolão de domingo",
+            "mensagem": "Confira os bolões de domingo e jogue com responsabilidade. Aproveite! [link]"
           },
           "2026-11-23": {
-            "tema": "Resultado do Sorteio – confira",
+            "tema": "Resultado do Sorteio – segunda",
             "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje",
-            "mensagem": "O resultado do sorteio já saiu. Confira os números e jogue com responsabilidade. [link]"
+            "mensagem": "Confira o resultado do sorteio de segunda e jogue com responsabilidade. [link]"
           },
           "2026-11-24": {
-            "tema": "Terça de Loto – novidades",
-            "assunto": "*|PRIMEIRO_NOME|*, novidades da Loto para você",
-            "mensagem": "Confira as novidades de jogos e bolões desta terça e jogue com responsabilidade. 🎉 [link]"
+            "tema": "Terça de Loto — jogue hoje",
+            "assunto": "*|PRIMEIRO_NOME|*, nova chance na Loto nesta terça",
+            "mensagem": "Confira as apostas da terça e jogue com responsabilidade. Boa sorte! 🍀 [link]"
           },
           "2026-11-26": {
-            "tema": "Quinta de Loto – reforce",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Reforce sua chance na Loto",
-            "mensagem": "Ainda dá tempo de entrar nos bolões de quinta. Confira e jogue com responsabilidade. [link]"
+            "tema": "Quinta de Repetição — não perca",
+            "assunto": "*|PRIMEIRO_NOME|*, você viu? Oferta de quinta",
+            "mensagem": "Confira a oferta de quinta e jogue com responsabilidade. Não perca! [link]"
           },
           "2026-11-27": {
-            "tema": "Black Friday Loto – ofertas",
-            "assunto": "*|PRIMEIRO_NOME|*, Black Friday com jogos especiais",
-            "mensagem": "É Black Friday! Aproveite jogos especiais e jogue com responsabilidade. 🛍️ [link]"
+            "tema": "Black Friday Loteria — jogue hoje",
+            "assunto": "*|PRIMEIRO_NOME|*, Black Friday de jogos",
+            "mensagem": "Confira as promoções de jogos nesta Black Friday e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-28": {
-            "tema": "Sábado pós Black Friday – última chance",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Última chance pós Black Friday",
-            "mensagem": "Última chance de aproveitar as ofertas de Black Friday nos bolões. Confira e jogue com responsabilidade. [link]"
+            "tema": "Sábado pós Black Friday — última chance",
+            "assunto": "*|PRIMEIRO_NOME|*, viu a última chance de sábado?",
+            "mensagem": "Confira a última oportunidade de jogar e jogue com responsabilidade. [link]"
           },
           "2026-11-29": {
-            "tema": "Domingo de Bolão — confira",
-            "assunto": "Confira o bolão de domingo, *|PRIMEIRO_NOME|*",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, o bolão de domingo está aberto! Confira os jogos da semana e jogue com responsabilidade. Boa sorte! 🍀 [link]"
+            "tema": "Domingo de Bolão – jogue com responsabilidade",
+            "assunto": "*|PRIMEIRO_NOME|*, confira os bolões de domingo",
+            "mensagem": "Oi *|PRIMEIRO_NOME|*, o bolão de domingo está aberto! Confira os jogos e jogue com responsabilidade. 🍀 [link]"
           },
           "2026-11-30": {
-            "tema": "Resultado do Sorteio — segunda",
-            "assunto": "*|PRIMEIRO_NOME|*, resultado do sorteio de hoje",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, nesta Cyber Monday confira o resultado do sorteio e jogue com responsabilidade. Boa sorte! 🍀 [link]"
+            "tema": "Resultado do Sorteio – confira",
+            "assunto": "*|PRIMEIRO_NOME|*, veja o resultado do sorteio de hoje",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Seus jogos da semana estão na Sorte Online. Confira: [link]"
           }
         },
-        "estrategia": "Vamos manter o disparo recorrente “Resultado do Sorteio” nas segundas, horário de 18h‑24h, onde o CTR foi de <b>0,43%</b>. Aproveitaremos os assuntos com maior taxa de abertura, como “<b>21,05%</b>” e “<b>19,56%</b>”, e focaremos em jogos, bolões e concursos da semana, convidando o público a conferir e jogar com responsabilidade. O ritmo de <b>3,2</b> dias de disparo por semana será mantido, totalizando <b>13</b> e‑mails e <b>4</b> mensagens de WhatsApp.",
+        "estrategia": "Mantemos a cadência de <b>3,2</b> envios por semana, focando nas segundas, quando a abertura dos engajados chegou a <b>13,1%</b> e o disparo recorrente de “Resultado do Sorteio” tem <b>14,4%</b> de abertura. Aproveitamos o horário de maior clique, 18h–24h, que gerou CTR de <b>0,43%</b>, para divulgar os jogos, bolões e concursos da semana, sempre com “confira” e “jogue com responsabilidade”. As vendas nos dias de disparo para engajados já alcançaram média de <b>R$ 941</b>, comparado a <b>R$ 348</b> nos dias sem disparo.",
         "notas": {
-          "email": "Usar só e‑mail eleva para <b>17</b> envios no mês, permitindo explorar o melhor horário (18h‑20h) e os assuntos com abertura acima de <b>19%</b>.",
-          "whatsapp": "Com WhatsApp como único canal, ainda não há histórico de desempenho, então não há dados de abertura ou clique para orientar a frequência (<b>9</b> envios previstos)."
+          "email": "Usar somente e‑mail mantém a taxa de abertura de <b>13,1%</b> nas segundas e a média de vendas de <b>R$ 941</b> nos dias de disparo, garantindo o desempenho histórico.",
+          "whatsapp": "Com WhatsApp exclusivo ainda não há histórico de desempenho, portanto não há dados de abertura ou vendas para comparar."
         },
         "evidencias": [
           "Abertura dos engajados: melhor na segunda (13,1% em 12 envio(s)); média geral 10,7%.",
-          "Vendas em dia de disparo para engajados: média de R$ 941 (34 dias) contra R$ 315 nos dias sem disparo.",
+          "Vendas em dia de disparo para engajados: média de R$ 941 (34 dias) contra R$ 348 nos dias sem disparo.",
           "Melhor faixa para clique: 18h–24h (CTR de 0,43% em 2 envio(s)).",
           "Cadência atual para engajados: 3,2 dias de disparo por semana — o cronograma mantém esse ritmo.",
           "Disparo recorrente mantido: “Resultado do Sorteio” toda segunda (6 envios, 14,4% de abertura)."
@@ -8940,17 +9021,18 @@
             }
           ],
           "ia": {
-            "motor": "O fluxo vai de <b>195.244 entregues</b> → <b>16.009 aberturas</b> → <b>581 cliques</b> → <b>183 leads</b> → <b>3 contratos pagos</b>. A maior perda ocorre na etapa <b>aberturas → cliques</b> (≈96,4% não avançam) e, no funil do parceiro, entre <b>digitados → pagos</b> (≈91,2% permanecem sem conversão).",
-            "diagnostico": "Do total de <b>174 leads únicos</b>, apenas <b>34 foram digitados</b> (19,54%) e <b>3 fecharam contrato</b> (8,8% dos digitados). O volume pago foi de <b>R$ 30.580,00</b>, com ticket médio de <b>R$ 10.193,33</b>. O parceiro reporta faturamento de <b>R$ 47.980,00</b> considerando propostas que fecharam no mês seguinte.",
-            "conversao": "A taxa de abertura foi de <b>8,2%</b> e a taxa de cliques <b>0,3%</b> sobre as entregas, com <b>2,98%</b> de bounce. No período, tivemos <b>183 leads para 581 cliques</b> (31,5% de leads por clique).",
+            "motor": "O caminho vai de <b>195.244 entregues</b> → <b>16.009 aberturas</b> → <b>581 cliques</b> → <b>183 leads</b> → <b>3 contratos pagos</b>. A maior perda está em <b>aberturas → cliques (96,4%)</b> no e‑mail e em <b>digitados → pagos (91,2%)</b> no funil do parceiro.",
+            "diagnostico": "Do total de 174 leads únicos, apenas 34 foram digitados (<b>19,54%</b>) e 3 fecharam contrato (<b>1,72%</b> dos únicos). O volume pago foi de <b>R$ 30.580,00</b>, com ticket médio de <b>R$ 10.193,33</b>. O parceiro reportou faturamento de <b>R$ 47.980,00</b> considerando propostas que fecharam no mês seguinte.",
+            "conversao": "A taxa de abertura foi de <b>8,2%</b> e a taxa de cliques sobre entregues <b>0,3%</b>, com bounce de <b>2,98%</b>. No período tivemos <b>183 leads para 581 cliques</b>, resultando em <b>31,5%</b> de leads por clique.",
             "sustenta": [
-              "<b>195.244</b> entregues",
-              "<b>5.989</b> bounce (2,98% das entregas+bounce)",
-              "<b>16.009</b> aberturas (8,2% das entregas)",
-              "<b>581</b> cliques (0,3% das entregas)"
+              "195.244 entregues: e‑mails enviados.",
+              "5.989 bounce (2,98%): e‑mails não entregues.",
+              "16.009 aberturas (8,2%): usuários que abriram.",
+              "581 cliques (0,3%): interações nos e‑mails.",
+              "174 leads únicos: leads recebidos pelo parceiro."
             ],
-            "recomendacao": "Para o próximo ciclo, teste envios nas <b>quartas</b> e <b>sábados</b> entre <b>15h e 18h</b>, mantendo a segmentação das bases A e B. Aumente a cadência para duas campanhas semanais e solicite ao parceiro a origem de cada lead e um relatório diário, permitindo atribuir cliques a leads e refinar o cálculo de conversão.",
-            "whatsapp": "Canal WhatsApp pronto, aguardando os primeiros disparos (custo por disparo R$ 0,42)."
+            "recomendacao": "Para o próximo ciclo, teste as bases A e B com cadência semanal, enviando nas quartas‑feiras entre 15h e 18h (horário com melhor desempenho). Solicite ao parceiro a origem de cada lead e um reporte diário para melhorar a atribuição e monitorar perdas em tempo real.",
+            "whatsapp": "Canal WhatsApp pronto, aguardando os primeiros disparos; custo por disparo R$ 0,42."
           }
         },
         {
@@ -9130,17 +9212,18 @@
           "parcial": false,
           "ate": "30/09",
           "ia": {
-            "motor": "O fluxo vai de <b>195.244 entregues</b> → <b>16.009 aberturas</b> → <b>581 cliques</b> → <b>183 leads</b> → <b>3 contratos pagos</b>. A maior perda ocorre na etapa <b>aberturas → cliques</b> (≈96,4% não avançam) e, no funil do parceiro, entre <b>digitados → pagos</b> (≈91,2% permanecem sem conversão).",
-            "diagnostico": "Do total de <b>174 leads únicos</b>, apenas <b>34 foram digitados</b> (19,54%) e <b>3 fecharam contrato</b> (8,8% dos digitados). O volume pago foi de <b>R$ 30.580,00</b>, com ticket médio de <b>R$ 10.193,33</b>. O parceiro reporta faturamento de <b>R$ 47.980,00</b> considerando propostas que fecharam no mês seguinte.",
-            "conversao": "A taxa de abertura foi de <b>8,2%</b> e a taxa de cliques <b>0,3%</b> sobre as entregas, com <b>2,98%</b> de bounce. No período, tivemos <b>183 leads para 581 cliques</b> (31,5% de leads por clique).",
+            "motor": "O caminho vai de <b>195.244 entregues</b> → <b>16.009 aberturas</b> → <b>581 cliques</b> → <b>183 leads</b> → <b>3 contratos pagos</b>. A maior perda está em <b>aberturas → cliques (96,4%)</b> no e‑mail e em <b>digitados → pagos (91,2%)</b> no funil do parceiro.",
+            "diagnostico": "Do total de 174 leads únicos, apenas 34 foram digitados (<b>19,54%</b>) e 3 fecharam contrato (<b>1,72%</b> dos únicos). O volume pago foi de <b>R$ 30.580,00</b>, com ticket médio de <b>R$ 10.193,33</b>. O parceiro reportou faturamento de <b>R$ 47.980,00</b> considerando propostas que fecharam no mês seguinte.",
+            "conversao": "A taxa de abertura foi de <b>8,2%</b> e a taxa de cliques sobre entregues <b>0,3%</b>, com bounce de <b>2,98%</b>. No período tivemos <b>183 leads para 581 cliques</b>, resultando em <b>31,5%</b> de leads por clique.",
             "sustenta": [
-              "<b>195.244</b> entregues",
-              "<b>5.989</b> bounce (2,98% das entregas+bounce)",
-              "<b>16.009</b> aberturas (8,2% das entregas)",
-              "<b>581</b> cliques (0,3% das entregas)"
+              "195.244 entregues: e‑mails enviados.",
+              "5.989 bounce (2,98%): e‑mails não entregues.",
+              "16.009 aberturas (8,2%): usuários que abriram.",
+              "581 cliques (0,3%): interações nos e‑mails.",
+              "174 leads únicos: leads recebidos pelo parceiro."
             ],
-            "recomendacao": "Para o próximo ciclo, teste envios nas <b>quartas</b> e <b>sábados</b> entre <b>15h e 18h</b>, mantendo a segmentação das bases A e B. Aumente a cadência para duas campanhas semanais e solicite ao parceiro a origem de cada lead e um relatório diário, permitindo atribuir cliques a leads e refinar o cálculo de conversão.",
-            "whatsapp": "Canal WhatsApp pronto, aguardando os primeiros disparos (custo por disparo R$ 0,42)."
+            "recomendacao": "Para o próximo ciclo, teste as bases A e B com cadência semanal, enviando nas quartas‑feiras entre 15h e 18h (horário com melhor desempenho). Solicite ao parceiro a origem de cada lead e um reporte diário para melhorar a atribuição e monitorar perdas em tempo real.",
+            "whatsapp": "Canal WhatsApp pronto, aguardando os primeiros disparos; custo por disparo R$ 0,42."
           }
         }
       ],
@@ -9548,85 +9631,85 @@
         },
         "dias": {
           "2026-11-04": {
-            "tema": "Quarta de crédito – simule já",
-            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito hoje",
-            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Simule seu crédito e veja se cabe no seu orçamento. 😊 [link]"
+            "tema": "Quarta de crédito – simule agora",
+            "assunto": "Simule seu crédito hoje, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Que tal conferir um crédito que cabe no seu orçamento? Simule agora e veja as condições 😊 [link]"
           },
           "2026-11-05": {
-            "tema": "Quinta de repique – viu o crédito?",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|* ainda pode simular",
-            "mensagem": "Oi, ainda dá tempo de simular seu crédito. Consulte as condições. 😊 [link]"
+            "tema": "Quinta de crédito – você viu?",
+            "assunto": "Você viu? Simule seu crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Reforçando: ainda dá tempo de simular um crédito que se ajuste ao seu orçamento. Confira agora. [link]"
           },
           "2026-11-07": {
-            "tema": "Sábado de crédito – veja opções",
-            "assunto": "*|PRIMEIRO_NOME|*, opções de crédito para você",
-            "mensagem": "Bom fim de semana! Simule agora e descubra se cabe no seu orçamento. 😊 [link]"
+            "tema": "Sábado de crédito – simule já",
+            "assunto": "Aproveite o sábado para simular crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Bom dia, *|PRIMEIRO_NOME|*! Aproveite o fim de semana para consultar as condições de um crédito que cabe no seu bolso. Simule aqui. [link]"
           },
           "2026-11-09": {
-            "tema": "Segunda de organização – crédito pós‑salário",
-            "assunto": "*|PRIMEIRO_NOME|*, organize seu salário com crédito",
-            "mensagem": "Salário chegou! Planeje seu orçamento e simule crédito sem comprometer. 😊 [link]"
+            "tema": "Segunda de organização financeira",
+            "assunto": "Organize seu salário, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! O salário chegou. Que tal planejar suas contas e ver se um crédito cabe no seu orçamento? Simule sem compromisso 📊 [link]"
           },
           "2026-11-11": {
-            "tema": "Quarta de crédito – simule fácil",
-            "assunto": "*|PRIMEIRO_NOME|*, crédito rápido para você",
-            "mensagem": "Simule seu crédito e veja se cabe no seu orçamento. 😊 [link]"
+            "tema": "Quarta de crédito – simule hoje",
+            "assunto": "Confira o crédito ideal, *|PRIMEIRO_NOME|*",
+            "mensagem": "Olá, *|PRIMEIRO_NOME|*! Veja as condições de um crédito que se adapta ao seu orçamento. Simule agora e saiba mais. [link]"
           },
           "2026-11-12": {
-            "tema": "Quinta de repique – ainda dá tempo",
-            "assunto": "Você viu? *|PRIMEIRO_NOME|* última chance de simular",
-            "mensagem": "Última oportunidade de simular crédito hoje. Consulte as condições. 😊 [link]"
+            "tema": "Quinta de crédito – você viu?",
+            "assunto": "Você viu? Simule crédito, *|PRIMEIRO_NOME|*",
+            "mensagem": "Oi, *|PRIMEIRO_NOME|*! Ainda dá tempo de simular um crédito que encaixe no seu planejamento. Confira as condições. [link]"
           },
           "2026-11-14": {
-            "tema": "Sábado de crédito – aproveite",
-            "assunto": "*|PRIMEIRO_NOME|*, crédito disponível agora",
-            "mensagem": "Simule seu crédito e descubra se cabe no seu orçamento. 😊 [link]"
+            "tema": "Sábado de crédito – última chance",
+            "assunto": "Última oportunidade de simular, *|PRIMEIRO_NOME|*",
+            "mensagem": "Bom dia, *|PRIMEIRO_NOME|*! Último dia para consultar um crédito que cabe no seu orçamento. Simule agora e veja as opções. [link]"
           },
           "2026-11-18": {
-            "tema": "Quarta de crédito – simule agora",
+            "tema": "Quarta de crédito – simule já",
             "assunto": "*|PRIMEIRO_NOME|*, veja se cabe no seu orçamento",
-            "mensagem": "💰Oi *|PRIMEIRO_NOME|*, que tal simular um crédito de até R$ 4.000 e ver se cabe no seu orçamento? Consulte as condições aqui: [link]"
+            "mensagem": "Simule seu crédito agora e veja se cabe no seu orçamento. 💰 [link]"
           },
           "2026-11-19": {
-            "tema": "Quinta de crédito – organize seu orçamento",
-            "assunto": "*|PRIMEIRO_NOME|*, veja como planejar antes do adiantamento",
-            "mensagem": "💡*|PRIMEIRO_NOME|*, antes do adiantamento salarial do dia 20, simule um crédito de até R$ 4.000 e organize seu orçamento. Consulte aqui: [link]"
+            "tema": "Quinta de crédito – consulte condições",
+            "assunto": "*|PRIMEIRO_NOME|*, consulte as condições do crédito",
+            "mensagem": "Confira as condições e simule seu crédito sem compromisso. 💰 [link]"
           },
           "2026-11-21": {
             "tema": "Sábado de crédito – veja se cabe",
-            "assunto": "*|PRIMEIRO_NOME|*, descubra seu limite sem complicação",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, simule um crédito de até R$ 4.000 e veja se encaixa no seu planejamento. Consulte as condições: [link]"
+            "assunto": "Sábado: *|PRIMEIRO_NOME|*, simule seu crédito",
+            "mensagem": "É sábado! Simule seu crédito e descubra se cabe no seu orçamento. 💰 [link]"
           },
           "2026-11-25": {
-            "tema": "Quarta de crédito – simule já",
-            "assunto": "*|PRIMEIRO_NOME|*, oportunidade de simular seu crédito",
-            "mensagem": "💰*|PRIMEIRO_NOME|*, simule agora um crédito de até R$ 4.000 e descubra se cabe no seu orçamento. Veja as condições: [link]"
+            "tema": "Quarta de crédito – organize finanças",
+            "assunto": "Organize seu orçamento, *|PRIMEIRO_NOME|*",
+            "mensagem": "Organize suas finanças e simule um crédito que se ajuste ao seu plano. 💰 [link]"
           },
           "2026-11-26": {
-            "tema": "Quinta de reimpacto – lembrete de crédito",
-            "assunto": "*|PRIMEIRO_NOME|*, você viu? Simule seu crédito",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, lembrando que ainda pode simular um crédito de até R$ 4.000. Consulte as condições aqui: [link]"
+            "tema": "Reimpacto – ainda dá tempo de simular",
+            "assunto": "Você viu? *|PRIMEIRO_NOME|*, ainda dá tempo",
+            "mensagem": "Ainda dá tempo! Simule seu crédito e veja se cabe no seu orçamento. 💰 [link]"
           },
           "2026-11-28": {
-            "tema": "Sábado de crédito – simule hoje",
-            "assunto": "*|PRIMEIRO_NOME|*, última chance de simular",
-            "mensagem": "💡*|PRIMEIRO_NOME|*, ainda dá tempo de simular um crédito de até R$ 4.000 e organizar seu orçamento. Clique aqui: [link]"
+            "tema": "Sábado de crédito – última chance",
+            "assunto": "Última chance, *|PRIMEIRO_NOME|*, simule agora",
+            "mensagem": "Última chance nesta semana: simule seu crédito e avalie seu orçamento. 💰 [link]"
           },
           "2026-11-29": {
-            "tema": "Domingo de crédito – veja suas opções",
-            "assunto": "*|PRIMEIRO_NOME|*, descubra seu crédito sem compromisso",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, simule um crédito de até R$ 4.000 e veja se cabe no seu planejamento. Consulte aqui: [link]"
+            "tema": "Domingo de crédito – consulte",
+            "assunto": "Domingo: *|PRIMEIRO_NOME|*, veja as condições",
+            "mensagem": "Domingo tranquilo? Consulte as condições e simule seu crédito sem compromisso. 💰 [link]"
           },
           "2026-11-30": {
-            "tema": "Segunda de crédito — simule agora",
-            "assunto": "*|PRIMEIRO_NOME|*, organize seu orçamento neste Cyber Monday",
-            "mensagem": "Oi *|PRIMEIRO_NOME|*, aproveite o Cyber Monday para simular crédito e organizar seu orçamento antes do fim do mês. Veja se cabe no seu bolso [link]"
+            "tema": "Cyber Monday de crédito — simule já",
+            "assunto": "*|PRIMEIRO_NOME|*, veja crédito até R$ 4.000",
+            "mensagem": "É Cyber Monday! Simule crédito de até R$ 4.000 e organize seu orçamento antes do fim do mês. [link]"
           }
         },
-        "estrategia": "Vamos aproveitar o melhor dia de abertura, quarta‑feira, que historicamente gera <b>8,2%</b> de abertura, enviando e‑mails entre <b>15h e 18h</b> (CTR <b>0,30%</b>) e complementando com WhatsApp nos dias de maior engajamento. O plano combina <b>9</b> envios de e‑mail e <b>4</b> de WhatsApp ao longo da semana, incentivando o parceiro a <b>simular</b> e <b>consultar as condições</b>.",
+        "estrategia": "Para novembro, vamos usar os <b>9</b> envios de e‑mail e <b>4</b> de WhatsApp, concentrando‑nos nos dias com melhor abertura (quarta) e no horário 15h–18h, que já mostrou CTR de <b>0,30%</b> em <b>2</b> envios; os e‑mails serão enviados entre <b>16h</b> e <b>18h</b> para aproveitar a taxa de abertura de <b>8,2%</b>.",
         "notas": {
-          "email": "Usar só e‑mail aumenta para <b>11</b> envios no mês, mas perde a cobertura dos <b>4</b> disparos de WhatsApp.",
-          "whatsapp": "Com WhatsApp sem histórico, a performance ainda é desconhecida, embora o plano preveja <b>9</b> envios no mês."
+          "email": "Se o parceiro usar só e‑mail, mantém‑se a taxa de abertura de <b>8,2%</b> nos horários de <b>16h</b>‑<b>18h</b>, mas perde a oportunidade de reforçar a mensagem via WhatsApp.",
+          "whatsapp": "Usar só WhatsApp não tem histórico, portanto não há dados de abertura ou clique para guiar a frequência."
         },
         "evidencias": [
           "Abertura dos envios do parceiro: melhor na quarta (8,2% em 1 envio(s)); média geral 8,2%.",
