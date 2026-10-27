@@ -1,9 +1,10 @@
 /* =====================================================================
    painel_orcamento.js — Orçamento de público SuperAdds (LP da RD Station)
    ---------------------------------------------------------------------
-   O anunciante passa o público (gênero, idade, região, renda) e quantas
-   pessoas quer atingir; a página responde quem são, onde estão, quantos
-   são, em que lojas e varejistas, quanto custa e qual a taxa de sucesso.
+   O anunciante passa o público (gênero, idade, região, renda) e quanto
+   quer investir; a página responde quem são, onde estão, quantos são,
+   em que lojas e varejistas, quantas mensagens o investimento paga e,
+   no termômetro, quantas devem virar leitura.
 
    Os números vêm do Power BI (MKT 63 Persona_Enriquecidos e ADS - 01
    Ayumi Porto), só totais, e chegam CIFRADOS em orcamento.json (AES-GCM;
@@ -136,6 +137,24 @@
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .bn .v.alerta{color:var(--warn-ink)}
   .bn .s{font-size:10.5px;color:var(--muted2);margin-top:3px;line-height:1.4}
+  .bn.b3{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+  /* termômetro (como um teste de velocidade) */
+  .hero{display:grid;grid-template-columns:minmax(300px,400px) minmax(0,1fr);gap:13px;margin-top:13px;align-items:start}
+  .hero .lado{display:flex;flex-direction:column;gap:13px;min-width:0}
+  .tm{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .tm .hrow{align-self:stretch;text-align:left;margin-bottom:4px}
+  .tm svg{width:100%;max-width:340px;height:auto;display:block}
+  .tm .ver{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;border-radius:999px;padding:5px 13px;
+    border:1px solid var(--line);background:var(--soft);color:var(--ink2)}
+  .tm .ver.bom{color:var(--pos)}
+  .tm .ver.baixo{color:var(--warn-ink);background:var(--warn-bg);border-color:var(--warn-line)}
+  .tm .base{font-size:11px;color:var(--muted);margin-top:7px;line-height:1.45;max-width:320px}
+  .leit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-self:stretch;margin-top:14px;
+    border-top:1px solid var(--line);padding-top:12px}
+  .leit .r{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+  .leit .v{font-family:var(--disp);font-weight:800;font-size:20px;margin-top:2px;font-variant-numeric:tabular-nums}
+  .leit .s{font-size:10.5px;color:var(--muted2)}
 
   /* barras */
   .part{display:flex;flex-direction:column;gap:9px}
@@ -181,8 +200,9 @@
   .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--deep);color:#fff;padding:10px 16px;
     border-radius:10px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:60}
   .toast.on{opacity:1}
-  @media (max-width:1100px){.pedido{grid-template-columns:repeat(2,minmax(0,1fr))}.r-3{grid-template-columns:minmax(0,1fr)}}
-  @media (max-width:900px){.r-2{grid-template-columns:minmax(0,1fr)}.bn{grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media (max-width:1100px){.pedido{grid-template-columns:repeat(2,minmax(0,1fr))}.r-3{grid-template-columns:minmax(0,1fr)}
+    .hero{grid-template-columns:minmax(0,1fr)}}
+  @media (max-width:900px){.r-2{grid-template-columns:minmax(0,1fr)}.bn,.bn.b3{grid-template-columns:repeat(2,minmax(0,1fr))}
     .funil{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media (max-width:560px){.wrap{padding:0 14px 30px}.pedido{grid-template-columns:minmax(0,1fr)}.campo.l2{grid-column:auto}
     .dir{margin-left:0}}
@@ -210,7 +230,7 @@
 
     var PAC = null, D = null, X = null;
     var PED = { anunciante: "", gen: [true, true, false, false], idDe: 0, idAte: 9, ufs: {}, cidades: [], rendaDe: 0,
-                rendaAte: 5, base: false, qtd: "" };
+                rendaAte: 5, base: false, verba: "" };
     var mostrarTodas = false;
 
     // ---------- formato ----------
@@ -225,6 +245,16 @@
       if (isNaN(d)) return String(iso).slice(0, 10);
       return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" }) + " " +
         d.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+    }
+    // valor digitado do jeito brasileiro: "20.000", "1.500,50", "R$ 20 mil", "20k"
+    function lerValor(bruto) {
+      var mult = /\d\s*(mil|k)\b/i.test(String(bruto || "")) ? 1000 : 1;
+      var s = String(bruto || "").replace(/[^\d.,]/g, "");
+      if (!s) return 0;
+      if (s.indexOf(",") >= 0) s = s.replace(/\./g, "").replace(",", ".");
+      else if (!/^\d+\.\d{1,2}$/.test(s)) s = s.replace(/\./g, "");      // ponto de milhar
+      var v = parseFloat(s) * mult;
+      return isFinite(v) && v > 0 ? v : 0;
     }
     function guardar(c, v) { try { localStorage.setItem("orc-" + c, v); } catch (e) { /* privado */ } }
     function ler(c) { try { return localStorage.getItem("orc-" + c); } catch (e) { return null; } }
@@ -382,10 +412,15 @@
         R.varejistas[vj] = (R.varejistas[vj] || 0) + R.porLoja[l];
       });
       R.nVarejistas = Object.keys(R.varejistas).length;
-      R.qtd = PED.qtd ? Math.max(0, parseInt(PED.qtd, 10) || 0) : 0;
-      R.mensagens = R.qtd ? Math.min(R.qtd, R.total) : R.total;
+      // investimento -> mensagens que ele paga (uma por contato, no máximo o público todo)
       R.custoUnit = D.custo.unitario || 0;
+      R.verba = lerValor(PED.verba);
+      R.possiveis = R.verba && R.custoUnit ? Math.floor(R.verba / R.custoUnit + 1e-9) : 0;
+      R.mensagens = R.verba && R.custoUnit ? Math.min(R.possiveis, R.total) : R.total;
+      R.excede = !!R.verba && R.possiveis > R.total;
       R.custo = R.mensagens * R.custoUnit;
+      R.sobra = R.excede ? R.verba - R.custo : 0;
+      R.cobertura = R.total ? R.mensagens / R.total : 0;
       R.plus = plus(gOk, iOk, uOk, ultimaIdade);
       R.entregues = R.mensagens * R.plus.taxaEntrega;
       R.lidas = R.entregues * R.plus.taxaLeitura;
@@ -425,14 +460,18 @@
       });
       var cxPerfil = cons >= MIN_CAIXA_PERFIL;
       var H = cxPerfil ? hora : hG, Dd = cxPerfil ? dia : dG, totH = cxPerfil ? cons : consG;
-      var pico = 0, picoDia = 1, melhorMedia = -1;
+      var pico = 0, picoDia = 1, melhorMedia = -1, porDia = [0, 0, 0, 0, 0, 0, 0, 0];
       for (var h = 0; h < 24; h++) if (H[h] > H[pico]) pico = h;
       for (var d = 1; d <= 7; d++) {
         var media = X.diasNoCaixa[d] ? Dd[d] / X.diasNoCaixa[d] : Dd[d];
+        porDia[d] = media;
         if (media > melhorMedia) { melhorMedia = media; picoDia = d; }
       }
       return {
         usaPerfil: usaPerfil, enviosPerfil: perf.envios, envios: cmp.envios,
+        sucesso: cmp.envios ? cmp.lidas / cmp.envios : 0,            // o termômetro: lidas ÷ enviadas
+        refSucesso: geral.envios ? geral.lidas / geral.envios : 0,   // a marca: média de todas as campanhas
+        porDia: porDia,
         taxaEntrega: cmp.envios ? cmp.entregues / cmp.envios : 0,
         taxaLeitura: cmp.entregues ? cmp.lidas / cmp.entregues : 0,
         taxaErro: cmp.envios ? cmp.erros / cmp.envios : 0,
@@ -453,12 +492,12 @@
       return '<div class="painel"><div class="hrow"><div><h3>' + esc(titulo) + '</h3>' + (cap ? '<div class="cap">' + cap + '</div>' : '') +
         '</div></div>' + corpo + '</div>';
     }
-    function barras(itens, total, cor) {
+    function barras(itens, total, cor, unidade) {
       if (!itens.length) return '<div class="vazio">Nenhuma pessoa com este pedido.</div>';
       var max = Math.max.apply(null, itens.map(function (x) { return x.v; })) || 1;
       return '<div class="part">' + itens.map(function (x) {
         var share = total ? x.v / total : 0;
-        return '<div class="pl" data-tip="' + esc(nf(x.v) + " pessoas · " + pct(share) + "\n" + x.r) + '"><div class="h"><span>' + esc(x.r) +
+        return '<div class="pl" data-tip="' + esc(nf(x.v) + " " + (unidade || "pessoas") + " · " + pct(share) + "\n" + x.r) + '"><div class="h"><span>' + esc(x.r) +
           '</span><b>' + nf(x.v) + '<small>' + pct(share, 0) + '</small></b></div><span class="t"><span class="f" style="width:' +
           Math.max(1.5, x.v / max * 100).toFixed(1) + '%' + (cor ? ';background:' + cor : '') + '"></span></span></div>';
       }).join("") + '</div>';
@@ -490,6 +529,90 @@
       return '<div class="col"><svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Movimento no caixa por hora">' + g + '</svg></div>';
     }
 
+    // ---------- termômetro: mostrador de 240°, como um teste de velocidade ----------
+    var TM_CX = 170, TM_CY = 148, TM_R = 108, TM = { atual: 0, raf: 0 };
+    var COR_TM = { trilho: "var(--track)", valor: "var(--s1)", tinta: "var(--ink)", suave: "var(--muted)", fundo: "var(--card)" };
+    function tmPonto(a, r) { var rad = a * Math.PI / 180; return [TM_CX + r * Math.sin(rad), TM_CY - r * Math.cos(rad)]; }
+    function tmAngulo(v) { return -120 + 240 * Math.max(0, Math.min(1, v)); }
+    function termometroSvg(v, ref, c) {
+      var f = function (n) { return n.toFixed(1); }, p0 = tmPonto(-120, TM_R), p1 = tmPonto(120, TM_R);
+      var arco = "M " + f(p0[0]) + " " + f(p0[1]) + " A " + TM_R + " " + TM_R + " 0 1 1 " + f(p1[0]) + " " + f(p1[1]);
+      var fonte = "font-family=\"Inter,system-ui,sans-serif\"", g = "";
+      g += '<path d="' + arco + '" fill="none" stroke="' + c.trilho + '" stroke-width="16" stroke-linecap="round"/>';
+      g += '<path id="tm-arco" d="' + arco + '" pathLength="100" fill="none" stroke="' + c.valor + '" stroke-width="16" stroke-linecap="round"' +
+        ' stroke-dasharray="' + (Math.max(0, Math.min(1, v)) * 100).toFixed(2) + ' 100"' + (v > 0.002 ? '' : ' opacity="0"') + '/>';
+      for (var t = 0; t <= 10; t++) {                                  // marcas a cada 10%, número a cada 20%
+        var a = -120 + 24 * t, q0 = tmPonto(a, TM_R - 13), q1 = tmPonto(a, TM_R - (t % 2 ? 17 : 21));
+        g += '<line x1="' + f(q0[0]) + '" y1="' + f(q0[1]) + '" x2="' + f(q1[0]) + '" y2="' + f(q1[1]) + '" stroke="' + c.suave +
+          '" stroke-width="1.5" opacity=".55"/>';
+        if (t % 2 === 0) {
+          var q = tmPonto(a, TM_R - 34);
+          g += '<text x="' + f(q[0]) + '" y="' + f(q[1] + 4) + '" text-anchor="middle" font-size="11" ' + fonte + ' fill="' + c.suave + '">' + (t * 10) + '</text>';
+        }
+      }
+      if (ref > 0) {                                                   // a média de todas as campanhas
+        var ar = tmAngulo(ref), m0 = tmPonto(ar, TM_R - 12), m1 = tmPonto(ar, TM_R + 12), ml = tmPonto(ar, TM_R + 24);
+        var lado = Math.sin(ar * Math.PI / 180), anc = lado > 0.3 ? "start" : lado < -0.3 ? "end" : "middle";
+        g += '<g data-tip="' + esc("Média das campanhas: " + pct(ref) + " das mensagens lidas") + '">' +
+          '<line x1="' + f(m0[0]) + '" y1="' + f(m0[1]) + '" x2="' + f(m1[0]) + '" y2="' + f(m1[1]) + '" stroke="' + c.tinta +
+          '" stroke-width="3" stroke-linecap="round"/><text x="' + f(ml[0]) + '" y="' + f(ml[1] + 4) + '" text-anchor="' + anc +
+          '" font-size="11" font-weight="600" ' + fonte + ' fill="' + c.tinta + '">média ' + pct(ref, 0) + '</text></g>';
+      }
+      g += '<g id="tm-agulha" transform="rotate(' + tmAngulo(v).toFixed(2) + ' ' + TM_CX + ' ' + TM_CY + ')">' +
+        '<path d="M ' + (TM_CX - 5.5) + ' ' + (TM_CY + 2) + ' L ' + TM_CX + ' ' + (TM_CY - TM_R + 32) + ' L ' + (TM_CX + 5.5) + ' ' + (TM_CY + 2) +
+        ' Z" fill="' + c.tinta + '"/><circle cx="' + TM_CX + '" cy="' + TM_CY + '" r="10" fill="' + c.tinta + '"/>' +
+        '<circle cx="' + TM_CX + '" cy="' + TM_CY + '" r="4" fill="' + c.fundo + '"/></g>';
+      g += '<text id="tm-num" x="' + TM_CX + '" y="' + (TM_CY + 78) + '" text-anchor="middle" font-size="38" font-weight="800" ' +
+        'font-family="\'Plus Jakarta Sans\',system-ui,sans-serif" fill="' + c.tinta + '">' + pct(v) + '</text>' +
+        '<text x="' + TM_CX + '" y="' + (TM_CY + 100) + '" text-anchor="middle" font-size="12" ' + fonte + ' fill="' + c.suave +
+        '">das mensagens viram leitura</text>';
+      return '<svg viewBox="0 0 340 ' + (TM_CY + 110) + '" role="img" aria-label="Termômetro de sucesso: ' + esc(pct(v)) +
+        ' das mensagens viram leitura">' + g + '</svg>';
+    }
+    function veredito(P) {
+      var dif = (P.sucesso - P.refSucesso) * 100;
+      if (!P.usaPerfil) return { cls: "", ic: "●", t: "Taxa média das campanhas",
+        base: "O perfil pedido tem só " + nf(P.enviosPerfil) + " envios com cadastro conhecido: o termômetro usa a taxa de todas as campanhas (" + nf(P.envios) + " envios)." };
+      var base = "Pelo próprio perfil, em " + nf(P.envios) + " envios da campanha Ayumi/Porto.";
+      if (P.sucesso >= P.refSucesso * 1.1) return { cls: "bom", ic: "▲", t: nf(dif, 1) + " pontos acima da média", base: base };
+      if (P.sucesso <= P.refSucesso * 0.9) return { cls: "baixo", ic: "▼", t: nf(-dif, 1) + " pontos abaixo da média", base: base };
+      return { cls: "", ic: "●", t: "Na média das campanhas", base: base };
+    }
+    function painelTermometro(R) {
+      var P = R.plus, vd = veredito(P);
+      var leit = function (r, v, s) { return '<div><div class="r">' + esc(r) + '</div><div class="v">' + esc(v) + '</div><div class="s">' + esc(s) + '</div></div>'; };
+      return '<div class="painel tm"><div class="hrow"><div><h3>Termômetro de sucesso</h3><div class="cap">quantas mensagens devem virar leitura, ' +
+        'pelo que já enviamos (Plus · ADS - 01)</div></div></div>' +
+        termometroSvg(TM.atual, P.refSucesso, COR_TM) +
+        '<span class="ver ' + vd.cls + '"><span aria-hidden="true">' + vd.ic + '</span>' + esc(vd.t) + '</span>' +
+        '<div class="base">' + esc(vd.base) + '</div>' +
+        '<div class="leit">' + leit("Entrega", pct(P.taxaEntrega, 0), "das mensagens") + leit("Leitura", pct(P.taxaLeitura, 0), "das entregues") +
+          leit("Até ler", P.tipico ? nf(P.tipico, 0) + " min" : "—", "tempo típico") + '</div></div>';
+    }
+    // o ponteiro corre do valor anterior até o novo (a primeira vez, do zero)
+    function animarTermometro(alvo) {
+      var arco = $("tm-arco"), agulha = $("tm-agulha"), num = $("tm-num");
+      if (!arco) return;
+      cancelAnimationFrame(TM.raf);
+      var de = TM.atual, t0 = null, dur = de === 0 ? 1600 : 800;
+      var pinta = function (v) {
+        TM.atual = v;
+        arco.setAttribute("stroke-dasharray", (v * 100).toFixed(2) + " 100");
+        arco.setAttribute("opacity", v > 0.002 ? "1" : "0");
+        agulha.setAttribute("transform", "rotate(" + tmAngulo(v).toFixed(2) + " " + TM_CX + " " + TM_CY + ")");
+        num.textContent = pct(v);
+      };
+      var calmo = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (calmo || Math.abs(alvo - de) < 0.0005) { pinta(alvo); return; }
+      var passo = function (ts) {
+        if (t0 === null) t0 = ts;
+        var k = Math.min(1, (ts - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+        pinta(de + (alvo - de) * e);
+        if (k < 1) TM.raf = requestAnimationFrame(passo);
+      };
+      TM.raf = requestAnimationFrame(passo);
+    }
+
     // ---------- tela do orçamento ----------
     function telaOrcamento() {
       tela.innerHTML = topo("SuperAdds · " + nf(D.info.compradores) + " compradores na base enriquecida") +
@@ -513,7 +636,7 @@
         '<div class="acoes"><button class="btn" id="bt-limpar">' + LIMPA + 'Limpar</button></div></div>' +
         '<div class="pedido">' +
         '<label class="campo l2"><span class="rot">Anunciante / produto</span><input type="text" id="f-anunciante" maxlength="80" placeholder="Ex.: Porto Bank · consórcio" value="' + esc(PED.anunciante) + '"></label>' +
-        '<label class="campo"><span class="rot">Pessoas que quer atingir</span><input type="number" id="f-qtd" min="0" step="100" placeholder="Ex.: 50000" value="' + esc(PED.qtd) + '"></label>' +
+        '<label class="campo"><span class="rot">Quanto quer investir (R$)</span><input type="text" inputmode="decimal" id="f-verba" maxlength="20" placeholder="Ex.: 20.000" value="' + esc(PED.verba) + '"></label>' +
         '<div class="campo"><span class="rot">Gênero</span><div class="chips">' +
           ["Homens", "Mulheres"].map(function (g, i) { return '<button class="op" data-gen="' + i + '" aria-pressed="' + !!PED.gen[i] + '">' + g + '</button>'; }).join("") + '</div></div>' +
         '<div class="campo"><span class="rot">Faixa etária</span><div class="par">' + sel("f-id-de", idades, PED.idDe) + '<span>a</span>' + sel("f-id-ate", idades, PED.idAte) + '</div></div>' +
@@ -562,7 +685,12 @@
     }
     function ligarPedido() {
       $("f-anunciante").addEventListener("input", function (e) { PED.anunciante = e.target.value; guardar("pedido", JSON.stringify(PED)); });
-      $("f-qtd").addEventListener("input", function (e) { PED.qtd = e.target.value; mudou(false); });
+      $("f-verba").addEventListener("input", function (e) { PED.verba = e.target.value; mudou(false); });
+      $("f-verba").addEventListener("blur", function (e) {           // ao sair do campo, mostra no formato R$ (20.000 ou 1.500,50)
+        var v = lerValor(e.target.value);
+        PED.verba = e.target.value = v ? nf(v, v % 1 ? 2 : 0) : "";
+        guardar("pedido", JSON.stringify(PED));
+      });
       root.querySelectorAll("[data-gen]").forEach(function (b) {
         b.addEventListener("click", function () {
           var i = +b.getAttribute("data-gen"); PED.gen[i] = !PED.gen[i];
@@ -609,7 +737,7 @@
       $("f-base").addEventListener("change", function (e) { PED.base = e.target.checked; mudou(false); });
       $("bt-limpar").addEventListener("click", function () {
         PED = { anunciante: "", gen: [true, true, false, false], idDe: 0, idAte: D.dic.idade.length - 2, ufs: {}, cidades: [],
-                rendaDe: 0, rendaAte: D.dic.renda.length - 1, base: false, qtd: "" };
+                rendaDe: 0, rendaAte: D.dic.renda.length - 1, base: false, verba: "" };
         mostrarTodas = false; mudou(true);
       });
     }
@@ -618,17 +746,18 @@
     function desenhar() {
       var R = calcular(), dic = D.dic;
       ULTIMO = R;
-      var P = R.plus, falta = R.qtd && R.qtd > R.total;
+      var P = R.plus;
       var nums = numeros([
-        ["Contatos catalogados", nf(R.total), PED.base ? "base enriquecida, com e sem compra desde 2025" : "compradores da base enriquecida", true],
-        R.qtd ? ["Pedido do anunciante", falta ? "faltam " + nf(R.qtd - R.total) : "atende 100%", nf(R.qtd) + " pessoas pedidas", false, falta]
-              : ["Pedido do anunciante", "—", "informe quantas pessoas quer atingir", false],
+        ["Contatos catalogados", nf(R.total), R.verba && !R.excede && R.total ? "o investimento alcança " + pct(R.cobertura) + " deles" :
+          PED.base ? "base enriquecida, com e sem compra desde 2025" : "compradores da base enriquecida", true],
+        R.verba ? ["Mensagens com o investimento", nf(R.possiveis), R.excede ? "o público tem " + nf(R.total) + ": cabem só " + nf(R.mensagens) :
+            moeda(R.verba, R.verba % 1 ? 2 : 0) + " ÷ " + moeda(R.custoUnit, 4) + " por mensagem", false, R.excede]
+          : ["Mensagens com o investimento", "—", "informe quanto quer investir", false],
+        [R.verba ? "Investimento usado" : "Custo para atingir todos", moeda(R.custo, 2), R.excede ? "sobram " + moeda(R.sobra, 2) + " de " + moeda(R.verba, 2) :
+          nf(R.mensagens) + " mensagens × " + moeda(R.custoUnit, 4) + " (Meta + impostos)", true],
         ["Lojas", nf(R.lojas), "onde esse público compra", false],
         ["Varejistas", nf(R.nVarejistas), "redes dessas lojas", false],
-        ["Custo estimado", moeda(R.custo, 2), nf(R.mensagens) + " mensagens × " + moeda(R.custoUnit, 4), true],
-        ["Entregas esperadas", nf(R.entregues), pct(P.taxaEntrega) + " das mensagens", false],
-        ["Leituras esperadas", nf(R.lidas), pct(P.taxaLeitura) + " das entregues", false],
-        ["Custo por leitura", R.lidas ? moeda(R.custo / R.lidas, 2) : "—", "custo ÷ leituras esperadas", false]]);
+        ["Custo por leitura", R.lidas ? moeda(R.custo / R.lidas, 2) : "—", "≈ " + nf(R.lidas) + " leituras esperadas", false]]).replace('class="bn"', 'class="bn b3"');
 
       var idade = topN(R.porIdade, 20, function (k) { return dic.idade[k]; })
         .sort(function (a, b) { return dic.idade.indexOf(a.r) - dic.idade.indexOf(b.r); });
@@ -654,7 +783,7 @@
         : "taxas gerais da campanha Ayumi/Porto (<b>" + nf(P.envios) + " envios</b>): o perfil pedido tem só " + nf(P.enviosPerfil) +
           " envios com cadastro conhecido, pouco para uma taxa própria";
       var funil = '<div class="funil">' +
-        etapa("Mensagens", nf(R.mensagens), R.qtd ? "o pedido, até o que existe" : "todo o público catalogado") +
+        etapa("Mensagens", nf(R.mensagens), !R.verba ? "todo o público catalogado" : R.excede ? "todo o público (o investimento sobra)" : "o que o investimento paga") +
         etapa("Entregues", nf(R.entregues), pct(P.taxaEntrega) + " das mensagens") +
         etapa("Lidas", nf(R.lidas), pct(P.taxaLeitura) + " das entregues") +
         etapa("Cliques", nf(R.cliques), pct((D.custo.taxa_clique || 0) / 100) + " das entregues (Meta)") + '</div>' +
@@ -666,11 +795,17 @@
         ' a ' + esc(String(D.info.caixa_ate).slice(8, 10) + "/" + String(D.info.caixa_ate).slice(5, 7)) + '. Pico às <b>' + (P.pico < 10 ? "0" : "") + P.pico +
         'h</b> (' + pct(P.picoPct, 0) + ' das consultas do dia) e ' + esc(DIA_FRASE[P.picoDia] || P.picoDia) + '.' +
         (P.ticket ? ' Ticket médio no caixa: <b>' + moeda(P.ticket) + '</b>.' : '') + '</div>';
+      var semana = [];
+      for (var d = 1; d <= 7; d++) semana.push({ r: DIAS[d], v: P.porDia[d] });
+      var totSemana = semana.reduce(function (a, b) { return a + b.v; }, 0);
 
       $("resultado").innerHTML =
-        '<div class="sec">Quantos são e quanto custa</div>' + nums +
-        (falta ? '<div class="aviso">O pedido passa do que existe com esse perfil: o orçamento considera os ' + nf(R.total) +
-          ' contatos catalogados. Para chegar às ' + nf(R.qtd) + ' pessoas, abra a faixa etária, a renda ou a região.</div>' : '') +
+        '<div class="sec">Quantos são e quanto custa</div>' +
+        '<div class="hero">' + painelTermometro(R) + '<div class="lado">' + nums +
+          (R.excede ? '<div class="aviso" style="margin-top:0">Com ' + moeda(R.verba) + ' dá para enviar ' + nf(R.possiveis) +
+            ' mensagens, mas este público tem ' + nf(R.total) + ' contatos: o orçamento usa ' + moeda(R.custo) + ' e sobram ' + moeda(R.sobra) +
+            '. Para usar todo o investimento, abra a faixa etária, a renda ou a região.</div>' : '') +
+          painel("O que esperar das mensagens", "a partir do que já enviamos", funil) + '</div></div>' +
         '<div class="sec">Quem são</div><div class="row r-3">' +
           painel("Faixa etária", "", barras(idade, R.total)) + painel("Renda estimada", "pelo bureau", barras(renda, R.total)) +
           painel("Gênero", "", barras(gen, R.total)) + '</div>' +
@@ -681,11 +816,12 @@
           painel("Lojas onde esse público compra", "pessoas do público que compraram na loja desde 2025 (uma pessoa pode contar em mais de uma)" +
             (PED.cidades.length ? " · só lojas das cidades escolhidas" : ""), tab) +
           painel("Varejistas", "soma das lojas de cada rede", barras(vars, vars.reduce(function (a, b) { return a + b.v; }, 0))) + '</div>' +
-        '<div class="sec">Taxa de sucesso <small>Plus · ADS - 01 Ayumi Porto</small></div><div class="row r-2">' +
-          painel("O que esperar das mensagens", "a partir do que já enviamos", funil) +
-          painel("Quando esse público está na loja", "movimento no caixa por hora (% do dia) · em destaque, o pico", caixa) + '</div>';
+        '<div class="sec">Quando abordar <small>Plus · ADS - 01 Ayumi Porto</small></div><div class="row r-2">' +
+          painel("Quando esse público está na loja", "movimento no caixa por hora (% do dia) · em destaque, o pico", caixa) +
+          painel("Por dia da semana", "consultas no caixa, em média por dia", barras(semana, totSemana, null, "consultas por dia")) + '</div>';
       var bl = $("bt-lojas");
       if (bl) bl.addEventListener("click", function () { mostrarTodas = !mostrarTodas; desenhar(); });
+      animarTermometro(R.total ? P.sucesso : 0);
     }
     function etapa(r, v, s) { return '<div class="etapa"><div class="r">' + esc(r) + '</div><div class="v">' + esc(v) + '</div><div class="s">' + esc(s) + '</div></div>'; }
     function notas() {
@@ -694,7 +830,9 @@
         '(o mesmo critério do painel: ' + nf(i.compradores) + ' de ' + nf(i.base) + ' na base). Renda estimada pelo bureau, em faixas de salário mínimo (R$ ' +
         nf(i.renda_sm) + '). O MKT 63 tem o troco de cada compra, não o valor: por isso o filtro é a renda, e o ticket aparece só no Plus (lojas Ayumi). ' +
         '<b>Custo</b> = só o nosso: preço Meta de marketing (' + moeda(c.preco_meta, 4) + ' por mensagem) + impostos (' + nf(c.impostos_pct, 2) +
-        '%, conforme o parametros.xlsx). <b>Plus</b> = campanhas e caixa do ADS - 01; o perfil só aparece para quem tem cadastro no app, ' +
+        '%, conforme o parametros.xlsx). <b>Mensagens com o investimento</b> = investimento ÷ custo por mensagem, uma por contato, ' +
+        'no máximo o público todo. <b>Termômetro</b> = mensagens lidas ÷ mensagens enviadas na campanha Ayumi/Porto; a marca no mostrador é a média ' +
+        'de todas as campanhas. <b>Plus</b> = campanhas e caixa do ADS - 01; o perfil só aparece para quem tem cadastro no app, ' +
         'e com pouca amostra o orçamento usa o número geral. Dados de ' + esc(quando(i.gerado_em)) + '.</div>';
     }
 
@@ -724,10 +862,14 @@
       var vars = Object.keys(R.varejistas).sort(function (a, b) { return R.varejistas[b] - R.varejistas[a]; });
       return "Orçamento SuperAdds" + (PED.anunciante ? " — " + PED.anunciante : "") + "\n" +
         "Público: " + descricaoPedido() + "\n" +
-        "Contatos catalogados: " + nf(R.total) + (R.qtd ? " (pedido: " + nf(R.qtd) + (R.qtd > R.total ? ", faltam " + nf(R.qtd - R.total) : ", atende 100%") + ")" : "") + "\n" +
+        "Contatos catalogados: " + nf(R.total) + "\n" +
+        (R.verba ? "Investimento: " + moeda(R.verba) + " = " + nf(R.possiveis) + " mensagens" +
+          (R.excede ? " (o público tem " + nf(R.total) + ": usa " + moeda(R.custo) + ", sobram " + moeda(R.sobra) + ")" : " (alcança " + pct(R.cobertura) + " do público)") + "\n" : "") +
         "Onde estão: " + nf(R.lojas) + " lojas de " + nf(R.nVarejistas) + " varejistas (" + vars.slice(0, 6).join(", ") + (vars.length > 6 ? "…" : "") + ")\n" +
         "Principais lojas: " + lojas.join("; ") + "\n" +
-        "Custo estimado: " + moeda(R.custo) + " (" + nf(R.mensagens) + " mensagens × " + moeda(R.custoUnit, 4) + ", Meta + impostos)\n" +
+        (R.verba ? "Investimento usado: " : "Custo para atingir todos: ") + moeda(R.custo) + " (" + nf(R.mensagens) + " mensagens × " + moeda(R.custoUnit, 4) + ", Meta + impostos)\n" +
+        "Termômetro de sucesso: " + pct(P.sucesso) + " das mensagens viram leitura (" + veredito(P).t.toLowerCase() +
+          (P.usaPerfil ? (veredito(P).cls ? " de " : ", de ") + pct(P.refSucesso) : "") + ")\n" +
         "Resultado esperado: " + nf(R.entregues) + " entregues (" + pct(P.taxaEntrega) + "), " + nf(R.lidas) + " lidas (" + pct(P.taxaLeitura) +
         "), " + nf(R.cliques) + " cliques; custo por leitura " + (R.lidas ? moeda(R.custo / R.lidas) : "—") + "\n" +
         "Quando abordar: pico do caixa às " + (P.pico < 10 ? "0" : "") + P.pico + "h, " + (DIA_FRASE[P.picoDia] || P.picoDia) + "\n" +
@@ -759,13 +901,22 @@
         'text-transform:uppercase;letter-spacing:.05em;color:#5F7C83}.sub{color:#5F7C83;margin-top:4px}table{border-collapse:collapse;width:100%}' +
         'th,td{text-align:left;padding:6px 8px;border-bottom:1px solid #E2ECEE;vertical-align:top}th{width:34%;color:#2C555C;font-weight:600}' +
         '.big{font:800 18px "Plus Jakarta Sans",system-ui,sans-serif}.n{text-align:right;white-space:nowrap}.nota{color:#5F7C83;font-size:11px;margin-top:22px}' +
+        '.tm{display:flex;gap:24px;align-items:center;flex-wrap:wrap}.tm svg{width:260px;height:auto}.tm .ver{font-weight:700;font-size:15px}' +
+        '.tm .base{color:#5F7C83;margin-top:4px;max-width:420px}' +
         '@media print{body{margin:14mm}}</style></head><body>' +
         '<h1>Orçamento de público' + (PED.anunciante ? " — " + esc(PED.anunciante) : "") + '</h1><div class="sub">SuperAdds · ' + hoje + '</div>' +
-        '<h2>Pedido</h2><table>' + linha("Público", esc(descricaoPedido())) + (R.qtd ? linha("Pessoas pedidas", nf(R.qtd)) : "") + '</table>' +
+        '<h2>Pedido</h2><table>' + linha("Público", esc(descricaoPedido())) + (R.verba ? linha("Investimento", moeda(R.verba)) : "") + '</table>' +
+        '<h2>Termômetro de sucesso</h2><div class="tm">' +
+        termometroSvg(P.sucesso, P.refSucesso, { trilho: "#E9F0F1", valor: "#2a78d6", tinta: "#123A41", suave: "#5F7C83", fundo: "#fff" }) +
+        '<div><div class="ver">' + veredito(P).ic + " " + esc(veredito(P).t) + '</div><div class="base">' + esc(veredito(P).base) +
+        ' Entrega ' + pct(P.taxaEntrega, 0) + ' das mensagens; leitura ' + pct(P.taxaLeitura, 0) + ' das entregues' +
+        (P.tipico ? '; tempo típico até ler ' + nf(P.tipico, 0) + ' min' : '') + '.</div></div></div>' +
         '<h2>Quantos são e quanto custa</h2><table>' +
-        linha("Contatos catalogados", '<span class="big">' + nf(R.total) + '</span>' + (R.qtd ? (R.qtd > R.total ? " · faltam " + nf(R.qtd - R.total) : " · atende 100% do pedido") : "")) +
+        linha("Contatos catalogados", '<span class="big">' + nf(R.total) + '</span>') +
+        (R.verba ? linha("Mensagens com o investimento", nf(R.possiveis) + (R.excede ? " · o público tem " + nf(R.total) + ": o orçamento usa " + moeda(R.custo) +
+          " e sobram " + moeda(R.sobra) : " · alcança " + pct(R.cobertura) + " do público")) : "") +
         linha("Mensagens no orçamento", nf(R.mensagens)) +
-        linha("Custo estimado", '<span class="big">' + moeda(R.custo) + '</span> (' + moeda(R.custoUnit, 4) + ' por mensagem: Meta + impostos)') +
+        linha(R.verba ? "Investimento usado" : "Custo para atingir todos", '<span class="big">' + moeda(R.custo) + '</span> (' + moeda(R.custoUnit, 4) + ' por mensagem: Meta + impostos)') +
         linha("Resultado esperado", nf(R.entregues) + " entregues (" + pct(P.taxaEntrega) + ") · " + nf(R.lidas) + " lidas (" + pct(P.taxaLeitura) + ") · " + nf(R.cliques) + " cliques") +
         linha("Custo por leitura", R.lidas ? moeda(R.custo / R.lidas) : "—") + '</table>' +
         '<h2>Onde estão</h2><table>' +
