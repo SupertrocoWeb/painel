@@ -1,4 +1,4 @@
-/* Central SuperAdds · Estratégia · montado em 29/10/2026 16:43 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Estratégia · montado em 29/10/2026 17:17 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "estrategia", "titulo": "Estratégia", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/estrategia.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/estrategia.json"], "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -216,6 +216,21 @@ var SA = {};
   function chaveDe(pacote) {
     var c = estado.chaves && estado.chaves[CFG.pagina];
     return c && c[pacote.kid];
+  }
+
+  // Arquivo extra da página (ex.: recibos/2026-10-28.json), cifrado com a mesma chave; só é baixado quando pedido
+  function lerCopia(caminho) {
+    var fontes = CFG.dados.map(function (u) { return u.replace(/[^\/]*$/, "") + caminho; });
+    var tenta = function (i) {
+      if (i >= fontes.length) return Promise.reject(new Error("sem cópia"));
+      return fetch(fontes[i], { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        .catch(function () { return tenta(i + 1); });
+    };
+    return tenta(0).then(function (pacote) {
+      var chave = chaveDe(pacote);
+      if (!chave) throw new Error("chave");
+      return abrir(pacote, chave);
+    });
   }
 
   function carregar(tentou) {
@@ -638,7 +653,7 @@ var SA = {};
   var api = { esc: esc, fmt: fmt, icone: icone, cor: cor, arco: arco, rosca: rosca, colunas: colunas, barras: barras, tile: tile,
               aviso: aviso, secao: secao, linhaDica: linhaDica, cfg: function () { return CFG; },
               url: function (id) { var p = CFG.paginas.filter(function (x) { return x.id === id; })[0]; return p && p.url; },
-              abas: abas, tabela: tabela, chamarDev: chamarDev, baixarArquivo: baixarArquivo, lembrar: lembrar,
+              abas: abas, tabela: tabela, chamarDev: chamarDev, lerCopia: lerCopia, baixarArquivo: baixarArquivo, lembrar: lembrar,
               retratil: retratil, aberto: aberto, mini: mini, tag: tag, uso: uso, filtros: filtros, calendario: calendario,
               redesenhar: function () { desenhar(true); }, previa: function () { return Boolean(P); },
               abaInicial: function () { var a = estado.abaInicial; estado.abaInicial = null; return a; },
@@ -723,13 +738,22 @@ function estLink(pasta, dia) {
 }
 
 // O recibo não vem no pacote da página: é lido na hora, da pasta da intranet, pelo superadds-central
+// Sem o app da Microsoft no Worker, vale a cópia que a rotina das 7h publica (um arquivo por dia, cifrado)
 function estLer(ui, dia) {
   if (!dia || SA_EST.textos[dia]) return;
   SA_EST.textos[dia] = { carregando: true };
-  ui.chamarDev("/dev/recibo?dia=" + encodeURIComponent(dia)).then(function (r) {
-    SA_EST.textos[dia] = r.status === 200 && r.j && r.j.texto ? r.j : { erro: (r.j && r.j.erro) || "HTTP " + r.status, codigo: r.j && r.j.codigo };
-  }).catch(function () { SA_EST.textos[dia] = { erro: "sem resposta do superadds-central", codigo: "sem_acesso" }; })
-    .then(function () { ui.redesenhar(); });
+  var copia = SA_EST.dados && SA_EST.dados.recibos_copia, temCopia = copia && copia.dias.indexOf(dia) >= 0;
+  var aoVivo = SA_EST.semApp ? Promise.resolve({ codigo: "sem_app" }) :
+    ui.chamarDev("/dev/recibo?dia=" + encodeURIComponent(dia)).then(function (r) {
+      return r.status === 200 && r.j && r.j.texto ? r.j : { erro: (r.j && r.j.erro) || "HTTP " + r.status, codigo: r.j && r.j.codigo };
+    }).catch(function () { return { erro: "sem resposta do superadds-central", codigo: "sem_acesso" }; });
+  aoVivo.then(function (x) {
+    if (x.texto || !temCopia) return x;
+    if (x.codigo === "sem_app") SA_EST.semApp = true;
+    return ui.lerCopia("recibos/" + dia + ".json").then(function (c) {
+      return { texto: c.texto, copia: true, fonte: "cópia das " + copia.copiado_em + " da pasta da intranet" };
+    }).catch(function () { return x; });
+  }).then(function (x) { SA_EST.textos[dia] = x; ui.redesenhar(); });
 }
 
 function estRecibo(ui, r, pasta) {
@@ -737,7 +761,8 @@ function estRecibo(ui, r, pasta) {
   var botoes = (x.texto ? '<button type="button" class="botao sec" data-acao="baixar-recibo" data-valor="' + esc(r.dia) + '">' + ui.icone("baixar") + "Baixar .txt</button>" : "") +
     (link ? '<a class="botao sec" href="' + esc(link) + '" target="_blank" rel="noopener">' + ui.icone("seta") + "Abrir na intranet</a>" : "");
   h += '<div class="topo"><div><h3>O recibo</h3><div class="cap">' +
-    (x.texto ? "lido agora da " + esc(x.fonte || "pasta da intranet") + " › " + esc(pasta.nome) + " · " +
+    (x.texto && x.copia ? esc(x.fonte) + " › " + esc(pasta.nome) :
+     x.texto ? "lido agora da " + esc(x.fonte || "pasta da intranet") + " › " + esc(pasta.nome) + " · " +
       esc(new Date(x.lido_em || Date.now()).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }))
       : "o arquivo recibo_" + esc(r.dia) + ".txt da pasta " + esc(pasta.nome)) + '</div></div><span style="display:flex;gap:8px;flex-wrap:wrap">' + botoes + "</span></div>";
   if (x.carregando) return h + '<p class="cap" style="font-size:13px">Lendo o recibo na pasta da intranet…</p>';

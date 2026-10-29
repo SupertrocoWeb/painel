@@ -1,4 +1,4 @@
-/* Central SuperAdds · Orçamento · montado em 29/10/2026 16:43 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Orçamento · montado em 29/10/2026 17:17 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "orcamento", "titulo": "Orçamento", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/orcamento.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/orcamento.json"], "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -216,6 +216,21 @@ var SA = {};
   function chaveDe(pacote) {
     var c = estado.chaves && estado.chaves[CFG.pagina];
     return c && c[pacote.kid];
+  }
+
+  // Arquivo extra da página (ex.: recibos/2026-10-28.json), cifrado com a mesma chave; só é baixado quando pedido
+  function lerCopia(caminho) {
+    var fontes = CFG.dados.map(function (u) { return u.replace(/[^\/]*$/, "") + caminho; });
+    var tenta = function (i) {
+      if (i >= fontes.length) return Promise.reject(new Error("sem cópia"));
+      return fetch(fontes[i], { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        .catch(function () { return tenta(i + 1); });
+    };
+    return tenta(0).then(function (pacote) {
+      var chave = chaveDe(pacote);
+      if (!chave) throw new Error("chave");
+      return abrir(pacote, chave);
+    });
   }
 
   function carregar(tentou) {
@@ -638,7 +653,7 @@ var SA = {};
   var api = { esc: esc, fmt: fmt, icone: icone, cor: cor, arco: arco, rosca: rosca, colunas: colunas, barras: barras, tile: tile,
               aviso: aviso, secao: secao, linhaDica: linhaDica, cfg: function () { return CFG; },
               url: function (id) { var p = CFG.paginas.filter(function (x) { return x.id === id; })[0]; return p && p.url; },
-              abas: abas, tabela: tabela, chamarDev: chamarDev, baixarArquivo: baixarArquivo, lembrar: lembrar,
+              abas: abas, tabela: tabela, chamarDev: chamarDev, lerCopia: lerCopia, baixarArquivo: baixarArquivo, lembrar: lembrar,
               retratil: retratil, aberto: aberto, mini: mini, tag: tag, uso: uso, filtros: filtros, calendario: calendario,
               redesenhar: function () { desenhar(true); }, previa: function () { return Boolean(P); },
               abaInicial: function () { var a = estado.abaInicial; estado.abaInicial = null; return a; },

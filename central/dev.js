@@ -1,4 +1,4 @@
-/* Central SuperAdds · Desenvolvedor · montado em 29/10/2026 16:43 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Desenvolvedor · montado em 29/10/2026 17:17 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "dev", "titulo": "Desenvolvedor", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/dev.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/dev.json"], "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -216,6 +216,21 @@ var SA = {};
   function chaveDe(pacote) {
     var c = estado.chaves && estado.chaves[CFG.pagina];
     return c && c[pacote.kid];
+  }
+
+  // Arquivo extra da página (ex.: recibos/2026-10-28.json), cifrado com a mesma chave; só é baixado quando pedido
+  function lerCopia(caminho) {
+    var fontes = CFG.dados.map(function (u) { return u.replace(/[^\/]*$/, "") + caminho; });
+    var tenta = function (i) {
+      if (i >= fontes.length) return Promise.reject(new Error("sem cópia"));
+      return fetch(fontes[i], { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        .catch(function () { return tenta(i + 1); });
+    };
+    return tenta(0).then(function (pacote) {
+      var chave = chaveDe(pacote);
+      if (!chave) throw new Error("chave");
+      return abrir(pacote, chave);
+    });
   }
 
   function carregar(tentou) {
@@ -638,7 +653,7 @@ var SA = {};
   var api = { esc: esc, fmt: fmt, icone: icone, cor: cor, arco: arco, rosca: rosca, colunas: colunas, barras: barras, tile: tile,
               aviso: aviso, secao: secao, linhaDica: linhaDica, cfg: function () { return CFG; },
               url: function (id) { var p = CFG.paginas.filter(function (x) { return x.id === id; })[0]; return p && p.url; },
-              abas: abas, tabela: tabela, chamarDev: chamarDev, baixarArquivo: baixarArquivo, lembrar: lembrar,
+              abas: abas, tabela: tabela, chamarDev: chamarDev, lerCopia: lerCopia, baixarArquivo: baixarArquivo, lembrar: lembrar,
               retratil: retratil, aberto: aberto, mini: mini, tag: tag, uso: uso, filtros: filtros, calendario: calendario,
               redesenhar: function () { desenhar(true); }, previa: function () { return Boolean(P); },
               abaInicial: function () { var a = estado.abaInicial; estado.abaInicial = null; return a; },
@@ -720,6 +735,11 @@ function devCarregar(ui, qual) {
   DEV.carregando[qual] = true;
   ui.chamarDev(DEV_ROTAS[qual]).then(function (r) {
     DEV[qual] = r.status === 200 ? r.j : { erro: (r.j && r.j.erro) || "HTTP " + r.status };
+    // Disparador sem o app da Microsoft no Worker: vale a cópia da pasta Log que a rotina das 7h publica
+    var cp = SA_DEV.dados && SA_DEV.dados.logs_copia;
+    if (qual === "disparador" && DEV[qual].erro && cp && cp.arquivos.length) {
+      DEV[qual] = { arquivos: cp.arquivos, copia: true, copiado_em: cp.copiado_em };
+    }
   }).catch(function (e) {
     DEV[qual] = { erro: e && e.message === "sessao" ? "sessão terminou" : "sem resposta do superadds-central" };
   }).then(function () { DEV.carregando[qual] = false; ui.redesenhar(); });
@@ -999,6 +1019,16 @@ function devLinkLog(d, nome) {
 function devLerLog(ui, nome) {
   if (!nome || DEV.logs[nome]) return;
   DEV.logs[nome] = { carregando: true };
+  var lista = DEV.disparador || {};
+  if (lista.copia) {
+    var a = (lista.arquivos || []).filter(function (x) { return x.nome === nome; })[0];
+    ui.lerCopia(a.arquivo).then(function (c) {
+      DEV.logs[nome] = Object.assign(c, { copia: true, fonte: "cópia das " + lista.copiado_em + " da pasta Log" });
+    }).catch(function (e) {
+      DEV.logs[nome] = { erro: e && e.message === "chave" ? "as páginas acabaram de ser atualizadas: recarregue a página" : "a cópia desse log não foi encontrada" };
+    }).then(function () { ui.redesenhar(); });
+    return;
+  }
   ui.chamarDev("/dev/log?nome=" + encodeURIComponent(nome)).then(function (r) {
     DEV.logs[nome] = r.status === 200 && r.j && !r.j.erro ? r.j : { erro: (r.j && r.j.erro) || "HTTP " + r.status };
   }).catch(function () { DEV.logs[nome] = { erro: "sem resposta do superadds-central" }; })
@@ -1038,7 +1068,8 @@ function devResumoLog(ui, texto) {
 function devConteudoLog(ui, d, nome) {
   var esc = ui.esc, f = ui.fmt, x = DEV.logs[nome] || { carregando: true }, link = devLinkLog(d, nome);
   var topo = '<div class="topo"><div><h3>' + esc(nome) + '</h3><div class="cap">' +
-    (x.lido_em ? "lido agora da " + esc(x.fonte || "pasta da intranet") + " · " + esc(f.num((x.tamanho || 0) / 1024, 1)) + " KB" : "na pasta Log da intranet") +
+    (x.copia ? esc(x.fonte) + " · " + esc(f.num((x.tamanho || 0) / 1024, 1)) + " KB" :
+     x.lido_em ? "lido agora da " + esc(x.fonte || "pasta da intranet") + " · " + esc(f.num((x.tamanho || 0) / 1024, 1)) + " KB" : "na pasta Log da intranet") +
     "</div></div>" + (link ? '<a class="botao sec" href="' + esc(link) + '" target="_blank" rel="noopener">' + ui.icone("seta") + "Abrir na intranet</a>" : "") + "</div>";
   if (x.carregando) return topo + '<p class="cap" style="font-size:13px">Lendo o log na pasta da intranet…</p>';
   if (x.erro) return topo + ui.aviso("Não deu para ler agora: " + esc(x.erro) + ". Use <b>Abrir na intranet</b>.", "info");
@@ -1084,8 +1115,9 @@ function devDisparador(ui, d) {
   h += ui.secao("Fotos do disparador", "um log por dia na pasta Log da intranet · clique no dia para ler");
   h += '<div class="grade g-12"><div class="cartao">' +
     ui.calendario({ mes: DEV.logMes, meses: meses, dias: cal, sel: DEV.logDia, acao: "log-dia", acaoMes: "log-mes" }) +
-    '<div class="legenda" style="margin-top:12px"><span>No dia: quantos arquivos de log há na pasta</span><span>' + f.num((x.arquivos || []).length) + " arquivos · lido às " +
-    esc(new Date(x.lido_em || Date.now()).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })) + "</span></div>" +
+    '<div class="legenda" style="margin-top:12px"><span>No dia: quantos arquivos de log há na pasta</span><span>' + f.num((x.arquivos || []).length) + " arquivos · " +
+    (x.copia ? "cópia das " + esc(x.copiado_em) + " (a rotina das 7h copia a pasta)" :
+      "lido às " + esc(new Date(x.lido_em || Date.now()).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }))) + "</span></div>" +
     (doDia.length > 1 ? '<div class="cap" style="margin:14px 0 6px;font-weight:600;color:var(--tinta2)">Arquivos de ' + esc(f.dataLonga(DEV.logDia)) + "</div>" +
       ui.abas(doDia.map(function (a) { return { id: a.nome, nome: a.nome }; }), DEV.logArq, "log-arq", "meses") : "") + "</div>" +
     '<div class="cartao">' + devConteudoLog(ui, d, DEV.logArq) + "</div></div>";
