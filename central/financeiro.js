@@ -1,4 +1,4 @@
-/* Central SuperAdds · Financeiro · montado em 03/11/2026 11:56 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Financeiro · montado em 03/11/2026 13:45 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "financeiro", "titulo": "Financeiro", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/financeiro.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/financeiro.json"], "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "ia", "nome": "Cérebro (IA)", "icone": "ia", "url": "https://retail-media.superadds.com.br/superadds-ia-brain", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "por-dentro", "nome": "Por dentro"}]}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -944,18 +944,25 @@ function finAnunciante(a, c, ui) {
   h += '<div class="secao" style="margin-top:20px"><h2>Resultado e comissões</h2><span>' +
     esc("contratos pela planilha DRE (receita sobre contrato fechado e o produto na coluna Observações)" +
         (vs.relatorio_porto_ate ? "; o relatório da Porto (até " + f.dataLonga(vs.relatorio_porto_ate) + ") completa o produto que a planilha não tiver" : "")) + "</span></div>";
-  var fechados = a.nome === c.nome ? (vs.contratos_planilha || []) : [];
-  if (fechados.length) {
+  var linhas = a.nome === c.nome ? (vs.contratos_planilha || []) : [];
+  if (linhas.length) {
     var NOMEP = { CCLT: "Consignado CLT", Consorcio: "Consórcio", Cartao: "Cartão" };
+    var fechados = linhas.filter(function (x) { return x.produto; }), conferir = linhas.filter(function (x) { return x.alerta; });
     var porP = {};
-    fechados.forEach(function (x) { var k = NOMEP[x.produto] || "Sem produto"; porP[k] = (porP[k] || 0) + x.contratos; });
+    fechados.forEach(function (x) { var k = NOMEP[x.produto]; porP[k] = (porP[k] || 0) + x.contratos; });
+    var leitura = c.planilha && c.planilha.ultimo_dia ? "planilha até " + f.dataLonga(c.planilha.ultimo_dia) : "";
     h += '<div class="cartao" style="margin-bottom:14px"><div class="topo"><div><h3>Contratos fechados</h3><div class="cap">' +
-      esc(Object.keys(porP).map(function (k) { return porP[k] + " de " + k; }).join(" · ")) + " · lançados na planilha DRE</div></div>" +
-      ui.tag(f.num(fechados.reduce(function (s, x) { return s + x.contratos; }, 0)) + " contrato(s)", "bom") + '</div><ul class="lista-check">' +
-      fechados.map(function (x) {
-        return "<li>" + ui.tag(NOMEP[x.produto] || "Sem produto", x.produto ? "neutro" : "atencao") + "<span><b>" + esc(f.dataLonga(x.data)) + "</b>: " +
-          esc(x.contratos + (x.contratos > 1 ? " contratos" : " contrato") + " · comissão de " + f.reais(x.valor) +
-              (x.producao ? " · carta de " + f.reais(x.producao, 0) : "") + (x.obs ? " · \"" + x.obs + "\"" : "")) + "</span></li>";
+      esc((Object.keys(porP).map(function (k) { return porP[k] + " de " + k; }).join(" · ") || "nenhum com produto") + " · lançados na planilha DRE" +
+          (leitura ? " · " + leitura : "") + (c.fonte && c.fonte.atualizado ? " (lida pelo Power BI em " + c.fonte.atualizado + ")" : "")) + "</div></div>" +
+      ui.tag(f.num(fechados.reduce(function (s, x) { return s + x.contratos; }, 0)) + " contrato(s)", "bom") +
+      (conferir.length ? ui.tag(conferir.length + " a conferir", "atencao") : "") + '</div><ul class="lista-check">' +
+      linhas.map(function (x) {
+        var valorContrato = x.producao ? (x.produto === "Consorcio" ? " · carta de " : " · valor de ") + f.reais(x.producao, 0) : "";
+        return "<li>" + (x.alerta ? ui.tag(x.produto ? NOMEP[x.produto] : "A conferir", "atencao") : ui.tag(NOMEP[x.produto], "neutro")) +
+          "<span><b>" + esc(f.dataLonga(x.data)) + "</b>: " +
+          esc((x.produto ? x.contratos + (x.contratos > 1 ? " contratos" : " contrato") + " · " : "") + "comissão de " + f.reais(x.valor) + valorContrato +
+              (x.obs ? " · \"" + x.obs + "\"" : "")) +
+          (x.alerta ? '<br><small style="color:var(--atencao-tinta)">' + esc("Conferir na planilha: " + x.alerta + ".") + "</small>" : "") + "</span></li>";
       }).join("") + "</ul></div>";
   }
   h += ui.tabela([
