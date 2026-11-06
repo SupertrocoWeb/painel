@@ -1,4 +1,4 @@
-/* Página do varejista Porto Bank · SuperAdds · montada em 06/11/2026 09:33 (Varejistas/Porto Bank/gerar_pagina.py). Não edite aqui: edite ui/. */
+/* Página do varejista Porto Bank · SuperAdds · montada em 06/11/2026 17:12 (Varejistas/Porto Bank/gerar_pagina.py). Não edite aqui: edite ui/. */
 (function () {
 "use strict";
 var CFG = {"id": "porto-bank", "nome": "Porto Bank", "cores": {"marca": "#2C56C0", "marca_escura": "#1B3A8F", "marca_clara": "#5B82F0", "acento": "#00B2FF"}, "frases": ["Carregando ambiente", "Consultando registros", "Preparando resultados", "Calibrando gráficos", "Conferindo a planilha", "Monitorando IA", "Organizando personas"], "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/varejistas/porto-bank/dados.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/varejistas/porto-bank/dados.json"], "alvo": "varejista-superadds"};
@@ -464,7 +464,7 @@ function blocoContrato(c) {
   var fatias = [{ nome: "Mensagens", curto: "mensagens", valor: t.mensagens_rs, cor: cor(1) }, { nome: "Cliques", curto: "cliques", valor: t.cliques_rs, cor: cor(2) },
                 { nome: "Comissões", curto: "comissões", valor: t.comissoes, cor: cor(3) }];
   var ro = rosca(fatias, fmt.compacto(t.consumido) === "—" ? "—" : "R$ " + fmt.compacto(t.consumido), "consumido", function (x) { return fmt.reais(x); });
-  var subs = [f.num(t.enviadas) + " enviadas × " + f.reais(v.mensagem), f.num(t.cliques) + " cliques × " + f.reais(v.clique), "contratos fechados pelo link"];
+  var subs = [f.num(t.entregues) + " entregues × " + f.reais(v.mensagem), f.num(t.cliques) + " cliques × " + f.reais(v.clique), "contratos fechados pelo link"];
   var rodaDinheiro = '<div class="cartao sobe" style="--atraso:.1s"><div class="topo"><div><h3>Para onde foi o dinheiro</h3><div class="cap">passe o mouse nas fatias</div></div></div>' +
     '<div class="rosca"><div>' + ro.svg + '</div><ul data-leg="' + ro.id + '">' + fatias.map(function (x, i) {
       return '<li><i style="background:' + x.cor + '"></i><div><b>' + esc(x.nome) + "</b><small>" + esc(subs[i]) + '</small></div><span class="v">' + esc(f.reais(x.valor)) + "</span></li>";
@@ -480,7 +480,7 @@ function graficoConsumo() {
     eixo: function (x) { return "R$ " + fmt.compacto(x); },
     dica: function (i) {
       var x = dias[i];
-      return "<b>" + esc(fmt.dataLonga(x.data) + " · " + fmt.semana(x.data)) + "</b>" + linhaDica("Mensagens (" + fmt.num(x.enviadas) + ")", fmt.reais(x.mensagens_rs), cor(1)) +
+      return "<b>" + esc(fmt.dataLonga(x.data) + " · " + fmt.semana(x.data)) + "</b>" + linhaDica("Mensagens (" + fmt.num(x.entregues) + " entregues)", fmt.reais(x.mensagens_rs), cor(1)) +
         linhaDica("Cliques (" + fmt.num(x.cliques) + ")", fmt.reais(x.cliques_rs), cor(2)) + linhaDica("Comissões", fmt.reais(x.comissoes), cor(3)) +
         linhaDica("Consumo do dia", fmt.reais(x.consumo)) + linhaDica("Saldo depois", fmt.reais(x.saldo));
     } }) + legenda("consumo", series, oc);
@@ -612,7 +612,7 @@ function blocoConferencia(c) {
     }).join("") + "</tbody><tfoot><tr>" + ["Total", f.num(t.enviadas), f.num(t.entregues), f.num(t.lidas), f.num(t.cliques), f.reais(t.mensagens_rs),
       f.reais(t.cliques_rs), f.reais(t.comissoes), f.reais(t.consumido), f.reais(t.saldo), ""].map(function (x) { return "<td>" + esc(x) + "</td>"; }).join("") +
     "</tr></tfoot></table></div>";
-  h += '<p class="nota-final">Como a conta é feita: cada mensagem <b>enviada</b> custa ' + esc(f.reais(v.mensagem)) + " e cada clique no link do template " +
+  h += '<p class="nota-final">Como a conta é feita: cada mensagem <b>entregue</b> custa ' + esc(f.reais(v.mensagem)) + " e cada clique no link do template " +
     esc(f.reais(v.clique)) + ". As comissões (cartão " + esc(f.reais(v.cartao, 0)) + ", CCLT " + esc(f.reais(v.cclt, 0)) + ", consórcio " + esc(f.pct(v.consorcio_pct * 100, 0)) +
     " da carta) também saem do budget. Os valores vêm da planilha DRE do contrato; a última coluna confere cada dia recalculado pelo contrato contra a planilha.</p>";
   return h;

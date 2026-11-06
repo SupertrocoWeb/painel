@@ -1,4 +1,4 @@
-/* Central SuperAdds · Financeiro · montado em 06/11/2026 09:33 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Financeiro · montado em 06/11/2026 17:12 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "financeiro", "titulo": "Financeiro", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/financeiro.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/financeiro.json"], "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "ia", "nome": "Cérebro (IA)", "icone": "ia", "url": "https://retail-media.superadds.com.br/superadds-ia-brain", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "por-dentro", "nome": "Por dentro"}]}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -786,7 +786,7 @@ var VISOES = [
   { id: "contrato", nome: "Contrato", ic: "carteira", desc: "budget, saldo, ritmo e conferência com a planilha" },
   { id: "varejista", nome: "Por varejista", ic: "loja", desc: "cada varejista abre com as suas lojas" },
   { id: "produto", nome: "Por produto", ic: "caixa", desc: "cada anunciante abre com os seus produtos" },
-  { id: "meta", nome: "Meta Business", ic: "recibo", desc: "cobranças por dia num calendário e o custo de cada template" }
+  { id: "meta", nome: "Meta Business", ic: "recibo", desc: "consumo por dia num calendário, faturas e o custo de cada template" }
 ];
 
 function finContrato(c, ui) {
@@ -818,7 +818,7 @@ function finContrato(c, ui) {
   h += '<div class="cartao"><div class="topo"><div><h3>Para onde foi o dinheiro</h3><div class="cap">o que cada parte consumiu do budget</div></div></div>' +
     '<div class="rosca"><div>' + ui.rosca(fatias, f.reaisCompacto(t.consumido), "consumido", function (x) { return f.reais(x); }) + "</div><ul>" +
     fatias.map(function (x) {
-      var sub = x.nome === "Mensagens" ? f.num(t.enviadas) + " enviadas × " + f.reais(v.mensagem)
+      var sub = x.nome === "Mensagens" ? f.num(t.entregues) + " entregues × " + f.reais(v.mensagem)
               : x.nome === "Cliques" ? f.num(t.cliques) + " cliques × " + f.reais(v.clique) : "contratos fechados pelo link";
       return '<li><i style="background:' + x.cor + '"></i><div><b>' + esc(x.nome) + "</b><small>" + esc(sub) + '</small></div><span class="v">' + esc(f.reais(x.valor)) + "</span></li>";
     }).join("") + "</ul></div></div></div>";
@@ -830,7 +830,7 @@ function finContrato(c, ui) {
             r.dias_ate_fim != null ? "faltam <b>" + r.dias_ate_fim + " dias</b> até " + f.dataLonga(c.fim) : "", "var(--s2)") +
     ui.tile("Sobra no fim do contrato", esc(f.reais(r.sobra_no_fim, 0)),
             r.acaba_em ? "no ritmo atual o budget só acabaria em <b>" + f.dataLonga(r.acaba_em) + "</b>" : "", "var(--s1)") +
-    ui.tile("Margem antes de impostos", esc(f.reais(t.consumido - t.custo_meta)), "consumo menos o custo Meta de <b>" + esc(f.reais(t.custo_meta)) + "</b>", "var(--s3)") +
+    ui.tile("Margem antes de impostos", esc(f.reais(t.consumido - t.custo_meta)), "consumo menos o custo Meta de <b>" + esc(f.reais(t.custo_meta)) + "</b>: " + esc(f.reais(t.custo_faturado)) + " faturados + " + esc(f.reais(t.custo_a_faturar)) + " a faturar", "var(--s3)") +
     "</div>";
 
   var dias = c.dias || [];
@@ -844,7 +844,7 @@ function finContrato(c, ui) {
     dica: function (i) {
       var x = dias[i];
       return "<b>" + esc(f.dataLonga(x.data)) + " · " + esc(f.semana(x.data)) + "</b>" +
-        ui.linhaDica("Mensagens (" + f.num(x.enviadas) + ")", f.reais(x.mensagens_rs), cores.msg) +
+        ui.linhaDica("Mensagens (" + f.num(x.entregues) + " entregues)", f.reais(x.mensagens_rs), cores.msg) +
         ui.linhaDica("Cliques (" + f.num(x.cliques) + ")", f.reais(x.cliques_rs), cores.cli) +
         ui.linhaDica("Comissões", f.reais(x.comissoes), cores.com) + ui.linhaDica("Consumo do dia", f.reais(x.consumo)) + ui.linhaDica("Saldo depois", f.reais(x.saldo));
     }
@@ -862,18 +862,17 @@ function finContrato(c, ui) {
     { t: "Planilha", k: function (x) { return Math.abs(x.difere_planilha) >= 0.01 ? '<span class="dif">' + ui.icone("alerta") + esc(f.reais(x.difere_planilha)) + "</span>" : ok; }, html: true }
   ], dias.slice().reverse(), { rodape: ["Total", f.num(t.enviadas), f.num(t.entregues), f.num(t.lidas), f.num(t.cliques), f.reais(t.mensagens_rs),
     f.reais(t.cliques_rs), f.reais(t.comissoes), f.reais(t.consumido), f.reais(t.saldo), ""] });
-  h += '<p class="cap" style="margin-top:14px;font-size:12px;color:var(--mudo);max-width:900px">Como a conta é feita: cada mensagem <b>enviada</b> custa ' +
+  h += '<p class="cap" style="margin-top:14px;font-size:12px;color:var(--mudo);max-width:900px">Como a conta é feita: cada mensagem <b>entregue</b> custa ' +
     esc(f.reais(v.mensagem)) + " e cada clique no link do template " + esc(f.reais(v.clique)) + ". As comissões (cartão " + esc(f.reais(v.cartao, 0)) +
     ", CCLT " + esc(f.reais(v.cclt, 0)) + ", consórcio " + esc(f.pct(v.consorcio_pct * 100, 0)) +
-    " da carta) também saem do budget. Os valores vêm da planilha DRE_Orcamento_SuperAdds, pelo Power BI.</p>";
+    " da carta) também saem do budget. Os valores são os da planilha DRE_Orcamento_SuperAdds, aba Porto Bank - Diário campanha geral, pelo Power BI; a última coluna da tabela refaz a conta de cada dia para conferir.</p>";
   return h;
 }
 
 function finNotaRateio(ui, vs) {
   return '<p class="cap" style="margin-top:12px;font-size:12px;color:var(--mudo);max-width:900px">De ' + ui.esc(ui.fmt.dataLonga(vs.periodo.de)) + " a " +
-    ui.esc(ui.fmt.dataLonga(vs.periodo.ate)) + ", pelos envios da campanha. A Meta não diz quem clicou: cliques e custo de cada loja e produto são " +
-    "divididos pela parte deles nas lidas (cliques) e nas entregues (custo) de cada template em cada dia, como no ADS-02. O custo é o que a Meta cobra. " +
-    "A receita é estimada pelo contrato: envios × mensagem + cliques × clique.</p>";
+    ui.esc(ui.fmt.dataLonga(vs.periodo.ate)) + ", até o último dia lançado na planilha. Receita e cliques são os da planilha em cada dia, divididos entre as lojas e os produtos: as mensagens pelas entregues e os cliques pelas lidas. " +
+    "O custo é o da Meta, com os impostos, dividido pelas entregues de cada template. As comissões não entram nessa divisão.</p>";
 }
 
 function finTotais(ui, tt) {
@@ -881,9 +880,9 @@ function finTotais(ui, tt) {
   return '<div class="grade g5" style="margin-bottom:16px">' +
     ui.tile("Envios", esc(f.num(tt.envios)), "<b>" + esc(f.pct(tt.tx_entrega)) + "</b> entregues", "var(--s1)") +
     ui.tile("Leitura", esc(f.pct(tt.tx_leitura)), "<b>" + f.num(tt.lidas) + "</b> lidas de " + f.num(tt.entregues), "var(--s1)") +
-    ui.tile("Cliques", esc(f.num(tt.cliques)), "contados pela Meta", "var(--s2)") +
-    ui.tile("Custo Meta", esc(f.reais(tt.custo_meta)), "o que a Meta cobrou", "var(--s3)") +
-    ui.tile("Receita estimada", esc(f.reais(tt.receita)), "margem <b>" + esc(f.reais(tt.margem)) + "</b>") + "</div>";
+    ui.tile("Cliques", esc(f.num(tt.cliques)), "da planilha, divididos pelas lidas", "var(--s2)") +
+    ui.tile("Custo Meta", esc(f.reais(tt.custo_meta)), "com os impostos da fatura", "var(--s3)") +
+    ui.tile("Receita", esc(f.reais(tt.receita)), "sem comissões · margem <b>" + esc(f.reais(tt.margem)) + "</b>") + "</div>";
 }
 
 // Tudo de cada varejista fica dentro do bloco dele (abre e fecha), para a página não ficar poluída
@@ -898,7 +897,7 @@ function finVarejista(c, ui) {
         return { nome: l.nome.replace(/^.*? - /, ""), valor: l.tx_leitura, cor: ui.cor(1), nota: f.num(l.entregues) + " entregues",
                  dica: ui.linhaDica("Lidas", f.num(l.lidas)) + ui.linhaDica("Cliques", f.num(l.cliques)) };
       }), function (x) { return f.pct(x); }) + "</div>" +
-      '<div class="cartao"><div class="topo"><div><h3>Margem por loja</h3><div class="cap">receita estimada menos o custo Meta</div></div></div>' +
+      '<div class="cartao"><div class="topo"><div><h3>Margem por loja</h3><div class="cap">receita da planilha menos o custo Meta</div></div></div>' +
       ui.barras(vj.lojas.slice().sort(function (a, b) { return b.margem - a.margem; }).map(function (l) {
         return { nome: l.nome.replace(/^.*? - /, ""), valor: Math.max(0, l.margem), cor: ui.cor(3), nota: "custo " + f.reais(l.custo_meta, 0),
                  dica: ui.linhaDica("Receita", f.reais(l.receita)) + ui.linhaDica("Custo Meta", f.reais(l.custo_meta)) };
@@ -907,7 +906,7 @@ function finVarejista(c, ui) {
       { t: "Loja", k: "nome", esq: true }, { t: "Envios", k: "envios", f: f.num }, { t: "Entregues", k: "entregues", f: f.num },
       { t: "Lidas", k: "lidas", f: f.num }, { t: "Leitura", k: "tx_leitura", f: function (x) { return f.pct(x); } },
       { t: "Respostas", k: "respostas", f: f.num }, { t: "Cliques", k: "cliques", f: function (x) { return f.num(x); } },
-      { t: "Custo Meta", k: "custo_meta", f: f.reais }, { t: "Receita est.", k: "receita", f: f.reais }, { t: "Margem", k: "margem", f: f.reais }
+      { t: "Custo Meta", k: "custo_meta", f: f.reais }, { t: "Receita", k: "receita", f: f.reais }, { t: "Margem", k: "margem", f: f.reais }
     ], vj.lojas, { rodape: ["Total", f.num(vj.envios), f.num(vj.entregues), f.num(vj.lidas), f.pct(vj.tx_leitura), f.num(vj.respostas),
       f.num(vj.cliques), f.reais(vj.custo_meta), f.reais(vj.receita), f.reais(vj.margem)] }) + "</div>" + finNotaRateio(ui, vs);
     h += ui.retratil({
@@ -968,7 +967,7 @@ function finAnunciante(a, c, ui) {
   h += ui.tabela([
     { t: "Produto", k: "nome", esq: true }, { t: "Templates", k: function (p) { return p.templates.join(", "); }, esq: true },
     { t: "Envios", k: "envios", f: f.num }, { t: "Leitura", k: "tx_leitura", f: function (x) { return f.pct(x); } }, { t: "Cliques", k: "cliques", f: f.num },
-    { t: "Custo Meta", k: "custo_meta", f: f.reais }, { t: "Receita est.", k: "receita", f: f.reais },
+    { t: "Custo Meta", k: "custo_meta", f: f.reais }, { t: "Receita", k: "receita", f: f.reais },
     { t: "Contratos", k: "contratos", f: f.num }, { t: "Produção", k: "producao", f: f.reais }, { t: "Comissão", k: "comissao", f: f.reais }
   ], ps, { min: 980 });
   if (a.nome === c.nome) {
@@ -1000,66 +999,76 @@ function finProduto(c, ui) {
 
 // ---------------------------------------------------------------- Meta Business (só dinheiro: a situação dos números e da conta fica no Desenvolvedor)
 function finMeta(c, ui) {
-  var f = ui.fmt, esc = ui.esc, m = c.visoes.meta, ct = m.conta || {}, h = "", cal = m.calendario || {};
+  var f = ui.fmt, esc = ui.esc, m = c.visoes.meta, fat = m.fatura || {}, h = "", cal = m.calendario || {};
   var datas = Object.keys(cal).sort();
   var meses = datas.map(function (d) { return d.slice(0, 7); }).filter(function (x, i, a) { return a.indexOf(x) === i; });
   if (!FIN.dia || !cal[FIN.dia]) FIN.dia = datas[datas.length - 1] || null;
   if (!FIN.mes || meses.indexOf(FIN.mes) < 0) FIN.mes = FIN.dia ? FIN.dia.slice(0, 7) : meses[meses.length - 1];
-  if (m.estimado) h += ui.aviso("Parte do custo por template é <b>estimada</b> pela Meta (preço × entregues) até a cobrança fechar o dia.", "info");
-  var temImp = m.cobrado_com_impostos != null && m.impostos_pct;
+  if (m.estimado) h += ui.aviso("Parte do custo por template é <b>estimada</b> pela Meta (preço × entregues) até ela fechar o dia.", "info");
+  if (fat.alerta) h += ui.aviso(esc(fat.alerta));
+  var temImp = m.impostos_pct;
   h += '<div class="grade g5">' +
-    ui.tile("Cobrado pela Meta", esc(f.reais(m.cobrado_periodo)), "sem impostos, na conta, de " + f.dataLonga(c.visoes.periodo.de) + " a " + f.dataLonga(c.visoes.periodo.ate), "var(--s1)") +
-    (temImp ? '<div style="display:grid" data-dica="' + esc("<b>Gasto com impostos</b>" + ui.linhaDica("Cobrado pela Meta (API)", f.reais(m.cobrado_periodo)) +
-        ui.linhaDica("Impostos (" + f.pct(m.impostos_pct, 2) + " do total)", f.reais(m.impostos)) + ui.linhaDica("Total no cartão", f.reais(m.cobrado_com_impostos)) +
-        '<div class="txt" style="margin-top:6px">PIS, COFINS e ISS que a Meta Brasil embute no que cobra no cartão. A tela de pagamentos da Meta pode mostrar um pouco ' +
-        "mais: ela cobra quando o gasto chega no limite de cobrança, e esse pagamento já inclui parte do consumo de hoje.</div>") + '">' +
-      ui.tile("Gasto em conta com imposto", esc(f.reais(m.cobrado_com_impostos)), "<b>" + esc(f.reais(m.impostos)) + "</b> de impostos (PIS, COFINS e ISS, " +
+    ui.tile("Consumido na Meta", esc(f.reais(fat.consumido)), "sem impostos, na conta, de " + f.dataLonga(fat.de) + " a " + f.dataLonga(fat.ate), "var(--s1)") +
+    (temImp ? '<div style="display:grid" data-dica="' + esc("<b>Gasto com impostos</b>" + ui.linhaDica("Consumido na Meta", f.reais(fat.consumido)) +
+        ui.linhaDica("Impostos (" + f.pct(m.impostos_pct, 2) + " do total)", f.reais(fat.impostos)) + ui.linhaDica("Total com impostos", f.reais(fat.consumido_com_impostos)) +
+        '<div class="txt" style="margin-top:6px">PIS, COFINS e ISS que a Meta Brasil embute nas faturas. Este é o gasto real da conta: parte já foi faturada e parte ainda vai ser.</div>') + '">' +
+      ui.tile("Gasto em conta com imposto", esc(f.reais(fat.consumido_com_impostos)), "<b>" + esc(f.reais(fat.impostos)) + "</b> de impostos (PIS, COFINS e ISS, " +
               esc(f.pct(m.impostos_pct, 2)) + ")", "var(--s2)") + "</div>" : "") +
-    ui.tile("Gasto da conta em 30 dias", esc(f.reais(Number(ct.gasto_periodo))), "sem impostos · <b>" + esc(f.num(Number(ct.volume_pago_periodo))) + "</b> mensagens pagas · lido em " +
-            esc(ct.atualizado_em ? f.data(ct.atualizado_em) + " " + String(ct.atualizado_em).slice(11, 16) : "—"), "var(--s1)") +
-    ui.tile("Custo dos templates", esc(f.reais(m.custo)), "o que a Meta contou nos templates da campanha", "var(--s1)") +
-    ui.tile("Custo por entregue", esc(f.reais(m.custo_por_entregue, 4)), f.num(m.entregues) + " entregues · preço atual <b>" + esc(f.reais(m.preco_marketing, 4)) +
-            "</b> (marketing)", "var(--s3)") + "</div>";
+    '<div style="display:grid" data-dica="' + esc("<b>Faturas da Meta</b>" + ui.linhaDica("Sem impostos", f.reais(fat.faturado_sem_impostos)) +
+        ui.linhaDica("Impostos", f.reais(fat.faturado - fat.faturado_sem_impostos)) + ui.linhaDica("Pago no cartão", f.reais(fat.faturado)) +
+        '<div class="txt" style="margin-top:6px">A coluna Custo Meta da planilha do Yago lança cada cobrança no cartão no dia dela. A Meta cobra quando o consumo chega no limite de cobrança e na virada do mês, ' +
+        "por isso a fatura não acompanha o consumo de cada dia.</div>") + '">' +
+      ui.tile("Faturado", esc(f.reais(fat.faturado)), "pago no cartão, com impostos · <b>" + esc(f.num(fat.cobrancas)) + "</b> cobranças na planilha · última em " +
+              esc(fat.ultima_cobranca ? f.dataLonga(fat.ultima_cobranca) : "—"), "var(--s1)") + "</div>" +
+    '<div style="display:grid" data-dica="' + esc("<b>Ainda sem fatura</b>" + ui.linhaDica("Sem impostos", f.reais(fat.a_faturar)) +
+        ui.linhaDica("Com impostos", f.reais(fat.a_faturar_com_impostos)) +
+        '<div class="txt" style="margin-top:6px">O que foi consumido depois da última cobrança lançada, até ' + esc(f.dataLonga(fat.ate)) + '. É o "Saldo atual" na tela de pagamentos da Meta. ' +
+        "Uma cobrança que a planilha ainda não lançou fica aqui até ser lançada.</div>") + '">' +
+      ui.tile("A faturar", esc(f.reais(fat.a_faturar)), "sem impostos, desde a última cobrança · com impostos <b>" + esc(f.reais(fat.a_faturar_com_impostos)) + "</b>", "var(--s2)") + "</div>" +
+    ui.tile("Custo por entregue", esc(f.reais(m.custo_por_entregue, 4)), "preço da Meta, sem impostos · com impostos <b>" +
+            esc(f.reais(m.custo_por_entregue / (1 - (m.impostos_pct || 0) / 100), 4)) + "</b> · " + f.num(m.entregues) + " entregues", "var(--s3)") + "</div>" +
+    '<p class="cap" style="margin-top:12px;font-size:12px;color:var(--mudo);max-width:900px">Faturado + a faturar = consumido: o total é tudo o que a Meta já faturou e ainda vai faturar. O faturado vem da coluna Custo Meta da planilha, ' +
+    "conferida em 06/11 com as 13 faturas da Meta, dia a dia. A API da Meta não informa as cobranças: uma cobrança nova só aparece aqui depois de lançada na planilha.</p>";
 
-  // ---- calendário de cobranças
+  // ---- calendário do consumo
   var max = Math.max.apply(null, datas.map(function (d) { return cal[d].cobrado || 0; }).concat([1e-9]));
   var dias = {};
   datas.forEach(function (d) {
     var x = cal[d];
     dias[d] = { valor: x.cobrado == null ? "a fechar" : (x.cobrado < 10 ? f.num(x.cobrado, 2) : f.num(x.cobrado, 0)), int: (x.cobrado || 0) / max,
-                dica: "<b>" + esc(f.dataLonga(d)) + " · " + esc(f.semana(d)) + "</b>" + ui.linhaDica("Cobrado", x.cobrado == null ? "a fechar" : f.reais(x.cobrado)) +
+                dica: "<b>" + esc(f.dataLonga(d)) + " · " + esc(f.semana(d)) + "</b>" + ui.linhaDica("Consumido", x.cobrado == null ? "a fechar" : f.reais(x.cobrado)) +
                       (x.com_impostos != null ? ui.linhaDica("Com impostos", f.reais(x.com_impostos)) : "") + ui.linhaDica("Mensagens pagas", f.num(x.pagas)) };
   });
   var x = FIN.dia ? cal[FIN.dia] : null, det = "";
   if (x) {
     var soma = x.templates.reduce(function (a, t) { return a + t.custo; }, 0);
-    det = '<div class="topo"><div><h3>' + esc(f.dataLonga(FIN.dia)) + " · " + esc(f.semana(FIN.dia)) + '</h3><div class="cap">o que a Meta cobrou e de onde veio</div></div></div>' +
+    det = '<div class="topo"><div><h3>' + esc(f.dataLonga(FIN.dia)) + " · " + esc(f.semana(FIN.dia)) + '</h3><div class="cap">o que a conta consumiu e de onde veio</div></div></div>' +
       '<div class="grade g2" style="gap:10px">' +
-      ui.tile("Cobrado no dia", esc(x.cobrado == null ? "a fechar" : f.reais(x.cobrado)), (x.pagas != null ? "<b>" + f.num(x.pagas) + "</b> mensagens pagas" : "") +
+      ui.tile("Consumido no dia", esc(x.cobrado == null ? "a fechar" : f.reais(x.cobrado)), (x.pagas != null ? "<b>" + f.num(x.pagas) + "</b> mensagens pagas" : "") +
               (x.com_impostos != null ? " · com impostos <b>" + esc(f.reais(x.com_impostos)) + "</b>" : ""), "var(--s1)") +
       ui.tile("Preço do dia", esc(f.reais(x.precos.MARKETING, 4)), "marketing" + (x.precos.UTILITY ? " · utilidade <b>" + esc(f.reais(x.precos.UTILITY, 4)) + "</b>" : ""), "var(--s3)") +
       "</div>" + '<div style="margin-top:12px">' + ui.tabela([
         { t: "Template", k: function (t) { return esc(t.nome) + '<div style="color:var(--mudo);font-size:11.5px">' + esc(t.anunciante || "sem anunciante") + "</div>"; }, html: true, esq: true },
         { t: "Entregues", k: "entregues", f: f.num }, { t: "Cliques", k: "cliques", f: f.num },
-        { t: "Custo", k: function (t) { return esc(f.reais(t.custo)) + (t.estimado ? '<div style="color:var(--mudo);font-size:11px">estimado</div>' : ""); }, html: true }
+        { t: "Sem impostos", k: function (t) { return esc(f.reais(t.custo)) + (t.estimado ? '<div style="color:var(--mudo);font-size:11px">estimado</div>' : ""); }, html: true }
       ], x.templates, { min: 360, vazio: "Nenhum template da campanha nesse dia (só outras mensagens da conta).",
                         rodape: x.templates.length > 1 ? ["Total", "", "", f.reais(soma)] : null }) + "</div>" +
       (x.cobrado == null || Math.abs(x.cobrado - soma) < 1 ? "" : x.cobrado > soma
-        ? '<p class="cap" style="margin-top:10px">Os <b>' + esc(f.reais(x.cobrado - soma)) + "</b> cobrados além dos templates da campanha são outras mensagens da conta (testes, utilidade).</p>"
-        : '<p class="cap" style="margin-top:10px">O custo dos templates passa do cobrado em <b>' + esc(f.reais(soma - x.cobrado)) +
-          "</b>: o custo por template ainda é a estimativa da Meta (preço × entregues) até a cobrança do dia fechar.</p>");
+        ? '<p class="cap" style="margin-top:10px">Os <b>' + esc(f.reais(x.cobrado - soma)) + "</b> consumidos além dos templates da campanha são outras mensagens da conta (testes, utilidade).</p>"
+        : '<p class="cap" style="margin-top:10px">O custo dos templates passa do consumido em <b>' + esc(f.reais(soma - x.cobrado)) +
+          "</b>: o custo por template ainda é a estimativa da Meta (preço × entregues) até ela fechar o dia.</p>");
   }
-  h += ui.secao("Cobranças por dia", "como no faturamento da Meta · clique num dia");
+  h += ui.secao("Consumo por dia", "o que a conta gastou em cada dia, antes de virar fatura · clique num dia");
   h += '<div class="grade g2"><div class="cartao">' + (FIN.mes ? ui.calendario({ mes: FIN.mes, meses: meses, dias: dias, sel: FIN.dia, acao: "meta-dia", acaoMes: "meta-mes" }) : "") +
-    '<div class="legenda" style="margin-top:12px"><span>Valores em R$ · quanto mais forte o azul, maior a cobrança do dia</span><span>Total cobrado desde ' +
+    '<div class="legenda" style="margin-top:12px"><span>Valores em R$ · quanto mais forte o azul, maior o consumo do dia</span><span>Total consumido desde ' +
     esc(f.dataLonga(datas[0])) + ": <b>&nbsp;" + esc(f.reais(m.cobrado_total)) + "</b></span></div></div>" +
-    '<div class="cartao">' + (det || '<p class="cap">Sem cobranças registradas.</p>') + "</div></div>";
+    '<div class="cartao">' + (det || '<p class="cap">Sem consumo registrado.</p>') + "</div></div>";
 
-  h += ui.secao("Custo por template", "no período do contrato");
+  h += ui.secao("Custo por template", "no período do contrato, sem impostos · números contados pela Meta, os cliques do contrato são os da planilha");
   h += ui.tabela([
     { t: "Template", k: "nome", esq: true }, { t: "Anunciante", k: "anunciante", esq: true }, { t: "Enviadas", k: "enviadas", f: f.num },
     { t: "Entregues", k: "entregues", f: f.num }, { t: "Lidas", k: "lidas", f: f.num }, { t: "Cliques", k: "cliques", f: f.num },
-    { t: "Custo Meta", k: "custo", f: f.reais }, { t: "Por entregue", k: "custo_por_entregue", f: function (x) { return f.reais(x, 4); } }
+    { t: "Custo sem impostos", k: "custo", f: f.reais }, { t: "Por entregue", k: "custo_por_entregue", f: function (x) { return f.reais(x, 4); } }
   ], m.templates, { min: 900, rodape: ["Total", "", f.num(m.templates.reduce(function (a, t) { return a + t.enviadas; }, 0)), f.num(m.entregues),
     f.num(m.templates.reduce(function (a, t) { return a + t.lidas; }, 0)), f.num(m.templates.reduce(function (a, t) { return a + t.cliques; }, 0)),
     f.reais(m.custo), f.reais(m.custo_por_entregue, 4)] });
@@ -1067,10 +1076,12 @@ function finMeta(c, ui) {
   h += '<div class="grade g2" style="margin-top:14px"><div class="cartao"><div class="topo"><div><h3>Receita x custo</h3><div class="cap">contrato (planilha) contra a Meta, até ' +
     esc(f.data(c.planilha.ultimo_dia)) + "</div></div></div>" +
     ui.barras([{ nome: "Consumo do budget (receita)", valor: c.totais.consumido, cor: ui.cor(3) },
-               { nome: "Custo Meta (planilha)", valor: c.totais.custo_meta, cor: ui.cor(1) }], function (v) { return f.reais(v); }) +
+               { nome: "Custo Meta, com impostos", valor: c.totais.custo_meta, cor: ui.cor(1) }], function (v) { return f.reais(v); }) +
     '<p class="cap" style="margin-top:14px;font-size:13px;color:var(--tinta2)">Margem: <b>' + esc(f.reais(c.totais.consumido - c.totais.custo_meta)) +
-    "</b> (" + esc(f.pct(c.totais.consumido ? 100 * (c.totais.consumido - c.totais.custo_meta) / c.totais.consumido : 0)) + " da receita).</p></div>" +
-    '<div class="cartao"><div class="topo"><div><h3>Enviadas que não chegaram</h3><div class="cap">contam no budget como enviadas · o motivo que a Meta devolveu (30 dias)</div></div></div>' +
+    "</b> (" + esc(f.pct(c.totais.consumido ? 100 * (c.totais.consumido - c.totais.custo_meta) / c.totais.consumido : 0)) + " da receita).</p>" +
+    '<p class="cap" style="margin-top:6px;font-size:12px;color:var(--mudo)">O custo soma <b>' + esc(f.reais(c.totais.custo_faturado)) + "</b> já faturados (coluna Custo Meta da planilha) e <b>" +
+    esc(f.reais(c.totais.custo_a_faturar)) + "</b> que a Meta ainda vai faturar do consumo até esse dia.</p></div>" +
+    '<div class="cartao"><div class="topo"><div><h3>Enviadas que não chegaram</h3><div class="cap">não entram no budget: a mensagem só conta quando é entregue · o motivo que a Meta devolveu (30 dias)</div></div></div>' +
     ui.barras(m.erros.map(function (e) { return { nome: e.explicacao + " (" + e.codigo + ")", valor: e.total, cor: ui.cor(2), nota: f.num(e.ultimas_24h) + " nas últimas 24 h" }; }),
               function (v) { return f.num(v); }) + "</div></div>";
   return h;
@@ -1093,7 +1104,7 @@ SA.pagina({
       varejista: vs ? vs.varejista.length + (vs.varejista.length === 1 ? " varejista · " : " varejistas · ") +
                       f.num(vs.varejista.reduce(function (a, x) { return a + x.lojas.length; }, 0)) + " lojas" : "",
       produto: vs ? (vs.anunciantes || []).length + ((vs.anunciantes || []).length === 1 ? " anunciante · " : " anunciantes · ") + vs.produto.length + " produtos" : "",
-      meta: vs ? f.reais(vs.meta.cobrado_periodo, 0) + " cobrados" : ""
+      meta: vs ? f.reais((vs.meta.fatura || {}).consumido, 0) + " consumidos" : ""
     };
     var h = '<div class="pergunta">O que você quer ver hoje?</div><div class="escolhas" role="tablist">' + VISOES.map(function (o) {
       var sel = o.id === FIN.visao;

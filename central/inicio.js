@@ -1,4 +1,4 @@
-/* Central SuperAdds · Início · montado em 06/11/2026 09:33 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Início · montado em 06/11/2026 17:12 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "inicio", "titulo": "Início", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/inicio.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/inicio.json"], "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "ia", "nome": "Cérebro (IA)", "icone": "ia", "url": "https://retail-media.superadds.com.br/superadds-ia-brain", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "por-dentro", "nome": "Por dentro"}]}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -968,7 +968,7 @@ function hubPorto(d, ui, p) {
     ui.tile("Enviadas", esc(f.num(cp.envios)), "<b>" + f.num(cp.falhas) + "</b> não chegaram", "var(--s1)") +
     ui.tile("Leitura", esc(f.pct(100 * cp.lidas / Math.max(1, cp.entregues))), "<b>" + f.num(cp.lidas) + "</b> lidas · mediana de " + f.num(cp.minutos_ate_ler) + " min", "var(--s1)") +
     ui.tile("Respostas", esc(f.num(cp.respostas)), "<b>" + f.num(cp.saidas) + "</b> pediram para sair", "var(--s2)") +
-    (c ? ui.tile("Custo Meta", esc(f.reais(c.custo_meta, 0)), "margem <b>" + esc(f.reais(c.consumido - c.custo_meta, 0)) + "</b>", "var(--s3)") : "") + "</div>";
+    (c ? ui.tile("Custo Meta", esc(f.reais(c.custo_meta, 0)), "faturado e a faturar, com impostos · margem <b>" + esc(f.reais(c.consumido - c.custo_meta, 0)) + "</b>", "var(--s3)") : "") + "</div>";
   var dm = po.dimensoes || {};
   var taxa = function (x) { return x.entregues ? 100 * x.lidas / x.entregues : 0; };
   var barrasDim = function (lista, cor) {
@@ -1005,7 +1005,7 @@ function hubPorto(d, ui, p) {
   if (po.meta_templates && po.meta_templates.length) {
     h += ui.secao("Templates na Meta");
     h += ui.tabela([{ t: "Template", k: "nome", esq: true }, { t: "Enviadas", k: "enviadas", f: f.num }, { t: "Entregues", k: "entregues", f: f.num },
-      { t: "Lidas", k: "lidas", f: f.num }, { t: "Cliques", k: "cliques", f: f.num }, { t: "Custo Meta", k: "custo", f: f.reais },
+      { t: "Lidas", k: "lidas", f: f.num }, { t: "Cliques", k: "cliques", f: f.num }, { t: "Custo sem impostos", k: "custo", f: f.reais },
       { t: "Qualidade", k: "qualidade", f: function (x) { return ({ GREEN: "Alta", YELLOW: "Média", RED: "Baixa" })[x] || "Sem nota"; } }], po.meta_templates, { min: 820 });
   }
   return h;

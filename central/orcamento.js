@@ -1,4 +1,4 @@
-/* Central SuperAdds · Orçamento · montado em 06/11/2026 09:33 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Orçamento · montado em 06/11/2026 17:12 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "orcamento", "titulo": "Orçamento", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/orcamento.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/orcamento.json"], "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "ia", "nome": "Cérebro (IA)", "icone": "ia", "url": "https://retail-media.superadds.com.br/superadds-ia-brain", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "por-dentro", "nome": "Por dentro"}]}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -1617,7 +1617,7 @@ window.__orcamentoCentral = true;
         '(o mesmo critério do painel: ' + nf(i.compradores) + ' de ' + nf(i.base) + ' na base). Renda estimada pelo bureau, em faixas de salário mínimo (R$ ' +
         nf(i.renda_sm) + '). O MKT 63 tem o troco de cada compra, não o valor: por isso o filtro é a renda, e o ticket aparece só no Plus (lojas Ayumi). ' +
         '<b>Custo</b> = só o nosso: preço Meta de marketing (' + moeda(c.preco_meta, 4) + ' por mensagem) + impostos (' + nf(c.impostos_pct, 2) +
-        '%, conforme o parametros.xlsx). <b>Mensagens com o investimento</b> = investimento ÷ custo por mensagem, uma por contato, ' +
+        '% do valor pago: PIS, COFINS e ISS, como nas faturas da Meta). <b>Mensagens com o investimento</b> = investimento ÷ custo por mensagem, uma por contato, ' +
         'no máximo o público todo. <b>Termômetro</b> = mensagens lidas ÷ mensagens enviadas na campanha Ayumi/Porto; a marca no mostrador é a média ' +
         'de todas as campanhas. <b>Plus</b> = campanhas e caixa do ADS - 01; o perfil só aparece para quem tem cadastro no app, ' +
         'e com pouca amostra o orçamento usa o número geral. Dados de ' + esc(quando(i.gerado_em)) + '.</div>';

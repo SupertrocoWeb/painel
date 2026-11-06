@@ -1,4 +1,4 @@
-/* Central SuperAdds · Cérebro (IA) · montado em 06/11/2026 09:33 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Cérebro (IA) · montado em 06/11/2026 17:12 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "ia", "titulo": "Cérebro (IA)", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/ia.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/ia.json"], "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "ia", "nome": "Cérebro (IA)", "icone": "ia", "url": "https://retail-media.superadds.com.br/superadds-ia-brain", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "por-dentro", "nome": "Por dentro"}]}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -1368,7 +1368,7 @@ function iaVisao(ui, d) {
     (c ? '<div class="grade g2" style="gap:10px">' +
       ui.tile("Budget consumido", esc(f.pct(c.pct_budget)), esc(f.reais(c.receita, 0) + " de " + f.reais(c.budget, 0)), "var(--s1)") +
       ui.tile("Leituras", esc(f.num(c.lidas)), esc(f.num(c.enviadas) + " mensagens · " + f.num(c.cliques) + " cliques"), "var(--s3)") +
-      ui.tile("Custo Meta por leitura", esc(f.reais(c.custo_por_leitura, 2)), esc("custo Meta de " + f.reais(c.custo_meta, 0)), "var(--s7)") +
+      ui.tile("Custo Meta por leitura", esc(f.reais(c.custo_por_leitura, 2)), esc("custo Meta de " + f.reais(c.custo_meta, 0) + ", com impostos"), "var(--s7)") +
       ui.tile("Contratos fechados", esc(f.num(c.contratos_n != null ? c.contratos_n : c.dias_com_contrato)),
               esc(Object.keys(c.contratos_por_produto || {}).map(function (k) { return c.contratos_por_produto[k] + " de " + k; }).join(" · ") +
                   " · " + f.reais(c.receita_contrato, 0) + " de comissão"), "var(--s4)") + "</div>" +
