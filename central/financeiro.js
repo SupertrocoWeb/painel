@@ -1,4 +1,4 @@
-/* Central SuperAdds · Financeiro · montado em 10/11/2026 10:23 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Financeiro · montado em 10/11/2026 11:54 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "financeiro", "titulo": "Financeiro", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/financeiro.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/financeiro.json"], "sessao_continua": false, "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "conversas", "nome": "Conversas", "icone": "conversa", "url": "https://retail-media.superadds.com.br/superadds-conversas"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}, {"id": "conversas", "nome": "Conversas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "ia", "nome": "Cérebro (IA)", "icone": "ia", "url": "https://retail-media.superadds.com.br/superadds-ia-brain", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "por-dentro", "nome": "Por dentro"}]}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -807,7 +807,13 @@ var VISOES = [
 function finContrato(c, ui) {
   var f = ui.fmt, esc = ui.esc, t = c.totais, r = c.ritmo, pz = c.prazo || {}, pl = c.planilha, v = c.valores, h = "";
   var cores = { msg: ui.cor(1), cli: ui.cor(2), com: ui.cor(3) };
-  if (pl.dias_sem_preencher) {
+  var cp = pl.copia;
+  if (cp && cp.ok === false) {          // a planilha pode estar em dia: quem parou foi a cópia do Power BI (ADS-01)
+    h += ui.aviso("<b>O Power BI não consegue copiar a planilha DRE desde " + esc(cp.falhando_desde) + "</b> (" + esc(String(cp.tentativas)) +
+      (cp.tentativas === 1 ? " tentativa" : " tentativas") + "): " + esc(cp.erro) + ". Os números abaixo são da última cópia boa (" +
+      esc(cp.ultima_boa || "—") + ") e vão até " + f.dataLonga(pl.ultimo_dia) + ". A planilha em si pode estar em dia: corrigido o cabeçalho, " +
+      "a próxima rodada traz os dias que faltam.");
+  } else if (pl.dias_sem_preencher) {
     h += ui.aviso("A planilha DRE está <b>" + pl.dias_sem_preencher + (pl.dias_sem_preencher === 1 ? " dia" : " dias") +
       " sem preencher</b>. O último dia lançado é " + f.dataLonga(pl.ultimo_dia) + ", e os números abaixo vão até ele.");
   }

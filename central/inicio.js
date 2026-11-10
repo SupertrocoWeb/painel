@@ -1,4 +1,4 @@
-/* Central SuperAdds · Início · montado em 10/11/2026 10:23 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Início · montado em 10/11/2026 11:54 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "inicio", "titulo": "Início", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/inicio.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/inicio.json"], "sessao_continua": true, "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "conversas", "nome": "Conversas", "icone": "conversa", "url": "https://retail-media.superadds.com.br/superadds-conversas"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}, {"id": "conversas", "nome": "Conversas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "ia", "nome": "Cérebro (IA)", "icone": "ia", "url": "https://retail-media.superadds.com.br/superadds-ia-brain", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "por-dentro", "nome": "Por dentro"}]}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -895,7 +895,8 @@ function hubGeral(d, ui) {
     }), function (x) { return f.reais(x, 0); }) : '<p class="cap">Sem receita no período.</p>') + "</div>";
   var c = d.contrato;
   if (c) {
-    h += '<div class="cartao"><div class="topo"><div><h3>' + esc(c.nome) + " · budget</h3><div class=\"cap\">planilha até " + esc(f.dataLonga(c.planilha_ate)) + "</div></div>" +
+    h += '<div class="cartao"><div class="topo"><div><h3>' + esc(c.nome) + " · budget</h3><div class=\"cap\">planilha até " + esc(f.dataLonga(c.planilha_ate)) +
+      (c.copia_falhando_desde ? " · a cópia do Power BI falha desde " + esc(c.copia_falhando_desde) + " (detalhes no Financeiro)" : "") + "</div></div>" +
       (ui.url("financeiro") ? '<a class="acao" data-central="1" href="' + esc(ui.url("financeiro")) + '">Financeiro ' + ui.icone("seta") + "</a>" : "") + "</div>" +
       '<div class="saldo"><div class="rot">Saldo</div><div class="val">' + esc(f.reais(c.saldo)) + "<small>de " + esc(f.reais(c.budget, 0)) + "</small></div></div>" +
       '<div class="trilho" data-dica="' + esc("<b>Budget usado</b>" + ui.linhaDica("Consumido", f.pct(c.pct_consumido)) + ui.linhaDica("Prazo corrido", f.pct(c.prazo_pct, 0))) + '">' +
