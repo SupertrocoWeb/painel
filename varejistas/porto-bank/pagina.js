@@ -1,4 +1,4 @@
-/* Página do varejista Porto Bank · SuperAdds · montada em 11/11/2026 10:32 (Varejistas/Porto Bank/gerar_pagina.py). Não edite aqui: edite ui/. */
+/* Página do varejista Porto Bank · SuperAdds · montada em 12/11/2026 02:21 (Varejistas/Porto Bank/gerar_pagina.py). Não edite aqui: edite ui/. */
 (function () {
 "use strict";
 var CFG = {"id": "porto-bank", "nome": "Porto Bank", "cores": {"marca": "#2C56C0", "marca_escura": "#1B3A8F", "marca_clara": "#5B82F0", "acento": "#00B2FF"}, "frases": ["Carregando ambiente", "Consultando registros", "Preparando resultados", "Calibrando gráficos", "Conferindo a planilha", "Monitorando IA", "Organizando personas"], "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/varejistas/porto-bank/dados.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/varejistas/porto-bank/dados.json"], "alvo": "varejista-superadds"};
