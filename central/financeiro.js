@@ -1,4 +1,4 @@
-/* Central SuperAdds · Financeiro · montado em 16/11/2026 02:23 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
+/* Central SuperAdds · Financeiro · montado em 16/11/2026 14:08 (central/montar.py). Não edite aqui: edite ui/ e paginas/. */
 (function () {
 "use strict";
 var CFG = {"pagina": "financeiro", "titulo": "Financeiro", "alvo": "central-superadds", "porteiro": "https://superadds-central.mkt-7c4.workers.dev", "dados": ["https://raw.githubusercontent.com/SupertrocoWeb/painel/main/central/financeiro.json", "https://cdn.jsdelivr.net/gh/SupertrocoWeb/painel@main/central/financeiro.json"], "sessao_continua": false, "paginas": [{"id": "inicio", "nome": "Início", "icone": "casa", "url": "https://supertroco-4.rds.land/inicio"}, {"id": "conversas", "nome": "Conversas", "icone": "conversa", "url": "https://retail-media.superadds.com.br/superadds-conversas"}, {"id": "personas", "nome": "Personas", "icone": "pessoas", "url": "https://retail-media.superadds.com.br/super-adds-personas", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "comportamento", "nome": "Comportamento"}, {"id": "rotina", "nome": "Rotina"}, {"id": "pessoas", "nome": "Pessoas"}, {"id": "conversas", "nome": "Conversas"}]}, {"id": "financeiro", "nome": "Financeiro", "icone": "carteira", "url": "https://retail-media.superadds.com.br/superadds-financeiro"}, {"id": "estrategia", "nome": "Estratégia", "icone": "alvo", "url": "https://retail-media.superadds.com.br/superadds-estrategias"}, {"id": "ia", "nome": "Cérebro (IA)", "icone": "ia", "url": "https://retail-media.superadds.com.br/superadds-ia-brain", "abas": [{"id": "visao", "nome": "Visão geral"}, {"id": "por-dentro", "nome": "Por dentro"}]}, {"id": "dev", "nome": "Desenvolvedor", "icone": "codigo", "url": "https://retail-media.superadds.com.br/superadds-for-devs"}, {"id": "orcamento", "nome": "Orçamento", "icone": "calc", "url": "https://retail-media.superadds.com.br/superadds-base"}]};
@@ -1027,7 +1027,9 @@ function finMeta(c, ui) {
   if (!FIN.mes || meses.indexOf(FIN.mes) < 0) FIN.mes = FIN.dia ? FIN.dia.slice(0, 7) : meses[meses.length - 1];
   if (m.estimado) h += ui.aviso("Parte do custo por template é <b>estimada</b> pela Meta (preço × entregues) até ela fechar o dia.", "info");
   if (fat.alerta) h += ui.aviso(esc(fat.alerta));
-  var temImp = m.impostos_pct;
+  if (fat.aviso_estimadas) h += ui.aviso(esc(fat.aviso_estimadas), "info");
+  var temImp = m.impostos_pct, est = fat.estimadas || [];
+  var estCom = est.reduce(function (s, e) { return s + e.com_impostos; }, 0);
   h += '<div class="grade g5">' +
     ui.tile("Consumido na Meta", esc(f.reais(fat.consumido)), "sem impostos, na conta, de " + f.dataLonga(fat.de) + " a " + f.dataLonga(fat.ate), "var(--s1)") +
     (temImp ? '<div style="display:grid" data-dica="' + esc("<b>Gasto com impostos</b>" + ui.linhaDica("Consumido na Meta", f.reais(fat.consumido)) +
@@ -1037,19 +1039,40 @@ function finMeta(c, ui) {
               esc(f.pct(m.impostos_pct, 2)) + ")", "var(--s2)") + "</div>" : "") +
     '<div style="display:grid" data-dica="' + esc("<b>Faturas da Meta</b>" + ui.linhaDica("Sem impostos", f.reais(fat.faturado_sem_impostos)) +
         ui.linhaDica("Impostos", f.reais(fat.faturado - fat.faturado_sem_impostos)) + ui.linhaDica("Pago no cartão", f.reais(fat.faturado)) +
+        (est.length ? ui.linhaDica("Lançado na planilha", f.reais(fat.faturado_planilha)) + ui.linhaDica("Estimado (" + est.length + ")", f.reais(estCom)) : "") +
         '<div class="txt" style="margin-top:6px">A coluna Custo Meta da planilha do Yago lança cada cobrança no cartão no dia dela. A Meta cobra quando o consumo chega no limite de cobrança e na virada do mês, ' +
-        "por isso a fatura não acompanha o consumo de cada dia.</div>") + '">' +
-      ui.tile("Faturado", esc(f.reais(fat.faturado)), "pago no cartão, com impostos · <b>" + esc(f.num(fat.cobrancas)) + "</b> cobranças na planilha · última em " +
-              esc(fat.ultima_cobranca ? f.dataLonga(fat.ultima_cobranca) : "—"), "var(--s1)") + "</div>" +
+        "por isso a fatura não acompanha o consumo de cada dia." +
+        (est.length ? " A cobrança que a planilha ainda não lançou entra estimada: 1,5 vez o último limite, arredondado como a Meta faz." : "") + "</div>") + '">' +
+      ui.tile("Faturado", esc(f.reais(fat.faturado)), "pago no cartão, com impostos · <b>" + esc(f.num(fat.cobrancas)) + "</b> cobranças na planilha" +
+              (est.length ? " + <b>" + est.length + "</b> estimada" + (est.length > 1 ? "s" : "") + " · última em " + esc(f.dataLonga(fat.ultima_estimada)) + " (estimada)"
+                          : " · última em " + esc(fat.ultima_cobranca ? f.dataLonga(fat.ultima_cobranca) : "—")), "var(--s1)") + "</div>" +
     '<div style="display:grid" data-dica="' + esc("<b>Ainda sem fatura</b>" + ui.linhaDica("Sem impostos", f.reais(fat.a_faturar)) +
         ui.linhaDica("Com impostos", f.reais(fat.a_faturar_com_impostos)) +
         '<div class="txt" style="margin-top:6px">O que foi consumido depois da última cobrança lançada, até ' + esc(f.dataLonga(fat.ate)) + '. É o "Saldo atual" na tela de pagamentos da Meta. ' +
-        "Uma cobrança que a planilha ainda não lançou fica aqui até ser lançada.</div>") + '">' +
+        "Uma cobrança que a planilha ainda não lançou sai daqui pela estimativa e, quando o Yago lança, pelo valor da planilha.</div>") + '">' +
       ui.tile("A faturar", esc(f.reais(fat.a_faturar)), "sem impostos, desde a última cobrança · com impostos <b>" + esc(f.reais(fat.a_faturar_com_impostos)) + "</b>", "var(--s2)") + "</div>" +
     ui.tile("Custo por entregue", esc(f.reais(m.custo_por_entregue, 4)), "preço da Meta, sem impostos · com impostos <b>" +
             esc(f.reais(m.custo_por_entregue / (1 - (m.impostos_pct || 0) / 100), 4)) + "</b> · " + f.num(m.entregues) + " entregues", "var(--s3)") + "</div>" +
     '<p class="cap" style="margin-top:12px;font-size:12px;color:var(--mudo);max-width:900px">Faturado + a faturar = consumido: o total é tudo o que a Meta já faturou e ainda vai faturar. O faturado vem da coluna Custo Meta da planilha, ' +
-    "conferida em 06/11 com as 13 faturas da Meta, dia a dia. A API da Meta não informa as cobranças: uma cobrança nova só aparece aqui depois de lançada na planilha.</p>";
+    "conferida em 06/11 com as 13 faturas da Meta, dia a dia. A API da Meta não informa as cobranças. Por isso, quando o consumo passa do próximo limite de cobrança e a planilha " +
+    "ainda não lançou a cobrança, o painel a estima: 1,5 vez o último limite, arredondado como a Meta faz. Testada com as cobranças de 19/10 a 14/11, a regra acertou dia e valor de 9 das 14, " +
+    "as 5 mais recentes seguidas. Quando o Yago lança a cobrança, vale a planilha.</p>";
+
+  // ---- cobranças no cartão: a lista da tela "Atividade de pagamento" da Meta, só data e valor (planilha + estimadas)
+  var fats = fat.faturas || [];
+  h += ui.secao("Cobranças no cartão", "como a Atividade de pagamento da Meta · com impostos · a mais recente primeiro");
+  h += '<div class="grade g2"><div class="cartao">' + ui.tabela([
+      { t: "Data", k: function (x) { return esc(f.dataLonga(x.data)) + '<div style="color:var(--mudo);font-size:11.5px">' + esc(f.semana(x.data)) + "</div>"; }, html: true, esq: true },
+      { t: "Valor", k: function (x) { return esc(f.reais(x.valor)) + (x.estimada ? '<div style="color:var(--mudo);font-size:11px">estimada · falta lançar na planilha</div>' : ""); }, html: true }
+    ], fats, { min: 280, altura: 470, vazio: "Nenhuma cobrança lançada na planilha.", rodape: fats.length ? ["Total", f.reais(fat.faturado)] : null }) + "</div>" +
+    '<div class="cartao"><div class="grade g2" style="gap:10px">' +
+      ui.tile("Saldo devedor", esc(f.reais(fat.a_faturar)), "sem impostos · consumido até " + esc(f.dataLonga(fat.ate)) + " e ainda não cobrado", "var(--s2)") +
+      ui.tile("Total cobrado", esc(f.reais(fat.faturado)), "<b>" + f.num(fats.length) + "</b> cobranças, com impostos" +
+              (est.length ? " · <b>" + est.length + "</b> estimada" + (est.length > 1 ? "s" : "") : ""), "var(--s1)") + "</div>" +
+    '<p class="cap" style="margin-top:12px">As cobranças vêm da coluna Custo Meta da planilha do Yago, no dia de cada uma. A que a planilha ainda não lançou aparece como ' +
+    "<b>estimada</b>: o dia em que o consumo passou do limite de cobrança e o valor do limite, com impostos. Quando o Yago lança, entra o valor da planilha.</p>" +
+    '<p class="cap" style="margin-top:8px">Conferido em 16/11/2026 com a tela da Meta: as 15 cobranças de 19/10 a 14/11 batem em data e valor, incluindo a estimada de 14/11, ' +
+    "e o saldo devedor da Meta era R$ 601,49.</p></div></div>";
 
   // ---- calendário do consumo
   var max = Math.max.apply(null, datas.map(function (d) { return cal[d].cobrado || 0; }).concat([1e-9]));
